@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. (પ્રથમ વર્ષ) – કોર્સ 4 (બ): અંગ્રેજીમાં પ્રાવીણ્ય (સજ્જતા) | ૯૫ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 95 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-book-open"></i> ડી.એલ.એડ્. (પ્રથમ વર્ષ) – કોર્સ 4 (બ): અંગ્રેજીમાં પ્રાવીણ્ય</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-language"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. (પ્રથમ વર્ષ) – કોર્સ 4 (બ)<br>અંગ્રેજીમાં પ્રાવીણ્ય (સજ્જતા) — Proficiency in English</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">સંપૂર્ણ મૉડ્યૂલ આધારિત ૯૫ બહુવિકલ્પીય પ્રશ્નો (MCQ) • સાચા જવાબ અને સચોટ સમજૂતી સહિત</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૯૫</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૯૫ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 95 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. (પ્રથમ વર્ષ) – કોર્સ 4 (બ): અંગ્રેજીમાં પ્રાવીણ્ય (સજ્જતા) | ૯૫ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 95</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૯૫ બહુવિકલ્પીય પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. પ્રથમ વર્ષ - કોર્સ 4 (બ): અંગ્રેજીમાં પ્રાવીણ્ય)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: ભાષાની સંકલ્પના અને વૈજ્ઞાનિક દૃષ્ટિકોણ સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: વૈજ્ઞાનિકોના મતે ભાષા એ ધ્વનિઓની વ્યવસ્થા છે, જેના નિયમિત વ્યવસ્થાપનનો અભ્યાસ ‘વ્યાકરણ’ મથાળા નીચે કરવામાં આવે છે.\nવિધાન 2: માનવસમાજ દ્વારા ભાષાની વ્યવસ્થા ઊભી કરવા પાછળનો મુખ્ય ઉદ્દેશ માત્ર સાહિત્ય સર્જન કરવાનો છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "વૈજ્ઞાનિકોના મતે ભાષા એ ધ્વનિઓની વ્યવસ્થા છે અને તેની નિયમિત વ્યવસ્થાનો અભ્યાસ ‘વ્યાકરણ’ હેઠળ થાય છે, પરંતુ ભાષાની વ્યવસ્થા ઊભી કરવા પાછળનો માનવસમાજનો મુખ્ય ઉદ્દેશ અસરકારક પ્રત્યાયન (Communication) કરવાનો છે. (પ્રકરણ/વિભાગ: Unit-1, 1.1 પ્રસ્તાવના | પાના નં.: 2)"
+  },
+  {
+    "q": "પ્રશ્ન 2: એકવીસમી સદીના સંદર્ભમાં ‘સંશોધન’ અને ‘પ્રત્યાયન’ વિશે મોડ્યૂલમાં આપવામાં આવેલા વિચાર મુજબ નીચેનામાંથી કયું વિધાન યોગ્ય છે?",
+    "options": [
+      "વર્તમાનને ઉકેલવાનું કાર્ય ‘પ્રત્યાયન’ અને તેમાંથી જન્મેલી પ્રક્રિયાઓ ‘સંશોધન’ કહેવાય છે.",
+      "ભૂતકાળને ઉકેલવાનું કાર્ય ‘સંશોધન’ કહેવાયું અને તેમાંથી જે વિવિધ પ્રક્રિયાઓએ જન્મ લીધો તેને ‘પ્રત્યાયન’ નામાભિધાન મળ્યું.",
+      "ભવિષ્યના અનુમાનની પ્રક્રિયા ‘સંશોધન’ અને તેના અમલીકરણને ‘પ્રત્યાયન’ કહેવામાં આવે છે.",
+      "માત્ર ભૌતિક સંસાધનોની શોધને ‘સંશોધન’ અને તેના વેપારને ‘પ્રત્યાયન’ કહેવાય છે."
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલ મુજબ ભૂતકાળને ઉકેલવાનું કાર્ય થયું જેને ‘સંશોધન’ નામ આપ્યું અને તેમાંથી જે વિવિધ પ્રક્રિયાઓ (Procedure) એ જન્મ લીધો તેને ‘પ્રત્યાયન’ નામાભિધાન મળ્યું, જે એકવીસમી સદીની મોટામાં મોટી દેન ગણાશે. (પ્રકરણ/વિભાગ: Unit-1, 1.1 પ્રસ્તાવના | પાના નં.: 2)"
+  },
+  {
+    "q": "પ્રશ્ન 3: ભારતીય સમાજ અને અંગ્રેજી ભાષાના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આધુનિક સમયમાં ભાષાશાસ્ત્રની દૃષ્ટિએ ભારત એક બહુભાષી સમાજ (Multilingual society) છે.",
+      "ભારતમાં પ્રત્યેક નાગરિક ત્રણ-ચાર ભાષાઓ સરળતાથી સમજી અને બોલી શકે છે.",
+      "ભારતમાં સ્વાતંત્ર્યોત્તર સમયગાળામાં શરૂઆતથી જ અંગ્રેજી ભાષા પ્રત્યે અત્યંત સકારાત્મક વલણ જોવા મળતું હતું.",
+      "વર્તમાન સમયમાં અંગ્રેજીએ આંતરરાષ્ટ્રીય ભાષા ઉપરાંત વૈશ્વિક ભાષાનો દરજ્જો પણ પ્રાપ્ત કર્યો છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "ભારતમાં સ્વાતંત્ર્યોત્તર સમયગાળામાં અંગ્રેજી ભાષા પરત્વે કંઈક નકારાત્મક વલણ જોવા મળતું હતું અને તેને પરદેશી તથા શીખવામાં અઘરી ભાષા ગણવામાં આવતી હતી. (પ્રકરણ/વિભાગ: Unit-1, 1.1 પ્રસ્તાવના | પાના નં.: 2)"
+  },
+  {
+    "q": "પ્રશ્ન 4: \"A language gains a status as a global language when it has a special role that is recognized in every country in the world.\" — આ અવતરણ કોના દ્વારા અને કયા વર્ષમાં આપવામાં આવ્યું છે?",
+    "options": [
+      "E. L. Thorndike, 1995",
+      "Crystal, 1997",
+      "Francis Bacon, 1998",
+      "E. A. Betts, 1997"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "વૈશ્વિક ભાષા (Global language) નો દરજ્જો ક્યારે પ્રાપ્ત થાય તે અંગેનું આ જાણીતું અવતરણ ક્રિસ્ટલ (Crystal) દ્વારા વર્ષ 1997માં આપવામાં આવ્યું છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3 આંતરરાષ્ટ્રીય / વૈશ્વિક ભાષાની સંકલ્પના | પાના નં.: 3)"
+  },
+  {
+    "q": "પ્રશ્ન 5: ‘આંતરરાષ્ટ્રીય ભાષા’ (International Language) અને ‘વૈશ્વિક ભાષા’ (Global Language) વચ્ચેના સંદર્ભે નીચેના વિધાનો ધ્યાને લો:\nવિધાન 1: 'International' શબ્દનો અર્થ બે કે તેથી વધુ રાષ્ટ્રો વચ્ચે અસ્તિત્વ ધરાવતું (Carried on by or existing between two or more nations) થાય છે.\nવિધાન 2: વૈશ્વિક ભાષાનો ઉપયોગ માત્ર પ્રથમ ભાષા તરીકે જ થઈ શકે છે, બીજી કે વિદેશી ભાષા તરીકે નહીં.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે વૈશ્વિક ભાષાનો ઉપયોગ માત્ર પ્રથમ ભાષા તરીકે જ નહીં, પરંતુ બીજી ભાષા અથવા વિદેશી ભાષા તરીકે પણ કરી શકાય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3 આંતરરાષ્ટ્રીય / વૈશ્વિક ભાષાની સંકલ્પના | પાના નં.: 3-4)"
+  },
+  {
+    "q": "પ્રશ્ન 6: અંગ્રેજી ભાષાના ઐતિહાસિક વિકાસના તબક્કાઓ અને તેની સદીઓ અંગે નીચેનામાંથી કયો ક્રમ/જોડ સાચી છે?",
+    "options": [
+      "10મી સદી: ઓલ્ડ ઇંગ્લિશ → 14મી સદી: ન્યુ ઇંગ્લિશ (ત્યારબાદ મિડલ ઇંગ્લિશ) → 18મી સદી: મોર્ડન ઇંગ્લિશ",
+      "10મી સદી: મિડલ ઇંગ્લિશ → 14મી સદી: ઓલ્ડ ઇંગ્લિશ → 18મી સદી: મોર્ડન ઇંગ્લિશ",
+      "12મી સદી: ઓલ્ડ ઇંગ્લિશ → 16મી સદી: મિડલ ઇંગ્લિશ → 19મી સદી: મોર્ડન ઇંગ્લિશ",
+      "10મી સદી: ન્યુ ઇંગ્લિશ → 14મી સદી: ઓલ્ડ ઇંગ્લિશ → 18મી સદી: મોર્ડન ઇંગ્લિશ"
+    ],
+    "ans": 0,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "સૌપ્રથમ 10મી સદીમાં ‘ઓલ્ડ ઇંગ્લિશ’ વપરાતી હતી, 14મી સદીમાં તેનું સ્થાન ‘ન્યુ ઇંગ્લિશ’ એ લીધું જે ફેરફારો થતાં ‘મિડલ ઇંગ્લિશ’ તરીકે ઓળખાઈ, અને છેલ્લે 18મી સદીમાં તથા ત્યારબાદ વધુ ફેરફારો થતાં તે ‘મોર્ડન ઇંગ્લિશ’ તરીકે ઓળખાવા લાગી. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 4)"
+  },
+  {
+    "q": "પ્રશ્ન 7: મોડ્યૂલમાં આપેલા વિશ્વના ‘ટોપ ટેન અંગ્રેજી બોલતા દેશો’ (mapsofworld.com) ના કોષ્ટક મુજબ નીચેનામાંથી કયું વિધાન સત્ય છે?",
+    "options": [
+      "કુલ અંગ્રેજી બોલનારા લોકોની સંખ્યામાં ભારત પ્રથમ ક્રમે છે.",
+      "અંગ્રેજી બોલનારા લોકોની ટકાવારીમાં યુનાઇટેડ સ્ટેટ્સ (95.81%) પ્રથમ ક્રમે છે.",
+      "ટોપ ટેન દેશોમાં અંગ્રેજી બોલનારાઓની સૌથી વધુ ટકાવારી યુનાઇટેડ કિંગ્ડમ (97.74%) અને સૌથી ઓછી ટકાવારી ભારત (11.38%) ની છે.",
+      "ઓસ્ટ્રેલિયામાં અંગ્રેજી બોલનારા લોકોની ટકાવારી કેનેડા કરતાં ઓછી છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "કોષ્ટક મુજબ કુલ સંખ્યામાં US પ્રથમ અને ભારત બીજા ક્રમે છે, પરંતુ ટકાવારીની દૃષ્ટિએ યુનાઇટેડ કિંગ્ડમ (97.74%) સૌથી વધુ (ત્યારબાદ ઓસ્ટ્રેલિયા 97.03%, US 95.81%, કેનેડા 85.18%) અને ભારત (11.38%) સૌથી ઓછી ટકાવારી ધરાવે છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 4)"
+  },
+  {
+    "q": "પ્રશ્ન 8: વિશ્વના ટોપ ટેન અંગ્રેજી બોલતા દેશો અને કોષ્ટકમાં તેમના ક્રમ (Rank) ના સાચા જોડકાં જોડો:\nવિભાગ - અ (દેશ)\t\tવિભાગ - બ (ક્રમ)\n1. ફિલિપાઇન્સ\t\t(a) 6\n2. નાઇજીરિયા\t\t(b) 3\n3. જર્મની\t\t(c) 10\n4. ઇટાલી\t\t(d) 4",
+    "options": [
+      "1-b, 2-d, 3-a, 4-c",
+      "1-d, 2-b, 3-a, 4-c",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-d, 3-b, 4-c"
+    ],
+    "ans": 0,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "કોષ્ટક મુજબ ફિલિપાઇન્સ 3જા ક્રમે (92.58%), નાઇજીરિયા 4થા ક્રમે (53.34%), જર્મની 6ઠ્ઠા ક્રમે (56%) અને ઇટાલી 10મા ક્રમે (29%) છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 4)"
+  },
+  {
+    "q": "પ્રશ્ન 9: વિશ્વભરમાં વિવિધ ક્ષેત્રોમાં અંગ્રેજી ભાષાના વપરાશની ટકાવારી અંગેના સાચા જોડકાં જોડો:\nવિભાગ - અ (ક્ષેત્ર)\t\t\tવિભાગ - બ (ટકાવારી)\n1. કમ્પ્યૂટરમાં ડેટા એન્ટ્રી\t\t(a) 70%\n2. ટેલિવિઝન પ્રોગ્રામનું પ્રસારણ\t(b) 75%\n3. આંતરરાષ્ટ્રીય ટપાલોનું લેખન\t(c) 82%",
+    "options": [
+      "1-b, 2-a, 3-c",
+      "1-c, 2-a, 3-b",
+      "1-c, 2-b, 3-a",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "વિશ્વભરનાં કમ્પ્યૂટરમાં 82% જેટલી ડેટા એન્ટ્રી, દુનિયાના 70% ટેલિવિઝન પ્રોગ્રામનું પ્રસારણ અને લગભગ 75% આંતરરાષ્ટ્રીય ટપાલો અંગ્રેજીમાં લખાય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 5)"
+  },
+  {
+    "q": "પ્રશ્ન 10: બ્રિટન સિવાયના યુરોપીય દેશોમાં 21મી સદીમાં કારકિર્દી અને કારોબાર માટે અંગ્રેજી શીખતા લોકોની ટકાવારી સંદર્ભે નીચેનામાંથી કઈ જોડ ખોટી છે?",
+    "options": [
+      "નેધરલેંડ – 90%",
+      "ફ્રાંસ – 86%",
+      "જર્મની – 85%",
+      "ઇટાલી – 60%"
+    ],
+    "ans": 3,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલ મુજબ બ્રિટન સિવાયનાં યુરોપીય દેશોમાં નેધરલેંડમાં 90%, ફ્રાંસમાં 86%, જર્મનીમાં 85% અને ઇટાલીમાં 50% (60% નહીં) લોકો અંગ્રેજી શીખે છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 5)"
+  },
+  {
+    "q": "પ્રશ્ન 11: વિશ્વસ્તરે અંગ્રેજી ભાષાના વિશિષ્ટ ઉપયોગ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: વિમાનના પાયલટો માટે વાયરલેસ સંદેશા માટે અંગ્રેજી ભાષા વાપરવી ફરજિયાત છે.\nવિધાન 2: દુનિયાના લગભગ 10 કરોડ બિનઅંગ્રેજ લોકો ઇન્ટરનેટ, વોઇસમેલ, ઇ-કોમર્સ અને ઇ-મેઇલ જેવાં કારણોસર અંગ્રેજીના ક્લાસ ભરી રહ્યા છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "વિમાનના પાયલટોએ વાયરલેસ સંદેશા માટે અંગ્રેજી વાપરવું ફરજિયાત છે અને લગભગ 10 કરોડ બિનઅંગ્રેજ લોકો ઇન્ટરનેટ, ઇ-કોમર્સ, ઇ-મેઇલ વગેરેના કારણે અંગ્રેજી શીખી રહ્યા છે — આ બંને વિધાનો સાચાં છે. (પ્રકરણ/વિભાગ: Unit-1, 1.3.1 આંતરરાષ્ટ્રીય ભાષા તરીકે અંગ્રેજી | પાના નં.: 5)"
+  },
+  {
+    "q": "પ્રશ્ન 12: અંગ્રેજી ભાષાના મહત્વ (Importance of English Language) સંદર્ભે મોડ્યૂલમાં આપેલી વિગતો મુજબ નીચેનામાંથી કયો દરજ્જો અંગ્રેજી ભાષાને આપવામાં આવ્યો નથી?",
+    "options": [
+      "જોડતી ભાષા (Link language)",
+      "ગ્રંથાલય/પુસ્તકાલયની ભાષા (Library language)",
+      "મોભાની તથા ફેશનની ભાષા (Language of status and fashion)",
+      "ધાર્મિક અને પૌરાણિક કર્મકાંડની ભાષા"
+    ],
+    "ans": 3,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલમાં અંગ્રેજીને વિશ્વની ભાષા, વેપાર-ઉદ્યોગની ભાષા, ભારતમાં જોડતી ભાષા (Link language), ગ્રંથાલયની ભાષા (Library language) તેમજ મોભા અને ફેશનની ભાષા તરીકે દર્શાવી છે; ધાર્મિક કર્મકાંડની ભાષા તરીકે ઉલ્લેખ નથી. (પ્રકરણ/વિભાગ: Unit-1, 1.3.2 અંગ્રેજી ભાષાનું મહત્વ | પાના નં.: 5-6)"
+  },
+  {
+    "q": "પ્રશ્ન 13: શ્રવણ કૌશલ્ય (Listening Skill) માં ‘To hear’ અને ‘To listen’ વચ્ચેના ભેદ અંગે નીચેનામાંથી કયું વિધાન સૌથી સચોટ છે?",
+    "options": [
+      "'Hearing' એ મગજ અને હૃદય દ્વારા થતી માનસિક ક્રિયા છે, જ્યારે 'Listening' એ કાન દ્વારા થતી શારીરિક ક્રિયા છે.",
+      "'Hearing' એ કાન દ્વારા થતી શારીરિક ક્રિયા (Physiological act) છે, જ્યારે 'Listening' એ મગજ અને હૃદય દ્વારા અર્થગ્રહણયુક્ત થતી ક્રિયા છે.",
+      "'To hear' એટલે ધ્યાનપૂર્વક સાંભળવું અને 'To listen' એટલે માત્ર ભાષાના અવાજો સાંભળવા.",
+      "શ્રવણની પ્રક્રિયામાં અર્થગ્રહણની કોઈ આવશ્યકતા હોતી નથી."
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે “Hearing is the physiological act through ears, but listening is through the mind and the heart.” અર્થગ્રહણયુક્ત સાંભળવું એટલે શ્રવણ. (પ્રકરણ/વિભાગ: Unit-1, 1.4.1 શ્રવણ કૌશલ્ય | પાના નં.: 7)"
+  },
+  {
+    "q": "પ્રશ્ન 14: એક શિક્ષક પોતાના વર્ગખંડમાં વિદ્યાર્થીઓનું કથન કૌશલ્ય (Speaking Skill) વિકસાવવા માંગે છે. મોડ્યૂલ મુજબ કથન કૌશલ્યના શિક્ષણનું પ્રથમ પગથિયું કયું ગણાય છે?",
+    "options": [
+      "લેખિત મહાવરો",
+      "મૌખિક કાર્ય",
+      "શાંત વાચન",
+      "વ્યાકરણના નિયમોનું ગોખણ"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલ મુજબ ‘મૌખિક કાર્ય’ એ કથન કૌશલ્યના શિક્ષણનું પ્રથમ પગથિયું છે, જેના દ્વારા શીખનાર કથન કૌશલ્યની કળા પ્રાપ્ત કરી શકે છે અને તે વ્યક્તિત્વ વિકાસનું પણ મહત્વનું પાસું છે. (પ્રકરણ/વિભાગ: Unit-1, 1.4.2 કથન કૌશલ્ય | પાના નં.: 7)"
+  },
+  {
+    "q": "પ્રશ્ન 15: ભાષા કૌશલ્યો અંગેના જાણીતા અવતરણો અને તેના પ્રણેતાઓના સાચા જોડકાં જોડો:\nવિભાગ - અ (અવતરણ)\t\t\t\tવિભાગ - બ (પ્રણેતા)\n1. \"Reading is a process of thinking\"\t\t(a) Francis Bacon\n2. \"Reading is a process of reasoning\"\t\t(b) E. A. Betts\n3. \"Writing makes an exact man\"\t\t(c) E. L. Thorndike",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-a, 2-c, 3-b",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "E. A. Betts એ “Reading is a process of thinking”, E. L. Thorndike એ “Reading is a process of reasoning” અને Francis Bacon એ “Writing makes an exact man” કહ્યું છે. (પ્રકરણ/વિભાગ: Unit-1, 1.4.3 & 1.4.4 | પાના નં.: 7)"
+  },
+  {
+    "q": "પ્રશ્ન 16: વાચન કૌશલ્ય (Reading Skill) ના સ્વરૂપ સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: ભાષાના દ્રશ્ય માધ્યમ દ્વારા પ્રગટતા વાક્યોને પારખીને સાચા અર્થમાં ગ્રહણ કરવાના સંદર્ભમાં વાચન એ અર્થગ્રહણાત્મક (Receptive) અને સ્વીકારાત્મક કૌશલ્ય છે.\nવિધાન 2: અર્થઘટન દ્વારા લેખકે રજૂ કરેલા સંવાદને આપણે ફરીથી સર્જીએ છીએ, તે રીતે વાચનનું કૌશલ્ય સર્જનાત્મક કૌશલ્ય (Creative skill) પણ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલ મુજબ વાચન અર્થગ્રહણના સંદર્ભમાં અર્થગ્રહણાત્મક (Receptive) તથા સ્વીકારાત્મક કૌશલ્ય છે, અને અર્થઘટન દ્વારા લેખકના સંવાદનું પુનઃસર્જન થતું હોવાથી તે સર્જનાત્મક કૌશલ્ય (Creative skill) પણ છે. (પ્રકરણ/વિભાગ: Unit-1, 1.4.3 વાચન કૌશલ્ય | પાના નં.: 7)"
+  },
+  {
+    "q": "પ્રશ્ન 17: એક વિદ્યાર્થી પેન અને હાથની આંગળીઓની મદદથી કાગળ પર અંગ્રેજી અક્ષરોનાં દ્રશ્ય સંકેતો રચે છે અને તેના દ્વારા પોતાના વિચારો-લાગણીઓ અભિવ્યક્ત કરે છે. લેખન કૌશલ્યના બે પાસાં મુજબ આ બંને ક્રિયાઓ અનુક્રમે કયાં પાસાં દર્શાવે છે?",
+    "options": [
+      "મનોવૈજ્ઞાનિક પાસું અને સામાજિક પાસું",
+      "શારીરિક-ભૌતિક પાસું અને મનોવૈજ્ઞાનિક પાસું",
+      "તાર્કિક પાસું અને શારીરિક-ભૌતિક પાસું",
+      "સંવેદનાત્મક પાસું અને યાંત્રિક પાસું"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "લેખનના સાધન, હાથ, આંગળીઓ દ્વારા કાગળ પર દ્રશ્ય સંકેતો રચવાની પ્રક્રિયા ‘શારીરિક-ભૌતિક’ પાસું છે, જ્યારે તે સંકેતો દ્વારા વિચારો અને લાગણીઓની અભિવ્યક્તિ થવી તે ‘મનોવૈજ્ઞાનિક’ પાસું છે. (પ્રકરણ/વિભાગ: Unit-1, 1.4.4 લેખન કૌશલ્ય | પાના નં.: 8)"
+  },
+  {
+    "q": "પ્રશ્ન 18: લેખન કૌશલ્યના સંદર્ભમાં ‘રચના’ (Composing) એટલે શું?",
+    "options": [
+      "માત્ર વ્યાકરણની દૃષ્ટિએ શુદ્ધ વાક્યોનું યાંત્રિક ઉત્પાદન કરવું.",
+      "કાગળ પર સુંદર અને મરોડદાર અક્ષરોની ગોઠવણી કરવી.",
+      "લખનાર અને વાચનાર વચ્ચેના સતત સંવાદનું સર્જન કરવા માટે અર્થપૂર્ણ વાક્યોનો ઉપયોગ કરવો.",
+      "બીજાના લખાણનું બેઠેબેઠું અનુલેખન કરવું."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "લેખન કૌશલ્ય માત્ર વાક્યોનું ઉત્પાદન નથી, પરંતુ લખનાર અને વાચનાર વચ્ચેના સતત સંવાદનું સર્જન કરવા માટે વાક્યોનો ઉપયોગ થાય છે; લેખન કૌશલ્યના આ પાસાને ‘રચના’ (Composing) કહેવાય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.4.4 લેખન કૌશલ્ય | પાના નં.: 8)"
+  },
+  {
+    "q": "પ્રશ્ન 19: મોડ્યૂલ મુજબ ઇ.સ. 1995 થી 2005 ના દાયકાના અગત્યના શબ્દોમાં નીચેનામાંથી કોનો સમાવેશ થાય છે, જેણે ‘ચોક એન્ડ ટોક’, નોટ્સ, ટ્યુશન, ગાઇડ, બેલ અને પિરિયડ જેવા જૂના શબ્દોને વિદાય અપાવી છે?",
+    "options": [
+      "રેડિયો, ટેલિવિઝન, ટેપરેકોર્ડર અને ઓવરહેડ પ્રોજેક્ટર",
+      "ઇન્ટરનેટ, ઇ-મેઇલ, વેબસાઇટ અને મલ્ટીમીડિયા",
+      "મોબાઇલ, સોશિયલ મીડિયા, બ્લોગ અને પોડકાસ્ટ",
+      "ટાઇપરાઇટર, ટેલિગ્રામ, ફેક્સ અને પેજર"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "ઇ.સ. 1995 થી 2005 ના દાયકાના અગત્યના શબ્દો ઇન્ટરનેટ, ઇ-મેઇલ, વેબસાઇટ અને મલ્ટીમીડિયા છે, જેમણે શિક્ષણ જગતના જૂના શબ્દોને વિદાય અપાવી છે. (પ્રકરણ/વિભાગ: Unit-1, 1.5 કમ્યુનિકેશન મિડીયા અને ઇન્ટરનેટમાં અંગ્રેજીનું મહત્વ | પાના નં.: 8)"
+  },
+  {
+    "q": "પ્રશ્ન 20: કમ્પ્યૂટર દ્વારા કોઈ પણ લખાણ કરવામાં ‘જાન’ આવી ગઈ અને લખાણને ઝડપથી ટાઇપ કરવા ઉપરાંત મઠારવા-સુધારવાની સુવિધા ઉપલબ્ધ થઈ — આ પરિવર્તનનો શ્રેય મોડ્યૂલમાં બિલ ગેટ્સના કયા સોફ્ટવેરને આપવામાં આવ્યો છે?",
+    "options": [
+      "વિન્ડોઝ XP",
+      "એમ.એસ. ડોસ (MS-DOS)",
+      "વિન્ડોઝ 95",
+      "વિન્ડોઝ 98"
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "બિલ ગેટ્સે ‘વિન્ડોઝ 95’ નામનો સોફ્ટવેર આપ્યો ત્યારથી કમ્પ્યૂટર દ્વારા લખાણ કરવામાં જાન આવી ગઈ અને સાદા ટાઇપરાઇટર કરતાં વધુ ઝડપથી ટાઇપ કરવાની તથા લખાણ મઠારવા-સુધારવાની સુવિધા મળી. (પ્રકરણ/વિભાગ: Unit-1, 1.5 કમ્યુનિકેશન મિડીયા અને ઇન્ટરનેટમાં અંગ્રેજીનું મહત્વ | પાના નં.: 8)"
+  },
+  {
+    "q": "પ્રશ્ન 21: મીડિયા અને દૂરવર્તી શિક્ષણ (Distance Education) ના સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: આજના યુગમાં દૂરવર્તી શિક્ષણ અંગેનું તમામ સાહિત્ય અંગ્રેજી ભાષામાં ઉપલબ્ધ છે.\nવિધાન 2: અંગ્રેજી ભાષા અને અન્ય વિષયોનું સ્વઅધ્યયન કરવા માટે ભાષાના ચારેય મૂળભૂત કૌશલ્યોનું જ્ઞાન અનિવાર્ય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "આજનો યુગ સવિશેષ દૂરવર્તી શિક્ષણનો છે, જેમાં તે અંગેનું તમામ સાહિત્ય અંગ્રેજીમાં ઉપલબ્ધ છે અને સ્વઅધ્યયન માટે ભાષાના ચારેય મૂળભૂત કૌશલ્યોનું જ્ઞાન અનિવાર્ય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.5.1 મીડિયા | પાના નં.: 8)"
+  },
+  {
+    "q": "પ્રશ્ન 22: નીચેનામાંથી કોને ‘ઇન્ફોર્મેશનનો સુપર હાઇવે’ તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "ટેલિવિઝન",
+      "ઇન્ટરનેટ",
+      "કોમ્પેક્ટ ડિસ્ક (CD)",
+      "મલ્ટીમીડિયા"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલ મુજબ ‘ઇન્ટરનેટ એ ઇન્ફોર્મેશનનો સુપર હાઇવે છે’, જેના પરથી જગતભરના લગભગ તમામ જાણવા જેવા બનાવો અને માહિતી સર્ચ એન્જિન (જેવાં કે Google, Yahoo) દ્વારા પ્રાપ્ત થાય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.5.2 ઇન્ટરનેટ | પાના નં.: 8-9)"
+  },
+  {
+    "q": "પ્રશ્ન 23: ‘સ્વઅધ્યયન માટે અંગ્રેજી’ (English for self learning) અંતર્ગત નીચેનામાંથી કઈ બાબતોનો સમાવેશ થાય છે?\n1. ભાષા સમૃદ્ધિ વધારવા માટે\n2. શબ્દભંડોળ વધારવા માટે\n3. દૂરવર્તી અભ્યાસ માટે\n4. વિવિધ ઇ-બુક વાંચન માટે",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "અંગ્રેજી ભાષા દ્વારા સ્વઅધ્યયનના હેતુઓમાં ભાષા સમૃદ્ધિ, શબ્દભંડોળમાં વધારો, દૂરવર્તી અભ્યાસ, વાચન સમૃદ્ધ બનાવવું અને વિવિધ ઇ-બુક વાંચન — આ તમામ બાબતોનો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.6.1 સ્વઅધ્યયન માટે અંગ્રેજી | પાના નં.: 9)"
+  },
+  {
+    "q": "પ્રશ્ન 24: ‘વ્યાવસાયિક વિકાસ માટે અંગ્રેજી’ (English for Professional Development) સંદર્ભે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "પરિપત્ર અને નિયમોની જાણકારી તથા અર્થઘટન માટે અંગ્રેજી જરૂરી છે.",
+      "વ્યવસાય સંબંધોના નિર્માણ અને સહકાર સાધવા માટે અંગ્રેજી જરૂરી છે.",
+      "સમૂહ માધ્યમથી ‘Different Thinking’ વિકસે છે, જે શિક્ષકની એક જુદી જ પ્રતિભા વિકસાવે છે.",
+      "વ્યાવસાયિક વિકાસમાં સ્વ-સંકલ્પનાના વિકાસ માટે અંગ્રેજીનો કોઈ ઉપયોગ થતો નથી."
+    ],
+    "ans": 3,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "મોડ્યૂલમાં સ્પષ્ટપણે દર્શાવાયું છે કે વ્યાવસાયિક વિકાસ અંતર્ગત ‘સ્વ-સંકલ્પનાનો વિકાસ કરવા’ અને ‘પ્રતિભા વિસ્તાર માટે’ અંગ્રેજી ઉપયોગી તથા જરૂરી છે. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: Unit-1, 1.6.2 વ્યાવસાયિક વિકાસ માટે અંગ્રેજી | પાના નં.: 9)"
+  },
+  {
+    "q": "પ્રશ્ન 25: “English is a window to see the world” અને “Knowledge is power” ના સંદર્ભે વિશ્વ જ્યારે એક બની રહ્યું છે, ત્યારે અંગ્રેજી ભાષા મુખ્યત્વે કયા સ્વરૂપે ઊભરી રહી છે?",
+    "options": [
+      "પ્રાદેશિક ભાષા (Regional language)",
+      "લિંક લેંગ્વેજ (Link language)",
+      "પ્રશિષ્ટ ભાષા (Classical language)",
+      "બોલી (Dialect)"
+    ],
+    "ans": 1,
+    "unit": "Unit-1: English Language and Its Scope",
+    "exp": "જ્ઞાનના આ યુગમાં જ્યારે વિશ્વ એક બની રહ્યું છે ત્યારે અંગ્રેજી ભાષા ‘Link language’ તરીકે ઊભરી રહી છે અને સાહિત્ય, વિજ્ઞાન, ઇતિહાસ, ભૂગોળ જેવા વિષયોનો જ્ઞાનભંડાર તેમાં સહેલાઈથી ઉપલબ્ધ છે. (પ્રકરણ/વિભાગ: Unit-1, 1.7 સારાંશ | પાના નં.: 9)"
+  },
+  {
+    "q": "પ્રશ્ન 26: ભાષા કૌશલ્યોના સંદર્ભમાં નીચેના વિધાનો તપાસો:\nવિધાન 1: શ્રવણ એ અર્થગ્રહણ માટે છે, જ્યારે કથન એ અભિવ્યક્તિ માટે છે.\nવિધાન 2: ભાષા કૌશલ્યોમાં શ્રવણ કૌશલ્યને સર્વસ્વીકૃત રીતે પ્રથમ સ્થાન આપવામાં આવ્યું છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "શ્રવણ અર્થગ્રહણ માટે અને કથન અભિવ્યક્તિ માટે છે, તેમજ કોઈપણ ભાષા શીખવાનો મુખ્ય આધાર શ્રવણ હોવાથી તેને સર્વસ્વીકૃત રીતે પ્રથમ કૌશલ્ય માનવામાં આવે છે. (પ્રકરણ/વિભાગ: Unit-2, 2.1 & 2.3.1 | પાના નં.: 13)"
+  },
+  {
+    "q": "પ્રશ્ન 27: શ્રવણ કૌશલ્ય એક સંકુલ પ્રક્રિયા છે. મોડ્યૂલ મુજબ નીચેનામાંથી કઈ બાબતનો સમાવેશ શ્રવણ કૌશલ્યના અર્થમાં થતો નથી?",
+    "options": [
+      "ધ્યાનપૂર્વક અને અર્થગ્રહણ સાથે સાંભળવું.",
+      "વક્તાના વિચારોને વિવિધ સંદર્ભમાં સમજવા.",
+      "અનાયાસે અને બેધ્યાનપણે આસપાસના બિનજરૂરી અવાજો સાંભળવા.",
+      "શુદ્ધ ઉચ્ચારોને ગ્રહણ કરવા તેમજ હાવભાવ અને ચેષ્ટાઓ સમજવી."
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "અનાયાસે અને બેધ્યાનપણે અવાજો સંભળાય તેને સમજવાનો પ્રયત્ન થતો નથી, તેથી તે માત્ર ‘સાંભળવું’ (Hearing) છે, ‘શ્રવણ’ (Listening) નથી. (પ્રકરણ/વિભાગ: Unit-2, 2.3.1 શ્રવણ કૌશલ્યની સંકલ્પના | પાના નં.: 13-14)"
+  },
+  {
+    "q": "પ્રશ્ન 28: ટેલર (Taylor) દ્વારા શ્રવણ અધ્યયન પ્રક્રિયા (Listening learning process) ને કયા ત્રણ તબક્કાઓમાં વિભાજિત કરવામાં આવી છે?",
+    "options": [
+      "Hearing, Attention, Remembering",
+      "Hearing, Listening, Cognition",
+      "Input, Selection, Output",
+      "Decoding, Speaking, Understanding"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "ટેલરે (Taylor) શ્રવણ અધ્યયન પ્રક્રિયાને ત્રણ તબક્કામાં વહેંચી છે: (1) Hearing, (2) Listening અને (3) Cognition (જાણવાની, શીખવાની અને સમજવાની માનસિક પ્રક્રિયા). (પ્રકરણ/વિભાગ: Unit-2, 2.3.2 શ્રવણની પ્રક્રિયા | પાના નં.: 14)"
+  },
+  {
+    "q": "પ્રશ્ન 29: શ્રવણ-પ્રક્રિયા અંગે મનોવૈજ્ઞાનિક દૃષ્ટિકોણથી નીચેનામાંથી કયું વિધાન સત્ય છે?",
+    "options": [
+      "સાંભળેલા અવાજને અર્થ આપવાની ક્રિયા માત્ર શારીરિક છે.",
+      "મનોવૈજ્ઞાનિકો શ્રવણ-પ્રક્રિયાને ‘પ્રત્યક્ષીકરણની પ્રક્રિયા’ ગણે છે.",
+      "શ્રવણની પ્રક્રિયા માત્ર કાન દ્વારા પૂર્ણ થાય છે.",
+      "શ્રવણ-પ્રક્રિયાનો વ્યક્તિની ભાષાસમૃદ્ધિ સાથે કોઈ સંબંધ નથી."
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "સાંભળેલાં ઉચ્ચારણો, ધ્વનિઓ કે વાક્યોની શ્રાવ્ય છાપોનું પ્રત્યક્ષીકરણ થાય તો જ અર્થગ્રહણ થાય છે; આથી મનોવૈજ્ઞાનિકો શ્રવણ-પ્રક્રિયાને ‘પ્રત્યક્ષીકરણની પ્રક્રિયા’ ગણે છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.2 શ્રવણની પ્રક્રિયા | પાના નં.: 14)"
+  },
+  {
+    "q": "પ્રશ્ન 30: વૈજ્ઞાનિક રીતે મૌખિક ગ્રહણ પ્રક્રિયા (Oral receiving process / Aural-oral process) ના ત્રણ તબક્કાઓ અને તેની ક્રિયાઓના સાચા જોડકાં જોડો:\nવિભાગ - અ (તબક્કો)\tવિભાગ - બ (પ્રક્રિયા)\n1. Input\t\t(a) Response (શાબ્દિક કે અશાબ્દિક પ્રતિભાવ)\n2. Process\t\t(b) Decoding (સંદેશો પ્રાપ્ત કરવો)\n3. Output\t\t(c) Understanding (મગજ દ્વારા અર્થ સમજવો)",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "Aural-oral process માં Input એટલે Decoding (સંદેશો પ્રાપ્ત કરવો), Process એટલે Understanding (મગજ દ્વારા સમજવું) અને Output એટલે Response (શાબ્દિક કે અશાબ્દિક પ્રતિભાવ આપવો). (પ્રકરણ/વિભાગ: Unit-2, 2.3.2 શ્રવણની પ્રક્રિયા | પાના નં.: 14)"
+  },
+  {
+    "q": "પ્રશ્ન 31: શાળામાં વિદ્યાર્થી પોતાનો લગભગ કેટલો સમય શ્રવણમાં વ્યતીત કરે છે?",
+    "options": [
+      "અડધા ભાગનો સમય",
+      "ત્રીજા ભાગનો સમય",
+      "પોણા ભાગનો સમય",
+      "ચોથા ભાગનો સમય"
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "મોડ્યૂલ મુજબ શાળામાં વિદ્યાર્થી લગભગ ‘પોણા ભાગનો સમય’ શ્રવણમાં વ્યતીત કરે છે અને વિદ્યાર્થીની શૈક્ષણિક સિદ્ધિ (Academic achievement) શ્રવણ કૌશલ્યથી પ્રભાવિત થાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.2 શ્રવણની પ્રક્રિયા | પાના નં.: 14)"
+  },
+  {
+    "q": "પ્રશ્ન 32: કથન કૌશલ્ય (Speaking Skill) ની સંકલ્પના સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: વિશ્વની ઘણી ભાષાઓને માત્ર મૌખિક સ્વરૂપ જ છે, તેમને પોતાનું લેખિત સ્વરૂપ નથી.\nવિધાન 2: સારું કથન-સંભાષણ કૌશલ્ય એ સારા શ્રવણનું પરિણામ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "ભાષા પ્રાથમિક રીતે કથન છે; વિશ્વની ઘણી ભાષાઓ માત્ર મૌખિક સ્વરૂપ ધરાવે છે અને સારું કથન કૌશલ્ય એ સારા શ્રવણનું પરિણામ છે — બંને વિધાનો સાચાં છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.3 કથન કૌશલ્યની સંકલ્પના | પાના નં.: 15)"
+  },
+  {
+    "q": "પ્રશ્ન 33: કથન કૌશલ્યના સંદર્ભમાં પ્રત્યાયનની પ્રક્રિયા (Communication process) ક્યારે પૂર્ણ થયેલી ગણાય છે?",
+    "options": [
+      "જ્યારે વક્તા પોતાનું ભાષણ પૂર્ણ કરે ત્યારે.",
+      "જ્યારે વક્તાને શબ્દ, દૃષ્ટિ (Look) કે હાવભાવ (Gesture) દ્વારા પ્રતિસાદ મળે ત્યારે.",
+      "જ્યારે શ્રોતા માત્ર શાંતિથી બેસી રહે ત્યારે.",
+      "જ્યારે વક્તા લેખિત સ્વરૂપે પોતાના વિચારો રજૂ કરે ત્યારે."
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "મોડ્યૂલ મુજબ પ્રત્યાયનની પ્રક્રિયા ત્યારે જ પૂર્ણ થાય છે જ્યારે બોલનારને શબ્દ, દૃષ્ટિ (look) કે હાવભાવ (gesture) દ્વારા પ્રતિસાદ (response) મળે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.3 કથન કૌશલ્યની સંકલ્પના | પાના નં.: 15)"
+  },
+  {
+    "q": "પ્રશ્ન 34: કથનની પ્રક્રિયા (Producing process) ના ત્રણ તબક્કાઓ અને તેના સંબંધિત પદોની સાચી જોડ પસંદ કરો:",
+    "options": [
+      "Input – Decoding | Process – Understanding | Output – Response",
+      "Input – Source | Process – Selection | Output – Encode",
+      "Input – Encode | Process – Source | Output – Selection",
+      "Input – Selection | Process – Encode | Output – Source"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "કથનની પ્રક્રિયામાં Input એટલે Source (આંતરિક કે બાહ્ય પ્રેરણા), Process એટલે Selection (મગજ દ્વારા ભાષાકીય પ્રક્રિયા) અને Output એટલે Encode (ઉચ્ચારણ અંગોને સંદેશો એન્કોડ કરવા આદેશ આપવો). (પ્રકરણ/વિભાગ: Unit-2, 2.3.4 કથનની પ્રક્રિયા | પાના નં.: 15)"
+  },
+  {
+    "q": "પ્રશ્ન 35: અધ્યેતાઓમાં શ્રવણ કૌશલ્ય વિકસાવવા માટે ‘Rhyme’ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "અધ્યેતાઓમાં શ્રવણ કૌશલ્ય વિકસાવવા ‘Rhyme’ એ શિક્ષક માટે સૌથી સરળ માર્ગ છે.",
+      "‘Rhyme’ એ અંગ્રેજી ભાષાના કથનના લય/તાલ (Speech rhythm) શીખવાનો એક સ્રોત છે.",
+      "અભિનય સાથેની ‘Action rhymes’ અધ્યેતાઓને કાવ્યનો અર્થ સમજવામાં મદદરૂપ થાય છે.",
+      "‘Rhyme’ માત્ર ઉચ્ચ કક્ષાના વિદ્યાર્થીઓ માટે જ ઉપયોગી છે અને તેમાં ધ્વનિઓનો પરિચય થતો નથી."
+    ],
+    "ans": 3,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "‘Rhyme’ નાના અધ્યેતાઓને આનંદ આપે છે અને તેમને અંગ્રેજી ભાષાના ધ્વનિઓથી પરિચિત બનાવે છે. તેથી વિધાન (D) અસત્ય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.1 Rhyme | પાના નં.: 16)"
+  },
+  {
+    "q": "પ્રશ્ન 36: મોડ્યૂલમાં ભાષા રમતો (Language Games) ના ઉદાહરણ તરીકે નીચેનામાંથી કઈ રમતનો ઉલ્લેખ કરવામાં આવ્યો નથી?",
+    "options": [
+      "Magic Bag",
+      "Change the number",
+      "Who am I?",
+      "Word Antakshari"
+    ],
+    "ans": 3,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "મોડ્યૂલમાં આપેલી પાંચ ભાષા રમતોના ઉદાહરણો છે: (1) Magic Bag, (2) Raja Says, (3) Change the place, (4) Change the number અને (5) Who am I?. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.2 Language Games | પાના નં.: 17)"
+  },
+  {
+    "q": "પ્રશ્ન 37: અંગ્રેજી ભાષાના ઉચ્ચારણ (Pronunciation) અને લયના મહાવરા માટે ‘Tongue Twisters’ એ કયા પ્રકારની પ્રવૃત્તિનું ઉત્તમ ઉદાહરણ છે?",
+    "options": [
+      "Listen and Do Activities",
+      "Listen and Repeat Activities",
+      "Patch-work Listening",
+      "Silent Reading Activities"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "‘Tongue Twisters’ એ ‘Listen and Repeat’ પ્રવૃત્તિનું સારું ઉદાહરણ છે, જે વિદ્યાર્થીઓને અંગ્રેજી લય (rhymes) અને ઉચ્ચારણના મહાવરામાં મદદ કરે છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.3 'Listen and Repeat' Activities | પાના નં.: 17)"
+  },
+  {
+    "q": "પ્રશ્ન 38: ગુજરાતી વર્ગખંડમાં રમાડવામાં આવતી ‘ગાંધીજી કહે’ રમતની જેમ અંગ્રેજીમાં વર્ગખંડની નાની સૂચનાઓ શીખવવા અને શ્રવણ કૌશલ્ય વિકસાવવા કઈ રમતનો ઉપયોગ થાય છે?",
+    "options": [
+      "Magic Bag",
+      "Raja Says",
+      "Change the place",
+      "Who am I?"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "‘Listen and do’ પ્રવૃત્તિ અંતર્ગત ‘ગાંધીજી કહે’ રમતની જેમ અંગ્રેજીમાં નાની સૂચનાઓ શીખવવા, દૃઢીકરણ કરવા અને શ્રવણ કૌશલ્ય વિકસાવવા ‘Raja Says’ રમતનો ઉપયોગ થાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.4 'Listen and do' Activities | પાના નં.: 17)"
+  },
+  {
+    "q": "પ્રશ્ન 39: વર્ગખંડમાં વપરાતી અંગ્રેજી સૂચનાઓ (Classroom Instructions) અને તેના ઉપયોગના તબક્કાના સાચા જોડકાં જોડો:\nવિભાગ - અ (સૂચના)\t\t\tવિભાગ - બ (તબક્કો/પ્રકાર)\n1. Pack up your books.\t\t(a) General Instructions\n2. Are you with me?\t\t(b) Beginning of a session\n3. Open your books at page...\t(c) End of a session\n4. Stand by your desks.\t\t(d) Language for comprehension",
+    "options": [
+      "1-c, 2-d, 3-b, 4-a",
+      "1-b, 2-d, 3-c, 4-a",
+      "1-c, 2-a, 3-b, 4-d",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "‘Pack up your books’ સત્રના અંતે, ‘Are you with me?’ સમજણ (comprehension) માટે, ‘Open your books at page...’ સત્રની શરૂઆતમાં અને ‘Stand by your desks’ સામાન્ય સૂચનાઓમાં વપરાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.4 | પાના નં.: 18)"
+  },
+  {
+    "q": "પ્રશ્ન 40: નાટ્યીકરણ (Role Play) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: નાટ્યીકરણ એ વાસ્તવિક જીવન પરિસ્થિતિ માટે શ્રવણ તથા કથનમાં સુધારો લાવવા માટેનો એક ઝડપી માર્ગ છે.\nવિધાન 2: નાટ્યીકરણમાં સંવાદો ખૂબ જ લાંબા અને જટિલ વાક્યરચનાવાળા હોવા જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "નાટ્યીકરણ વાસ્તવિક જીવન પરિસ્થિતિ માટે ઝડપી માર્ગ છે અને અધ્યેતાઓને પૂરા વાક્યમાં અંગ્રેજી બોલવામાં મદદ કરે છે; પરંતુ સંવાદો ઘણા લાંબા ન હોવા જોઈએ અને વાક્ય નાનું તથા સરળ હોવું જોઈએ. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.5 Role Play | પાના નં.: 19)"
+  },
+  {
+    "q": "પ્રશ્ન 41: નીચેનામાંથી કયા સાધનને મોડ્યૂલમાં ‘એક શ્રેષ્ઠ તથા સૌથી જૂનું શિક્ષણનું સાધન’ (One of the best and the oldest teaching tool) ગણાવ્યું છે?",
+    "options": [
+      "નાટ્યીકરણ (Role Play)",
+      "વાર્તાકથન (Story-Telling)",
+      "ભાષા રમતો (Language Games)",
+      "કાવ્યગાન (Rhymes)"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "વાર્તાકથન (Story-Telling) એ એક શ્રેષ્ઠ તથા સૌથી જૂનું શિક્ષણનું સાધન છે, જે શબ્દભંડોળને સમૃદ્ધ બનાવે છે અને અધ્યેતાઓના કલ્પનાજગતનો વિકાસ કરે છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.6 Story-Telling | પાના નં.: 19)"
+  },
+  {
+    "q": "પ્રશ્ન 42: ‘Patch-work Listening’ પ્રવૃત્તિના ત્રણ તબક્કાઓનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "સ્પષ્ટ રજૂઆત → થોડી ઓછી ગેપ અને ઓછો ઘોંઘાટ → વધુ ગેપ અને ઘોંઘાટ",
+      "વધુ ગેપ અને ઘોંઘાટ સાથે રેકોર્ડિંગ → ઓછી ગેપ અને ઓછા ઘોંઘાટ સાથે પુનઃ શ્રવણ → ગેપ તથા ઘોંઘાટ વગર સ્પષ્ટ રજૂઆત",
+      "માત્ર ઘોંઘાટ વગરનું શ્રવણ → જૂથ ચર્ચા → લેખિત પરીક્ષા",
+      "શિક્ષક દ્વારા મોટેથી વાચન → વિદ્યાર્થી દ્વારા અનુલેખન → મૂલ્યાંકન"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "Patch-work Listening માં પ્રથમ તબક્કે થોડી ગેપ અને ઘોંઘાટ સાથે ફકરો સંભળાવાય છે, બીજા તબક્કે ઓછી ગેપ અને ઓછા ઘોંઘાટ સાથે ખૂટતી કડીઓ જોડાય છે, અને ત્રીજા તબક્કે ગેપ-ઘોંઘાટ વગર સ્પષ્ટ પ્રસ્તુતિ સાથે સરખામણી થાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.5.7 Patch-work Listening | પાના નં.: 20)"
+  },
+  {
+    "q": "પ્રશ્ન 43: Role Play દરમિયાન વપરાતા અંગ્રેજી અભિવ્યક્તિઓ (Expressions) અને તેના હેતુના સાચા જોડકાં જોડો:\nવિભાગ - અ (Expression)\t\t\tવિભાગ - બ (હેતુ)\n1. I'm afraid / I fear\t\t(a) Making suggestion\n2. Why don't we... / Shall we...\t(b) Expressing disapproval\n3. Could I interrupt you here\t\t(c) Apologizing\n4. I'm sorry\t\t\t(d) Discussion / Interrupting",
+    "options": [
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-c, 2-a, 3-d, 4-b"
+    ],
+    "ans": 0,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "‘I'm afraid / I fear’ અસંમતિ/નાપસંદગી (disapproval) દર્શાવવા, ‘Why don't we...’ સૂચન (suggestion) માટે, ‘Could I interrupt you here’ ચર્ચામાં વચ્ચે બોલવા (interrupting) અને ‘I'm sorry’ માફી (apologizing) માટે વપરાય છે. (પ્રકરણ/વિભાગ: Unit-2, Task-12 | પાના નં.: 23)"
+  },
+  {
+    "q": "પ્રશ્ન 44: ધ્વનિશાસ્ત્ર (Phonology) મુજબ મનુષ્યના વાણીના અંગો (Organs of Speech) કયા ત્રણ મુખ્ય વિભાગોમાં વહેંચાયેલા છે?",
+    "options": [
+      "શ્વસનતંત્ર, પાચનતંત્ર અને ઉચ્ચારણતંત્ર",
+      "શ્વસનતંત્ર (Respiratory), ધ્વનિતંત્ર (Phonatory) અને ઉચ્ચારણતંત્ર (Articulatory)",
+      "ચેતાતંત્ર, ધ્વનિતંત્ર અને શ્રવણતંત્ર",
+      "સ્વરતંત્ર, વ્યંજનતંત્ર અને ઉચ્ચારણતંત્ર"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "વાણીના અંગો ત્રણ વિભાગમાં વહેંચાયેલા છે: શ્વસનતંત્ર (Respiratory system), ધ્વનિતંત્ર (Phonatory system) અને ઉચ્ચારણતંત્ર (Articulatory system). (પ્રકરણ/વિભાગ: Unit-2, 2.3.6 ધ્વનિશાસ્ત્ર અને અંગ્રેજી ઉચ્ચાર | પાના નં.: 24)"
+  },
+  {
+    "q": "પ્રશ્ન 45: વાણીના અંગોના તંત્રો અને તેમાં સમાવિષ્ટ અવયવોના સાચા જોડકાં જોડો:\nવિભાગ - અ (તંત્ર)\t\t\tવિભાગ - બ (અવયવો)\n1. શ્વસનતંત્ર (Respiratory System)\t(a) નાક, મોં, જીભ, દાંત, તાળવું, હોઠ\n2. ધ્વનિતંત્ર (Phonatory System)\t(b) ફેફસાં, છાતીના સ્નાયુઓ, શ્વાસનળી\n3. ઉચ્ચારણતંત્ર (Articulatory System)\t(c) સ્વરપેટી (Larynx / Voice box)",
+    "options": [
+      "1-b, 2-a, 3-c",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-c, 3-a",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "શ્વસનતંત્રમાં ફેફસાં, છાતીના સ્નાયુઓ અને શ્વાસનળી; ધ્વનિતંત્રમાં સ્વરપેટી (Larynx); અને ઉચ્ચારણતંત્રમાં નાક, મોં, જીભ, દાંત, તાળવું અને હોઠનો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.6 ધ્વનિશાસ્ત્ર અને અંગ્રેજી ઉચ્ચાર | પાના નં.: 24)"
+  },
+  {
+    "q": "પ્રશ્ન 46: ધ્વનિતંત્ર (Phonatory System) નો મુખ્ય અવયવ ‘સ્વરપેટી’ (Larynx / Voice box) શરીરમાં કયા સ્થાને આવેલી હોય છે?",
+    "options": [
+      "ફેફસાંના નીચેના ભાગમાં",
+      "શ્વાસનળીના ઉપરના છેડે",
+      "તાળવાના પાછળના ભાગમાં",
+      "જીભના અગ્રભાગમાં"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "મોડ્યૂલમાં આપેલા કોષ્ટક મુજબ સ્વરપેટી (Larynx / voice box) શ્વાસનળીના ઉપરના છેડે હોય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.6 ધ્વનિશાસ્ત્ર અને અંગ્રેજી ઉચ્ચાર | પાના નં.: 24)"
+  },
+  {
+    "q": "પ્રશ્ન 47: અંગ્રેજી ધ્વનિશાસ્ત્રમાં ‘સ્વર’ (Vowel) સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: સ્વર એ ફેફસાંમાંથી બહાર નીકળતી હવાના માર્ગમાં કોઈ પણ અવરોધ કે ઘસારા વગર ઉત્પન્ન થયેલો અવાજ છે.\nવિધાન 2: અંગ્રેજીમાં કુલ 12 શુદ્ધ સ્વરો (Pure Vowels) છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "સ્વર ઉત્પન્ન કરતી વખતે હવા કોઈ અવરોધ કે ઘસારા વગર મુક્ત રીતે બહાર આવે છે અને અંગ્રેજીમાં કુલ 12 શુદ્ધ સ્વરો (Pure Vowels) છે — બંને વિધાનો સાચાં છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.6.2 સ્વર | પાના નં.: 24-25)"
+  },
+  {
+    "q": "પ્રશ્ન 48: વ્યંજન (Consonant) ધ્વનિઓ કેવી રીતે ઉત્પન્ન થાય છે?",
+    "options": [
+      "ફેફસાંમાંથી બહાર નીકળતી હવાના માર્ગમાં કોઈ પણ અવરોધ વગર.",
+      "ફેફસાં દ્વારા કોઈ પણ પોલાણ મારફતે ફેંકાયેલ હવાને સંપૂર્ણ કે આંશિક રીતે અવરોધવાથી.",
+      "માત્ર હોઠ બંધ કરીને નાક દ્વારા હવા બહાર કાઢવાથી.",
+      "માત્ર મોંના પોલાણનો આકાર બદલીને શ્રાવ્ય-અડચણ વગર."
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "વ્યંજન ધ્વનિઓ ફેફસાં દ્વારા કોઈ પણ પોલાણ મારફતે ફેંકાયેલ હવાને સંપૂર્ણ કે આંશિક રીતે અવરોધવાથી (completely or partially obstructing the air) ઉત્પન્ન થાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.6.3 વ્યંજન | પાના નં.: 25)"
+  },
+  {
+    "q": "પ્રશ્ન 49: વ્યંજન ધ્વનિઓ (Consonant sounds) નું વર્ગીકરણ કયા બે મુખ્ય આધારો પર કરવામાં આવે છે?",
+    "options": [
+      "સ્વરપેટીનો આકાર અને હવાની ઝડપ",
+      "ઉચ્ચારણ સ્થાન (Place of articulation) અને ઉચ્ચારણ રીત (Manner of articulation)",
+      "ધ્વનિની તીવ્રતા અને સમયગાળો",
+      "જીભની લંબાઈ અને દાંતની ગોઠવણી"
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "વ્યંજન ધ્વનિઓને તેમના ઉચ્ચારણ સ્થાન (Place of articulation) તથા ઉચ્ચારણ રીત (Manner of articulation) મુજબ વિભાજિત કરવામાં આવે છે. (પ્રકરણ/વિભાગ: Unit-2, 2.3.6.3 વ્યંજન | પાના નં.: 25)"
+  },
+  {
+    "q": "પ્રશ્ન 50: શ્રવણ અને કથન કૌશલ્યના વિકાસ અંગે નીચેનામાંથી કયું વિધાન સારાંશ (Summary) ને અનુરૂપ છે?",
+    "options": [
+      "શ્રવણ અને કથન એકબીજાથી તદ્દન સ્વતંત્ર કૌશલ્યો છે.",
+      "અસરકારક શ્રવણ એ અસરકારક કથન ઉત્પાદન (Effective speech production) તરફ દોરી જાય છે.",
+      "મૌખિક કૌશલ્યોના વિકાસમાં શાળાની પરિસ્થિતિ અને વાતાવરણની કોઈ ભૂમિકા હોતી નથી.",
+      "શિક્ષકે માત્ર પાઠ્યપુસ્તકના લેખિત સ્વાધ્યાય પર જ ભાર મૂકવો જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "Unit-2: Listening and Speaking",
+    "exp": "શ્રવણ અને કથન પરસ્પર સંકળાયેલાં (interlinked) છે અને અસરકારક શ્રવણ અસરકારક કથન ઉત્પાદન તરફ દોરી જાય છે. (પ્રકરણ/વિભાગ: Unit-2, 2.4 સારાંશ | પાના નં.: 25)"
+  },
+  {
+    "q": "પ્રશ્ન 51: મોડ્યૂલમાં આપેલી ભાષા કૌશલ્યોની આકૃતિ (Language Skills) મુજબ ‘Receptive Skills’ અને ‘Productive Skills’ ના વર્ગીકરણ અંગે નીચેનામાંથી કઈ જોડ સાચી છે?",
+    "options": [
+      "Listening (Passive skill) અને Reading (Active skill) — Receptive Skills",
+      "Listening (Active skill) અને Reading (Passive skill) — Receptive Skills",
+      "Speaking (Passive skill) અને Writing (Active skill) — Productive Skills",
+      "Listening અને Speaking — Receptive Skills; Reading અને Writing — Productive Skills"
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "મોડ્યૂલમાં આપેલી આકૃતિ મુજબ Receptive Skills માં Listening (Active skill) અને Reading (Passive skill) નો, જ્યારે Productive Skills માં Speaking (Active skill) અને Writing (Passive skill) નો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: Unit-3, 3.1 પ્રસ્તાવના | પાના નં.: 28)"
+  },
+  {
+    "q": "પ્રશ્ન 52: ભાષા કૌશલ્યોના પરસ્પર સંબંધ અને અધ્યયન અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ચારેય ભાષા કૌશલ્યો એકબીજાથી સાવ અલગ છે, તેથી તેમને એક પછી એક ક્રમમાં જ શીખવા પડે છે.\nવિધાન 2: ‘મહાવરો’ એ કોઈ પણ ભાષા શીખવા માટેની પૂર્વશરત છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "ભાષા કૌશલ્યો એકબીજાનાં પૂરક છે અને તેમને એક પછી એક નહીં પરંતુ એકસાથે શીખવા પડે છે, જ્યારે મહાવરો એ કોઈ પણ ભાષા શીખવા માટેની પૂર્વશરત છે. (પ્રકરણ/વિભાગ: Unit-3, 3.1 પ્રસ્તાવના | પાના નં.: 28)"
+  },
+  {
+    "q": "પ્રશ્ન 53: વાચનની સંકલ્પના (Concept of Reading) મુજબ માત્ર સ્પેલિંગ અને અક્ષરોનું સાચું ઉચ્ચારણ કરવું એ કેવા પ્રકારની પ્રવૃત્તિ ગણાય છે?",
+    "options": [
+      "માત્ર માનસિક પ્રવૃત્તિ",
+      "માત્ર સંવેદનાત્મક (Sensory) પ્રવૃત્તિ",
+      "સંપૂર્ણ અર્થગ્રહણની પ્રક્રિયા",
+      "સર્જનાત્મક લેખન પ્રવૃત્તિ"
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "માત્ર અક્ષરો કે સ્પેલિંગનું સાચું વાચન કરવું એ માત્ર સંવેદનાત્મક (sensory) પ્રવૃત્તિ છે કારણ કે આંખો માત્ર ચિહ્નો જુએ છે, અર્થ કહેતી નથી; જ્યારે મગજ પૂર્વજ્ઞાન અને અનુભવો આધારે અર્થ આપે ત્યારે જ વાચન થાય છે. (પ્રકરણ/વિભાગ: Unit-3, 3.3.1 વાચનની સંકલ્પના | પાના નં.: 29)"
+  },
+  {
+    "q": "પ્રશ્ન 54: એક જ અંગ્રેજી ફકરો બે અલગ-અલગ વિદ્યાર્થીઓ વાંચે છે અને બંને તેના થોડા જુદા-જુદા અર્થઘટન રજૂ કરે છે. મોડ્યૂલ મુજબ આ પરિસ્થિતિમાં નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "બંનેમાંથી કોઈ એક જ વિદ્યાર્થી સાચો હોઈ શકે.",
+      "બંને વિદ્યાર્થીઓ સાચા હોઈ શકે છે, કારણ કે વાચન એક આંતરક્રિયાત્મક પ્રક્રિયા છે જેમાં દરેક પોતાના અનુભવો અને પૂર્વજ્ઞાન મુજબ અર્થનું નિર્માણ કરે છે.",
+      "લખાણનો હંમેશાં એક જ નિશ્ચિત અર્થ હોય છે, તેથી વાચકના પૂર્વજ્ઞાનની કોઈ ભૂમિકા હોતી નથી.",
+      "બંને વિદ્યાર્થીઓનું વાચન ક્ષતિયુક્ત ગણાય."
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "વાચન એ વાચક અને લખાણ વચ્ચેની આંતરક્રિયાત્મક (interactive) પ્રક્રિયા છે, જેમાં દરેક વાચક પોતાના વ્યક્તિગત અનુભવો, પૂર્વજ્ઞાન અને કૌશલ્યો પ્રમાણે વિશિષ્ટ અર્થનું નિર્માણ કરે છે; તેથી બંને સાચા હોઈ શકે છે. (પ્રકરણ/વિભાગ: Unit-3, 3.3.1 & 3.4 Check Your Progress | પાના નં.: 29-30, 33)"
+  },
+  {
+    "q": "પ્રશ્ન 55: વાચનની પ્રક્રિયા (Process of Reading) ના શારીરિક પાસાંમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "સાચી રીતે બેસવાની સ્થિતિ અને હાથથી પુસ્તક પકડવાની રીત",
+      "આંખની ગતિ અને રૂકાવટબિંદુ",
+      "વાકયંત્રના સ્નાયુઓ, જીભનું હલનચલન અને સ્વરયંત્ર",
+      "વાક્યો વાંચીને તેનું અર્થગ્રહણ કરવું"
+    ],
+    "ans": 3,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "વાક્યો વાંચીને તેને સમજવું અને તેનું અર્થગ્રહણ કરવું એ વાચનની ‘માનસિક પ્રક્રિયા’ છે, જ્યારે બાકીના ત્રણ વિકલ્પો ‘શારીરિક પ્રક્રિયા’ ના ભાગ છે. (પ્રકરણ/વિભાગ: Unit-3, 3.3.2 વાચનની પ્રક્રિયા | પાના નં.: 30)"
+  },
+  {
+    "q": "પ્રશ્ન 56: \"Reading a language is the magic door to enter in the world of knowledge\" — આ અવતરણ કોના દ્વારા આપવામાં આવ્યું છે?",
+    "options": [
+      "Francis Bacon",
+      "Sir Artherkn",
+      "E. A. Betts",
+      "E. L. Thorndike"
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "મોડ્યૂલ મુજબ સર આર્થરકન (Sir Artherkn) એ કહ્યું છે કે “Reading a language is the magic door to enter in the world of knowledge.” (પ્રકરણ/વિભાગ: Unit-3, 3.3.2 વાચનની પ્રક્રિયા | પાના નં.: 30)"
+  },
+  {
+    "q": "પ્રશ્ન 57: મોડ્યૂલ મુજબ વાચન ક્ષમતા (Reading abilities) વિકસાવવાના ચાર મુખ્ય કારણો (Four reasons) કયા છે?",
+    "options": [
+      "To read aloud, to write fast, to memorize, to pass exams",
+      "For pleasure, to enjoy, to enrich, to be well informed",
+      "To speak fluently, to translate, to spell correctly, to listen",
+      "For business, for travel, for internet, for employment"
+    ],
+    "ans": 1,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "વાચન ક્ષમતા વિકસાવવાનાં ચાર કારણો છે: આનંદ માટે (for pleasure), માણવા માટે (to enjoy), સમૃદ્ધ થવા માટે (to enrich) અને સુમાહિતગાર રહેવા માટે (to be well informed). (પ્રકરણ/વિભાગ: Unit-3, 3.3.2 વાચનની પ્રક્રિયા | પાના નં.: 30)"
+  },
+  {
+    "q": "પ્રશ્ન 58: મુખવાચન (Aloud Reading) અને મૂકવાચન/શાંતવાચન (Silent Reading) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: મુખવાચનથી વિદ્યાર્થીમાં ભાષાના આરોહ-અવરોહ (intonation), ઉચ્ચાર, ઝડપ, ભાર (stress) અને લય (rhythm) ની સુટેવ કેળવી શકાય છે.\nવિધાન 2: શાંતવાચન એ મૌખિક વાચન કરતાં વધારે મહત્વનું છે અને તે બાળકમાં અર્થગ્રહણ કૌશલ્ય ખીલવવાનું અસરકારક સાધન છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "મુખવાચનથી ઉચ્ચારણ, લય, ભાર વગેરેની સુટેવ કેળવાય છે અને સંભાષણ ક્ષમતા ખીલે છે; જ્યારે શાંતવાચન મૌખિક વાચન કરતાં વધુ મહત્વનું છે અને અર્થગ્રહણ કૌશલ્ય તથા વિચારવાની પ્રક્રિયાને તેજ બનાવે છે. (પ્રકરણ/વિભાગ: Unit-3, 3.3.3.1 & 3.3.3.2 | પાના નં.: 30-31)"
+  },
+  {
+    "q": "પ્રશ્ન 59: મૂકવાચન (Silent Reading) નો વિકાસ કરતી વખતે ધ્યાનમાં રાખવાની બાબતોમાં નીચેનામાંથી કઈ સૂચના અયોગ્ય છે?",
+    "options": [
+      "મૂકવાચન દરમિયાન ગણગણાટ કે હોઠનું હલનચલન ન કરવું.",
+      "વાંચતી વખતે શબ્દો કે વાક્યોની નીચે આંગળી કે બોલપેન જેવા pointer રાખવાનું ટાળવું.",
+      "દરેક અજાણ્યા શબ્દના અર્થ માટે તરત જ શબ્દકોશ (Dictionary) નો ઉપયોગ કરવો.",
+      "નાની વાચન સામગ્રીમાં વચ્ચે વિરામ ન લેવો અને એકવાર મૂકવાચન કર્યા પછી બીજીવાર પણ ફરીથી મૂકવાચન કરવું."
+    ],
+    "ans": 2,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "મોડ્યૂલ મુજબ પ્રમાણભૂત શબ્દકોશ પાસે રાખવો, પરંતુ ‘દરેક શબ્દના અર્થ માટે તેનો ઉપયોગ ન કરવો’; જરૂર પડે ત્યારે જ ઉપયોગ કરવો અને અમુક શબ્દોના અર્થ વાક્ય કે ફકરાના સંદર્ભમાં સમજી લેવા. (પ્રકરણ/વિભાગ: Unit-3, 3.3.3.2 શાંતવાચન | પાના નં.: 32)"
+  },
+  {
+    "q": "પ્રશ્ન 60: ‘English Reading Club’ (અંગ્રેજી વાચન મંડળ) ની રચના અને સંચાલનના સોપાનો મુજબ વાર્ષિક પ્રવૃત્તિ કેલેન્ડરમાં મહિનામાં ઓછામાં ઓછી કેટલી પ્રવૃત્તિઓ કે મીટિંગનું આયોજન કરવાનું સૂચવવામાં આવ્યું છે?",
+    "options": [
+      "મહિનામાં ઓછામાં ઓછી એક કે બે પ્રવૃત્તિઓ/મીટિંગ",
+      "મહિનામાં ઓછામાં ઓછી ચાર મીટિંગ",
+      "ત્રણ મહિનામાં માત્ર એક મીટિંગ",
+      "દર અઠવાડિયે ત્રણ પ્રવૃત્તિઓ"
+    ],
+    "ans": 0,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "અંગ્રેજી વાચન મંડળના સંચાલનના સોપાન-7 મુજબ વાર્ષિક પ્રવૃત્તિ કેલેન્ડર નક્કી કરીને મહિનામાં ઓછામાં ઓછી એક કે બે પ્રવૃત્તિઓ કે મીટિંગ (atleast one or two activities of meetings per month) નું આયોજન કરવું જોઈએ. (પ્રકરણ/વિભાગ: Unit-3, 3.3.4 English Reading Club | પાના નં.: 32)"
+  },
+  {
+    "q": "પ્રશ્ન 61: વાચનને એક વિજ્ઞાન (Science) તરીકે જોતાં તેમાં થયેલા વૈજ્ઞાનિક સંશોધનોના પરિણામે અસ્તિત્વમાં આવેલા પારિભાષિક શબ્દોમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. Fixation\n2. Interfixation movement\n3. Regression\n4. Return sweep",
+    "options": [
+      "માત્ર 1 અને 3",
+      "માત્ર 1, 2 અને 4",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "વાચન પરના વૈજ્ઞાનિક સંશોધનના પરિણામે fixation, interfixation movement, regression, re-reading અને return sweep જેવા શબ્દો અસ્તિત્વમાં આવ્યા છે, જે વાચનની ઝડપ અને અર્થગ્રહણની ગુણવત્તા વધારવામાં મદદ કરે છે. (પ્રકરણ/વિભાગ: Unit-3, 3.4 સારાંશ | પાના નં.: 33)"
+  },
+  {
+    "q": "પ્રશ્ન 62: વાચન કૌશલ્યના પેટા-કૌશલ્યો (Sub-skills of reading) માં નીચેનામાંથી કોનો સમાવેશ થાય છે?",
+    "options": [
+      "Global and local comprehension, note taking, guessing the meaning, predicting",
+      "Pronunciation, stress, rhythm, intonation",
+      "Transcription, dictation, handwriting, punctuation",
+      "Hearing, attention, remembering, speaking"
+    ],
+    "ans": 0,
+    "unit": "Unit-3: Reading Skill",
+    "exp": "સારા વાચક બનવા માટે વાચનના પેટા-કૌશલ્યો જેવાં કે global and local comprehension, note taking, guessing the meaning અને predicting પર પ્રભુત્વ મેળવવું જરૂરી છે. (પ્રકરણ/વિભાગ: Unit-3, 3.4 સારાંશ | પાના નં.: 33)"
+  },
+  {
+    "q": "પ્રશ્ન 63: શાલેય શિક્ષણ પૂર્ણ કર્યા પછી પણ ઘણા વિદ્યાર્થીઓ અરજી, ફરિયાદ કે આમંત્રણપત્રો લખવામાં નિષ્ફળ જાય છે. મોડ્યૂલ મુજબ આ ખામીનું સૌથી સરળ કારણ કયું છે?",
+    "options": [
+      "શાળામાં અંગ્રેજીના શિક્ષકોની અછત.",
+      "વિદ્યાર્થીઓમાં લેખન માટે જરૂરી Vocabulary તથા ભાષા, વિચાર, તર્ક જેવી માનસિક પ્રક્રિયાની ગેરહાજરી.",
+      "વિદ્યાર્થીઓના હસ્તાક્ષર સુંદર ન હોવા.",
+      "વિદ્યાર્થીઓમાં શ્રવણ કૌશલ્યનો અતિરેક."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલ મુજબ લેખન કૌશલ્ય વિકસાવવાની પ્રક્રિયામાં રહેલી ખામીનો સરળમાં સરળ જવાબ એ છે કે વિદ્યાર્થીઓમાં લેખન માટે જરૂરી Vocabulary તથા ભાષા, વિચાર, તર્ક વગેરે જેવી માનસિક પ્રક્રિયાની ગેરહાજરી છે. (પ્રકરણ/વિભાગ: Unit-4, 4.1 પ્રસ્તાવના | પાના નં.: 36)"
+  },
+  {
+    "q": "પ્રશ્ન 64: લેખન કૌશલ્ય (Skill of Writing) ના ક્રમ અને સ્વરૂપ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ભાષા શિક્ષણનાં અન્ય કૌશલ્યો પૈકી લેખન કૌશલ્ય સૌથી જટિલ છે અને તેને ચોથો ક્રમ આપવામાં આવ્યો છે.\nવિધાન 2: લેખનને એક ‘Product’ તરીકે નહીં, પરંતુ લેખકના માનસિક જગતમાં ઘટતી એક ‘પ્રક્રિયા’ તરીકે જોવી જરૂરી છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "લેખન કૌશલ્ય સૌથી જટિલ હોવાથી તેને ચોથો ક્રમ અપાયો છે અને તેને માત્ર Product તરીકે નહીં પરંતુ લેખકના માનસિક જગતમાં ઘટતી એક પ્રક્રિયા તરીકે જોવી જરૂરી છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3 & 4.3.1 | પાના નં.: 37)"
+  },
+  {
+    "q": "પ્રશ્ન 65: “Writing has to be carefully planned and meticulously packaged” — આ વિધાનના સંદર્ભમાં લેખન કૌશલ્ય કથન કૌશલ્ય કરતાં કઈ રીતે જુદું પડે છે?",
+    "options": [
+      "લેખનમાં સામેવાળાના તાત્કાલિક પ્રતિચાર પરથી વાક્યો બદલી શકાય છે, જ્યારે કથનમાં એ શક્ય નથી.",
+      "જેને પહેલાં જોયા કે જાણતા નથી તેવા વાચકોને ચોક્કસ અર્થનું પ્રત્યાયન કરાવવાની જવાબદારી લેખકના શિરે હોવાથી તેમાં પ્રવાહિતાની સાથે ચોકસાઈ, શુદ્ધિ અને Correct Grammar જરૂરી છે.",
+      "લેખન એ અર્થગ્રહણાત્મક કૌશલ્ય છે, જ્યારે કથન એ અભિવ્યક્તિલક્ષી કૌશલ્ય છે.",
+      "લેખનમાં શબ્દભંડોળની જરૂર પડતી નથી."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "કથનમાં સામેવાળાના પ્રતિચારો પરથી સંભાષણ પરિમાર્જિત કરી શકાય છે, પરંતુ લેખનમાં અજાણ્યા વાચકોને ચોક્કસ અર્થ પહોંચાડવા માટે પ્રવાહિતાની સાથે ચોકસાઈ, વ્યાકરણશુદ્ધિ અને વિચારોનું સઘન સંકલન જરૂરી બને છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.1 લેખનની સંકલ્પના | પાના નં.: 37)"
+  },
+  {
+    "q": "પ્રશ્ન 66: સારા હસ્તાક્ષરોના લક્ષણો (Characteristics of Good Handwriting) અને તેની સમજૂતીના સાચા જોડકાં જોડો:\nવિભાગ - અ (લક્ષણ)\t\t\tવિભાગ - બ (સમજૂતી)\n1. Legibility (સુવાચ્યતા)\t\t(a) અક્ષરનું કદ, લંબાઈ, વળાંક અને જાડાઈમાં એકસરખાપણું\n2. Distinctiveness (વિશિષ્ટતા)\t(b) સરળતાથી વાંચી શકાય તેવા અક્ષરો\n3. Uniformity (એકરૂપતા)\t\t(c) 'p', 'b', 'd' કે 'M', 'W' વચ્ચેનું સ્પષ્ટ જુદાપણું\n4. Simplicity (સરળતા)\t\t(d) વધારે પડતા મરોડ કે બિનજરૂરી ભપકા વગરનું સીધું-સાદું લખાણ",
+    "options": [
+      "1-b, 2-c, 3-a, 4-d",
+      "1-c, 2-b, 3-a, 4-d",
+      "1-b, 2-a, 3-c, 4-d",
+      "1-d, 2-c, 3-a, 4-b"
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "Legibility એટલે સુવાચ્યતા, Distinctiveness એટલે દરેક મૂળાક્ષરની આગવી વિશિષ્ટતા (p, b, d વગેરેનું જુદાપણું), Uniformity એટલે કદ-વળાંકમાં એકરૂપતા અને Simplicity એટલે બિનજરૂરી ભપકા વગરની સરળતા. (પ્રકરણ/વિભાગ: Unit-4, 4.3.3 સારા હસ્તાક્ષરોનાં લક્ષણો | પાના નં.: 38)"
+  },
+  {
+    "q": "પ્રશ્ન 67: \"God is now here.\" અને \"God is no where.\" — મોડ્યૂલમાં આપેલું આ જાણીતું ઉદાહરણ સારા હસ્તાક્ષરોના કયા લક્ષણનું મહત્વ સમજાવવા માટે વપરાયું છે?",
+    "options": [
+      "Cleanliness (સ્વચ્છતા)",
+      "Speed (ઝડપ)",
+      "Distance (અંતર)",
+      "Beauty (સુંદરતા)"
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "અક્ષરો અને શબ્દો વચ્ચે પૂરતું અંતર (Distance) ન જળવાય તો ‘now here’ નું ‘no where’ થઈ જતાં અર્થનો અનર્થ થઈ શકે છે — તે સમજાવવા આ ઉદાહરણ અપાયું છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.3 સારા હસ્તાક્ષરોનાં લક્ષણો | પાના નં.: 39)"
+  },
+  {
+    "q": "પ્રશ્ન 68: અંગ્રેજી ભાષાના મૂળાક્ષરોના લેખન (Writing of Alphabet) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: અંગ્રેજી મૂળાક્ષરોના લેખનમાં Upper case (પહેલી ABCD) ની શૈલી એ લેખન કૌશલ્યનો પ્રાથમિક તબક્કો છે.\nવિધાન 2: અંગ્રેજી વાક્યરચનામાં ‘I’ શબ્દ હંમેશાં Capital letter (Upper case) માં જ લખાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "Upper case ની શૈલી લેખન કૌશલ્યનો પ્રાથમિક તબક્કો છે અને ‘The word I is always written as a capital letter’ — બંને વિધાનો સાચાં છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.4 મૂળાક્ષરોનું લેખન | પાના નં.: 40)"
+  },
+  {
+    "q": "પ્રશ્ન 69: \"A woman! without her, man is nothing.\" અને \"A woman, without her man, is nothing.\" — આ ઉદાહરણ દ્વારા મોડ્યૂલમાં અંગ્રેજી લેખનની કઈ બાબતની અગત્યતા સ્પષ્ટ કરવામાં આવી છે?",
+    "options": [
+      "સુંદર હસ્તાક્ષર",
+      "વિરામચિહ્નો (Punctuation marks) નો યોગ્ય ઉપયોગ",
+      "શ્રુતલેખનની ઝડપ",
+      "Upper case અને Lower case નો ભેદ"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "વિરામચિહ્નોનું સ્થાન બદલાવાથી કે તેનો યોગ્ય ઉપયોગ ન કરવાથી અર્થનો અનર્થ થઈ જાય છે, તે સમજાવવા માટે ગુજરાતી તથા અંગ્રેજીનું આ ઉદાહરણ આપવામાં આવ્યું છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.5 અંગ્રેજીમાં વાક્યરચના અને વિરામચિહ્નો | પાના નં.: 41)"
+  },
+  {
+    "q": "પ્રશ્ન 70: અનુલેખન (Transcription) કરાવવા માટેનો તાર્કિક ક્રમ કયો છે?",
+    "options": [
+      "સાદા વાક્યો → સરળ શબ્દો → વર્ણમાલાના અક્ષરો",
+      "વર્ણમાલાના અક્ષરો → સરળ અને સાદા શબ્દો → સાદા વાક્યો",
+      "ફકરાલેખન → સાદા વાક્યો → સરળ શબ્દો",
+      "સરળ શબ્દો → વર્ણમાલાના અક્ષરો → મુક્ત લેખન"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "અનુલેખન કરાવવા શ્રેણી મુજબ ક્રમિક રીતે આગળ વધવું હિતાવહ છે: શરૂઆતમાં વર્ણમાલાના અક્ષરો, ત્યારબાદ સરળ અને સાદા શબ્દો અને પછી સાદા વાક્યો. (પ્રકરણ/વિભાગ: Unit-4, 4.3.6 અનુલેખન અને શ્રુતલેખન | પાના નં.: 42)"
+  },
+  {
+    "q": "પ્રશ્ન 71: અનુલેખન (Transcription) અને શ્રુતલેખન (Dictation) વચ્ચેના તફાવત અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "અનુલેખન દ્વારા શ્રવણ કૌશલ્યનો અને શ્રુતલેખન દ્વારા વાચન કૌશલ્યનો વિકાસ થાય છે.",
+      "અનુલેખન દ્વારા વાચન કૌશલ્યનો અને શ્રુતલેખન દ્વારા શ્રવણ કૌશલ્યનો વિકાસ થાય છે.",
+      "અનુલેખન અને શ્રુતલેખન બંનેમાં વિદ્યાર્થીની મૌલિકતાનો સર્વાધિક વિકાસ થાય છે.",
+      "અનુલેખનમાં સાંભળીને લખવામાં આવે છે, જ્યારે શ્રુતલેખનમાં જોઈ-જોઈને લખવામાં આવે છે."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "અનુલેખન એટલે જોઈ-જોઈને લખવું જેનાથી વાચન કૌશલ્યનો વિકાસ થાય છે, જ્યારે શ્રુતલેખન એટલે સાંભળીને લખવું જેનાથી શ્રવણ કૌશલ્યનો વિકાસ થાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.6 અનુલેખન અને શ્રુતલેખન | પાના નં.: 42)"
+  },
+  {
+    "q": "પ્રશ્ન 72: લેખનકાર્યના મુખ્ય ત્રણ પ્રકારોમાં નીચેનામાંથી કયા પ્રકારને ‘શિક્ષક કેન્દ્રી લેખન-પ્રકાર’ ગણવામાં આવે છે?",
+    "options": [
+      "Controlled Writing (નિયંત્રિત લેખન)",
+      "Guided Writing (માર્ગદર્શિત લેખન)",
+      "Free Writing (મુક્ત લેખન)",
+      "Creative Writing (સર્જનાત્મક લેખન)"
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "નિયંત્રિત લેખન (Controlled Writing) માં અનુલેખન અને શ્રુતલેખન કાર્ય કરવાનું હોય છે, જેમાં શિક્ષકનો ભાગ મહત્વનો હોવાથી તેને ‘શિક્ષક કેન્દ્રી લેખન-પ્રકાર’ ગણી શકાય. (પ્રકરણ/વિભાગ: Unit-4, 4.3.7 લેખનકાર્યના પ્રકારો | પાના નં.: 43)"
+  },
+  {
+    "q": "પ્રશ્ન 73: એક શિક્ષક વર્ગખંડમાં વિદ્યાર્થીઓને ‘મુદ્દા પરથી વાર્તાલેખન’ અથવા ‘પ્રશ્નો પરથી અહેવાલલેખન’ કરવાનું કાર્ય આપે છે અને પોતે માત્ર સહાયકની ભૂમિકા ભજવે છે. આ કયા પ્રકારનું લેખનકાર્ય છે?",
+    "options": [
+      "Controlled Writing (નિયંત્રિત લેખન)",
+      "Guided Writing (માર્ગદર્શિત લેખન)",
+      "Free Writing (મુક્ત લેખન)",
+      "Transcription (અનુલેખન)"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "માર્ગદર્શિત લેખન (Guided Writing) માં શિક્ષક સહાયકની ભૂમિકા ભજવી મુખ્ય મુદ્દાઓ જણાવે છે; મુદ્દા પરથી ફકરાલેખન/વાર્તાલેખન અને પ્રશ્નો પરથી વર્ણન/અહેવાલલેખન તેના ઉદાહરણો છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.7 લેખનકાર્યના પ્રકારો | પાના નં.: 43)"
+  },
+  {
+    "q": "પ્રશ્ન 74: મુક્ત લેખન (Free Writing) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: મુક્ત લેખનમાં વિદ્યાર્થીઓને કઈ વાક્યરચના કે શબ્દભંડોળનો ઉપયોગ કરવો તે સૂચવવામાં આવતું નથી.\nવિધાન 2: વિદ્યાર્થીઓને ‘My School’ કે ‘Visit to a Zoo’ જેવા વિષય પર કોઈ પણ મુદ્દાઓ આપ્યા વિના લેખન કરવાનું કહેવામાં આવે ત્યારે તેને મુક્ત લેખન કહેવાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મુક્ત લેખનમાં શબ્દભંડોળ, વાક્યરચના તથા વિચારોમાં મુક્તતા અપાય છે અને કોઈ મુદ્દાઓ આપ્યા વિના ‘My School’, ‘My family’ કે ‘Visit to a Zoo’ જેવા વિષયો પર લેખન કરવાનું કહેવાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.7 લેખનકાર્યના પ્રકારો | પાના નં.: 43)"
+  },
+  {
+    "q": "પ્રશ્ન 75: વિદ્યાર્થીઓને મુક્ત લેખનકાર્ય (Free Writing) ક્યારે આપવું યોગ્ય ગણાય?",
+    "options": [
+      "પ્રાથમિક કક્ષાએ મૂળાક્ષરો શીખવવાની સાથે જ.",
+      "જ્યારે વિદ્યાર્થીઓએ લેખનકાર્ય પર સારી એવી પકડ જમાવી લીધી હોય અને તેમને લેખનકાર્યનો પૂરતો મહાવરો હોય.",
+      "માત્ર અનુલેખન કરાવ્યા પછી તરત જ.",
+      "જ્યારે વિદ્યાર્થીઓને અંગ્રેજી વાંચતા પણ ન આવડતું હોય."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલ મુજબ મુક્ત લેખનકાર્ય ત્યારે જ આપી શકાય જ્યારે વિદ્યાર્થીઓએ લેખનકાર્ય પર સારી એવી પકડ જમાવી લીધી હોય અને તેમને લેખનકાર્યનો પૂરતો મહાવરો હોય. (પ્રકરણ/વિભાગ: Unit-4, 4.3.7 લેખનકાર્યના પ્રકારો | પાના નં.: 43)"
+  },
+  {
+    "q": "પ્રશ્ન 76: ફકરાલેખન (Paragraph Writing) ના વિષયોની પસંદગી અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: પ્રાથમિક ધોરણોમાં શાળા કે કુટુંબ જીવનમાંથી પસંદ કરીને વસ્તુઓ, વ્યક્તિઓ અને સ્થળોને લગતા વર્ણનાત્મક વિષયો પરનું લેખન આપી શકાય.\nવિધાન 2: પ્રાથમિક તબક્કા બાદ આસપાસના સામાજિક જીવનમાંથી કે શૈક્ષણિક વિષયોના અભ્યાસક્રમમાંના વિષયો પસંદ કરવા જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલ મુજબ પ્રાથમિક ધોરણોમાં શાળા-કુટુંબ જીવનના વર્ણનાત્મક વિષયો અને ત્યારબાદના તબક્કામાં સામાજિક જીવન કે અભ્યાસક્રમના વિષયો પસંદ કરવા જોઈએ — બંને વિધાનો સાચાં છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.8 ફકરાલેખન | પાના નં.: 44)"
+  },
+  {
+    "q": "પ્રશ્ન 77: પૂર્વ-લેખન તબક્કાની પ્રવૃત્તિ (Pre-writing stage activity) ‘બ્રેઇન સ્ટોર્મિંગ’ (Brain Storming) નો મુખ્ય ઉદ્દેશ શો છે?",
+    "options": [
+      "વિદ્યાર્થીઓમાં સુંદર હસ્તાક્ષરનો વિકાસ કરવો.",
+      "જે-તે મુદ્દા સંદર્ભે વિદ્યાર્થીઓ પરસ્પર માહિતીની આપ-લે કરે, નવા વિચારો પર ચર્ચા કરે તથા વધારાની સુસંગત વિગતો આપે.",
+      "વિદ્યાર્થીઓને માત્ર વ્યાકરણના નિયમોનું ગોખણ કરાવવું.",
+      "વિદ્યાર્થીઓ પાસેથી શ્રુતલેખનની પરીક્ષા લેવી."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "બ્રેઇન સ્ટોર્મિંગનો મુખ્ય ઉદ્દેશ જે-તે મુદ્દા સંદર્ભે વિદ્યાર્થીઓ જૂથ, જોડી કે વ્યક્તિગત રીતે વિચારણા કરી પરસ્પર માહિતીની આપ-લે કરે, ચર્ચા કરે અને સુસંગત વિગતો આપે તે છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.8.1 પૂર્વ લેખન તબક્કાની પ્રવૃત્તિઓ | પાના નં.: 44)"
+  },
+  {
+    "q": "પ્રશ્ન 78: ફકરાલેખન માટે વિદ્યાર્થીઓને તૈયાર કરવાની માનસિક પ્રક્રિયાના પાંચ સોપાનોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "શબ્દોનું વર્ગીકરણ → વિષયને લગતા શબ્દો આપવા → વાક્યરચના → વાક્યોને ક્રમમાં ગોઠવવા → શરૂઆત અને અંતની રચના",
+      "વિષયને લગતા શબ્દો આપવા (Web) → શબ્દોનું વર્ગીકરણ → વાક્યરચના → વાક્યોને ક્રમમાં ગોઠવવા → શરૂઆત અને અંતની રચના",
+      "વિષયને લગતા શબ્દો આપવા → વાક્યરચના → શબ્દોનું વર્ગીકરણ → શરૂઆત અને અંતની રચના → વાક્યોને ક્રમમાં ગોઠવવા",
+      "શરૂઆત અને અંતની રચના → વિષયને લગતા શબ્દો આપવા → શબ્દોનું વર્ગીકરણ → વાક્યરચના → વાક્યોને ક્રમમાં ગોઠવવા"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "ફકરાલેખનની માનસિક પ્રક્રિયાનો સાચો ક્રમ છે: (1) Give Subject Related Keywords (web), (2) Classification of Words, (3) Sentence Pattern, (4) Arrangement of Sentences અને (5) Starting and ending formation. (પ્રકરણ/વિભાગ: Unit-4, 4.3.8.1 પૂર્વ લેખન તબક્કાની પ્રવૃત્તિઓ | પાના નં.: 44-45)"
+  },
+  {
+    "q": "પ્રશ્ન 79: ફકરાલેખન પૂર્વે બોર્ડ પર ‘Web’ (જાળું) માં નોંધેલા શબ્દોનું ‘શબ્દોનું વર્ગીકરણ’ (Classification of Words) શા માટે કરાવવામાં આવે છે?",
+    "options": [
+      "વિદ્યાર્થીઓના હસ્તાક્ષર સુધારવા માટે.",
+      "જેથી ફકરાલેખનમાં વિચારક્રમ જળવાય અને વિષયના પેટા મુદ્દાઓ અંગેની સભાનતા વધે.",
+      "માત્ર શબ્દોની જોડણી તપાસવા માટે.",
+      "ફકરાની લંબાઈ ઘટાડવા માટે."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "સમાનતાના આધારે શબ્દોના જૂથ (વર્ગીકરણ) પાડવાથી ફકરાલેખનમાં વિચારક્રમ જળવાય છે, વિષયના પેટા મુદ્દાઓ અંગેની સભાનતા વધે છે અને સંગ્રહિત શબ્દોની સમજ દૃઢ થાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.8.1 પૂર્વ લેખન તબક્કાની પ્રવૃત્તિઓ | પાના નં.: 45)"
+  },
+  {
+    "q": "પ્રશ્ન 80: ફકરાલેખનના વિષય અને તેમાં સામાન્ય રીતે વપરાતા કાળ (Tense) ના સાચા જોડકાં જોડો:\nવિભાગ - અ (ફકરાનો વિષય)\t\tવિભાગ - બ (સામાન્ય રીતે વપરાતો કાળ)\n1. મુલાકાત (Visit)\t\t\t(a) વર્તમાનકાળ\n2. વ્યક્તિ (Person)\t\t\t(b) ભૂતકાળ\n3. રાષ્ટ્રીય નેતા (National Leader)\t(c) ભૂતકાળ\n4. તહેવાર (Festival)\t\t\t(d) વર્તમાનકાળ",
+    "options": [
+      "1-b, 2-a, 3-c, 4-d",
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-c, 3-a, 4-d",
+      "1-d, 2-a, 3-b, 4-c"
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલ મુજબ મુલાકાત (Visit), રાષ્ટ્રીય નેતા (National Leader) અને ઘટના (Event) વિશેના ફકરા સામાન્ય રીતે ભૂતકાળમાં, જ્યારે વ્યક્તિ (Person) અને તહેવાર (Festival) વિશેના ફકરા સામાન્ય રીતે વર્તમાનકાળમાં લખાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.8.1 ફકરા લેખન વખતે ધ્યાનમાં રાખવાની બાબતો | પાના નં.: 46)"
+  },
+  {
+    "q": "પ્રશ્ન 81: પ્રાથમિક કક્ષાએ પત્રલેખન (Letter Writing) ની શરૂઆત નીચેનામાંથી કયા સ્વરૂપોથી કરવી યોગ્ય ગણવામાં આવી છે?",
+    "options": [
+      "ઔપચારિક નોકરીની અરજી (Job Application) અને વ્યાપારિક પત્રો",
+      "Leave report, invitation note, notice વગેરે",
+      "સરકારી પરિપત્રો અને અહેવાલો",
+      "સંપાદકને પત્ર (Letter to the Editor)"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "પ્રાથમિક કક્ષાએ પત્રલેખનની શરૂઆત Leave report, invitation note, notice વગેરેથી કરી શકાય અને ત્યારબાદ ઉપલા ધોરણમાં Social letters અને Application તરફ લઈ જઈ શકાય. (પ્રકરણ/વિભાગ: Unit-4, 4.3.9 પત્રલેખન | પાના નં.: 48)"
+  },
+  {
+    "q": "પ્રશ્ન 82: પત્રના બંધારણ સંદર્ભે વધુ સ્પષ્ટતા કરવા માટે મોડ્યૂલમાં કઈ વ્યવહારુ પ્રવૃત્તિ સૂચવવામાં આવી છે?",
+    "options": [
+      "એક પત્રના વાક્યોને ઉલટ-સૂલટ કરાવી વિદ્યાર્થીઓ પાસે તેની ક્રમમાં ગોઠવણી કરાવવી.",
+      "વિદ્યાર્થીઓને પત્રનો દરેક શબ્દ દસ વખત લખવા કહેવું.",
+      "માત્ર શિક્ષકે બોર્ડ પર પત્ર લખીને વાંચી સંભળાવવો.",
+      "વિદ્યાર્થીઓને સીધા જ વ્યાપારિક પત્રોનું અનુલેખન કરાવવું."
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "પત્રના બંધારણ સંદર્ભે સ્પષ્ટતા માટે એક પત્રના વાક્યોને ઉલટ-સૂલટ કરાવી વિદ્યાર્થીઓ પાસે તેની ક્રમમાં ગોઠવણી કરાવવી અને ત્યારબાદ મુક્ત-લેખન કાર્ય સોંપવું તાર્કિક રીતે અર્થપૂર્ણ ગણાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.9 પત્રલેખન | પાના નં.: 51)"
+  },
+  {
+    "q": "પ્રશ્ન 83: નોકરી માટેની અરજી (Application) લખવાની રજૂઆત પરથી તેને કેટલી રીતે લખવામાં આવે છે?",
+    "options": [
+      "બે રીતે (Formal અને Informal)",
+      "ત્રણ રીતે (Descriptive, Formal અને Application)",
+      "ચાર રીતે (Descriptive, Narrative, Biographical અને Formal)",
+      "માત્ર એક જ રીતે (Descriptive)"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "નોકરી માટેની અરજી એ ઔપચારિક પત્રનો પ્રકાર છે અને તેની રજૂઆત પરથી તેને ત્રણ રીતે લખવામાં આવે છે: (1) Descriptive, (2) Formal અને (3) Application. (પ્રકરણ/વિભાગ: Unit-4, 4.3.10 અરજી | પાના નં.: 51)"
+  },
+  {
+    "q": "પ્રશ્ન 84: નોકરીની અરજીમાં આપવામાં આવતી ‘વ્યક્તિગત માહિતી’ (Personal Bio-data) માં મોડ્યૂલ મુજબ કઈ વિગતોને ફૂદડી (*) કરીને એવી નોંધ મૂકવામાં આવી છે કે તે અરજીમાં ન લખાય તો પણ ચાલે?",
+    "options": [
+      "Full Name, Address અને Birthdate",
+      "Education, Experience અને Reference",
+      "Physical Condition, Appearance, Personality અને Language Known",
+      "Nationality, Sex અને Marital Status"
+    ],
+    "ans": 2,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલમાં આપેલા નમૂના મુજબ Physical Condition (Height, Weight, Health), Appearance, Personality અને Language Known ની આગળ ‘*’ મૂકીને નોંધ લખી છે કે ‘*’ વાળી વિગત અરજીમાં ન લખાય તો ચાલે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.10 અરજી | પાના નં.: 52)"
+  },
+  {
+    "q": "પ્રશ્ન 85: અહેવાલ લેખન (Report Writing) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: કોઈ મહત્વની ઘટના, પ્રસંગ, બનાવ, પ્રવૃત્તિ અથવા પરિસ્થિતિના વર્ણનને Report કહે છે.\nવિધાન 2: અહેવાલ (Report) હંમેશાં વર્તમાનકાળ અથવા ભવિષ્યકાળમાં જ લખાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે અહેવાલ (Report) હંમેશાં ભૂતકાળમાં જ લખાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.11 અન્ય સ્વરૂપનાં લેખન | પાના નં.: 56)"
+  },
+  {
+    "q": "પ્રશ્ન 86: Sports Day, Annual Day કે Prize distribution function જેવા પ્રસંગો પર અહેવાલ (Report) લખતી વખતે તેના માળખામાં નીચેનામાંથી કયા ક્રમની વિગતોનો સમાવેશ થાય છે?",
+    "options": [
+      "Occasion → Date → Starting time → Chief Guest → Inauguration → Arrangements → Main Events → Other details",
+      "Chief Guest → Other details → Date → Occasion → Inauguration",
+      "Personal Bio-data → Education → Experience → Reference",
+      "Address → Salutation → Body → Subscription"
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "અહેવાલના માળખામાં Occasion (પ્રસંગ), Date (તારીખ), Starting time (શરૂઆતનો સમય), Chief Guest (મુખ્ય મહેમાન), Inauguration (ઉદ્ઘાટન), Arrangements (ગોઠવણ), Main Events (મુખ્ય પ્રસંગ) અને Other details (અન્ય વિગતો) નો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.11 અન્ય સ્વરૂપનાં લેખન | પાના નં.: 56)"
+  },
+  {
+    "q": "પ્રશ્ન 87: ચિત્ર પરથી લેખન (Picture based Writing) અંતર્ગત જો વાર્તાલેખન કરવાનું હોય, તો વાર્તાને વધુ રસપ્રદ બનાવવા માટે મોડ્યૂલમાં શું ઉમેરવાનું સૂચન કરવામાં આવ્યું છે?",
+    "options": [
+      "લાંબા વર્ણનાત્મક ફકરાઓ",
+      "વાર્તાનાં પાત્રો વચ્ચેના સંવાદો",
+      "અઘરા વ્યાકરણના નિયમો",
+      "માત્ર કાવ્યપંક્તિઓ"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "ચિત્ર પરથી લેખનમાં જો વાર્તાલેખન હોય તો વાર્તાનાં પાત્રો વચ્ચેના સંવાદોને વાર્તામાં સ્થાન આપવાથી વાર્તા રસપ્રદ બને છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.11 અન્ય સ્વરૂપનાં લેખન | પાના નં.: 56)"
+  },
+  {
+    "q": "પ્રશ્ન 88: મુક્ત અને સર્જનાત્મક લેખન (Free and Creative Writing) એટલે કે નિબંધ લેખનના ચાર મુખ્ય પ્રકારો અને તેના ઉદાહરણોના સાચા જોડકાં જોડો:\nવિભાગ - અ (પ્રકાર)\t\t\tવિભાગ - બ (ઉદાહરણ)\n1. વર્ણનાત્મક (Descriptive)\t\t(a) A visit to a Zoo\n2. કથનાત્મક (Narrative)\t\t(b) My experience As a Teacher\n3. ચરિત્રાત્મક (Biographical)\t\t(c) A farm, A garden\n4. આત્મકથનાત્મક (Autobiographical)\t(d) A Gardener",
+    "options": [
+      "1-c, 2-a, 3-d, 4-b",
+      "1-a, 2-c, 3-d, 4-b",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-b, 2-a, 3-d, 4-c"
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "વર્ણનાત્મકમાં A farm / A garden, કથનાત્મકમાં A visit to a Zoo, ચરિત્રાત્મકમાં A Gardener અને આત્મકથનાત્મકમાં My experience As a Teacher નો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.12 મુક્ત અને સર્જનાત્મક લેખન | પાના નં.: 57)"
+  },
+  {
+    "q": "પ્રશ્ન 89: મુક્ત અને સર્જનાત્મક લેખન (નિબંધ લેખન) અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "તેમાં એક કરતાં વધારે ફકરાઓનો સમાવેશ થાય છે.",
+      "તેનું વિષયવસ્તુ વિદ્યાર્થીઓના અનુભવ જગતમાંથી પસંદ થયેલું હોવું જોઈએ.",
+      "લેખન પૂર્વે વિષયની મૌખિક ચર્ચા કરીને આનુષંગિક મુદ્દાઓ બોર્ડ પર મૂકવા જોઈએ.",
+      "મુક્ત લેખનમાં ક્યારેય એક કરતાં વધુ ફકરાઓની ગૂંથણી કરી શકાતી નથી."
+    ],
+    "ans": 3,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "ફકરાલેખનનું કાર્ય યોગ્ય કુશળતાથી વિકાસ પામ્યું હોય તો મુક્ત લેખન વખતે ત્રણ કે ચાર ફકરાઓની ગૂંથણી વ્યવસ્થિત સ્વરૂપ ધારણ કરે છે. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.12 મુક્ત અને સર્જનાત્મક લેખન | પાના નં.: 56-57)"
+  },
+  {
+    "q": "પ્રશ્ન 90: લેખનકાર્યના સમૃદ્ધિકરણ (Enrichment of Writing) માટે ‘It is a beautiful picture.’ લખવાને બદલે ‘What a beautiful picture it is!’ લખવાનું ઉદાહરણ મોડ્યૂલમાં કઈ બાબત સમજાવવા માટે અપાયું છે?",
+    "options": [
+      "માત્ર વિરામચિહ્નોની સંખ્યા વધારવા",
+      "વાક્યરચનાઓમાં વૈવિધ્ય લાવીને લેખનશૈલીને વધુ અર્થસૂચક બનાવવા",
+      "વાક્યને ભૂતકાળમાં ફેરવવા",
+      "શબ્દભંડોળ ઘટાડવા"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "લેખનકાર્યના સમૃદ્ધિકરણ માટે વાક્યરચનાઓમાં વૈવિધ્ય લાવીને (વિધાન વાક્યને બદલે ઉદ્ગાર વાક્યનો ઉપયોગ કરી) લેખનશૈલીને વધુ અર્થસૂચક બનાવી શકાય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.13 લેખનકાર્યનું સમૃદ્ધિકરણ | પાના નં.: 57)"
+  },
+  {
+    "q": "પ્રશ્ન 91: લેખનકાર્યના સમૃદ્ધિકરણ (Enrichment of Writing) માટે નીચેનામાંથી કઈ પ્રવૃત્તિ સૂચવવામાં આવી નથી?",
+    "options": [
+      "એકવાર લેખન કર્યા બાદ તેનું Editing અવશ્ય કરવું.",
+      "વિષય વાંચીને તરત જ લખવાનું શરૂ કરી દેવું અને મુદ્દાઓ નોંધવા નહીં.",
+      "વાંચન દરમિયાન પરિચયમાં આવતા નવા શબ્દોને સંભાષણ અને લેખનમાં સમાવિષ્ટ કરવા.",
+      "એક જ વિષય પર મિત્ર અને તમે અલગ-અલગ કાગળ પર લેખન કરીને બંને સ્વરૂપોની સરખામણી કરવી."
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "મોડ્યૂલ મુજબ ‘વિષય વાંચી લખવાનું શરૂ કરી દેવાને બદલે વિષય અંતર્ગત આવશ્યક મુદ્દાઓ નોંધવા’ જોઈએ. તેથી વિધાન (B) અયોગ્ય છે. (પ્રકરણ/વિભાગ: Unit-4, 4.3.13 લેખનકાર્યનું સમૃદ્ધિકરણ | પાના નં.: 57-58)"
+  },
+  {
+    "q": "પ્રશ્ન 92: આપણી શિક્ષણપ્રથામાં અભિવ્યક્તિના સંદર્ભમાં લેખન કૌશલ્યને અગત્યનું ઘટક કેમ ગણવામાં આવ્યું છે?",
+    "options": [
+      "કારણ કે આપણી શિક્ષણપ્રથામાં મહદંશે લેખન દ્વારા વિદ્યાર્થીઓનું જ્ઞાન ચકાસવામાં આવે છે.",
+      "કારણ કે લેખન એ સૌથી સરળ અને પ્રથમ ક્રમનું કૌશલ્ય છે.",
+      "કારણ કે લેખન એ Receptive skill છે.",
+      "કારણ કે લેખન માટે શબ્દભંડોળની જરૂર હોતી નથી."
+    ],
+    "ans": 0,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "સારાંશ મુજબ આપણી શિક્ષણપ્રથામાં મહદંશે લેખન દ્વારા વિદ્યાર્થીઓનું જ્ઞાન ચકાસવામાં આવે છે, તેથી લેખન પરની હથોટી કેળવાય તે ઘણું જરૂરી બને છે. (પ્રકરણ/વિભાગ: Unit-4, 4.4 સારાંશ | પાના નં.: 58)"
+  },
+  {
+    "q": "પ્રશ્ન 93: લેખનકૌશલ્યનો પાયો કયો છે, જે ક્રમશઃ વધુ સંકુલ એવા મુક્ત લેખનની ઇમારત રચવા વિદ્યાર્થીને તૈયાર કરે છે?",
+    "options": [
+      "અહેવાલ લેખન",
+      "મૂળાક્ષર લેખન",
+      "અરજી લેખન",
+      "ફકરા લેખન"
+    ],
+    "ans": 1,
+    "unit": "Unit-4: Development of Writing Skill",
+    "exp": "સારાંશ મુજબ ‘લેખનકૌશલ્યનો પાયો મૂળાક્ષર લેખન છે’ જે ક્રમશઃ વધુ સંકુલ એવા મુક્ત લેખનની ઇમારત રચવા વિદ્યાર્થીને તૈયાર કરે છે. (પ્રકરણ/વિભાગ: Unit-4, 4.4 સારાંશ | પાના નં.: 58)"
+  },
+  {
+    "q": "પ્રશ્ન 94: મોડ્યૂલના અંતે આપવામાં આવેલા ‘વિચાર પ્રેરક પ્રશ્નો’ (Content Based Questions) માં ધોરણ 5 થી 8 ના અંગ્રેજી પાઠ્યપુસ્તકમાંથી કઈ બે વાર્તાઓનાં ઉદાહરણ આપવામાં આવ્યાં છે?",
+    "options": [
+      "ધોરણ-6: ‘Birju the Brave’ અને ધોરણ-5: ‘A hare and a tortoise’",
+      "ધોરણ-7: ‘The Clever Fox’ અને ધોરણ-8: ‘The Thirsty Crow’",
+      "ધોરણ-5: ‘Birju the Brave’ અને ધોરણ-6: ‘A Visit to a Science Fair’",
+      "ધોરણ-6: ‘The Honest Woodcutter’ અને ધોરણ-5: ‘The Greedy Dog’"
+    ],
+    "ans": 0,
+    "unit": "પરિશિષ્ટ: વિચાર પ્રેરક પ્રશ્નો",
+    "exp": "Content Based Questions માં ઉદાહરણરૂપે ધોરણ 6 પ્રથમ સત્ર (પાના નં. 30) ની ‘Birju the Brave’ અને ધોરણ 5 સત્ર 1-2 ની ‘A hare and a tortoise’ વાર્તાઓ આપવામાં આવી છે. (પ્રકરણ/વિભાગ: વિચાર પ્રેરક પ્રશ્નો - Content Based Questions | પાના નં.: પરિશિષ્ટ-1)"
+  },
+  {
+    "q": "પ્રશ્ન 95: મોડ્યૂલના અંતભાગમાં આપેલા વિચાર પ્રેરક પ્રશ્નો (Content Based Questions) મુજબ વાર્તા સંભળાવી કે વંચાવીને વિદ્યાર્થીઓમાં ઉચ્ચ કક્ષાની વિચારશક્તિ વિકસાવવા માટે કયા પ્રકારના પ્રશ્નો પૂછી શકાય?",
+    "options": [
+      "માત્ર ‘હા’ કે ‘ના’ માં જવાબ આપી શકાય તેવા પ્રશ્નો",
+      "હોટ (HOTS) પ્રશ્નો — જેમ કે વાર્તામાં આગળ શું થયું હશે, વાર્તામાં શું ફેરફાર કરશો, યોગ્ય શીર્ષક આપો, 5 'wh' પ્રશ્નો બનાવો વગેરે",
+      "માત્ર શબ્દોની જોડણી લખવાના પ્રશ્નો",
+      "માત્ર વાર્તાનું અનુલેખન કરાવવું"
+    ],
+    "ans": 1,
+    "unit": "પરિશિષ્ટ: વિચાર પ્રેરક પ્રશ્નો",
+    "exp": "શિક્ષક ધોરણ 5 થી 8 ના અંગ્રેજી પાઠ્યપુસ્તકમાંથી વાર્તા કે કવિતા સંભળાવી-વંચાવી તેના વિશે ‘હોટ’ (HOTS) પ્રશ્નો પૂછી શકે છે, જેમાં 5 ‘wh’ પ્રશ્નો બનાવવા, વાર્તાનો અંત/ફેરફાર વિચારવો, શીર્ષક આપવું અને ‘odd word out’ ગેમ જેવી પ્રવૃત્તિઓનો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: વિચાર પ્રેરક પ્રશ્નો - Content Based Questions | પાના નં.: પરિશિષ્ટ-1)"
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-95) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૯૫ માંથી ૯૫ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. (પ્રથમ વર્ષ) – કોર્સ 4 (બ): અંગ્રેજીમાં પ્રાવીણ્ય (સજ્જતા)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "fy4benglishmethod.html",
+            testUploadDate: "2026-11-26"
+        })
+    });
+}
+</script>
+</body>
+</html>
