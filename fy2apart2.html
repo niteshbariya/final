@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા (ભાગ-2: પ્રશ્ન 101 થી 200)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ) | ભાગ-2 (પ્રશ્ન 101 થી 200)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">ભાગ-2: પ્રશ્ન 101 થી 200 | બહુવિકલ્પીય પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત) — ૧૦૦ પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા (ભાગ-2: પ્રશ્ન 101 થી 200)</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ) ભાગ-2: પ્રશ્ન 101 થી 200 નો ડેટાસેટ
+const questions = [
+  {
+    "q": "પ્રશ્ન 101: \"ઉચ્ચોચ્ચ શિક્ષણ માત્ર માહિતીપ્રદ નથી હોતું પરંતુ આપણા જીવનને સમગ્ર અસ્તિત્વ સાથે સંવાદિતાપૂર્ણ બનાવે છે.\" — શિક્ષણની આ વ્યાપક સંકલ્પના કયા ભારતીય ચિંતકે આપી છે?",
+    "options": [
+      "સ્વામી વિવેકાનંદ",
+      "કવિવર રવીન્દ્રનાથ ટાગોર",
+      "મહર્ષિ શ્રી અરવિંદ",
+      "મહાત્મા ગાંધી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ટાગોરનું શિક્ષણદર્શન",
+    "exp": "કવિવર રવીન્દ્રનાથ ટાગોર કેળવણીનો વ્યાપક અર્થ કરતાં જણાવે છે કે ઉચ્ચોચ્ચ શિક્ષણ માત્ર માહિતીપ્રદ નહીં, પરંતુ જીવનને સમગ્ર અસ્તિત્વ સાથે સંવાદિતાપૂર્ણ બનાવે છે. (પ્રકરણ/વિભાગ: એકમ-1: ટાગોરનું શિક્ષણદર્શન | પાના નં.: 57)"
+  },
+  {
+    "q": "પ્રશ્ન 102: રવીન્દ્રનાથ ટાગોરના મતે કેળવણીના હેતુઓ અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: ટાગોર શારીરિક ઉપેક્ષા કરીને બૌદ્ધિક શિક્ષણ આપવાના સખત વિરોધી હતા.\nવિધાન 2: તેઓ ભારતીય અને પાશ્ચાત્ય સંસ્કૃતિના સમન્વય તથા આંતરરાષ્ટ્રીય બંધુત્વના હિમાયતી હતા.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ટાગોર - કેળવણીના હેતુઓ",
+    "exp": "ટાગોર બાલ્યાવસ્થાથી જ શારીરિક વિકાસને મહત્ત્વપૂર્ણ ગણતા હતા અને શારીરિક ઉપેક્ષા કરીને બૌદ્ધિક શિક્ષણ આપવાના વિરોધી હતા; તેમજ તેઓ આંતરરાષ્ટ્રીય સમજ અને ભારતીય-પાશ્ચાત્ય સંસ્કૃતિના સમન્વયના હિમાયતી હતા. (પ્રકરણ/વિભાગ: એકમ-1: ટાગોર - કેળવણીના હેતુઓ | પાના નં.: 58-59)"
+  },
+  {
+    "q": "પ્રશ્ન 103: ગુરુદેવ રવીન્દ્રનાથ ટાગોરે જીવનની વાસ્તવિકતાઓના ઉપલક્ષ્યમાં પોતાના અભ્યાસક્રમને કયા ત્રણ વિભાગોમાં વિભાજિત કર્યો છે?",
+    "options": [
+      "ભાષા, વિજ્ઞાન અને કલા",
+      "વિષયો, પ્રવૃત્તિઓ તથા સમૂહજીવન અને સમાજસેવા",
+      "શારીરિક, માનસિક અને આધ્યાત્મિક શિક્ષણ",
+      "ઔપચારિક, અનૌપચારિક અને પ્રાકૃતિક શિક્ષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ટાગોર - અભ્યાસક્રમ",
+    "exp": "ટાગોરે તેમના અભ્યાસક્રમને ત્રણ વિભાગોમાં વિભાજિત કર્યો છે: (1) વિષયો, (2) પ્રવૃત્તિઓ અને (3) સમૂહજીવન અને સમાજસેવા. (પ્રકરણ/વિભાગ: એકમ-1: ટાગોર - અભ્યાસક્રમ | પાના નં.: 59)"
+  },
+  {
+    "q": "પ્રશ્ન 104: રવીન્દ્રનાથ ટાગોરના મતે શિસ્ત અને શિક્ષકના સ્થાન અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ટાગોર બાળકો પર બિનજરૂરી બંધનો અને દમનવાદી શિસ્તના પ્રખર વિરોધી હતા.",
+      "ટાગોર મુક્ત શિસ્ત અને સ્વયંશિસ્તની હિમાયત કરતા હતા.",
+      "ટાગોર આદર્શવાદી હોવાથી શિક્ષણમાં ગુરુનું અદ્વિતીય સ્થાન સ્વીકારે છે અને શિક્ષણને 'ઋષિકાર્ય' ગણાવે છે.",
+      "ટાગોરના મતે શિક્ષકે એક વખત પદવી મેળવ્યા બાદ નૂતન જ્ઞાનની ખોજ કરવાની જરૂર રહેતી નથી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: ટાગોર - શિસ્ત અને શિક્ષકનું સ્થાન",
+    "exp": "ટાગોરના મતે શિક્ષક 'આજીવન વિદ્યાર્થી' હોય છે; સાચો શિક્ષક એ છે જે સતત નૂતન જ્ઞાનની ખોજ કરતો હોય અને જેનામાં જ્ઞાનની અદમ્ય તૃષા હોય. તેથી વિધાન (D) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-1: ટાગોર - શિસ્ત અને શિક્ષકનું સ્થાન | પાના નં.: 60)"
+  },
+  {
+    "q": "પ્રશ્ન 105: રવીન્દ્રનાથ ટાગોર દ્વારા સ્થાપિત 'શાંતિનિકેતન' (વિશ્વભારતી) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: શાંતિનિકેતનની સ્થાપના ઈ.સ. 1901માં ટાગોર દ્વારા થઈ હતી.\nવિધાન 2: કેન્દ્રીય વિશ્વવિદ્યાલયનો દરજ્જો ધરાવતી વિશ્વભારતી યુનિવર્સિટીના ત્રણ મહત્ત્વનાં અંગો છે: શાંતિનિકેતન, યુનિવર્સિટી અને ઇન્સ્ટિટ્યૂટ ઑફ રૂરલ રિકન્સ્ટ્રક્શન (ગ્રામનવનિર્માણ સંસ્થા).",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શાંતિનિકેતન (વિશ્વભારતી)",
+    "exp": "ઈ.સ. 1901માં ટાગોરે શાંતિનિકેતનની સ્થાપના કરી હતી, જે આગળ જતાં વિશ્વભારતી કેન્દ્રીય વિશ્વવિદ્યાલય બની અને તેના ત્રણ મહત્ત્વનાં અંગો શાંતિનિકેતન, યુનિવર્સિટી તથા ગ્રામનવનિર્માણ સંસ્થા છે. (પ્રકરણ/વિભાગ: એકમ-1: શાંતિનિકેતન (વિશ્વભારતી) | પાના નં.: 60-61)"
+  },
+  {
+    "q": "પ્રશ્ન 106: \"ટાગોર આધુનિક ભારતના શૈક્ષણિક પુનરુત્થાનના પયગંબર હતા.\" — રવીન્દ્રનાથ ટાગોરના શિક્ષણદર્શનનું મૂલ્યાંકન કરતું આ વિધાન કોનું છે?",
+    "options": [
+      "ડૉ. સર્વપલ્લી રાધાકૃષ્ણન",
+      "ડૉ. મુકરજી",
+      "જવાહરલાલ નેહરુ",
+      "મહાત્મા ગાંધી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ટાગોરના શિક્ષણદર્શનનું મૂલ્યાંકન",
+    "exp": "ડૉ. મુકરજીના મતે ટાગોર આધુનિક ભારતના શૈક્ષણિક પુનરુત્થાનના પયગંબર હતા. (પ્રકરણ/વિભાગ: એકમ-1: ટાગોરના શિક્ષણદર્શનનું મૂલ્યાંકન | પાના નં.: 61)"
+  },
+  {
+    "q": "પ્રશ્ન 107: \"પોતે અપરણિત હોવા છતાં માતાઓની તે માતા છે અને બાળકોની મહાન સરસ્વતી છે.\" — ડૉ. મારિયા મૉન્ટેસરી વિશે આ ગૌરવપૂર્ણ શબ્દો કોણે પોતાના પુસ્તક 'મૉન્ટેસરી પદ્ધતિ' ની શરૂઆતમાં લખ્યા છે?",
+    "options": [
+      "શ્રી નાનાભાઈ ભટ્ટ",
+      "શ્રી ગિજુભાઈ બધેકા",
+      "શ્રી તારાબેન મોડક",
+      "શ્રી કાકાસાહેબ કાલેલકર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ડૉ. મૉન્ટેસરીનું શિક્ષણદર્શન",
+    "exp": "શ્રી ગિજુભાઈ બધેકાએ પોતાના પુસ્તક 'મૉન્ટેસરી પદ્ધતિ' ની શરૂઆતમાં ડૉ. મૉન્ટેસરીને માનવવંશશાસ્ત્રી, શરીરશાસ્ત્રી, માનસશાસ્ત્રી, કેળવણીશાસ્ત્રી તેમજ માતાઓની માતા અને બાળકોની મહાન સરસ્વતી તરીકે બિરદાવ્યાં છે. (પ્રકરણ/વિભાગ: એકમ-1: ડૉ. મૉન્ટેસરીનું શિક્ષણદર્શન | પાના નં.: 61-62)"
+  },
+  {
+    "q": "પ્રશ્ન 108: ડૉ. મારિયા મૉન્ટેસરીના જીવન અને શૈક્ષણિક કાર્યના સંદર્ભમાં નીચેનામાંથી કઈ વિગત અસંગત (ખોટી) છે?",
+    "options": [
+      "તેમનો જન્મ ઈ.સ. 1870માં ઇટલીની સ્વાતંત્ર્ય લડતના છેલ્લા દિવસોમાં થયો હતો.",
+      "તેમણે રોમની વિદ્યાપીઠમાંથી એમ.ડી. (M.D.) ની ઉપાધિ પ્રાપ્ત કરી હતી.",
+      "તેમણે ઈટાર્ટ અને સેંગુઈનના પુસ્તકોના આધારે મંદમતિના બાળકો માટે ભિન્ન-ભિન્ન સાધનો યોજી 1898થી 1900 સુધી કામ કર્યું હતું.",
+      "તેમણે પ્રથમ બાલગૃહની શરૂઆત લંડનમાં ઈ.સ. 1907ના જાન્યુઆરી માસમાં કરી હતી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: ડૉ. મૉન્ટેસરીનું જીવનદર્શન",
+    "exp": "ડૉ. મૉન્ટેસરીએ રોમન સાઇનોર એડોએર્ડો ટાલમોના સંપર્કથી ઇટલીમાં ગરીબ ઘરનાં બાળકો માટે ઈ.સ. 1907ના જાન્યુઆરી માસમાં પહેલવહેલું બાલગૃહ ખોલ્યું હતું (લંડનમાં નહીં). (પ્રકરણ/વિભાગ: એકમ-1: ડૉ. મૉન્ટેસરીનું જીવનદર્શન | પાના નં.: 62-63)"
+  },
+  {
+    "q": "પ્રશ્ન 109: ડૉ. મૉન્ટેસરીએ બીજું બાલગૃહ ખૂલવાના પ્રસંગે આપેલું મનનીય વ્યાખ્યાન તેમના પુસ્તક 'મૉન્ટેસરી પદ્ધતિ' ના કયા પ્રકરણમાં સમાવિષ્ટ છે?",
+    "options": [
+      "બાલસ્વાતંત્ર્ય",
+      "પ્રારંભિક વ્યાખ્યાન",
+      "બાલગૃહનો ઉદ્દેશ",
+      "પ્રાયોગિક શિક્ષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ડૉ. મૉન્ટેસરીનું જીવનદર્શન",
+    "exp": "બીજું બાલગૃહ ખૂલવાના પ્રસંગે ડૉ. મૉન્ટેસરીએ આપેલું વ્યાખ્યાન 'મૉન્ટેસરી પદ્ધતિ' પુસ્તકમાં 'પ્રારંભિક વ્યાખ્યાન' એ મથાળાવાળા પ્રકરણમાં આવેલું છે. (પ્રકરણ/વિભાગ: એકમ-1: ડૉ. મૉન્ટેસરીનું જીવનદર્શન | પાના નં.: 63)"
+  },
+  {
+    "q": "પ્રશ્ન 110: ડૉ. મૉન્ટેસરીના મતે શાળાના વાતાવરણ અને ફર્નિચર અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: બાળકોને ઉપયોગમાં લેવાનું ફર્નિચર હળવું, નાજુક, સાદું, ઓછા ખર્ચે બની શકે તેવું અને કલાની દૃષ્ટિએ સુંદર હોવું જોઈએ.\nવિધાન 2: બાળકની પ્રત્યેક સ્વતંત્ર હિલચાલ કોઈ પણ ઉદ્દેશ વિનાની (નરી હલનચલન) હોવી જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: મૉન્ટેસરી શાળાનું વાતાવરણ",
+    "exp": "મૉન્ટેસરીના મતે બાળકની પ્રત્યેક સ્વતંત્ર હિલચાલ 'ઉદ્દેશપૂર્ણ' હોવી જોઈએ; નર્યું હલનચલનનું સ્વાતંત્ર્ય બાળકને ઉપકારક નથી. તેથી વિધાન 2 ખોટું અને વિધાન 1 સાચું છે. (પ્રકરણ/વિભાગ: એકમ-1: મૉન્ટેસરી શાળાનું વાતાવરણ | પાના નં.: 64)"
+  },
+  {
+    "q": "પ્રશ્ન 111: \"આજના સમાજની અત્યંત આવશ્યક જરૂરિયાત કેળવણીની પદ્ધતિની પુનર્ઘટના છે, અને જે મનુષ્ય આ કાર્ય માટે મેદાને પડે છે તે જ મનુષ્ય, મનુષ્ય ઉદ્ધાર માટે લડત કરે છે.\" — આ શબ્દો ડૉ. મૉન્ટેસરીના કયા સમર્થ ગુરુના છે?",
+    "options": [
+      "ઈટાર્ટ",
+      "સેંગુઈન",
+      "સર્ગી",
+      "પેસ્ટોલોજી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: મૉન્ટેસરી શિક્ષક",
+    "exp": "ડૉ. મૉન્ટેસરીના સમર્થ ગુરુ 'સર્ગી' ના આ શબ્દો જે શિક્ષકના હૃદયમાં કોતરાયેલા હોય તેને જ મૉન્ટેસરી શાળામાં પગ મૂકવાનો અધિકાર હોવાનું જણાવાયું છે. (પ્રકરણ/વિભાગ: એકમ-1: મૉન્ટેસરી શિક્ષક | પાના નં.: 64)"
+  },
+  {
+    "q": "પ્રશ્ન 112: \"શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે. શિક્ષકે શીખવવા કરતાં બાળકોનું અવલોકન કરવું જરૂરી છે.\" — શિક્ષકની યોગ્યતાનો નિર્દેશ કરતું આ વિધાન કોનું છે?",
+    "options": [
+      "શ્રી ગિજુભાઈ બધેકા",
+      "ડૉ. મારિયા મૉન્ટેસરી",
+      "જ્હૉન ડ્યૂઈ",
+      "જીન જેકવીસ રૂસો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: મૉન્ટેસરી શિક્ષક",
+    "exp": "ડૉ. મૉન્ટેસરી શિક્ષકને 'મૌનનો પાઠ' પઢાવે છે અને પડદા પાછળ રહીને બાળકોનું અવલોકન કરવા તથા નમ્રતાથી પોતાની ભૂલો સ્વીકારવા પર ભાર મૂકે છે. (પ્રકરણ/વિભાગ: એકમ-1: મૉન્ટેસરી શિક્ષક | પાના નં.: 65-66)"
+  },
+  {
+    "q": "પ્રશ્ન 113: ડૉ. મૉન્ટેસરીના મતે શિક્ષક અને શિક્ષણપદ્ધતિ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "મૉન્ટેસરી શાળાનો શિક્ષક પ્રથમતઃ વિજ્ઞાનશાસ્ત્રી હોવો જોઈએ અને જડ કંપોઝીટર ન હોવો જોઈએ.",
+      "શિક્ષકની વાણીમાં શબ્દવિલાસ કરતાં શબ્દસામર્થ્યની જરૂર છે; વાણી ટૂંકી, ટચ અને આડંબરરહિત હોવી જોઈએ.",
+      "મૉન્ટેસરીના મતે પ્રયોગનો ઉદ્દેશ સાક્ષાત્ શિક્ષણ આપવાનો હોવા કરતાં શિક્ષણ આપવાની પદ્ધતિની શોધ કરવાનો છે.",
+      "મૉન્ટેસરી શાળામાં શિક્ષકે હંમેશા આગળ પડતી અને વાચાળ ભૂમિકામાં રહીને બાળકને સતત સૂચનાઓ આપતા રહેવું જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: ડૉ. મૉન્ટેસરીના મતે શિક્ષણપદ્ધતિ",
+    "exp": "ડૉ. મૉન્ટેસરીના મતે 'શિક્ષક પડદા પાછળ રહે તે આવકાર્ય છે' અને તેની વાચાળતા કરતાં મૌન વધારે કામનું છે. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: એકમ-1: ડૉ. મૉન્ટેસરીના મતે શિક્ષણપદ્ધતિ | પાના નં.: 64-66)"
+  },
+  {
+    "q": "પ્રશ્ન 114: \"શિક્ષણ એટલે યોગ, ઉદ્યોગ અને સહયોગની કેળવણી.\" — આ દૃષ્ટિબિંદુ કયા ભારતીય ચિંતકનું છે?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "વિનોબા ભાવે",
+      "સ્વામી વિવેકાનંદ",
+      "મનુભાઈ પંચોળી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "એકમ-2 ની પ્રસ્તાવનામાં સ્પષ્ટ જણાવાયું છે કે વિનોબાજીની દૃષ્ટિએ શિક્ષણ એટલે યોગ, ઉદ્યોગ અને સહયોગની કેળવણી. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણ, રાજકારણ અને સમાજ | પાના નં.: 68)"
+  },
+  {
+    "q": "પ્રશ્ન 115: ભારતની શિક્ષણ વ્યવસ્થાની ઐતિહાસિક ભૂમિકાને ચાર ભાગમાં વહેંચવામાં આવી છે. તેમાં 'પ્રાચીન ભારતની શિક્ષણ વ્યવસ્થા' ના ચાર કાળનો સમાવેશ થાય છે — તેમાં નીચેનામાંથી કયા કાળનો સમાવેશ થતો નથી?",
+    "options": [
+      "વૈદિકકાળ",
+      "ઉપનિષદકાળ",
+      "બૌદ્ધકાળ",
+      "પૌરાણિક કાળ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: પ્રાચીન અને મધ્યયુગની શિક્ષણ વ્યવસ્થા",
+    "exp": "પ્રાચીન ભારતની શિક્ષણ વ્યવસ્થાને ચાર વિભાગમાં સમજવામાં આવે છે: વૈદિકકાળ, ઉપનિષદકાળ, ધર્મશાસ્ત્રનો કાળ અને પૌરાણિક કાળ. જ્યારે 'બૌદ્ધકાલીન' શિક્ષણનો સમાવેશ 'મધ્યયુગની શિક્ષણ વ્યવસ્થા' માં કરવામાં આવ્યો છે. (પ્રકરણ/વિભાગ: એકમ-2: પ્રાચીન અને મધ્યયુગની શિક્ષણ વ્યવસ્થા | પાના નં.: 68-69)"
+  },
+  {
+    "q": "પ્રશ્ન 116: મધ્યયુગની શિક્ષણ વ્યવસ્થાના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: મધ્યયુગની શિક્ષણ વ્યવસ્થા સાતમી સદીના અંતથી લગભગ ચૌદમી સદીના અંત સુધી જીવંત રહી હતી.\nવિધાન 2: બારમી-તેરમી સદી સુધીમાં બૌદ્ધ શિક્ષણ વ્યવસ્થા સંપૂર્ણ રીતે નાશ પામી હતી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: મધ્યયુગની શિક્ષણ વ્યવસ્થા",
+    "exp": "સાતમી સદીના અંતથી ચૌદમી સદીના અંત સુધી ચાલેલી મધ્યયુગની શિક્ષણ વ્યવસ્થામાં બૌદ્ધ, મુસ્લિમ અને હિન્દુ શિક્ષણના ત્રણ તબક્કા હતા અને બારમી-તેરમી સદી સુધીમાં બૌદ્ધ શિક્ષણ વ્યવસ્થા સંપૂર્ણપણે નાશ પામી હતી. (પ્રકરણ/વિભાગ: એકમ-2: મધ્યયુગની શિક્ષણ વ્યવસ્થા | પાના નં.: 69)"
+  },
+  {
+    "q": "પ્રશ્ન 117: અર્વાચીન ભારતની શિક્ષણ વ્યવસ્થાના ઐતિહાસિક સીમાચિહ્નો અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. અંગ્રેજોની શિક્ષણ વ્યવસ્થાનાં મંડાણ — (a) ઈ.સ. 1854\n2. વુડના ખરીતાથી વર્તમાન શિક્ષણપ્રથાના શ્રીગણેશ — (b) ઈ.સ. 1902\n3. ભારતીય વિશ્વવિદ્યાલય પંચની રચના — (c) ઈ.સ. 1785 થી 1854",
+    "options": [
+      "1-c, 2-a, 3-b",
+      "1-a, 2-c, 3-b",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: અર્વાચીન ભારતની શિક્ષણ વ્યવસ્થા",
+    "exp": "1785થી 1854ના ગાળામાં અંગ્રેજોની શિક્ષણ વ્યવસ્થાનાં મંડાણ થયાં; ઈ.સ. 1854માં વુડના ખરીતાથી વર્તમાન શિક્ષણપ્રથાના શ્રીગણેશ મંડાયા; અને ઈ.સ. 1902માં ભારતીય વિશ્વવિદ્યાલય પંચની રચના થઈ. (પ્રકરણ/વિભાગ: એકમ-2: અર્વાચીન ભારતની શિક્ષણ વ્યવસ્થા | પાના નં.: 69)"
+  },
+  {
+    "q": "પ્રશ્ન 118: રાષ્ટ્રીય આંદોલન અને શિક્ષણના તબક્કાની નીચેની ઘટનાઓને તેમના સાચા કાળક્રમ મુજબ ગોઠવો:\n1. ગાંધીજી દ્વારા અખિલ ભારતીય રાષ્ટ્રીય શિક્ષણ સંમેલન (બુનિયાદી શિક્ષણના ઠરાવો)\n2. ભારતીય રાષ્ટ્રીય કૉંગ્રેસની સ્થાપના\n3. સ્વદેશી આંદોલનની શરૂઆત અને રાષ્ટ્રીય શાળાઓ-કૉલેજોની સ્થાપના",
+    "options": [
+      "2 → 3 → 1",
+      "3 → 2 → 1",
+      "2 → 1 → 3",
+      "1 → 2 → 3"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: રાષ્ટ્રીય આંદોલન અને શિક્ષણનો તબક્કો",
+    "exp": "ભારતીય રાષ્ટ્રીય કૉંગ્રેસની સ્થાપના ઈ.સ. 1885માં, સ્વદેશી આંદોલન ઈ.સ. 1905માં અને ગાંધીજી દ્વારા અખિલ ભારતીય રાષ્ટ્રીય શિક્ષણ સંમેલન ઈ.સ. 1937માં યોજાયું હતું. (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય આંદોલન અને શિક્ષણનો તબક્કો | પાના નં.: 69-70)"
+  },
+  {
+    "q": "પ્રશ્ન 119: સ્વતંત્રતા પછી ભારતમાં રચાયેલા વિવિધ શિક્ષણ પંચો અને તેના અધ્યક્ષોનાં યોગ્ય જોડકાં જોડો:\n1. યુનિવર્સિટી શિક્ષણ પંચ (1948-49) — (a) ડૉ. ડી. એસ. કોઠારી\n2. માધ્યમિક શિક્ષણ પંચ (23 સપ્ટેમ્બર, 1952) — (b) આચાર્ય રામમૂર્તિ\n3. રાષ્ટ્રીય શિક્ષણ પંચ (14 જુલાઈ, 1964) — (c) ડૉ. સર્વપલ્લી રાધાકૃષ્ણન\n4. NEP-1986 સમીક્ષા સમિતિ (7 મે, 1990) — (d) ડૉ. લક્ષ્મણસ્વામી મુદલિયાર",
+    "options": [
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-a, 4-b",
+      "1-c, 2-a, 3-d, 4-b",
+      "1-a, 2-d, 3-c, 4-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "યુનિવર્સિટી શિક્ષણ પંચ (1948-49) ના અધ્યક્ષ ડૉ. રાધાકૃષ્ણન, માધ્યમિક શિક્ષણ પંચ (1952) ના અધ્યક્ષ ડૉ. લક્ષ્મણસ્વામી મુદલિયાર, રાષ્ટ્રીય શિક્ષણ પંચ (1964-66) ના અધ્યક્ષ ડૉ. ડી. એસ. કોઠારી અને 1990ની સમીક્ષા સમિતિના અધ્યક્ષ આચાર્ય રામમૂર્તિ હતા. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 70-71)"
+  },
+  {
+    "q": "પ્રશ્ન 120: 'વિવિધલક્ષી વિદ્યાલયો' (Multipurpose School) સ્થાપવાની ભલામણ કયા પંચે કરી હતી અને ત્યારબાદ અપેક્ષા મુજબ સફળતા ન મળતાં કયા પંચે તેને બંધ કરવાની ભલામણ કરી હતી?",
+    "options": [
+      "રાધાકૃષ્ણન પંચે સ્થાપવાની અને મુદલિયાર પંચે બંધ કરવાની",
+      "મુદલિયાર પંચે સ્થાપવાની અને કોઠારી શિક્ષણ પંચે બંધ કરવાની",
+      "કોઠારી પંચે સ્થાપવાની અને રામમૂર્તિ સમિતિએ બંધ કરવાની",
+      "હંટર પંચે સ્થાપવાની અને મુદલિયાર પંચે બંધ કરવાની"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "માધ્યમિક શિક્ષણ પંચ (મુદલિયાર પંચ, 1952) એ વિવિધલક્ષી વિદ્યાલયો (Multipurpose School) સ્થાપવાની ભલામણ કરી હતી, પરંતુ અપેક્ષા મુજબ સફળતા ન મળતાં કોઠારી શિક્ષણ પંચે તે બંધ કરવાની ભલામણ કરી. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 70)"
+  },
+  {
+    "q": "પ્રશ્ન 121: સમગ્ર દેશમાં શિક્ષણના સમાન માળખાં એટલે કે '10 + 2 + 3' ની નવી તરેહનો સ્વીકાર કયા પંચની ભલામણો અનુસાર થયો હતો?",
+    "options": [
+      "યુનિવર્સિટી શિક્ષણ પંચ (1948-49)",
+      "માધ્યમિક શિક્ષણ પંચ (1952)",
+      "રાષ્ટ્રીય શિક્ષણ પંચ / કોઠારી પંચ (1964-66)",
+      "આચાર્ય રામમૂર્તિ સમિતિ (1990)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "14 જુલાઈ, 1964ના રોજ નિયુક્ત થયેલા ડૉ. ડી. એસ. કોઠારીના રાષ્ટ્રીય શિક્ષણ પંચ (1964-66) ની ભલામણો અનુસાર દેશમાં 10 + 2 + 3 ની નવી શિક્ષણ તરેહનો સ્વીકાર થયો. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 70)"
+  },
+  {
+    "q": "પ્રશ્ન 122: 7 મે, 1990ના રોજ નિમાયેલી આચાર્ય રામમૂર્તિ સમિતિની મહત્ત્વની ભલામણોના આધારે નીચેનામાંથી કઈ સંસ્થાઓની સ્થાપના થઈ?\n1. જિલ્લા શિક્ષણ અને તાલીમ ભવનો (DIET)\n2. કૉલેજ ઑફ ટીચર ઍજ્યુકેશન (CTE)\n3. ઇન્સ્ટિટ્યુટ ઑફ ઍડવાન્સ સ્ટડીઝ ઇન ઍજ્યુકેશન (IASE)",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "આચાર્ય રામમૂર્તિ સમિતિએ NPE-86 ના સફળ અમલીકરણ માટે શિક્ષકોની ક્ષમતા વિકસાવવા પર ભાર મૂક્યો અને તેની ભલામણોના આધારે DIET, CTE અને IASE ની સ્થાપના થઈ. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 71)"
+  },
+  {
+    "q": "પ્રશ્ન 123: ઑગસ્ટ 1986માં ભારતના શિક્ષણ મંત્રાલય દ્વારા બહાર પાડવામાં આવેલી કઈ પુસ્તિકાને આધારે રાષ્ટ્રીય શિક્ષણનીતિ (NEP-1986) ના મુખ્ય લક્ષણો દર્શાવવામાં આવ્યા છે?",
+    "options": [
+      "શિક્ષણ અને રાષ્ટ્રવિકાસ",
+      "શિક્ષણનો પડકાર - નીતિ પરિપ્રેક્ષ્ય",
+      "ભાર વિનાનું ભણતર",
+      "રાષ્ટ્રીય અભ્યાસક્રમનું માળખું"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: રાષ્ટ્રીય શિક્ષણનીતિની લાક્ષણિકતાઓ",
+    "exp": "ઑગસ્ટ 1986માં શિક્ષણ મંત્રાલય દ્વારા 'શિક્ષણનો પડકાર નીતિ પરિપ્રેક્ષ્ય' પુસ્તિકા બહાર પાડવામાં આવી હતી, જેના આધારે રાષ્ટ્રીય શિક્ષણનીતિના મુખ્ય લક્ષણો નિર્ધારિત થયા છે. (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય શિક્ષણનીતિની લાક્ષણિકતાઓ | પાના નં.: 71)"
+  },
+  {
+    "q": "પ્રશ્ન 124: રાષ્ટ્રીય શિક્ષણનીતિ-1986 માં મુખ્યત્વે કઈ બે બાબતો પર ભાર મૂકવામાં આવ્યો છે?",
+    "options": [
+      "ઉચ્ચ શિક્ષણનું ખાનગીકરણ અને વિદેશી યુનિવર્સિટીઓનો પ્રવેશ",
+      "6 થી 14 વર્ષના બાળકોના શિક્ષણનું સાર્વત્રિકીકરણ અને શિક્ષણની ગુણવત્તામાં સુધારણા",
+      "માત્ર ટેક્નિકલ શિક્ષણનો વિકાસ અને અંગ્રેજી માધ્યમની ફરજિયાતતા",
+      "પરીક્ષા પદ્ધતિની નાબૂદી અને માત્ર વ્યવસાયલક્ષી અભ્યાસક્રમો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: રાષ્ટ્રીય શિક્ષણનીતિની લાક્ષણિકતાઓ",
+    "exp": "રાષ્ટ્રીય શિક્ષણનીતિ-1986 માં બે મુખ્ય બાબતો પર ભાર મુકાયો છે: (A) 6 વર્ષથી ઉપરના બધા બાળકોનો શાળાપ્રવેશ અને 14 વર્ષ સુધી તેમનું સ્થાયીકરણ (સાર્વત્રિકીકરણ) તથા (B) શિક્ષણની ગુણવત્તામાં સુધારણા. (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય શિક્ષણનીતિની લાક્ષણિકતાઓ | પાના નં.: 72)"
+  },
+  {
+    "q": "પ્રશ્ન 125: રાષ્ટ્રીય શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ (NCERT) ની સ્થાપના ક્યારે થઈ હતી અને તેના અંતર્ગત સમગ્ર દેશમાં કુલ કેટલી ક્ષેત્રીય તાલીમી કૉલેજો કાર્યરત છે?",
+    "options": [
+      "1 સપ્ટેમ્બર, 1961; કુલ ચાર (ભોપાલ, અજમેર, મૈસૂર, ભુવનેશ્વર)",
+      "1 સપ્ટેમ્બર, 1964; કુલ ત્રણ (દિલ્હી, મુંબઈ, કોલકાતા)",
+      "15 ઑગસ્ટ, 1961; કુલ પાંચ (ભોપાલ, અજમેર, મૈસૂર, ભુવનેશ્વર, શિલોંગ)",
+      "1 સપ્ટેમ્બર, 1968; કુલ ચાર (અમદાવાદ, ભોપાલ, અજમેર, મૈસૂર)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: રાષ્ટ્રીય શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ",
+    "exp": "NCERT ની સ્થાપના 1 સપ્ટેમ્બર, 1961ના રોજ થઈ હતી અને તેના હેઠળ કુલ ચાર ક્ષેત્રીય કૉલેજો છે: ભોપાલ (મધ્યપ્રદેશ), અજમેર (રાજસ્થાન), મૈસૂર (કર્ણાટક) અને ભુવનેશ્વર (ઓરિસ્સા). (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ | પાના નં.: 72-73)"
+  },
+  {
+    "q": "પ્રશ્ન 126: 'NUEPA' (રાષ્ટ્રીય શૈક્ષણિક આયોજન અને વહીવટ સંસ્થાન) નું પૂરું નામ અને તેના મુખ્ય કાર્યક્ષેત્ર અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "National Union of Educational Planning and Administration — તે માત્ર પ્રાથમિક શિક્ષકોની ભરતી કરે છે.",
+      "National University of Educational Planning and Administration — તે શૈક્ષણિક આયોજન અને વહીવટ ઉપર વધુ ભાર મૂકે છે તથા શાળાશિક્ષણની સમસ્યા પર સંશોધનો કરે છે.",
+      "National University of Elementary Planning and Assessment — તે માત્ર શાળાના પાઠ્યપુસ્તકોનું મુદ્રણ કરે છે.",
+      "National Unit of Educational Policy and Administration — તે શિક્ષક પ્રશિક્ષણ સંસ્થાઓને માન્યતા આપે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: રાષ્ટ્રીય શૈક્ષણિક આયોજન અને વહીવટ સંસ્થાન",
+    "exp": "NUEPA (National University of Educational Planning and Administration) એ રાષ્ટ્રીય કક્ષાની સંસ્થા છે, જે શૈક્ષણિક આયોજન અને વહીવટ ઉપર ભાર મૂકે છે, વહીવટકારો-તજ્જ્ઞોને તાલીમ આપે છે અને શાળાશિક્ષણની સમસ્યા પર સંશોધન કરે છે. (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય શૈક્ષણિક આયોજન અને વહીવટ સંસ્થાન | પાના નં.: 73)"
+  },
+  {
+    "q": "પ્રશ્ન 127: રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ (NCTE) ના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: ગુજરાત દેશના પશ્ચિમ વિભાગમાં આવેલું હોવાથી તેનું પશ્ચિમ ઝોન માટેનું NCTE નું ક્ષેત્રીય કેન્દ્ર અમદાવાદ ખાતે આવેલું છે.\nવિધાન 2: આ સંસ્થા પૂર્વ-પ્રાથમિકથી ઉચ્ચ શિક્ષણ સુધીની પૂર્વ-સેવાકાલીન શિક્ષક પ્રશિક્ષણ સંસ્થાઓને માન્યતા આપે છે અને ધારાધોરણોનું પાલન ન કરનાર સંસ્થાની માન્યતા રદ પણ કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ",
+    "exp": "ગુજરાત માટે પશ્ચિમ ઝોનનું NCTE નું ક્ષેત્રીય કેન્દ્ર 'ભોપાલ (મધ્યપ્રદેશ)' ખાતે આવેલું છે, અમદાવાદમાં નહીં. તેથી વિધાન 1 ખોટું અને વિધાન 2 સાચું છે. (પ્રકરણ/વિભાગ: એકમ-2: રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ | પાના નં.: 73)"
+  },
+  {
+    "q": "પ્રશ્ન 128: ગુજરાત શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ (GCERT) ની રચના અને તેના ઐતિહાસિક વિકાસ અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "ઈ.સ. 1963-64માં દરેક રાજ્યમાં 'રાજ્ય શિક્ષણ ભવન' (SIE) ની સ્થાપના થઈ હતી.",
+      "રાષ્ટ્રીય શિક્ષણનીતિ 1986ના સંદર્ભમાં રાજ્ય શિક્ષણ ભવનને SCERT/GCERT માં પરિવર્તિત કરવામાં આવ્યું.",
+      "ગુજરાતમાં GCERT ની રચના ઈ.સ. 1988માં કરવામાં આવી હતી.",
+      "GCERT ના કાર્યક્ષેત્રમાં માત્ર પ્રાથમિક શિક્ષણનો જ સમાવેશ થાય છે, માધ્યમિક શિક્ષણનો સમાવેશ થતો નથી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-2: ગુજરાત શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ",
+    "exp": "રાજ્ય શિક્ષણ ભવનને GCERT માં પરિવર્તિત કર્યા બાદ તેમાં પ્રાથમિક શિક્ષણ ઉપરાંત 'માધ્યમિક શિક્ષણનો પણ સમાવેશ' કરવામાં આવ્યો છે. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: એકમ-2: ગુજરાત શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ | પાના નં.: 74)"
+  },
+  {
+    "q": "પ્રશ્ન 129: જિલ્લા શિક્ષણ અને તાલીમ ભવન (DIET) ની વિવિધ શાખાઓ અને તેની કામગીરી અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. શૈક્ષણિક ટેકનોલોજી શાખા (ET) — (a) જિલ્લામાં પ્રૌઢશિક્ષણ અને અશાલેય શિક્ષણ માટે સંસાધનનું કાર્ય\n2. જિલ્લા સંસાધન એકમ (DRU) — (b) શૈક્ષણિક ફિલ્મો, વીડિયો-ઑડિયો કૅસેટો, ચાર્ટસ અને નિદર્શન સાધનો\n3. પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા (CMDE) — (c) પી.ટી.સી. કૉલેજોના અધ્યાપકોને શૈક્ષણિક માર્ગદર્શન અને પૂર્વસેવા તાલીમ\n4. પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા (PSTE) — (d) સ્વ-નિર્મિત ઓછા ખર્ચના સાધનો અને નવી મૂલ્યાંકન પ્રણાલીની તાલીમ",
+    "options": [
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-c, 2-a, 3-d, 4-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન",
+    "exp": "ET શાખા શૈક્ષણિક ફિલ્મો-ચાર્ટસ પૂરા પાડે છે; DRU પ્રૌઢ અને અશાલેય શિક્ષણ માટે કાર્ય કરે છે; CMDE અભ્યાસક્રમ, સામગ્રી નિર્માણ અને મૂલ્યાંકનની તાલીમ આપે છે; અને PSTE પૂર્વસેવાકાલીન શિક્ષક પ્રશિક્ષણ સંભાળે છે. (પ્રકરણ/વિભાગ: એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન | પાના નં.: 75-76)"
+  },
+  {
+    "q": "પ્રશ્ન 130: જિલ્લા શિક્ષણ અને તાલીમ ભવન (DIET) ની કઈ શાખા અંતર્ગત પ્રાથમિક શિક્ષકોને નવા અભ્યાસક્રમ અને નવા પાઠ્યપુસ્તકો અંગેની તાલીમ આપવાની તેમજ તજ્જ્ઞોને તૈયાર કરવાની કામગીરી કરવામાં આવે છે?",
+    "options": [
+      "આયોજન અને વ્યવસ્થાપન શાખા (PM)",
+      "કાર્યાનુભવ શાખા (WE)",
+      "સેવા અંતર્ગત કાર્યક્રમો, ક્ષેત્રીય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા (IFIC)",
+      "પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા (CMDE)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન",
+    "exp": "IFIC (In Service Programmes, Field Interaction and Innovative Co-ordination Branch) એ DIET ની ખૂબ મહત્ત્વની શાખા છે, જે સેવાકાલીન પ્રશિક્ષણ, નવા અભ્યાસક્રમ-પાઠ્યપુસ્તકની તાલીમ અને તજ્જ્ઞો તૈયાર કરવાની કામગીરી કરે છે. (પ્રકરણ/વિભાગ: એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન | પાના નં.: 75-76)"
+  },
+  {
+    "q": "પ્રશ્ન 131: 'તાલુકા સંસાધન કેન્દ્ર' (BRC) ના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: તાલુકા સંસાધન કેન્દ્રને 'ઘટક સંસાધન કેન્દ્ર' તરીકે પણ ઓળખવામાં આવે છે.\nવિધાન 2: તે તાલુકાની દરેક શાળાની માહિતી, પ્રગતિ અને અહેવાલ જૂથ સંસાધન કેન્દ્રો (CRC) ના સંવાહકો પાસેથી મેળવીને ડાયેટ તથા જિલ્લા પ્રોજેક્ટ કો-ઑર્ડિનેટર (SSAM) ને પહોંચાડે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: તાલુકા સંસાધન કેન્દ્ર",
+    "exp": "BRC ને ઘટક સંસાધન કેન્દ્ર પણ કહે છે અને તેના બ્લૉક રિસોર્સ કો-ઑર્ડિનેટર CRC પાસેથી શાળાઓની માહિતી મેળવીને DIET અને DPC (SSAM) ને પહોંચાડે છે. (પ્રકરણ/વિભાગ: એકમ-2: તાલુકા સંસાધન કેન્દ્ર | પાના નં.: 76)"
+  },
+  {
+    "q": "પ્રશ્ન 132: 'જૂથ સંસાધન કેન્દ્ર' (CRC - Cluster Resource Centre) એ સામાન્ય રીતે કેટલી પ્રાથમિક શાળાઓ વચ્ચેનું એક શિક્ષણ સંકુલ છે?",
+    "options": [
+      "3 થી 5 શાળાઓ",
+      "8 થી 10 શાળાઓ",
+      "15 થી 20 શાળાઓ",
+      "20 થી 25 શાળાઓ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: જૂથ સંસાધન કેન્દ્ર",
+    "exp": "જૂથ સંસાધન કેન્દ્ર (CRC) એ 8 થી 10 નિકટવર્તી પ્રાથમિક શાળાઓના ઝૂમખાં વચ્ચેનું એક શિક્ષણ સંકુલ છે. (પ્રકરણ/વિભાગ: એકમ-2: જૂથ સંસાધન કેન્દ્ર | પાના નં.: 76)"
+  },
+  {
+    "q": "પ્રશ્ન 133: વર્તમાન સમયમાં દરેક પ્રાથમિક શાળામાં શાળાના વિકાસ અને શૈક્ષણિક ગુણવત્તાની સતત દેખરેખ રાખવા માટે કઈ સમિતિ કાર્યરત છે?",
+    "options": [
+      "શાળા શિસ્ત સમિતિ (SDC)",
+      "શાળા વ્યવસ્થાપન સમિતિ (SMC)",
+      "ગ્રામ શિક્ષણ પરિષદ (VEC)",
+      "વાલી-શિક્ષક મંડળ (PTA)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: જૂથ સંસાધન કેન્દ્ર",
+    "exp": "વર્તમાન સમયમાં દરેક પ્રાથમિક શાળામાં શાળા વ્યવસ્થાપન સમિતિ (SMC) કાર્યરત છે, જે શાળાના વિકાસ અને શૈક્ષણિક ગુણવત્તાની સતત દેખરેખ રાખે છે. (પ્રકરણ/વિભાગ: એકમ-2: જૂથ સંસાધન કેન્દ્ર | પાના નં.: 77)"
+  },
+  {
+    "q": "પ્રશ્ન 134: \"શિક્ષણનું કામ માથા વાઢવાનું નહિ પરંતુ માથા ફેરવાનું છે.\" — આ પ્રખ્યાત વિધાન કયા ગુજરાતી સાહિત્યકાર અને કેળવણીકારનું છે?",
+    "options": [
+      "શ્રી ગિજુભાઈ બધેકા",
+      "શ્રી મનુભાઈ પંચોળી",
+      "શ્રી નાનાભાઈ ભટ્ટ",
+      "શ્રી કાકાસાહેબ કાલેલકર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: વર્ગ, જ્ઞાતિ, જાતિ અને ધર્મની દ્રષ્ટિએ શિક્ષણની ભૂમિકા",
+    "exp": "મનુભાઈ પંચોળીનું આ વિધાન છે કે \"શિક્ષણનું કામ માથા વાઢવાનું નહિ પરંતુ માથા ફેરવાનું છે.\" જે મનુષ્યના મસ્તિષ્કને સજ્જ અને ચેતનવંતું બનાવવાની પ્રક્રિયા દર્શાવે છે. (પ્રકરણ/વિભાગ: એકમ-2: વર્ગ, જ્ઞાતિ, જાતિ અને ધર્મની દ્રષ્ટિએ શિક્ષણની ભૂમિકા | પાના નં.: 77)"
+  },
+  {
+    "q": "પ્રશ્ન 135: બિનસાંપ્રદાયિકતા (ધર્મનિરપેક્ષતા) ના સાચા અર્થ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "બિનસાંપ્રદાયિકતા એટલે ધર્મનો કે ધાર્મિકતાનો સંપૂર્ણ અભાવ.",
+      "બિનસાંપ્રદાયિકતા એટલે કોઈ એક ધર્મની માન્યતાઓને નહીં, પણ સર્વધર્મને આદર.",
+      "બિનસાંપ્રદાયિકતા એટલે વિવિધ ધર્મ પાળતી પ્રજાઓના સહઅસ્તિત્વનો સ્વીકાર અને ધાર્મિક સહિષ્ણુતા.",
+      "પ્રત્યેક ધર્મના ઉન્નત તત્ત્વોને આત્મસાત્ કરી માનવતાની ઉપાસના કરવી તે બિનસાંપ્રદાયિકતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: બિનસાંપ્રદાયિકતાનો અર્થ",
+    "exp": "બિનસાંપ્રદાયિકતા એટલે 'ધર્મનો કે ધાર્મિકતાનો અભાવ નહિ, પરંતુ સર્વધર્મ આદર' થાય છે. તેથી વિધાન (A) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-2: બિનસાંપ્રદાયિકતાનો અર્થ | પાના નં.: 77-78)"
+  },
+  {
+    "q": "પ્રશ્ન 136: શાળામાં બિનસાંપ્રદાયિક વાતાવરણના નિર્માણ અને વિદ્યાર્થીઓમાં સંઘભાવના-સેવાભાવનાના વિકાસ માટે નીચેનામાંથી કઈ સહઅભ્યાસિક પ્રવૃત્તિઓ યોજવાની ભલામણ કરવામાં આવી છે?\n1. સર્વધર્મ પ્રાર્થનાઓ અને વિવિધ ધર્મોના મહાપુરુષોની જન્મજયંતિની ઉજવણી\n2. N.C.C., N.S.S. અને Scout-Guide જેવી પ્રવૃત્તિઓને ઉત્તેજન\n3. કવિ સંમેલન કે મુશાયરો અને વિવિધ કોમના લોકજીવનનો અભ્યાસ તથા સર્વેક્ષણ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-2: સહઅભ્યાસ પ્રવૃત્તિઓ",
+    "exp": "શાળામાં બિનસાંપ્રદાયિકતાના શિક્ષણ માટે સર્વધર્મ પ્રાર્થના, મહાપુરુષોની જન્મજયંતિ, NCC-NSS-Scout guide, મુશાયરો, દેશભક્તિ-કોમી એકતાના ગીતોની સ્પર્ધા અને વિવિધ કોમના લોકજીવનના સર્વેક્ષણની પ્રવૃત્તિઓ સૂચવાઈ છે. (પ્રકરણ/વિભાગ: એકમ-2: સહઅભ્યાસ પ્રવૃત્તિઓ | પાના નં.: 78-79)"
+  },
+  {
+    "q": "પ્રશ્ન 137: \"દેશની રાજ્યવ્યવસ્થા શિક્ષણ પર અમીટ છાપ ઊભી કરનાર પરિબળ છે. જે પ્રકારની રાજ્યવ્યવસ્થા હોય તે મુજબની કેળવણી જે-તે રાજ્યમાં દૃષ્ટિગોચર થતી હોય છે.\" — શિક્ષણના રાજકીય સ્વરૂપ અંગે આ વિધાન કયા પંચનું છે?",
+    "options": [
+      "રાધાકૃષ્ણન પંચ",
+      "મુદલિયાર પંચ",
+      "કોઠારી કમિશન",
+      "રામમૂર્તિ સમિતિ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ",
+    "exp": "શિક્ષણના રાજકીય સ્વરૂપને સ્પષ્ટ કરતું આ વિધાન 'કોઠારી કમિશન' દ્વારા આપવામાં આવ્યું છે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ | પાના નં.: 79)"
+  },
+  {
+    "q": "પ્રશ્ન 138: કેળવણીની ત્રણ મુખ્ય સંસ્થાઓ (ઘર, શાળા અને સમાજ) ના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: બાળકના જીવનના આરંભકાળની જવાબદારી ઘર અને મા-બાપની હોવાથી કહેવાય છે કે \"પહેલા ત્રણ વર્ષ દરમિયાન બાળકની કેળવણી પૂર્ણ થઈ જાય છે.\"\nવિધાન 2: અભ્યાસક્રમ, શિક્ષણ સાધનો અને શિક્ષણપદ્ધતિઓનું કડક નિયમન કરવાની રાજ્યની પદ્ધતિ કેળવણી માટે અત્યંત લાભદાયક છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે \"અભ્યાસક્રમ, શિક્ષણ સાધનો અને શિક્ષણપદ્ધતિઓનું કડક નિયમન કરવાની કેટલાંક રાજ્યોની પદ્ધતિ કેળવણીને હાનિકારક છે.\" તેથી વિધાન 2 ખોટું અને વિધાન 1 સાચું છે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ | પાના નં.: 79-80)"
+  },
+  {
+    "q": "પ્રશ્ન 139: કેળવણીની ત્રીજી અને સૌથી મહત્ત્વની સંસ્થા 'સમાજ અને રાજ્ય' ની ફરજ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "રાજ્યના દરેક બાળકને અમુક વય સુધી મફત અને ફરજિયાત કેળવણી મળી રહે તે જોવાની ફરજ રાજ્યની છે.",
+      "રાજ્યે લોકસમાજને શાળાઓ ખોલવા અને ચલાવવા માટે પૂરતી આર્થિક સહાય આપવી જોઈએ.",
+      "શિક્ષણના પ્રશ્નોની વિચારણામાં રાજ્યે શિક્ષકો, કેળવણીકારો અને સુશિક્ષિત મા-બાપોનો સક્રિય સહકાર મેળવવો જોઈએ.",
+      "રાજ્યે માત્ર ઉચ્ચ આર્થિક દરજ્જો ધરાવતા બાળકોને જ તેમની રુચિ મુજબની કેળવણીનો હક આપવો જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ",
+    "exp": "જાતિ, લિંગ, દરજ્જા વગેરેના ભેદભાવ વગર પોતાની કુદરતી શક્તિ પ્રમાણે રુચિ મુજબની કેળવણી મેળવવાનો દરેક બાળકને હક હોવો જોઈએ. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણનું રાજકીય સ્વરૂપ | પાના નં.: 80)"
+  },
+  {
+    "q": "પ્રશ્ન 140: શિક્ષણ અને સમાજના સંબંધના સંદર્ભમાં શિક્ષકને કયા વિશિષ્ટ ઉપનામથી ઓળખવામાં આવે છે?",
+    "options": [
+      "સામાજિક પરિવર્તનના દૂત (Agent of Social Change)",
+      "રાજકીય સત્તાના પ્રતિનિધિ (Agent of Political Power)",
+      "આર્થિક વિકાસના સંચાલક (Manager of Economic Growth)",
+      "સરકારી નીતિના સમીક્ષક (Reviewer of Government Policy)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: શિક્ષણ અને સમાજ",
+    "exp": "શિક્ષણ શિક્ષક દ્વારા પ્રગટે છે અને તે સામાજિક પરિવર્તન, જાગૃતિ તથા વિકાસમાં મહત્ત્વની ભૂમિકા ભજવે છે, તેથી શિક્ષક 'સામાજિક પરિવર્તનના દૂત (Agent of Social Change)' કહેવાય છે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણ અને સમાજ | પાના નં.: 80)"
+  },
+  {
+    "q": "પ્રશ્ન 141: \"જેમ બે રસાયણો વચ્ચે પ્રક્રિયા તો થાય, પણ કોઈ ચોક્કસ ત્રીજું રસાયણ ઉમેરાય તો પ્રક્રિયા ઝડપી બને છે; તેમ શિક્ષક વગર પણ સામાજિક પરિવર્તનો તો થવાના જ, પણ શિક્ષક સામાજિક પરિવર્તનોની પ્રક્રિયામાં પ્રવેગ લાવે છે.\" — આ દૃષ્ટાંત દ્વારા શિક્ષકની કઈ ભૂમિકા સ્પષ્ટ થાય છે?",
+    "options": [
+      "શિક્ષક સામાજિક પરિવર્તનોના અવરોધક છે.",
+      "શિક્ષક સામાજિક પરિવર્તનોના પ્રવેગક (Catalyst) છે, જેનાથી પરિવર્તનો સુયોજિત (Well Planned) અને ઓછા પીડાકારક બને છે.",
+      "શિક્ષક માત્ર પાઠ્યપુસ્તકનો અભ્યાસક્રમ પૂરો કરનાર કર્મચારી છે.",
+      "શિક્ષક વિના સમાજમાં કોઈ પણ પ્રકારનું પરિવર્તન અશક્ય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: શિક્ષણ અને સમાજ",
+    "exp": "શિક્ષક સામાજિક પરિવર્તનોના પ્રવેગક તરીકે કામ કરે છે, જેનાથી પરિવર્તનો સુયોજિત (Well Planned) બને છે અને સમાજ માટે ઓછા પીડાકારક નીવડે છે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણ અને સમાજ | પાના નં.: 80-81)"
+  },
+  {
+    "q": "પ્રશ્ન 142: શિક્ષક પોતાની ભૂમિકાને માત્ર જુદા જુદા વિષયો શીખવવા પૂરતી મર્યાદિત ન માનતાં કયા ભગીરથ કાર્ય તરીકે જુએ તો ઇચ્છનીય સામાજિક પરિવર્તનોથી તેની ભૂમિકા સાર્થક બની શકે?",
+    "options": [
+      "પરીક્ષાલક્ષી પરિણામ સુધારણા (Result Improvement)",
+      "ભારતના માનવીય સંસાધનોનો વિકાસ (Human Resource Development)",
+      "શાળાકીય વહીવટી સંચાલન (School Administration)",
+      "ઔદ્યોગિક ઉત્પાદન વૃદ્ધિ (Industrial Production Growth)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: શિક્ષણ અને સમાજ",
+    "exp": "જો શિક્ષક એમ વિચારે કે પોતે ભારતના 'માનવીય સંસાધનોના વિકાસ (Human Resource Development)' કરવાના ભગીરથ કાર્યમાં લાગે છે, તો ઇચ્છનીય સામાજિક પરિવર્તનોથી શિક્ષકની ભૂમિકા સાર્થક બની શકે. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણ અને સમાજ | પાના નં.: 81)"
+  },
+  {
+    "q": "પ્રશ્ન 143: એકમ-2 ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સાચું નથી?",
+    "options": [
+      "શિક્ષણને રાજકારણથી અલિપ્ત ન રાખી શકાય, કેમ કે 'શિક્ષણ' એ રાજ્યનો વિષય છે.",
+      "સામાજિક જીવન પ્રગતિશીલ બનાવવું હોય તો શિક્ષકોએ પરિબ્રાજકનું કાર્ય કરવાનું છે.",
+      "શિક્ષણે આર્થિક અને રાજકીય અલગતા તથા એકાંકીપણાને વધારવામાં સહાય કરી છે.",
+      "ગાંધીજીના 'સર્વોદય' વિચાર અને 'બહુજનહિતાય બહુજનસુખાય' સંકલ્પનાને ફળીભૂત કરતી શિક્ષણ વ્યવસ્થા જરૂરી છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2: શિક્ષણ અને સમાજ",
+    "exp": "શિક્ષણે આર્થિક અને રાજકીય અલગતા તથા એકાંકીપણાને 'દૂર કરવામાં' સહાય કરી છે, વધારવામાં નહીં. તેથી વિધાન (C) સાચું નથી. (પ્રકરણ/વિભાગ: એકમ-2: શિક્ષણ અને સમાજ | પાના નં.: 68, 77, 80-81)"
+  },
+  {
+    "q": "પ્રશ્ન 144: એક પ્રાથમિક શાળાના આચાર્ય પોતાના શિક્ષકોને નવી મૂલ્યાંકન પ્રણાલી અને ઓછા ખર્ચે સ્વ-નિર્મિત શૈક્ષણિક સાધનો બનાવવાની તાલીમ અપાવવા માંગે છે. આ માટે તેમણે જિલ્લાના DIET ની કઈ શાખાનો સંપર્ક કરવો જોઈએ?",
+    "options": [
+      "આયોજન અને વ્યવસ્થાપન શાખા (PM)",
+      "પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા (CMDE)",
+      "જિલ્લા સંસાધન એકમ (DRU)",
+      "પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા (PSTE)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન",
+    "exp": "DIET ની CMDE (Curriculum, Material Development and Evaluation) શાખા સ્વ-નિર્મિત અને ઓછા ખર્ચે બનાવી શકાય તેવા સાધનો તેમજ નવી મૂલ્યાંકન પ્રણાલી અંગે તાલીમ અને માર્ગદર્શન પૂરું પાડે છે. (પ્રકરણ/વિભાગ: એકમ-2: જિલ્લા શિક્ષણ અને તાલીમ ભવન | પાના નં.: 75)"
+  },
+  {
+    "q": "પ્રશ્ન 145: 'અધ્યયન' (Learning) અને 'અધ્યેતા' (Learner) ના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: 'શીખવું' એ ક્રિયાપદ (To learn) છે, જ્યારે શીખવાની ક્રિયા (Learning) માટે મનોવિજ્ઞાનની ભાષામાં વપરાતો શબ્દ 'અધ્યયન' છે.\nવિધાન 2: માનવ ઉત્ક્રાંતિનો ઇતિહાસ એ અધ્યયનની ફળશ્રુતિ જ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયન, અધ્યેતા અને શિક્ષણ",
+    "exp": "શીખવું (To learn) ક્રિયાપદ છે અને શીખવાની ક્રિયા (Learning) ને મનોવિજ્ઞાનની ભાષામાં 'અધ્યયન' કહે છે; માનવ ઉત્ક્રાંતિનો ઇતિહાસ અધ્યયનની જ ફળશ્રુતિ છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન, અધ્યેતા અને શિક્ષણ | પાના નં.: 85)"
+  },
+  {
+    "q": "પ્રશ્ન 146: 'અધ્યેતા' (વિદ્યાર્થી) ના સંદર્ભમાં વ્યક્તિગત તફાવતો (Individual Differences) અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "કોઈ પણ બે બાળકની શારીરિક કે માનસિક મૂળભૂત શક્તિઓ તદ્દન સમાન હોતી નથી.",
+      "જો કોઈ બે વ્યક્તિમાં પ્રથમ નજરે શારીરિક શક્તિ સમાન જોવા મળે, તો પણ એક જ કાર્ય લાંબો સમય કરવાની બંનેની ક્ષમતા જુદી પડી શકે છે.",
+      "બુદ્ધિ, તર્કશક્તિ, અનુકરણ શક્તિ અને અર્થગ્રહણ શક્તિ દરેક અધ્યેતામાં એકસરખા પ્રમાણમાં જોવા મળે છે.",
+      "વ્યક્તિ પોતાના વિવિધ અનુભવોમાંથી અને સમગ્ર પર્યાવરણમાંથી જન્મથી મૃત્યુપર્યંત શીખતી હોય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: પ્રસ્તાવના",
+    "exp": "બુદ્ધિ, તર્કશક્તિ, અનુકરણ શક્તિ, અર્થગ્રહણ શક્તિ અને સ્મૃતિ ધારણ શક્તિ વગેરે બાબતમાં દરેક બાળક અન્યથી જુદું પડે છે; તે એકસરખા પ્રમાણમાં જોવા મળતી નથી. તેથી વિધાન (C) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-3: પ્રસ્તાવના | પાના નં.: 85)"
+  },
+  {
+    "q": "પ્રશ્ન 147: \"અમીબાથી માંડીને આદમ સુધીના બધા જીવ પ્રતિક્ષણ પોતાના વર્તનમાં ફેરફાર કરે છે.\" — આ સંદર્ભમાં અન્ય જીવો કરતાં મનુષ્યની કઈ વિશિષ્ટતા દર્શાવવામાં આવી છે?",
+    "options": [
+      "માત્ર માણસ જ પોતાના વર્તનમાં ફેરફાર કરી શકે છે.",
+      "માત્ર માણસ જ એક એવું પ્રાણી છે, જેણે વર્તન પરિવર્તન (અધ્યયન) માટે ખાસ 'ઔપચારિક શિક્ષણ વ્યવસ્થા' ઊભી કરી છે.",
+      "અન્ય જીવોને સૃષ્ટિ સાથે કામ પાડવા માટે વર્તનમાં ફેરફાર કરવાની જરૂર પડતી નથી.",
+      "માણસ માત્ર શાળા અને પ્રયોગશાળામાંથી જ શીખી શકે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયન - સંકલ્પના અને સ્વરૂપ",
+    "exp": "અમીબાથી આદમ સુધીના બધા જીવ સૃષ્ટિ સાથે કામ પાડવા વર્તનમાં ફેરફાર કરે છે, પરંતુ માત્ર માણસ જ એક એવું પ્રાણી છે જેણે આ માટે ખાસ 'ઔપચારિક શિક્ષણ વ્યવસ્થા' ઊભી કરી છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન - સંકલ્પના અને સ્વરૂપ | પાના નં.: 86)"
+  },
+  {
+    "q": "પ્રશ્ન 148: પથ્થરયુગનો માનવી ઓજારો બનાવતાં, બોલતાં, ઘર બાંધતાં અને વ્યવસાય કરતાં શીખ્યો — આ અધ્યયન પ્રક્રિયામાં તેને કુદરત તરફથી મળેલી કઈ શક્તિઓએ સહારો આપ્યો?",
+    "options": [
+      "માત્ર શારીરિક બળ અને ગતિ",
+      "વિચાર, તર્ક, કલ્પના અને અવલોકન",
+      "માત્ર અનુકરણ અને મતારોપણ",
+      "માત્ર ઔપચારિક પાઠ્યક્રમ અને પુસ્તકો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયન - સંકલ્પના અને સ્વરૂપ",
+    "exp": "પથ્થરયુગનો માનવી કુદરત તરફથી મળેલ 'વિચાર, તર્ક, કલ્પના, અવલોકન' વગેરે શક્તિઓના સહારે પ્રયત્નો અને પ્રવૃત્તિ કરતાં-કરતાં નવું નવું શીખતો ગયો. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન - સંકલ્પના અને સ્વરૂપ | પાના નં.: 86)"
+  },
+  {
+    "q": "પ્રશ્ન 149: એકમ-2 માં ઉલ્લેખિત વિવિધ શૈક્ષણિક સંસ્થાઓ અને તેના મુખ્ય કાર્યક્ષેત્રની કઈ જોડી અસંગત (ખોટી) છે?",
+    "options": [
+      "NCERT — સેવાકાલીન શિક્ષણ પ્રશિક્ષણને વેગ આપવો અને શાળા અભ્યાસક્રમોનું સંવર્ધન",
+      "NUEPA — શૈક્ષણિક આયોજન અને વહીવટી તાલીમ",
+      "NCTE — શિક્ષક પ્રશિક્ષણ સંસ્થાઓનું રજિસ્ટ્રેશન અને માન્યતા",
+      "BRC — રાજ્ય કક્ષાએ માધ્યમિક શાળાઓના પાઠ્યપુસ્તકોનું નિર્માણ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "BRC (તાલુકા સંસાધન કેન્દ્ર) નું કાર્યક્ષેત્ર તાલુકા કક્ષાએ પ્રાથમિક શાળાઓની તાલીમ, મૂલ્યાંકન અને વહીવટી સંકલનનું છે, રાજ્ય કક્ષાએ માધ્યમિક પાઠ્યપુસ્તકોના નિર્માણનું નહીં. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 72-76)"
+  },
+  {
+    "q": "પ્રશ્ન 150: ભારતની શૈક્ષણિક ગુણવત્તા સુધારણાના વહીવટી માળખાને રાષ્ટ્રીય કક્ષાથી ગ્રામ્ય/શાળા કક્ષા સુધીના સાચા ઉતરતા ક્રમમાં ગોઠવો:",
+    "options": [
+      "NCERT → GCERT → DIET → BRC → CRC",
+      "NCERT → DIET → GCERT → CRC → BRC",
+      "GCERT → NCERT → DIET → BRC → CRC",
+      "NCERT → GCERT → BRC → DIET → CRC"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2: ભારતીય આધુનિક શિક્ષણ",
+    "exp": "શૈક્ષણિક ગુણવત્તા સુધારણા માટે રાષ્ટ્રીય (NCERT), રાજ્ય (GCERT), જિલ્લા (DIET), તાલુકા (BRC) અને કલસ્ટર/જૂથ (CRC) એમ ઉતરતા ક્રમનું માળખું કાર્યરત છે. (પ્રકરણ/વિભાગ: એકમ-2: ભારતીય આધુનિક શિક્ષણ | પાના નં.: 72-77)"
+  },
+  {
+    "q": "પ્રશ્ન 151: ભારતીય પરંપરા પ્રમાણે અધ્યયનનાં મૂળ વેદ અને ઉપનિષદમાં રહેલાં છે. આ સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: 'વેદ' શબ્દ 'વિદ' ધાતુ પરથી આવ્યો છે, જેનો અર્થ 'જાણવું' થાય છે.\nવિધાન 2: 'ઉપનિષદ' નો અર્થ 'પાસે બેસીને શીખવું' એવો થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયનનો અર્થ",
+    "exp": "ભારતીય પરંપરા મુજબ 'વેદ' શબ્દ 'વિદ' (જાણવું) ધાતુ પરથી આવ્યો છે અને 'ઉપનિષદ' નો અર્થ 'પાસે બેસીને શીખવું' થાય છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનો અર્થ | પાના નં.: 86)"
+  },
+  {
+    "q": "પ્રશ્ન 152: \"અધ્યયન માટે શાળા જરૂરી નથી; અનુભવોની શાળામાં પણ કેળવણી પ્રાપ્ત કરી શકાય છે.\" — આ બાબત સમજાવવા માટે મૉડ્યૂલમાં શાળાએ ન જનાર કઈ વ્યક્તિઓનાં ઉદાહરણો આપવામાં આવ્યાં છે?",
+    "options": [
+      "કબીર, નરસિંહ, અખો અને મીરાંબાઈ",
+      "એકલવ્ય, ક્રુઝો, હાર્વે, સ્લોકમ અને નારાયણ દેસાઈ",
+      "સૉક્રેટિસ, પ્લેટો, એરિસ્ટોટલ અને રૂસો",
+      "ગાંધીજી, ટાગોર, વિનોબાજી અને ગિજુભાઈ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયનની સંકલ્પના",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ ઉલ્લેખ છે કે જો શાળા સિવાય શિક્ષણ ન મળતું હોય તો એકલવ્ય, ક્રુઝો, હાર્વે, સ્લોકમ અને નારાયણ દેસાઈ વગેરેને અભણ કહેવા પડે; તેમણે અનુભવોની શાળામાં ઉત્તમ કૌશલ્યો સિદ્ધ કર્યાં હતાં. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનની સંકલ્પના | પાના નં.: 87)"
+  },
+  {
+    "q": "પ્રશ્ન 153: મનોવૈજ્ઞાનિકો દ્વારા આપવામાં આવેલી અધ્યયનની વ્યાખ્યાઓનાં યોગ્ય જોડકાં જોડો:\n1. ગેટ્સ, જરસિલ્ક, ચારમેલ — (a) અધ્યયન એ પૂર્વાનુભવના પરિણામ સ્વરૂપે વર્તનમાં થતો સાપેક્ષ કાયમી ફેરફાર છે.\n2. સી. ટી. મૉર્ગન — (b) અનુભવ અને તાલીમ દ્વારા વર્તનમાં થતો ફેરફાર એટલે અધ્યયન.\n3. થોમસ ઈ. કેલેટોન — (c) પ્રેરકોને સંતુષ્ટ કરવા અને સિદ્ધ કરવા તે શીખવું.\n4. હેતુવાદીઓ — (d) અધ્યયન એટલે એવો અનુભવ જે વ્યક્તિની ક્રિયાઓ ઉપર અસર કરીને તેનાં વર્તનમાં ફેરફાર આણે.",
+    "options": [
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-c, 2-a, 3-d, 4-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-3: અધ્યયનની વ્યાખ્યાઓ",
+    "exp": "ગેટ્સ વગેરેએ અનુભવ અને તાલીમ દ્વારા વર્તનમાં ફેરફાર, સી. ટી. મૉર્ગને પૂર્વાનુભવના પરિણામે સાપેક્ષ કાયમી ફેરફાર, થોમસ ઈ. કેલેટોને ક્રિયાઓ પર અસર કરી વર્તનમાં ફેરફાર અને હેતુવાદીઓએ પ્રેરકોને સંતુષ્ટ કરવાને અધ્યયન ગણાવ્યું છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનની વ્યાખ્યાઓ | પાના નં.: 87-88)"
+  },
+  {
+    "q": "પ્રશ્ન 154: \"'અધ્યયન એટલે જીવન' અને 'જીવન એટલે અધ્યયન'.\" — અધ્યયન પ્રક્રિયાના સતત અને આજીવન સ્વરૂપ અંગે આ નોંધ કયા ગુજરાતી ચિંતકે કરી છે?",
+    "options": [
+      "ડૉ. કે. જી. દેસાઈ",
+      "ગુણવંત શાહ",
+      "મનુભાઈ પંચોળી",
+      "ગિજુભાઈ બધેકા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયન પ્રક્રિયાનું સ્વરૂપ",
+    "exp": "અધ્યયન એ સતત અને આજીવન ચાલતી પ્રક્રિયા છે, તેથી જ ગુણવંત શાહ નોંધે છે કે 'અધ્યયન એટલે જીવન' અને 'જીવન એટલે અધ્યયન'. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન પ્રક્રિયાનું સ્વરૂપ | પાના નં.: 88)"
+  },
+  {
+    "q": "પ્રશ્ન 155: અધ્યયન પ્રક્રિયાના સ્વરૂપ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: 'અનુભવોના પરિણામે વર્તનમાં ફેરફાર લાવવા તે શીખવું' — આ વ્યાખ્યા વ્યવહારવાદીઓની છે.\nવિધાન 2: અધ્યયન ઘટકોની પારસ્પરિક આંતરક્રિયાને પરિણામે જે સિદ્ધિ પ્રાપ્ત થાય તેને 'નીપજ' કહે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયન પ્રક્રિયાનું સ્વરૂપ",
+    "exp": "વ્યવહારવાદીઓ અનુભવોના પરિણામે વર્તનમાં ફેરફારને શીખવું કહે છે અને અધ્યયન ઘટકોની પારસ્પરિક આંતરક્રિયાથી પ્રાપ્ત થતી સિદ્ધિને 'નીપજ' કહેવામાં આવે છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન પ્રક્રિયાનું સ્વરૂપ | પાના નં.: 88)"
+  },
+  {
+    "q": "પ્રશ્ન 156: 'માનવ શા માટે શીખે છે?' તે સમજાવતા ચાર્ટના કેન્દ્રમાં 'માનવ' છે અને તેની આસપાસ આઠ વલયો આવેલાં છે. આ ચાર્ટના તારણ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "પ્રકૃતિ, સંસ્કૃતિ, સમાજ, મૂલ્યો વગેરે વલયો સ્વતંત્ર રીતે એકબીજા સાથે જોડાયેલાં છે, માણસના માધ્યમથી નહીં.",
+      "આ બધાં વલયો સ્વતંત્ર રીતે એકબીજાની સાથે જોડાયેલાં નથી, પરંતુ માણસના માધ્યમથી જોડાયેલાં છે.",
+      "માણસે પૂર્વજોના રીત-રિવાજો અને જ્ઞાનભંડારમાં કોઈ પણ સુધારો કર્યા વિના જ ભવિષ્યની પેઢીને સુપરત કરવા જોઈએ.",
+      "નીતિ-નિયમો અને રીત-રિવાજો માનવીથી સંપૂર્ણપણે અલગ અસ્તિત્વ ધરાવે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયનના વિવિધ માર્ગો",
+    "exp": "ચાર્ટના તારણ મુજબ પ્રકૃતિ, સંસ્કૃતિ, સમાજ, રીત-રિવાજો, જ્ઞાનભંડાર, સંસ્કાર-વારસો, મૂલ્યો અને નીતિ-નિયમો — આ બધાં વલયો માણસના માધ્યમથી જોડાયેલાં છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનના વિવિધ માર્ગો | પાના નં.: 89)"
+  },
+  {
+    "q": "પ્રશ્ન 157: અધ્યયનનાં ક્ષેત્રો નક્કી કરવાના સંદર્ભમાં નીચેનામાંથી કઈ જોડી સાચી છે?\n1. જ્ઞાનાત્મક ક્ષેત્ર — બ્લૂમ (Bloom)\n2. ભાવાત્મક ક્ષેત્ર — ક્રેથવાલ (કોથવાલ)",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 2",
+      "1 અને 2 બંને",
+      "1 અને 2 માંથી એક પણ નહીં"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયનનાં ક્ષેત્રો",
+    "exp": "અધ્યયનનાં ક્ષેત્રો નક્કી કરવાનું કામ સૌપ્રથમ બ્લૂમ નામના વિદ્વાને (જ્ઞાનાત્મક ક્ષેત્ર) કર્યું અને ત્યારબાદ કોથવાલે (Krathwohl) ભાવાત્મક ક્ષેત્ર વિશે સંશોધન કરીને વિચારો રજૂ કર્યા. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનાં ક્ષેત્રો | પાના નં.: 90)"
+  },
+  {
+    "q": "પ્રશ્ન 158: જ્ઞાનાત્મક ક્ષેત્રમાં જ્ઞાનપ્રાપ્તિનાં કુલ છ સોપાનોનો સાચો ક્રમ નીચેનામાંથી કયો છે?",
+    "options": [
+      "જ્ઞાનપ્રાપ્તિ → ઉપયોગ → અર્થગ્રહણ → પૃથક્કરણ → એકત્રીકરણ → મૂલ્યાંકન",
+      "જ્ઞાનપ્રાપ્તિ → અર્થગ્રહણ → ઉપયોગ → પૃથક્કરણ → એકત્રીકરણ → મૂલ્યાંકન",
+      "જ્ઞાનપ્રાપ્તિ → અર્થગ્રહણ → પૃથક્કરણ → ઉપયોગ → મૂલ્યાંકન → એકત્રીકરણ",
+      "અર્થગ્રહણ → જ્ઞાનપ્રાપ્તિ → ઉપયોગ → એકત્રીકરણ → પૃથક્કરણ → મૂલ્યાંકન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયનનાં ક્ષેત્રો",
+    "exp": "જ્ઞાનાત્મક ક્ષેત્રનાં છ સોપાનોનો સાચો ક્રમ છે: (અ) જ્ઞાનપ્રાપ્તિ, (બ) અર્થગ્રહણ કે સમજ, (ક) ઉપયોગ, (ડ) પૃથક્કરણ, (ઇ) એકત્રીકરણ અને (ઈ) મૂલ્યાંકન. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનાં ક્ષેત્રો | પાના નં.: 90)"
+  },
+  {
+    "q": "પ્રશ્ન 159: જ્ઞાનનું પૃથક્કરણ કરીને તેનાં વિવિધ વિભાગો કે તથ્યોને સંકલિત કરી નૂતન માળખું રચવાની પ્રક્રિયા (જેનાથી ભાષણ, નિબંધ કે પરીક્ષામાં ઉત્તરો લખવાની ક્ષમતા કેળવાય) ને જ્ઞાનાત્મક ક્ષેત્રમાં કયા સોપાન તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "અર્થગ્રહણ કે સમજ",
+      "પૃથક્કરણ",
+      "એકત્રીકરણ અથવા સંયોજન",
+      "મૂલ્યાંકન"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયનનાં ક્ષેત્રો",
+    "exp": "જ્ઞાનનાં જુદાં-જુદાં અંગોને સાંકળીને એક નવું માળખું તૈયાર કરવાની પ્રક્રિયાને 'એકત્રીકરણ અથવા સંયોજન' કહેવાય છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનાં ક્ષેત્રો | પાના નં.: 90)"
+  },
+  {
+    "q": "પ્રશ્ન 160: અધ્યયનના 'ભાવાત્મક ક્ષેત્ર' નાં કુલ પાંચ સોપાનોમાં નીચેનામાંથી કયા સોપાનનો સમાવેશ થતો નથી?",
+    "options": [
+      "અધ્યેતાની ધ્યાન મગ્નતા",
+      "અધ્યેતાની સક્રિયતા",
+      "તથ્યોનું પૃથક્કરણ",
+      "વ્યવસ્થાશક્તિ કેળવણી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયનનાં ક્ષેત્રો",
+    "exp": "ભાવાત્મક ક્ષેત્રનાં પાંચ સોપાનો છે: (1) અધ્યેતાની ધ્યાન મગ્નતા, (2) અધ્યેતાની સક્રિયતા, (3) મૂલ્યમાં વિશ્વાસ દાખવવો, (4) વ્યવસ્થાશક્તિ કેળવણી અને (5) અધ્યયન દ્વારા ચારિત્ર્ય નિર્માણ. 'પૃથક્કરણ' એ જ્ઞાનાત્મક ક્ષેત્રનું સોપાન છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનાં ક્ષેત્રો | પાના નં.: 91)"
+  },
+  {
+    "q": "પ્રશ્ન 161: લેખન, વાણી, પ્રયોગશાળાને લગતાં કૌશલ્યો, ગૃહઅર્થવ્યવસ્થા ઉદ્યોગને લગતાં કૌશલ્યો અને શારીરિક શિક્ષણને લગતાં કૌશલ્યો (શરીરના અવયવોની તાલીમ) નો સમાવેશ અધ્યયનના કયા ક્ષેત્રમાં થાય છે?",
+    "options": [
+      "જ્ઞાનાત્મક ક્ષેત્ર",
+      "ભાવાત્મક ક્ષેત્ર",
+      "મનોક્રિયાત્મક ક્ષેત્ર",
+      "સામાજિક ક્ષેત્ર"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયનનાં ક્ષેત્રો",
+    "exp": "શરીરની યાંત્રિક રચના અને અવયવોની તાલીમ દ્વારા વિકસતાં શારીરિક અને વ્યાવહારિક કૌશલ્યોનો સમાવેશ 'મનોક્રિયાત્મક ક્ષેત્ર' માં થાય છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયનનાં ક્ષેત્રો | પાના નં.: 91)"
+  },
+  {
+    "q": "પ્રશ્ન 162: સ્વ-ઓળખના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: જાણીતા નૃત્યાંગના સુધા ચંદ્રને 'નાચે મયૂરી' ફિલ્મમાં લાકડાનો પગ હોવા છતાં દૃઢ મનોબળ અને સ્વની સાચી ઓળખથી સફળતા મેળવી હતી.\nવિધાન 2: નેપોલિયન હીલે 'સફળતા' નામના પુસ્તકમાં લખ્યું છે કે 4 કલાક એકાગ્ર થઈને કાર્ય કરો તો તે 16 કલાકના કામ બરાબર બની રહે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યેતાની ઓળખ વિકસાવનાર પરિબળો",
+    "exp": "સ્વ-ઓળખની મહત્તા સમજાવવા માટે સુધા ચંદ્રન ('નાચે મયૂરી') અને નેપોલિયન હીલ ('સફળતા' પુસ્તક — વિચાર અને આચારમાં સમાનતા હોય ત્યારે 4 કલાકનું એકાગ્ર કામ 16 કલાક બરાબર થાય) બંનેનાં ઉદાહરણો અપાયાં છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યેતાની ઓળખ વિકસાવનાર પરિબળો | પાના નં.: 92)"
+  },
+  {
+    "q": "પ્રશ્ન 163: \"જાતને પામવાનો અને જાણવાનો પ્રયાસ એટલે સ્વ-ઓળખ.\" — બાળકમાં સ્વ-ઓળખ વિકસાવવા માટે શિક્ષકની ભૂમિકા અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "વિચાર, વાણી અને વર્તનમાં એકવાક્યતા કેવી રીતે લાવવી તેનું માર્ગદર્શન આપવું.",
+      "અન્યના દોષ તરફ અંગુલિનિર્દેશ કરતાં પહેલાં આત્મ-નિરીક્ષણ કરતાં શીખવવું.",
+      "લાગણીશીલ બનવું અને દરેક પરિસ્થિતિમાં લાગણીવશ થઈ જવું તે અંગે સમજ આપવી.",
+      "'સ્વ' જ નહિ, પરહિતનું જાણી કાર્ય કરવા પ્રેરણા આપવી અને સ્વ-સૂચન કરતાં શીખવવું."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: સ્વ-ઓળખ વિકસાવવા માટે શિક્ષકની ભૂમિકા",
+    "exp": "શિક્ષકે વિદ્યાર્થીને 'લાગણીશીલ બનવું પણ લાગણીવશ ન થઈ જવું' તે અંગે સમજ આપવી જોઈએ. તેથી વિધાન (C) અયોગ્ય છે. (પ્રકરણ/વિભાગ: એકમ-3: સ્વ-ઓળખ વિકસાવવા માટે શિક્ષકની ભૂમિકા | પાના નં.: 92-93)"
+  },
+  {
+    "q": "પ્રશ્ન 164: સ્વ-વિકાસ માટે સ્વયં પૃથક્કરણની મુખ્ય ત્રણ પદ્ધતિઓ અને તેની વિગતો અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. આત્મ નિરીક્ષણ — (a) વ્યક્તિને પોતાની સાચી ઓળખ 'સ્વ' ની પ્રાપ્તિ અને પ્રતીતિ થાય છે તથા વિધાયક દૃષ્ટિબિંદુ ખીલે છે.\n2. આત્મ સાક્ષાત્કાર — (b) પોતાના વર્તન અને કાર્યો દ્વારા વ્યક્તિના વ્યક્તિત્વ અને સદ્ગુણોની અભિવ્યક્તિ થાય છે.\n3. આત્મ નિરૂપણ — (c) ધ્યાન, દૈનિક રોજનિશી, ક્રમમાપદંડ અને પ્રસંગનોંધ દ્વારા પોતાની જાતનું અવલોકન.",
+    "options": [
+      "1-c, 2-a, 3-b",
+      "1-a, 2-c, 3-b",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-3: સ્વ-વિકાસ માટે સ્વયં પૃથક્કરણની પદ્ધતિઓ",
+    "exp": "આત્મ નિરીક્ષણમાં રોજનિશી-ક્રમમાપદંડ-પ્રસંગનોંધ દ્વારા જાતનું અવલોકન થાય છે; આત્મ સાક્ષાત્કારમાં 'સ્વ' ની પ્રતીતિ અને આધ્યાત્મિક-નૈતિક વિકાસ થાય છે; અને આત્મ નિરૂપણમાં વર્તન-કાર્યો દ્વારા સદ્ગુણોની અભિવ્યક્તિ થાય છે. (પ્રકરણ/વિભાગ: એકમ-3: સ્વ-વિકાસ માટે સ્વયં પૃથક્કરણની પદ્ધતિઓ | પાના નં.: 93-94)"
+  },
+  {
+    "q": "પ્રશ્ન 165: સ્વયં પૃથક્કરણ માટેનું કયું હાથવગું સાધન 'અનાત્મલક્ષી અને પૂર્વગ્રહ રહિત' ગણવામાં આવ્યું છે, જેમાં વ્યક્તિના લક્ષણનાં પાસાં પર વિધાનો રચી સામે અભિપ્રાયો માંગવામાં આવે છે?",
+    "options": [
+      "દૈનિક રોજનિશી",
+      "પ્રસંગનોંધ",
+      "અભિપ્રાયાવલી",
+      "ક્રમમાપદંડ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: સ્વયં પૃથક્કરણની પદ્ધતિઓ",
+    "exp": "સ્વયં પૃથક્કરણ માટે 'અભિપ્રાયાવલી' એક અગત્યનું, અનાત્મલક્ષી અને પૂર્વગ્રહ રહિત સાધન છે, જેના દ્વારા થોડાક અપવાદો બાદ કરતાં વ્યક્તિનું સાચું મૂલ્યાંકન કરી શકાય છે. (પ્રકરણ/વિભાગ: એકમ-3: સ્વયં પૃથક્કરણની પદ્ધતિઓ | પાના નં.: 94)"
+  },
+  {
+    "q": "પ્રશ્ન 166: અધ્યેતાઓને અભિપ્રેરિત કરવાના વિવિધ ઉપાયોના સંદર્ભમાં, આધુનિક મનોવિજ્ઞાન નીચેનામાંથી કયા ઉપાયોનો અસ્વીકાર કરે છે?",
+    "options": [
+      "જૂથ સ્પર્ધાઓ અને જૂથ-અધ્યયન",
+      "શિક્ષા અને ઇનામ બંનેનો",
+      "પ્રશંસા અને ખેલપ્રણાલીનો",
+      "આત્મગૌરવ અને રુચિનો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: અધ્યયન અને અભિપ્રેરણા",
+    "exp": "અધ્યયન અને અભિપ્રેરણાના ઉપાયોમાં સ્પષ્ટ જણાવાયું છે કે \"આધુનિક મનોવિજ્ઞાન શિક્ષા અને ઇનામ બંનેનો અસ્વીકાર કરે છે.\" (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન અને અભિપ્રેરણા | પાના નં.: 95)"
+  },
+  {
+    "q": "પ્રશ્ન 167: અધ્યયન માટે અભિપ્રેરણા પૂરી પાડવા અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: મેસ્લોએ સૂચવેલી જરૂરિયાતો સંતોષાય અને સુષુપ્ત જરૂરિયાતો જાગ્રત થાય તેવા શૈક્ષણિક વ્યવહારોની ગોઠવણી અધ્યેતાને માર્ગદર્શન આપે છે.\nવિધાન 2: પૅનલ, પરિસંવાદ, વર્કશૉપ અને સિમ્પોઝિયમ જેવી જૂથ-અધ્યયન પદ્ધતિઓ અભિપ્રેરણા પૂરી પાડે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: અધ્યયન અને અભિપ્રેરણા",
+    "exp": "મેસ્લોની જરૂરિયાતો મુજબ શૈક્ષણિક વ્યવહારની ગોઠવણી અને પૅનલ, પરિસંવાદ, વર્કશૉપ, સિમ્પોઝિયમ જેવી જૂથ-અધ્યયન પદ્ધતિઓ અધ્યેતાને અભિપ્રેરણા આપવાના મહત્ત્વના ઉપાયો છે. (પ્રકરણ/વિભાગ: એકમ-3: અધ્યયન અને અભિપ્રેરણા | પાના નં.: 94)"
+  },
+  {
+    "q": "પ્રશ્ન 168: શિક્ષણના ધ્યેય પર રાજકીય પરિબળોની અસર અને શિક્ષણની રાજનીતિ પર અસરના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શાસન વ્યવસ્થા બદલાતાં શિક્ષણનાં ધ્યેયો બદલાય છે.",
+      "લોકશાહી શાસન વ્યવસ્થામાં સર્વધર્મ સમભાવ, રાષ્ટ્રીય અખંડિતતા અને રાષ્ટ્રપ્રેમને પ્રાધાન્ય અપાય છે.",
+      "શાળાકક્ષાએ નાગરિકશાસ્ત્ર જેવા વિષયો દ્વારા સરકાર, પંચાયત, ન્યાયતંત્ર અને સત્તાના માળખાનું અધ્યયન થાય છે.",
+      "શિક્ષણ સામાજિક પરિવર્તન માટે બિન-બંધારણીય અને હિંસક માર્ગો અપનાવવાનું શીખવે છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ-3: શિક્ષણ અને રાજકીય પરિબળો",
+    "exp": "શિક્ષણ સામાજિક પરિવર્તન માટે 'બંધારણીય માર્ગો' અને 'અહિંસક કેળવણી' અપનાવવાનું શીખવે છે. તેથી વિધાન (D) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-3: શિક્ષણ અને રાજકીય પરિબળો | પાના નં.: 96-97)"
+  },
+  {
+    "q": "પ્રશ્ન 169: શિક્ષણની સમાજ વ્યવસ્થા પર થતી અસરોના સંદર્ભમાં નીચેનામાંથી કઈ બાબત 'નકારાત્મક અસર' (અવરોધક પરિબળ) તરીકે દર્શાવવામાં આવી છે?",
+    "options": [
+      "સામૂહિક મેળાઓ જેવા કે ગાંધીમેળા, રમતોત્સવ અને યુવા મહોત્સવનું આયોજન",
+      "વહેમ, અંધશ્રદ્ધા અને જાતિના ભેદભાવો દૂર થવા",
+      "શિક્ષણમાં આજે પણ થતો ભ્રષ્ટાચાર",
+      "ઉદ્યોગોમાં વધારો અને આર્થિક પરિસ્થિતિમાં સુધારો"
+    ],
+    "ans": 2,
+    "unit": "એકમ-3: શિક્ષણની સમાજ વ્યવસ્થા પર થતી અસરો",
+    "exp": "શિક્ષણની સમાજ વ્યવસ્થા પરની નકારાત્મક અસરમાં જણાવાયું છે કે જો યોગ્ય શિક્ષણ ન મળે તો દેશનું ભાવિ અંધકારમય બને છે અને 'શિક્ષણમાં આજે પણ ભ્રષ્ટાચાર થાય છે, જે શિક્ષણના વિકાસમાં અવરોધક પરિબળ છે'. (પ્રકરણ/વિભાગ: એકમ-3: શિક્ષણની સમાજ વ્યવસ્થા પર થતી અસરો | પાના નં.: 98)"
+  },
+  {
+    "q": "પ્રશ્ન 170: કૃષિક્ષેત્રે શિક્ષણના મહત્ત્વ અંગે નીચેનામાંથી કઈ બાબતો સુશિક્ષિત ખેડૂત દ્વારા અપનાવવામાં આવે છે?\n1. ખેતીની જમીન પ્રયોગશાળામાં મોકલી તેના પોષક તત્ત્વોની તપાસ કરવી.\n2. પાણીનો વ્યય અટકાવવા સિંચાઈની અવનવી પદ્ધતિઓનો ઉપયોગ કરવો.\n3. વૈજ્ઞાનિક વલણ અપનાવી આધુનિક યંત્રો અને ઉચ્ચ ગુણવત્તાવાળા બિયારણોનો ઉપયોગ કરવો.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-3: શિક્ષણનું કૃષિક્ષેત્રે મહત્ત્વ",
+    "exp": "શિક્ષણના પ્રભાવથી સુશિક્ષિત ખેડૂતો વૈજ્ઞાનિક વલણ, આધુનિક યંત્રો, ઉચ્ચ બિયારણો, પ્રયોગશાળામાં જમીન-ચકાસણી અને આધુનિક સિંચાઈ પદ્ધતિઓનો ઉપયોગ કરતા થયા છે. (પ્રકરણ/વિભાગ: એકમ-3: શિક્ષણનું કૃષિક્ષેત્રે મહત્ત્વ | પાના નં.: 98-99)"
+  },
+  {
+    "q": "પ્રશ્ન 171: 'શૈક્ષણિક પરિભાષા અને વિભાવના' નામના પુસ્તકમાં સંસ્કૃતિ (Culture) નો અર્થ \"જનસમૂહ કે રાષ્ટ્રનાં મૂલ્યો, માન્યતાઓ, રીત-રિવાજો, કલાઓ, સંસ્થાઓ અને Artifacts નો સમુચ્ચય\" તરીકે કોણે આપ્યો છે?",
+    "options": [
+      "પ્રા. સી. વી. રાવળ",
+      "ડૉ. કે. જી. દેસાઈ",
+      "ઈ. બી. ટેઈલર",
+      "કે. સી. વ્યાસ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: સંસ્કૃતિનો અર્થ",
+    "exp": "ડૉ. કે. જી. દેસાઈએ તેમના પુસ્તક 'શૈક્ષણિક પરિભાષા અને વિભાવના' માં સંસ્કૃતિ (Culture) નો આ અર્થ આપ્યો છે. (પ્રકરણ/વિભાગ: એકમ-3: સંસ્કૃતિનો અર્થ | પાના નં.: 99)"
+  },
+  {
+    "q": "પ્રશ્ન 172: સંસ્કૃતિની વ્યાખ્યાઓ અને તેના પ્રણેતાઓનાં યોગ્ય જોડકાં જોડો:\n1. પ્રા. સી. વી. રાવળ — (a) સંસ્કૃતિ એક જટિલ પૂર્ણતા છે, જેમાં વિશ્વાસ, કલા, નૈતિકતા, નિયમ, રિવાજ અને અન્ય યોગ્યતાઓ સમાવિષ્ટ છે.\n2. ઈ. બી. ટેઈલર (1924) — (b) કોઈ પણ પ્રજાએ સ્વીકારેલી જીવનની ઉચ્ચ પદ્ધતિનું નામ સંસ્કૃતિ છે; સંસ્કાર વિના સંસ્કૃતિ નહિ.\n3. કે. સી. વ્યાસ — (c) સમાજની વ્યક્તિઓના પરિસ્થિતિ પ્રત્યેના પ્રતિભાવોની પરંપરાઓમાંથી બંધાયેલું આચાર-વિચારનું પોત એ સંસ્કૃતિ છે.",
+    "options": [
+      "1-b, 2-a, 3-c",
+      "1-a, 2-b, 3-c",
+      "1-b, 2-c, 3-a",
+      "1-c, 2-a, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-3: સંસ્કૃતિનો અર્થ",
+    "exp": "પ્રા. સી. વી. રાવળે 'પારિભાષિક કોશ-તત્ત્વજ્ઞાન' માં જીવનની ઉચ્ચ પદ્ધતિ, ઈ. બી. ટેઈલરે (1924) જટિલ પૂર્ણતા અને કે. સી. વ્યાસે પરિસ્થિતિ પ્રત્યેના પ્રતિભાવોની પરંપરાઓમાંથી બંધાયેલા આચાર-વિચારના પોતને સંસ્કૃતિ ગણાવી છે. (પ્રકરણ/વિભાગ: એકમ-3: સંસ્કૃતિનો અર્થ | પાના નં.: 99-100)"
+  },
+  {
+    "q": "પ્રશ્ન 173: સંસ્કૃતિના અર્થે શિક્ષણનાં મુખ્ય ત્રણ કાર્યો કયાં છે?",
+    "options": [
+      "સંસ્કૃતિનું નિર્માણ, વિભાજન અને મૂલ્યાંકન",
+      "સંસ્કૃતિનું સંરક્ષણ, સંક્રમણ અને સંવર્ધન",
+      "સંસ્કૃતિનું સંશોધન, પ્રકાશન અને પ્રસારણ",
+      "સંસ્કૃતિનું અવલોકન, પૃથક્કરણ અને સંયોજન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: સંસ્કૃતિનો અર્થ",
+    "exp": "મૉડ્યૂલની આકૃતિ અને વિગત મુજબ સંસ્કૃતિ અર્થે શિક્ષણનાં મુખ્ય ત્રણ કાર્યો છે: (1) સંસ્કૃતિનું સંરક્ષણ, (2) સંસ્કૃતિનું સંક્રમણ અને (3) સંસ્કૃતિનું સંવર્ધન. (પ્રકરણ/વિભાગ: એકમ-3: સંસ્કૃતિનો અર્થ | પાના નં.: 100)"
+  },
+  {
+    "q": "પ્રશ્ન 174: \"કેળવણીનું મૂળભૂત પ્રયોજન સાંસ્કૃતિક સંક્રાંતિ કરવાનું છે.\" — આ મત કયા સમાજશાસ્ત્રીઓએ વ્યક્ત કર્યો છે?",
+    "options": [
+      "ઈ. બી. ટેઈલર (1924) અને મેસ્લો",
+      "વિલાર્ડ વોલર (1932) અને બેલિલ બસ્ટેઇન (1966)",
+      "સી. ટી. મૉર્ગન અને બ્લૂમ",
+      "ડૉ. કે. જી. દેસાઈ અને કે. સી. વ્યાસ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-3: સંસ્કૃતિનું સંક્રમણ",
+    "exp": "વિલાર્ડ વોલર (1932) અને બેલિલ બસ્ટેઇન (1966) જેવા સમાજશાસ્ત્રીઓ માને છે કે કેળવણીનું મૂળભૂત પ્રયોજન સાંસ્કૃતિક સંક્રાંતિ (સંક્રમણ) કરવાનું છે. (પ્રકરણ/વિભાગ: એકમ-3: સંસ્કૃતિનું સંક્રમણ | પાના નં.: 100-101)"
+  },
+  {
+    "q": "પ્રશ્ન 175: પુરાતન અવશેષો, શિલાલેખો અને તામ્રપત્રો પર જે-તે સંસ્કૃતિનો પ્રભાવ હોય છે, જે ભાષા કે શિક્ષણના લખાણથી જીવંત બને છે અને સંસ્કૃતિના સજીવ સંસ્કારો રક્ષાય છે. — આ બાબત શિક્ષણના કયા સાંસ્કૃતિક કાર્યને દર્શાવે છે?",
+    "options": [
+      "સંસ્કૃતિનું સંરક્ષણ",
+      "સંસ્કૃતિનું સંક્રમણ",
+      "સંસ્કૃતિનું સંવર્ધન",
+      "સંસ્કૃતિનું વિભાજન"
+    ],
+    "ans": 0,
+    "unit": "એકમ-3: સંસ્કૃતિનું સંરક્ષણ",
+    "exp": "પુરાતન અવશેષો, શિલાલેખો અને તામ્રપત્રોના લખાણ દ્વારા સંસ્કૃતિના સજીવ સંસ્કારોને જીવંત રાખવા તે 'સંસ્કૃતિનું સંરક્ષણ' કાર્ય છે. (પ્રકરણ/વિભાગ: એકમ-3: સંસ્કૃતિનું સંરક્ષણ | પાના નં.: 100)"
+  },
+  {
+    "q": "પ્રશ્ન 176: જ્ઞાન અને માનવ મગજના સંબંધ અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: વિજ્ઞાને સિદ્ધ કર્યું છે કે મગજ જ્ઞાન ઉત્પન્ન કરતું નથી, પરંતુ તેના સ્મૃતિભંડારમાં જ્ઞાનનો સંગ્રહ કરે છે.\nવિધાન 2: સંસ્કૃતમાં 'વિદ્' એટલે 'જાણવું' અને અંગ્રેજીમાં 'To Know' ઉપરથી 'Knowledge' શબ્દ બન્યો છે, જેનો શાબ્દિક અર્થ \"જાણેલું તે જ્ઞાન\" થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: જ્ઞાન અને અભ્યાસક્રમ",
+    "exp": "મગજ એ માનવીએ પ્રાપ્ત કરેલા જ્ઞાનનું સંગ્રહસ્થાન છે (ઉત્પન્ન કરતું નથી) અને 'વિદ્' તથા 'To Know' ઉપરથી જ્ઞાનનો અર્થ \"જાણેલું તે જ્ઞાન\" થાય છે. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાન અને અભ્યાસક્રમ | પાના નં.: 105)"
+  },
+  {
+    "q": "પ્રશ્ન 177: \"જ્ઞાન બૌદ્ધિક પદ્ધતિ દ્વારા ઉદ્ભવેલ પ્રક્રિયાનું પરિણામ છે.\" — આ વ્યાખ્યા કોણે આપી છે?",
+    "options": [
+      "ડૉ. કે. જી. દેસાઈ",
+      "ડૉ. શેરા",
+      "જ્હૉન ડ્યૂઈ",
+      "ડૉ. એસ. પી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4: પ્રસ્તાવના",
+    "exp": "એકમ-4 ની પ્રસ્તાવનામાં ડૉ. શેરાના મત મુજબ \"જ્ઞાન બૌદ્ધિક પદ્ધતિ દ્વારા ઉદ્ભવેલ પ્રક્રિયાનું પરિણામ છે\" તેવી વ્યાખ્યા અપાઈ છે. (પ્રકરણ/વિભાગ: એકમ-4: પ્રસ્તાવના | પાના નં.: 105)"
+  },
+  {
+    "q": "પ્રશ્ન 178: અભ્યાસક્રમ અને જ્ઞાનના સંબંધ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "અભ્યાસક્રમ એટલે શૈક્ષણિક અનુભવોનું સંગઠન.",
+      "જ્ઞાનના બે પ્રકાર છે: એક ઉત્પાદકતા માટે અને બીજો જ્ઞાનના ઉપયોગ માટે.",
+      "જ્ઞાન અને ધ્યેય વિના પણ જ્ઞાનનું સ્વતંત્ર અસ્તિત્વ સંભવ છે.",
+      "અભ્યાસક્રમ વિદ્યાર્થીઓના જ્ઞાનમાર્ગનું પ્રવેશદ્વાર છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: પ્રસ્તાવના",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે જ્યારે જ્ઞાન અને ધ્યેય પરસ્પર સંબંધથી જોડાય ત્યારે જ્ઞાનનો પ્રાદુર્ભાવ થાય છે, એટલે કે \"જ્ઞાન અને ધ્યેય વિના જ્ઞાનનું અસ્તિત્વ નથી.\" તેથી વિધાન (C) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-4: પ્રસ્તાવના | પાના નં.: 105-106)"
+  },
+  {
+    "q": "પ્રશ્ન 179: જ્ઞાન માહિતીમાં સમાવિષ્ટ ત્રણ તત્ત્વો અને તેના અર્થ અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. જ્ઞાતા (Subject) — (a) જે કાંઈ જાણવાનું છે તે જ્ઞાનનો વિષય\n2. જ્ઞેય (Object) — (b) જ્ઞેયને જ્ઞાતા સમક્ષ લાવી મૂકે છે તથા જ્ઞાતાને જ્ઞેયની ઉપસ્થિતિથી સભાન કરે છે\n3. જ્ઞાન ક્રિયા (Act of knowing) — (c) જે જાણે છે — માણસ, હું પોતે",
+    "options": [
+      "1-c, 2-a, 3-b",
+      "1-a, 2-c, 3-b",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-4: જ્ઞાનજન્ય પરિસ્થિતિ",
+    "exp": "જ્ઞાન માહિતીનાં ત્રણ તત્ત્વોમાં 'જ્ઞાતા' એટલે જાણનાર વ્યક્તિ, 'જ્ઞેય' એટલે જાણવાનો વિષય અને 'જ્ઞાન ક્રિયા' એટલે જ્ઞેયને જ્ઞાતા સમક્ષ લાવી સભાન કરવાની ક્રિયા. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાનજન્ય પરિસ્થિતિ | પાના નં.: 107)"
+  },
+  {
+    "q": "પ્રશ્ન 180: જ્ઞાન પ્રત્યે મનનાં ત્રણ વલણો અને તેની માનસિક સ્થિતિનાં યોગ્ય જોડકાં જોડો:\n1. સંશય (Doubt) — (a) ત્રુટિની શક્યતાના ભય વિના નિર્ણયનો દૃઢપણે સ્વીકાર થાય છે.\n2. અભિપ્રાય (Opinion) — (b) નિર્ણય સાચો છે કે ખોટો એ નક્કી કરવાની અશક્તિને કારણે નિર્ણય વિલંબમાં પરિણમે છે.\n3. નિશ્ચિતતા (Certitude) — (c) નિર્ણયની સત્યતા નક્કી થાય છે, પરંતુ ત્રુટિની શક્યતાઓનો ભય તોળાતો હોય છે.",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-4: જ્ઞાનજન્ય પરિસ્થિતિ",
+    "exp": "'સંશય' માં નિર્ણય વિલંબમાં પડે છે; 'અભિપ્રાય' માં સત્યતા નક્કી થાય પણ ત્રુટિનો ભય રહે છે; અને 'નિશ્ચિતતા' માં ત્રુટિના ભય વિના દૃઢપણે સ્વીકાર થાય છે. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાનજન્ય પરિસ્થિતિ | પાના નં.: 107)"
+  },
+  {
+    "q": "પ્રશ્ન 181: જ્ઞાનના બંધારણની આકૃતિ અને તેના અર્થઘટન અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: ક્રિયાત્મક અને પ્રક્રિયા સંબંધિત જ્ઞાન (Operational and procedure knowledge) વારંવાર મહાવરા અને દૃઢીકરણથી સબળ જોડાણ બનાવે છે.\nવિધાન 2: સંકલ્પનાત્મક જ્ઞાન (Conceptual knowledge) ક્યારેક ચોક્કસ જોડાણના અભાવે નબળું બની જાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: જ્ઞાનનું બંધારણ",
+    "exp": "જ્ઞાનના બંધારણ મુજબ ક્રિયા દ્વારા અપાતું જ્ઞાન મહાવરા અને દૃઢીકરણથી મજબૂત બને છે, જ્યારે સંકલ્પના સંબંધી જ્ઞાન ચોક્કસ જોડાણના અભાવે નબળું પડી શકે છે. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાનનું બંધારણ | પાના નં.: 107-108)"
+  },
+  {
+    "q": "પ્રશ્ન 182: 'જ્ઞાનમાં સહભાગિતા' (Knowledge Sharing) અંતર્ગત બાળકના જ્ઞાન નિર્માણના પરિબળો અને તેનાં ઉદાહરણો અંગે નીચેનામાંથી કઈ જોડી અસંગત (ખોટી) છે?",
+    "options": [
+      "મહાવરો — કાવ્યગાન ફરી-ફરી ગવડાવવામાં આવે તો બાળક સહેલાઈથી યાદ રાખે છે.",
+      "શોધ — કોયડા ઉકેલ, અધૂરી વાર્તા બાળક પૂરી કરે.",
+      "તપાસ — શિયાળામાં શા માટે ઠંડી પડે છે? ઉનાળામાં શા માટે ગરમી પડે છે?",
+      "પ્રતિચાર (પ્રતિપોષણ) — બાળકો સહાધ્યાયી સાથે 'મારો પ્રિય તહેવાર' વિશે વિચારોની આપ-લે કરે."
+    ],
+    "ans": 3,
+    "unit": "એકમ-4: જ્ઞાનનું બંધારણ",
+    "exp": "'પ્રતિચાર (પ્રતિપોષણ)' એટલે બાળકના દરેક પ્રતિભાવને હકારાત્મક રીતે બિરદાવવું (દા.ત., શાબાશ, સરસ, યોગ્ય જવાબ). જ્યારે 'મારો પ્રિય તહેવાર' જેવા વિષય પર વિચારોની આપ-લે એ 'વાર્તાલાપ' નું ઉદાહરણ છે. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાનનું બંધારણ | પાના નં.: 108-109)"
+  },
+  {
+    "q": "પ્રશ્ન 183: ડૉ. એસ. પી. દ્વારા દર્શાવેલ જ્ઞાનના ત્રણ પ્રકારો (વૈયક્તિક, સામાજિક અને અર્ધસામાજિક) મુજબ, \"શારીરિક સ્વચ્છતાની બાબતને ધર્મ સાથે જોડી દેવાય કે સ્નાન કર્યા પછી જ મંદિરે જવાય\" — આ કયા પ્રકારના જ્ઞાનનું ઉદાહરણ છે?",
+    "options": [
+      "વૈયક્તિક જ્ઞાન (Personal Knowledge)",
+      "સામાજિક જ્ઞાન (Social Knowledge)",
+      "અર્ધસામાજિક જ્ઞાન (Semi-Social Knowledge)",
+      "સાર્વજનિક જ્ઞાન (Public Knowledge)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: વિવિધ પ્રકારના જ્ઞાન",
+    "exp": "જેમાં સમાજનો ફાળો અડધો હોય અને અડધો હિસ્સો અન્ય બાબતોનો હોય તે 'અર્ધસામાજિક જ્ઞાન' કહેવાય છે; દા.ત. શારીરિક સ્વચ્છતાને ધર્મ સાથે જોડી દેવી (સ્નાન કર્યા પછી જ મંદિરે જવાય). (પ્રકરણ/વિભાગ: એકમ-4: વિવિધ પ્રકારના જ્ઞાન | પાના નં.: 110)"
+  },
+  {
+    "q": "પ્રશ્ન 184: જ્ઞાનની પ્રકૃતિના આધારે દર્શાવેલા ત્રણ પ્રકારના જ્ઞાન (બુદ્ધિસંગત, અંત:સ્ફુરિત અને વૈજ્ઞાનિક) અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "બુદ્ધિસંગત જ્ઞાનને અનુભૂતિ મૂલક, પ્રાયોગિક તેમજ સકારાત્મક જ્ઞાન પણ કહે છે.",
+      "અંત:સ્ફુરિત જ્ઞાન (Intuitive Knowledge) દરેક વ્યક્તિમાં એકસરખું જ હોય છે.",
+      "જ્યારે સિદ્ધાંતોના આધાર પર આંતરજ્ઞાનનું શુદ્ધિકરણ કરવામાં આવે ત્યારે તે 'વૈજ્ઞાનિક જ્ઞાન' કહેવાય છે.",
+      "વૈજ્ઞાનિક જ્ઞાન વ્યવસ્થિત, સ્થિર અને અવિભાજ્ય હોય છે તથા તે સિદ્ધાંતો, નિયમો, સૂત્ર અને પ્રયોગો પર આધારિત હોય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4: જ્ઞાનની પ્રકૃતિના આધાર પર પ્રકાર",
+    "exp": "અંત:સ્ફુરિત જ્ઞાન (Intuitive Knowledge) મસ્તકની આંતરિક અવસ્થામાં પ્રાપ્ત થાય છે અને તે 'દરેક વ્યક્તિમાં એકસરખું નથી હોતું'. તેથી વિધાન (B) અસત્ય છે. (પ્રકરણ/વિભાગ: એકમ-4: જ્ઞાનની પ્રકૃતિના આધાર પર પ્રકાર | પાના નં.: 110-111)"
+  },
+  {
+    "q": "પ્રશ્ન 185: વર્તમાન જ્ઞાનનું સ્વરૂપ અનુભવ, બુદ્ધિ અને અંતર્જ્ઞાનનું પરિણામ છે. આ ત્રણેયની સહાયતાથી પ્રાપ્ત થતા જ્ઞાન અંગે યોગ્ય જોડકાં જોડો:\n1. અનુભવની સહાયથી — (a) તર્ક આધારિત જ્ઞાન\n2. બુદ્ધિની સહાયતાથી — (b) ગંભીર, તર્કપૂર્ણ જ્ઞાન\n3. અંતર્જ્ઞાનની સહાયતાથી — (c) જ્ઞાનેન્દ્રિયો દ્વારા જ્ઞાન",
+    "options": [
+      "1-c, 2-a, 3-b",
+      "1-a, 2-c, 3-b",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-4: વિવિધ પ્રકારના જ્ઞાન",
+    "exp": "અનુભવની સહાયથી જ્ઞાનેન્દ્રિયો દ્વારા જ્ઞાન, બુદ્ધિની સહાયતાથી તર્ક આધારિત જ્ઞાન અને અંતર્જ્ઞાનની સહાયતાથી ગંભીર, તર્કપૂર્ણ જ્ઞાનની પ્રાપ્તિ થાય છે. (પ્રકરણ/વિભાગ: એકમ-4: વિવિધ પ્રકારના જ્ઞાન | પાના નં.: 111)"
+  },
+  {
+    "q": "પ્રશ્ન 186: NCF-2005 માં ઉલ્લેખિત અભ્યાસક્રમ નિર્માણના ચાર નિર્દેશક સિદ્ધાંતોમાં નીચેનામાંથી કયા સિદ્ધાંતનો સમાવેશ થતો નથી?",
+    "options": [
+      "જ્ઞાનને શાળાની બહારના જીવન સાથે જોડવું.",
+      "સુનિશ્ચિત કરવું કે શિક્ષણ ગોખણપટ્ટી આધારિત પદ્ધતિઓનો ત્યાગ કરે.",
+      "અભ્યાસક્રમને માત્ર નિયત પાઠ્યપુસ્તક પૂરતો જ સીમિત રાખવો.",
+      "પરીક્ષાઓને વધારે લચીલી બનાવી તેમને વર્ગખંડની ગતિવિધિઓ સાથે જોડવી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: અભ્યાસક્રમની પસંદગી અને નિર્માણ",
+    "exp": "NCF-2005 નો ત્રીજો નિર્દેશક સિદ્ધાંત છે: \"અભ્યાસક્રમને એવી રીતે સમૃદ્ધ કરવો કે તે પાઠ્યપુસ્તકોથી વધારે આગળ જઈ શકે.\" તેથી વિધાન (C) ખોટું છે. (પ્રકરણ/વિભાગ: એકમ-4: અભ્યાસક્રમની પસંદગી અને નિર્માણ | પાના નં.: 112)"
+  },
+  {
+    "q": "પ્રશ્ન 187: રાષ્ટ્રીય અભ્યાસક્રમના દસ્તાવેજ (NCF) ની ભલામણો અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: વિષયો વચ્ચેની દીવાલો હળવી બનાવવામાં આવે કે જેથી બાળકને જ્ઞાનનો સમગ્ર આસ્વાદ મળી શકે.\nવિધાન 2: NCF માં દરેક સ્તરે વિષયના રૂપમાં કલાને સ્થાન આપવાની ભલામણ કરવામાં આવી છે, જેમાં ગાયન, નૃત્ય, દૃશ્યકલાઓ અને નાટકનો સમાવેશ થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: અભ્યાસક્રમ નિર્માણની પ્રક્રિયા",
+    "exp": "રાષ્ટ્રીય અભ્યાસક્રમના દસ્તાવેજમાં વિષયો વચ્ચેની દીવાલો હળવી કરવા, માતૃભાષા (આદિવાસી ભાષાઓ સહિત) ને શિક્ષણનું માધ્યમ બનાવવા અને દરેક સ્તરે કલા (ગાયન, નૃત્ય, દૃશ્યકલા, નાટક) ને વિષય તરીકે સ્થાન આપવાની ભલામણ કરાઈ છે. (પ્રકરણ/વિભાગ: એકમ-4: અભ્યાસક્રમ નિર્માણની પ્રક્રિયા | પાના નં.: 112-113)"
+  },
+  {
+    "q": "પ્રશ્ન 188: અભ્યાસક્રમ બદલવા માટેના માપદંડોમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થાય છે?\n1. માત્ર જ્ઞાન મેળવવા પર ભાર ન મૂકતાં વ્યાવહારિક શિક્ષણને પ્રોત્સાહન આપવું.\n2. શાળાઓમાં પ્રશિક્ષણ માટે ઇન્ટર્નશિપનું આયોજન.\n3. લોકતાંત્રિક રીતો દ્વારા બાળકોમાં સ્વ-અનુશાસનનો વિકાસ.\n4. બહુમાધ્યમનો પરસ્પર સંવાદના સાધનોની જેમ ઉપયોગ.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 ચારેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-4: માપદંડ",
+    "exp": "અભ્યાસક્રમ બદલવાના માપદંડોમાં વ્યાવહારિક શિક્ષણ, વ્યાખ્યાનો, વિદ્યાર્થી સમૂહો આધારિત અભ્યાસક્રમ, ઇન્ટર્નશિપ, લોકતાંત્રિક સ્વ-અનુશાસન અને બહુમાધ્યમનો સંવાદ સાધન તરીકે ઉપયોગ — આ તમામનો સમાવેશ થાય છે. (પ્રકરણ/વિભાગ: એકમ-4: માપદંડ | પાના નં.: 113)"
+  },
+  {
+    "q": "પ્રશ્ન 189: 'ખ્યાલ' (Concept) ની સમજ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ખ્યાલ માટે 'સામાન્યબોધ', 'વિભાવના' અને 'સંકલ્પના' જેવા શબ્દો પણ વપરાય છે.",
+      "ઝૂંપડી, તંબુ, બંગલો, અપાર્ટમેન્ટ, ફ્લૅટ — આ બધાંની વિભાવના \"ઘર\" થાય છે.",
+      "ઑક્સફર્ડ ડિક્શનરી મુજબ ખ્યાલ એ વસ્તુઓના વર્ગમાં એક વિચાર છે.",
+      "ખ્યાલની રચનામાં માત્ર ઇન્દ્રિયજન્ય અનુભવો જ ભાગ ભજવે છે, બુદ્ધિજન્ય કે અંત:સ્ફુરિત અનુભવોનો કોઈ ફાળો હોતો નથી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-4: ખ્યાલની સમજ",
+    "exp": "ખ્યાલની રચનામાં માનવીને થતા 'ઇન્દ્રિયજન્ય, બુદ્ધિજન્ય અને અંત:સ્ફુરિત' — આ ત્રણેય અનુભવો અગત્યનો ભાગ ભજવે છે. તેથી વિધાન (D) અયોગ્ય છે. (પ્રકરણ/વિભાગ: એકમ-4: ખ્યાલની સમજ | પાના નં.: 113-114)"
+  },
+  {
+    "q": "પ્રશ્ન 190: \"આકાશમાં તરતા પ્રકાશિત બિંદુઓની સ્મૃતિમાં પડેલી છાપ એ ____ છે, અને તેને 'ચમકતા તારા' તરીકે ઓળખવા તે ____ છે.\" — ખાલી જગ્યા માટે યોગ્ય વિકલ્પ પસંદ કરો.",
+    "options": [
+      "પ્રત્યક્ષીકરણ, સંવેદન",
+      "સંવેદન, પ્રત્યક્ષીકરણ",
+      "સંયોજિત સંવેદન, સંવેદન",
+      "પ્રત્યક્ષીકરણ, સંયોજિત સંવેદન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-4: સંવેદન અને પ્રત્યક્ષીકરણ",
+    "exp": "પ્રાથમિક ઇન્દ્રિય દ્વારા ઉદ્ભવતી અર્થહીન છાપ 'સંવેદન' (પ્રકાશિત બિંદુની છાપ) છે, અને જ્યારે આ સંવેદનને અર્થ પ્રાપ્ત થાય ('ચમકતા તારા') ત્યારે તેને 'પ્રત્યક્ષીકરણ' કહેવાય છે. (પ્રકરણ/વિભાગ: એકમ-4: સંવેદન અને પ્રત્યક્ષીકરણ | પાના નં.: 114)"
+  },
+  {
+    "q": "પ્રશ્ન 191: એક નાનું બાળક પોતાની શ્રવણેન્દ્રિય દ્વારા \"ચીં...ચીં...\" અવાજ સાંભળે છે અને તે જ સમયે દૃષ્ટિ દ્વારા ચકલીનો આકાર જુએ છે. આ બંને શુદ્ધ સંવેદનોના એકસાથે મળવાથી ઉદ્ભવતી \"ચીં...ચીં... કરતી ચકલી\" ની છાપને શું કહેવામાં આવે છે?",
+    "options": [
+      "શુદ્ધ સંવેદન",
+      "પ્રત્યક્ષીકરણ",
+      "સંયોજિત સંવેદન",
+      "વિભાવના"
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: સંયોજિત સંવેદન",
+    "exp": "એક જ સમયે બે કે તેથી વધારે શુદ્ધ સંવેદનાના (દૃષ્ટિ અને શ્રવણ) પરિણામે ઉદ્ભવતી છાપ જે સ્મૃતિમાં સંગ્રહાય તેને 'સંયોજિત સંવેદન' કહેવાય છે. (પ્રકરણ/વિભાગ: એકમ-4: સંયોજિત સંવેદન | પાના નં.: 115)"
+  },
+  {
+    "q": "પ્રશ્ન 192: પ્રવૃત્તિ અને અનુભવ દ્વારા બાળકના જ્ઞાનના સર્જન અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: રૂસોએ કહ્યું છે કે \"મનુષ્ય હંમેશા જન્મથી જ સ્વતંત્ર છે.\"\nવિધાન 2: વ્યક્તિ તેના વાતાવરણ સાથે અનુકૂળ થવાની પ્રક્રિયામાં જ્યારે વિચાર અને ચિંતન દ્વારા કંઈક માર્ગ શોધવા પ્રેરાય, તે ચિંતનપ્રેરક પરિસ્થિતિને 'જ્ઞાનજન્ય પરિસ્થિતિ' કહેવાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: પૂરકવાચન",
+    "exp": "પૂરકવાચનમાં રૂસોનું વિધાન (\"મનુષ્ય હંમેશા જન્મથી જ સ્વતંત્ર છે\") અને વાતાવરણ સાથેના અનુકૂલનમાંથી જન્મતી ચિંતનપ્રેરક પરિસ્થિતિને 'જ્ઞાનજન્ય પરિસ્થિતિ' ગણાવી છે. (પ્રકરણ/વિભાગ: એકમ-4: પૂરકવાચન | પાના નં.: 116, 120)"
+  },
+  {
+    "q": "પ્રશ્ન 193: \"જેમ ડૉક્ટર દર્દીને તપાસી રોગનિદાન કરી સારવાર અને દવા નક્કી કરે, પણ તે દવા દર્દીએ જ લેવી પડે; તેવી જ રીતે શિક્ષક માર્ગદર્શન આપે પણ અભ્યાસ તો વિદ્યાર્થીએ જાતે જ કરવો પડે છે.\" — આ દૃષ્ટાંત જ્ઞાન સંપાદનના કયા સ્વરૂપને સ્પષ્ટ કરે છે?",
+    "options": [
+      "જ્ઞાન સંપાદન એ નિષ્ક્રિય શ્રવણની પ્રક્રિયા છે.",
+      "જ્ઞાન સંપાદન પ્રવૃત્તિ એ એક સક્રિય પ્રવૃત્તિ છે, જેમાં શિક્ષકનું કામ પ્રોત્સાહક અને દિશાસૂચકનું છે.",
+      "જ્ઞાન માત્ર પુસ્તકો વાંચવાથી જ પ્રાપ્ત થાય છે.",
+      "જ્ઞાન સંપાદનમાં શિક્ષકની કોઈ જ જરૂરિયાત નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4: ઇન્દ્રિય અનુભવોની જરૂરિયાત",
+    "exp": "ડૉક્ટર અને દર્દીના ઉદાહરણ દ્વારા એ સ્પષ્ટ કરાયું છે કે જ્ઞાન સંપાદન સક્રિય પ્રવૃત્તિ છે, જેમાં વિદ્યાર્થીએ જાતે પ્રવૃત્ત થવું પડે છે અને શિક્ષક પ્રોત્સાહક તથા દિશાસૂચકની ભૂમિકા ભજવે છે. (પ્રકરણ/વિભાગ: એકમ-4: ઇન્દ્રિય અનુભવોની જરૂરિયાત | પાના નં.: 117)"
+  },
+  {
+    "q": "પ્રશ્ન 194: પાંચ જ્ઞાનેન્દ્રિયોની કેળવણીના મહત્ત્વ અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. આંખની કેળવણી — (a) સંગીતદેવીનું મંદિર ખુલ્લું કરી આપે છે\n2. સ્પર્શની કેળવણી — (b) રૂપ અને રંગનું રહસ્ય સમજવાનું દ્વાર ઉઘાડી આપે છે\n3. કાનની કેળવણી — (c) કુદરતની અપ્રતિમ કવિતા સમજવાની શક્તિ આપે છે",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-4: ઇન્દ્રિયોના અનુભવ દ્વારા જ્ઞાનનું નિર્માણ",
+    "exp": "આંખની કેળવણી રૂપ-રંગનું રહસ્ય સમજવાનું દ્વાર ઉઘાડે છે, સ્પર્શની કેળવણી કુદરતની અપ્રતિમ કવિતા સમજવાની શક્તિ આપે છે અને કાનની કેળવણી સંગીતદેવીનું મંદિર ખુલ્લું કરી આપે છે. (પ્રકરણ/વિભાગ: એકમ-4: ઇન્દ્રિયોના અનુભવ દ્વારા જ્ઞાનનું નિર્માણ | પાના નં.: 118)"
+  },
+  {
+    "q": "પ્રશ્ન 195: \"ઇન્દ્રિયોના વિકાસ પછી જ બુદ્ધિનો યથાર્થ વિકાસ થાય છે. બુદ્ધિનો સંપૂર્ણ વિકાસ ઇન્દ્રિયોના વિકાસ ઉપર જ અવલંબે છે.\" — આ દૃઢ મંતવ્ય કયા કેળવણીકારનું છે?",
+    "options": [
+      "જ્હૉન ડ્યૂઈ",
+      "ડૉ. મારિયા મૉન્ટેસરી",
+      "સ્વામી વિવેકાનંદ",
+      "રવીન્દ્રનાથ ટાગોર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-4: આંખની કેળવણી",
+    "exp": "ડૉ. મૉન્ટેસરીનું દૃઢ માનવું છે કે ઇન્દ્રિયોના વિકાસ પછી જ બુદ્ધિનો યથાર્થ વિકાસ થાય છે અને ઇન્દ્રિયોની કેળવણીના મજબૂત પાયા પર જ બાળકનું વિશુદ્ધ અને દૃઢ જ્ઞાન રચાય છે. (પ્રકરણ/વિભાગ: એકમ-4: આંખની કેળવણી | પાના નં.: 119)"
+  },
+  {
+    "q": "પ્રશ્ન 196: જ્ઞાનની યથાર્થતા અને ઉપયોગિતાવાદની વિચારસરણીના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: અનુભૂતિ એ જ્ઞાનની આધારશિલા છે.\nવિધાન 2: ઉપયોગિતાવાદની વિચારસરણી પ્રમાણે વ્યક્તિ માત્ર જ્ઞાન સ્વીકારતી નથી, પરંતુ જ્ઞાનનું સર્જન પણ કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: વિવિધ પ્રકારના જ્ઞાન અને તેની યથાર્થતા",
+    "exp": "અનુભૂતિ જ્ઞાનની આધારશિલા છે અને ઉપયોગિતાવાદની વિચારસરણી મુજબ વ્યક્તિ જ્ઞાનનો માત્ર સ્વીકાર જ નહીં, પરંતુ તેનું સર્જન પણ કરે છે. (પ્રકરણ/વિભાગ: એકમ-4: વિવિધ પ્રકારના જ્ઞાન અને તેની યથાર્થતા | પાના નં.: 119)"
+  },
+  {
+    "q": "પ્રશ્ન 197: શ્રીમદ્ ભગવદ્ ગીતાના કથન \"श्रद्धावान् लभते ज्ञानम्\" અને સંસ્કૃત ઉક્તિ \"ज्ञानं भारः क्रियां विना\" દ્વારા જ્ઞાન અંગે કઈ બે બાબતો સ્પષ્ટ કરવામાં આવી છે?",
+    "options": [
+      "જ્ઞાન માટે શ્રદ્ધા જરૂરી છે અને જે જ્ઞાન ક્રિયા કે આચરણમાં ન મુકાય તે બોજારૂપ (નકામું) છે.",
+      "જ્ઞાન માત્ર ધાર્મિક પુસ્તકોમાંથી જ મળે છે અને તેનો વ્યવહારમાં કોઈ ઉપયોગ નથી.",
+      "શ્રદ્ધા વિના પણ ગોખણપટ્ટીથી જ્ઞાન મેળવી શકાય છે.",
+      "ક્રિયા વિનાનું જ્ઞાન જ શ્રેષ્ઠ અને સર્વોચ્ચ જ્ઞાન છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-4: વિવિધ પ્રકારના જ્ઞાન અને તેની યથાર્થતા",
+    "exp": "ગીતા મુજબ જ્ઞાન સંપાદન કરનારને જ્ઞાનના તથ્યમાં શ્રદ્ધા હોવી જોઈએ ('શ્રદ્ધાવાન લભતે જ્ઞાનમ્') અને જે જ્ઞાન ક્રિયા કે આચરણમાં ન મુકાય તે બોજારૂપ છે ('જ્ઞાનં ભારઃ ક્રિયાં વિના'). (પ્રકરણ/વિભાગ: એકમ-4: વિવિધ પ્રકારના જ્ઞાન અને તેની યથાર્થતા | પાના નં.: 120)"
+  },
+  {
+    "q": "પ્રશ્ન 198: સામાજિક જૂથનાં લક્ષણો અંગે નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "કેન્દ્રસ્થાન અને પરસ્પર આધાર",
+      "જૂથના ધોરણો (નિયમો) અને સામાન્ય સહમતી",
+      "લાગણી અને નેતા",
+      "સભ્યો વચ્ચે હેતુનો સંપૂર્ણ વિરોધાભાસ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-4: વિવિધ સામાજિક જૂથો",
+    "exp": "સામાજિક જૂથનાં લક્ષણોમાં કદ, કેન્દ્રસ્થાન, લાગણી, પરસ્પર આધાર (સમાન હેતુ હોવાને કારણે), જૂથના ધોરણો, સામાન્ય સહમતી અને નેતાનો સમાવેશ થાય છે. સભ્યો વચ્ચે હેતુ સમાન હોય છે, વિરોધાભાસ નહીં. (પ્રકરણ/વિભાગ: એકમ-4: વિવિધ સામાજિક જૂથો | પાના નં.: 121)"
+  },
+  {
+    "q": "પ્રશ્ન 199: સામાજિક જૂથોના 'ઔપચારિક જૂથ' ના પ્રકારમાં નીચેનામાંથી કોનો સમાવેશ કરવામાં આવ્યો છે?\n1. સોસાયટીની કારોબારી કમિટી\n2. કચ્છ વિસ્તારમાં રોજીરોટી માટે સ્થળાંતર કરતું અગરિયાનું જૂથ\n3. વિવિધ રાજકીય પક્ષોના લોકોનું જૂથ અને મદારીઓનું જૂથ",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-4: ઔપચારિક અને અનૌપચારિક જૂથ",
+    "exp": "મૉડ્યૂલમાં ઔપચારિક જૂથના ઉદાહરણો તરીકે સોસાયટીની કારોબારી કમિટી, આદિવાસી જૂથ, કચ્છનું અગરિયાનું જૂથ, રાજકીય પક્ષોનું જૂથ અને મદારીઓનું જૂથ — આ તમામનો સમાવેશ કરાયો છે. (પ્રકરણ/વિભાગ: એકમ-4: ઔપચારિક અને અનૌપચારિક જૂથ | પાના નં.: 122)"
+  },
+  {
+    "q": "પ્રશ્ન 200: નીચેનામાંથી કયું જૂથ 'અનૌપચારિક જૂથ' નું ઉદાહરણ છે?",
+    "options": [
+      "આદિવાસી જૂથ",
+      "સોસાયટીની કારોબારી કમિટી",
+      "અકસ્માત સમયે રોડ પર એકઠાં થઈ ગયેલા લોકોનું જૂથ અને થિએટરમાં પિક્ચર જોવા એકઠા થયેલા લોકોનું જૂથ",
+      "ચોક્કસ વ્યવસાય ધરાવતા મદારીઓનું જૂથ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-4: અનૌપચારિક જૂથ",
+    "exp": "જે જૂથમાં લોકો અનાયાસે ભેગા થઈ જાય અને છૂટા પડી જાય તેને 'અનૌપચારિક જૂથ' કહે છે; દા.ત. ટ્રેનના મુસાફરો, હૉટલમાં ચાના ટેબલ પરની વ્યક્તિઓ, અકસ્માત સમયે રોડ પર એકઠા થયેલા લોકો અને થિએટરમાં પિક્ચર જોવા એકઠા થયેલા લોકો. (પ્રકરણ/વિભાગ: એકમ-4: અનૌપચારિક જૂથ | પાના નં.: 122)"
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા (ભાગ-2: પ્રશ્ન 101 થી 200)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "fy2apart2.html",
+            testUploadDate: "2026-11-26"
+        })
+    });
+}
+</script>
+</body>
+</html>
