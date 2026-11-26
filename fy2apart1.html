@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા | ભાગ-1 (૧૦૦ પ્રશ્નો)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ): કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ)<br>કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">ભાગ-1: પ્રશ્ન ૧ થી ૧૦૦ | બહુવિકલ્પીય પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ) કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા (ભાગ-1) | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ) કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા | ભાગ-1)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: ઉપનિષદમાં દર્શાવેલ 'વિદ્યા' અને 'અવિદ્યા' ના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: વિદ્યા એટલે પરમ જ્ઞાન અથવા બ્રહ્મજ્ઞાન, જે માનવને અમૃતત્ત્વ સુધી પહોંચાડે છે.\nવિધાન 2: અવિદ્યા એટલે અજ્ઞાનતા, જે માનવને સંસારસાગરમાં બાંધી રાખે છે.\nઉપરનામાંથી કયું/કયાં વિધાન સાચું/સાચાં છે?",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: શિક્ષણની તાત્ત્વિક સમજ (પાના નં.: 4)",
+    "exp": "ઉપનિષદ મુજબ વિદ્યા અને અવિદ્યા બંને વેદ (જ્ઞાન) છે. વિદ્યા માનવને અમૃતત્ત્વ સુધી પહોંચાડે છે, જ્યારે અવિદ્યા (વ્યવહારુ વિષયોનું જ્ઞાન) સંસારસાગર પાર કરાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: ઉપનિષદના સંદર્ભમાં અર્થશાસ્ત્ર, સમાજશાસ્ત્ર અને ઇજનેરી જેવા અર્થોપાર્જન માટેના વ્યવહારુ વિષયોના જ્ઞાનને કયા નામે ઓળખવામાં આવે છે?",
+    "options": [
+      "પરાવિદ્યા",
+      "બ્રહ્મવિદ્યા",
+      "અવિદ્યા",
+      "વ્યવહારવિદ્યા"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શિક્ષણની તાત્ત્વિક સમજ (પાના નં.: 4)",
+    "exp": "જીવનની જવાબદારીઓ પૂર્ણ કરવા, સમાજના વ્યવહારો સાચવવા અને પરિવારના નિભાવ માટે જરૂરી અર્થશાસ્ત્ર, સમાજશાસ્ત્ર, ઇજનેરી વગેરે વિષયોનું જ્ઞાન 'અવિદ્યા' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: 'Education' શબ્દના મૂળ લૅટિન શબ્દો અને તેના અર્થ અંગે નીચેના જોડકાં યોગ્ય રીતે જોડો:\n1. Educate — (a) Act of teaching or training\n2. Educare — (b) To educate, to bring up, to raise\n3. Educatum — (c) To bring forth, to lead out",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-a, 2-c, 3-b",
+      "1-b, 2-a, 3-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: કેળવણીનો શાબ્દિક અર્થ (પાના નં.: 5)",
+    "exp": "લૅટિન ભાષામાં 'Educate' એટલે ઉછેરવું/સંવર્ધન કરવું (to bring up, to raise), 'Educare' એટલે બહાર લાવવું/દોરવું (to bring forth, to lead out) અને 'Educatum' એટલે અધ્યાપન કે તાલીમ આપવાની ક્રિયા (Act of teaching or training)."
+  },
+  {
+    "q": "પ્રશ્ન 4: 'Education' શબ્દના ત્રણેય લૅટિન મૂળ શબ્દોના સમન્વિત અર્થ (The act of training, bringing up and leading out) પ્રમાણે શિક્ષણ એટલે શું?",
+    "options": [
+      "અક્ષરજ્ઞાન, તાલીમ અને મૂલ્યાંકન",
+      "પ્રશિક્ષણ, સંવર્ધન અને પથદર્શન",
+      "અધ્યયન, અધ્યાપન અને સંશોધન",
+      "ઉછેર, શિસ્ત અને માર્ગદર્શન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: કેળવણીનો શાબ્દિક અર્થ (પાના નં.: 5)",
+    "exp": "ત્રણેય લૅટિન શબ્દોના અર્થ પ્રમાણે Education (શિક્ષણ) એટલે 'પ્રશિક્ષણ, સંવર્ધન અને પથદર્શન' થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 5: ભારતીય ચિંતકો દ્વારા અપાયેલી કેળવણીની વ્યાખ્યાઓનાં યોગ્ય જોડકાં જોડો:\n1. કૌટિલ્ય — (a) સા વિદ્યા યા વિમુક્તયે\n2. વિનોબાજી — (b) શિક્ષણ એટલે શિષ્ટાચાર માટેની તાલીમ અને દેશ તથા કુદરત પ્રત્યેનો પ્રેમ\n3. ઉપનિષદ — (c) કેળવણી એટલે બાળક અને માણસનાં શરીર, મન અને આત્માના ઉત્તમાંશોનું આવિષ્કારીકરણ\n4. ગાંધીજી — (d) શિક્ષણ એ સત્યનું ઓજાર છે, કેળવણી એટલે મુક્તિ, આર્ષદર્શન, સ્વયંપ્રેરણા, નિત્ય નવું સર્જન, સાહસ",
+    "options": [
+      "1-b, 2-d, 3-a, 4-c",
+      "1-d, 2-b, 3-a, 4-c",
+      "1-b, 2-c, 3-a, 4-d",
+      "1-a, 2-d, 3-b, 4-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: ભારતીય ચિંતન પ્રમાણે કેળવણી (પાના નં.: 5)",
+    "exp": "ઉપનિષદમાં 'સા વિદ્યા યા વિમુક્તયે', કૌટિલ્યે શિષ્ટાચાર તથા દેશ-કુદરત પ્રત્યેના પ્રેમની તાલીમ, ગાંધીજીએ શરીર-મન-આત્માના ઉત્તમાંશોનું આવિષ્કારીકરણ અને વિનોબાજીએ શિક્ષણને સત્યનું ઓજાર તથા નિત્ય નવું સર્જન ગણાવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: \"કેળવણી એટલે સત્યની સનાતન ખોજ, સત્યની અભિવ્યક્તિ અને સત્યની સ્વીકૃતિ.\" — આ વ્યાખ્યા કયા ભારતીય ચિંતકે આપી છે?",
+    "options": [
+      "શ્રી અરવિંદ ઘોષ",
+      "સ્વામી વિવેકાનંદ",
+      "રવીન્દ્રનાથ ટાગોર",
+      "વિનોબા ભાવે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ભારતીય ચિંતન પ્રમાણે કેળવણી (પાના નં.: 6)",
+    "exp": "રવીન્દ્રનાથ ટાગોરે કેળવણીને સત્યની સનાતન ખોજ, સત્યની અભિવ્યક્તિ અને સત્યની સ્વીકૃતિ તરીકે વ્યાખ્યાયિત કરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: પાશ્ચાત્ય તત્ત્વચિંતકો અને તેમની કેળવણીની વ્યાખ્યાઓનાં સાચાં જોડકાં જોડો:\n1. પ્લેટો — (a) કુદરત દ્વારા મળતી કેળવણી જ સાચી કેળવણી છે.\n2. પેસ્ટોલોજી — (b) પ્રત્યેક માનવના માનસમાં અદૃશ્ય રહેલા વિદ્યમાન વિશ્વના સર્વમાન્ય વિચારોનું પ્રગટીકરણ એટલે શિક્ષણ.\n3. સૉક્રેટિસ — (c) યોગ્ય આદતોના નિર્માણ દ્વારા બાળકોમાં સદ્ગુણોના વિકાસની તાલીમ એટલે કેળવણી.\n4. રૂસો — (d) કેળવણી મનુષ્યની જન્મજાત શક્તિઓનો નૈસર્ગિક, સુસંવાદી અને પ્રગતિશીલ વિકાસ છે.",
+    "options": [
+      "1-c, 2-d, 3-b, 4-a",
+      "1-d, 2-c, 3-b, 4-a",
+      "1-c, 2-b, 3-d, 4-a",
+      "1-b, 2-d, 3-c, 4-a"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: પાશ્ચાત્ય તત્ત્વચિંતકોના મતે કેળવણી (પાના નં.: 6)",
+    "exp": "પ્લેટોએ યોગ્ય આદતો દ્વારા સદ્ગુણોના વિકાસની, પેસ્ટોલોજીએ જન્મજાત શક્તિઓના નૈસર્ગિક-સુસંવાદી-પ્રગતિશીલ વિકાસની, સૉક્રેટિસે સર્વમાન્ય વિચારોના પ્રગટીકરણની અને રૂસોએ કુદરત દ્વારા મળતી કેળવણીની વાત કરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: \"તરવાના નિયમો વાંચવાથી તરતા આવડતું નથી કે રેસિપિનું પુસ્તક વાંચવાથી સારા રસોઈયા બની શકાતું નથી.\" — આ ઉદાહરણ શિક્ષણના કયા મર્યાદિત અર્થને નકારવા માટે આપવામાં આવ્યું છે?",
+    "options": [
+      "કેળવણી એટલે અક્ષરજ્ઞાન",
+      "કેળવણી એટલે માહિતીનું વિતરણ",
+      "કેળવણી એટલે તાલીમ",
+      "કેળવણી એટલે માત્ર આજીવિકાનું સાધન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શિક્ષણનો મર્યાદિત અર્થ (પાના નં.: 6)",
+    "exp": "માત્ર માહિતીનું જ્ઞાન કે વિતરણ એ સાચું શિક્ષણ નથી; તે સમજાવવા માટે તરવાના નિયમો અને રેસિપિના પુસ્તકનું ઉદાહરણ આપવામાં આવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: શિક્ષણના મર્યાદિત અર્થમાં '3R's' (ભણતર) માં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "વાચન (Reading)",
+      "લેખન (Writing)",
+      "તર્કશક્તિ (Reasoning)",
+      "ગણન (Arithmetic)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શિક્ષણનો મર્યાદિત અર્થ (પાના નં.: 7)",
+    "exp": "3R's એટલે Reading (વાચન), Writing (લેખન) અને Arithmetic (ગણન). તેમાં Reasoning (તર્કશક્તિ) નો સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 10: કેળવણીના વ્યાપક અર્થ અને સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "કેળવણી એ ઔપચારિક અને અનૌપચારિક શિક્ષણનો સુભગ સંયોગ છે.",
+      "કેળવણીમાં વિદ્યાર્થી, શિક્ષક અને અભ્યાસક્રમ એમ ત્રણ ધ્રુવ સક્રિય હોઈ તે ત્રિધ્રુવી પ્રક્રિયા છે.",
+      "કેળવણી એ વ્યક્તિના જન્મથી મૃત્યુપર્યંત ચાલતી આજીવન પ્રક્રિયા છે.",
+      "કેળવણી એ અનુકૂલન, શોધખોળ અને નિત્ય નવું સર્જન કરવાની પ્રક્રિયા છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: કેળવણીનું સ્વરૂપ (પાના નં.: 7-8)",
+    "exp": "મૉડ્યૂલમાં દર્શાવેલ આકૃતિ અને વિગત મુજબ કેળવણીની ત્રિધ્રુવી પ્રક્રિયાના ત્રણ ધ્રુવ 'શિક્ષક, વિદ્યાર્થી અને સમાજ' છે (અભ્યાસક્રમ નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 11: નીચેની ત્રણ પરિસ્થિતિઓમાંથી કઈ પરિસ્થિતિ 'સાચી કેળવણી' નું ઉત્તમ ઉદાહરણ દર્શાવે છે?\n1. વ્યક્તિ ડૉક્ટર બનીને મનુષ્યના અંગનો વ્યવસાય કરે છે.\n2. ગ્રૅજ્યુએટ થઈને કાપડનો વેપાર નીતિથી કરે છે.\n3. અક્ષરજ્ઞાન નથી પણ વિચાર અને વર્તનથી સભ્ય છે તથા નીતિપૂર્વકનું જીવન જીવે છે.",
+    "options": [
+      "માત્ર 2",
+      "માત્ર 3",
+      "2 અને 3 બંને",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: કેળવણીનું સ્વરૂપ (પાના નં.: 8)",
+    "exp": "અક્ષરજ્ઞાન હોય કે ન હોય, પરંતુ જે વ્યક્તિ નીતિપૂર્વકનું જીવન જીવે છે અને સભ્ય વર્તન કરે છે (પરિસ્થિતિ 2 અને 3), તે સાચી કેળવણી પામેલી ગણાય. અમાનવીય વ્યવહાર (અંગનો વ્યવસાય) કરનાર ડૉક્ટર સાચી કેળવણી પામેલ નથી."
+  },
+  {
+    "q": "પ્રશ્ન 12: \"પ્રયોજનેન વિના મન્દોઽપિ ન પ્રવર્તતે\" આ સંસ્કૃત ઉક્તિ કેળવણીના કયા પાસાને સ્પષ્ટ કરે છે?",
+    "options": [
+      "કેળવણી એ આજીવન પ્રક્રિયા છે.",
+      "કેળવણી એ હેતુલક્ષી પ્રક્રિયા છે.",
+      "કેળવણી એ ત્રિધ્રુવી પ્રક્રિયા છે.",
+      "કેળવણી એ અનૌપચારિક પ્રક્રિયા છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: કેળવણીનાં ધ્યેયો (પાના નં.: 8)",
+    "exp": "આ ઉક્તિનો અર્થ છે કે \"પ્રયોજન (હેતુ) વિના મૂર્ખ વ્યક્તિ પણ કાર્ય કરતો નથી.\" આ રીતે કેળવણી પણ એક હેતુલક્ષી પ્રક્રિયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: કેળવણીના ધ્યેયોના સંદર્ભમાં નીચેનામાંથી કઈ જોડી અસંગત (ખોટી) છે?",
+    "options": [
+      "જ્ઞાનપ્રાપ્તિ (સ્વ-ઓળખ) — સચિન તેંડુલકરનું ઉદાહરણ",
+      "વ્યાવસાયિક સજ્જતા — ડૉ. સર્વપલ્લી રાધાકૃષ્ણનનું ઉદાહરણ",
+      "ચારિત્ર્ય નિર્માણ — નરસિંહ મહેતાના 'વૈષ્ણવજન'નું ઉદાહરણ",
+      "લોકશાહી નાગરિકત્વ — હર્બાર્ટનું 'નીતિમત્તા' અંગેનું વિધાન"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: કેળવણીનાં ધ્યેયો (પાના નં.: 9-10)",
+    "exp": "ગ્રીસ કેળવણીકાર હર્બાર્ટે \"કેળવણીનું સમગ્ર કાર્ય એક શબ્દમાં કહેવું હોય તો તે છે નીતિમત્તા (Morality)\" એવું વિધાન 'ચારિત્ર્ય નિર્માણ'ના હેતુ માટે આપ્યું છે, લોકશાહી નાગરિકત્વ માટે નહીં. લોકશાહી માટે અબ્રાહમ લિંકનનું વિધાન અપાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: \"તે માણસને ખરી કેળવણી મળી છે જેનું શરીર એવું કેળવાયેલું છે કે જે તેના અંકુશમાં રહી શકે, જેનું મન કુદરતના કાયદાઓથી ભરેલું છે ને ઇન્દ્રિયો તેને વફાદાર છે, જેની અંત:વૃત્તિ શુદ્ધ છે અને જે નીચ આચરણને ધિક્કારે છે.\" — ઓગણીસમી સદીમાં આ વિધાન કોણે આપ્યું હતું?",
+    "options": [
+      "હર્બાર્ટ",
+      "પ્લેટો",
+      "ઓડોલ્સ હકસલ (Aldous Huxley)",
+      "બર્ટ્રાન્ડ રસેલ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: કેળવણીનાં ધ્યેયો (પાના નં.: 9-10)",
+    "exp": "ચારિત્ર્ય નિર્માણના હેતુ અંતર્ગત ઓગણીસમી સદીમાં થયેલા ઓડોલ્સ હકસલે ખરી કેળવણી અંગે આ વિધાન આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 15: શિક્ષણશાસ્ત્રી શ્રી રસેલ દ્વારા જણાવેલ કેળવણીના ચાર લક્ષ્યો (બળ, ધૈર્ય, સંવેદનશીલતા અને બુદ્ધિ) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: શ્રી રસેલ 'બળ' શબ્દને શારીરિક લક્ષણ તરીકે મૂકે છે, જે માનસિક સ્વાસ્થ્યનું પણ મહત્ત્વનું પરિબળ છે.\nવિધાન 2: અહીં 'બુદ્ધિ' શબ્દનો અર્થ માત્ર માહિતીનો સંગ્રહ નહીં, પરંતુ જ્ઞાન પ્રાપ્ત કરવાની શક્તિ કે ઉત્કંઠા (કૂતુહલવૃત્તિ) જગાડવાનો છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: કેળવણીનાં ધ્યેયો (પાના નં.: 10)",
+    "exp": "શ્રી રસેલ બળને શારીરિક લક્ષણ અને માનસિક સ્વાસ્થ્યના પરિબળ તરીકે તથા બુદ્ધિને 'જ્ઞાન' કરતાં પણ જ્ઞાન પ્રાપ્ત કરવાની શક્તિ કે કૂતુહલવૃત્તિ જગાડવાના અર્થમાં મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: વર્ષ 1996માં 21મી સદી માટે પ્રકાશિત થયેલા યુનેસ્કો (UNESCO) ના અહેવાલ (અધ્યક્ષ: જૅક્સ ડેલોર્સ) મુજબ કેળવણીના મુખ્ય ચાર સ્તંભોમાં નીચેનામાંથી કોનો સમાવેશ થતો નથી?",
+    "options": [
+      "અધ્યયન કરતાં શીખવું",
+      "કામ કરતાં શીખવું",
+      "સ્પર્ધા કરતાં શીખવું",
+      "સહજીવન જીવતાં શીખવું"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: કેળવણીનાં ધ્યેયો (પાના નં.: 11)",
+    "exp": "જૅક્સ ડેલોર્સના અહેવાલ મુજબ કેળવણીના ચાર સ્તંભો છે: (1) અધ્યયન કરતાં શીખવું, (2) કામ કરતાં શીખવું, (3) સહજીવન જીવતાં શીખવું અને (4) માનવ બનતાં શીખવું. તેમાં 'સ્પર્ધા કરતાં શીખવું' નો સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 17: પ્રકૃતિ અને મનુષ્ય વચ્ચે \"લોહીની સગાઈ\" (Kindred ship) હોવાનું સ્પષ્ટીકરણ કયા ભારતીય ચિંતકે આપ્યું છે?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "રવીન્દ્રનાથ ટાગોર",
+      "વિનોબા ભાવે",
+      "ગિજુભાઈ બધેકા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: પ્રકૃતિની તપાસ અને શિક્ષણની માનવસમાજમાં જરૂરિયાત (પાના નં.: 11)",
+    "exp": "ગુરુદેવ રવીન્દ્રનાથ ટાગોર પ્રકૃતિ પ્રત્યેના આકર્ષણનું સ્પષ્ટીકરણ આપતાં જણાવે છે કે પ્રકૃતિ અને મનુષ્ય વચ્ચે \"લોહીની સગાઈ\" (kindred ship) છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: \"પોતાના પૂર્ણત્વ માટે માણસે શારીરિક શક્તિમાં જંગલી અને માનસિક શક્તિઓમાં સભ્ય બનવું જોઈએ.\" — પ્રકૃતિ દ્વારા શિક્ષણના સંદર્ભમાં આ વિધાન કોનું છે?",
+    "options": [
+      "રૂસો",
+      "સ્વામી વિવેકાનંદ",
+      "રવીન્દ્રનાથ ટાગોર",
+      "શ્રી અરવિંદ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: પ્રકૃતિ દ્વારા શિક્ષણ (પાના નં.: 11)",
+    "exp": "ટાગોર કહે છે કે પોતાના પૂર્ણત્વ માટે માણસે શારીરિક શક્તિમાં જંગલી અને માનસિક શક્તિઓમાં સભ્ય બનવું જોઈએ, તથા મનુષ્યસમાજ સાથે મનુષ્ય અને પ્રકૃતિ સાથે પ્રાકૃતિક બનવાની ક્ષમતા વિકસાવવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 19: વિનોબા ભાવેએ 'પ્રાકૃતિક-નૈસર્ગિક કે સાહજિક શિક્ષણ' (અભાનપણે થતું અધ્યયન) સમજાવવા માટે કયું પૌરાણિક ઉદાહરણ આપ્યું છે?",
+    "options": [
+      "અર્જુન દ્વારા દ્રોણાચાર્ય પાસેથી મેળવેલ ધનુર્વિદ્યાનું શિક્ષણ",
+      "વિશ્વામિત્રના યજ્ઞના રક્ષણ નિમિત્તે રામ-લક્ષ્મણને સહજ રીતે મળેલ શિક્ષણ",
+      "એકલવ્ય દ્વારા સ્વયં પ્રેરણાથી મેળવેલ શિક્ષણ",
+      "સાંદીપનિ ઋષિના આશ્રમમાં શ્રીકૃષ્ણ અને સુદામાએ મેળવેલ શિક્ષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: પ્રકૃતિ દ્વારા શિક્ષણ (પાના નં.: 11-12)",
+    "exp": "વિનોબાજીએ વિશ્વામિત્રના યજ્ઞના રક્ષણ નિમિત્તે દશરથ પાસેથી રામ-લક્ષ્મણને લઈ જવા અને તે દરમિયાન સવારે ઊઠવાથી માંડીને રાવણને પરાજિત કરવા સુધીનું શિક્ષણ સાહજિક રીતે અપાઈ જવાનું ઉદાહરણ આપ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: માનવસમાજમાં શિક્ષણની જરૂરિયાત અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શિક્ષણ એ સંસ્કૃતિને જાળવી રાખી નવી પેઢીને વારસો સોંપે છે અને નવા સાંસ્કૃતિક મૂલ્યોનો ઉમેરો કરે છે.",
+      "શિક્ષણના સામૂહિક માધ્યમો (રેડિયો, ટેલિવિઝન, સિનેમા) દ્વારા પ્રજાના વલણો અને મૂલ્યોનું ઘડતર થાય છે.",
+      "શિક્ષણ માત્ર આર્થિક પ્રગતિ પર જ ધ્યાન કેન્દ્રિત કરે છે, વૈચારિક ક્રાંતિ સાથે તેનો કોઈ સીધો સંબંધ નથી.",
+      "શિક્ષણ દ્વારા વિદ્યાર્થીઓમાં વિવેચનાત્મક શક્તિ, સારાસાર વિચારશક્તિ અને નિર્ણયશક્તિનો પ્રાદુર્ભાવ થાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શિક્ષણની માનવસમાજમાં જરૂરિયાત (પાના નં.: 12)",
+    "exp": "શિક્ષણ એ વૈચારિક ક્રાંતિનું મહત્ત્વનું સાધન છે, જેનાથી બાળકોમાં વિચારશક્તિનો વિકાસ થતાં સામાજિક નવનિર્માણમાં તેઓ પોતાની શક્તિઓનો સદુપયોગ કરે છે. તેથી વિધાન (C) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: ઔપચારિક શિક્ષણ અને કેળવણી વચ્ચેના તફાવત અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: ઔપચારિક શિક્ષણ સભાનતાપૂર્વક થતું હોવાથી તેનું ઔપચારિક પરીક્ષણ થઈ શકે છે, જ્યારે કેળવણી અનાયાસ પ્રક્રિયા હોવાથી તેનું કોઈ ઔપચારિક મૂલ્યાંકન થઈ શકતું નથી.\nવિધાન 2: ઔપચારિક શિક્ષણ દીર્ઘજીવી પ્રક્રિયા છે, જ્યારે કેળવણી પ્રત્યક્ષ પણ અલ્પજીવી પ્રક્રિયા છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: કેળવણી અને ઔપચારિક શિક્ષણ (પાના નં.: 13)",
+    "exp": "ઔપચારિક શિક્ષણ પ્રત્યક્ષ પણ અલ્પજીવી છે (માહિતી, કાવ્યો લાંબા સમય સુધી યાદ રહેતાં નથી), જ્યારે કેળવણીથી પ્રાપ્ત કરેલું જ્ઞાન વર્તનમાં આવી જતાં દીર્ઘજીવી બને છે. આથી વિધાન 2 ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: \"દીવાની જ્યોતથી દાઝેલું બાળક ફરી ક્યારેય દીવાની જ્યોતને સ્પર્શતું નથી.\" — આ ઉદાહરણ કેળવણીની કઈ લાક્ષણિકતા દર્શાવે છે?",
+    "options": [
+      "કેળવણીનું બંધારણ નિશ્ચિત હોય છે.",
+      "કેળવણીથી પ્રાપ્ત કરેલું જ્ઞાન વર્તનમાં આવી જતાં દીર્ઘજીવી બને છે.",
+      "કેળવણી સભાનતાપૂર્વકની પ્રક્રિયા છે.",
+      "કેળવણી મર્યાદિત સમયમાં પ્રાપ્ત થાય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: કેળવણી અને ઔપચારિક શિક્ષણ (પાના નં.: 13)",
+    "exp": "કેળવણી દ્વારા મળેલો અનુભવ વ્યક્તિના વર્તનમાં કાયમી પરિવર્તન લાવે છે અને દીર્ઘજીવી બને છે, તે સમજાવવા દીવાની જ્યોતનું ઉદાહરણ અપાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: માનવસમાજની વિવિધ શૈક્ષણિક પ્રક્રિયાઓ પૈકી, \"સાચું બોલાય ખોટું ન બોલાય, આપણાથી મોટાને તમે કહેવાય, પુસ્તકને પગ ન અડાડાય\" — આ પ્રકારનું શિક્ષણ બાળકને કઈ પ્રક્રિયા દ્વારા મળે છે?",
+    "options": [
+      "અનુકરણ અને અનુસરણ",
+      "મતારોપણ",
+      "સામાજિકીકરણ",
+      "શારીરિક નિયંત્રણો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: માનવસમાજની વિવિધ શૈક્ષણિક પ્રક્રિયાનો અભ્યાસ (પાના નં.: 14)",
+    "exp": "માતા, કુટુંબ કે સમાજ દ્વારા સીધા વિધાનો/સૂચનો વડે મૂલ્યો અને નિયમોનું સિંચન કરવાની પ્રક્રિયાને 'મતારોપણ' કહેવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: માનવસમાજની શૈક્ષણિક પ્રક્રિયાઓ અને તેના ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\n1. અનુકરણ અને અનુસરણ — (a) બધાની વચ્ચે અચાનક ચડ્ડી ભીની થઈ જતાં ક્ષોભ અનુભવી નિયંત્રણ શીખવું\n2. અનુભવ અને અવલોકન — (b) માતૃભાષા બોલતાં અને સમજતાં શીખવું\n3. શારીરિક નિયંત્રણો — (c) પિતાજી જે રીતે ફોન પર વાત કરે તેવો અભિનય કરવો તથા ગાય-કૂતરાને જુદી રીતે બોલાવવાં\n4. અનુભવનું પુનર્ગઠન — (d) વાર્તામાં મહેનતની વાત સાંભળી, આસપાસ માળી કે લારી ખેંચનારને મહેનત કરતા જોઈ મહેનતના મૂલ્યની પુષ્ટિ થવી",
+    "options": [
+      "1-b, 2-c, 3-a, 4-d",
+      "1-c, 2-b, 3-a, 4-d",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-a, 2-c, 3-b, 4-d"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: માનવસમાજની વિવિધ શૈક્ષણિક પ્રક્રિયાનો અભ્યાસ (પાના નં.: 14-15)",
+    "exp": "અનુકરણનું શ્રેષ્ઠ ઉદાહરણ ભાષા છે; અવલોકન દ્વારા પિતાના ફોનનો અભિનય અને પ્રાણીઓને બોલાવવાની રીત શીખાય છે; શારીરિક આવેગો પર નિયંત્રણ ક્ષોભ/શરમના અનુભવથી આવે છે; અને વિવિધ અનુભવોની શૃંખલાથી મૂલ્યની પુષ્ટિ થવી તે અનુભવનું પુનર્ગઠન છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: એક બાળક પોતાની રસ-રુચિ પ્રમાણેના મિત્રવર્તુળમાં ભળીને મૈત્રી, સહકાર અને અધિકાર જેવા ગુણો શીખે છે. (\"સંગ તેવો રંગ\" કહેવત મુજબ). આ શૈક્ષણિક પ્રક્રિયાને શું કહેવામાં આવે છે?",
+    "options": [
+      "મતારોપણ",
+      "સામાજિકીકરણ",
+      "અનુભવનું પુનર્ગઠન",
+      "અનુસરણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: માનવસમાજની વિવિધ શૈક્ષણિક પ્રક્રિયાનો અભ્યાસ (પાના નં.: 14)",
+    "exp": "બાળક જેમ જેમ મોટું થાય તેમ જુદા જુદા સમાજ અને મિત્રવર્તુળમાં ભળીને મૈત્રી, સહકાર, અધિકાર જેવા ગુણો શીખે છે, તેને 'સામાજિકીકરણ' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: જીન જેકવીસ રૂસોના જીવન અને શિક્ષણદર્શનના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: રૂસોનો જન્મ ઈ.સ. 1712ની 24 જૂને જિનિવા શહેરમાં સરોવરને કિનારે થયો હતો.\nવિધાન 2: ઈ.સ. 1723થી 1725ના ગાળામાં તેમણે જિનિવાની બહાર 'બોસી' નામના ગામડાની પ્રકૃતિની ગોદમાં આવેલી શાળામાં ઔપચારિક શિક્ષણ લીધું હતું.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: રૂસોનું શિક્ષણદર્શન (પાના નં.: 15)",
+    "exp": "રૂસોનો જન્મ 24 જૂન, 1712ના રોજ જિનિવામાં થયો હતો અને 1723થી 1725 દરમિયાન તેમણે બોસી ગામની શાળામાં બે-ત્રણ વર્ષ ઔપચારિક શિક્ષણ લીધું હતું, જ્યાંથી તેમનો પ્રકૃતિ તરફનો અનુરાગ વધ્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 27: \"જે આપણે સમજતા ન હોઈએ તેને સ્મરણમાં રાખવું જોઈએ નહિ. સમજણ વિનાનું એટલે કે સંકલ્પના વિનાનું શિક્ષણ નરી ગોખણપટ્ટી છે.\" — શબ્દાળુ કેળવણીનો વિરોધ કરતું આ વિધાન કોનું છે?",
+    "options": [
+      "જ્હૉન ડ્યૂઈ",
+      "જીન જેકવીસ રૂસો",
+      "મહાત્મા ગાંધી",
+      "સ્વામી વિવેકાનંદ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: રૂસોની કેળવણીની સંકલ્પના (પાના નં.: 16)",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના વિરોધી હતા અને સમજણ સાથેના શિક્ષણની હિમાયત કરતાં તેમણે આ વિધાન આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 28: રૂસોના મતે શિક્ષણનો સૌથી મોટો હેતુ બાળકને સૈનિક, પાદરી કે મેજિસ્ટ્રેટ ન બનાવતાં સૌથી પ્રથમ શું બનાવવાનો છે?",
+    "options": [
+      "આદર્શ નાગરિક",
+      "સામાજિક મનુષ્ય",
+      "સહજ કે પ્રાકૃતિક મનુષ્ય",
+      "આધ્યાત્મિક માનવ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: રૂસો - કેળવણીના ઉદ્દેશો (પાના નં.: 16)",
+    "exp": "રૂસોના મતે શિક્ષણનો સૌથી મોટો હેતુ બાળકને સૈનિક, પાદરી કે મેજિસ્ટ્રેટ કે સામાજિક મનુષ્ય બનાવવા કરતાં સૌથી પ્રથમ 'સહજ કે પ્રાકૃતિક મનુષ્ય' બનાવવાનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: રૂસોએ દર્શાવેલા કેળવણીના ઉદ્દેશો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ઇન્દ્રિયો એ જ્ઞાનના પ્રવેશદ્વાર છે, તેના વિકાસથી તર્કશક્તિ અને બૌદ્ધિક વિકાસ શક્ય બને છે.",
+      "નિર્બળ શરીર નિર્બળ મન પેદા કરે છે, તેથી શારીરિક વિકાસ પર ખૂબ ભાર મૂકવો જોઈએ.",
+      "બાલ્યાવસ્થાથી જ બાળકને ભૌતિક વિજ્ઞાન, ગણિત, ઇતિહાસ અને ભૂગોળનું ઔપચારિક શિક્ષણ આપવું જોઈએ.",
+      "બાળપણનું અને બાળકનું અધ્યયન કરી બાળકને ઓળખીને બાળકેન્દ્રી શિક્ષણ આપવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: રૂસો - કેળવણીના ઉદ્દેશો (પાના નં.: 16)",
+    "exp": "રૂસોના મંતવ્ય અનુસાર 'કિશોરાવસ્થામાં' બાળકોની તર્કબુદ્ધિ વધે તેવા પાયાના વિષયો (ભૌતિક વિજ્ઞાન, ભાષાઓ, ગણિત, ઇતિહાસ, ભૂગોળ) નું ઔપચારિક શિક્ષણ આપવું જોઈએ, બાલ્યાવસ્થાથી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 30: રૂસોની દૃષ્ટિએ અભ્યાસક્રમ રચનાના સિદ્ધાંતો મુજબ, બાળકને નૈતિક કે આધ્યાત્મિક મૂલ્યોનું શિક્ષણ ક્યારે આપવું જોઈએ?",
+    "options": [
+      "બાળક બોલતું અને ચાલતું થાય ત્યારથી જ",
+      "બાળક શાળામાં પ્રવેશ મેળવે ત્યારથી જ",
+      "બાળક પરિપક્વ થાય અને તેનો અમુક માનસિક કે બૌદ્ધિક વિકાસ થાય ત્યાર પછી જ",
+      "બાળકને નૈતિક કે આધ્યાત્મિક મૂલ્યોનું શિક્ષણ ક્યારેય આપવું જ ન જોઈએ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: રૂસોની દ્રષ્ટિએ અભ્યાસક્રમ (પાના નં.: 17)",
+    "exp": "રૂસોના અભ્યાસક્રમ રચનાના સિદ્ધાંત મુજબ બાળક પરિપક્વ થાય — તેનો અમુક માનસિક કે બૌદ્ધિક વિકાસ થાય ત્યાર પછી જ તેને નૈતિક કે આધ્યાત્મિક મૂલ્યોનું શિક્ષણ આપવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 31: \"વાચન એ બાલ્યાવસ્થાનો અભિશાપ છે. વાચનનો અતિરેક મનુષ્યને અહંકારી અને મૂર્ખ બનાવે છે.\" — રૂસોનું આ કથન તેમની કઈ શિક્ષણ પદ્ધતિના સંદર્ભમાં છે?",
+    "options": [
+      "હ્યુરિસ્ટિક પદ્ધતિ",
+      "ક્રિયા દ્વારા શિક્ષણ (Learning by doing)",
+      "વ્યક્તિગત શિક્ષણ",
+      "સ્વયં શિક્ષણ (Learning how to learn)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: રૂસો - શિક્ષણ પદ્ધતિઓ (પાના નં.: 17)",
+    "exp": "'ક્રિયા દ્વારા શિક્ષણ' પદ્ધતિમાં રૂસો જણાવે છે કે જ્યાં સુધી બની શકે ત્યાં સુધી ક્રિયા દ્વારા શિક્ષણ આપો અને તે સંભવિત ન હોય ત્યારે જ શબ્દોનો ઉપયોગ કરો; વાચન એ બાલ્યાવસ્થાનો અભિશાપ છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: રૂસોની શિક્ષણ પદ્ધતિઓ અને તેની મુખ્ય વિશેષતાઓનાં યોગ્ય જોડકાં જોડો:\n1. હ્યુરિસ્ટિક પદ્ધતિ — (a) શિક્ષકનું કામ શીખવવાનું નહીં, પણ દોરવાનું અને સિદ્ધાંતો શોધતાં શીખવવાનું છે.\n2. સ્વયં શિક્ષણ — (b) બાળકોને નિયમોના મૂળ શોધકની સ્થિતિમાં મૂકી સંશોધનનો રોમાંચ અનુભવવો.\n3. આચરણ દ્વારા શિક્ષણ — (c) બાળકોના વૈયક્તિક તફાવતો અને સ્વતંત્ર વ્યક્તિત્વનો સ્વીકાર.\n4. વ્યક્તિગત શિક્ષણ — (d) સીધા નૈતિક શિક્ષણનો વિરોધ અને 'Example is better than precept'.",
+    "options": [
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-d, 2-a, 3-b, 4-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: રૂસો - શિક્ષણ પદ્ધતિઓ (પાના નં.: 18)",
+    "exp": "હ્યુરિસ્ટિક પદ્ધતિમાં બાળક મૂળ શોધકની સ્થિતિમાં હોય છે; સ્વયં શિક્ષણમાં શિક્ષક દોરવાનું કાર્ય કરે છે; આચરણ દ્વારા શિક્ષણમાં 'Example is better than precept' નો સિદ્ધાંત છે; અને વ્યક્તિગત શિક્ષણમાં વૈયક્તિક તફાવતોને ધ્યાનમાં લેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: ગાંધીજીના જીવનદર્શનના અગત્યના અંશો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ગાંધીજીના જીવનના ત્રણ કેન્દ્રબિંદુઓ સત્ય, અહિંસા તથા પ્રેમ અને કરુણા હતા.",
+      "'અહિંસા પરમો ધર્મ:' એ તેમના જીવનનું પરમ સૂત્ર હતું.",
+      "સત્યાગ્રહનો સ્પષ્ટ અર્થ વિરોધીને કષ્ટ આપીને પોતાની વાત મનાવવાનો છે.",
+      "'જનસેવા એ જ પ્રભુસેવા' એ તેમના જીવનનો મહામંત્ર હતો."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગાંધીજીનું જીવન દર્શન (પાના નં.: 19-20)",
+    "exp": "ગાંધીજીના મતે સત્યાગ્રહનો સ્પષ્ટ અર્થ છે કે વિરોધીને કષ્ટ આપીને નહિ, પરંતુ 'સ્વયં કષ્ટ વેઠીને' વિરોધીનું માનસ પરિવર્તન કરવું. તેથી વિધાન (C) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: ગાંધીજીના શિક્ષણદર્શનના આધારભૂત સિદ્ધાંતો મુજબ, સંપૂર્ણ રાષ્ટ્રમાં કેટલા વર્ષ સુધીનું શિક્ષણ મફત, સાર્વત્રિક અને ફરજિયાત હોવું જોઈએ?",
+    "options": [
+      "5 થી 12 વર્ષ",
+      "6 થી 12 વર્ષ",
+      "7 થી 14 વર્ષ",
+      "8 થી 16 વર્ષ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગાંધીજી - શિક્ષણદર્શનના આધારભૂત સિદ્ધાંતો (પાના નં.: 20)",
+    "exp": "ગાંધીજીના શિક્ષણદર્શનના આધારભૂત સિદ્ધાંતો (મુદ્દા નં. 8) માં સ્પષ્ટ ઉલ્લેખ છે કે સંપૂર્ણ રાષ્ટ્રમાં '7 થી 14 વર્ષ' સુધીનું શિક્ષણ મફત, સાર્વત્રિક અને ફરજિયાત હોવું જોઈએ. (નોંધ: બુનિયાદી શિક્ષણની લાક્ષણિકતાઓમાં 6 થી 14 વર્ષનો ઉલ્લેખ છે)."
+  },
+  {
+    "q": "પ્રશ્ન 35: ગાંધીજીની કેળવણીની સંકલ્પના અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: કેળવણી એ લોકશાહીનો પ્રાણવાયુ છે.\nવિધાન 2: અક્ષરજ્ઞાન એ કેળવણીનો અંત કે પ્રારંભબિંદુ નથી, પરંતુ જ્ઞાનપ્રાપ્તિનું સાધન છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગાંધીજી - કેળવણીનો અર્થ (પાના નં.: 21)",
+    "exp": "ગાંધીજી દૃઢપણે માનતા હતા કે કેળવણી એ લોકશાહીનો પ્રાણવાયુ છે અને અક્ષરજ્ઞાન કે સાક્ષરતા એ કેળવણીનો અંત કે પ્રારંભબિંદુ નથી, માત્ર જ્ઞાનપ્રાપ્તિનું સાધન/માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: ગાંધીજીએ દર્શાવેલા સ્વાવલંબનના ત્રણ પ્રકારો પૈકી, \"જે કેળવણી કામથી કરમાય અને શ્રમથી શરમાય એ સાચી કેળવણી નથી\" — આ વિચાર કયા પ્રકારના સ્વાવલંબન સાથે જોડાયેલો છે?",
+    "options": [
+      "આર્થિક સ્વાવલંબન",
+      "સામાજિક સ્વાવલંબન",
+      "માનસિક સ્વાવલંબન",
+      "આધ્યાત્મિક સ્વાવલંબન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજી - કેળવણીના હેતુઓ (પાના નં.: 21-22)",
+    "exp": "ગાંધીજીએ સ્વાવલંબનના ત્રણ પ્રકારો (આર્થિક, સામાજિક અને માનસિક) દર્શાવ્યા છે, જેમાં શ્રમનું ગૌરવ અને શ્રમિકોના સન્માનની વાત 'સામાજિક સ્વાવલંબન' અંતર્ગત કરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: ગાંધીજીના મતે કેળવણી દ્વારા વ્યક્તિમાં સ્વતંત્ર વિચારશક્તિ, કલ્પનાશક્તિ અને નિર્ણયશક્તિનો વિકાસ થાય તથા તે પોતાના વિચારો અંતરાત્માના અવાજ અનુસાર નિર્ભીક રીતે વ્યક્ત કરી શકે — આને શું કહેવામાં આવે છે?",
+    "options": [
+      "સામાજિક સ્વાવલંબન",
+      "માનસિક સ્વાવલંબન",
+      "સાંસ્કૃતિક વિકાસ",
+      "આત્મસાક્ષાત્કાર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજી - કેળવણીના હેતુઓ (પાના નં.: 22)",
+    "exp": "વ્યક્તિમાં વૈચારિક સ્વાતંત્ર્ય, સ્વતંત્ર વિચારશક્તિ, કલ્પનાશક્તિ અને નિર્ણયશક્તિનો સમુચિત વિકાસ થઈ નિર્ભીક અભિવ્યક્તિ કરી શકવાની ક્ષમતાને ગાંધીજી 'માનસિક સ્વાવલંબન' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: ગાંધીજીએ કેળવણીના સર્વોચ્ચ ઉદ્દેશ અથવા જ્ઞાનના સર્વોચ્ચ શિખર (અંતિમ ધ્યેય) તરીકે કોને ગણાવ્યું છે?",
+    "options": [
+      "ચારિત્ર્ય નિર્માણ",
+      "આર્થિક સ્વાવલંબન",
+      "આત્મસાક્ષાત્કાર",
+      "સાંસ્કૃતિક સંરક્ષણ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગાંધીજી - કેળવણીના હેતુઓ (પાના નં.: 23)",
+    "exp": "એક આદર્શવાદી કેળવણીકાર તરીકે ગાંધીજી 'આત્મસાક્ષાત્કાર' (સ્વ-પ્રતીતિ) ને કેળવણીના સર્વોચ્ચ ઉદ્દેશ અને જ્ઞાનના સર્વોચ્ચ શિખર તરીકે ગણાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: ગાંધીજીના કેળવણીના હેતુઓ અંગે નીચેના જોડકાં યોગ્ય રીતે જોડો:\n1. ચારિત્ર્ય નિર્માણ — (a) હસ્ત, હૈયું અને મસ્તિષ્કનો વિકાસ\n2. સર્વાંગીણ વિકાસ — (b) જ્ઞાનપ્રાપ્તિનું અંતિમ ચરણ\n3. જીવનમાં ઉચ્ચતમ મૂલ્યોનો વિકાસ — (c) 'સા વિદ્યા યા વિમુક્તયે' (દાસત્વમાંથી મુક્તિ)\n4. મુક્તિ માટે કેળવણી — (d) મૂલ્યવિહીન કેળવણી વંધ્ય છે",
+    "options": [
+      "1-b, 2-a, 3-d, 4-c",
+      "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-d, 3-a, 4-c",
+      "1-c, 2-a, 3-d, 4-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: ગાંધીજી - કેળવણીના હેતુઓ (પાના નં.: 22-23)",
+    "exp": "ગાંધીજીના મતે ચારિત્ર્ય ઘડતર જ્ઞાનપ્રાપ્તિનું અંતિમ ચરણ છે; સર્વાંગીણ વિકાસમાં હસ્ત-હૈયું-મસ્તિષ્કનો વિકાસ સમાવિષ્ટ છે; મૂલ્યવિહીન કેળવણી વંધ્ય છે; અને સાચી કેળવણી સર્વ પ્રકારના દાસત્વમાંથી મુક્તિ અપાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: ગાંધીજીના બુનિયાદી શિક્ષણના અભ્યાસક્રમની વિશિષ્ટતાઓ અંગે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "પાંચમા ધોરણ સુધી છોકરા-છોકરીઓ માટે સહશિક્ષણ અને સમાન અભ્યાસક્રમ.",
+      "છઠ્ઠા ધોરણ પછી છોકરીઓ માટે ઉદ્યોગને બદલે ગૃહવિજ્ઞાન.",
+      "હિન્દીનું રાષ્ટ્રભાષા તરીકે ફરજિયાત શિક્ષણ અને દેવનાગરી લિપિનો ઉપયોગ.",
+      "નૈતિક શિક્ષણને બદલે ફરજિયાત ધાર્મિક શિક્ષણ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: ગાંધીજી - અભ્યાસક્રમની વિશિષ્ટતાઓ (પાના નં.: 24)",
+    "exp": "ગાંધીજીના બુનિયાદી શિક્ષણના અભ્યાસક્રમમાં 'ધાર્મિક શિક્ષણને બદલે નૈતિક શિક્ષણ' ની વિશિષ્ટતા રાખવામાં આવી છે, તેથી વિધાન (D) ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: \"Stress should be laid on the principles of cooperative activity, planning, accuracy, initiative and individual responsibility in learning.\" — ગાંધીજીની શિક્ષણપદ્ધતિઓ વિશે આ નોંધ કઈ સમિતિએ કરી હતી?",
+    "options": [
+      "કોઠારી કમિશન",
+      "ડૉ. ઝાકીર હુસેન સમિતિ",
+      "રાધાકૃષ્ણન પંચ",
+      "મુદલિયાર પંચ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજી - અધ્યાપન પદ્ધતિઓ (પાના નં.: 24)",
+    "exp": "ડૉ. ઝાકીર હુસેન સમિતિએ ગાંધીજીની શિક્ષણપદ્ધતિઓમાં સહકારી પ્રવૃત્તિ, આયોજન, ચોક્કસાઈ, પહેલવૃત્તિ અને વૈયક્તિક જવાબદારીના સિદ્ધાંતો પર ભાર મૂક્યાની નોંધ કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 42: ગાંધીજીએ દર્શાવેલી અધ્યાપન પદ્ધતિઓ મુજબ ભાષા અને કલા શિક્ષણનો યોગ્ય ક્રમ કયો છે?",
+    "options": [
+      "વાચન શીખવતાં પહેલાં લેખન અને ચિત્રકળા શીખવતાં પહેલાં વર્ણમાળા",
+      "લેખન શીખવતાં પહેલાં વાચન અને વર્ણમાળા શીખવતાં પહેલાં ચિત્રકળા",
+      "વાચન અને લેખન એકસાથે અને ત્યારબાદ ચિત્રકળા",
+      "વર્ણમાળા શીખવ્યા બાદ વાચન, લેખન અને અંતે ચિત્રકળા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજી - અધ્યાપન પદ્ધતિઓ (પાના નં.: 24)",
+    "exp": "ગાંધીજીની અધ્યાપન પદ્ધતિ (મુદ્દા નં. 6) મુજબ 'લેખન શીખવતાં પહેલાં વાચન શીખવવું અને વર્ણમાળા શીખવતાં પહેલાં ચિત્રકળા શીખવવી' જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 43: ગાંધીજીની 'સમવાય (અનુબંધ) દ્વારા શિક્ષણ' પદ્ધતિના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: સમવાય એટલે ઉત્પાદક પ્રવૃત્તિના માધ્યમ દ્વારા શિક્ષણ આપવું, જે એક મનોવૈજ્ઞાનિક શિક્ષણ પ્રયુક્તિ છે.\nવિધાન 2: સમવાય સાહજિક અને સ્વયંભૂ હોવો જોઈએ; તે સાધન છે, સાધ્ય નહિ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: ગાંધીજી - અધ્યાપન પદ્ધતિઓ (પાના નં.: 25)",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે \"સમવાય, સાહજિક અને સ્વયંભૂ હોવો જોઈએ. તે સાધ્ય છે, સાધન નહિ.\" આથી વિધાન 2 ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: ગાંધીજીના બુનિયાદી શિક્ષણની લાક્ષણિકતાઓ મુજબ, પ્રાથમિક શિક્ષણમાં પ્રવેશ માટે બાળકની કઈ ઉંમર યોગ્ય ગણવામાં આવી છે?",
+    "options": [
+      "5 વર્ષ",
+      "6 વર્ષ",
+      "7 વર્ષ",
+      "8 વર્ષ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: બુનિયાદી શિક્ષણની લાક્ષણિકતાઓ (પાના નં.: 25)",
+    "exp": "બુનિયાદી શિક્ષણની લાક્ષણિકતાઓમાં 6 થી 14 વર્ષના વયજૂથ માટે મફત, ફરજિયાત અને સાર્વત્રિક પ્રાથમિક શિક્ષણની વાત કરી છે અને ગાંધીજી માનતા હતા કે '6 વર્ષની ઉંમર પ્રવેશ માટે યોગ્ય ગણાય'."
+  },
+  {
+    "q": "પ્રશ્ન 45: બુનિયાદી શિક્ષણની લાક્ષણિકતા 'નાગરિકતા' ના સંદર્ભમાં, બુનિયાદી શિક્ષણની સફળતા કયા ત્રણ પરિબળો પર આધારિત છે?",
+    "options": [
+      "શિક્ષકો, વિદ્યાર્થીઓ અને શાળા",
+      "કામદારો, નાગરિકો અને મા-બાપ",
+      "સરકાર, સમાજ અને ઉદ્યોગો",
+      "માતૃભાષા, અહિંસા અને સ્વાવલંબન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: બુનિયાદી શિક્ષણની લાક્ષણિકતાઓ (પાના નં.: 26)",
+    "exp": "બુનિયાદી શિક્ષણની સફળતા ત્રણ પરિબળો પર આધારિત છે: 'કામદારો, નાગરિકો અને મા-બાપ'."
+  },
+  {
+    "q": "પ્રશ્ન 46: ગાંધીજીના ઉદ્યોગકેન્દ્રી શિક્ષણના વિચારના ઉપલક્ષ્યમાં કોઠારી કમિશન દ્વારા અભ્યાસક્રમમાં કયો વિષય દાખલ કરવામાં આવ્યો હતો?",
+    "options": [
+      "હસ્તકલા અને ચિત્રકામ",
+      "કાર્યાનુભવ",
+      "વ્યાવસાયિક તાલીમ",
+      "કૃષિવિજ્ઞાન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજીના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 27)",
+    "exp": "ગાંધીજીના ઉદ્યોગકેન્દ્રી શિક્ષણના ઉપલક્ષ્યમાં કોઠારી કમિશન દ્વારા 'કાર્યાનુભવ' અને પછીથી 'સમાજોપયોગી ઉત્પાદક કાર્ય' જેવા વિષયને અભ્યાસક્રમમાં દાખલ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: ગાંધીજીના બુનિયાદી શિક્ષણના અભ્યાસક્રમમાં 'સામાન્ય વિજ્ઞાન' વિષય હેઠળ નીચેનામાંથી કોનો સમાવેશ કરવામાં આવ્યો છે?\n1. વનસ્પતિશાસ્ત્ર અને પ્રાણીશાસ્ત્ર\n2. આરોગ્યવિજ્ઞાન અને પ્રકૃતિ અધ્યયન\n3. ખગોળશાસ્ત્ર અથવા નક્ષત્ર વિજ્ઞાન\n4. મહાન વૈજ્ઞાનિકો અને સંશોધકોનાં જીવનકાર્યો",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 ચારેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: ગાંધીજી - અભ્યાસક્રમ (પાના નં.: 23)",
+    "exp": "ગાંધીજીના અભ્યાસક્રમમાં સામાન્ય વિજ્ઞાન હેઠળ જીવવિજ્ઞાન, વનસ્પતિશાસ્ત્ર, શરીરવિજ્ઞાન, રસાયણશાસ્ત્ર, આરોગ્યવિજ્ઞાન, પ્રકૃતિ અધ્યયન, પ્રાણીશાસ્ત્ર, ભૌતિક વિજ્ઞાન, ખગોળશાસ્ત્ર/નક્ષત્ર વિજ્ઞાન અને મહાન વૈજ્ઞાનિકો તથા સંશોધકોનાં જીવનકાર્યોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 48: એક શિક્ષક વિદ્યાર્થીઓને કાંતણ-વણાટની પ્રવૃત્તિ કરાવતાં કરાવતાં જ કપાસના પાક (ભૂગોળ), સૂતરની લંબાઈ-માપ (ગણિત) અને ખાદીના ઇતિહાસ (ઇતિહાસ) નું જ્ઞાન આપે છે. ગાંધીજીના શિક્ષણદર્શન મુજબ આ શિક્ષણ પદ્ધતિ કઈ છે?",
+    "options": [
+      "હ્યુરિસ્ટિક પદ્ધતિ",
+      "સમવાય (અનુબંધ) દ્વારા શિક્ષણ",
+      "પ્રયોગ પદ્ધતિ",
+      "સમસ્યા ઉકેલ પદ્ધતિ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગાંધીજી - અધ્યાપન પદ્ધતિઓ (પાના નં.: 25)",
+    "exp": "કુશળ શિક્ષક જ્યારે કોઈ પાયાના ઉદ્યોગને કેન્દ્રમાં રાખીને તેના માધ્યમ દ્વારા વિવિધ વિષયોનો અનુબંધ સાધીને શિક્ષણ આપે, ત્યારે તેને 'સમવાય કે અનુબંધ દ્વારા શિક્ષણ' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: બુનિયાદી શિક્ષણમાં 'સ્વાવલંબન' ના લક્ષણ મુજબ શાળાઓ આર્થિક રીતે કેવી રીતે સ્વાવલંબી બની શકે તેવી કલ્પના ગાંધીજીએ કરી હતી?",
+    "options": [
+      "સરકારી ગ્રાન્ટ અને દાન મેળવીને",
+      "વિદ્યાર્થીઓ પાસેથી ઊંચી ફી વસૂલીને",
+      "ઉત્પાદક ઉદ્યોગ વડે શિક્ષકોના પગાર તેમજ શાળાનો ખર્ચ કાઢીને",
+      "સ્થાનિક ઉદ્યોગપતિઓના સહયોગથી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: બુનિયાદી શિક્ષણની લાક્ષણિકતાઓ (પાના નં.: 26)",
+    "exp": "બુનિયાદી શિક્ષણમાં ગાંધીજીએ એવું સૂચવ્યું હતું કે વિદ્યાર્થીઓ ઉત્પાદક ઉદ્યોગ વડે શિક્ષકોના પગાર તેમજ શાળાઓનો ખર્ચ પણ તેમાંથી કાઢી શકે, જેથી શાળાઓ આર્થિક રીતે સ્વાવલંબી બને."
+  },
+  {
+    "q": "પ્રશ્ન 50: \"જે સમૂહજીવનની પ્રવૃત્તિ દ્વારા બાળકોમાં સંપ, સહકાર, પરસ્પરાવલંબન અને અનુકૂલન જેવા સામાજિક ગુણોનો વિકાસ કરે છે અને વાલીઓના સક્રિય સહકારથી શાળાને એક વિશિષ્ટ સ્વરૂપ આપે છે.\" — ગાંધીજીના બુનિયાદી શિક્ષણની આ લાક્ષણિકતા કયા નામે ઓળખાય છે?",
+    "options": [
+      "સહકારી સમાજ",
+      "સામાજિક સ્વાવલંબન",
+      "લોકશાહી નાગરિકત્વ",
+      "સાંસ્કૃતિક વિકાસ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: બુનિયાદી શિક્ષણની લાક્ષણિકતાઓ (પાના નં.: 27)",
+    "exp": "શાળાઓમાં સમૂહજીવનની પ્રવૃત્તિ દ્વારા સંપ, સહકાર, પરસ્પરાવલંબન અને અનુકૂલન કેળવી વાલીઓના સહકારથી શાળાને 'સહકારી સમાજ' બનાવવાની સંકલ્પના બુનિયાદી શિક્ષણની મહત્ત્વની લાક્ષણિકતા છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: \"કેળવણી વ્યક્તિમાં રહેલી એવી બધી ક્ષમતાઓ યા શક્તિઓનો વિકાસ છે કે જેના દ્વારા વ્યક્તિ વાતાવરણ પર નિયંત્રણ પ્રાપ્ત કરી શકે અને તેની સંભાવિતતાઓ અને જવાબદારીઓ પૂર્ણ કરવાની શક્તિ પ્રાપ્ત કરી શકે.\" — વ્યવહારવાદના પ્રણેતા તરીકે જાણીતા કયા અમેરિકન શિક્ષણશાસ્ત્રીએ આ સંકલ્પના આપી છે?",
+    "options": [
+      "વિલિયમ કિલપેટ્રિક",
+      "જીન જેકવીસ રૂસો",
+      "જ્હૉન ડ્યૂઈ",
+      "પેસ્ટોલોજી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈનું શિક્ષણદર્શન (પાના નં.: 28)",
+    "exp": "અમેરિકાના મહાન દાર્શનિક અને વ્યવહારવાદના પ્રણેતા જ્હૉન ડ્યૂઈએ કેળવણીને વાતાવરણ પર નિયંત્રણ અને જવાબદારીઓ પૂર્ણ કરવાની ક્ષમતાના વિકાસ તરીકે વ્યાખ્યાયિત કરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: જ્હૉન ડ્યૂઈ દ્વારા અભ્યાસક્રમ રચના માટે જણાવેલા સાત સિદ્ધાંતોમાં નીચેનામાંથી કયા સિદ્ધાંતનો સમાવેશ થતો નથી?",
+    "options": [
+      "ઉપયોગીતાનો સિદ્ધાંત (Principle of Utility)",
+      "સ્થિતિસ્થાપકતાનો સિદ્ધાંત (Principle of Flexibility)",
+      "સમવાય અને એકીકરણનો સિદ્ધાંત (Principle of Correlation and Integration)",
+      "વૈશ્વિક બંધુત્વનો સિદ્ધાંત (Principle of Universal Brotherhood)"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - અભ્યાસક્રમ (પાના નં.: 28)",
+    "exp": "ડ્યૂઈએ અભ્યાસક્રમ રચનાના સાત સિદ્ધાંતો આપ્યા છે: (1) ઉપયોગીતા, (2) સ્થિતિસ્થાપકતા, (3) બાળકોના અનુભવો, (4) સામાજિક અનુભવો, (5) સમવાય અને એકીકરણ, (6) પ્રવૃત્તિ અને (7) રસનો સિદ્ધાંત. તેમાં 'વૈશ્વિક બંધુત્વનો સિદ્ધાંત' સમાવિષ્ટ નથી."
+  },
+  {
+    "q": "પ્રશ્ન 53: જ્હૉન ડ્યૂઈના શિક્ષણપદ્ધતિઓ અંગેના વિચારો તેમના કયા બે જાણીતા પુસ્તકોમાં અનુબંધિત થયા છે?",
+    "options": [
+      "'Emile' અને 'Social Contract'",
+      "'How we think' અને 'Interest and Effort in Education'",
+      "'Democracy and Education' અને 'The School and Society'",
+      "'Learning by Doing' અને 'Experimental Schools'"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - શિક્ષણપદ્ધતિઓ (પાના નં.: 29)",
+    "exp": "મૉડ્યૂલ મુજબ જ્હૉન ડ્યૂઈના પુસ્તકો 'How we think' અને 'Interest and Effort in Education' માં શિક્ષણપદ્ધતિઓ વિશે તેમના વિચારો અનુબંધિત થયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: જ્હૉન ડ્યૂઈની શિક્ષણપદ્ધતિની વિચારધારાના સંદર્ભમાં નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: ડ્યૂઈના મતે પદ્ધતિ પાઠ્યપુસ્તકની વિરુદ્ધ હોય છે અને તે પાઠ્યપુસ્તકનું સ્થાન લઈ લે છે.\nવિધાન 2: ડ્યૂઈના મતે તથ્યો કે સત્યોની તારવણી પ્રયોગો દ્વારા કરવી જોઈએ, કારણ કે પ્રયોગ એ ક્રિયાત્મક પાસું છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - શિક્ષણપદ્ધતિઓ (પાના નં.: 29-30)",
+    "exp": "ડ્યૂઈનું સ્પષ્ટ વિધાન છે કે \"પદ્ધતિ પાઠ્યપુસ્તકની વિરુદ્ધ નથી હોતી, એ તો અભ્યાસક્રમનાં અપેક્ષિત પરિણામો મેળવવા માટેનું પ્રભાવશાળી નિદર્શન છે.\" તેથી વિધાન 1 ખોટું અને વિધાન 2 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 55: જ્હૉન ડ્યૂઈની 'સમસ્યા ઉકેલ પદ્ધતિ' (Problem Solving Method) માટે નીચેનામાંથી કઈ બાબત અયોગ્ય છે?",
+    "options": [
+      "સમસ્યા એટલી સહેલી ન હોવી જોઈએ કે તેના પર વિચાર ન કરવો પડે, તેમજ એટલી કઠિન ન હોવી જોઈએ કે ઉકેલ મુશ્કેલ બની જાય.",
+      "શિક્ષકે બાળકને સમસ્યાના ઉકેલ માટેની પૂર્વમાહિતી પૂરી પાડવી જોઈએ.",
+      "બાળકે જે કંઈ વિચાર્યું હોય તેનો અમલ કરવાની પ્રેરણા શિક્ષકે પૂરી પાડવી જોઈએ.",
+      "શિક્ષકે સમસ્યાનો ઉકેલ જાતે જ શોધીને વિદ્યાર્થીઓને ગોખાવી દેવો જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - શિક્ષણપદ્ધતિઓ (પાના નં.: 30)",
+    "exp": "સમસ્યા ઉકેલ પદ્ધતિમાં બાળકો સમક્ષ જે સમસ્યા હોય તેનું સમાધાન 'બાળકો જાતે શોધે' તેની હિમાયત કરવામાં આવે છે; શિક્ષક માત્ર પૂર્વમાહિતી, પ્રેરણા અને શૈક્ષણિક અનુભવો પૂરા પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: 'પ્રોજેક્ટ (પ્રકલ્પ) પદ્ધતિ' ના ઇતિહાસ અને વિકાસ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: ઈ.સ. 1900માં 'પ્રોજેક્ટ' શબ્દ અમેરિકામાં શારીરિક શ્રમ દ્વારા થતા ઉત્પાદન માટે વપરાતો હતો.\nવિધાન 2: જ્હૉન ડ્યૂઈની આ વ્યવહારવાદી પદ્ધતિને કિલપેટ્રિકે વ્યવસ્થિત સ્વરૂપ આપ્યું હતું.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - પ્રોજેક્ટ પદ્ધતિ (પાના નં.: 30)",
+    "exp": "ઈ.સ. 1900માં અમેરિકામાં શારીરિક શ્રમ દ્વારા થતા ઉત્પાદન માટે પ્રોજેક્ટ શબ્દ વપરાતો હતો, જેને શિક્ષણમાં ડ્યૂઈએ પસંદ કર્યો અને કિલપેટ્રિકે તેને વ્યવસ્થિત સ્વરૂપ આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 57: જ્હૉન ડ્યૂઈ દ્વારા જણાવેલ 'પ્રોજેક્ટ પદ્ધતિ' ના પાંચ સામાન્ય સોપાનોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "પ્રોજેક્ટની પસંદગી → પરિસ્થિતિનું નિર્માણ → આયોજન → અમલીકરણ → મૂલ્યાંકન",
+      "પરિસ્થિતિનું નિર્માણ → આયોજન → પ્રોજેક્ટની પસંદગી → અમલીકરણ → મૂલ્યાંકન",
+      "પરિસ્થિતિનું નિર્માણ → પ્રોજેક્ટની પસંદગી → આયોજન → અમલીકરણ → મૂલ્યાંકન",
+      "આયોજન → પરિસ્થિતિનું નિર્માણ → પ્રોજેક્ટની પસંદગી → અમલીકરણ → મૂલ્યાંકન"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - પ્રોજેક્ટ પદ્ધતિ (પાના નં.: 31)",
+    "exp": "પ્રોજેક્ટ પદ્ધતિનાં પાંચ સોપાનોનો સાચો ક્રમ છે: (1) પરિસ્થિતિનું નિર્માણ, (2) પ્રોજેક્ટની પસંદગી, (3) આયોજન, (4) અમલીકરણ અને (5) મૂલ્યાંકન."
+  },
+  {
+    "q": "પ્રશ્ન 58: આધુનિક શિક્ષણપ્રથા પર જ્હૉન ડ્યૂઈની વિચારધારાની અસરોના સંદર્ભમાં નીચેના જોડકાં યોગ્ય રીતે જોડો:\n1. પ્રયોગાત્મક શાળાઓ — (a) વિદ્યાર્થીમંડળો અને વિદ્યાર્થીસંઘોની રચના\n2. શાળા - સમાજની લઘુ આવૃત્તિ — (b) અમેરિકામાં 'Laboratory School' ની સ્થાપના\n3. શાળાઓમાં સ્વ-શાસન — (c) આત્મ અનુશાસન (Self discipline) અને સામાજિક શિસ્ત\n4. મુક્ત શિસ્ત — (d) સમાજની જરૂરિયાતો અનુસાર શાળાઓની સ્થાપના અને ઘનિષ્ઠ સંપર્ક",
+    "options": [
+      "1-b, 2-d, 3-a, 4-c",
+      "1-d, 2-b, 3-a, 4-c",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: આધુનિક શિક્ષણપ્રથા પર જ્હૉન ડ્યૂઈની વિચારધારાની અસરો (પાના નં.: 31-32)",
+    "exp": "ડ્યૂઈએ અમેરિકામાં Laboratory School સ્થાપી હતી; શાળાને સમાજની લઘુ આવૃત્તિ ગણાવી; શાળાઓમાં લોકશાહી મુજબ સ્વ-શાસન માટે વિદ્યાર્થીમંડળો/સંઘોની વિચારધારા આપી; અને આત્મ તથા સામાજિક શિસ્તનો અનુરોધ કર્યો."
+  },
+  {
+    "q": "પ્રશ્ન 59: \"લોકશાહી એ માત્ર શાસનવ્યવસ્થા નથી, એ પ્રજાની જીવનશૈલી બની રહેવી જોઈએ.\" — શાળાઓમાં સ્વ-શાસનના સંદર્ભમાં આ વિચારધારા કયા કેળવણીકારની ભેટ છે?",
+    "options": [
+      "અબ્રાહમ લિંકન",
+      "જ્હૉન ડ્યૂઈ",
+      "મહાત્મા ગાંધી",
+      "રવીન્દ્રનાથ ટાગોર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ - શાળાઓમાં સ્વ-શાસન (પાના નં.: 32)",
+    "exp": "જ્હૉન ડ્યૂઈના મંતવ્ય અનુસાર શાળાઓ એ લોકશાહી સમાજ છે અને લોકશાહી એ માત્ર શાસનવ્યવસ્થા નહીં પરંતુ પ્રજાની જીવનશૈલી બની રહેવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 60: \"The child is a body which grows and a soul which develops.\" (બાળકનું શરીર વૃદ્ધિ પામે છે અને આત્મા વિકાસ પામે છે) — ગિજુભાઈ બધેકાના જીવન પરિચયના સંદર્ભમાં આ વિચાર કયા વિચારકો સાથે સાંકળવામાં આવ્યો છે?",
+    "options": [
+      "રૂસો અને પેસ્ટોલોજી",
+      "માર્ટિન લ્યુબર અને મૉન્ટેસરી",
+      "સૉક્રેટિસ અને પ્લેટો",
+      "જ્હૉન ડ્યૂઈ અને કિલપેટ્રિક"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - જીવન પરિચય (પાના નં.: 32)",
+    "exp": "મૉડ્યૂલમાં માર્ટિન લ્યુબરના મંતવ્ય (\"The child is a body which grows and a soul which develops\") અને એ જ રીતે મૉન્ટેસરીના કથનનો ઉલ્લેખ ગિજુભાઈ બધેકાના પરિચયમાં કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: ગુજરાતમાં 'બાળકોના ગાંધી' અને 'મુછાળીમા' તરીકે ઓળખાતા શ્રી ગિજુભાઈ બધેકાએ બાળકોની સર્જનાત્મક અભિવ્યક્તિ અને વાર્તાકથન માટે કયું જાણીતું પુસ્તક લખ્યું છે?",
+    "options": [
+      "બાલસાહિત્યનો ઇતિહાસ",
+      "વાર્તાનું શાસ્ત્ર",
+      "દિવાસ્વપ્ન",
+      "બાળકોનું મનોવિજ્ઞાન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શિક્ષણદર્શનના સિદ્ધાંતો (પાના નં.: 33, 36)",
+    "exp": "ગિજુભાઈએ બાળવાર્તા, બાળનાટક અને વાર્તાકથન દ્વારા બાળકોની સર્જનાત્મક અભિવ્યક્તિ વિકસાવવા માટે 'વાર્તાનું શાસ્ત્ર' પુસ્તક લખ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: \"બાળકોને શીખવવામાં ખરું તો હું જ શીખ્યો છું. તેમને નીચેથી ઊંચે લઈ જતાં સાથે હું પણ ચડતો ચાલ્યો. તેમનો ગુરુ થતાં મેં તેમનું ગુરુપણું સમજી લીધું.\" — ગિજુભાઈનું આ કથન તેમની બાલશિક્ષણની કઈ વિભાવના સ્પષ્ટ કરે છે?",
+    "options": [
+      "શિક્ષકકેન્દ્રી શિક્ષણ",
+      "બાલશિક્ષણ એટલે પારસ્પરિક વિકાસ",
+      "ઉદ્યોગકેન્દ્રી શિક્ષણ",
+      "પુસ્તકિયું શિક્ષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - કેળવણીની વિભાવના (પાના નં.: 33)",
+    "exp": "ગિજુભાઈ શિક્ષક અને બાળક વચ્ચેની પારસ્પરિકતાને મહત્ત્વ આપતા હતા અને તેમના આ કથન દ્વારા 'બાલશિક્ષણ એટલે પારસ્પરિક વિકાસ' એવી વિભાવના સ્પષ્ટ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: શ્રી ગિજુભાઈ બધેકાના પ્રવૃત્તિલક્ષી અભ્યાસક્રમમાં સમાવિષ્ટ પ્રવૃત્તિઓનાં યોગ્ય જોડકાં જોડો:\n1. જીવનવ્યવહારનાં કાર્યો — (a) લાકડાની ઈંટો ગોઠવવી, બંગલા પેટી, માટીકામ, મોતીકામ\n2. અન્ય પ્રવૃત્તિઓ — (b) વાર્તાકથન, લોકગીત, નાટકો અને સંવાદોની ભજવણી\n3. ભાષા શિક્ષણની પ્રવૃત્તિઓ — (c) નાસ્તો પીરસવો, આંગણું સાફ કરવું, શાક સમારવું, બાગાયત\n4. સ્વાસ્થ્ય અંગેની પ્રવૃત્તિઓ — (d) બાળરમતો, ખેલકૂદ, વ્યાયામ",
+    "options": [
+      "1-c, 2-a, 3-b, 4-d",
+      "1-a, 2-c, 3-b, 4-d",
+      "1-c, 2-b, 3-a, 4-d",
+      "1-d, 2-a, 3-b, 4-c"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - અભ્યાસક્રમ (પાના નં.: 34-35)",
+    "exp": "ગિજુભાઈના અભ્યાસક્રમમાં જીવનવ્યવહારનાં કાર્યોમાં રોજિંદા સ્વાશ્રયી કાર્યો; અન્ય પ્રવૃત્તિઓમાં લાકડાની ઈંટો, બંગલા પેટી, માટીકામ; ભાષા શિક્ષણમાં વાર્તા-લોકગીત-નાટકો; અને સ્વાસ્થ્ય પ્રવૃત્તિઓમાં બાળરમતો-વ્યાયામનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: ગિજુભાઈ બધેકાએ પોતાની શાળામાં ગણિતશિક્ષણના પ્રયોગો કયા પ્રસિદ્ધ ગણિત અને ખગોળશાસ્ત્રીને બોલાવીને કરાવ્યા હતા?",
+    "options": [
+      "શ્રી નાનાભાઈ ભટ્ટ",
+      "શ્રી હરિહર ભટ્ટ",
+      "શ્રી કાકાસાહેબ કાલેલકર",
+      "શ્રી જુગતરામ દવે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શિક્ષણ પદ્ધતિઓ (પાના નં.: 36)",
+    "exp": "ગિજુભાઈએ ગણિતશિક્ષણના પ્રયોગો પ્રસિદ્ધ ગણિત અને ખગોળશાસ્ત્રી શ્રી હરિહર ભટ્ટને બોલાવીને કરાવ્યા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 65: \"જેઓ ચોપડી વાંચીને જ્ઞાન લેવાની મુરાદ રાખે છે તેઓ મહેતાજી થશે, જેઓ બાળકને વાંચીને જ્ઞાન મેળવશે તે કેળવણીકાર થશે.\" — આ પ્રખ્યાત વિધાન કોનું છે?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "ડૉ. મારિયા મૉન્ટેસરી",
+      "શ્રી ગિજુભાઈ બધેકા",
+      "રવીન્દ્રનાથ ટાગોર"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શિક્ષકની ભૂમિકા (પાના નં.: 36)",
+    "exp": "શ્રી ગિજુભાઈ બધેકા 'બાળક' ને જ કેળવણીકાર માટે સમર્થ, અદ્વિતીય અને મહાન ગ્રંથ માનતા હતા અને શિક્ષકની ભૂમિકા સ્પષ્ટ કરતાં તેમણે આ વિધાન આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 66: ગિજુભાઈ બધેકાના મતે એક આદર્શ શિક્ષકના ગુણલક્ષણો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શિક્ષક પરંપરાનો પૂજારી હોવો જોઈએ અને પ્રયોગશીલતાથી દૂર રહેવો જોઈએ.",
+      "શિક્ષક વૈજ્ઞાનિક હોવો જોઈએ અને બાળકોને પોતાની રીતે વિકસતાં તેમનું સતત અવલોકન કરતો રહેવો જોઈએ.",
+      "શિક્ષક માત્ર બાળકોના દેહમાપન કે મનોમાપનમાં રસ લેનારો ન હોય, તે જીવનના ગંભીર રહસ્યો અને સત્યની ખોજમાં નીકળેલો યાત્રી હોય.",
+      "શિક્ષક આત્મસંયમી, વાણીનો સંયમ રાખનારો અને બાળકો તરફ પૂર્વગ્રહરહિત હોવો જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શિક્ષકની ભૂમિકા (પાના નં.: 37)",
+    "exp": "ગિજુભાઈના મતે શિક્ષકમાં પ્રયોગશીલતા હોવી જોઈએ; તે 'પરંપરાનો પૂજારી ન હોય', પરંતુ નવું કરવાની વૃત્તિવાળો હોવો જોઈએ. તેથી વિધાન (A) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 67: ગિજુભાઈ બધેકાના મતે બાળક ઇનામના પ્રલોભન કે સજાના ડરમાંથી ક્યારે મુક્ત થઈ જાય છે?",
+    "options": [
+      "જ્યારે શાળામાં કડક નિયમો અને દંડની વ્યવસ્થા લાગુ કરવામાં આવે",
+      "જ્યારે બાળકને પ્રવૃત્તિમાંથી કે ક્રિયામાંથી નિજાનંદ પ્રાપ્ત થાય",
+      "જ્યારે બાળકને દરરોજ પરીક્ષા દ્વારા મૂલ્યાંકિત કરવામાં આવે",
+      "જ્યારે બાળકને માતા-પિતા દ્વારા સતત દેખરેખ હેઠળ રાખવામાં આવે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શિસ્ત (પાના નં.: 38)",
+    "exp": "ગિજુભાઈના શિસ્ત (સ્વ-નિયમન) અંગેના ખ્યાલ મુજબ, બાળકને પ્રવૃત્તિ કે ક્રિયામાંથી નિજાનંદ પ્રાપ્ત થતાં તે ઇનામના પ્રલોભન કે સજાના ડરમાંથી મુક્ત થઈ જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: \"નાજુકતાની સાથે કામ પાડવાના નિરંતર અનુભવો બાળકને અવ્યવસ્થા, અનિયંત્રિતતા અને કઠોરપણામાંથી મુક્ત કરાવે છે.\" — ગિજુભાઈએ આ વિધાન શાળાના પર્યાવરણના કયા સંદર્ભમાં આપ્યું છે?",
+    "options": [
+      "શાળાના મેદાનમાં ખેલકૂદના નિયમોના સંદર્ભમાં",
+      "શૈક્ષણિક સાધનોને વ્યવસ્થિત રાખવાની અને તેમની નાજુકતાની સંભાળ રાખવાના સંદર્ભમાં",
+      "બાળકોને પૌષ્ટિક ખોરાક પીરસવાના સંદર્ભમાં",
+      "શિક્ષકોના વાણી-વર્તનની કોમળતાના સંદર્ભમાં"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - શાળાનું પર્યાવરણ (પાના નં.: 38)",
+    "exp": "શાળામાં રહેલાં શૈક્ષણિક સાધનોને વ્યવસ્થિત રાખવાની અને તેમની નાજુકતાની સંભાળ રાખવાની તાલીમ અંગે ગિજુભાઈએ આ વિધાન આપ્યું હતું, જેનાથી બાળકોમાં સુઘડતા, સ્વચ્છતા અને સૌંદર્યબોધક મૂલ્યો વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: ગિજુભાઈના મતે કુદરતના સાનિધ્યમાં બાળકો વિવિધ પ્રાકૃતિક તત્ત્વો પાસેથી સ્વયં નૈતિક ગુણો શીખે છે. આ અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. વૃક્ષો અને નદી — (a) ધીરજ\n2. સૂર્ય અને ચંદ્ર — (b) પરોપકાર\n3. ધરતી — (c) સમયપાલન",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા - કુદરત દ્વારા નૈતિક અને આધ્યાત્મિક કેળવણી (પાના નં.: 39)",
+    "exp": "ગિજુભાઈના મતે બાળકો કુદરતના સાનિધ્યમાં વૃક્ષો અને નદી પાસેથી 'પરોપકાર', સૂર્ય અને ચંદ્ર પાસેથી 'સમયપાલન' અને ધરતી પાસેથી 'ધીરજ' જેવા ગુણો સ્વયં શીખે છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: ગિજુભાઈ બધેકા દ્વારા બાળશિક્ષણના પ્રચાર-પ્રસાર માટે કરવામાં આવેલી સંસ્થાકીય કામગીરી અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: તેમણે ઈ.સ. 1926માં 'નૂતન બાલશિક્ષણ સંઘ' ની સ્થાપના ભાવનગરમાં કરી હતી.\nવિધાન 2: તેમણે બાળશિક્ષણના પ્રસાર માટે 'શિક્ષણ પત્રિકા' નામનું સામયિક શરૂ કર્યું હતું.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગિજુભાઈના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 39)",
+    "exp": "ગિજુભાઈએ 1926માં ભાવનગરમાં નૂતન બાલશિક્ષણ સંઘની સ્થાપના કરી હતી અને 'શિક્ષણ પત્રિકા' નામનું સામયિક પણ શરૂ કર્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 71: શ્રી ગિજુભાઈ બધેકાને તેમના બાળસાહિત્યના વિપુલ સર્જન બદલ 'બાલસાહિત્યના બ્રહ્મા' નું બિરુદ કોણે આપ્યું હતું?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "કાકાસાહેબ કાલેલકર",
+      "ઝવેરચંદ મેઘાણી",
+      "રવીન્દ્રનાથ ટાગોર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગિજુભાઈના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 39)",
+    "exp": "ગિજુભાઈના બાળસાહિત્ય, શિક્ષકો અને વાલીઓ માટેના સાહિત્ય સર્જનથી પ્રેરાઈને કાકાસાહેબ કાલેલકરે તેમને 'બાલસાહિત્યના બ્રહ્મા' નું બિરુદ આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 72: ગુજરાતી સાહિત્ય સભા દ્વારા શ્રી ગિજુભાઈ બધેકાનું કયા પ્રતિષ્ઠિત સુવર્ણચંદ્રકથી બહુમાન કરવામાં આવ્યું હતું?",
+    "options": [
+      "નર્મદ સુવર્ણચંદ્રક",
+      "રણજીતરામ સુવર્ણચંદ્રક",
+      "કુમાર સુવર્ણચંદ્રક",
+      "સાહિત્ય અકાદમી ચંદ્રક"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: ગિજુભાઈના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 39)",
+    "exp": "ગુજરાતી સાહિત્ય સભાએ શ્રી ગિજુભાઈ બધેકાને 'રણજીતરામ સુવર્ણચંદ્રક' આપી તેમનું બહુમાન કર્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 73: નીચેનામાંથી કયા કેળવણીકારે 'ચિલ્ડ્રન્સ યુનિવર્સિટી - બાળ-વિદ્યાપીઠ' નું સ્વપ્ન સેવ્યું હતું તથા કહ્યું હતું કે, \"બાળકોના અધિકારોની સ્થાપના કરવાને માટે જ હું જીવતો રહું અને એ કામમાં જ હું મરી ખૂટું\"?",
+    "options": [
+      "નાનાભાઈ ભટ્ટ",
+      "ડૉ. મારિયા મૉન્ટેસરી",
+      "શ્રી ગિજુભાઈ બધેકા",
+      "મહાત્મા ગાંધી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: ગિજુભાઈના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 39-40)",
+    "exp": "ગિજુભાઈ બધેકાએ ચિલ્ડ્રન્સ યુનિવર્સિટી (બાળ-વિદ્યાપીઠ) નું સ્વપ્ન સેવ્યું હતું અને બાળકોમાં પરમ તત્ત્વનાં દર્શન કરતાં બાળકોના અધિકારોની સ્થાપના માટે જીવન સમર્પિત કરવાનું આ વિધાન આપ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 74: એક શિક્ષક બાળકોને વનસ્પતિઓના ઉછેર, નાનાં જીવજંતુઓના વિકાસક્રમ અને આકાશના તારાઓ-નક્ષત્રોનું કુદરતના સાનિધ્યમાં સતત અવલોકન કરાવે છે તથા શાળામાં ચકલાં-કબૂતરો માટે ચબૂતરા અને પાણીનાં શીકા મૂકાવે છે. આ શિક્ષક કયા ચિંતકની શિક્ષણપદ્ધતિ અને આધ્યાત્મિક કેળવણીને અનુસરી રહ્યા છે?",
+    "options": [
+      "જ્હૉન ડ્યૂઈ",
+      "શ્રી ગિજુભાઈ બધેકા",
+      "સ્વામી દયાનંદ સરસ્વતી",
+      "શ્રી અરવિંદ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી ગિજુભાઈ બધેકા (પાના નં.: 35, 39)",
+    "exp": "ગિજુભાઈની 'અવલોકન દ્વારા શિક્ષણ' પદ્ધતિમાં વનસ્પતિ, જીવજંતુ અને તારા-નક્ષત્રોના અવલોકનની તથા કુદરત દ્વારા આધ્યાત્મિક કેળવણીમાં શાળામાં ચબૂતરા, ફૂલના કૂંડા અને પાણીના શીકા રાખવાની વાત કરવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: 'શાળા' અંગેના વિવિધ કેળવણીકારોના વિશિષ્ટ ખ્યાલોની નીચેની જોડીઓમાંથી કઈ જોડી સાચી રીતે જોડાયેલી છે?\n1. જ્હૉન ડ્યૂઈ — શાળા એ સમાજની લઘુ આવૃત્તિ અને લોકશાહી સમાજ છે.\n2. ગિજુભાઈ બધેકા — શાળા એ બાલોદ્યાન છે, જ્યાં બાલપુષ્પો સતત વિકસતાં રહે છે અને બાલમંદિરનું વાતાવરણ ભગવાનના મંદિર જેવું હોવું જોઈએ.",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 2",
+      "1 અને 2 બંને",
+      "1 અને 2 માંથી એક પણ નહીં"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: જ્હૉન ડ્યૂઈ અને ગિજુભાઈ બધેકા (પાના નં.: 32, 38)",
+    "exp": "જ્હૉન ડ્યૂઈ શાળાને સમાજની લઘુ આવૃત્તિ અને લોકશાહી સમાજ માને છે, જ્યારે ગિજુભાઈ બધેકા શાળાને બાલોદ્યાન અને બાલમંદિરને ભગવાનના મંદિર જેવું પવિત્ર અને સ્વાવલંબનની પ્રેરણાભૂમિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: સ્વામી વિવેકાનંદના જીવનદર્શન અને મંત્રોના સંદર્ભમાં નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. જીવનમંત્ર — (a) શિક્ષણ એ જાગૃતિનો જનમહોત્સવ છે\n2. પ્રેરણામંત્ર — (b) જનસેવા એ જ પ્રભુસેવા\n3. પરમ લક્ષ્ય — (c) ધર્મો રક્ષતિ રક્ષિતઃ",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: સ્વામી વિવેકાનંદનું શિક્ષણદર્શન (પાના નં.: 40)",
+    "exp": "સ્વામી વિવેકાનંદનો જીવનમંત્ર \"જનસેવા એ જ પ્રભુસેવા\", પ્રેરણામંત્ર \"ધર્મો રક્ષતિ રક્ષિતઃ\" અને પરમ લક્ષ્ય \"શિક્ષણ એ જાગૃતિનો જનમહોત્સવ છે\" એ હતું."
+  },
+  {
+    "q": "પ્રશ્ન 77: \"The world today can only be saved through India's spiritual heritage and specially through the path blazed by Ramkrishna and Vivekanand.\" — સ્વામી વિવેકાનંદને આ ભવ્ય અંજલિ કોણે આપી છે?",
+    "options": [
+      "જવાહરલાલ નેહરુ",
+      "આર્નોલ્ડ ટોયન્બી",
+      "રોમાં રોલાં",
+      "ડૉ. સર્વપલ્લી રાધાકૃષ્ણન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: વિવેકાનંદનું જીવનદર્શન (પાના નં.: 40-41)",
+    "exp": "ભારતના આધ્યાત્મિક વારસા અને રામકૃષ્ણ તથા વિવેકાનંદે પ્રશસ્ત કરેલા માર્ગ દ્વારા જ આજના વિશ્વને બચાવી શકાશે — એવી અંજલિ આર્નોલ્ડ ટોયન્બીએ આપી છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: સ્વામી વિવેકાનંદના જીવનદર્શન અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: તેમના જીવનદર્શનમાં ધર્મ, શિક્ષણ અને સમાજ એમ ત્રણ પરિબળોએ મહત્ત્વનો ભાગ ભજવ્યો છે.\nવિધાન 2: તેમના વિચારોમાં માત્ર વૈદિક તત્ત્વદર્શનનો જ સમાવેશ હતો, ઇસ્લામિક તત્ત્વદર્શન સાથે કોઈ સમન્વય ન હતો.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: વિવેકાનંદનું જીવનદર્શન (પાના નં.: 41)",
+    "exp": "સ્વામી વિવેકાનંદના વિચારોમાં વૈદિક તત્ત્વદર્શન અને ઇસ્લામિક તત્ત્વદર્શનનો સમન્વય હતો. તેથી વિધાન 2 ખોટું અને વિધાન 1 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: \"Education is manifestation of perfection already existing in man\" (કેળવણી એટલે માનવમાં જન્મથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ) અને \"Learning is really discovering\" (કેળવણી એ ખોજની પ્રક્રિયા છે) — આ બંને વ્યાખ્યાઓ કયા ચિંતકની છે?",
+    "options": [
+      "શ્રી અરવિંદ ઘોષ",
+      "રવીન્દ્રનાથ ટાગોર",
+      "સ્વામી વિવેકાનંદ",
+      "સ્વામી દયાનંદ સરસ્વતી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: વિવેકાનંદ - શિક્ષણદર્શન (પાના નં.: 41)",
+    "exp": "સ્વામી વિવેકાનંદ માનતા હતા કે મનુષ્યમાં જન્મથી જ પૂર્ણત્વ પડેલું હોય છે અને શિક્ષણ એ આજન્મ પૂર્ણતાના આવિષ્કારની તેમજ ખોજની પ્રક્રિયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: સ્વામી વિવેકાનંદના શિક્ષણના ઉદ્દેશો અને અભ્યાસક્રમ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "વિવેકાનંદની શિક્ષણની સંકલ્પનાનાં મૂળ વેદાંતના અદ્વૈતવાદમાં રહેલાં છે.",
+      "તેમણે લૌકિક સમૃદ્ધિ માટે વિજ્ઞાન, ટેકનોલૉજી, વ્યાવસાયિક શિક્ષણ અને કૃષિ જેવા વિષયોને આવશ્યક લેખ્યા હતા.",
+      "તેઓ અધ્યાત્મવાદી હોવાથી અંગ્રેજી ભાષાના શિક્ષણના સખત વિરોધી હતા.",
+      "તેમના મતે ભારતીય પ્રજાના શરીરસૌષ્ઠવ અને મનોસૌષ્ઠવ માટે શારીરિક શિક્ષણ, વ્યાયામ અને રમતગમત જરૂરી છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: વિવેકાનંદ - શિક્ષણના ઉદ્દેશો અને અભ્યાસક્રમ (પાના નં.: 42)",
+    "exp": "સ્વામી વિવેકાનંદ વેદાંત અને અધ્યાત્મની સાથે લૌકિક સમૃદ્ધિના વિષયો તેમજ 'અંગ્રેજી ભાષાના શિક્ષણના પણ હિમાયતી હતા'. તેથી વિધાન (C) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: \"માહિતી ભરી દેવાથી જ અધ્યયન થઈ જતું હોય તો દુનિયામાં પુસ્તકાલયો સૌથી વધુ વિદ્વાન ગણાય.\" — આ કથન દ્વારા સ્વામી વિવેકાનંદ કઈ બાબતનો વિરોધ કરે છે?",
+    "options": [
+      "એકાગ્રતા કે કેન્દ્રીકરણ પદ્ધતિનો",
+      "પુસ્તકો દ્વારા માત્ર માહિતી ગોખવાની પદ્ધતિનો",
+      "તર્ક અને વિચાર-વિમર્શ પદ્ધતિનો",
+      "પદાર્થો અને ઘટનાઓના પ્રત્યક્ષ અનુભવનો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: વિવેકાનંદ - અધ્યાપન અધ્યયન પદ્ધતિ (પાના નં.: 43)",
+    "exp": "સ્વામી વિવેકાનંદ ગોખણપટ્ટી અને જ્ઞાન મેળવવા માટે માત્ર પુસ્તકો પર આધાર રાખવાની પદ્ધતિના વિરોધી હતા; તેના બદલે તેઓ બ્રહ્મચર્ય, એકાગ્રતા (Method of Concentration) અને પ્રત્યક્ષ અનુભવ પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 82: સ્વામી વિવેકાનંદના મતે શિક્ષકના ગુણલક્ષણો અંગે નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "શિક્ષક શાસ્ત્રનો મર્મજ્ઞ હોવો જોઈએ અને મન, હૃદય તથા આત્માથી પવિત્ર હોવો જોઈએ.",
+      "શિક્ષકે માત્ર શબ્દવૈભવમાં જ રાચતા રહેવું જોઈએ, જેથી વિદ્યાર્થીઓ પ્રભાવિત થાય.",
+      "શિક્ષકે 'પોતે જ બાળકોને શિક્ષણ આપી રહ્યો છે' તેવા ભ્રમથી હંમેશા દૂર રહેવું જોઈએ.",
+      "શિક્ષકે બાળકની જ્ઞાનપ્રાપ્તિના આડે આવતા તમામ અવરોધો દૂર કરવા તત્પર રહેવું જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: વિવેકાનંદ - શિક્ષકનું સ્થાન (પાના નં.: 43-44)",
+    "exp": "વિવેકાનંદના મતે શિક્ષક માત્ર શબ્દવૈભવમાં જ ન રાચતો હોવો જોઈએ, કારણ કે આમ થવાથી તે તેની ભીતરનો આત્મા ગુમાવી બેસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: \"Rooted in the past and full of pride in India's prestige, Vivekanand was yet modern in his approach to life's problems, and was a kind of bridge between the past of India and her present.\" — સ્વામી વિવેકાનંદને ભારતના ભૂતકાળ અને વર્તમાન વચ્ચેના સેતુ (Bridge) સમાન કોણે ગણાવ્યા છે?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "રવીન્દ્રનાથ ટાગોર",
+      "જવાહરલાલ નેહરુ",
+      "આર્નોલ્ડ ટોયન્બી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: વિવેકાનંદના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 44)",
+    "exp": "આપણા પૂર્વ પ્રધાનમંત્રી જવાહરલાલ નેહરુએ સ્વામી વિવેકાનંદના વિચારોથી અભિભૂત થઈને તેમને ભારતના ભૂતકાળ અને વર્તમાન વચ્ચેના સેતુ સમાન ગણાવી આ અંજલિ આપી છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: મનોવૈજ્ઞાનિક મૅકડૂગલે દર્શાવેલી માનવ પ્રકૃતિની 18 સહજવૃત્તિઓના વર્ગીકરણ અંગે નીચેનાં જોડકાં યોગ્ય રીતે જોડો:\n1. હકારાત્મક વૃત્તિઓ — (a) ક્ષુધા, નિંદ્રા\n2. નકારાત્મક વૃત્તિઓ — (b) વાત્સલ્ય, હાસ્ય, રચના\n3. સાહજિક વૃત્તિઓ — (c) ક્રોધ, તિરસ્કાર",
+    "options": [
+      "1-b, 2-c, 3-a",
+      "1-c, 2-b, 3-a",
+      "1-b, 2-a, 3-c",
+      "1-a, 2-c, 3-b"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: માનવ પ્રકૃતિ અને શિક્ષણના ધ્યેયો (પાના નં.: 44-45)",
+    "exp": "મૅકડૂગલની 18 સહજવૃત્તિઓમાં વાત્સલ્ય, હાસ્ય અને રચના હકારાત્મક; ક્રોધ અને તિરસ્કાર નકારાત્મક; તેમજ ક્ષુધા અને નિંદ્રા સાહજિક વૃત્તિઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: મનુષ્ય પ્રકૃતિની સહજવૃત્તિઓ અને શિક્ષણના સંબંધ અંગે નીચેના વિધાનો પર વિચાર કરો:\nવિધાન 1: વિજ્ઞાનનું શિક્ષણ વ્યક્તિને વહેમ અને અંધશ્રદ્ધાથી ઉત્પન્ન થતા 'ભય' માંથી મુક્ત કરે છે.\nવિધાન 2: તૃષા કે ભૂખ જેવી વૃત્તિઓ શિક્ષણના ધ્યેયની સિદ્ધિમાં અવરોધરૂપ બને છે, જ્યારે રચના, કુતૂહલ અને આત્મસ્થાપન જેવી વૃત્તિઓ પ્રોત્સાહન પૂરું પાડે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: માનવ પ્રકૃતિ અને શિક્ષણના ધ્યેયો (પાના નં.: 45)",
+    "exp": "વિજ્ઞાનનું શિક્ષણ અંધશ્રદ્ધાના ભયમાંથી મુક્ત કરે છે; ભૂખ-તૃષા શિક્ષણમાં અવરોધરૂપ છે જ્યારે રચના, કુતૂહલ અને આત્મસ્થાપન શિક્ષણની સિદ્ધિમાં પ્રોત્સાહન આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: મૅકડૂગલ દ્વારા દર્શાવેલ 18 સહજવૃત્તિઓમાં નીચેનામાંથી કઈ સહજવૃત્તિનો સમાવેશ થાય છે?\n1. યાચનાવૃત્તિ અને આધીનવૃત્તિ\n2. સ્થળાંતરવૃત્તિ અને સંગ્રહવૃત્તિ\n3. સંઘવૃત્તિ અને પ્રતિક્ષિપ્ત ક્રિયાઓ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1: માનવ પ્રકૃતિ અને શિક્ષણના ધ્યેયો (પાના નં.: 44-45)",
+    "exp": "મૅકડૂગલની 18 સહજવૃત્તિઓની યાદીમાં સંઘવૃત્તિ, યાચનાવૃત્તિ, આધીનવૃત્તિ, સ્થળાંતરવૃત્તિ, સંગ્રહવૃત્તિ અને પ્રતિક્ષિપ્ત ક્રિયાઓ — આ તમામના નામોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: શ્રી અરવિંદના શિક્ષણદર્શન અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: શ્રી અરવિંદનું શિક્ષણદર્શન આધ્યાત્મિક સાધના, બ્રહ્મચર્ય અને યોગ એમ ત્રણ તત્ત્વો પર આધારિત હતું.\nવિધાન 2: તેમના માનસિક અને ચૈતસિક ઘડતરમાં પાશ્ચાત્ય ચિંતકો હેંગલ, વ્હાઇટહેડ અને બર્ગસનનો ફાળો હોવાનો સંભવ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શ્રી અરવિંદનું શિક્ષણદર્શન (પાના નં.: 50-51)",
+    "exp": "શ્રી અરવિંદનું શિક્ષણદર્શન આધ્યાત્મિક સાધના, બ્રહ્મચર્ય અને યોગ પર આધારિત હતું તથા હેંગલ, વ્હાઇટહેડ અને બર્ગસન જેવા પાશ્ચાત્ય ચિંતકોની તેમના ઘડતર પર અસર હતી."
+  },
+  {
+    "q": "પ્રશ્ન 88: શ્રી અરવિંદના મંતવ્ય અનુસાર 'અંતઃકરણ કે મનસ' એ કેળવણીનું મુખ્ય અંગ છે. તેમણે અંતઃકરણનાં કયા ચાર સ્તરોનો નિર્દેશ કર્યો છે?",
+    "options": [
+      "શરીર, મન, બુદ્ધિ અને આત્મા",
+      "ચિત્ત, મનસ, બુદ્ધિ અને જ્ઞાન",
+      "અન્નમય, પ્રાણમય, મનોમય અને વિજ્ઞાનમય",
+      "ચિત્ત, અહંકાર, બુદ્ધિ અને અતિમનસ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી અરવિંદ - શિક્ષણદર્શન (પાના નં.: 51)",
+    "exp": "શ્રી અરવિંદે અંતઃકરણનાં ચાર સ્તરો — ચિત્ત, મનસ, બુદ્ધિ અને જ્ઞાન — નો નિર્દેશ કર્યો છે, જેમનો ક્રમિક વિકાસ સાચી કેળવણી દ્વારા થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: \"માનવ શક્યતાનો શિલ્પી છે અને અશક્યતાનો ઇજનેર છે.\" તેમજ \"માહિતીનો સંગ્રહ શિક્ષણ નથી... તે તો એક એવું બિંદુ છે જેના દ્વારા જ્ઞાનનો પ્રારંભ કરી શકાય.\" — આ વિચારો કયા ભારતીય ચિંતકના છે?",
+    "options": [
+      "સ્વામી વિવેકાનંદ",
+      "રવીન્દ્રનાથ ટાગોર",
+      "મહર્ષિ શ્રી અરવિંદ",
+      "સ્વામી દયાનંદ સરસ્વતી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શ્રી અરવિંદ - શિક્ષણની પરિભાષા (પાના નં.: 51-52)",
+    "exp": "મહર્ષિ અરવિંદ માનવને શક્યતાનો શિલ્પી અને અશક્યતાનો ઇજનેર ગણાવે છે તથા માહિતીને શિક્ષણની આધારશિલા નહીં, પરંતુ જ્ઞાનના પ્રારંભબિંદુ તરીકે ઓળખાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: શ્રી અરવિંદે દર્શાવેલા 'સાતત્ય સ્થાપવાની ક્ષમતાનો હેતુ' અંતર્ગત ભૂતકાળ, વર્તમાન અને ભવિષ્યની ભૂમિકા અંગે કયું જોડકું સાચું છે?",
+    "options": [
+      "ભૂતકાળ — સામગ્રી, વર્તમાન — પાયો, ભવિષ્ય — શિખર",
+      "ભૂતકાળ — પાયો, વર્તમાન — સામગ્રી, ભવિષ્ય — શિખર",
+      "ભૂતકાળ — શિખર, વર્તમાન — પાયો, ભવિષ્ય — સામગ્રી",
+      "ભૂતકાળ — પાયો, વર્તમાન — શિખર, ભવિષ્ય — સામગ્રી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી અરવિંદ - શિક્ષણના ઉદ્દેશો (પાના નં.: 53)",
+    "exp": "શ્રી અરવિંદની દૃષ્ટિએ માનવે ભૂતકાળનું સંતાન, વર્તમાનનો સ્વામી અને ભાવિનો સર્જક બનવાનું છે; જ્યાં 'ભૂતકાળ એ પાયો છે, વર્તમાન સામગ્રી છે અને ભવિષ્ય શિખર છે'."
+  },
+  {
+    "q": "પ્રશ્ન 91: શ્રી અરવિંદે કઈ વિશિષ્ટ શિક્ષણ પદ્ધતિની હિમાયત કરી છે, જેમાં વિદ્યાર્થી એક કે બે વિષયમાં તજજ્ઞતા કે નિપુણતા પ્રાપ્ત કરે ત્યાર પછી જ બીજા વિષયોને ક્રમિક રીતે શીખવવામાં આવે છે?",
+    "options": [
+      "સમવાય શિક્ષણ પદ્ધતિ (Correlation method)",
+      "શિક્ષણની ક્રમિક પદ્ધતિ (Successive method of teaching)",
+      "હ્યુરિસ્ટિક પદ્ધતિ (Heuristic method)",
+      "પ્રાયોગિક પદ્ધતિ (Experimental method)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: શ્રી અરવિંદ - શિક્ષણ પદ્ધતિઓ (પાના નં.: 53)",
+    "exp": "શ્રી અરવિંદ ટુકડે-ટુકડે શીખવવાની પ્રથા પ્રત્યે અસંતોષ વ્યક્ત કરીને 'શિક્ષણની ક્રમિક પદ્ધતિ' (Successive method of teaching) ની હિમાયત કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: શ્રી અરવિંદના શિક્ષણદર્શનના પ્રભાવ અને મૂલ્યાંકનના સંદર્ભમાં પ્રવર્તમાન શિક્ષણપ્રથામાં કયા વિષયને સ્વૈચ્છિક વિષય તરીકે પ્રયોગાત્મક ધોરણે દાખલ કરવામાં આવ્યો છે?",
+    "options": [
+      "વેદાંત",
+      "સંસ્કૃત",
+      "યોગ",
+      "તત્ત્વજ્ઞાન"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: શ્રી અરવિંદના શિક્ષણદર્શનનું મૂલ્યાંકન (પાના નં.: 54)",
+    "exp": "શ્રી અરવિંદની આધ્યાત્મિક વિચારધારાના પ્રભાવ હેઠળ પ્રવર્તમાન શિક્ષણપ્રથામાં 'યોગ' ને સ્વૈચ્છિક વિષય તરીકે પ્રયોગાત્મક ધોરણે દાખલ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: \"જે શિક્ષણ વિદ્યા, સભ્યતા, સંસ્કૃતિ, ધર્મનિષ્ઠા, આત્મસંયમ પ્રકટાવે તથા અજ્ઞાન અવિદ્યાદિ બીજા દોષ દૂર કરે તે સાચું શિક્ષણ.\" — સ્વામી દયાનંદ સરસ્વતીએ આ વ્યાખ્યા 'સત્યાર્થપ્રકાશ' ના કયા પ્રકરણમાં આપી છે?",
+    "options": [
+      "પ્રથમ સમુલ્લાસ",
+      "સ્વમન્તવ્યામન્તવ્ય પ્રકાશ:",
+      "વેદવિદ્યા પ્રકાશ:",
+      "શિક્ષાસંસ્કાર પ્રકરણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: સ્વામી દયાનંદ સરસ્વતીનું શિક્ષણ દર્શન (પાના નં.: 54)",
+    "exp": "સ્વામી દયાનંદ સરસ્વતીએ 'સત્યાર્થપ્રકાશ' ના 'સ્વમન્તવ્યામન્તવ્ય પ્રકાશ:' નામના પ્રકરણમાં (પૃ. 819) સાચા શિક્ષણની આ વ્યાખ્યા આપી છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: સ્વામી દયાનંદ સરસ્વતીની શિક્ષણ વિભાવના અનુસાર 'શિક્ષણ' એટલે માણસના અહ્મને કઈ અવસ્થા સુધી લઈ જવાની પ્રક્રિયા છે?",
+    "options": [
+      "અતિમનસ",
+      "અહંબ્રહ્માસ્મિ",
+      "સ્થિતપ્રજ્ઞ",
+      "મોક્ષપ્રાપ્તિ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: સ્વામી દયાનંદ સરસ્વતીનું શિક્ષણ દર્શન (પાના નં.: 54)",
+    "exp": "સ્વામી દયાનંદના મતે શિક્ષણ દ્વારા માણસ અને ઈશ્વર વચ્ચે કોઈ ભેદ રહેતો નથી અને એકતા સ્થપાય છે — એટલે કે 'માણસના અહ્મને બ્રહ્માસ્મિ (અહંબ્રહ્માસ્મિ) સુધી લઈ જવાની પ્રક્રિયા એટલે શિક્ષણ'."
+  },
+  {
+    "q": "પ્રશ્ન 95: પોતાના બાળકની કેળવણી પ્રત્યે બેદરકાર રહેતા માતા-પિતા માટે સ્વામી દયાનંદ સરસ્વતીએ \"માતા શત્રુઃ પિતા વૈરી યેન બાલો ન પાઠિતઃ...\" આ શ્લોક કયા ગ્રંથમાંથી ટાંક્યો છે?",
+    "options": [
+      "મનુસ્મૃતિ",
+      "ચાણક્ય નીતિ",
+      "વિદુર નીતિ",
+      "યજુર્વેદ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - શિક્ષણમાં માતા-પિતાની ભૂમિકા (પાના નં.: 55)",
+    "exp": "બાળકની કેળવણી પ્રત્યે બેદરકાર માતા શત્રુ અને પિતા વૈરી સમાન છે, જેમ હંસના ટોળામાં બગલો શોભતો નથી તેમ સભામાં અભણ શોભતો નથી — આ શ્લોક સ્વામીજીએ 'ચાણક્ય નીતિ (અ.2.11)' માંથી ટાંક્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 96: સ્વામી દયાનંદ સરસ્વતીના મતે બાળકોને શાળાએ મોકલવાની યોગ્ય ઉંમર અને ઉપનયન સંસ્કાર અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: બાળકોને આઠ વર્ષની ઉંમરે શાળાએ મોકલવાં જોઈએ.\nવિધાન 2: બાળકોનું પ્રથમ ઉપનયન ઘરમાં માતા-પિતા દ્વારા તથા બીજું ઉપનયન શાળામાં શિક્ષક દ્વારા થવું જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - શાળા અને બાળક (પાના નં.: 55-56)",
+    "exp": "સ્વામી દયાનંદ સરસ્વતીના મતે આઠ વર્ષની ઉંમરે બાળકોને શાળાએ મોકલવાં જોઈએ અને તેમનું પ્રથમ ઉપનયન ઘરમાં માતા-પિતા દ્વારા તથા બીજું શાળામાં શિક્ષક દ્વારા થવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 97: વિદ્યાર્થી અને શિક્ષક નિર્વિઘ્ને વિદ્યાની આરાધના કરી શકે તે માટે સ્વામી દયાનંદ સરસ્વતીના મતે શિક્ષણ સંસ્થા શહેર જેવી સામાજિક વસ્તીથી ઓછામાં ઓછી કેટલી દૂર હોવી જોઈએ?",
+    "options": [
+      "બે કોસ (ચાર માઈલ)",
+      "ચાર કોસ (આઠ માઈલ)",
+      "પાંચ કોસ (દસ માઈલ)",
+      "આઠ કોસ (સોળ માઈલ)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - શાળા અને બાળક (પાના નં.: 56)",
+    "exp": "સ્વામી દયાનંદના મતે શિક્ષણ સંસ્થા શહેર જેવી સામાજિક વસ્તીથી ઓછામાં ઓછી 'ચાર કોસ (આઠ માઈલ)' દૂર હોવી જોઈએ અને અધ્યયનમાં ખલેલ ન પડે તે માટે વાલીઓને મળવા આવવા પર પ્રતિબંધ હોવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 98: સ્વામી દયાનંદ સરસ્વતીના મતે શિક્ષક (શાણો ડાહ્યો વિદગ્ધ માણસ) અને વિદ્યાર્થીના લક્ષણો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "શિક્ષક સુખ-દુઃખ, લાભ-ગેરલાભ અને સ્તુતિ-નિંદામાં મનની સમતા જાળવી શકતો હોવો જોઈએ.",
+      "શિક્ષક તર્કનિષ્ઠાની સામે સુસંગત હોય એવા જ શાસ્ત્રો શીખવે છે અને સાંભળે છે.",
+      "વિદ્યાર્થીએ કોઈ પણ તર્ક કર્યા વિના શિક્ષકની દરેક વાતનો આંધળો સ્વીકાર કરવો જોઈએ.",
+      "વિદ્યાર્થી ધીરજવાન, સર્જનાત્મક ઉત્પાદકીય ક્ષમતાવાળો અને તર્કસંગત નિર્ણયો લેવાની ક્ષમતાવાળો હોવો જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - શિક્ષક-વિદ્યાર્થી (પાના નં.: 56-57)",
+    "exp": "સ્વામીજીના મતે વિદ્યાર્થી 'તર્કસંગત નિર્ણયો લેવાની ક્ષમતાવાળો' હોવો જોઈએ અને શિક્ષક-વિદ્યાર્થી બંનેએ સંયુક્ત રીતે શું યોગ્ય અને અયોગ્ય છે તેના તર્કસંગત નિર્ણયો લેવા જોઈએ. તેથી વિધાન (C) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: સ્વામી દયાનંદ સરસ્વતીએ સૂચવેલા પાઠ્યક્રમ મુજબ, બાળકના પ્રારંભિક શિક્ષણની જવાબદારીના વયજૂથ અંગે નીચેનામાંથી કયું જોડકું સાચું છે?",
+    "options": [
+      "0 થી 5 વર્ષ — માતા દ્વારા શિક્ષણ; 5 થી 8 વર્ષ — પિતા દ્વારા શિક્ષણ",
+      "0 થી 3 વર્ષ — માતા દ્વારા શિક્ષણ; 3 થી 6 વર્ષ — પિતા દ્વારા શિક્ષણ",
+      "0 થી 6 વર્ષ — માતા દ્વારા શિક્ષણ; 6 થી 10 વર્ષ — ગુરુકુળમાં શિક્ષણ",
+      "0 થી 5 વર્ષ — પિતા દ્વારા શિક્ષણ; 5 થી 8 વર્ષ — માતા દ્વારા શિક્ષણ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - પાઠ્યક્રમ (પાના નં.: 57)",
+    "exp": "સ્વામી દયાનંદના પાઠ્યક્રમ મુજબ સામાન્ય રીતે પાંચ વર્ષ સુધી માતા (શરીર, રીતભાત, ભાષા) અને પાંચથી આઠ વર્ષ દરમિયાન પિતા (રમતગમત, સામાન્ય જ્ઞાન, શુદ્ધ ઉચ્ચારણ, શ્લોક-સૂત્ર) બાળકને શિક્ષણ આપવા માટે જવાબદાર હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: સ્વામી દયાનંદ સરસ્વતીના પાઠ્યક્રમ મુજબ, પ્રાથમિક શિક્ષણમાં માતૃભાષા શીખતી વખતે બીજી કઈ ભાષાઓનું શિક્ષણ અપાવું જરૂરી છે?",
+    "options": [
+      "હિન્દી અને અંગ્રેજી",
+      "સંસ્કૃત અને અન્ય એક વિદેશી ભાષા",
+      "માત્ર સંસ્કૃત અને પાલિ",
+      "સંસ્કૃત અને પ્રાદેશિક ભાષા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1: સ્વામી દયાનંદ - પાઠ્યક્રમ (પાના નં.: 57)",
+    "exp": "સ્વામી દયાનંદના મતે પ્રાથમિક શિક્ષણમાં માતૃભાષા શીખતી વખતે 'સંસ્કૃત અને અન્ય એક વિદેશી ભાષા' નું શિક્ષણ અપાય તે જરૂરી છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્ષ-2 (અ) કેળવણી, સમાજ, અભ્યાસક્રમ અને અધ્યેતા (ભાગ-1)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "fy2apart1.html",
+            testUploadDate: "2026-11-26"
+        })
+    });
+}
+</script>
+</body>
+</html>
