@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ) : ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા) | ભાગ – ૨ (૭૫ પ્રશ્નો)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 75 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ) : ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ)<br>ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">ભાગ – ૨: પ્રશ્ન ૧૦૧ થી ૧૭૫ | ઉચ્ચ સ્તરીય MCQ પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૭૫</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૭૫ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 75 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ) : ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા) (ભાગ – ૨) | ૭૫ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 75</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૭૫ પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ) : ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા) | ભાગ – ૨)
+const questions = [
+  {
+    "q": "પ્રશ્ન ૧૦૧: ‘પદ’ સાહિત્યસ્વરૂપના સંદર્ભમાં નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: ‘પદ’ શબ્દનો ઉલ્લેખ સંસ્કૃત કવિ જયદેવના ‘ગીત-ગોવિંદ’ માં મળે છે, જેમાં ‘પદ’ નો અર્થ ‘પંક્તિ’ કરવામાં આવે છે.\nવિધાન ૨: પદનું ઉત્પત્તિ સ્થાન ઊર્મિ છે અને તેને અર્વાચીન કાવ્ય સંજ્ઞા આપવી હોય તો ‘ઊર્મિકાવ્ય (લિરિક)’ કહી શકાય.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ મધ્યકાલીન ગુજરાતી સાહિત્યના પદ્યસ્વરૂપો | પાના નં.: ૭૯",
+    "exp": "મધ્યકાળમાં પદ એ ટૂંકું, સાદું ગેય ઊર્મિકાવ્ય છે; ‘ગીત-ગોવિંદ’ માં તેનો અર્થ પંક્તિ છે અને તેનું ઉત્પત્તિ સ્થાન ઊર્મિ હોવાથી તેને ઊર્મિકાવ્ય (લિરિક) કહી શકાય."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૨: નરસિંહ મહેતાનાં પ્રભાતિયાં મુખ્યત્વે કયા બંધમાં લખાયેલાં છે?",
+    "options": [
+      "ચોપાઈ બંધમાં",
+      "ઝૂલણા બંધમાં",
+      "રોળા બંધમાં",
+      "દુહા બંધમાં"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – પ્રભાતિયાં | પાના નં.: ૮૦",
+    "exp": "‘નરસિંહ મહેતાના ઝૂલણા બંધમાં લખાયેલાં પ્રભાતમાં ગાવાનાં પદ એટલે પ્રભાતિયાં’ — પ્રભાતિયું એ ‘પદ’ નો જ એક પ્રકાર છે, જે તેના ઢાળ અને ગાવાના સમયને કારણે અલગ સ્થાન પામે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૩: મધ્યકાલીન ભજનની પંક્તિઓ અને તેમાં વ્યક્ત થયેલા ભાવનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (ભજનની પંક્તિ)  |  વિભાગ – બ (વ્યક્ત થતો ભાવ)\n૧. અખિલ બ્રહ્માંડમાં એક તું શ્રી હરિ — (ક) જગતનું મિથ્યાપણું\n૨. જૂનું તો થયું રે દેવળ જૂનું તો થયું — (ખ) વૈરાગ્ય\n૩. રામ રાખે તેમ રહીએ — (ગ) ઈશ્વરનું એક જ સ્વરૂપ\n૪. ત્યાગ ન ટકે વૈરાગ્ય વિના, કરો કોટિ ઉપાયજી — (ઘ) ઈશ્વર પ્રત્યેની અપ્રતિમ શ્રદ્ધા",
+    "options": [
+      "૧ – (ગ), ૨ – (ક), ૩ – (ઘ), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ઘ), ૩ – (ક), ૪ – (ખ)",
+      "૧ – (ક), ૨ – (ગ), ૩ – (ઘ), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ક), ૩ – (ખ), ૪ – (ઘ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – ભજન | પાના નં.: ૮૦",
+    "exp": "મૉડ્યૂલમાં આપેલાં ઉદાહરણો મુજબ ‘અખિલ બ્રહ્માંડમાં...’ માં ઈશ્વરનું એક જ સ્વરૂપ, ‘જૂનું તો થયું રે દેવળ’ માં જગતનું મિથ્યાપણું, ‘રામ રાખે તેમ રહીએ’ માં ઈશ્વર પ્રત્યેની અપ્રતિમ શ્રદ્ધા અને ‘ત્યાગ ન ટકે...’ માં વૈરાગ્યનો ભાવ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૪: ‘સુભાષિત’ સાહિત્યસ્વરૂપના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "સુભાષિતનો અર્થ ‘સુષ્ઠુભાષિત’ એટલે કે સુંદર રીતે બોલાયેલ વિચાર થાય છે.",
+      "તે સંસ્કૃતમાંથી ઊતરી આવેલો સાહિત્ય પ્રકાર છે.",
+      "સુભાષિતમાં સચોટ અને ધારી અસર પહોંચાડવાની અજબ શક્તિ હોય છે.",
+      "ઉપરનાં ત્રણેય વિધાનો સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – સુભાષિત | પાના નં.: ૮૦",
+    "exp": "સુભાષિત સંસ્કૃતમાંથી ઊતરી આવેલો પ્રકાર છે, જેનો અર્થ ‘સુષ્ઠુભાષિત’ (સુંદર રીતે બોલાયેલ વિચાર) થાય છે અને તેમાં સચોટ અસર પહોંચાડવાની શક્તિ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૫: કયા કાવ્યસ્વરૂપને ‘કાવ્યનું પાણીદાર મોતી’ તરીકે ઓળખવામાં આવે છે, જેનું મુખ્ય લક્ષણ ‘ચાર ચરણ અને ચમત્કાર વિચાર’ છે?",
+    "options": [
+      "છપ્પા",
+      "મુક્તક",
+      "સોનેટ",
+      "હાઇકુ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – મુક્તક | પાના નં.: ૮૧",
+    "exp": "મુક્તક એટલે ‘કાવ્યનું પાણીદાર મોતી’; ચાર ચરણ અને ચમત્કાર વિચાર એ મુક્તકનું મુખ્ય લક્ષણ છે અને તે મુખ્યત્વે દુહા કે સોરઠામાં જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૬: ઉખાણાનો સર્જક લોકસમૂહ હોવાથી ઉખાણાને બીજા કયા નામે પણ ઓળખવામાં આવે છે?",
+    "options": [
+      "લોકોક્તિ",
+      "અવળવાણી",
+      "કડવું",
+      "ગર્ભદીપ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – ઉખાણું | પાના નં.: ૮૧",
+    "exp": "લોક અનુભવમાંથી ઉખાણાનો જન્મ થયો છે અને તેનો સર્જક લોકસમૂહ હોવાથી ઉખાણાને ‘લોકોક્તિ’ પણ કહેવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૭: ‘છપ્પા’ કાવ્યપ્રકારની રચના અને તેના કવિઓ અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: છપ્પા એ માત્રામેળ છંદનો પ્રકાર છે, જેમાં ચાર પદ રોળા છંદના અને બે પદ ઉલ્લાસ છંદના હોય છે.\nવિધાન ૨: અખાએ છપ્પામાં કટાક્ષનો ઉપયોગ કર્યો છે, જ્યારે ધીરાની ‘અવળવાણી’ છપ્પામાં રજૂ થઈ છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – છપ્પા | પાના નં.: ૮૧",
+    "exp": "છપ્પામાં છ પદ (છપ્પય છંદ) હોય છે—પહેલાં ચાર પદ રોળા છંદના (જેમાં વિચાર રજૂ થાય) અને બાકીના બે પદ ઉલ્લાસ છંદના (જેમાં ઉપસંહાર કરાય). અખાના કટાક્ષ અને ધીરાની ‘અવળવાણી’ છપ્પામાં પ્રસિદ્ધ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૮: ‘આખ્યાન’ કાવ્યપ્રકારના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "‘આખ્યાન’ શબ્દ સંસ્કૃત ‘આ + ખૈ (ખ્યા)’ પરથી આવ્યો છે, જેનો અર્થ ‘માંડીને કથા કહેવી’ થાય છે.",
+      "મૂળ તો આખ્યાન એટલે પૌરાણિક પ્રસંગનું સાભિનય કથાગાન.",
+      "આખ્યાન એ કડવાબદ્ધ વર્ણનાત્મક કાવ્ય છે.",
+      "આખ્યાનનું કદ મહાકાવ્ય કરતાં પણ વધુ વિસ્તૃત હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – આખ્યાન | પાના નં.: ૮૧",
+    "exp": "આખ્યાનનું કદ મધ્યમ હોય છે—ઊર્મિકાવ્ય જેટલું નાનું નહીં અને મહાકાવ્ય જેટલું વિસ્તૃત પણ નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૦૯: ‘ગરબો’ અને ‘ગરબી’ ના સંદર્ભમાં નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: ‘ગરબો’ શબ્દ સંસ્કૃત ‘ગર્ભદીપ’ ઉપરથી ઊતરી આવ્યો છે અને તે મોટાભાગે દેવી ભક્તિ સાથે સંબંધ ધરાવે છે.\nવિધાન ૨: ‘ગરબી’ વૈષ્ણવ સંપ્રદાયની કૃષ્ણલીલા સાથે જોડાયેલી છે અને ‘ઝઘડો લોચન મનનો, રસિયા તે જનનો’ એ દયારામની ગરબી છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૭ પદ્યસ્વરૂપો – ગરબી-ગરબો | પાના નં.: ૮૨",
+    "exp": "ગરબો સંસ્કૃત ‘ગર્ભદીપ’ (માટીના છિદ્રોવાળા ઘડામાં મૂકેલો દીવો) પરથી આવ્યો છે જે દેવી ભક્તિ સાથે (વલ્લભ મેવાડાના ગરબા) અને ગરબી કૃષ્ણલીલા સાથે (દયારામની ગરબી) જોડાયેલી છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૦: ‘સોનેટ’ કાવ્યપ્રકારના મૂળ અને સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "‘સોનેટ’ શબ્દ ઇટાલિયન ‘Suono’ (અવાજ) ના લઘુતાવાચક શબ્દ ‘Sonneto’ પરથી આવ્યો છે.",
+      "કેટલાકના મતે સોનેટનું મૂળ ગ્રીક ‘એપિગ્રામ’ માં રહેલું છે.",
+      "ચૌદ પંક્તિના અને એક વિચાર ધરાવતા ચિંતનપ્રધાન કાવ્યને સોનેટ કહે છે.",
+      "ગુજરાતીમાં સોનેટની પ્રાણપ્રતિષ્ઠા કવિ કાન્તે ‘વસંતવિજય’ દ્વારા કરી હતી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – સોનેટ | પાના નં.: ૮૨-૮૩",
+    "exp": "ગુજરાતીમાં સોનેટની પ્રાણપ્રતિષ્ઠા શ્રી બ. ક. ઠાકોરે ભાવચમત્કૃતિ અને શબ્દસર્જનની કલાને નવું રૂપ આપીને કરી છે; જ્યારે કવિ કાન્તે ‘વસંતવિજય’ થી ખંડકાવ્યનો આરંભ કર્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૧: ‘ખંડકાવ્ય’ ના સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "ખંડકાવ્ય એટલે કોઈ મહાકાવ્યનો એક તૂટેલો ખંડ.",
+      "ખંડકાવ્યમાં જીવનનું અખંડદર્શન નહીં પણ ખંડદર્શન રજૂ થાય છે અને તે આખ્યાન કરતાં નાનો, પણ પદ કરતાં મોટો કાવ્યપ્રકાર છે.",
+      "ખંડકાવ્યનું વિષયવસ્તુ માત્ર રામાયણ અને મહાભારતમાંથી જ લઈ શકાય, માનવજીવન કે પશુ-પક્ષી જીવન તેનો વિષય બની શકે નહીં.",
+      "ખંડકાવ્યનો આરંભ કવિ કલાપીના ‘ગ્રામમાતા’ થી થયો હતો."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ખંડકાવ્ય | પાના નં.: ૮૩",
+    "exp": "ખંડકાવ્યમાં વસ્તુનો એક ખંડ સ્પર્શવામાં આવે છે, તે ટૂંકી વાર્તાને મળતો, આખ્યાન કરતાં નાનો અને પદ કરતાં મોટો પ્રકાર છે; તેનો આરંભ કવિ કાન્તના ‘વસંતવિજય’ થી થયો હતો."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૨: ગુજરાતી સાહિત્યનાં પ્રસિદ્ધ ખંડકાવ્યો અને તેના કવિઓનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (કવિ)  |  વિભાગ – બ (ખંડકાવ્ય)\n૧. કલાપી — (ક) બાહુક\n૨. લલિત — (ખ) મહાભિનિષ્કમણ\n૩. નરસિંહરાવ — (ગ) ઊર્મિલા\n૪. બોટાદકર — (ઘ) ભરત",
+    "options": [
+      "૧ – (ઘ), ૨ – (ક), ૩ – (ખ), ૪ – (ગ)",
+      "૧ – (ઘ), ૨ – (ખ), ૩ – (ક), ૪ – (ગ)",
+      "૧ – (ક), ૨ – (ઘ), ૩ – (ખ), ૪ – (ગ)",
+      "૧ – (ઘ), ૨ – (ક), ૩ – (ગ), ૪ – (ખ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ખંડકાવ્ય | પાના નં.: ૮૩",
+    "exp": "કવિ કલાપીનું ‘ભરત’, લલિતનું ‘બાહુક’, નરસિંહરાવનું ‘મહાભિનિષ્કમણ’ અને બોટાદકરનું ‘ઊર્મિલા’ પુરાણપ્રસિદ્ધ વિષયોવાળાં ખંડકાવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૩: ‘ઊર્મિકાવ્ય’ માટે વપરાતો ગ્રીક શબ્દ ‘Lyric’ મૂળ શાના માટે પ્રયોજાતો હતો?",
+    "options": [
+      "ચૌદ પંક્તિના ચિંતનપ્રધાન કાવ્ય માટે",
+      "લાયર નામના પક્ષીના પીંછાના આકારની વીણા સાથે ગવાતા ગીત માટે",
+      "યુદ્ધના મેદાનમાં ગવાતા શૌર્યગીત માટે",
+      "કલમથી ટપકતાં આંસુ રૂપી પ્રેમકાવ્ય માટે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ઊર્મિકાવ્ય | પાના નં.: ૮૩-૮૪",
+    "exp": "ગ્રીક શબ્દ ‘Lyric’ એ લાયર નામના પક્ષીના પીંછાના આકારની વીણા સાથે ગવાતા ગીત માટે પ્રયોજાતો હતો અને પછી ઊર્મિગીત (ઊર્મિકાવ્ય) માટે રૂઢ બન્યો."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૪: ‘ગઝલ’ સાહિત્યસ્વરૂપ અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: ગઝલ એ ફારસી સાહિત્ય સ્વરૂપ છે, જેનો ફારસીમાં અર્થ ‘પ્રેમનું બયાન’ અથવા ‘પ્રેમયુક્ત ભાષામાં કાવ્યરૂપે બોલવું’ થાય છે.\nવિધાન ૨: ‘કલમથી ટપકતાં આંસુ એટલે ગઝલ’ એમ પણ કહેવાયું છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ગઝલ | પાના નં.: ૮૪",
+    "exp": "ગઝલ એ ગુજરાતી ભાષાની ભૂમિમાં ફારસીમાંથી આવેલો ‘પરદેશી રોપો’ છે, જેનો અર્થ ‘પ્રેમનું બયાન’ થાય છે અને તેને ‘કલમથી ટપકતાં આંસુ’ પણ કહેવાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૫: ગઝલમાં પ્રભુને માશૂક ગણીને પ્રભુપ્રેમ અને ભક્તિનું વર્ણન થયું હોય તેને ______ અને માનવ પ્રણયના દુન્વયી પ્રેમનું વર્ણન હોય તેને ______ તરીકે ઓળખવામાં આવે છે.",
+    "options": [
+      "ઇશ્કે મિજાજી, ઇશ્કે હકીકી",
+      "ઇશ્કે હકીકી (ઇશ્કે ઇલાહી), ઇશ્કે મિજાજી",
+      "ઇશ્કે ઇલાહી, ઇશ્કે હકીકી",
+      "ઇશ્કે મિજાજી, ઇશ્કે ઇલાહી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ગઝલ | પાના નં.: ૮૪",
+    "exp": "પ્રભુપ્રેમનું વર્ણન કરતી ગઝલ ‘ઇશ્કે હકીકી’ અથવા ‘ઇશ્કે ઇલાહી’ તરીકે અને માનવ પ્રણય (દુન્વયી પ્રેમ) નું વર્ણન કરતી ગઝલ ‘ઇશ્કે મિજાજી’ તરીકે ઓળખાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૬: પ્રસિદ્ધ ગઝલ પંક્તિઓ અને તેના ગઝલકારનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (ગઝલ પંક્તિ)  |  વિભાગ – બ (ગઝલકાર)\n૧. મને આ જોઈને હસવું હજારો વાર આવે છે; પ્રભુ! તારા બનાવેલા, જે તને આજે બનાવે છે! — (ક) બેફામ\n૨. નદીની રેતમાં રમતું નગર મળે ન મળે — (ખ) શયદા\n૩. ઓ હૃદય ભલા કેવો ફસાવ્યો છે મને, જે નથી બન્યાં મારાં એનો બનાવ્યો છે મને — (ગ) આદિલ મન્સુરી",
+    "options": [
+      "૧ – (ખ), ૨ – (ક), ૩ – (ગ)",
+      "૧ – (ક), ૨ – (ગ), ૩ – (ખ)",
+      "૧ – (ખ), ૨ – (ગ), ૩ – (ક)",
+      "૧ – (ગ), ૨ – (ખ), ૩ – (ક)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – ગઝલ | પાના નં.: ૮૪",
+    "exp": "‘મને આ જોઈને હસવું...’ શયદાની, ‘નદીની રેતમાં...’ આદિલ મન્સુરીની અને ‘ઓ હૃદય ભલા...’ બેફામની પ્રસિદ્ધ ગઝલ પંક્તિઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૭: “ઝાકળ જેવું, જીવી ગઈ તું હવે, સ્મરણો ભીનાં.” — આ કાવ્યરચના કયા વિદેશી સાહિત્ય સ્વરૂપનું ઉદાહરણ છે?",
+    "options": [
+      "ઇટાલિયન સ્વરૂપ – સોનેટ",
+      "જાપાની સ્વરૂપ – હાઇકુ",
+      "ફારસી સ્વરૂપ – ગઝલ",
+      "ગ્રીક સ્વરૂપ – ઊર્મિકાવ્ય"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૮ અર્વાચીન પદ્ય સ્વરૂપો – હાઇકુ | પાના નં.: ૮૪",
+    "exp": "‘હાઇકુ’ એ જાપાની સાહિત્ય સ્વરૂપ છે, જેને ગુજરાતીમાં શ્રી ઝીણાભાઈ રતનજી દેસાઈ ‘સ્નેહરશ્મિ’ દ્વારા પુરસ્કૃત કરવામાં આવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૮: ‘નવલિકા’ (ટૂંકીવાર્તા) અને ‘નવલકથા’ વચ્ચેના તફાવત અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: નવલકથામાં જીવનની અખિલાઈ હોય છે, જ્યારે નવલિકામાં જીવનનો એક નાનકડો ભાગ જ આલેખવામાં આવે છે.\nવિધાન ૨: ટૂંકીવાર્તાનો ઉલ્લેખ પ્રાચીન ગ્રંથો ‘હિતોપદેશ’ અને ‘પંચતંત્ર’ માં પણ મળે છે, પરંતુ વીસમી સદીના આરંભે આવેલી નવલિકા યંત્રયુગ અને માનવીના દોડધામભર્યા જીવનને આભારી છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગુજરાતી સાહિત્યનાં ગદ્ય સ્વરૂપો – નવલિકા | પાના નં.: ૮૫",
+    "exp": "નવલિકામાં વસ્તુની પસંદગી, બિનજરૂરી વસ્તુનો ત્યાગ અને સુબદ્ધતા મહત્વનાં છે; તે જીવનનો નાનકડો ભાગ રજૂ કરે છે અને આધુનિક નવલિકા યંત્રયુગની ઝડપને આભારી છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૧૯: “જે વીજળીના ચમકારા પેઠે એક દ્રષ્ટિબિંદુ રજૂ કરતાં સોંસરવી નીકળી જાય અને બીજી ઝાઝી લપછપ વિના અંગુલિનિર્દેશ કરી સૂતેલી લાગણીઓને જગાડીને વાચકની આસપાસ એક નવીન કલ્પનાસૃષ્ટિ ઘડી કાઢે તે ટૂંકીવાર્તા.” — આ વ્યાખ્યા કોણે આપી છે તથા ગુજરાતી પ્રથમ ટૂંકીવાર્તા ક્યારે અને કોની કૃતિથી શરૂ થઈ?",
+    "options": [
+      "ક. મા. મુનશી | ૧૯૧૩ માં ‘મલયાનિલ’ ની ‘ગોવાલણી’ થી",
+      "ધૂમકેતુ | ૧૯૧૩ માં ‘મલયાનિલ’ ની ‘ગોવાલણી’ થી",
+      "ધૂમકેતુ | ૧૯૧૫ માં ‘ધૂમકેતુ’ ની ‘પોસ્ટઓફિસ’ થી",
+      "પન્નાલાલ પટેલ | ૧૯૧૩ માં ‘મલયાનિલ’ ની ‘ગોવાલણી’ થી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – નવલિકા | પાના નં.: ૮૫",
+    "exp": "ટૂંકીવાર્તાની આ પ્રસિદ્ધ વ્યાખ્યા ‘ધૂમકેતુ’ એ આપી છે અને ગુજરાતી પ્રથમ ટૂંકીવાર્તાનો આરંભ ઇ.સ. ૧૯૧૩ માં ‘મલયાનિલ’ ની ‘ગોવાલણી’ થી થયો."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૦: ‘અંધેરી નગરીનો ગંધર્વસેન’ નામની નવલકથાના લેખક કોણ છે?",
+    "options": [
+      "મહીપતરામ નીલકંઠ",
+      "નંદશંકર તુળજાશંકર મહેતા",
+      "હરગોવિંદદાસ કાંટાવાળા",
+      "ગોવર્ધનરામ ત્રિપાઠી"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – નવલકથા | પાના નં.: ૮૫",
+    "exp": "નવલકથા સ્વરૂપના વિકાસમાં હરગોવિંદદાસ કાંટાવાળાએ ‘અંધેરી નગરીનો ગંધર્વસેન’ નામની નવલકથા આપી છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૧: ગુજરાતી સાહિત્યમાં ‘નિબંધ’ સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પાશ્ચાત્ય સાહિત્યના સંપર્કને કારણે ગુજરાતી સાહિત્યમાં ‘નિબંધ’ ગદ્ય પ્રકાર સ્વીકારાયો છે.",
+      "ઇ.સ. ૧૮૫૧ માં ગુજરાતી સાહિત્યનો પ્રથમ નિબંધ ‘મંડળી મળવાથી થતા લાભ’ નર્મદે આપ્યો.",
+      "ગુજરાતીમાં નિબંધને કલાત્મક ઘાટ આપનાર નવલરામ છે.",
+      "નિબંધમાં અનાવશ્યક વિસ્તાર અનિવાર્ય છે અને તેમાં વ્યક્તિના વ્યક્તિત્વનું પ્રકાશન થતું નથી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – નિબંધ | પાના નં.: ૮૬",
+    "exp": "નિબંધ એવી પૂર્ણ, સંક્ષિપ્ત અને વ્યક્તિત્વનિષ્ઠ સાહિત્યરચના છે જેમાં સંગઠન અને બુદ્ધિતત્વ હોય, અનાવશ્યક વિસ્તાર ન હોય અને વિષય દ્વારા વ્યક્તિના વ્યક્તિત્વનું પ્રકાશન થતું હોય."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૨: કયો ગદ્ય સાહિત્યપ્રકાર એકી વખતે ઇતિહાસ કે વિજ્ઞાન અને કલાનાં તત્ત્વોનું સામંજસ્ય સાંધી જ્ઞાનનિષ્ઠ, કલાનિષ્ઠ આસ્વાદની અનુકૂળતા કરી આપે છે?",
+    "options": [
+      "જીવનચરિત્ર",
+      "નવલિકા",
+      "એકાંકી",
+      "પ્રવાસવર્ણન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – જીવનચરિત્ર | પાના નં.: ૮૬",
+    "exp": "જીવનચરિત્ર એ અમુક ચોક્કસ સ્થળ-કાળમાં જીવી ગયેલી ચોક્કસ વ્યક્તિઓના જીવનનું ઇતિહાસનિષ્ઠ નિરૂપણ કરતો ગદ્યપ્રકાર છે, જે ઇતિહાસ/વિજ્ઞાન અને કલાનાં તત્ત્વોનું સામંજસ્ય સાંધે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૩: ‘આત્મકથા કે આત્મચરિત્ર’ ના સંદર્ભમાં નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: આત્મચરિત્ર એ ગદ્ય સ્વરૂપનું એવું વૃત્તાંત છે જેનો કર્તા જ કથાનો પ્રધાન નાયક હોય છે.\nવિધાન ૨: ગંભીર અને સત્યપ્રતિષ્ઠા આત્મસમીક્ષા જ આત્મકથા અભિધાનને યોગ્ય ગણાય.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – આત્મકથા | પાના નં.: ૮૬",
+    "exp": "સત્યસૂત્રથી જોડાયેલો વ્યક્તિનો ચિતાર એટલે આત્મચરિત્ર; તેમાં કર્તા પોતે જ પ્રધાન નાયક હોય છે અને સત્યને વફાદાર રહી પોતાના જીવનની સામગ્રી આલેખવાની હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૪: મૉડ્યૂલમાં ગુજરાતી સાહિત્યની પ્રસિદ્ધ આત્મકથાઓ તરીકે ઉલ્લેખાયેલી કૃતિઓ અને તેના લેખકોની કઈ જોડ સંપૂર્ણ સાચી છે?",
+    "options": [
+      "સત્યના પ્રયોગો – ગાંધીજી | મારી હકીકત – નર્મદ | સ્મરણયાત્રા – કાકા કાલેલકર",
+      "સત્યના પ્રયોગો – ગાંધીજી | મારી હકીકત – દલપતરામ | સ્મરણયાત્રા – ઉમાશંકર જોષી",
+      "સત્યના પ્રયોગો – મહાદેવભાઈ દેસાઈ | મારી હકીકત – નર્મદ | સ્મરણયાત્રા – કાકા કાલેલકર",
+      "સત્યના પ્રયોગો – ગાંધીજી | મારી હકીકત – નવલરામ | સ્મરણયાત્રા – ગિજુભાઈ બધેકા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – આત્મકથા | પાના નં.: ૮૭",
+    "exp": "મૉડ્યૂલમાં ‘સત્યના પ્રયોગો’ (ગાંધીજી), ‘મારી હકીકત’ (નર્મદ) અને ‘સ્મરણયાત્રા’ (કાકા કાલેલકર) ને ગુજરાતી સાહિત્યની પ્રસિદ્ધ આત્મકથાઓ તરીકે દર્શાવવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૫: ‘નાટક’ ગદ્ય સ્વરૂપની સંપૂર્ણ અસર અનુભવવા માટે કયા ત્રણ ઘટકોની અપેક્ષા રહે છે?",
+    "options": [
+      "લેખક, પ્રકાશક અને વિવેચક",
+      "સર્જક, અભિનેતા-અભિનેત્રીઓ અને પ્રેક્ષકો",
+      "કવિ, ગાયક અને વાદ્યકાર",
+      "વાર્તાકાર, વાચક અને શ્રોતા"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૨.૩.૯ ગદ્ય સ્વરૂપો – નાટક | પાના નં.: ૮૭",
+    "exp": "નાટક કેવળ લખાયેલા શબ્દો ઉપર આધાર રાખતું નથી; તેની સંપૂર્ણ અસર અનુભવવા માટે સર્જક, અભિનેતા અને અભિનેત્રીઓ તથા પ્રેક્ષકો એમ ત્રણેયની અપેક્ષા રહે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૬: રાષ્ટ્રીય અભ્યાસક્રમ માળખું (NCF-2005) માં ભાષાના મહત્વ અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: NCF-2005 માં શિક્ષણના માધ્યમ તરીકે બાળકોની માતૃભાષા (આદિવાસી બોલીઓ કે પોતાની બોલી સહિત) ના સ્વીકાર પર ભાર મૂકવામાં આવ્યો છે.\nવિધાન ૨: માતૃભાષામાં સંગીન ભાષા અધ્યાપનશાસ્ત્રના આધારે જ અંગ્રેજીના અધ્યયનમાં સફળતા શક્ય છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૧ NCF-2005માં ભાષાનું મહત્વ | પાના નં.: ૯૫-૯૬",
+    "exp": "NCF-2005 માં બાળકોની માતૃભાષા (બોલી સહિત) ના સ્વીકાર, ત્રિભાષાસૂત્રના અમલ અને માતૃભાષાના સંગીન અધ્યાપનશાસ્ત્ર દ્વારા અંગ્રેજીના અધ્યયનમાં સફળતા પર ભાર મૂકાયો છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૭: NCF-2005 મુજબ બાળકો જે ભાર કે દબાણનો સામનો કરી રહ્યા છે તેને દૂર કરવા માટે શાળાકીય અભ્યાસક્રમનાં કયાં ચાર ક્ષેત્રોમાં મહત્વના ફેરફારોની ભલામણ કરવામાં આવી છે?",
+    "options": [
+      "ભાષા, ગણિત, વિજ્ઞાન અને સામાજિક વિજ્ઞાન",
+      "ભાષા, સંગીત, ચિત્રકલા અને વ્યાયામ",
+      "માતૃભાષા, હિન્દી, અંગ્રેજી અને સંસ્કૃત",
+      "શ્રવણ, કથન, વાંચન અને લેખન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૧ NCF-2005માં ભાષાનું મહત્વ | પાના નં.: ૯૬",
+    "exp": "શિક્ષણને પ્રવર્તમાન પરિસ્થિતિ અને ભાવિ જરૂરિયાતોને અનુરૂપ બનાવવા તથા બાળકોનો ભાર દૂર કરવા NCF-2005 માં ભાષા, ગણિત, વિજ્ઞાન અને સામાજિક વિજ્ઞાન એમ ચાર ક્ષેત્રોમાં ફેરફારની ભલામણ કરાઈ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૮: NCF-2005 મુજબ ધોરણ ૬-૭-૮ માં ભાષા શિક્ષણ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "બાળકો માત્ર પ્રાદેશિક ભાષાનો જ અભ્યાસ કરે.",
+      "બાળકો પ્રાદેશિક ભાષા, અંગ્રેજી ભાષા, અહિન્દી ભાષી રાજ્યોમાં હિન્દી અને આધુનિક ભારતીય ભાષા તરીકે સંસ્કૃત ભાષાનો અભ્યાસ પણ કરી શકે.",
+      "ધોરણ ૬ થી ૮ માં માત્ર અંગ્રેજી અને સંસ્કૃતનો જ અભ્યાસ ફરજિયાત છે.",
+      "પ્રત્યેક બાળકના શાળાકીય અધ્યયનનો પાયો નાખવા બધા જ પ્રાથમિક વર્ગોમાં માત્ર લેખન ઉપર ભાર મૂકવો આવશ્યક છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૧ NCF-2005માં ભાષાનું મહત્વ | પાના નં.: ૯૬",
+    "exp": "NCF-2005 મુજબ ધોરણ ૬-૭-૮ માં પ્રાદેશિક ભાષા, અંગ્રેજી, અહિન્દી ભાષી રાજ્યોમાં હિન્દી તથા આધુનિક ભારતીય ભાષા તરીકે સંસ્કૃતનો અભ્યાસ કરી શકાય છે; તેમજ પ્રાથમિક વર્ગોમાં ‘વાંચન’ ઉપર ભાર મૂકવો આવશ્યક ગણાયો છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૨૯: વૈશ્વિક કક્ષાએ માતૃભાષાની સ્થિતિ અંગે મૉડ્યૂલમાં વ્યક્ત કરાયેલા વિચારો પૈકી નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "એક ભાષા બીજી ભાષામાંથી શબ્દો સ્વીકારે છે અને શબ્દોના સ્વીકારથી ભાષા સમૃદ્ધ બને છે.",
+      "‘ભાષા બોલનાર ભાષાને ગૌરવ અપાવે છે’ અને ‘કોઈપણ ભાષા ચડિયાતી પણ નથી કે ઊતરતી પણ નથી.’",
+      "વૈશ્વિક કક્ષાએ માતૃભાષાનું અસ્તિત્વ ટકાવવા શિક્ષક સજ્જ, નિષ્ઠાવાન અને માતૃભાષાના ગૌરવ માટે જાગૃત હોય તે પ્રથમ આવશ્યકતા છે.",
+      "અન્ય ભાષાઓના શબ્દોનો પ્રયોગ વર્તમાન સમયમાં માત્ર ગુજરાતી ભાષામાં જ જોવા મળે છે, અન્ય ભાષાઓમાં નહીં."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૨ વૈશ્વિક કક્ષાએ માતૃભાષા | પાના નં.: ૯૬-૯૭",
+    "exp": "મૉડ્યૂલ મુજબ વર્તમાન સમયમાં માત્ર ગુજરાતીમાં જ નહીં, પરંતુ અન્ય ભાષાઓમાં પણ અન્ય ભાષાઓના ઉપયોગનું પ્રમાણ વધ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૦: “શિક્ષણ તો આહાર જેવું છે. પહેલા જ કોળિયે સ્વાદનો આનંદ મળવો જોઈએ.” — માતૃભાષાના મહત્વના સંદર્ભમાં આ વિધાન કોનું છે?",
+    "options": [
+      "મહાત્મા ગાંધી",
+      "કવિવર રવીન્દ્રનાથ ટાગોર",
+      "ઉમાશંકર જોષી",
+      "ગિજુભાઈ બધેકા"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૩ માતૃભાષાનું મહત્વ | પાના નં.: ૯૭",
+    "exp": "માતૃભાષા દ્વારા શિક્ષણમાં જ પહેલા કોળિયે સ્વાદનો આનંદ મળી શકે છે તેવું જણાવતાં કવિવર ટાગોરનું આ અવતરણ મૉડ્યૂલમાં ટાંકવામાં આવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૧: વૈજ્ઞાનિક દ્રષ્ટિકોણના સંદર્ભમાં માતૃભાષાનું મહત્વ દર્શાવતાં પરિબળો અને તેમની સમજૂતીનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (વૈજ્ઞાનિક પરિબળ)  |  વિભાગ – બ (વિશેષતા)\n૧. સંવેદનાની સમજ-પ્રગટીકરણ — (ક) અન્ય ભાષાઓના શ્રવણ વખતે પ્રથમ સંકેતાંકન (D-coding) માતૃભાષામાં જ થાય છે.\n૨. સ્મૃતિતંત્રની સજ્જતા — (ખ) ગર્ભાધાનથી જ માતાના ઉદરમાં શિશુનું પૂર્વશિક્ષણ (Prenatal Learning) શરૂ થઈ જાય છે.\n૩. જનીનતત્ત્વોનું મનોવિજ્ઞાન — (ગ) શારીરિક મનોવિજ્ઞાન અનુસાર સમગ્ર ચેતાતંત્ર અને લાગણીતંત્ર માતૃભાષાના શબ્દો થકી જાગૃત બને છે.",
+    "options": [
+      "૧ – (ગ), ૨ – (ક), ૩ – (ખ)",
+      "૧ – (ક), ૨ – (ગ), ૩ – (ખ)",
+      "૧ – (ગ), ૨ – (ખ), ૩ – (ક)",
+      "૧ – (ખ), ૨ – (ક), ૩ – (ગ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૩ વૈજ્ઞાનિક દ્રષ્ટિકોણ | પાના નં.: ૯૮",
+    "exp": "સંવેદનાની સમજમાં ચેતાતંત્ર-લાગણીતંત્ર માતૃભાષાથી જાગૃત બને છે, સ્મૃતિતંત્રમાં અન્ય ભાષાનું સંકેતાંકન માતૃભાષામાં થાય છે અને જનીનતત્ત્વોના મનોવિજ્ઞાન (Genetic Psychology) મુજબ ગર્ભાધાનથી પૂર્વશિક્ષણ શરૂ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૨: અન્ય વિષયોના અધ્યયનમાં માતૃભાષાના અનુબંધ અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: વિજ્ઞાન વિષયના મુખ્ય ઉદ્દેશ્યો જેવા કે જિજ્ઞાસાવૃત્તિ, અવલોકન, વિવેચનાત્મક ચિંતન અને વૈજ્ઞાનિક દ્રષ્ટિકોણના વિકાસ માટે માતૃભાષાનું શિક્ષણ પાયારૂપ છે.\nવિધાન ૨: પર્યાવરણ અને ભાષા એકબીજાને પૂરક છે; પ્રકૃતિગીતો, ઉત્સવગીતો, ક્ષેત્રીય મુલાકાતો અને સ્વતંત્રલેખનમાં સહજ રીતે પર્યાવરણ સંકળાયેલું છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૪ અન્ય વિષયોના અધ્યયનમાં માતૃભાષાનો અનુબંધ | પાના નં.: ૯૮-૯૯",
+    "exp": "ગણિત, વિજ્ઞાન-ટેક્નોલૉજી અને પર્યાવરણ જેવા તમામ વિષયોની સંકલ્પનાઓ સ્પષ્ટ કરવા માટે માતૃભાષા સાથે તેમનો સીધો અનુબંધ આવશ્યક છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૩: ‘વિશ્વ માતૃભાષાદિન’ (૨૧મી ફેબ્રુઆરી) ના ઐતિહાસિક સંદર્ભ અને ઉજવણી અંગે નીચેનામાંથી કઈ વિગત અસત્ય છે?",
+    "options": [
+      "યુનેસ્કોએ ૧૭મી નવેમ્બર ૧૯૯૯ ના રોજ વિશ્વકક્ષાએ તેની જાહેરાત કરી હતી.",
+      "૨૧મી ફેબ્રુઆરી ૧૯૫૨ ના રોજ પૂર્વ પાકિસ્તાન (હાલ બાંગ્લાદેશ) માં માતૃભાષા બંગાળી માટે ચાર બાંગ્લાદેશવાસી શહીદ થયા હતા.",
+      "ઢાકામાં ૨૧મી ફેબ્રુઆરીના શહીદોનું સ્મારક આવેલું છે.",
+      "સમગ્ર વિશ્વમાં ઈ.સ. ૧૯૯૫ થી ૨૧મી ફેબ્રુઆરીના રોજ વિશ્વ માતૃભાષાદિન ઉજવાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૫ માતૃભાષા ગૌરવદિનની ઊજવણી | પાના નં.: ૯૯",
+    "exp": "યુનેસ્કોએ નવેમ્બર ૧૯૯૯ માં ઠરાવ કર્યો હતો અને વિશ્વમાં ઈ.સ. ૨૦૦૦ ની સાલથી ૨૧મી ફેબ્રુઆરીના રોજ વિશ્વ માતૃભાષાદિન ઉજવાય છે, ૧૯૯૫ થી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૪: “૨૧મી સદીને આપણે માત્ર ‘જ્ઞાનની સદી’ નહીં, પરંતુ ‘______’ બનાવવાની છે.” — મૉડ્યૂલ મુજબ ખાલી જગ્યા પૂરો.",
+    "options": [
+      "ટેક્નોલૉજીની સદી",
+      "પ્રજ્ઞાનમયી સદી",
+      "બહુભાષી સદી",
+      "વિજ્ઞાનમયી સદી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૫ માતૃભાષા ગૌરવદિનની ઊજવણી | પાના નં.: ૯૯",
+    "exp": "૨૧મી સદી જ્ઞાનની સદી માતૃભાષાના માધ્યમથી જ સંભવી શકે અને આપણે તેને માત્ર ‘જ્ઞાનની સદી’ નહીં પણ ‘પ્રજ્ઞાનમયી સદી’ બનાવવાની છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૫: વિશ્વની ભાષાઓ, ભાષાકુળ અને ગુજરાતી ભાષાના સ્થાન અંગેની આંકડાકીય વિગતોનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (વિગત)  |  વિભાગ – બ (આંકડાકીય માહિતી)\n૧. વિશ્વમાં બોલાતી અંદાજિત ભાષાઓ — (ક) ૯૪\n૨. વિશ્વમાં કુલ ભાષાકુળની સંખ્યા — (ખ) ૪૨૭\n૩. ભારતમાં ઉપયોગમાં લેવાતી કુલ ભાષા-બોલી — (ગ) ૭૦૦૦\n૪. વિશ્વની સૌથી વધુ માતૃભાષકો ધરાવતી ૩૦ ભાષાઓમાં ગુજરાતીનું સ્થાન — (ઘ) ૨૩મું",
+    "options": [
+      "૧ – (ગ), ૨ – (ક), ૩ – (ખ), ૪ – (ઘ)",
+      "૧ – (ગ), ૨ – (ખ), ૩ – (ક), ૪ – (ઘ)",
+      "૧ – (ક), ૨ – (ગ), ૩ – (ખ), ૪ – (ઘ)",
+      "૧ – (ગ), ૨ – (ક), ૩ – (ઘ), ૪ – (ખ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૫ માતૃભાષા ગૌરવદિનની ઊજવણી | પાના નં.: ૧૦૦",
+    "exp": "વિશ્વમાં લગભગ ૭૦૦૦ ભાષાઓ અને ૯૪ ભાષાકુળ (જેમાં ૧૦ ભાષાકુળમાં ૯૬% અને ૮૪ ભાષાકુળમાં ૪% વસ્તી) છે; ભારતમાં ૪૨૭ ભાષા-બોલી (૨૨ બંધારણીય રાજભાષા) છે અને ગુજરાતીનું સ્થાન ૨૩મું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૬: કવિવર ઉમાશંકર જોષીના કયા શબ્દોને ઉજાગર કરતાં માતૃભાષા ગુજરાતીનું સંગોપન કરવાનું મૉડ્યૂલમાં સૂચવાયું છે?",
+    "options": [
+      "‘જય જય ગરવી ગુજરાત’",
+      "‘હું છું ગુર્જર ભારતવાસી’",
+      "‘વસુધૈવ કુટુમ્બકમ્’",
+      "‘જ્યાં જ્યાં વસે એક ગુજરાતી’"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૩.૩.૫ માતૃભાષા ગૌરવદિનની ઊજવણી | પાના નં.: ૧૦૦",
+    "exp": "સંકુચિત ગુજરાતીપણું નહીં પણ વિશ્વનાગરિકત્વના ભાવ સાથે કવિવર ઉમાશંકર જોષીના શબ્દો ‘હું છું ગુર્જર ભારતવાસી’ ની રીતે માતૃભાષાનું સંગોપન કરવા જણાવાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૭: વ્યાવહારિક વ્યાકરણના ઉદ્દેશ અને કસોટીના સ્વરૂપ અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: વ્યાવહારિક વ્યાકરણ એની ઉપયોગિતા પર ભાર મૂકે છે અને રોજિંદા વ્યવહારના ખ્યાલોનો ઉપયોગ કરીને વ્યાકરણના મુદ્દાઓને સ્પષ્ટ કરે છે.\nવિધાન ૨: વ્યાવહારિક વ્યાકરણ જ્યારે કસોટી કરે છે ત્યારે એ કદી વ્યાખ્યાઓ પૂછતું નથી, પણ વપરાશ આવડે છે કે કેમ એ જાણવા માગે છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૧ પ્રસ્તાવના | પાના નં.: ૧૦૪",
+    "exp": "વ્યાવહારિક વ્યાકરણ પરિભાષાનો જૂજ ઉપયોગ કરે છે, વપરાશ પર ભાર મૂકે છે અને કસોટીમાં વ્યાખ્યાઓને બદલે વ્યવહારુ વપરાશ ચકાસે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૮: નામ (સંજ્ઞા) ના છ પ્રકારો પૈકી ‘દ્રવ્યવાચક નામ’ નો વર્ગ ‘જાતિવાચક નામ’ થી શા માટે અલગ કરવામાં આવ્યો છે?",
+    "options": [
+      "કારણ કે દ્રવ્યવાચક નામો હંમેશાં અમૂર્ત પદાર્થને દર્શાવે છે.",
+      "કારણ કે દ્રવ્યવાચક નામોને સંખ્યાવાચક વિશેષણો કે બહુવચનનો પ્રત્યય લાગતો નથી.",
+      "કારણ કે દ્રવ્યવાચક નામો ધાતુ પરથી બને છે.",
+      "કારણ કે દ્રવ્યવાચક નામો કોઈ ચોક્કસ વ્યક્તિની વિશિષ્ટ ઓળખ આપે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ નામ-સંજ્ઞા | પાના નં.: ૧૦૬",
+    "exp": "પાણી, દૂધ, લોખંડ, માટી જેવાં દ્રવ્યવાચક નામોને સંખ્યાવાચક વિશેષણો કે બહુવચનનો પ્રત્યય લાગતો નથી (જેમ કે ‘બે દૂધ’ કે ‘દૂધો’ કહી શકાય નહીં), તેથી તેમને જાતિવાચકથી અલગ રખાયાં છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૩૯: ‘રમત’, ‘આવડત’, ‘જમણ’, ‘દોડ’, ‘ગોઠવણ’ અને ‘મથામણ’ — આ શબ્દો સંજ્ઞા (નામ) ના કયા પ્રકારનાં ઉદાહરણો છે?",
+    "options": [
+      "ભાવવાચક સંજ્ઞા",
+      "સમૂહવાચક સંજ્ઞા",
+      "ક્રિયાવાચક સંજ્ઞા",
+      "જાતિવાચક સંજ્ઞા"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ નામ-સંજ્ઞા | પાના નં.: ૧૦૬",
+    "exp": "ભાષામાં ક્રિયા વિશે વાત કરવા માટે ધાતુ પરથી બનતાં નામોને ‘ક્રિયાવાચક નામ’ કહેવાય છે; જેમ કે રમત, આવડત, જમણ, દોડ, ગોઠવણ, મથામણ."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૦: ‘રોટલી વાસી હતી.’ — આ વાક્યમાં ‘વાસી’ એ વિશેષણ નામની જમણી તરફ વિધેયના ભાગરૂપે આવીને નામનું લક્ષણ દર્શાવે છે. આવા વિશેષણને કયા નામે ઓળખવામાં આવે છે?",
+    "options": [
+      "સાર્વનામિક વિશેષણ",
+      "વિધિ વિશેષણ (વિધિવાચક)",
+      "સંબંધવાચક વિશેષણ",
+      "ક્રમિક સંખ્યાવાચક વિશેષણ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિશેષણ | પાના નં.: ૧૦૬",
+    "exp": "વિશેષણ જ્યારે નામની જમણી તરફ ક્રિયાપદની સાથે વિધેયના ભાગરૂપે આવે ત્યારે નામ વિશે વિધાન કરે છે, જેને ‘વિધિ વિશેષણ’ કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૧: ગુણવાચક વિશેષણના બે પેટાપ્રકારો ‘વિકારી’ અને ‘અવિકારી’ અંગે નીચેનામાંથી કઈ જોડ સાચી છે?",
+    "options": [
+      "વિકારી વિશેષણ: ચોરસ, સફેદ, સુંદર | અવિકારી વિશેષણ: ભોળું, મોટું, લીલું",
+      "વિકારી વિશેષણ: ભોળું, મોટું, લીલું, તીખું | અવિકારી વિશેષણ: ચોરસ, સફેદ, ગુલાબી, સુંદર, જંગલી",
+      "વિકારી વિશેષણ: પહેલું, બીજું, ત્રીજું | અવિકારી વિશેષણ: એક, બે, ત્રણ",
+      "વિકારી વિશેષણ: મારું, તારું, અમારું | અવિકારી વિશેષણ: આ, એ, તે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિશેષણ | પાના નં.: ૧૦૭",
+    "exp": "જેમાં વિશેષ્ય-નામ મુજબ લિંગ-વચનના પ્રત્યયો લાગે તે વિકારી (ભોળું, મોટું, લીલું) અને જેમાં પ્રત્યયો ન લાગે તે અવિકારી વિશેષણ (ચોરસ, સફેદ, ગુલાબી, સુંદર, જંગલી) કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૨: ‘સંબંધવાચક વિશેષણ’ ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "સંબંધવાચક વિશેષણ નામને છઠ્ઠી વિભક્તિનો ‘ન’ પ્રત્યય લાગીને રચાય છે.",
+      "સંબંધવાચક વિશેષણ હંમેશાં અવિકારી હોય છે.",
+      "વાક્યમાં સંખ્યાવાચક અને ગુણવાચક બંને વિશેષણો હોય ત્યારે સંબંધવાચક વિશેષણ એ બંનેની પહેલાં આવે છે (દા.ત. ‘મારી બે તદ્દન નવી નોટ’).",
+      "‘રવિવારનો દિવસ’, ‘બુદ્ધિની કસોટી’ અને ‘વાલની દાળ’ એ સંબંધવાચક વિશેષણનાં ઉદાહરણો છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિશેષણ | પાના નં.: ૧૦૭",
+    "exp": "સંબંધવાચક વિશેષણ ‘હંમેશાં વિકારી’ હોય છે, કારણ કે તેમાં નામ મુજબ લિંગ-વચનનો પ્રત્યય ઉમેરાય છે (નો, ની, નું, નાં)."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૩: સાર્વનામિક વિશેષણના સંદર્ભમાં ‘આ, એ, તે, પેલું’ અને ‘કોઈ, કોઈક, કશુંક’ અનુક્રમે કયા પ્રકારનાં સર્વનામો છે?",
+    "options": [
+      "અનિશ્ચિતતાવાચક અને નિશ્ચિતતાવાચક",
+      "નિશ્ચિતતાવાચક (દર્શક) અને અનિશ્ચિતતાવાચક",
+      "પ્રશ્નવાચક અને સંબંધવાચક",
+      "પુરુષવાચક અને સ્વવાચક"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિશેષણ | પાના નં.: ૧૦૭-૧૦૮",
+    "exp": "ગુજરાતી ભાષામાં આ, એ, તે, પેલું એ નિશ્ચિતતાવાચક દર્શક સર્વનામો છે; જ્યારે કોઈ, કોઈક, કશુંક એ અનિશ્ચિતતાવાચક સર્વનામો છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૪: ધાતુ રૂપ પરથી બનતાં વિશેષણોમાં કયાં કૃદંત રૂપોનો સમાવેશ થાય છે?",
+    "options": [
+      "માત્ર ભવિષ્યકૃદંત અને હેત્વર્થકૃદંત",
+      "વર્તમાનકૃદંત (દા.ત. દોડતું, ફરતું) અને ભૂતકૃદંત (દા.ત. પીધેલું, તૂટેલું)",
+      "માત્ર સંબંધક ભૂતકૃદંત",
+      "માત્ર વિદ્યર્થકૃદંત"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિશેષણ | પાના નં.: ૧૦૮",
+    "exp": "ધાતુ પરથી બનતાં વિશેષણોમાં અક, ટ, ય પ્રત્યય ઉપરાંત વર્તમાનકૃદંત (દોડતું, ફરતું) અને ભૂતકૃદંત (પીધેલું, તૂટેલું) રૂપોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૫: વિભક્તિના નામ, અર્થ અને પ્રત્યય/અવ્યયનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (વિભક્તિ)  |  વિભાગ – બ (અર્થ અને પ્રત્યય/અવ્યય)\n૧. તૃતીયા — (ક) સંપ્રદાન — /ને/ પ્રત્યય\n૨. ચતુર્થી — (ખ) કરણ — /થી/ પ્રત્યય, ‘વડે’ અવ્યય\n૩. પંચમી — (ગ) અધિકરણ — /માં/ પ્રત્યય, ‘પર’ અવ્યય\n૪. સપ્તમી — (ઘ) અપાદાન — /થી/ પ્રત્યય",
+    "options": [
+      "૧ – (ખ), ૨ – (ક), ૩ – (ઘ), ૪ – (ગ)",
+      "૧ – (ઘ), ૨ – (ક), ૩ – (ખ), ૪ – (ગ)",
+      "૧ – (ખ), ૨ – (ઘ), ૩ – (ક), ૪ – (ગ)",
+      "૧ – (ક), ૨ – (ખ), ૩ – (ઘ), ૪ – (ગ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિભક્તિ | પાના નં.: ૧૦૯",
+    "exp": "તૃતીયા (કરણ – થી/વડે), ચતુર્થી (સંપ્રદાન – ને), પંચમી (અપાદાન – થી) અને સપ્તમી (અધિકરણ – માં/પર) એ સાચી વિભક્તિ જોડ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૬: ‘શેઠે નોકર પાસે સંદેશો મોકલ્યો’ — આ વાક્યમાં એક વ્યક્તિએ બીજી વ્યક્તિનો સાધન તરીકે ઉપયોગ કર્યો છે. વ્યાકરણની દ્રષ્ટિએ અહીં ‘નોકર પાસે’ ની ભૂમિકાને શું કહેવાય?",
+    "options": [
+      "સાધન",
+      "માધ્યમ",
+      "અપાદાન",
+      "અધિકરણ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિભક્તિ – સાધન | પાના નં.: ૧૧૦",
+    "exp": "સાધન હંમેશાં વસ્તુ હોય છે (દા.ત. ઝારીથી), પરંતુ જ્યારે એક વ્યક્તિ બીજી વ્યક્તિનો સાધન તરીકે ઉપયોગ કરે ત્યારે તેને ‘માધ્યમ’ કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૭: ‘ભાવનગરથી અમદાવાદ ૨૦૦ કિ.મી. છે’ — આ વાક્યમાં બે બિંદુઓ વચ્ચેનું અંતર માપતી વખતે જ્યાંથી શરૂઆત થાય છે તે બિંદુ (‘ભાવનગરથી’) ની વિભક્તિ ભૂમિકા કઈ ગણાય?",
+    "options": [
+      "કરણ",
+      "સંપ્રદાન",
+      "અપાદાન",
+      "અધિકરણ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ વિભક્તિ – અપાદાન | પાના નં.: ૧૧૦-૧૧૧",
+    "exp": "જ્યાંથી પદાર્થ છૂટો થાય તે સ્થાન તેમજ બે બિંદુઓ વચ્ચેનું અંતર માપતાં જ્યાંથી શરૂઆત થાય તે બિંદુની ભૂમિકા ‘અપાદાન’ (ઉદ્ગમસ્થાન) ગણાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૮: ક્રિયાપદના સંદર્ભમાં નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: ક્રિયાપદના પર્યાય તરીકે ‘આખ્યાત’ શબ્દ વપરાય છે અને ક્રિયાપદ રચનાના કેન્દ્રસ્થ ઘટક માટે ‘ધાતુ’ શબ્દ વપરાય છે.\nવિધાન ૨: જ્યારે વાક્યો ભૂતકાળમાં આવે ત્યારે અકર્મક ધાતુના વાક્યમાં ક્રિયાપદ કર્તા પ્રમાણે ચાલે, જ્યારે સકર્મક ધાતુવાળા વાક્યમાં ક્રિયાપદ કર્મ પ્રમાણે ચાલે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ ક્રિયાપદ | પાના નં.: ૧૧૧",
+    "exp": "બંને વિધાનો ક્રિયાપદની વ્યાકરણિક રચના અને અકર્મક-સકર્મક ધાતુના ભેદ મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૪૯: કાળની સાથે ‘અવસ્થા’ દર્શાવતા મુખ્ય ધાતુને લાગતા પ્રત્યયોનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (પ્રત્યય)  |  વિભાગ – બ (અવસ્થા)\n૧. /-ત-/ પ્રત્યય — (ક) પૂર્ણાવસ્થા\n૨. /-ય-/ પ્રત્યય — (ખ) અપેક્ષિત અવસ્થા\n૩. /-વાન-/ પ્રત્યય — (ગ) અપૂર્ણાવસ્થા",
+    "options": [
+      "૧ – (ગ), ૨ – (ક), ૩ – (ખ)",
+      "૧ – (ક), ૨ – (ગ), ૩ – (ખ)",
+      "૧ – (ગ), ૨ – (ખ), ૩ – (ક)",
+      "૧ – (ખ), ૨ – (ક), ૩ – (ગ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ કાળ | પાના નં.: ૧૧૩",
+    "exp": "મુખ્ય ધાતુને લાગતો /-ત-/ પ્રત્યય અપૂર્ણાવસ્થા (જમતો હતો), /-ય-/ પ્રત્યય પૂર્ણાવસ્થા (જમ્યો હતો) અને /-વાન-/ પ્રત્યય અપેક્ષિત અવસ્થા દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૦: ક્રિયાવિશેષણના પ્રકારો અને વિભક્તિ પ્રત્યય/નામયોગીના કાર્ય અંગે નીચેનામાંથી કઈ જોડ અસંગત છે?",
+    "options": [
+      "સાદાં ક્રિયાવિશેષણો — પછી, ચોક્કસ, ફક્ત, આગળ, કદાચ",
+      "‘વડે’ નામયોગી — સાધનવાચક (ચંદન વડે, આંગળી વડે)",
+      "‘દ્વારા’ નામયોગી — માધ્યમવાચક (ટપાલ દ્વારા, નોકર દ્વારા)",
+      "‘ને / માટે’ નામયોગી — સ્થાનવાચક (ભવિષ્યને માટે, ધોવા માટે)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૧ ક્રિયાવિશેષણ | પાના નં.: ૧૧૩-૧૧૪",
+    "exp": "‘ને / માટે’ નામયોગી (ભવિષ્યને માટે, ધોવા માટે) એ ‘હેતુવાચક’ ક્રિયાવિશેષણનું કાર્ય કરે છે, સ્થાનવાચકનું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૧: વાક્યરચનામાં પદોનો ક્રમ ગોઠવવાના નિયમો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "સાદા વાક્યમાં કર્તા શરૂઆતમાં અને ક્રિયાપદ છેલ્લે આવે છે.",
+      "જ્યાં બે કર્મ હોય ત્યાં ‘ને’ પ્રત્યયવાળું કર્મ પહેલું અને પ્રત્યય વિનાનું કર્મ એની પછી મૂકાય છે.",
+      "અન્ય વિભક્તિવાળાં નામપદ કર્તા અને કર્મની વચ્ચે મૂકાય છે.",
+      "ક્રિયાવિશેષણ હંમેશાં ક્રિયાપદની પછી વાક્યના અંતે મૂકાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ વાક્યરચના | પાના નં.: ૧૧૫",
+    "exp": "વાક્યમાં પદક્રમના નિયમ મુજબ ક્રિયાવિશેષણ ક્રિયાપદની પહેલાં વાક્યની વચ્ચે મૂકાય છે (દા.ત. હું ઝટ પાછો આવું છું), ક્રિયાપદની પછી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૨: ‘આજ્ઞાર્થક વાક્ય’ અને ‘વિધ્યર્થક વાક્ય’ ના સંદર્ભમાં નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: આજ્ઞાર્થક વાક્ય ટૂંકામાં ટૂંકું હોઈ શકે છે, કારણ કે તેમાં ઉદ્દેશ્ય (કર્તા) હંમેશાં સાંભળનાર વ્યક્તિ હોવાને કારણે તેનો લોપ થઈ શકે છે.\nવિધાન ૨: વિધ્યર્થક વાક્ય સીધી આજ્ઞાને બદલે સલાહ કે નિયમ દર્શાવીને કામ કરાવવાની રીત છે (દા.ત. ‘તમારે ખાંડ બંધ કરવી જોઈએ’).",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ વાક્યના પ્રકાર | પાના નં.: ૧૧૬",
+    "exp": "આજ્ઞાર્થક વાક્યમાં કેવળ વિધેય (દા.ત. ‘જા’, ‘દોડ’) હોઈ શકે છે, જ્યારે વિધ્યર્થક વાક્યમાં કરનાર વ્યક્તિ પાસે શું અપેક્ષિત છે તે સલાહ કે નિયમ રૂપે દર્શાવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૩: ‘કેવો ગાંડો છે મારો દીકરો!’ — આ ઉદાહરણના સંદર્ભમાં વાક્ય નિર્દેશાર્થક છે, પ્રશ્નવાચક છે કે ઉદ્ગારવાચક છે તે ઘણીવાર કેવળ શાના પરથી જ નક્કી થઈ શકે છે?",
+    "options": [
+      "માત્ર વિભક્તિ પ્રત્યય પરથી",
+      "કેવળ લય પરથી",
+      "માત્ર ક્રિયાપદના કાળ પરથી",
+      "માત્ર કર્તાના લિંગ પરથી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ વાક્યના પ્રકાર | પાના નં.: ૧૧૬",
+    "exp": "ઉદ્ગારવાચક વાક્યોમાં શબ્દોની રચના અને તેમનો લય અગત્યનો હોય છે; ઘણીવાર વાક્ય નિર્દેશાર્થક, પ્રશ્નવાચક કે ઉદ્ગારવાચક છે તે કેવળ લય પરથી જ નક્કી થઈ શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૪: રચનાની દ્રષ્ટિએ વાક્યના પ્રકાર અને તેના ઉદાહરણનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (વાક્ય પ્રકાર)  |  વિભાગ – બ (ઉદાહરણ)\n૧. કર્તરિ વાક્ય — (ક) નેહાથી હવે ચલાતું નથી.\n૨. કર્મણિ વાક્ય — (ખ) તેમણે નેહા પાસે લખાવડાવ્યું.\n૩. ભાવે વાક્ય — (ગ) હું બે જ ભાખરી ખાઈ શકીશ.\n૪. પ્રેરક (પ્રયોજક) વાક્ય — (ઘ) મારાથી બે જ ભાખરી ખવાશે.",
+    "options": [
+      "૧ – (ગ), ૨ – (ઘ), ૩ – (ક), ૪ – (ખ)",
+      "૧ – (ઘ), ૨ – (ગ), ૩ – (ક), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ક), ૩ – (ઘ), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ઘ), ૩ – (ખ), ૪ – (ક)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ રચનાની દ્રષ્ટિએ વાક્યના પ્રકાર | પાના નં.: ૧૧૬-૧૧૭",
+    "exp": "‘હું બે જ ભાખરી ખાઈ શકીશ’ કર્તરિ, ‘મારાથી બે જ ભાખરી ખવાશે’ કર્મણિ, ‘નેહાથી હવે ચલાતું નથી’ ભાવે અને ‘તેમણે નેહા પાસે લખાવડાવ્યું’ પ્રેરક વાક્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૫: કર્તરિ પરથી કર્મણિ વાક્ય બનાવતી વખતે અને ભાવે વાક્યરચના અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: કર્તરિ પરથી કર્મણિ વાક્ય બનાવતી વખતે ફેરફાર કર્તા નામમાં અને ક્રિયાપદમાં થાય છે; કર્મનામમાં કોઈ ફેરફાર થતો નથી.\nવિધાન ૨: જ્યારે ધાતુ અકર્મક હોય ત્યારે કર્તાનું મહત્વ ઘટે છે અને કર્મ ન હોવાને કારણે ક્રિયાપદ કર્મ મુજબ પદસંવાદ દર્શાવી શકતું નથી, તેને ભાવેવાક્ય કહેવાય છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ રચનાની દ્રષ્ટિએ વાક્યના પ્રકાર | પાના નં.: ૧૧૬-૧૧૭",
+    "exp": "કર્મણિમાં કર્તાના મોભામાં ફેરફાર થતાં કર્મનું મહત્વ દેખાય છે (કર્મનામમાં ફેરફાર થતો નથી) અને ભાવે વાક્ય અકર્મક ધાતુમાં બને છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૬: “પ્રજાનો વિસામો બનનાર આ યુવાન કોણ હતો?” — જ્યારે કોઈ વાક્ય સંયોજકના ઉપયોગ વિના ગૌણ બને અને મુખ્યવાક્યમાં વિશેષણ, ક્રિયાવિશેષણ કે નામ તરીકે આવે ત્યારે તેવી વાક્યરચનાને શું કહેવાય છે?",
+    "options": [
+      "સાદું વાક્ય",
+      "સંયુક્ત વાક્ય",
+      "મિશ્ર વાક્ય",
+      "સંકુલ વાક્ય"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ સાદાં, સંયુક્ત અને મિશ્રવાક્યો | પાના નં.: ૧૧૭",
+    "exp": "જ્યારે કોઈ વાક્ય સંયોજકના ઉપયોગ વિના ગૌણ બને અને મુખ્યવાક્યમાં વિશેષણ, ક્રિયાવિશેષણ કે નામ તરીકે આવે ત્યારે તેને ‘સંકુલ વાક્ય’ કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૭: ‘સંયુક્ત વાક્ય’ અને ‘મિશ્ર વાક્ય’ ના સંયોજકો અંગે નીચેનામાંથી કઈ જોડ સાચી છે?",
+    "options": [
+      "સંયુક્ત વાક્યના સંયોજકો: અને, અથવા, પણ, ઉપરાંત, તેમજ, તથા, પછી, ત્યારબાદ",
+      "મિશ્ર વાક્યના સંયોજકો: એથી, તેથી, એટલે, માટે, જે-તે, જ્યારે-ત્યારે, છતાં, તેમ છતાં",
+      "સંયુક્ત વાક્યમાં બંને વાક્યોનો મોભો સરખો હોય છે, જ્યારે મિશ્ર વાક્યમાં એક મુખ્ય અને બીજું ગૌણ હોય છે.",
+      "ઉપરનાં ત્રણેય વિધાનો સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૨ સાદાં, સંયુક્ત અને મિશ્રવાક્યો | પાના નં.: ૧૧૭",
+    "exp": "સંયુક્ત વાક્યમાં સરખા મોભાવાળાં વાક્યો ‘અને, અથવા, પણ...’ થી અને મિશ્ર વાક્યમાં મુખ્ય-ગૌણ વાક્યો ‘જે-તે, એટલે, માટે, છતાં...’ જેવા સંયોજકોથી જોડાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૮: “અંગ્રેજી ભાષાના શબ્દોની જોડણી ખોટી કરતાં આપણને શરમ લાગે છે. તેના કરતાં માતૃભાષાની જોડણીનો વધ કરતાં આપણને વધારે શરમ લાગવી જોઈએ.” — આ વિધાન કોનું છે?",
+    "options": [
+      "કાકાસાહેબ કાલેલકર",
+      "મહાત્મા ગાંધીજી",
+      "નર્મદ",
+      "ઉમાશંકર જોષી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણી | પાના નં.: ૧૧૯",
+    "exp": "માતૃભાષાની સાચી જોડણીનું મહત્વ સમજાવતું આ પ્રસિદ્ધ અવતરણ મહાત્મા ગાંધીજીનું છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૫૯: જોડણીના સર્વસામાન્ય નિયમો પૈકી સંસ્કૃત ઉપસર્ગો અને હલન્ત વ્યંજનાંત શબ્દો અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: અતિ, અધિ, અભિ, નિ, પરિ, પ્રતિ, વિ, અનુ, ઉપ, સુ જેવા સંસ્કૃત ઉપસર્ગોમાં બધે જ ઇ-ઉ હ્રસ્વ હોય છે.\nવિધાન ૨: અર્થાત્, પશ્ચાત્, સાક્ષાત્, યથાવત્, કદાચિત્ અને કિંચિત્ જેવા ગુજરાતી પ્રત્યય લેતા વ્યંજનાંત શબ્દો હલન્ત લખવા.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના સર્વ સામાન્ય નિયમો | પાના નં.: ૧૧૯",
+    "exp": "જોડણીના નિયમ ૧ અને ૨ મુજબ સંસ્કૃત ઉપસર્ગોમાં ઇ-ઉ હ્રસ્વ હોય છે અને અર્થાત્, પશ્ચાત્ વગેરે વ્યંજનાંત શબ્દો હલન્ત લખાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૦: ગુજરાતી જોડણીના નિયમો અને તેમના ‘અપવાદ’ શબ્દોનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (જોડણીનો નિયમ)  |  વિભાગ – બ (અપવાદ શબ્દ)\n૧. શબ્દના અંતે ‘ઇન, ઇય’ આવે ત્યાં દીર્ઘ ‘ઈ’ થાય — (ક) અહર્નિશ\n૨. ‘ઈન્દ્ર’ અને ‘ઈશ’ માં દીર્ઘ ‘ઈ’ આવે — (ખ) વધૂ\n૩. ‘ઇલ’ કે ‘ઇન’ પ્રત્યયમાં ‘ઇ’ હ્રસ્વ હોય — (ગ) મલિન, પુલિન\n૪. નામોમાં છેડેનો ‘ઉ’ હ્રસ્વ હોય — (ઘ) નીલ, શીલ (સુશીલ, નીલકમલ)",
+    "options": [
+      "૧ – (ગ), ૨ – (ક), ૩ – (ઘ), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ખ), ૩ – (ઘ), ૪ – (ક)",
+      "૧ – (ઘ), ૨ – (ક), ૩ – (ગ), ૪ – (ખ)",
+      "૧ – (ગ), ૨ – (ક), ૩ – (ખ), ૪ – (ઘ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો | પાના નં.: ૧૧૯-૧૨૦",
+    "exp": "મૉડ્યૂલના નિયમો ૩, ૫, ૧૨ અને ૧૪ મુજબ ‘ઇન/ઇય’ માં મલિન-પુલિન, ‘ઈશ’ માં અહર્નિશ, ‘ઇલ’ માં નીલ-શીલ અને છેડેના ‘ઉ’ માં ‘વધૂ’ અપવાદ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૧: જોડણીના નિયમો મુજબ ‘ઉપયોગી → ઉપયોગિતા’, ‘સ્વામી → સ્વામિત્વ’ અને ‘તેજસ્વી → તેજસ્વિતા’ શબ્દોમાં થયેલો ફેરફાર કયો નિયમ સૂચવે છે?",
+    "options": [
+      "‘ય’ ની પહેલાં આવતો ‘ઇ’ હ્રસ્વ હોય છે.",
+      "‘તા’ કે ‘ત્વ’ પ્રત્યયથી વિશેષણ પરથી બનતાં નામોને અંતે દીર્ઘ ‘ઈ’ હ્રસ્વ થાય છે.",
+      "શબ્દમાં જોડાક્ષર પહેલાંના ઇ, ઉ હ્રસ્વ હોય છે.",
+      "શ્રેષ્ઠતાદર્શક ‘ઇષ્ઠ’ આવે ત્યારે ‘ઇ’ હ્રસ્વ હોય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો | પાના નં.: ૧૨૦",
+    "exp": "નિયમ ૧૩ મુજબ ‘તા’ કે ‘ત્વ’ પ્રત્યયથી વિશેષણ પરથી બનતાં નામોને અંતે રહેલો દીર્ઘ ‘ઈ’ હ્રસ્વ ‘ઇ’ બની જાય છે (દા.ત. ઉપયોગી → ઉપયોગિતા)."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૨: અક્ષરોની સંખ્યા આધારિત જોડણીના નિયમો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "એકાક્ષરી શબ્દોમાં દીર્ઘ ‘ઈ’ અને ‘ઊ’ આવે છે (દા.ત. ફી, ઘી, લૂ, ભૂ).",
+      "બે અક્ષરવાળા શબ્દમાં પહેલા અક્ષરમાં ‘ઇ’ કે ‘ઉ’ દીર્ઘ આવે છે (દા.ત. બીક, ખીર, દૂધ).",
+      "ત્રણ અક્ષરના શબ્દોમાં ગુરુ અક્ષર પહેલાં હ્રસ્વ અને લઘુ અક્ષર પહેલાં દીર્ઘ ‘ઇ-ઉ’ હોય છે.",
+      "ચાર કે વધુ અક્ષરવાળા શબ્દમાં પ્રથમ ‘ઇ’ કે ‘ઉ’ હંમેશાં દીર્ઘ હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો | પાના નં.: ૧૨૦",
+    "exp": "નિયમ ૧૯ મુજબ ચાર કે વધુ અક્ષરવાળા શબ્દમાં પ્રથમ ‘ઇ’ કે ‘ઉ’ ‘હ્રસ્વ’ હોય છે (દા.ત. હિલચાલ, ખિસકોલી, વિલાયત, ઉત્તરાયણ), દીર્ઘ નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૩: અનુનાસિક ઉચ્ચારણ, નાસિક્ય સ્વર અને રેફ (ર્) અંગેના જોડણીના નિયમો પૈકી નીચેનાં વિધાનો તપાસો:\nવિધાન ૧: અનુનાસિક ઉચ્ચારણ હોય તો ઇ-ઉ હ્રસ્વ હોય છે (દા.ત. ચિંતા, કુંભ, સુંદર), જ્યારે નાસિક્ય સ્વર હોય તો ઈ-ઊ દીર્ઘ હોય છે (દા.ત. ઈંટ, વીંછી, ઊંઘ).\nવિધાન ૨: મૂળ શબ્દમાં રેફ પહેલાં ઈ-ઊ દીર્ઘ હોય છે (દા.ત. તીર્થ, શીર્ષક, સૂર્ય, ઊર્જા).",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો | પાના નં.: ૧૨૧",
+    "exp": "નિયમ ૨૨, ૨૩ અને ૨૪ મુજબ અનુનાસિક ઉચ્ચારણમાં ઇ-ઉ હ્રસ્વ, નાસિક્ય સ્વરમાં ઈ-ઊ દીર્ઘ અને મૂળ શબ્દમાં રેફ પહેલાં ઈ-ઊ દીર્ઘ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૪: નિયમ ૨૭ મુજબ એક કરતાં વધુ રીતે લખાતી (બંને માન્ય હોય તેવી) જોડણીની જોડમાં નીચેનામાંથી કઈ જોડનો સમાવેશ થતો નથી?",
+    "options": [
+      "ખનિજ – ખનીજ | લિપિ – લિપી",
+      "વિગત – વીગત | વસતી – વસતિ",
+      "પ્રમાણિક – પ્રામાણિક | રાષ્ટ્રીય – રાષ્ટ્રિય",
+      "દિન – દીન | સુરત – સૂરત"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો | પાના નં.: ૧૨૧",
+    "exp": "દિન-દીન અને સુરત-સૂરત એ અર્થભેદ ધરાવતા અલગ શબ્દો છે; જ્યારે અન્ય ત્રણેય વિકલ્પો એક જ શબ્દની એક કરતાં વધુ માન્ય જોડણીઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૫: ગુજરાતી જોડણીની ચાવીઓના શિક્ષણ અંગે મૉડ્યૂલમાં આપવામાં આવેલી ‘નોંધ’ મુજબ અધ્યાપક મિત્રોએ શું ધ્યાનમાં રાખવું જોઈએ?",
+    "options": [
+      "બધી જ ચાવીઓ વિદ્યાર્થીઓને ફરજિયાત ગોખાવી દેવી જોઈએ.",
+      "ચાવીઓની સામે અપવાદો વધુ હોવાથી વિદ્યાર્થીઓને આ ચાવીઓ સમજાવવી પરંતુ ગોખાવવી નહીં; મહાવરો જ વધુ ઉપયોગી ગણાય.",
+      "જોડણીના નિયમો ક્યારેય સમજાવવા જ નહીં.",
+      "માત્ર એકાક્ષરી શબ્દોની જ ચાવીઓ ગોખાવવી."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડણીના નિયમો – નોંધ | પાના નં.: ૧૨૧",
+    "exp": "જોડણી એ મહાવરાનો વિષય હોવાથી આંખ-મગજ મહાવરાથી ટેવાય છે અને ચાવીઓ સામે અપવાદો વધુ હોવાથી ચાવીઓ સમજાવવી, ગોખાવવી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૬: જોડાક્ષરોની જોડણી અને તેના ઘટકોનાં સાચાં જોડકાં જોડો:\nવિભાગ – અ (જોડાક્ષર ઘટક)  |  વિભાગ – બ (ઉદાહરણ શબ્દો)\n૧. દ + વ — (ક) શુદ્ધ, વૃદ્ધ, યુદ્ધ, પદ્ધતિ\n૨. દ + ધ — (ખ) દ્વાર, વિદ્વાન, દ્વિતીય\n૩. દ + મ — (ગ) હૃદય, હૃદ્ય, હૃષ્ટપુષ્ટ\n૪. હ + ઋ — (ઘ) પદ્મ, પદ્માસન, પદ્મિની",
+    "options": [
+      "૧ – (ખ), ૨ – (ક), ૩ – (ઘ), ૪ – (ગ)",
+      "૧ – (ક), ૨ – (ખ), ૩ – (ઘ), ૪ – (ગ)",
+      "૧ – (ખ), ૨ – (ઘ), ૩ – (ક), ૪ – (ગ)",
+      "૧ – (ખ), ૨ – (ક), ૩ – (ગ), ૪ – (ઘ)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ જોડાક્ષરોની જોડણી | પાના નં.: ૧૨૧-૧૨૨",
+    "exp": "દ+વ (દ્વાર, વિદ્વાન), દ+ધ (શુદ્ધ, પદ્ધતિ), દ+મ (પદ્મ, પદ્મિની) અને હ+ઋ (હૃદય, હૃદ્ય) એ સાચાં જોડાક્ષર જોડકાં છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૭: શબ્દકોશના ઉપયોગની રીત મુજબ સ્વર અને વ્યંજનના ક્રમ અંગે નીચેનામાંથી કયો ક્રમ સંપૂર્ણ સાચો છે?",
+    "options": [
+      "અ, આ, અં, આં, ઇ, ઈ, ઋ...",
+      "અ, અં, આ, આં, ઇ, ઇં, ઈ, ઈં, ઉ, ઉં, ઊ, ઊં, ઋ, એ, એં, ઐ, ઓ, ઓં, ઔ, ઔં",
+      "સૌથી પહેલાં વ્યંજનથી શરૂ થતા શબ્દો અને ત્યારબાદ સ્વરથી શરૂ થતા શબ્દો આવે છે.",
+      "‘ક્ષ’ નો સમાવેશ ‘હ’ પછી છેલ્લે થાય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૩ શબ્દકોશના ઉપયોગની રીત | પાના નં.: ૧૨૨",
+    "exp": "શબ્દકોશમાં સૌપ્રથમ સ્વરથી શરૂ થતા શબ્દો (અ, અં, આ, આં... ઋ...) અને ત્યારબાદ વ્યંજનથી શરૂ થતા શબ્દો આવે છે, જેમાં ‘ક્ષ’ એ ‘ક’ ની શ્રેણીમાં (ક+ષ) આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૮: મૉડ્યૂલમાં કુલ કેટલાં મુખ્ય વિરામચિહ્નોની ચર્ચા કરવામાં આવી છે તથા મિશ્રવાક્યમાં મુખ્ય વાક્યમાં પ્રશ્ન હોય ત્યારે પ્રશ્નાર્થચિહ્ન (?) ક્યાં મૂકાય છે?",
+    "options": [
+      "૮ વિરામચિહ્નો | મુખ્ય વાક્યની તરત પછી વચ્ચે",
+      "૧૦ વિરામચિહ્નો | છેક છેડે (દા.ત. ‘મને શી ખબર કે તમે નહીં આવો?’)",
+      "૧૨ વિરામચિહ્નો | વાક્યની શરૂઆતમાં",
+      "૧૦ વિરામચિહ્નો | માત્ર ગૌણ વાક્યની પહેલાં"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો | પાના નં.: ૧૨૩-૧૨૪",
+    "exp": "મૉડ્યૂલમાં કુલ ૧૦ મુખ્ય વિરામચિહ્નો આપ્યાં છે; મિશ્રવાક્યમાં મુખ્ય વાક્યમાં પ્રશ્ન હોય તો પણ પ્રશ્નાર્થચિહ્ન છેક છેડે મૂકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૬૯: પૂર્ણવિરામ (.) ના ઉપયોગ અંગે નીચેનામાંથી કયો નિયમ અસત્ય છે?",
+    "options": [
+      "વાક્યમાં એક કથન કે વિચાર પૂર્ણ થાય ત્યાં પૂર્ણવિરામ મૂકાય છે.",
+      "ક્રમસૂચક ૧, ૨, ૩ કે ક, ખ, ગ કૌંસમાં ન હોય ત્યારે તેમની પછી પૂર્ણવિરામ અવશ્ય મૂકવું જોઈએ.",
+      "મો. ક. ગાંધી, શ્રી., કુ., ચિ., ડૉ. જેવાં સંક્ષિપ્તરૂપોમાં પ્રથમ અક્ષર પછી પૂર્ણવિરામ મૂકાય છે.",
+      "પુસ્તક, પ્રકરણ અને લખાણમાં અંદર આવતા વિષયના શીર્ષક પછી પૂર્ણવિરામ ફરજિયાત મૂકવું જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – પૂર્ણવિરામ | પાના નં.: ૧૨૪",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે પુસ્તક, પ્રકરણ અને લખાણમાં અંદર આવતા વિષયના શીર્ષક પછી પૂર્ણવિરામ મૂકવું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૦: અલ્પવિરામ (,) ના ઉપયોગ અંગે નીચેનાં વિધાનો પૈકી કયું/કયાં વિધાન સાચું/સાચાં છે?\n૧. સંબોધનાર્થે વપરાયેલા પદ પછી અલ્પવિરામ આવે છે (દા.ત. શીલા, બારણું ખોલ.).\n૨. ‘કારણ કે’ અને ‘કેમ કે’ ની પહેલાં અલ્પવિરામ મૂકાય છે.\n૩. હા, ના, જી, કાં, કેમ વગેરે કેવળપ્રયોગીઓ વાક્યની શરૂઆતમાં હોય તો તેમની પછી અલ્પવિરામ મૂકાય છે.",
+    "options": [
+      "માત્ર ૧ અને ૨",
+      "માત્ર ૨ અને ૩",
+      "માત્ર ૧ અને ૩",
+      "૧, ૨ અને ૩ ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – અલ્પવિરામ | પાના નં.: ૧૨૫",
+    "exp": "સંબોધન પછી, ‘કારણ કે / કેમ કે’ ની પહેલાં, શરૂઆતના કેવળપ્રયોગી પછી અને અવતરણચિહ્ન પહેલાં અલ્પવિરામ મૂકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૧: અર્ધવિરામ (;) અને ગુરુવિરામ (:) ના ઉપયોગ અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન ૧: સંયુક્ત વાક્યમાં ‘પરંતુ’, ‘અને’ જેવા ઉભયાન્વયી અવ્યયો વાપર્યા વિના વિધાનોને અલગ પાડવા માટે અર્ધવિરામ (;) વપરાય છે.\nવિધાન ૨: વાક્યમાં કોઈ એક વિધાન થઈ ગયા પછી તેનાં સમર્થન રૂપે બીજું વિધાન કરવાનું હોય ત્યારે બંને વચ્ચે ગુરુવિરામ (:) મૂકાય છે.",
+    "options": [
+      "માત્ર વિધાન ૧ સાચું છે.",
+      "માત્ર વિધાન ૨ સાચું છે.",
+      "વિધાન ૧ અને ૨ બંને સાચાં છે.",
+      "વિધાન ૧ અને ૨ બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો | પાના નં.: ૧૨૫",
+    "exp": "‘સૂચન કરી શકાય; નિયમ ટાંકી શકાય; અભિપ્રાય ન અપાય.’ માં અર્ધવિરામ અને ‘આપણે સત્ય બોલીએ છીએ : સત્ય એટલે...’ માં સમર્થન રૂપે ગુરુવિરામ વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૨: ‘લઘુરેખા’ (-) નો ઉપયોગ મુખ્યત્વે કયા બે હેતુથી કરવામાં આવે છે?",
+    "options": [
+      "સંવાદ અધવચ્ચે પડતો મૂકવા અને વિચારમાં ફેરફાર દર્શાવવા",
+      "લીટી પૂરી થતાં અધૂરા રહેતા શબ્દને જોડવા (દા.ત. તારા-જી) અને સામાસિક શબ્દોના ઘટકોને અલગ પાડી દર્શાવવા (દા.ત. કુટુંબ-કબીલો)",
+      "શબ્દમાં અક્ષરનો લોપ દર્શાવવા અને સંક્ષિપ્તરૂપ બનાવવા",
+      "પ્રશ્ન પૂછવા અને આશ્ચર્ય વ્યક્ત કરવા"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – લઘુરેખા | પાના નં.: ૧૨૫-૧૨૬",
+    "exp": "લઘુરેખા (-) મુખ્યત્વે લીટી પૂરી થતાં અધૂરા શબ્દને બીજી લીટીમાં લખવા માટે અને સામાસિક શબ્દોના ઘટકો (કુટુંબ-કબીલો, સભ્ય-સચિવ) અલગ દર્શાવવા વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૩: ‘ગુરુરેખા’ (—) ના ઉપયોગના સંદર્ભમાં નીચેનામાંથી કયો હેતુ સાચો છે?",
+    "options": [
+      "જુદા-જુદા શબ્દો કે વિચાર એકસાથે વ્યક્ત કરવા (દા.ત. અન્ન, જળ અને વાયુ — આ ત્રણ આવશ્યક છે).",
+      "સંવાદમાં રજૂ થતો વિચાર ઇરાદાપૂર્વક અધવચ્ચે પડતો મૂકાય ત્યારે (દા.ત. ‘જો આજે તું તોફાન કરીશ તો પછી —’).",
+      "વિચારમાં ફેરફાર દર્શાવવા કે વચ્ચે કંઈ ઉમેરવા તેની પહેલાં અને પછી એમ બે ગુરુરેખા મૂકાય છે.",
+      "ઉપરનાં ત્રણેય વિધાનો સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – ગુરુરેખા | પાના નં.: ૧૨૬",
+    "exp": "ગુરુરેખા લઘુરેખાથી થોડી મોટી આડી રેખા છે, જેનો ઉપયોગ ઉપરોક્ત ત્રણેય હેતુઓ માટે કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૪: અવતરણચિહ્ન (‘ ’ અને “ ”) ના ઉપયોગ અંગે નીચેનામાંથી કઈ બાબત સાચી છે?",
+    "options": [
+      "કોઈના બોલેલા શબ્દો કે કહેલી વાત તેના જ શબ્દોમાં રજૂ કરવા માટે અવતરણચિહ્ન વપરાય છે.",
+      "ગ્રંથ, સામાયિક કે કૃતિનું નામ, તખલ્લુસ, ઘર, ગાડી કે વિમાનનું નામ દર્શાવવા અવતરણચિહ્નમાં મૂકાય છે.",
+      "‘સરસ્વતીચંદ્ર’ નો પહેલો ભાગ ૧૮૮૭ માં પ્રગટ થયો હતો — આ વાક્યમાં કૃતિનું નામ અવતરણચિહ્નમાં છે.",
+      "ઉપરનાં ત્રણેય વિધાનો સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – અવતરણચિહ્ન | પાના નં.: ૧૨૬",
+    "exp": "કોઈના બોલેલા શબ્દો યથાવત્ મૂકવા માટે તેમજ ગ્રંથ, કૃતિ, તખલ્લુસ, મહત્વના શબ્દ કે ઉક્તિ દર્શાવવા અવતરણચિહ્ન વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન ૧૭૫: ‘અમદાવાદ → અ’વાદ’, ‘ગયા હતા → ગયા’તા’ અને ‘મેં નહોતું કહ્યું → મેં નો’તું કહ્યું’ — આ ઉદાહરણોમાં કયા વિરામચિહ્નનો ઉપયોગ થયો છે?",
+    "options": [
+      "અવતરણચિહ્ન",
+      "લોપચિહ્ન (’)",
+      "લઘુરેખા",
+      "ગુરુવિરામ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ/વિભાગ: ૪.૩.૪ વિરામચિહ્નો – લોપચિહ્ન | પાના નં.: ૧૨૬",
+    "exp": "શબ્દમાં કોઈ અક્ષરનો લોપ થયો હોય ત્યારે લોપચિહ્ન (’) વપરાય છે, જે મોટાભાગે કાવ્યોમાં અને વાતચીત દર્શાવતાં વાક્યોમાં પ્રયોજાય છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-75) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૭૫ માંથી ૭૫ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ ૪ (અ) : ગુજરાતીમાં પ્રાવીણ્ય (સજ્જતા) (ભાગ – ૨)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "fy4agujmethodpart2.html",
+            testUploadDate: "2026-11-27"
+        })
+    });
+}
+</script>
+</body>
+</html>
