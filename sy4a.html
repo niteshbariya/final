@@ -1,0 +1,2678 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ): પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮) | ૧૨૫ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 125 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ): પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ)<br>પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">પ્રશ્ન ૧ થી ૧૨૫ | બહુવિકલ્પીય પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૨૫</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૨૫ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 125 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ) પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮) | ૧૨૫ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 125</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૨૫ પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ) પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮))
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: ગાણિતિક તર્કની પ્રક્રિયામાં સમસ્યાથી ઉકેલ તરફ જતી વખતે અનુસરવામાં આવતા સોપાનોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "સમસ્યા → અનુભવ → વિચાર → ચિંતન → અનુમાન → વિકલ્પ પસંદગી → નિર્ણય",
+      "સમસ્યા → વિચાર → અનુમાન → ચિંતન → અનુભવ → વિકલ્પ પસંદગી → નિર્ણય",
+      "સમસ્યા → વિચાર → ચિંતન → અનુભવ → અનુમાન → વિકલ્પ પસંદગી → નિર્ણય",
+      "સમસ્યા → ચિંતન → વિચાર → અનુભવ → વિકલ્પ પસંદગી → અનુમાન → નિર્ણય"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 2)",
+    "exp": "ગાણિતિક તર્કની પ્રક્રિયામાં સમસ્યા → વિચાર → ચિંતન → અનુભવ → અનુમાન → વિકલ્પ પસંદગી → નિર્ણય = તર્ક એવો ચોક્કસ ક્રમ દર્શાવવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: ગણિતના સ્વરૂપ અને તર્ક અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ગણિત એ તર્કબદ્ધ, ક્રમબદ્ધ અને સાતત્યપૂર્ણ વિષય છે.\nવિધાન 2: જો સમસ્યાના ઉકેલમાં કોઈ ક્ષતિ જણાય, તો તે પ્રક્રિયા છોડીને સીધો અંતિમ નિર્ણય લઈ લેવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 ખોટું છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 2)",
+    "exp": "ગણિત તર્કબદ્ધ, ક્રમબદ્ધ અને સાતત્યપૂર્ણ વિષય છે, પરંતુ જો ઉકેલમાં કોઈ ક્ષતિ જણાય કે સમસ્યાનું સમાધાન સ્પષ્ટ ન મળે, તો પુનઃ જે તે પ્રક્રિયામાંથી પસાર થવું પડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: 'તર્ક'ની સંકલ્પના સંદર્ભે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "તર્કનો પ્રારંભ અનુમાનથી અને અંત વિશ્લેષણથી થાય છે.",
+      "તર્ક એટલે વૈજ્ઞાનિક વિચાર.",
+      "પ્રશ્ન કે સમસ્યાથી તર્કનો પ્રારંભ થાય છે અને જવાબ કે ઉકેલથી તર્કનો અંત આવે છે.",
+      "અંતઃ વિચારણાનું વિશ્લેષણ અને મૂલ્યાંકનની ક્રિયા એટલે તર્ક."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 3)",
+    "exp": "મૉડ્યૂલ મુજબ તર્કનો પ્રારંભ પ્રશ્ન કે સમસ્યાથી થાય છે અને તેનો અંત જવાબ કે ઉકેલથી આવે છે, નહીં કે અનુમાન અને વિશ્લેષણથી."
+  },
+  {
+    "q": "પ્રશ્ન 4: \"ગણિતમાં કોઈ પ્રશ્ન કે સમસ્યાના ઉકેલ માટે આપેલી વિગતોનો અભ્યાસ કરી, તેમની વચ્ચેનો સંબંધ તપાસી, વિગતોનાં વિશ્લેષણ અને અર્થઘટન કરી ઉકેલ તરફ જવાની સમગ્ર પ્રક્રિયા\" ને શું કહેવામાં આવે છે?",
+    "options": [
+      "સામાન્યીકરણ",
+      "કાર્યકારી સંબંધ",
+      "સાંખ્યિક ગોઠવણી",
+      "ગાણિતિક તર્ક"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 3)",
+    "exp": "આપેલી વિગતોનો અભ્યાસ, સંબંધોની તપાસ, વિશ્લેષણ અને અર્થઘટન કરી ઉકેલ તરફ જવાની સમગ્ર પ્રક્રિયાને 'ગાણિતિક તર્ક' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 5: 'સામાન્યીકરણની પ્રક્રિયા' (Generalization) માં નીચેના તબક્કાઓને યોગ્ય ક્રમમાં ગોઠવો:\n1. જોવા મળતી સામાન્ય બાબતને અલગ તારવવી.\n2. કોઈ ઘટનાનું સંબંધિત શ્રેણીબદ્ધ અવલોકન કરવું.\n3. પરિણામને સૂત્ર, નિયમ કે ગુણધર્મ તરીકે પ્રસ્થાપિત કરવું.\n4. તેવી જ પરિસ્થિતિમાં પુનઃ અવલોકન કરી સામાન્ય બાબતનું યથાર્થીકરણ કરવું.",
+    "options": [
+      "2 → 4 → 1 → 3",
+      "2 → 1 → 4 → 3",
+      "1 → 2 → 4 → 3",
+      "2 → 1 → 3 → 4"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 3)",
+    "exp": "સામાન્યીકરણમાં સૌપ્રથમ શ્રેણીબદ્ધ અવલોકન, ત્યારબાદ સામાન્ય બાબત અલગ તારવવી, પછી તેવી જ પરિસ્થિતિમાં પુનઃ અવલોકન કરી યથાર્થીકરણ કરવું અને અંતે તેને સૂત્ર, નિયમ કે ગુણધર્મ તરીકે પ્રસ્થાપિત કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: સામાન્યીકરણની પ્રક્રિયા સમજાવવા માટે વર્તુળના પરિઘ અને વ્યાસના ગુણોત્તર (π) અંગે આપેલા કોષ્ટકમાં કઈ જોડનો સમાવેશ થતો નથી?",
+    "options": [
+      "પરિઘ = 44, વ્યાસ = 14",
+      "પરિઘ = 66, વ્યાસ = 21",
+      "પરિઘ = 88, વ્યાસ = 28",
+      "પરિઘ = 110, વ્યાસ = 35"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 3)",
+    "exp": "પાના નં. 3 પર આપેલા કોષ્ટકમાં ત્રણ વર્તુળો માટે અનુક્રમે (44, 14), (66, 21) અને (110, 35) ના માપ દ્વારા 22/7 = π નું સામાન્યીકરણ દર્શાવ્યું છે; (88, 28) નો ઉલ્લેખ કોષ્ટકમાં નથી."
+  },
+  {
+    "q": "પ્રશ્ન 7: મૉડ્યૂલ મુજબ નીચેનામાંથી કયા શૈક્ષણિક મુદ્દાઓ સામાન્યીકરણની પ્રક્રિયા દ્વારા સમજાવી શકાય તેવા ઉદાહરણોમાં દર્શાવેલ છે?\n1. ઘાતાંકના નિયમો\n2. વિભાજ્યતાની ચાવીઓ\n3. પૂર્ણાંક સંખ્યાના ગુણધર્મો\n4. સંખ્યાઓની ઓળખ અને ગુણધર્મ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 4)",
+    "exp": "ઘાતાંકના નિયમો, વિભાજ્યતાની ચાવીઓ, પૂર્ણાંક સંખ્યાના ગુણધર્મો તથા સંખ્યાઓની ઓળખ અને ગુણધર્મ—આ ચારેય મુદ્દાઓ સામાન્યીકરણ દ્વારા સમજાવી શકાય તેવા શૈક્ષણિક મુદ્દા તરીકે દર્શાવેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: સાદા વ્યાજનું સૂત્ર I = PRN / 100 તારવવા માટે ઉદાહરણમાં કઈ ગાણિતિક પદ્ધતિનો ઉલ્લેખ કરવામાં આવ્યો છે?",
+    "options": [
+      "પંચ રાશિ",
+      "ત્રિરાશિ",
+      "અનિષ્ટાપત્તિની રીત",
+      "ગુણોત્તર પદ્ધતિ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 4)",
+    "exp": "રૂ. 300 નું 3 વર્ષનું 10% લેખે સાદું વ્યાજ શોધવાના ઉદાહરણમાં 'પંચ રાશિ' મૂક્યા બાદ બીજા ઉદાહરણની ગણતરી દ્વારા સાદા વ્યાજનું સૂત્ર I = PRN / 100 તારવી શકાય તેમ દર્શાવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: 'ગાણિતિક કોયડા' (Mathematical Problem) ના અર્થ અને સંકલ્પના અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ગણિતના બધા જ ગાણિતિક પ્રશ્નોને ગાણિતિક કોયડા કહેવામાં આવે છે.\nવિધાન 2: જે ગાણિતિક પ્રશ્ન ચીલાચાલુ રીતે ઉકેલાતો નથી અને જેના ઉકેલમાં અગાઉ પ્રાપ્ત કરેલ ગાણિતિક જ્ઞાનનો ઉપયોગ કરવાનો થાય તેવા પડકારરૂપ પ્રશ્નો ગાણિતિક કોયડા કહેવાય છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 4)",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવેલ છે કે \"બધા ગાણિતિક પ્રશ્નો એ ગાણિતિક કોયડા નથી.\" માત્ર ચીલાચાલુ રીતે ન ઉકેલાતા અને તર્કસંગત વિચારણા માંગી લેતા પડકારરૂપ પ્રશ્નો જ ગાણિતિક કોયડા છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: વ્યાવહારિક કોયડા ઉકેલની પ્રક્રિયામાં વિદ્યાર્થીઓ કોયડાનો ઉકેલ મેળવે તે કરતાં વધુ મહત્ત્વની બાબત કઈ ગણવામાં આવી છે?",
+    "options": [
+      "વિદ્યાર્થીઓ ઝડપથી ગણતરી કરતાં શીખે",
+      "વિદ્યાર્થીઓ આ પ્રક્રિયા દ્વારા વૈજ્ઞાનિક ઢબે વિચારતા થાય",
+      "વિદ્યાર્થીઓ ગણિતનાં તમામ સૂત્રો કંઠસ્થ કરી લે",
+      "વિદ્યાર્થીઓ શિક્ષકની મદદ વિના પરીક્ષામાં વધુ ગુણ મેળવે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 5)",
+    "exp": "વિદ્યાર્થીઓ કોયડાનો ઉકેલ મેળવે તે કરતાં તેઓ આ પ્રક્રિયા દ્વારા 'વૈજ્ઞાનિક ઢબે વિચારતા થાય' તે વધુ મહત્ત્વની બાબત છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: કોયડા ઉકેલની કાર્યપ્રણાલીના સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ગણિતમાં એક જ કોયડાનો ઉકેલ હંમેશાં એક જ ચોક્કસ રીતે શક્ય હોય છે તેવું શિક્ષકે દર્શાવવું જરૂરી છે.",
+      "ભૂમિતિની રાઈડર્સ એટલે પ્રમેય પ્રશ્નો, જે કોયડાનું એક સ્વરૂપ છે.",
+      "કોયડાઓમાં ટેનગ્રામની પ્રવૃત્તિઓ, જાદુઈ ચોરસ, સુડોકુ અને ક્રિપ્ટેરિધમ પ્રકારના કોયડાઓનો સમાવેશ થઈ શકે છે.",
+      "ઘણી વખત કોયડાઓમાં સીધેસીધો ગણિતના જ્ઞાનનો ઉપયોગ કરવાને બદલે સર્જનાત્મક રીતે નવી જ રીતે (Think beyond the line) વિચારવાનું હોય છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 5)",
+    "exp": "મૉડ્યૂલ મુજબ \"એક જ કોયડાનો ઉકેલ એક કરતાં વધુ રીતે પણ શક્ય છે તેવું શિક્ષકે દર્શાવવું જરૂરી છે.\" તેથી વિધાન (A) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: કોયડા ઉકેલ માટેનાં નિશ્ચિત પાંચ સોપાનોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "કોયડો સમજવો → કોયડા ઉકેલની રીત નક્કી કરવી → વિશ્લેષણ કરી સંબંધો તપાસવા → ઉકેલ મેળવવો → તાળો મેળવવો",
+      "કોયડાનું વિશ્લેષણ કરવું → કોયડો સમજવો → રીત નક્કી કરવી → ઉકેલ મેળવવો → ખાતરી કરવી",
+      "કોયડો સમજવો → વિશ્લેષણ કરી સંબંધો તપાસવા → ઉકેલ મેળવવો → રીત નક્કી કરવી → તાળો મેળવવો",
+      "કોયડો સમજવો → કોયડાનું વિશ્લેષણ કરી સંબંધો તપાસવા → કોયડા ઉકેલની રીત નક્કી કરવી → કોયડાનો ઉકેલ મેળવવો → કોયડા ઉકેલની ખાતરી કરવી, તાળો મેળવવો"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 5-6)",
+    "exp": "કોયડા ઉકેલના પાંચ સોપાનોનો સાચો ક્રમ: 1. કોયડો સમજવો, 2. વિશ્લેષણ કરી સંબંધો તપાસવા, 3. રીત નક્કી કરવી, 4. ઉકેલ મેળવવો અને 5. ખાતરી કરવી / તાળો મેળવવો."
+  },
+  {
+    "q": "પ્રશ્ન 13: કોયડા ઉકેલનાં સોપાનો અને તેમાં થતી ક્રિયાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (સોપાન)  |  વિભાગ - બ (પ્રક્રિયા)\n1. કોયડો સમજવો — (p) કોયડા ઉકેલ માટે ગાણિતિક માળખું રચવામાં આવે છે.\n2. કોયડાનું વિશ્લેષણ કરી સંબંધો તપાસવા — (q) મેળવેલ જવાબના ખરાપણાની ચકાસણી કરવી.\n3. કોયડા ઉકેલની રીત નક્કી કરવી — (r) કયા કયા પૂર્વજ્ઞાનની જરૂરિયાત રહેશે તે વિચારવું.\n4. કોયડા ઉકેલની ખાતરી કરવી — (s) રકમનું અર્થગ્રહણ કરી શું શું આપેલ છે તે નક્કી કરવું.",
+    "options": [
+      "1-s, 2-p, 3-r, 4-q",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-s, 3-p, 4-q",
+      "1-s, 2-r, 3-q, 4-p"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 5-6)",
+    "exp": "'કોયડો સમજવો' માં શું આપેલ છે તે નક્કી થાય છે (s), 'વિશ્લેષણ' માં પૂર્વજ્ઞાનની જરૂરિયાત વિચારાય છે (r), 'રીત નક્કી કરવી' માં ગાણિતિક માળખું રચાય છે (p) અને 'ખાતરી કરવી' માં જવાબની ચકાસણી થાય છે (q)."
+  },
+  {
+    "q": "પ્રશ્ન 14: કોયડા ઉકેલના મહત્ત્વ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?\n1. કોયડા ઉકેલ પદ્ધતિ દ્વારા વિદ્યાર્થી પૂરતો વિચાર કરીને કટોકટીમાં માર્ગ કાઢવા માટેની સૂઝ પ્રાપ્ત કરે છે.\n2. તેનાથી વિદ્યાર્થીમાં અપેક્ષિત અભ્યાસ ટેવો વિકસે છે.\n3. વિદ્યાર્થી પોતે પ્રાપ્ત કરેલ જ્ઞાનનો સમજપૂર્વક ઉપયોગ કરતાં શીખે છે.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3 તમામ",
+      "માત્ર 1 અને 3"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 6-7)",
+    "exp": "કોયડા ઉકેલના મહત્ત્વ અંતર્ગત કટોકટીમાં માર્ગ કાઢવાની સૂઝ, અપેક્ષિત અભ્યાસ ટેવોનો વિકાસ અને પ્રાપ્ત જ્ઞાનનો સમજપૂર્વક ઉપયોગ—આ ત્રણેય બાબતોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: મૉડ્યૂલ મુજબ ગણિતમાં કોયડા ઉકેલવાની પ્રવૃત્તિ દ્વારા વિદ્યાર્થીમાં વિકસતા ગુણો અને માનસિક શક્તિઓની કઈ જોડ સાચી છે?",
+    "options": [
+      "ગુણો: ધીરજ, આત્મવિશ્વાસ, સહકારની ભાવના | માનસિક શક્તિઓ: તાર્કિક વિચારણા, અવલોકન, પૃથક્કરણ, સામાન્યીકરણ",
+      "ગુણો: અવલોકન, પૃથક્કરણ, સહકાર | માનસિક શક્તિઓ: ધીરજ, આત્મવિશ્વાસ, નિયમિતતા",
+      "ગુણો: ઝડપ, ચોકસાઈ, યાદશક્તિ | માનસિક શક્તિઓ: લેખન, વાંચન, શ્રવણ",
+      "ગુણો: તાર્કિક વિચારણા, ધીરજ, સામાન્યીકરણ | માનસિક શક્તિઓ: સહકાર, આત્મવિશ્વાસ, પૃથક્કરણ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 7)",
+    "exp": "કોયડા ઉકેલથી વિદ્યાર્થીમાં ધીરજ, આત્મવિશ્વાસ, સહકારની ભાવના જેવા ગુણો તથા તાર્કિક વિચારણા, અવલોકનશક્તિ, પૃથક્કરણશક્તિ અને સામાન્યીકરણ કરવાની શક્તિ જેવી માનસિક શક્તિઓનો વિકાસ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: વિદ્યાર્થીઓમાં કોયડા ઉકેલ કૌશલ્યના વિકાસ સંદર્ભે મૉડ્યૂલમાં શેને \"કોયડા ઉકેલનું પ્રાણતત્વ\" કહેવામાં આવ્યું છે?",
+    "options": [
+      "શિક્ષકનું માર્ગદર્શન",
+      "પ્રત્યક્ષ અનુભવ",
+      "સૂત્રોનું જ્ઞાન",
+      "માનસિક વિચારણા"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 7)",
+    "exp": "વિદ્યાર્થીઓની સક્રિયતાના મુદ્દા હેઠળ સ્પષ્ટ જણાવાયું છે કે \"માનસિક વિચારણા એ કોયડા ઉકેલનું પ્રાણતત્વ છે.\""
+  },
+  {
+    "q": "પ્રશ્ન 17: કોયડા ઉકેલ કૌશલ્યના વિકાસ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: જીવંત (પ્રત્યક્ષ) અનુભવો વગરનું કોયડા ઉકેલનું જ્ઞાન ટૂંકજીવી હોય છે.\nવિધાન 2: વિદ્યાર્થીઓને બે જૂથમાં વહેંચી એક જૂથ કોયડા રચે અને બીજું જૂથ મર્યાદિત સમયમાં ઉકેલ આપે તેવી રમતથી કોયડા ઉકેલનો ભ્રમ દૂર કરી શકાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 7-8)",
+    "exp": "પ્રત્યક્ષ કે જીવંત અનુભવો વગરનું જ્ઞાન ટૂંકજીવી હોય છે અને બે જૂથ વચ્ચે કોયડા રચવાની તથા ઉકેલવાની રમતથી વિદ્યાર્થીઓમાં કોયડા ઉકેલનો ભ્રમ દૂર કરી શકાય છે અને સક્રિયતા વધે છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: સર્જનાત્મક ચિંતન (Creative Thinking) ના ઉદાહરણ તરીકે આપેલા કોયડા મુજબ જો 9888 = 7, 8096 = 5, 6855 = 3 અને 7662 = 2 હોય, તો 2851 = ? નો જવાબ શું આવશે?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 8)",
+    "exp": "આ સર્જનાત્મક ચિંતન આધારિત કોયડામાં 0 થી 9 અંકોમાં રહેલા (શૂન્ય) '0' આકાર ગણવાના છે. સંખ્યા 2851 માં માત્ર અંક '8' માં 2 શૂન્ય (વર્તુળાકાર) આકાર આવેલા છે, તેથી જવાબ 2 થશે."
+  },
+  {
+    "q": "પ્રશ્ન 19: ગણિતના વિષયવસ્તુ સંબંધી કોયડાઓના સ્વરૂપ અંગે પ્રાથમિક કક્ષા અને ઉચ્ચ પ્રાથમિક કક્ષા વચ્ચે શો તફાવત દર્શાવવામાં આવ્યો છે?",
+    "options": [
+      "પ્રાથમિક કક્ષામાં કોયડાઓ વાર્તારૂપે કે રકમના વર્ણન સ્વરૂપે હોય છે, જ્યારે ઉચ્ચ પ્રાથમિક કક્ષામાં વિષયવસ્તુ આધારિત તેમજ વ્યવહારુ કોયડાઓ હોય છે.",
+      "પ્રાથમિક કક્ષામાં માત્ર શ્રેણી આધારિત કોયડાઓ હોય છે, જ્યારે ઉચ્ચ પ્રાથમિક કક્ષામાં માત્ર બીજગણિતના કોયડાઓ હોય છે.",
+      "પ્રાથમિક કક્ષામાં વ્યવહારુ કોયડાઓ હોય છે, જ્યારે ઉચ્ચ પ્રાથમિક કક્ષામાં માત્ર વાર્તારૂપ કોયડાઓ હોય છે.",
+      "પ્રાથમિક અને ઉચ્ચ પ્રાથમિક બંને કક્ષામાં માત્ર ક્રિપ્ટેરિધમ અને જાદુઈ ચોરસ આધારિત કોયડાઓ જ હોય છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 8)",
+    "exp": "પ્રાથમિક કક્ષામાં ગણિતના વિષયવસ્તુ સંબંધી કોયડાઓ વાર્તારૂપે કે રકમના વર્ણન સ્વરૂપે આપવામાં આવે છે, જ્યારે ઉચ્ચ પ્રાથમિક કક્ષામાં વિષયવસ્તુ આધારિત તેમજ વ્યવહારુ કોયડાઓ ઉકેલવાના હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: સાંખ્યિક ગોઠવણી (શ્રેણી) અને તેના સામાન્યીકૃત બીજગાણિતિક પદનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (સાંખ્યિક શ્રેણી)  |  વિભાગ - બ (સામાન્ય પદ)\n1. 1, 3, 5, 7, 9 ... — (p) nⁿ\n2. 1, 4, 9, 16 ... — (q) 2n − 1\n3. 2, 5, 10, 17 ... — (r) n²\n4. 1, 4, 27, 256 ... — (s) n² + 1",
+    "options": [
+      "1-q, 2-s, 3-r, 4-p",
+      "1-r, 2-q, 3-s, 4-p",
+      "1-q, 2-r, 3-p, 4-s",
+      "1-q, 2-r, 3-s, 4-p"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 11-12)",
+    "exp": "1, 3, 5, 7, 9 ... નું સામાન્ય પદ 2n − 1; 1, 4, 9, 16 ... નું n²; 2, 5, 10, 17 ... નું n² + 1 અને 1, 4, 27, 256 ... નું nⁿ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: 'ફિબોનાકી સંખ્યાઓ' (Fibonacci Numbers) વિશે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "તે અનુક્રમ સંખ્યાઓની એક પુનરાવર્તી શ્રેણી છે, જેમાં અનુવર્તી સંખ્યા પોતાનાથી પૂર્વાતીત બે સંખ્યાઓના યોગફળ બરાબર હોય છે.",
+      "ફિબોનાકી સંખ્યાઓનો ક્રમ 1, 2, 4, 7, 11, 16 ... પ્રમાણે આગળ વધે છે.",
+      "પાઈનેપલના શંકુ સર્પિલાકારોની સંખ્યામાં ફિબોનાકી સંખ્યાનો પ્રયોગ થતો જોવા મળે છે.",
+      "સૂરજમુખીનાં બીજમાં ફિબોનાકી સંખ્યાઓ કુદરતી સ્વરૂપમાં જોવા મળે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 12)",
+    "exp": "ફિબોનાકી સંખ્યાઓનો સાચો ક્રમ 0, 1, 1, 2, 3, 5, 8 ... છે (જ્યાં દરેક સંખ્યા અગાઉની બે સંખ્યાનો સરવાળો છે), તેથી વિધાન (B) ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: બે રાશિનો એકબીજી પર આધારિત એવો સંબંધ કે જેમાં કોઈ એકની કિંમતમાં વધ-ઘટ થાય તો તેના પર આધારિત બીજાની કિંમતમાં પણ ફેરફાર થાય, તેને શું કહેવામાં આવે છે?",
+    "options": [
+      "સાંખ્યિક ગોઠવણી",
+      "સમતાનો ગુણધર્મ",
+      "કાર્યકારી સંબંધ (Functional Relation)",
+      "સામાન્યીકરણ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 12)",
+    "exp": "બે રાશિનો એકબીજી પર આધારિત સંબંધ, જેમાં એકની કિંમતમાં ફેરફાર થતાં બીજાની કિંમતમાં પણ ફેરફાર થાય, તેને 'કાર્યકારી સંબંધ' (Functional Relation) કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: સમીકરણના સંદર્ભે સમતાના ગુણધર્મો અંગે નીચેનામાંથી કઈ શરત અને ઉદાહરણ સાચાં છે?\n1. જો a = b હોય, તો a/c = b/c માટે c ≠ 0 હોવું જરૂરી છે.\n2. સમતાના ગુણધર્મોને સમજવા માટે બંને બાજુએ સંતુલિત 'વૈજ્ઞાનિક તુલા (ત્રાજવા)' નું ઉદાહરણ આપી શકાય.\n3. સમીકરણ x + 3 = 5 ના ઉકેલમાં x + 0 = 2 મળે છે, જ્યાં 0 એ સરવાળાનો તટસ્થ ઘટક છે.",
+    "options": [
+      "1, 2 અને 3 તમામ સાચાં છે.",
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે.",
+      "માત્ર 1 અને 3 સાચાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 13)",
+    "exp": "ભાગાકારના સમતા ગુણધર્મમાં c ≠ 0 અનિવાર્ય છે; સમતાને વૈજ્ઞાનિક તુલા (ત્રાજવા) સાથે સરખાવવામાં આવી છે અને 0 એ સરવાળાનો તટસ્થ ઘટક છે. આમ ત્રણેય વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: 'ચલ' (Variable) ની સંકલ્પના અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "અજ્ઞાત રાશિના નિર્દેશ માટે વપરાતો સંકેત એટલે ચલ.",
+      "ચલની કિંમત ચલિત અને અનિશ્ચિત હોય છે.",
+      "બીજગણિત ચલ સંખ્યા પર આધારિત છે.",
+      "ચલને દર્શાવવા માટે સામાન્ય રીતે અંગ્રેજી પ્રથમ મૂળાક્ષરો (Capital letters) નો ઉપયોગ કરવામાં આવે છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 14)",
+    "exp": "ચલને દર્શાવવા માટે સામાન્ય રીતે અંગ્રેજી 'દ્વિતીય મૂળાક્ષરો' (જેમ કે a, b, c, d કે x, y, z) નો ઉપયોગ કરવામાં આવે છે, પ્રથમ મૂળાક્ષરોનો નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 25: સુરેખ સમીકરણ અને તેના ઉકેલ સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: સુરેખ સમીકરણના બે પ્રકાર છે: એક ચલ સુરેખ સમીકરણ અને દ્વિ (બે) ચલ સુરેખ સમીકરણ.\nવિધાન 2: સમીકરણમાં અજ્ઞાત સ્થાને જે કિંમત મૂકવાથી બંને બાજુનાં પરિણામ સમાન થાય તે કિંમતને સમીકરણનો 'ઉકેલ' અથવા 'સમીકરણનું બીજ' કહેવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 14)",
+    "exp": "સુરેખ સમીકરણના એક ચલ અને દ્વિ ચલ એમ બે પ્રકાર છે, અને સમીકરણની બંને બાજુનાં પરિણામ સમાન કરતી અજ્ઞાતની કિંમતને સમીકરણનો ઉકેલ કે 'સમીકરણનું બીજ' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: મહાવરાના પ્રશ્નો અંગે પ્રકરણ-1 ના અંતે શિક્ષકો માટે કઈ વિશેષ સૂચના આપવામાં આવી છે?",
+    "options": [
+      "વિદ્યાર્થીઓને મહાવરાના તમામ દાખલા કેલ્ક્યુલેટરની મદદથી ગણાવવા જોઈએ.",
+      "મહાવરાને ગણવાનું કહેવાને બદલે તેમાં વપરાતો તર્ક, પગથિયાં અને થયેલ સામાન્યીકરણની પ્રક્રિયા સ્પષ્ટ કરવાનું કહેવું વધુ ઉચિત ગણાશે.",
+      "મહાવરાના દાખલા માત્ર ગૃહકાર્યમાં જ આપવા જોઈએ.",
+      "મહાવરાના દરેક દાખલા માટે વિદ્યાર્થીઓ પાસેથી 10 સેકન્ડમાં મૌખિક જવાબ લેવો જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 16)",
+    "exp": "મૉડ્યૂલના પાના નં. 16 પર નોંધ સ્વરૂપે સ્પષ્ટ જણાવાયું છે કે મહાવરાને ગણવાનું કહેવાને બદલે તેમાં વપરાતો તર્ક, પગથિયાંની તથા થયેલ સામાન્યીકરણની પ્રક્રિયા સ્પષ્ટ કરવાનું કહેવું વધુ ઉચિત ગણાશે."
+  },
+  {
+    "q": "પ્રશ્ન 27: મહાવરો-1 માં આપેલા પ્રશ્ન મુજબ, કોઈ પણ બે ક્રમિક સંખ્યાનો લ.સા.અ. (LCM) કેટલો થાય છે?",
+    "options": [
+      "નાની સંખ્યા જેટલો",
+      "મોટી સંખ્યા જેટલો",
+      "બંનેના ગુણાકાર જેટલો",
+      "1"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-1 ગાણિતિક તર્ક (પાના નં.: 15)",
+    "exp": "બે ક્રમિક સંખ્યાઓમાં 1 સિવાય કોઈ સામાન્ય અવયવ ન હોવાથી તેમનો લ.સા.અ. હંમેશાં 'બંનેના ગુણાકાર જેટલો' થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: નીચેની પરિસ્થિતિઓમાંથી કયું ઉદાહરણ ગૌણ માહિતી (Secondary Data) નું છે?\n1. વર્ગના 50 વિદ્યાર્થીઓનું જાતે માપેલું વજન\n2. કોઈ એક સોસાયટીની વ્યક્તિઓનાં ચૂંટણીકાર્ડ પરથી એકત્ર કરેલ માહિતી\n3. શાળાના વિસ્તારના 10 છોડની ઊંચાઈની નોંધ\n4. કોલેજની ઓફિસમાં નોંધાયેલ માહિતીમાંથી ભૂતપૂર્વ વિદ્યાર્થીઓ વિશેની માહિતી",
+    "options": [
+      "માત્ર 2 અને 4",
+      "માત્ર 1 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "માત્ર 4"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 19-20)",
+    "exp": "અન્ય સ્રોત દ્વારા ઉપલબ્ધ માહિતીનો ઉપયોગ કરવામાં આવે તેને ગૌણ માહિતી કહે છે. ચૂંટણીકાર્ડ અને કોલેજની ઓફિસમાં નોંધાયેલ માહિતી એ ગૌણ માહિતીનાં ઉદાહરણો છે, જ્યારે બાકીનાં બે પ્રાથમિક માહિતીનાં ઉદાહરણો છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: માહિતીના પ્રકારો અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ગૌણ માહિતીના સ્રોત વિશ્વાસપાત્ર છે કે નહીં તે તપાસવું જરૂરી છે.\nવિધાન 2: વ્યક્તિની લાક્ષણિકતા વર્ણવતી માહિતીને આંકડાકીય માહિતી (Quantitative Data) કહે છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 20)",
+    "exp": "ગૌણ માહિતીના સ્રોતની વિશ્વસનીયતા તપાસવી જરૂરી છે, પરંતુ વ્યક્તિની લાક્ષણિકતા વર્ણવતી માહિતીને 'વર્ણનાત્મક કે ગુણાત્મક માહિતી' (Qualitative / Descriptive Data) કહે છે, આંકડાકીય માહિતી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 30: માહિતીના વર્ગીકરણ સંદર્ભે નીચેનામાંથી કઈ વ્યાખ્યા અયોગ્ય છે?",
+    "options": [
+      "માહિતી એકત્ર કરતી વખતે અવલોકનો જે ક્રમમાં અને સ્વરૂપમાં મળ્યાં હોય તે પ્રમાણે નોંધાય તેને 'કાચી માહિતી' (Raw Data) કહે છે.",
+      "કાચી માહિતીને 'અવર્ગીકૃત માહિતી' (Ungrouped Data) પણ કહે છે.",
+      "એકત્રિત કરેલી માહિતીને તેમાંનાં ઘટકોમાં હાજર રહેલાં સમાન લક્ષણો કે ગુણધર્મોને આધારે અમુક વર્ગોમાં ગોઠવવાની પ્રક્રિયાને 'આવૃત્તિ' કહે છે.",
+      "વર્ગીકરણ થયું હોય એવી માહિતીને 'વર્ગીકૃત માહિતી' (Grouped Data) કહે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 20)",
+    "exp": "સમાન લક્ષણો કે ગુણધર્મોને આધારે માહિતીને અમુક વર્ગોમાં ગોઠવવાની પ્રક્રિયાને 'વર્ગીકરણ' કહે છે, આવૃત્તિ નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 31: 'મધ્ય કિંમત' (Mid-value) અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "તે વર્ગની ઉચ્ચસીમા અને નિમ્નસીમાના તફાવતનું અડધું માપ છે.",
+      "તે એક એવી પ્રતિનિધિરૂપ કિંમત છે કે વર્ગમાં આવેલ પ્રાપ્તાંકને બદલે તેને મૂકીને આંકડાશાસ્ત્રીય ગણતરી કરી શકાય છે.",
+      "વર્ગ 75-79 ની મધ્ય કિંમત 76.5 થાય છે.",
+      "મધ્ય કિંમત શોધવા માટે વર્ગની નિમ્નસીમામાંથી ઉચ્ચસીમા બાદ કરી 2 વડે ભાગવામાં આવે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 21)",
+    "exp": "મધ્ય કિંમત એ વર્ગની પ્રતિનિધિરૂપ કિંમત છે. તેનું સૂત્ર (નિમ્નસીમા + ઉચ્ચસીમા) / 2 છે, જે મુજબ 75-79 ની મધ્ય કિંમત (75 + 79) / 2 = 77 થાય."
+  },
+  {
+    "q": "પ્રશ્ન 32: આવૃત્તિ વિતરણનો અભ્યાસ કરતાં પ્રાપ્તાંક અથવા માપ તેના મધ્ય ભાગમાં વધુ પ્રમાણમાં ગોઠવાયેલાં જોવા મળે છે—આ સ્થિતિને શું કહેવામાં આવે છે?",
+    "options": [
+      "આવૃત્તિ વિતરણ",
+      "પ્રમાણ વિચલન",
+      "વર્ગીકરણ",
+      "મધ્યવર્તી સ્થિતિ (Central Tendency)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 22)",
+    "exp": "પ્રાપ્તાંકો કે માપ તેના મધ્ય ભાગમાં વધુ પ્રમાણમાં ગોઠવાયેલાં હોય તે સ્થિતિને 'મધ્યવર્તી સ્થિતિ' (Central Tendency) અને જે માપ કે બિંદુની આસપાસ ગોઠવાયેલાં હોય તેને 'મધ્યવર્તી સ્થિતિનું માપ' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: મધ્યવર્તી સ્થિતિનાં માપના મુખ્ય બે ઉપયોગો કયા દર્શાવવામાં આવ્યા છે?\n1. સમગ્ર વર્ગના પ્રાપ્તાંકોના સામાન્ય વલણ કે લક્ષણનો ખ્યાલ પ્રાપ્ત થાય છે.\n2. બે (કે વધારે) વર્ગોની વચ્ચે સરખામણી કરી શકાય છે.\n3. દરેક વિદ્યાર્થીની વ્યક્તિગત ભૂલો જાણી શકાય છે.",
+    "options": [
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 2",
+      "1, 2 અને 3 તમામ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 22)",
+    "exp": "મધ્યવર્તી સ્થિતિનાં માપના બે ઉપયોગો છે: (i) સમગ્ર વર્ગના પ્રાપ્તાંકોના સામાન્ય વલણ કે લક્ષણનો ખ્યાલ મેળવવો, અને (ii) બે કે વધારે વર્ગો વચ્ચે સરખામણી કરવી."
+  },
+  {
+    "q": "પ્રશ્ન 34: અવર્ગીકૃત માહિતી માટે મધ્યકના સૂત્ર x̄ = Σx / N ની મર્યાદાઓમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "જ્યારે પ્રાપ્તાંકોની સંખ્યા ખૂબ વધારે હોય ત્યારે ગણકયંત્ર (Calculator) વગર સરવાળો કરવો મુશ્કેલ પડે છે.",
+      "ગણકયંત્ર દ્વારા પ્રાપ્તાંક દાખલ કરતાં ભૂલ થાય ત્યારે પુનઃ ગણતરી કરવી પડે છે.",
+      "પ્રાપ્તાંકોનું વર્ગીકરણ આવૃત્તિ વિતરણમાં કરવામાં આવ્યું હોય ત્યારે આ રીત ઉપયોગી નથી.",
+      "પ્રાપ્તાંકોને ચઢતા કે ઊતરતા ક્રમમાં ગોઠવ્યા વિના આ સૂત્રનો ઉપયોગ કરી શકાતો નથી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 23)",
+    "exp": "મધ્યક શોધવા માટે પ્રાપ્તાંકોને ચઢતા કે ઊતરતા ક્રમમાં ગોઠવવાની જરૂર પડતી નથી (તે મધ્યસ્થ માટે જરૂરી છે). બાકીના ત્રણેય વિકલ્પો મધ્યકના સૂત્રની મર્યાદાઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન 35: 'મધ્યસ્થ' (Median) ની સંકલ્પના અને ગણતરી અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ક્રમમાં ગોઠવેલી સમગ્ર શ્રેણીના બે સરખા ભાગ કરતી રકમની કિંમતને મધ્યસ્થ કહે છે.\nવિધાન 2: અવર્ગીકૃત માહિતીમાં જો પ્રાપ્તાંકોની સંખ્યા N = 8 હોય, તો મધ્યસ્થ શોધવા માટે ચોથા અને પાંચમા પ્રાપ્તાંકની સરાસરી લેવી પડે છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 23-24)",
+    "exp": "મધ્યસ્થ શ્રેણીના બે સરખા ભાગ કરે છે. જ્યારે N = 8 હોય ત્યારે M = (8 + 1) / 2 = 4.5 મો પ્રાપ્તાંક થાય, જે ચોથા અને પાંચમા પ્રાપ્તાંકની સરાસરીથી મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: પ્રાપ્તાંકોનો 'સાચો બહુલક' (Z) શોધવા માટે મધ્યક (x̄) અને મધ્યસ્થ (M) ના સંબંધનું સાચું સૂત્ર કયું છે?",
+    "options": [
+      "Z = 2M − 3x̄",
+      "Z = 3M − 2x̄",
+      "Z = 3x̄ − 2M",
+      "Z = 3M + 2x̄"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 24)",
+    "exp": "અવર્ગીકૃત માહિતીમાં સૌથી વધુ વખત આવતો પ્રાપ્તાંક 'કાચો બહુલક' (Rough Mode) કહેવાય છે, જ્યારે સાચો બહુલક શોધવાનું સૂત્ર Z = 3M − 2x̄ છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: મધ્યવર્તી સ્થિતિનાં માપો અને તેના ઉપયોગની પરિસ્થિતિઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (માપ)  |  વિભાગ - બ (ક્યારે વપરાય?)\n1. મધ્યક (Mean) — (p) જ્યારે પ્રાપ્તાંકો વધુ પડતાં અનિશ્ચિત હોય અથવા છેડા પરના પ્રાપ્તાંકોની સંખ્યા વધુ હોય.\n2. મધ્યસ્થ (Median) — (q) જ્યારે કયા બિંદુ આગળ પ્રાપ્તાંકો વધુ પ્રમાણમાં ભેગા થાય છે તેટલું જ જાણવું હોય.\n3. બહુલક (Mode) — (r) જ્યારે ખૂબ જ ચોકસાઈની જરૂર હોય અને પ્રમાણ વિચલન જેવાં બીજાં આંકડાશાસ્ત્રીય માપ શોધવાનાં હોય.",
+    "options": [
+      "1-r, 2-q, 3-p",
+      "1-p, 2-r, 3-q",
+      "1-r, 2-p, 3-q",
+      "1-q, 2-p, 3-r"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 24-25)",
+    "exp": "મધ્યક ખૂબ ચોકસાઈ અને પ્રમાણ વિચલન જેવા માપો માટે (r), મધ્યસ્થ અનિશ્ચિત કે છેડા પરના વધુ પ્રાપ્તાંકો માટે (p) અને બહુલક વધુ પ્રાપ્તાંકો ભેગા થવાનું બિંદુ ઝડપથી જાણવા માટે (q) વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: સ્તંભાલેખ (Histogram) દોરતી વખતે X-અક્ષ પર શરૂઆતમાં કાપ કે છેદ (∥) ક્યારે દર્શાવવામાં આવે છે?",
+    "options": [
+      "જ્યારે Y-અક્ષ પર આવૃત્તિઓ 10 કરતાં મોટી હોય ત્યારે",
+      "જ્યારે X-અક્ષ પર પ્રથમ વર્ગ શૂન્યથી શરૂ થવાને બદલે અન્ય અંકોથી શરૂ થાય ત્યારે",
+      "જ્યારે વર્ગલંબાઈ અસમાન હોય ત્યારે",
+      "જ્યારે સ્તંભાલેખ પર આવૃત્તિ બહુકોણ દોરવાનો હોય ત્યારે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 25-26)",
+    "exp": "સ્તંભાલેખમાં X-અક્ષ પર સીમાબિંદુઓ લેવાય છે; જ્યારે પ્રથમ વર્ગ શૂન્ય (0) થી શરૂ થવાને બદલે અન્ય અંકોથી શરૂ થાય ત્યારે X-અક્ષ પર શરૂઆતમાં કાપ કે છેદ (∥) દર્શાવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: સ્તંભાલેખ (Histogram) અને આવૃત્તિ બહુકોણ (Frequency Polygon) અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "સ્તંભાલેખ દોરવા માટે X-અક્ષ પર સીમાબિંદુઓ અને Y-અક્ષ પર આવૃત્તિ લેવામાં આવે છે.",
+      "સ્તંભના ઉપલા મધ્યબિંદુઓને તૂટક-તૂટક રેખાથી જોડતાં આવૃત્તિ બહુકોણ બને છે.",
+      "સાંખ્યિક માહિતી આલેખરૂપે દર્શાવવાથી તે જોનારનું ઝડપથી ધ્યાન ખેંચે છે અને સમજવી સરળ બને છે.",
+      "સ્તંભાલેખ દોરવા માટે X-અક્ષ પર આવૃત્તિ અને Y-અક્ષ પર વર્ગોની નિમ્નસીમા લેવામાં આવે છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 25-26)",
+    "exp": "સ્તંભાલેખમાં X-અક્ષ પર સીમાબિંદુઓ (વર્ગો) અને Y-અક્ષ પર આવૃત્તિ લેવામાં આવે છે, તેથી વિધાન (D) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: રેલવે, બસ અને વિમાન મુસાફરીના સમયપત્રક (24 કલાકની ઘડિયાળ) સંદર્ભે જો કોઈ ટ્રેન 25મી તારીખે રાત્રે 12.00 વાગ્યા પછી ઊપડતી હોય, તો સમયપત્રકમાં સમય અને તારીખ કેવી રીતે દર્શાવાશે?",
+    "options": [
+      "સમય 00.01, 00.02... અને તારીખ 26",
+      "સમય 24.01, 24.02... અને તારીખ 25",
+      "સમય 00.01, 00.02... અને તારીખ 25",
+      "સમય 12.01, 12.02... અને તારીખ 26"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 28)",
+    "exp": "રેલવે, બસ અને વિમાન મુસાફરીમાં રાતના 12.00 વાગ્યા પછી સમય 00.00 થી શરૂ થાય છે (જેમ કે 00.01, 00.02...) અને મુસાફરીની તારીખ એક અંક આગળ વધીને 25 ને બદલે 26 બતાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: 'ટકા' (Percentage) ની સંકલ્પના અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ટકા એ એવા અપૂર્ણાંકનો અંશ છે જેનો છેદ 100 હોય.\nવિધાન 2: જ્યારે કોઈ વિધાન 100 ટકા છે તેવું સૂચવે, ત્યારે તેનું વિરોધી (પ્રતીપ) વિધાન શૂન્ય ટકાનો નિર્દેશ કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 28)",
+    "exp": "ટકા એ 100 ના આધારે મળતું મૂલ્ય (છેદ 100 ધરાવતા અપૂર્ણાંકનો અંશ) છે, અને જો વર્ગમાં 100% વિદ્યાર્થી હાજર હોય તો તેનું પ્રતીપ વિધાન 0% ગેરહાજર સૂચવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: ટકા અને માહિતીની ગણતરી અંગે નીચેનામાંથી કયો નિયમ સાચો છે?",
+    "options": [
+      "માહિતીના ગુણોત્તરને 100 વડે ભાગતાં ટકા મળે અને ટકાને 100 વડે ગુણતાં માહિતી મળે.",
+      "માહિતીના ગુણોત્તરને 100 વડે ગુણતાં ટકા મળે અને ટકા તથા કુલ સંખ્યાના ગુણાકારને 100 વડે ભાગતાં માંગેલી સંખ્યા મળે.",
+      "માત્ર માહિતીના ગુણોત્તરને 100 વડે ભાગવાથી જ ટકા અને સંખ્યા બંને મળે છે.",
+      "ટકા શોધવા માટે ત્રિરાશિની રીતનો ઉપયોગ કરી શકાતો નથી."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 29)",
+    "exp": "'યાદ રાખો' વિભાગ મુજબ: (1) માહિતીના ગુણોત્તરને 100 વડે ગુણતાં ટકા મળે, અને (2) ટકા અને કુલ સંખ્યાના ગુણાકારને 100 વડે ભાગતાં માંગેલી સંખ્યા મળે."
+  },
+  {
+    "q": "પ્રશ્ન 43: વ્યાજ (Interest) સંબંધિત પારિભાષિક શબ્દો અને તેના અર્થનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પદ)  |  વિભાગ - બ (અર્થ)\n1. મુદ્દલ (P) — (p) મુદતને અંતે મુદ્દલ ઉપરાંત ચૂકવાતી વધારાની રકમ\n2. વ્યાજ (I) — (q) વ્યાજ અને મુદ્દલનો સરવાળો (રાશ)\n3. મુદત (N) — (r) બેન્કમાં કે શરાફને ત્યાં મૂકવામાં કે ઉપાડવામાં આવતી રકમ\n4. વ્યાજ મુદ્દલ (A) — (s) જેટલા સમયગાળા માટે નાણાં મૂકવામાં કે લેવામાં આવે તે સમયગાળો",
+    "options": [
+      "1-r, 2-p, 3-q, 4-s",
+      "1-p, 2-r, 3-s, 4-q",
+      "1-r, 2-s, 3-p, 4-q",
+      "1-r, 2-p, 3-s, 4-q"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 30)",
+    "exp": "મુદ્દલ એટલે મૂકેલી/ઉપાડેલી રકમ (r), વ્યાજ એટલે મુદ્દલ ઉપરાંતની વધારાની રકમ (p), મુદત એટલે સમયગાળો (s) અને વ્યાજ મુદ્દલ એટલે વ્યાજ + મુદ્દલ અથવા રાશ (q)."
+  },
+  {
+    "q": "પ્રશ્ન 44: સાદા વ્યાજ અને ચક્રવૃદ્ધિ વ્યાજ અંગે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "પ્રથમ સમયગાળાનું સાદું વ્યાજ અને ચક્રવૃદ્ધિ વ્યાજ સરખું હોય છે.",
+      "ચક્રવૃદ્ધિ વ્યાજમાં કોઈ પણ વર્ષને અંતે મળતું વ્યાજ મુદ્દલ તે પછીના વર્ષ માટેનું મુદ્દલ બને છે.",
+      "રાષ્ટ્રીયકૃત બેન્કમાં બચત ખાતામાં દર ત્રણ માસે વ્યાજની ગણતરી થાય છે.",
+      "જ્યારે વ્યાજના વ્યાજની પણ ગણતરી કરવામાં આવે તેને ચક્રવૃદ્ધિ વ્યાજ કહેવાય."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 30-31)",
+    "exp": "મૉડ્યૂલ મુજબ \"રાષ્ટ્રીયકૃત બેન્કમાં બચત ખાતામાં દર છ માસે વ્યાજની ગણતરી થાય છે\", દર ત્રણ માસે નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 45: મૉડ્યૂલમાં આપેલા ઉદાહરણ મુજબ, રૂ. 10,000 નું 10% ના દરે 2 વર્ષનું સાદું વ્યાજ અને વાર્ષિક ચક્રવૃદ્ધિ વ્યાજ વચ્ચેનો તફાવત કેટલા રૂપિયા થાય?",
+    "options": [
+      "રૂ. 100",
+      "રૂ. 200",
+      "રૂ. 1,000",
+      "રૂ. 1,100"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 31)",
+    "exp": "રૂ. 10,000 નું 10% લેખે 2 વર્ષનું સાદું વ્યાજ રૂ. 2,000 અને ચક્રવૃદ્ધિ વ્યાજ રૂ. 2,100 થાય છે; તેથી બંને વચ્ચેનો તફાવત રૂ. 100 થાય."
+  },
+  {
+    "q": "પ્રશ્ન 46: નફો-ખોટ અને GST (Goods and Services Tax) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: વેચાણ કિંમત કરતાં મૂળકિંમત વધુ હોય તો ખોટ જાય (મૂ.કિં. − વે.કિં. = ખોટ).\nવિધાન 2: GST = VAT + ST, અર્થાત કોઈ પણ વસ્તુ/સામાન પર લેવાતા તમામ પ્રકારના વેરા હવે એક જ વાર ઉત્પાદક/સેવા પૂરી પાડનારને ચૂકવવાનો રહેશે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 32-33)",
+    "exp": "મૂળકિંમત વધુ હોય ત્યારે ખોટ જાય છે અને GST (Goods and Services Tax) = VAT + ST જેનાથી એક જ વસ્તુના ભાવ સમગ્ર દેશમાં એક જ રહેશે."
+  },
+  {
+    "q": "પ્રશ્ન 47: 'ગુણોત્તર' (Ratio) ના ગુણધર્મો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ગુણોત્તર એકસરખાં એકમ ધરાવતી બે વસ્તુઓની સરખામણી માટે વપરાતી રીત છે.",
+      "ગુણોત્તર હંમેશાં અતિ સંક્ષિપ્તરૂપમાં જ હોય છે.",
+      "ગુણોત્તર શુદ્ધ કે અશુદ્ધ અપૂર્ણાંકના સ્વરૂપે હોય છે.",
+      "30 પૈસા અને 15 રૂપિયાનો ગુણોત્તર 2:1 થાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 33-34)",
+    "exp": "ગુણોત્તર માટે બંને રાશિ એક જ એકમમાં હોવી જરૂરી છે. 15 રૂપિયા = 1500 પૈસા હોવાથી 30 પૈસા અને 1500 પૈસાનો ગુણોત્તર 30/1500 = 1:50 થાય, 2:1 નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 48: સમપ્રમાણ (Direct Proportion) અને વ્યસ્તપ્રમાણ (Inverse Proportion) માં અજ્ઞાત રાશિ 'd' શોધવાનાં સૂત્રો અંગે નીચેનામાંથી કઈ જોડ સાચી છે?",
+    "options": [
+      "સમપ્રમાણ: d = (a × b) / c | વ્યસ્તપ્રમાણ: d = (b × c) / a",
+      "સમપ્રમાણ: d = (b × c) / a | વ્યસ્તપ્રમાણ: d = (a × b) / c",
+      "સમપ્રમાણ: d = (a × c) / b | વ્યસ્તપ્રમાણ: d = (b × c) / a",
+      "સમપ્રમાણ: d = (b × c) / a | વ્યસ્તપ્રમાણ: d = (a × c) / b"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 34-35)",
+    "exp": "જો a, b, c, d સમપ્રમાણમાં હોય તો d = (b × c) / a અને વ્યસ્તપ્રમાણમાં હોય તો d = (a × b) / c સૂત્ર વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: એક શાળાના વર્ગમાં કસરત કરાવવા બાળકોની 4 હાર બનાવેલ છે અને દરેક હારમાં 9 બાળકો છે. જો આ જ બાળકોને 9 હારમાં ગોઠવવામાં આવે તો દરેક હારમાં કેટલાં બાળકો ગોઠવાય? આ ઉદાહરણ કયા પ્રકારના પ્રમાણનું છે?",
+    "options": [
+      "સમપ્રમાણ",
+      "ચક્રવૃદ્ધિ પ્રમાણ",
+      "વ્યસ્તપ્રમાણ",
+      "સતત પ્રમાણ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 35)",
+    "exp": "અહીં હારની સંખ્યા વધતાં દરેક હારમાં બાળકોની સંખ્યા તેટલા જ પ્રમાણમાં ઘટે છે (d = (4 × 9) / 9 = 4), તેથી તે 'વ્યસ્તપ્રમાણ' નું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: મૉડ્યૂલ મુજબ ગુણોત્તર અને પ્રમાણના વ્યવહારુ ઉપયોગ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: બે વસ્તુઓની ગુંજાશની સરખામણી (પરિમિતિ, ક્ષેત્રફળ, ઘનફળ...) માટે ગુણોત્તરનો ઉપયોગ થાય છે.\nવિધાન 2: ત્રિરાશિથી થતી ગણતરી વાસ્તવમાં ચાર રાશિઓના પ્રમાણનું જ સ્વરૂપ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-2 વ્યવહારુ અંકગણિત અને માહિતીનું ઉપયોજન (પાના નં.: 35-36)",
+    "exp": "બે વસ્તુઓની ગુંજાશની સરખામણી માટે ગુણોત્તર અને જથ્થો-સંખ્યા-વપરાશની કિંમત મેળવવા પ્રમાણ વપરાય છે, તથા ત્રિરાશિ એ ચાર રાશિઓના પ્રમાણનું જ સ્વરૂપ છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: ભૂમિતિના અર્થ અને સ્વરૂપ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: મૂળ સંસ્કૃત શબ્દો મુજબ 'ભૂ' એટલે પૃથ્વી, જમીન કે સપાટી અને 'મિતિ' એટલે માપન.\nવિધાન 2: જેમ અંકગણિત એ સંખ્યાઓનું ગણિત છે તેમ ભૂમિતિ એ અવકાશનાં બિંદુઓનું ગણિત છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 38)",
+    "exp": "'ભૂમિતિ' શબ્દ 'ભૂ' (પૃથ્વી, જમીન કે સપાટી) અને 'મિતિ' (માપન) પરથી આવ્યો છે, તથા ભૂમિતિ એ સ્થાન, અંતર અને આકારનું અર્થાત્ અવકાશનાં બિંદુઓનું ગણિત છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: બાળક ઘરમાંથી અને આસપાસની દુનિયામાંથી અવલોકન દ્વારા પરિચિત થતી બાબતોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ખ્યાલ)  |  વિભાગ - બ (ઉદાહરણ)\n1. સ્થાન — (p) વાંકું, સીધું, ગોળ, ચોરસ\n2. અંતર — (q) ઘન, પ્રવાહી, વાયુ\n3. આકાર — (r) અંદર, બહાર, ઉપર, નીચે\n4. સ્વરૂપ — (s) દૂર, પાસે, લાંબું, ટૂંકું",
+    "options": [
+      "1-r, 2-s, 3-p, 4-q",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-p, 3-s, 4-q",
+      "1-r, 2-s, 3-q, 4-p"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 38)",
+    "exp": "મૉડ્યૂલ મુજબ સ્થાન (અંદર, બહાર, ઉપર, નીચે), અંતર (દૂર, પાસે, લાંબું, ટૂંકું), આકાર (વાંકું, સીધું, ગોળ, ચોરસ) અને સ્વરૂપ (ઘન, પ્રવાહી, વાયુ) દ્વારા બાળકને ભૂમિતિનો પ્રાથમિક ખ્યાલ મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: ભૂમિતિના માળખા (Structure of Geometry) માં સમાવિષ્ટ 'વ્યાખ્યાયિત પદ' અને 'અવ્યાખ્યાયિત પદ' અંગે નીચેનામાંથી કયો વિકલ્પ અયોગ્ય છે?",
+    "options": [
+      "વ્યાખ્યાયિત પદ: રેખાખંડ, કિરણ, ખૂણો, ત્રિકોણ",
+      "અવ્યાખ્યાયિત પદ: રેખા, બિંદુ, અવકાશ, સમતલ",
+      "'અવકાશ બિંદુઓનો ગણ છે' એ પૂર્વધારણાનું ઉદાહરણ છે.",
+      "અવ્યાખ્યાયિત પદ: ખૂણો, ત્રિકોણ, વર્તુળ, ચોરસ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 39)",
+    "exp": "ભૂમિતિમાં રેખા, બિંદુ, અવકાશ અને સમતલ એ અવ્યાખ્યાયિત પદો છે, જ્યારે રેખાખંડ, કિરણ, ખૂણો અને ત્રિકોણ એ વ્યાખ્યાયિત પદો છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: ભૂમિતિમાં 'પૂર્વધારણા' (Postulates) અને 'વ્યાખ્યા' (Definitions) સંદર્ભે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "જે સત્યોને સાબિતી વગર સ્વીકારી લેવામાં આવે તે વિધાનોને પૂર્વધારણા કહેવામાં આવે છે.",
+      "પૂર્વધારણાઓને તર્કબદ્ધ દલીલો વડે સાબિત કરવી અનિવાર્ય હોય છે.",
+      "વ્યાખ્યા એટલે એવાં પદ કે શબ્દસમૂહ કે જે વિશિષ્ટ અને ચોક્કસ અર્થ ધરાવે છે તથા કોઈપણ સ્થળે અને કાળે તેની સ્પષ્ટતા નિશ્ચિત હોય છે.",
+      "કોઈ દ્વિ પરિમાણ આકારે સમતલમાં રોકેલ જગ્યાના માપને ક્ષેત્રફળ કહે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 39-40)",
+    "exp": "પૂર્વધારણાઓ એવાં સરળ અને સહજ વિધાનો છે જેને સાબિત કરવાની જરૂર હોતી નથી, પરંતુ સાબિતી વગર સ્વીકારી લેવામાં આવે છે (પ્રમેયને સાબિત કરવાની જરૂર હોય છે)."
+  },
+  {
+    "q": "પ્રશ્ન 55: પ્રમેય અને તેની સાબિતીની રીતો અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: પ્રમેયમાં આપેલ શરતી વિધાનને 'સાધ્ય' કહેવાય છે અને તાર્કિક દલીલ દ્વારા જે સાબિત કરવાનું છે તેને 'પક્ષ' કહેવાય છે.\nવિધાન 2: અનિષ્ટાપત્તિની રીત અને વિકલ્પ નિવારણની રીત એ પરોક્ષ સાબિતીના પ્રકારો છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 40)",
+    "exp": "પ્રમેયમાં આપેલ શરતી વિધાનને 'પક્ષ' કહેવાય છે અને જે સાબિત કરવાનું છે તેને 'સાધ્ય' કહેવાય છે, તેથી વિધાન 1 ખોટું છે. પરોક્ષ સાબિતીના બે પ્રકાર (અનિષ્ટાપત્તિની રીત અને વિકલ્પ નિવારણની રીત) છે, તેથી વિધાન 2 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: ભૂમિતિમાં સાબિતીની કઈ રીતમાં \"જે સાબિત કરવાનું છે તે સત્ય નથી તેમ ધારવામાં આવે છે, અને દલીલના અંતે મળતું પરિણામ પક્ષથી વિરુદ્ધ હોવાથી આપણી ધારણા ખોટી છે તેમ સ્વીકારવામાં આવે છે\"?",
+    "options": [
+      "અનિષ્ટાપત્તિની રીત",
+      "વિકલ્પ નિવારણની રીત",
+      "પ્રત્યક્ષ સાબિતીની રીત",
+      "સાદી ભ્રમણા - તર્કદોષ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 40)",
+    "exp": "અનિષ્ટાપત્તિની રીત (ખોટી દલીલની ઓળખ) માં સાધ્ય સત્ય નથી તેમ ધારીને દલીલ કરતાં પક્ષથી વિરુદ્ધ પરિણામ મળે છે, જેથી મૂળ વિધાન સત્ય સાબિત થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: પિઅરે વાન હિલ્સ (Pierre M. Van Hieles) અને તેમની ભૌમિતિક ચિંતન થિયરી અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પિઅરે વાન હિલ્સ નેધરલેન્ડના ગણિતશાસ્ત્રી હતા અને તેઓ બાલમંદિરમાં શિક્ષક હતા.",
+      "વાન હિલ્સ માનતા હતા કે ભૂમિતિમાં લેખિત સાબિતી આપવા માટે પ્રમાણમાં ઊંચા વૈચારિક સ્તરની જરૂર પડે છે.",
+      "જે વસ્તુઓથી આપણે પ્રથમથી જ પરિચિત હોઈએ તેને શબ્દોના ઉપયોગ વિના વિચારીને ઓળખી લઈએ તેને વાન હિલ્સ 'પ્રારંભિક ચિંતન' અથવા 'અશાબ્દિક ચિંતન' કહે છે.",
+      "વાન હિલ્સના મતે અશાબ્દિક ચિંતનનું શિક્ષણમાં કોઈ મહત્ત્વ નથી અને નિર્ણયો તેનાથી ઉદ્ભવતા નથી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 41)",
+    "exp": "મૉડ્યૂલ મુજબ અશાબ્દિક ચિંતનનું ચોક્કસ મહત્ત્વ છે; મોટા ભાગના સામાન્ય વિચારોના મૂળમાં અશાબ્દિક ચિંતન રહેલું છે અને મોટા ભાગના નિર્ણયો આ પ્રકારનાં ચિંતનોમાંથી જ ઉદ્ભવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: વાન હિલ્સે વિદ્યાર્થીઓના ભૌમિતિક ચિંતનને વિકસાવવા માટે પ્રવૃત્તિ દ્વારા શિક્ષણની હિમાયત કરતાં ભૌમિતિક આકૃતિઓ આધારિત કયું મોડેલ વિકસાવ્યું છે?",
+    "options": [
+      "ટેનગ્રામ મોડેલ",
+      "મોઝેક પઝલ મોડેલ",
+      "જીઓ બોર્ડ મોડેલ",
+      "બહુફલકીય મોડેલ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 42)",
+    "exp": "વાન હિલ્સે પ્રવૃત્તિ દ્વારા ભૂમિતિ શિક્ષણ માટે પોતાનું ભૌમિતિક આકૃતિઓ આધારિત 'મોઝેક પઝલ મોડેલ' વિકસાવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 59: વાન હિલ્સના મતાનુસાર વિદ્યાર્થીઓનું ભૌમિતિક ચિંતનસ્તર કયા પાંચ ક્રમમાં વિકાસશીલ હોય છે?",
+    "options": [
+      "દૃશ્ય સ્તર → વિશ્લેષણ સ્તર → અનૌપચારિક તારવણી સ્તર → ઔપચારિક તારવણી સ્તર → યથાર્થતા",
+      "દૃશ્ય સ્તર → અનૌપચારિક તારવણી સ્તર → વિશ્લેષણ સ્તર → ઔપચારિક તારવણી સ્તર → યથાર્થતા",
+      "વિશ્લેષણ સ્તર → દૃશ્ય સ્તર → ઔપચારિક તારવણી સ્તર → અનૌપચારિક તારવણી સ્તર → યથાર્થતા",
+      "દૃશ્ય સ્તર → વિશ્લેષણ સ્તર → ઔપચારિક તારવણી સ્તર → અનૌપચારિક તારવણી સ્તર → યથાર્થતા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 42)",
+    "exp": "વાન હિલ્સના ભૌમિતિક ચિંતન સ્તરનો સાચો ક્રમ: Level 0: દૃશ્ય સ્તર, Level 1: વિશ્લેષણ સ્તર, Level 2: અનૌપચારિક તારવણી સ્તર, Level 3: ઔપચારિક તારવણી સ્તર, Level 4: યથાર્થતા."
+  },
+  {
+    "q": "પ્રશ્ન 60: વાન હિલ્સના ભૌમિતિક ચિંતન સ્તર અને તેની લાક્ષણિકતાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (સ્તર)  |  વિભાગ - બ (લાક્ષણિકતા)\n1. દૃશ્ય સ્તર (Level 0) — (p) આકૃતિઓ વચ્ચેના આંતરસંબંધો જોઈ ઓળખી શકે અને ગુણધર્મોનો તાર્કિક ક્રમ તારવી શકે.\n2. વિશ્લેષણ સ્તર (Level 1) — (q) ભૂમિતિને અમૂર્ત રીતે સમજી શકે અને પૂર્વધારણાઓ, સિદ્ધાંતો તથા પ્રમેયોનું મહત્ત્વ સમજે.\n3. અનૌપચારિક તારવણી સ્તર (Level 2) — (r) આખી ભૌમિતિક આકૃતિને સમગ્ર સ્વરૂપે જોઈ શકે, પણ ચોક્કસ ગુણધર્મો પર ધ્યાન કેન્દ્રિત ન થાય.\n4. યથાર્થતા (Level 4) — (s) દરેક આકૃતિને તેના જુદા ગુણધર્મોને સંબંધે જાણે અને ઓળખી શકે.",
+    "options": [
+      "1-r, 2-p, 3-s, 4-q",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-s, 3-p, 4-q",
+      "1-r, 2-s, 3-q, 4-p"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 42)",
+    "exp": "દૃશ્ય સ્તરમાં સમગ્ર આકૃતિની ઓળખ (r), વિશ્લેષણ સ્તરમાં ગુણધર્મોની ઓળખ (s), અનૌપચારિક તારવણી સ્તરમાં આકૃતિઓ વચ્ચેના આંતરસંબંધો (p) અને યથાર્થતા સ્તરમાં અમૂર્ત સમજ તથા સ્વયંસિદ્ધ પ્રણાલીનું મહત્ત્વ (q) સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: 'પરિમાણ' (Dimension) અને વિવિધ ભૌમિતિક ઘટકો અંગે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "બિંદુને કોઈ કદ, આકાર કે માપ હોતા નથી; તેની માત્ર સ્થિતિ હોય છે અને તેને કોઈ પરિમાણ નથી.",
+      "રેખા, રેખાખંડ અને કિરણ એ લંબાઈ જેવું એક જ પરિમાણ ધરાવતા એકપરિમાણીય ઘટકો છે.",
+      "ચોરસ, ત્રિકોણ અને વર્તુળ એ લંબાઈ અને પહોળાઈ જેવાં બે પરિમાણ ધરાવતી દ્વિ પરિમાણીય આકૃતિઓ છે.",
+      "બિંદુ એક પરિમાણ ધરાવે છે, જ્યારે રેખાખંડ દ્વિ પરિમાણીય આકૃતિ છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 43-44)",
+    "exp": "મૉડ્યૂલ મુજબ બિંદુને '0 પરિમાણ' (કોઈ પરિમાણ નથી) હોય છે, જ્યારે રેખાખંડ એકપરિમાણીય (1 પરિમાણ) છે. તેથી વિધાન (D) ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: 'એકરૂપતા' (≅) અને 'સમરૂપતા' (~) ની સંકલ્પના અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: કોઈ આકૃતિની એન્લાર્જ કે કોમ્પ્રેસ કરેલી ઝેરોક્ષ નકલ તે આકૃતિની 'એકરૂપ આકૃતિ' કહેવાય છે.\nવિધાન 2: આકૃતિનું કેન્દ્રમાંથી ઘૂમવું (પરિભ્રમણ), પ્રતિબિંબ અને સ્થાન બદલવું—આ ત્રણેય રીતે એકરૂપ આકૃતિઓ મેળવી શકાય છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 44-45)",
+    "exp": "કોઈ આકૃતિની એન્લાર્જ કે કોમ્પ્રેસ કરેલી ઝેરોક્ષ નકલ તે આકૃતિની 'સમરૂપ આકૃતિ' કહેવાય છે (તે જ કદની ઝેરોક્ષ નકલ એકરૂપ કહેવાય), તેથી વિધાન 1 ખોટું છે અને વિધાન 2 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: ભૂમિતિમાં 'રૂપાંતરણ' (Transformation) દ્વારા બનતા નવા આકારોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (મૂળ આકાર અને ક્રિયા)  |  વિભાગ - બ (રૂપાંતરિત નવો આકાર)\n1. લંબચોરસને વક્રસ્વરૂપે વાળવાથી — (p) પ્રિઝમ\n2. છ ચોરસને યોગ્ય રીતે ગોઠવવાથી — (q) પોલો નળાકાર\n3. સમબાજુ ત્રિકોણને ચોક્કસ રીતે વાળવાથી — (r) ચતુષ્કોણ\n4. બે ત્રિકોણને જોડવાથી — (s) સમઘન",
+    "options": [
+      "1-q, 2-s, 3-p, 4-r",
+      "1-s, 2-q, 3-p, 4-r",
+      "1-q, 2-p, 3-s, 4-r",
+      "1-r, 2-s, 3-p, 4-q"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 47)",
+    "exp": "લંબચોરસને વક્રસ્વરૂપે વાળવાથી પોલો નળાકાર (q), છ ચોરસ ગોઠવવાથી સમઘન (s), સમબાજુ ત્રિકોણને ચોક્કસ રીતે વાળવાથી પ્રિઝમ (p) અને બે ત્રિકોણ જોડવાથી ચતુષ્કોણ (r) બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: કંપાસપેટીનાં સાધનો અને તેની ઉપયોગિતા અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "દ્વિભાજક (બે અણી ધરાવતું સાધન) નો ઉપયોગ આપેલ રેખાખંડની લંબાઈ નક્કી કરવા અને વર્તુળની ત્રિજ્યા કે વ્યાસનું માપ નક્કી કરવા થાય છે.",
+      "પરિકરનો ઉપયોગ વર્તુળની રચના કરવા માટે થાય છે.",
+      "કાટખૂણિયા (સેટ સ્ક્વેર) નો ઉપયોગ ફક્ત કાટકોણ દોરવા માટે જ થાય છે; તેનાથી સમાંતર રેખા દોરી શકાતી નથી.",
+      "કોણમાપકનો ઉપયોગ આપેલ ખૂણાનું માપન કરવા અને યોગ્ય માપનો ખૂણો દોરવા થાય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 48)",
+    "exp": "કાટખૂણિયા (સેટ સ્ક્વેર) નો ઉપયોગ કાટકોણ દોરવા, ખૂણાનો પ્રકાર નક્કી કરવા, આપેલ રેખાને સમાંતર રેખા દોરવા તથા આપેલ રેખાને લંબ રેખાખંડ રચવા માટે થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: ભૌમિતિક આકારો અને તેના માપન સૂત્રોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ભૌમિતિક આકાર)  |  વિભાગ - બ (માપન સૂત્ર)\n1. સમઘન (પૃષ્ઠફળ અને ઘનફળ) — (p) 4πr² અને (4/3)πr³\n2. શંકુ (ક્ષેત્રફળ અને ઘનફળ) — (q) πr² અને 2πr\n3. ગોળો (પૃષ્ઠફળ અને ઘનફળ) — (r) 6l² અને l³\n4. વર્તુળ (ક્ષેત્રફળ અને પરિમિતિ) — (s) πr(r + l) અને (1/3)πr²h",
+    "options": [
+      "1-r, 2-p, 3-s, 4-q",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-s, 3-q, 4-p",
+      "1-r, 2-s, 3-p, 4-q"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 49)",
+    "exp": "સમઘન માટે 6l² અને l³ (r); શંકુ માટે πr(r + l) અને (1/3)πr²h (s); ગોળા માટે 4πr² અને (4/3)πr³ (p); તથા વર્તુળ માટે πr² અને 2πr (q) સૂત્રો વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: ભૌમિતિક રચનાઓ અને માપન અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: માપપટ્ટી, પરિકર અને દ્વિભાજક જેવાં સાધનોના ઉપયોગથી થતી ભૌમિતિક આકારોની રચનાઓને 'શુદ્ધ સ્વરૂપની રચનાઓ' કહેવાય છે.\nવિધાન 2: માપપટ્ટી પર નળાકારને આડો મૂકી તેની વક્રાકાર સપાટીને બંને સેટ સ્ક્વેરની કાટખૂણવાળી બાજુઓ સ્પર્શે તે રીતે ગોઠવવાથી માપપટ્ટી પર વંચાતું માપ નળાકારનો પરિઘ દર્શાવે છે.",
+    "options": [
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 50)",
+    "exp": "માપપટ્ટી, પરિકર અને દ્વિભાજકથી થતી રચનાઓને 'શુદ્ધ સ્વરૂપની રચનાઓ' કહે છે, પરંતુ બંને સેટ સ્ક્વેરની મદદથી માપપટ્ટી પર વંચાતું માપ નળાકારનો 'વ્યાસ' દર્શાવે છે, પરિઘ નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 67: બે સેટ સ્ક્વેર (કાટખૂણિયા) ની મદદથી આપેલી રેખા l₁ ને સમાંતર રેખા l₂ ની રચના કરવા માટે કઈ બાજુઓનો પરસ્પર આધાર લેવામાં આવે છે?",
+    "options": [
+      "કાટખૂણિયા-2 ના કર્ણ પર કાટખૂણિયા-1 નો કર્ણ મૂકીને તેને સરકાવવામાં આવે છે.",
+      "કાટખૂણિયા-2 ની સૌથી નાની બાજુ પર કાટખૂણિયા-1 નો કર્ણ મૂકવામાં આવે છે.",
+      "બંને કાટખૂણિયાના કાટખૂણા બનાવતી બાજુઓને એકબીજા પર મૂકવામાં આવે છે.",
+      "એક કાટખૂણિયા સાથે કોણમાપક જોડીને 90° ના ખૂણે સરકાવવામાં આવે છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 51)",
+    "exp": "સમાંતર રેખાની રચના માટે કાટખૂણિયા-2 ના કર્ણ પર કાટખૂણિયા-1 નો કર્ણ મૂકી, કાટખૂણિયા-2 ને સ્થિર રાખી કાટખૂણિયા-1 ના કર્ણને લગભગ 5 સેમી જેટલો નીચેની તરફ સરકાવવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: 'Geogebra' સોફ્ટવેરની ઉત્પત્તિ અને સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "આ સોફ્ટવેર 2008માં માર્કસ હોહેનવોટર દ્વારા તૈયાર કરવામાં આવેલ છે.",
+      "'Geometry' માંથી 'Geo' અને 'Algebra' માંથી 'gebra' શબ્દ લઈ Geogebra નામ આપવામાં આવેલ છે.",
+      "આ સોફ્ટવેર www.geogebra.org પરથી નિઃશુલ્ક ડાઉનલોડ કરી શકાય છે અને તેમાં Tutorial પણ ઉપલબ્ધ છે.",
+      "Geogebra કમ્પ્યુટરમાં ખૂબ જ વધુ જગ્યા રોકે છે અને તે માત્ર કોલેજ કક્ષાના વિદ્યાર્થીઓ માટે જ ઉપયોગી છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 52-53)",
+    "exp": "Geogebra સોફ્ટવેર કમ્પ્યુટરમાં ખૂબ જ ઓછી જગ્યા રોકે છે અને તે ઉચ્ચ પ્રાથમિકથી લઈ કોલેજ સુધીના વિદ્યાર્થીઓને ભૂમિતિ તથા બીજગણિત શીખવા-શીખવવા ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: Geogebra સ્ક્રીન વિન્ડોના મુખ્ય ઘટકો અને તેના સ્થાન અંગે નીચેનામાંથી કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "જમણી બાજુની વિન્ડો: Graphics Window (જેમાં x અક્ષ અને y અક્ષ તથા ભૌમિતિક આકારો હોય છે)",
+      "ડાબી બાજુની વિન્ડો: Algebra Window (જેમાં આકૃતિની સંખ્યાકીય અથવા બીજગણિતીય માહિતી હોય છે)",
+      "સૌથી ઉપરની બાજુ: Input Field (અને તેની નીચે Menubar તથા સૌથી નીચે Toolbar હોય છે)",
+      "Graphical Window માં પસંદ કરેલ આકૃતિમાં ફેરફાર કરવા Toolbar માં રહેલ Point Tools નો ઉપયોગ થાય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 52)",
+    "exp": "Geogebra ની વિન્ડોમાં સૌથી ઉપરની બાજુએ Menubar, તેની નીચે Tool Bar અને સૌથી નીચે Input Field હોય છે. તેથી વિકલ્પ (C) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: Geogebra સોફ્ટવેર કયા મૂળભૂત સિદ્ધાંત પર કાર્ય કરે છે?",
+    "options": [
+      "POST સિદ્ધાંત (Practice Oriented Simple Tool)",
+      "KISS સિદ્ધાંત (Keep it Simple & Small)",
+      "FAST સિદ્ધાંત (Free Algebra Software Tool)",
+      "EASY સિદ્ધાંત (Educational Algebra System)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 53)",
+    "exp": "Geogebra એ KISS સિદ્ધાંત (Keep it Simple & Small) પર કાર્ય કરે છે, જેથી શિક્ષક અને વિદ્યાર્થી તેનો સરળતાથી ઉપયોગ કરી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: Geogebra સોફ્ટવેરના ઉપયોગ દ્વારા નીચેનામાંથી કઈ ભૌમિતિક સંકલ્પનાઓ સરળતાથી સમજાવી શકાય છે?\n1. રૈખિક કોણની જોડના ખૂણા પૂરક હોય છે.\n2. સમાંતર રેખાની છેદિકાથી બનતા યુગ્મકોણની જોડ અને અનુકોણની જોડ એકરૂપ હોય છે.\n3. સમાંતર રેખાની છેદિકાથી બનતા એક જ બાજુના અંતઃકોણની જોડ પૂરક હોય છે.",
+    "options": [
+      "1, 2 અને 3 તમામ",
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 53)",
+    "exp": "ત્રિકોણના ખૂણાઓનો સરવાળો 180°, ચતુષ્કોણના 360°, રૈખિક જોડના ખૂણા પૂરક, યુગ્મકોણ તથા અનુકોણ એકરૂપ અને એક જ બાજુના અંતઃકોણ પૂરક—આ તમામ સંકલ્પનાઓ Geogebra દ્વારા સમજાવી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: ભૌમિતિક સંકલ્પનાના અભાવને કારણે બાળકો દ્વારા થતી સામાન્ય ભૂલો અંગે નીચેનામાંથી કયું ઉદાહરણ મૉડ્યૂલમાં આપવામાં આવ્યું છે?",
+    "options": [
+      "બાળકો ચોરસને લંબચોરસ અને સમઘનને નળાકાર કહે છે.",
+      "બાળકો વર્તુળને ત્રિકોણ અને રેખાને કિરણ કહે છે.",
+      "બાળકો વર્તુળને ગોળ કહે છે, ત્રિકોણીય પ્રદેશને ત્રિકોણ કહે છે અને ચોરસીય પ્રદેશને ચોરસ કહે છે.",
+      "બાળકો શંકુને પિરામિડ અને પ્રિઝમને ગોળો કહે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 54)",
+    "exp": "અવલોકન કે નિદર્શનના અભાવે બાળકો વર્તુળને ગોળ કહે છે, ત્રિકોણીય પ્રદેશને ત્રિકોણ કહે છે અને ચોરસીય પ્રદેશને ચોરસ કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: બહુફલકીય મોડેલ (Polyhedron) ના મુખ્ય ઘટકો અને તેની વ્યાખ્યાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ઘટક)  |  વિભાગ - બ (વ્યાખ્યા)\n1. ફલક (F = Face) — (p) ત્રણ કે ત્રણથી વધારે ફલક જે બિંદુએ ભેગાં થાય તે બિંદુ\n2. ધાર (E = Edges) — (q) કોઈપણ ઘનાકાર પદાર્થની સપાટી\n3. શિરોબિંદુઓ (V = Vertices) — (r) ફલક જ્યાં ભેગી થાય, એટલે કે ફલકોનો છેદગણ રેખાખંડ બને તે ભાગ",
+    "options": [
+      "1-q, 2-p, 3-r",
+      "1-r, 2-q, 3-p",
+      "1-p, 2-r, 3-q",
+      "1-q, 2-r, 3-p"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 54)",
+    "exp": "ઘનાકાર પદાર્થની સપાટીને ફલક (F), ફલકોનો છેદગણ રેખાખંડ બને તેને ધાર (E) અને ત્રણ કે તેથી વધુ ફલક જે બિંદુએ ભેગાં થાય તેને શિરોબિંદુ (V) કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: ષટ્ફલક, સમઘન કે લંબઘન (Hexahedron) માં ફલક (F), ધાર (E) અને શિરોબિંદુઓ (V) ની સંખ્યા અનુક્રમે કેટલી હોય છે?",
+    "options": [
+      "F = 8, E = 12, V = 6",
+      "F = 6, E = 12, V = 8",
+      "F = 6, E = 8, V = 12",
+      "F = 12, E = 6, V = 8"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 54)",
+    "exp": "ષટ્ફલક, સમઘન કે લંબઘન (Hexahedron) માં ફલક છ (6), ધાર બાર (12) અને શિરોબિંદુઓ આઠ (8) હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: ચતુષ્ફલક (Tetrahedron) કે અષ્ટફલક (Octahedron) જેવાં બહુફલકીય મોડેલ બનાવવાથી વિદ્યાર્થીઓમાં મુખ્યત્વે કઈ શક્તિઓનો વિકાસ થાય છે?",
+    "options": [
+      "વિચારશક્તિ અને કલ્પનાશક્તિ",
+      "લેખનશક્તિ અને વાંચનશક્તિ",
+      "ગણનશક્તિ અને સ્મરણશક્તિ",
+      "શ્રવણશક્તિ અને કથનશક્તિ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-3 ભૂમિતિ શિક્ષણ (પાના નં.: 55)",
+    "exp": "ચતુષ્ફલક કે અષ્ટફલક કે અન્ય બહુકોણીય મોડેલ બનાવતાં વિદ્યાર્થીઓની 'વિચારશક્તિ અને કલ્પનાશક્તિ' નો વિકાસ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: ગણિત વિષયમાં 'પ્રત્યાયન' (Communication) ના સ્વરૂપ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: પ્રત્યાયન એ એકબીજાને સમજવાની એકમાર્ગી પ્રક્રિયા છે, જે માત્ર બોલીને કે લખીને જ થઈ શકે છે.\nવિધાન 2: ગણિત વિષયમાં સંકેતો, આકૃતિઓ, સૂત્રો અને સમીકરણો વધુ પ્રમાણમાં હોવાથી શાબ્દિક કરતાં અશાબ્દિક પ્રત્યાયન વધુ થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 58)",
+    "exp": "પ્રત્યાયન એ દ્વિમાર્ગી પ્રક્રિયા છે, જે બોલીને, લખીને અથવા સાંકેતિક રીતે થઈ શકે છે (તેથી વિધાન 1 ખોટું છે). ગણિતમાં સંકેતો, આકૃતિઓ, સૂત્રો વગેરે વધુ હોવાથી શાબ્દિક કરતાં અશાબ્દિક પ્રત્યાયન વધુ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: પ્રકરણ-4 ની પ્રસ્તાવના મુજબ નીચેનામાંથી કયા મુદ્દાનો સમાવેશ ગણિતના શાબ્દિક પ્રત્યાયન માં કરવામાં આવ્યો નથી?",
+    "options": [
+      "ગણિતનો અભ્યાસક્રમ",
+      "ગણિતનાં પાઠ્યપુસ્તકો",
+      "ગણિતનો અને ગણિતજ્ઞોનો ઇતિહાસ",
+      "ભૌમિતિક સંકેતો અને આકૃતિઓ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 58)",
+    "exp": "ગણિતનો અભ્યાસક્રમ, ગણિતનાં પાઠ્યપુસ્તકો તથા ગણિતનો અને ગણિતજ્ઞોનો ઇતિહાસ જેવા મુદ્દાઓ શાબ્દિક પ્રત્યાયનમાં સમાવેલ છે, જ્યારે સંકેતો, આકૃતિઓ, સૂત્રો અને સમીકરણો અશાબ્દિક પ્રત્યાયનનો ભાગ છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: 'અભ્યાસક્રમ' અને 'પાઠ્યક્રમ' ની સંકલ્પના અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: અભ્યાસક્રમ માટે અંગ્રેજીમાં 'Curriculum' શબ્દ છે, જે લેટિન શબ્દ \"Currer\" પરથી આવ્યો છે અને તેનો અર્થ 'દોડવા માટેનો માર્ગ' થાય છે.\nવિધાન 2: અભ્યાસક્રમ એ પાઠ્યક્રમ ('Course of Study') નો એક નાનો ભાગ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 59)",
+    "exp": "'Curriculum' શબ્દ લેટિન શબ્દ \"Currer\" (દોડવા માટેનો માર્ગ) પરથી આવ્યો છે. અભ્યાસક્રમ એ વિશાળ સંકલ્પના છે અને 'પાઠ્યક્રમ' ('Course of Study') એ અભ્યાસક્રમનો એક ભાગ છે, તેથી વિધાન 2 ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: 'વર્ગખંડ વ્યવહાર' ના સંદર્ભમાં અધ્યયન પ્રક્રિયા દરમિયાન નીચેનામાંથી કયા પ્રકારના પ્રત્યાયન દ્વારા વર્ગવ્યવહાર અસ્તિત્વમાં આવે છે?\n1. શિક્ષક - વિદ્યાર્થી\n2. વિદ્યાર્થી - સામગ્રી\n3. વિદ્યાર્થી - વિદ્યાર્થી\n4. શિક્ષક - વાલી",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 59)",
+    "exp": "મૉડ્યૂલ મુજબ અધ્યયનપ્રક્રિયા દરમિયાન શિક્ષક-વિદ્યાર્થી, વિદ્યાર્થી-સામગ્રી અને વિદ્યાર્થી-વિદ્યાર્થી વચ્ચે થતા પ્રત્યાયન દ્વારા વર્ગવ્યવહાર અસ્તિત્વમાં આવે છે; તેમાં શિક્ષક-વાલીનો ઉલ્લેખ નથી."
+  },
+  {
+    "q": "પ્રશ્ન 80: અધ્યયન-અધ્યાપન પ્રક્રિયામાં ગણિતના પાઠ્યપુસ્તકની ભૂમિકા અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "પાઠ્યપુસ્તકમાં વિવિધ એકમ સંદર્ભે આપેલા પારિભાષિક શબ્દો દ્વારા અધ્યેતાનું ગાણિતિક શબ્દભંડોળ વધે છે.",
+      "પાઠ્યપુસ્તકમાં આપેલા મહાવરા અને સ્વાધ્યાયની મદદથી અધ્યેતામાં સ્વ-અધ્યયનની ટેવ વિકસાવી શકાય છે.",
+      "વિદ્યાર્થીકેન્દ્રી શિક્ષણ-વ્યવસ્થામાં વિદ્યાર્થી કરતાં શિક્ષકની સક્રિયતા વધુ રહે તે માટે પાઠ્યપુસ્તક મદદરૂપ બને છે.",
+      "પાઠ્યપુસ્તકની ભાષા અધ્યેતાની ભાષા ક્ષમતાને ધ્યાનમાં રાખી વપરાયેલી હોવાથી તેની સમજ વિકસાવવામાં મહત્ત્વનો ભાગ ભજવે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 59-60)",
+    "exp": "વિદ્યાર્થીકેન્દ્રી શિક્ષણ-વ્યવસ્થામાં શિક્ષક કરતાં વિદ્યાર્થીની સક્રિયતા અને સહભાગિતા વધે તે અપેક્ષિત છે, તેથી વિધાન (C) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: ગણિતના મહત્ત્વને દર્શાવતા સંસ્કૃત શ્લોક \"यथाशिखामयूराणां, नागणांगणयोयथी। तदावेदाडिगशास्त्राणांगणितंमूधिरन्स्थितिम्।\" ના ભાવાર્થ અંગે નીચેનામાંથી કઈ જોડ સાચી છે?",
+    "options": [
+      "મયૂર માટે કલગી, નાગ માટે મણિ અને શાસ્ત્રોની શોભા વેદ — તેવી જ સર્વોચ્ચ સ્થિતિ જ્ઞાન-વિજ્ઞાનમાં ગણિતની છે.",
+      "સૂર્ય માટે પ્રકાશ, ચંદ્ર માટે શીતળતા અને વેદ માટે મંત્ર — તેવી જ સ્થિતિ જ્ઞાનમાં ગણિતની છે.",
+      "મયૂર માટે પીંછા, નાગ માટે કવચ અને શાસ્ત્રો માટે ઉપનિષદ — તેવી જ સ્થિતિ વિજ્ઞાનમાં ગણિતની છે.",
+      "મયૂર માટે નૃત્ય, નાગ માટે ઝેર અને વેદ માટે વ્યાકરણ — તેવી જ સ્થિતિ જીવનમાં ગણિતની છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 60)",
+    "exp": "મૉડ્યૂલમાં આપેલા સંસ્કૃત શ્લોકનો અર્થ સ્પષ્ટ કરાયો છે કે મયૂરની શોભા માટે જેમ તેની કલગી છે તેમ નાગ માટે મણિ છે, શાસ્ત્રોની શોભા વેદ છે, તેવી જ સ્થિતિ જ્ઞાન-વિજ્ઞાનમાં ગણિતની છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: વિશ્વના પ્રસિદ્ધ ગણિતજ્ઞો અને તેમની મહત્ત્વની શોધોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ગણિતજ્ઞ)  |  વિભાગ - બ (શોધ / પ્રદાન)\n1. આલ્બર્ટ આઈનસ્ટાઈન — (p) ફિબોનાકી શ્રેણીના શોધક\n2. આઈઝેક ન્યૂટન — (q) કાર્નેઝીયન (કાર્ટેઝીયન) ગુણાકારના શોધક\n3. લિઓનાર્ડો પીસાનો — (r) E = mC² સૂત્રની શોધ\n4. રેને ડી કાર્તિઝ — (s) ગતિના નિયમોની શોધ",
+    "options": [
+      "1-r, 2-s, 3-q, 4-p",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-p, 3-s, 4-q",
+      "1-r, 2-s, 3-p, 4-q"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 60)",
+    "exp": "આલ્બર્ટ આઈનસ્ટાઈને E = mC² સૂત્ર (r), આઈઝેક ન્યૂટને ગતિના નિયમો (s), લિઓનાર્ડો પીસાનોએ ફિબોનાકી શ્રેણી (p) અને રેને ડી કાર્તિઝે કાર્નેઝીયન ગુણાકાર (q) ની શોધ કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 83: ભારતીય ગણિતજ્ઞો 'આર્યભટ્ટ' અને 'વરાહમિહિર' ના પ્રદાન અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: આર્યભટ્ટ (ઈ.સ. 476-550) એ 'આર્યભટ્ટીય' ગ્રંથ, 'આર્ય સિદ્ધાંત', ચંદ્રગ્રહણ-સૂર્યગ્રહણની સમજૂતી, પૃથ્વીનું તેની ધરી પર ભ્રમણ તથા π (પાઈ) ની કિંમતનું ચોક્કસ સ્વરૂપ આપ્યું હતું.\nવિધાન 2: વરાહમિહિર (ઈ.સ. 505-587) એ 'પંચ સિદ્ધાંતિકા', 'બૃહદ્સંહિતા' અને 'બૃહદ જાતકા' જેવા ગ્રંથો તથા ગ્રહોના ગતિમાર્ગ અંગે સંશોધન કર્યું હતું.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "ભારતીય ગણિતજ્ઞોના કોષ્ટક મુજબ આર્યભટ્ટ અને વરાહમિહિરના સમયગાળા તથા તેમની રચનાઓ-શોધો અંગેનાં બંને વિધાનો સંપૂર્ણપણે સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: પ્રાચીન ભારતીય ગણિતજ્ઞો અને તેમના વિશિષ્ટ ગ્રંથો/શોધોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ગણિતજ્ઞ)  |  વિભાગ - બ (ગ્રંથ / વિશિષ્ટ પ્રદાન)\n1. બ્રહ્મગુપ્ત — (p) મહાભાસ્કરીયની રચના, વર્તુળનો સંકેત, sine અને cosine નો સંબંધ\n2. ભાસ્કર-1 — (q) સિદ્ધાંત શિરોમણિ, લીલાવતી, ચક્રિય ચતુષ્કોણનો ખ્યાલ\n3. શ્રીધર આચાર્ય — (r) દ્વિઘાત સમીકરણના ઉકેલના સૂત્રની રીત, પાયથાગોરસ ત્રિપુટી, લક્ષની વ્યાખ્યા\n4. ભાસ્કર-2 — (s) ત્રિશાટિકા અને પ્રતિગણિતીના રચયિતા, શૂન્ય સાથે +, −, ×, ÷ પ્રક્રિયાઓ",
+    "options": [
+      "1-r, 2-p, 3-s, 4-q",
+      "1-r, 2-q, 3-s, 4-p",
+      "1-p, 2-r, 3-s, 4-q",
+      "1-r, 2-p, 3-q, 4-s"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "બ્રહ્મગુપ્ત (r), ભાસ્કર-1 (p), શ્રીધર આચાર્ય (s) અને ભાસ્કર-2 (q) ના પ્રદાનની આ જોડ કોષ્ટક મુજબ બિલકુલ સચોટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: કયા ભારતીય ગણિતજ્ઞે ફિબોનાકી શ્રેણીના પ્રાચીન સ્વરૂપની શોધ કરી હતી, જેના કારણે તે સંખ્યાઓ તેમના નામ પરથી પણ ઓળખાય છે?",
+    "options": [
+      "શ્રીધર આચાર્ય (ઈ.સ. 650-850)",
+      "હેમચંદ્રાચાર્ય (ઈ.સ. 1088-1173)",
+      "ભાસ્કર-2 (ઈ.સ. 1114-1185)",
+      "બ્રહ્મગુપ્ત (ઈ.સ. 598-670)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "ફિબોનાકી શ્રેણીના પ્રાચીન સ્વરૂપની શોધ હેમચંદ્રાચાર્ય (ઈ.સ. 1088-1173) એ કરી હતી અને આ નંબરો 'હેમચંદ્રાચાર્ય નંબર' તરીકે પણ ઓળખાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: મૉડ્યૂલમાં આપેલા સમયગાળાના આધારે નીચેના ભારતીય ગણિતજ્ઞોને તેમના જન્મના સાચા કાળક્રમમાં (પહેલાથી પછીના ક્રમમાં) ગોઠવો:\n1. બ્રહ્મગુપ્ત\n2. ભાસ્કર-1\n3. હેમચંદ્રાચાર્ય\n4. શ્રીધર આચાર્ય\n5. ભાસ્કર-2",
+    "options": [
+      "1 → 2 → 4 → 3 → 5",
+      "2 → 1 → 4 → 3 → 5",
+      "1 → 2 → 3 → 4 → 5",
+      "1 → 4 → 2 → 5 → 3"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "કોષ્ટક મુજબ સમયગાળો: બ્રહ્મગુપ્ત (ઈ.સ. 598-670) → ભાસ્કર-1 (ઈ.સ. 600-680) → શ્રીધર આચાર્ય (ઈ.સ. 650-850) → હેમચંદ્રાચાર્ય (ઈ.સ. 1088-1173) → ભાસ્કર-2 (ઈ.સ. 1114-1185)."
+  },
+  {
+    "q": "પ્રશ્ન 87: મહાન ભારતીય ગણિતજ્ઞ શ્રીનિવાસ રામાનુજન (ઈ.સ. 1887-1920) ના પ્રદાનમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "એનાલિટીકલ નંબર થિયરી અને ઈનફાઈનાઈટ સિરીઝ",
+      "મોક થેટા ફ્રેકશન અને કન્ટીન્યુડ ફ્રેકશન",
+      "રામાનુજન અચળાંક અને રામાનુજન પ્રાઈમ નંબર",
+      "પાયથાગોરસ પ્રમેયની ક્ષેત્રફળની મદદથી સાબિતી અને ગોલીય ત્રિકોણમિતિ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "પાયથાગોરસ પ્રમેયની ક્ષેત્રફળની મદદથી સાબિતી અને ગોલીય ત્રિકોણમિતિ એ ભાસ્કર-2 નું પ્રદાન છે, જ્યારે બાકીના ત્રણેય વિકલ્પો શ્રીનિવાસ રામાનુજનની શોધો છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: 'હ્યુમન કમ્પ્યુટર' તરીકે બિરુદ મેળવનાર શકુંતલાદેવી (ઈ.સ. 1939-2013) નાં પુસ્તકોની યાદીમાં નીચેનામાંથી કયા પુસ્તકનો ઉલ્લેખ મૉડ્યૂલમાં કરવામાં આવ્યો નથી?",
+    "options": [
+      "જોય ઓફ નંબર્સ અને ઈન ધ વન્ડર લેન્ડ ઓફ નંબર્સ",
+      "એસ્ટ્રોલોજી ફોર યુ અને બુક ઓફ નંબર્સ",
+      "સુપર મેમરી ઈટ કેન બી યોર્સ અને અવેઈકન મેથ જીનીયસ ઈન યોર ચાઈલ્ડ",
+      "મેથેમેટિક્સ ફોર ધ મિલિયન અને હિસ્ટ્રી ઓફ નંબર્સ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 61)",
+    "exp": "શકુંતલાદેવીનાં પુસ્તકોમાં એસ્ટ્રોલોજી ફોર યુ, બુક ઓફ નંબર્સ, જોય ઓફ નંબર્સ, ઈન ધ વન્ડર લેન્ડ ઓફ નંબર્સ, અવેઈકન મેથ જીનીયસ ઈન યોર ચાઈલ્ડ, પઝલ, પઝલ ફન વિથ નંબર્સ અને સુપર મેમરી ઈટ કેન બી યોર્સ નો સમાવેશ થાય છે; વિકલ્પ (D) નાં પુસ્તકોનો ઉલ્લેખ નથી."
+  },
+  {
+    "q": "પ્રશ્ન 89: ગણિત પ્રયોગશાળા (સંસાધન ખંડ) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: \"Science is the king of all subjects and Mathematics is the queen of science\" એ અવતરણ ગણિત પ્રયોગશાળાના સંદર્ભમાં આપેલ છે.\nવિધાન 2: ગણિત પ્રયોગશાળા દ્વારા વિદ્યાર્થીઓમાં સાંસ્કૃતિક મૂલ્યો, માનસિક ઘડતરનું મૂલ્ય અને વ્યવહારુ મૂલ્યનો વિકાસ થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 62)",
+    "exp": "ગણિત પ્રયોગશાળાના પ્રારંભે જ આ અવતરણ આપવામાં આવ્યું છે, તથા તેમાં ભાવાત્મક, ક્રિયાત્મક, જ્ઞાનાત્મક અને સર્જનાત્મક પ્રવૃત્તિઓ દ્વારા સાંસ્કૃતિક, માનસિક ઘડતર અને વ્યવહારુ મૂલ્યોનો વિકાસ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: ગણિત પ્રયોગશાળાના હેતુઓ અંગે નીચેનામાંથી કઈ બાબતો સાચી છે?\n1. વિદ્યાર્થીઓ મૂર્ત વસ્તુઓ દ્વારા ગણિત શીખે અને દૈનિક જીવનમાં વ્યવહારુ જ્ઞાન મેળવે.\n2. વિદ્યાર્થીઓ માપન અંગેનાં સર્વેક્ષણો ક્ષેત્રકાર્ય (Field Work) દ્વારા કરે.\n3. વિદ્યાર્થીઓ નમૂનાઓનો ઉપયોગ કરી ભૌમિતિક ગુણધર્મો ચકાસે અથવા શોધે.\n4. ગણિત સંબંધી ઓડિયો કેસેટનું શ્રવણ કરે અને વિડીયો કેસેટનું નિદર્શન નિહાળે.",
+    "options": [
+      "માત્ર 1 અને 3",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 62)",
+    "exp": "ગણિત પ્રયોગશાળાના કુલ 9 હેતુઓમાં મૂર્ત વસ્તુઓ દ્વારા અધ્યયન, ક્ષેત્રકાર્ય દ્વારા માપન સર્વેક્ષણ, ભૌમિતિક ગુણધર્મોની ચકાસણી અને ઓડિયો-વિડીયો કેસેટનો ઉપયોગ—આ ચારેય બાબતો સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: ગણિતની અધ્યયન-અધ્યાપન પ્રક્રિયામાં ગણિત પ્રયોગશાળાની ભૂમિકા અંતર્ગત ધ્યાને લેવાની બાબતોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "પ્રવૃત્તિઓ આધારિત અધ્યયન → અવલોકન/નિરીક્ષણ → માહિતીનું એકત્રીકરણ → વર્ગીકરણ → ઉત્કલ્પનાઓ-અનુમાન → સામાન્યીકરણ → નિર્ણય → નિષ્કર્ષ",
+      "પ્રવૃત્તિઓ આધારિત અધ્યયન → માહિતીનું એકત્રીકરણ → અવલોકન/નિરીક્ષણ → ઉત્કલ્પનાઓ-અનુમાન → વર્ગીકરણ → નિર્ણય → સામાન્યીકરણ → નિષ્કર્ષ",
+      "અવલોકન/નિરીક્ષણ → પ્રવૃત્તિઓ આધારિત અધ્યયન → વર્ગીકરણ → માહિતીનું એકત્રીકરણ → સામાન્યીકરણ → ઉત્કલ્પનાઓ-અનુમાન → નિષ્કર્ષ → નિર્ણય",
+      "પ્રવૃત્તિઓ આધારિત અધ્યયન → વર્ગીકરણ → અવલોકન/નિરીક્ષણ → માહિતીનું એકત્રીકરણ → ઉત્કલ્પનાઓ-અનુમાન → સામાન્યીકરણ → નિષ્કર્ષ → નિર્ણય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 62)",
+    "exp": "વિભાગ 4.7.2 માં 8 બાબતોનો ચોક્કસ ક્રમ આપવામાં આવ્યો છે: પ્રવૃત્તિઓ આધારિત અધ્યયન → અવલોકન/નિરીક્ષણ → માહિતીનું એકત્રીકરણ → વર્ગીકરણ → ઉત્કલ્પનાઓ-અનુમાન → સામાન્યીકરણ → નિર્ણય → નિષ્કર્ષ."
+  },
+  {
+    "q": "પ્રશ્ન 92: NCF-2005 મુજબ ગણિત શિક્ષણનો મુખ્ય ધ્યેય શું દર્શાવવામાં આવ્યો છે?",
+    "options": [
+      "બાળકોને તમામ ગાણિતિક સૂત્રો અને યાંત્રિક પ્રક્રિયાઓમાં ઝડપી બનાવવાં.",
+      "બાળક માટે એવા સંદર્ભ સ્ત્રોતો વિકસાવવા કે જે તેઓને ગાણિતિક રીતે વિચારતાં અને કારણ આપતાં કરે તથા અમૂર્તતાની સમજનું નિર્માણ કરે.",
+      "પ્રાથમિક કક્ષાથી જ બાળકોને સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરવાં.",
+      "માત્ર પાઠ્યપુસ્તક આધારિત લેખિત મહાવરા દ્વારા પરીક્ષામાં 100% પરિણામ લાવવું."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 63)",
+    "exp": "NCF-2005 મુજબ ગણિતશિક્ષણનો મુખ્ય ધ્યેય બાળકોને ગાણિતિક રીતે વિચારતાં અને કારણ આપતાં કરવાનું, પોતાના તાર્કિક નિષ્કર્ષ પાછળ અનુમાન કે ધારણાઓ જણાવતાં કરવાનું તથા અમૂર્તતાની સમજનું નિર્માણ કરવાનું છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: ગણિત પ્રયોગશાળાની ડિઝાઈન માટેના વિભાગો અને તેના આકર્ષક સૂત્રો (શિર્ષકો) નાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પ્રયોગશાળાનો વિભાગ)  |  વિભાગ - બ (સૂત્ર / પેટા-શીર્ષક)\n1. કોયડા ઉકેલ મંચ — (p) પ્રયોગ કરો તો સાવ સહેલું\n2. પ્રાયોગિક સૂત્ર સાબિતી — (q) મારા ઘડનારાઓને જાણો\n3. ગણિત શાસ્ત્રીઓનું પ્રદાન — (r) ગણિતની સુંદરતાને માણો\n4. આંકડાઓની માયાજાળ — (s) ચાલો, મગજને કસરત કરાવીએ",
+    "options": [
+      "1-s, 2-p, 3-r, 4-q",
+      "1-p, 2-s, 3-q, 4-r",
+      "1-s, 2-p, 3-q, 4-r",
+      "1-s, 2-q, 3-p, 4-r"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 63)",
+    "exp": "ગણિત પ્રયોગશાળાની ડિઝાઈનના 13 વિભાગો પૈકી કોયડા ઉકેલ મંચ (ચાલો, મગજને કસરત કરાવીએ), પ્રાયોગિક સૂત્ર સાબિતી (પ્રયોગ કરો તો સાવ સહેલું), ગણિત શાસ્ત્રીઓનું પ્રદાન (મારા ઘડનારાઓને જાણો) અને આંકડાઓની માયાજાળ (ગણિતની સુંદરતાને માણો) નો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: ગણિત પ્રયોગશાળાના સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "પ્રયોગશાળામાં ઓછામાં ઓછું એક મોટું ટેબલ અને વર્ગની સંખ્યા મુજબ નાનાં ટેબલ હોવાં જોઈએ.",
+      "ખંડમાં પ્રમાણમાં મોટું અને એક બાજુ આલેખ અંકિત કરેલું ફલક યોગ્ય સ્થાને મૂકેલું હોવું જોઈએ.",
+      "પ્રયોગશાળામાં ગણિત સંબંધી પુસ્તકો ધરાવતું નાનું પુસ્તકાલય તેમજ બુલેટીન બોર્ડ હોવું જોઈએ.",
+      "ગણિત પ્રયોગશાળામાં વિદ્યાર્થીઓનું ધ્યાન ભંગ ન થાય તે માટે ગાણિતિક રમકડાં અને જીઓ બોર્ડ રાખવાં જોઈએ નહીં."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 63)",
+    "exp": "ગણિત પ્રયોગશાળામાં ગણિતશાસ્ત્રીઓનાં જીવનચરિત્ર સાથેના ફોટોગ્રાફ્સ, ચાર્ટ્સ, જીઓ બોર્ડ, ગાણિતિક ચિત્રો અને ગાણિતિક રમકડાંની સુયોગ્ય ગોઠવણી કરેલી હોવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 95: ગણિત પ્રયોગશાળા માટેનાં સાધનો અને મોડેલ્સના સંદર્ભમાં 'મેથ્સ પ્લગ' નો ઉપયોગ શેની સમજ માટે કરવામાં આવે છે?",
+    "options": [
+      "અપૂર્ણાંક સંખ્યાઓના સરવાળા-બાદબાકી માટે",
+      "એકી-બેકી સંખ્યા માટે",
+      "પાયથાગોરસના પ્રમેયની સાબિતી માટે",
+      "રેખા અને તેની છેદિકાના ખૂણા માટે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 64)",
+    "exp": "ગણિત પ્રયોગશાળાનાં 23 મોડેલ્સની યાદીમાં ક્રમ 23 પર 'મેથ્સ પ્લગ (એકી બેકી સંખ્યા માટે)' નો સ્પષ્ટ ઉલ્લેખ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 96: ગણિત પ્રયોગશાળા માટેનાં સાધનોમાં કેટલા માપની માપપટ્ટીઓ અને નીચેનામાંથી કયા બીજગાણિતિક નિત્યસમ મોડેલ્સનો ઉલ્લેખ કરવામાં આવ્યો છે?\n1. 30 સેમી, 50 સેમી અને 100 સેમીની માપપટ્ટીઓ\n2. (a + b)² − (a − b)² = 4ab નું મોડેલ\n3. (a + b)² + (a − b)² = 2a² + 2b² નું મોડેલ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 64)",
+    "exp": "ગણિત પ્રયોગશાળાનાં સાધનોમાં 30 સેમી, 50 સેમી, 100 સેમીની માપપટ્ટીઓ તથા મોડેલ્સમાં ક્રમ 5 અને 6 પર આ બંને બીજગાણિતિક નિત્યસમ મોડેલ્સનો સમાવેશ થયેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: વેબ રિસોર્સીસ અંતર્ગત આપેલી '9 ના ઘડિયાની કમાલ' (ગણિત ગમ્મત) મુજબ, સંખ્યા 12345679 ને અનુક્રમે 9, 18 અને 81 વડે ગુણવામાં આવે તો જવાબમાં કયા અંકોનું પુનરાવર્તન જોવા મળે છે?",
+    "options": [
+      "અનુક્રમે બધા 1, બધા 2 અને બધા 9",
+      "અનુક્રમે બધા 9, બધા 8 અને બધા 1",
+      "અનુક્રમે બધા 1, બધા 8 અને બધા 9",
+      "અનુક્રમે બધા 0, બધા 2 અને બધા 8"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 65)",
+    "exp": "સંખ્યા 12345679 ને 9 વડે ગુણતાં બધા એક (1), 18 વડે ગુણતાં બધા બે (2) અને 81 વડે ગુણતાં બધા નવ (9) જવાબમાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: વેબસાઈટ પરથી મેળવેલી ગુણાકારની વિશિષ્ટ રીત (512 × 203) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: આ રીતમાં ખાનાંમાં ગુણાકાર લખતી વખતે 5 નો 2 સાથે ગુણાકાર 10 થતાં 1/0 અને 1 નો 2 સાથે ગુણાકાર 2 થતાં 0/2 વડે દર્શાવાય છે.\nવિધાન 2: બધાં ખાનાં ભરાયા બાદ તમામ ત્રાંસી લાઈનોના સરવાળા કરવામાં આવે છે અને વદ્દી આવે તો તે આગળની ત્રાંસી લાઈનમાં ઉમેરવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 65-66)",
+    "exp": "આ વિશિષ્ટ રીતમાં બે અંકના ગુણાકારને ત્રાંસી લીટીથી વિભાજિત ખાનાંમાં (દા.ત. 1/0, 0/2) લખાય છે અને ત્યારબાદ ત્રાંસી લાઈનોના સરવાળા કરી વદ્દી આગળની ત્રાંસી લાઈનમાં ઉમેરી અંતિમ જવાબ 103936 મેળવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: વેબ રિસોર્સીસ વિભાગમાં માનસિક યોગ્યતા કસોટી અને કોયડા ઉકેલ માટે આપેલાં બે ઉદાહરણોના સાચા ઉકેલની જોડ કઈ છે?\n(1) સંખ્યાઓ 37, 73, 67, 77 પૈકી અલગ પડતી સંખ્યા કઈ?\n(2) 100 ને ચાર ક્રમિક સંખ્યાના ઘનના સરવાળા અને બે ક્રમિક બેકી સંખ્યાના વર્ગના સરવાળા સ્વરૂપે કઈ રીતે લખાય?",
+    "options": [
+      "(1) 67 | (2) 1³ + 2³ + 3³ + 4³ અને 4² + 6²",
+      "(1) 77 | (2) 1³ + 2³ + 3³ + 4³ અને 6² + 8²",
+      "(1) 77 | (2) 2³ + 3³ + 4³ + 5³ અને 6² + 8²",
+      "(1) 37 | (2) 1³ + 2³ + 3³ + 4³ અને 8² + 10²"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 66)",
+    "exp": "37, 73 અને 67 અવિભાજ્ય સંખ્યાઓ છે જ્યારે 77 વિભાજ્ય સંખ્યા હોવાથી તે અલગ પડે છે. ઉપરાંત 1³ + 2³ + 3³ + 4³ = 1 + 8 + 27 + 64 = 100 અને 6² + 8² = 36 + 64 = 100 થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: મૉડ્યૂલમાં આપેલી યાદી મુજબ નીચેનામાંથી કયો વિકલ્પ ગણિત શિક્ષણ માટેના ઉપયોગી બ્લોગ (Blog) ની યાદીમાં સમાવિષ્ટ નથી?",
+    "options": [
+      "vedicmathsindia.blogspot.in",
+      "tonysmaths.blogspot.in",
+      "https://sbjoshi.wordpress.com",
+      "www.eduplace.com"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 66-67)",
+    "exp": "www.eduplace.com નો સમાવેશ ગણિત માટેની ઉપયોગી વેબસાઈટોની યાદીમાં છે, જ્યારે બાકીના ત્રણેય (તેમજ math-blog.com અને abhiqqz.blogspot.in) ગણિત શિક્ષણમાં ઉપયોગી બ્લોગની યાદીમાં આપેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 101: વિદ્યાર્થીઓ દ્વારા ગણિતમાં થતી ભૂલો અને તેના નિવારણના ઉપાયોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (વિદ્યાર્થી દ્વારા થતી ભૂલ)  |  વિભાગ - બ (નિવારણનો ઉપાય)\n1. થર્મોમીટર, અંકિત નળાકાર કે લંબાઈના માપનમાં ભૂલ — (p) ઘડિયા ગોખાવવાને બદલે સમજ આધારિત પ્રશ્નો પૂછી ઘડિયો કરાવવો\n2. પલાખાં યાદ ન રહેવાં કે તાત્કાલિક જવાબ ન આપી શકવો — (q) પ્રયોગ દ્વારા માપન કરાવી 'પછી જાતે પ્રયોગ કરીને' શીર્ષક હેઠળ મહાવરા કરાવવા\n3. ગાણિતિક સંકેતો અને સૂત્રો યાદ ન રહેવાં — (r) રોમન કે લીટી સ્વરૂપે આંકડાની સ્પષ્ટ સમજ આપી પ્રત્યક્ષ કે ચાર્ટ સ્વરૂપે મહાવરા કરાવવા\n4. ઘડિયાળ, ટાઈમટેબલ અને કેલેન્ડરના વાંચનમાં ભૂલ — (s) એકરૂપ-સમરૂપ જેવા સંકેતોનો ભેદ સ્પષ્ટ કરવો અને સૂત્ર તારવણીની સમજ આપવી",
+    "options": [
+      "1-q, 2-s, 3-p, 4-r",
+      "1-q, 2-p, 3-s, 4-r",
+      "1-p, 2-q, 3-s, 4-r",
+      "1-q, 2-p, 3-r, 4-s"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 67)",
+    "exp": "માપનની ભૂલો પ્રયોગ દ્વારા (q), પલાખાંની ભૂલ સમજ આધારિત પ્રશ્નોથી (p), સંકેતો-સૂત્રોની ભૂલ ભેદ સ્પષ્ટતા અને તારવણીથી (s) તથા ઘડિયાળ-કેલેન્ડરની ભૂલ આંકડાની સ્પષ્ટ સમજ અને પ્રત્યક્ષ મહાવરાથી (r) નિવારી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 102: વિદ્યાર્થીઓની ગાણિતિક ભૂલોના નિવારણ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: પલાખાં યાદ રાખવા માટે \"16 પગ કેટલી બકરીના થાય?\" જેવા સમજ આધારિત પ્રશ્નો પૂછીને ઘડિયો કરાવવો જોઈએ.\nવિધાન 2: વ્યવહારુ ઉદાહરણોનો ઉકેલ શોધવામાં થતી ભૂલ નિવારવા વ્યવહારુ જીવનને ગણિત સાથે સાંકળવું અને કોયડાનું અર્થઘટન કરતાં શીખવવું જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 67)",
+    "exp": "પલાખાં માટે ગોખણપટ્ટીને બદલે \"16 પગ કેટલી બકરીના થાય?\" જેવા સમજ આધારિત પ્રશ્નો પૂછવા અને વ્યવહારુ ઉદાહરણો માટે જીવન સાથે જોડાણ તથા કોયડાનું અર્થઘટન શીખવવું—બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 103: એક શિક્ષક વિદ્યાર્થીને \"ચારસો ત્રણ\" આંકડામાં લખવા કહે છે ત્યારે વિદ્યાર્થી 4003 લખે છે. મૉડ્યૂલ મુજબ આવી ભૂલ નિવારવા માટે પ્રારંભિક તબક્કે કયો ઉપાય સૌથી યોગ્ય છે?",
+    "options": [
+      "યોગ્ય સ્થાનની સમજ આપી સ્થાન સારણી સ્વરૂપમાં સંખ્યા લેખનનો વધુ મહાવરો કરાવવો.",
+      "વિદ્યાર્થીને 1 થી 1000 સુધીના અંકો દસ વખત લખવાનું ગૃહકાર્ય આપવું.",
+      "માત્ર શબ્દોમાં જ સંખ્યા લખવાનો આગ્રહ રાખવો અને આંકડામાં લખવાનું ટાળવું.",
+      "આવી ભૂલોને અવગણીને આગળના એકમ પર વધી જવું."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 68)",
+    "exp": "'ચારસો ત્રણ' ને બદલે '4003' લખવા જેવી ભૂલોના નિવારણ માટે 4 લખ્યા પછી બે જ સ્થાન ભરવાનાં છે તેવી યોગ્ય સ્થાનની સમજ આપી પ્રારંભિક તબક્કે 'સ્થાન સારણી સ્વરૂપમાં' સંખ્યા લેખનનો વધુ મહાવરો કરાવવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 104: ગણિત શિક્ષણમાં 'શિક્ષકની પ્રત્યાયન અક્ષમતા' સંદર્ભે નીચેનામાંથી કયું વિધાન ખોટું છે?",
+    "options": [
+      "શિક્ષક પ્રત્યાયન ચક્ર અને પ્રત્યાયનના વિવિધ પ્રકારોથી ઓછો પરિચિત હોય ત્યારે પ્રત્યાયન ખામીયુક્ત બને છે.",
+      "પ્રત્યાયન ચક્ર અને સંકલ્પનાની જાણકારી મેળવવા માટે 'શૈક્ષણિક ટેકનોલોજી' ના પુસ્તકનો અભ્યાસ જરૂરી છે.",
+      "દાખલો ગણાવતી કે પ્રમેયની સાબિતી આપતી વખતે શિક્ષક-વિદ્યાર્થી વચ્ચે અપૂરતું પ્રત્યાયન થવાની સંભાવના વિશેષ હોય છે.",
+      "ગણિતના પ્રત્યાયનમાં સંકેતો અને સૂત્રો હોવાથી પ્રત્યાયન ચક્રની સંકલ્પના સ્પષ્ટ ન હોય તો પણ અધ્યાપન પર કોઈ અસર થતી નથી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 68)",
+    "exp": "ગણિતના પ્રત્યાયનમાં સંકેતો, સૂત્રો અને સંજ્ઞાઓનો વિશેષ ઉપયોગ થતો હોવાથી પ્રત્યાયન ચક્રની સંકલ્પના વધુ સ્પષ્ટ હોવી જરૂરી છે; તેની અપૂરતી જાણકારી શિક્ષકની પ્રત્યાયન ક્ષમતા ઘટાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 105: 'ગણિતનો માનસિક ભય' (Maths Phobia) અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: \"કોઈ વસ્તુ કે સ્થિતિ તરફ સ્થાયી ભય ઉત્પન્ન થાય તેને અવાસ્તવિક / અકારણ ભય કે ફોબિયા કહેવામાં આવે છે.\"\nવિધાન 2: વર્ગશિક્ષણ દરમિયાન શિક્ષક દ્વારા \"તને ગણિત આવડશે જ નહી\" તેવું દોહરાવવાથી અને અધ્યયન ક્રિયામાં વારંવાર નિષ્ફળ જવાથી બાળકમાં ગાણિતિક ભયનું સ્થાપન થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 68-69)",
+    "exp": "અવાસ્તવિક/અકારણ સ્થાયી ભયને ફોબિયા કહેવાય છે. Maths Phobia નું સીધું કારણ બાળકની અધ્યયન ક્રિયામાં વારંવારની નિષ્ફળતા અને શિક્ષકનાં નકારાત્મક વિધાનો સાથે સંકળાયેલું છે."
+  },
+  {
+    "q": "પ્રશ્ન 106: મૉડ્યૂલમાં દર્શાવેલ 'ગણિતનો ભય / ડર ઉદ્ભવવાનાં કારણો' માં નીચેનામાંથી કયા પરિબળનો સમાવેશ થતો નથી?",
+    "options": [
+      "વધુ પડતો લાંબો અભ્યાસક્રમ અને પ્રવર્તમાન પરીક્ષા પદ્ધતિ",
+      "કુટુંબ-સમાજમાં ગણિત માટેના જરૂરી વાતાવરણનો અભાવ અને ગણિત પ્રત્યેની ઉદાસીનતા",
+      "સહાધ્યાયીઓનું ચડિયાતાપણું અને વિદ્યાર્થીની શારીરિક અક્ષમતાઓ",
+      "શાળામાં ગણિત પ્રયોગશાળા અને વેબ રિસોર્સીસની ઉપલબ્ધતા"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 69-70)",
+    "exp": "અભ્યાસક્રમ, શિક્ષકનો વર્ગવ્યવહાર, ઉદાસીનતા, વાતાવરણનો અભાવ, રસ-રુચિનો અભાવ, પરીક્ષા પદ્ધતિ, સહાધ્યાયીઓનું ચડિયાતાપણું અને શારીરિક અક્ષમતાઓ એ ભયનાં 8 કારણો છે; પ્રયોગશાળા અને વેબ રિસોર્સીસ તો ભય દૂર કરવાનાં સાધનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 107: ગણિતના ભયનાં કારણોમાં 'શિક્ષકોનું વર્ગવ્યવહારનું સ્વરૂપ' અને 'સહાધ્યાયીઓનું ચડિયાતાપણું' કઈ રીતે અસર કરે છે?\n1. શિક્ષક વર્ગમાં માત્ર એક-બે દાખલા ગણાવીને બીજા દાખલા જાતે કરી લાવવા કહે ત્યારે વિવિધતાવાળા દાખલા ન ગણી શકવાને કારણે વિદ્યાર્થી હતોત્સાહિત થાય છે.\n2. વર્ગખંડમાં પોતાના સહાધ્યાયીઓનું ચડિયાતાપણું વિદ્યાર્થીમાં લઘુતા (Inferiority) લાવે છે, જેના કારણે ભયનું વાતાવરણ નિર્માણ થાય છે.",
+    "options": [
+      "માત્ર 1 સાચું છે.",
+      "માત્ર 2 સાચું છે.",
+      "1 અને 2 બંને સાચાં છે.",
+      "1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 69)",
+    "exp": "શિક્ષક દ્વારા માત્ર એક-બે દાખલા ગણાવવાની રીત વિદ્યાર્થીને હતોત્સાહિત કરે છે અને સહાધ્યાયીઓનું ચડિયાતાપણું વિદ્યાર્થીમાં લઘુતા લાવી ભય ઉત્પન્ન કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 108: ગણિતના કાલ્પનિક ડર અને નિષ્ફળતાને દૂર કરવાના ઉપાયો સંદર્ભે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "મંદગતિએ શીખતા વિદ્યાર્થીઓમાં સ્પર્ધાત્મકતા વધારવા તેમની પ્રતિભાશાળી વિદ્યાર્થીઓ સાથે વારંવાર તુલના કરવી જોઈએ.",
+      "વર્ગખંડમાં મહત્તમ વિવિધતાવાળા દાખલા ગણાવી અઘરી સંકલ્પનાઓને સરળતા પ્રદાન કરવી જોઈએ.",
+      "પરીક્ષા પદ્ધતિને વધુ લવચિક અને વૈજ્ઞાનિક સ્વરૂપની બનાવવી જોઈએ.",
+      "વિદ્યાર્થીઓની શારીરિક અક્ષમતાઓ પ્રત્યે શિક્ષકે સંવેદનશીલ બની તે દૂર કરવા અથાક પ્રયત્નો કરવા જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 70)",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે વર્ગના પ્રતિભાશાળી, સામાન્ય અને મંદગતિએ શીખતા વિદ્યાર્થીઓની 'પરસ્પર તુલના કરવી જોઈએ નહીં', પરંતુ વ્યક્તિગત તફાવતોને ધ્યાનમાં રાખી વર્ગવ્યવહાર કરવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 109: \"જે પ્રશ્નના જવાબમાં વૈવિધ્ય આવે અને તેમાં તેની રજૂઆતમાં એકવાક્યતા ન હોય\" — તેવા પ્રશ્નોને શું કહેવામાં આવે છે?",
+    "options": [
+      "પ્રમાણિત પ્રશ્નો",
+      "વૈકલ્પિક પ્રશ્નો",
+      "સંકલ્પનાત્મક પ્રશ્નો",
+      "મુક્ત જવાબી પ્રશ્નો (Open Ended Question)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 70)",
+    "exp": "જે પ્રશ્નના એક કરતાં વધુ જવાબો શક્ય હોય, જવાબમાં વૈવિધ્ય આવે અને રજૂઆતમાં એકવાક્યતા ન હોય તેને 'મુક્ત જવાબી પ્રશ્નો' (Open Ended Question) કહેવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 110: મુક્ત જવાબી પ્રશ્નના ઉદાહરણ તરીકે આપેલા \"એક નળાકારની વક્રસપાટીનું ક્ષેત્રફળ 4928 ચો.મીટર છે, તો તેની ત્રિજ્યા અને ઊંચાઈનાં શક્ય પરિણામો મેળવો\" — આ પ્રશ્ન માટે નીચેનામાંથી કઈ જોડ શક્ય નથી?",
+    "options": [
+      "ત્રિજ્યા = 14 મીટર, ઊંચાઈ = 56 મીટર",
+      "ત્રિજ્યા = 28 મીટર, ઊંચાઈ = 28 મીટર",
+      "ત્રિજ્યા = 21 મીટર, ઊંચાઈ = 36 મીટર",
+      "ત્રિજ્યા = 112 મીટર, ઊંચાઈ = 7 મીટર"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 70-71)",
+    "exp": "નળાકારની વક્રસપાટીનું ક્ષેત્રફળ 2πrh = 4928 હોવાથી r × h = 784 થવું જોઈએ. મૉડ્યૂલમાં આપેલ શક્ય પરિણામો (14, 56), (7, 112), (28, 28), (56, 14) અને (112, 7) છે; જ્યારે 21 × 36 = 756 ≠ 784 હોવાથી વિકલ્પ (C) શક્ય નથી."
+  },
+  {
+    "q": "પ્રશ્ન 111: મુક્ત જવાબી પ્રશ્ન (Open Ended Question) ના મૂલ્યાંકનમાં પડતી મુશ્કેલીઓ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "મુક્ત જવાબી પ્રશ્નો માટેની જવાબી ચાવી (Key) બનાવવી ખૂબ જ સરળ અને ઝડપી કાર્ય છે.",
+      "વિદ્યાર્થીઓ એક જ જવાબ આપી આત્મસંતોષ અનુભવે છે અને બીજા જવાબ વિશે વિચારતા નથી.",
+      "બધાં પ્રકરણો (એકમો) માંથી મુક્ત જવાબી પ્રશ્નો રચવા મુશ્કેલ કામ છે.",
+      "વધુ લાંબા પ્રશ્નની રચના થઈ હોય, તો મુક્ત જવાબી પ્રશ્ન વિદ્યાર્થીઓ માટે કંટાળાજનક પરિસ્થિતિનું નિર્માણ કરે છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 71)",
+    "exp": "મૉડ્યૂલ મુજબ \"Open Ended Question માટેની જવાબી ચાવી (key) બનાવવી એ એક અઘરું કાર્ય છે\", તેથી વિધાન (A) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 112: 'સમજણ માટેનું મૂલ્યાંકન' અંતર્ગત વિદ્યાર્થીઓમાં 'ગણ' (Set) નો ખ્યાલ સ્પષ્ટ થયો છે કે નહીં તે દર્શાવતાં વર્તન-પરિવર્તનોમાં નીચેનામાંથી કઈ બાબતોનો સમાવેશ થાય છે?\n1. વિદ્યાર્થીઓ યાદીની રીત અને ગુણધર્મની રીત વચ્ચેનો તફાવત આપે.\n2. વિદ્યાર્થીઓ ખાલી ગણ, એકાકી ગણ જેવા વિશિષ્ટ ગણોનાં ઉદાહરણો આપે.\n3. વિદ્યાર્થીઓ યોગગણ, છેદગણ, ઉપગણ અને પૂરકગણને સંકેતથી દર્શાવે.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "1, 2 અને 3 તમામ",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 71)",
+    "exp": "ગણનો સંકેત, ગણ દર્શાવવાની રીતો, યાદી અને ગુણધર્મની રીતનો તફાવત, વિશિષ્ટ ગણોનાં ઉદાહરણો તથા યોગગણ-છેદગણ-ઉપગણ-પૂરકગણના સંકેતો—આ તમામ વર્તન-પરિવર્તનો ગણના ખ્યાલની સમજ દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 113: ખ્યાલાત્મક સમજણની ચકાસણી માટે મૉડ્યૂલમાં આપેલા પ્રશ્નો મુજબ, નીચેનામાંથી કયો વિકલ્પ સાચો છે?\n1. {0} એ કયો વિશિષ્ટ ગણ દર્શાવે છે?\n2. 1 ઘન મીટર = _____ લિટર અને 1 ઘન સેમી = _____ મિલી લિટર",
+    "options": [
+      "(1) ખાલી ગણ | (2) 100 લિટર અને 10 મિલી લિટર",
+      "(1) પૂરક ગણ | (2) 1000 લિટર અને 10 મિલી લિટર",
+      "(1) ખાલી ગણ | (2) 1000 લિટર અને 1 મિલી લિટર",
+      "(1) એકાકી ગણ | (2) 1000 લિટર અને 1 મિલી લિટર"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 72)",
+    "exp": "{0} માં '0' એક ઘટક તરીકે હાજર હોવાથી તે 'એકાકી ગણ' (ખાલી ગણ નહીં) છે, અને મૉડ્યૂલ મુજબ 1 ઘન મીટર = 1000 લિટર તથા 1 ઘન સેમી = 1 મિલી લિટર થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 114: જ્યારે મૂલ્યાંકન કસોટીમાં વિદ્યાર્થીઓને પૂછવામાં આવે કે \"કયો ગુણોત્તર મોટો છે: 1/3 કે 1/6?\" ત્યારે મોટાભાગના વિદ્યાર્થીઓ 1/6 ને મોટો કહે છે. મૉડ્યૂલ મુજબ આ ખોટા જવાબ પાછળનું મુખ્ય કારણ શું છે?",
+    "options": [
+      "વિદ્યાર્થીઓ 6 એ 3 થી મોટો છે તે જાણે છે, પણ અંશ અને છેદ માટેની સમજની સ્પષ્ટતા ન હોવાથી ખોટો જવાબ આપે છે.",
+      "વિદ્યાર્થીઓને ભાગાકારના ઘડિયા આવડતા હોતા નથી.",
+      "વિદ્યાર્થીઓ 1/3 અને 1/6 ને સરખી સંખ્યા માની લે છે.",
+      "વિદ્યાર્થીઓને લ.સા.અ. અને ગુ.સા.અ. ની વ્યાખ્યા યાદ હોતી નથી."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 72)",
+    "exp": "વિદ્યાર્થીઓ પૂર્ણ સંખ્યાના જ્ઞાન મુજબ 6 > 3 જાણે છે, પરંતુ સંમેય સંખ્યામાં અંશ અને છેદ માટેની ખ્યાલાત્મક સમજની સ્પષ્ટતા ન હોવાથી 1/6 ને મોટો ગુણોત્તર માની લે છે."
+  },
+  {
+    "q": "પ્રશ્ન 115: 'ગાણિતિક કૌશલ્યોના સંદર્ભે મૂલ્યાંકન' કરતી વખતે વિદ્યાર્થીઓને કયાં મુખ્ય ત્રણ પાસાં સમાવિષ્ટ હોય તેવાં કાર્યોમાં રોકવા જોઈએ?",
+    "options": [
+      "ગોખણપટ્ટી, ઝડપી લેખન અને યાંત્રિક ગણતરી",
+      "વાંચન, શ્રવણ અને સુલેખન",
+      "સમસ્યા ઉકેલ, તાર્કિકતા (તર્કશક્તિ) અને પ્રત્યાયન",
+      "ચિત્રકામ, માપન અને ગણના"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 72)",
+    "exp": "ગાણિતિક કૌશલ્યોના મૂલ્યાંકનમાં વિદ્યાર્થીઓને એવા કાર્યમાં રોકવા જોઈએ જેમાં સમસ્યા ઉકેલ, તાર્કિકતા (તર્કશક્તિ) અને પ્રત્યાયન (લેખિત, મૌખિક અને પ્રત્યક્ષીકરણ) નો સમાવેશ થતો હોય."
+  },
+  {
+    "q": "પ્રશ્ન 116: 'શિક્ષકરચિત કસોટી' (Teacher-made Test) ના ફાયદા અને ગેરફાયદા અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: શિક્ષકરચિત કસોટી સંપૂર્ણપણે અભ્યાસક્રમ આધારિત હોય છે અને ફક્ત એક જ વાર તેનો ઉપયોગ કરવામાં આવે છે.\nવિધાન 2: શિક્ષકરચિત કસોટીની વિશ્વસનીયતા પ્રમાણમાં ઓછી હોય છે અને તેના દ્વારા વિદ્યાર્થીઓનાં જુદાં-જુદાં જૂથો માટે માનાંકો તૈયાર કરી શકાતા નથી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 72-73)",
+    "exp": "શિક્ષકરચિત કસોટીના ફાયદામાં અભ્યાસક્રમ આધારિત અને એક જ વાર ઉપયોગ તથા ગેરફાયદામાં મર્યાદિત ક્ષેત્ર, ઓછી વિશ્વસનીયતા અને જુદાં-જુદાં જૂથો માટે માનાંકો ન બનાવી શકાય—આ બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 117: 'પ્રમાણિત કસોટી' (Standardized Test) ના ગેરફાયદાઓમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "તે શહેરી અને ગ્રામીણ વિદ્યાર્થીઓ માટે સરખી હોય છે.",
+      "તે જે જૂથ પર પ્રમાણિત થઈ હોય તે જ જૂથ માટે ઉપયોગી છે.",
+      "કસોટી સંચાલનમાં બાંધછોડ કરતાં પરિણામો અને અર્થઘટનો દૂષિત થાય છે.",
+      "આ કસોટીનો માત્ર એક જ વાર ઉપયોગ કરી શકાય છે અને તેનું કાર્યક્ષેત્ર મર્યાદિત હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 73)",
+    "exp": "પ્રમાણિત કસોટીનું કાર્યક્ષેત્ર વ્યાપક હોય છે અને તેનો 'વારંવાર ઉપયોગ' કરી શકાય છે (એક જ વાર ઉપયોગ અને મર્યાદિત ક્ષેત્ર એ શિક્ષકરચિત કસોટીનાં લક્ષણો છે), તેથી વિકલ્પ (D) ખોટો છે."
+  },
+  {
+    "q": "પ્રશ્ન 118: 'લેખિત કસોટી' ના ગેરફાયદાઓ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?\n1. નિબંધાત્મક અને ટૂંક જવાબી પ્રશ્નોમાં ગુણાંકનની વિશ્વસનીયતા ઓછી હોય છે.\n2. ગુણાંકન પર પરીક્ષકની જાતિ, મૂડ (મૂળ), થાક અને તપાસવાનો સમય જેવાં પરિબળો અસર કરે છે.\n3. ટૂંક જવાબી પ્રશ્નો વિદ્યાર્થીઓમાં ભાષા શક્તિ ચકાસવામાં ઉપયોગી નથી.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3 તમામ",
+      "માત્ર 1 અને 3"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 73-74)",
+    "exp": "લેખિત કસોટીના ગેરફાયદામાં ગોખણપટ્ટી, ઓછી વિશ્વસનીયતા, અસ્પષ્ટ જવાબો, પરીક્ષકનાં પરિબળોની ગુણાંકન પર અસર અને ટૂંક જવાબી પ્રશ્નો ભાષાશક્તિ ચકાસવામાં ઉપયોગી ન હોવા—આ ત્રણેય બાબતો સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 119: 'મૌખિક કસોટી' ના ફાયદા અને ગેરફાયદા અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "મૌખિક કસોટીમાં દરેક વિદ્યાર્થીને એક સરખી કઠિનતાવાળા પ્રશ્નો સરળતાથી પૂછી શકાય છે અને સમયનો બચાવ થાય છે.",
+      "મૌખિક કસોટીમાં નકલ કરવાની બિલકુલ તક મળતી નથી અને પૂરક પ્રશ્નો પૂછીને સમજની તરત ચકાસણી થઈ શકે છે.",
+      "શરમાળ અને મૌખિક અભિવ્યક્તિ ન ધરાવતા વિદ્યાર્થીઓને મૌખિક કસોટીમાં અન્યાય થવાની શક્યતા ઊભી થાય છે.",
+      "મૌખિક કસોટીમાં શિક્ષક વિદ્યાર્થીઓ પ્રત્યે પક્ષપાત કરી શકે છે અને લેખિત અભિવ્યક્તિની પરીક્ષા થઈ શકતી નથી."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 74)",
+    "exp": "મૌખિક કસોટીના ગેરફાયદામાં સ્પષ્ટ જણાવાયું છે કે \"દરેક વિદ્યાર્થીને એક સરખી કઠિનતાવાળા પ્રશ્નો પૂછી શકાતા નથી\" અને \"સમય ખૂબ જ જાય છે.\" તેથી વિધાન (A) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 120: મૂલ્યાંકનનાં સાધનો અને તેની વિશિષ્ટ બાબતોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (કસોટીનો પ્રકાર)  |  વિભાગ - બ (વિશિષ્ટ લક્ષણ)\n1. શિક્ષકરચિત કસોટી — (p) રચના વિશેષજ્ઞો દ્વારા ચોક્કસ સોપાનો અનુસરીને કરવામાં આવે છે.\n2. પ્રમાણિત કસોટી — (q) પરોક્ષ રીતે લેખન કૌશલ્યની કસોટી થઈ જાય છે અને ભૂલોની સ્પષ્ટ નોંધ રાખી શકાય છે.\n3. લેખિત કસોટી — (r) અમુક સમયાંતરે નિયમિત રીતે ફક્ત પોતાના વિદ્યાર્થીઓની અધ્યયન નિષ્પત્તિ જાણવા લેવાય છે.\n4. મૌખિક કસોટી — (s) ઉત્તર આપવા શિક્ષક વિદ્યાર્થીઓને પ્રોત્સાહિત કરી શકે છે અને નકલની તક રહેતી નથી.",
+    "options": [
+      "1-r, 2-p, 3-s, 4-q",
+      "1-r, 2-p, 3-q, 4-s",
+      "1-p, 2-r, 3-q, 4-s",
+      "1-r, 2-q, 3-p, 4-s"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 72-74)",
+    "exp": "શિક્ષકરચિત કસોટી પોતાના વિદ્યાર્થીઓની અધ્યયન નિષ્પત્તિ જાણવા (r), પ્રમાણિત કસોટી વિશેષજ્ઞો દ્વારા ચોક્કસ સોપાનોથી (p), લેખિત કસોટી ભૂલોની સ્પષ્ટ નોંધ અને લેખન કૌશલ્યની કસોટી માટે (q) અને મૌખિક કસોટી નકલની તક વિના તાત્કાલિક પ્રોત્સાહન માટે (s) ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 121: HOT (Higher Order Thinking) Questions ની સંકલ્પના અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: NCERT પાઠ્યપુસ્તકના સ્વાધ્યાય તથા ઉદાહરણોમાં યાદશક્તિ આધારિત પ્રશ્નો ઓછા છે, જ્યારે સમજ, ઉપયોજન અને કૌશલ્ય સંદર્ભિત પ્રશ્નો વધારે છે.\nવિધાન 2: જ્યારે કોઈ પ્રશ્નમાં કંઈક નવું સર્જન, ઉપયોજન, પૃથક્કરણ, ક્રિયા કે ચિંતન કરી સામાન્યીકરણ કરીને જવાબ આપવાનો હોય તેને HOT (હાયર ઓર્ડર થિંકિંગ) પ્રશ્નો કહેવાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 74)",
+    "exp": "NCERT પાઠ્યપુસ્તકોમાં સમજ-ઉપયોજન-કૌશલ્ય આધારિત પ્રશ્નોને પ્રાધાન્ય અપાયું છે તથા સર્જન, ઉપયોજન, પૃથક્કરણ અને ચિંતન-સામાન્યીકરણ માંગતા પ્રશ્નોને HOT Questions કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 122: પૃષ્ઠફળ અને ઘનફળના સંદર્ભમાં નીચેનામાંથી કયો પ્રશ્ન HOT (Higher Order Thinking) પ્રશ્નનું ઉદાહરણ છે?",
+    "options": [
+      "એક 5 × 5 × 5 ના સમઘનને બહારથી રંગીને તેના 1 × 1 × 1 ના ટુકડા કરવામાં આવે, તો ફક્ત બે બાજુ કલર થયેલ હોય તેવા કેટલા ટુકડા મળે?",
+      "સમઘનનું પૃષ્ઠફળ અને ઘનફળ શોધવાનું સૂત્ર જણાવો.",
+      "એક લંબઘનની લંબાઈ 5 સેમી, પહોળાઈ 4 સેમી અને ઊંચાઈ 3 સેમી છે, તો તેનું પૃષ્ઠફળ શોધો.",
+      "એક લંબઘનની લંબાઈ 5 સેમી, પહોળાઈ 4 સેમી અને ઊંચાઈ 3 સેમી છે, તો તેનું ઘનફળ શોધો."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 74-75)",
+    "exp": "સૂત્રો જણાવવા કે સીધી કિંમતો મૂકીને પૃષ્ઠફળ-ઘનફળ શોધવા એ સાદા પ્રશ્નો છે, જ્યારે 5 × 5 × 5 ના રંગેલા સમઘનના વિવિધ રંગીન ટુકડાઓની સંખ્યા શોધવી એ ચિંતન અને પૃથક્કરણ આધારિત HOT પ્રશ્ન છે."
+  },
+  {
+    "q": "પ્રશ્ન 123: મૉડ્યૂલમાં આપેલા HOT પ્રશ્ન મુજબ, એક 5 × 5 × 5 ના સમઘનને બહારથી રંગીને તેના 1 × 1 × 1 ના કુલ 125 ટુકડા કરવામાં આવે, તો રંગેલી બાજુઓ અને ટુકડાઓની સંખ્યાનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (ટુકડાનો પ્રકાર)  |  વિભાગ - બ (ટુકડાઓની સંખ્યા)\n1. ત્રણ બાજુ કલર થયેલ ટુકડા — (p) 54\n2. ફક્ત બે બાજુ કલર થયેલ ટુકડા — (q) 27\n3. ફક્ત એક બાજુ કલર થયેલ ટુકડા — (r) 8\n4. એક પણ બાજુ કલર થયેલ ન હોય તેવા ટુકડા — (s) 36",
+    "options": [
+      "1-r, 2-p, 3-s, 4-q",
+      "1-s, 2-r, 3-p, 4-q",
+      "1-r, 2-s, 3-p, 4-q",
+      "1-r, 2-s, 3-q, 4-p"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ-4 ગણિતમાં પ્રત્યાયન અને મૂલ્યાંકન (પાના નં.: 75)",
+    "exp": "5 × 5 × 5 ના રંગેલા સમઘન માટે: 3 બાજુ રંગેલા (ખૂણાના) = 8 (r); 2 બાજુ રંગેલા (ધારના) = 12 × (5 − 2) = 36 (s); 1 બાજુ રંગેલા (ફલકના) = 6 × (5 − 2)² = 54 (p); અને 0 બાજુ રંગેલા (અંદરના) = (5 − 2)³ = 27 (q). કુલ = 8 + 36 + 54 + 27 = 125."
+  },
+  {
+    "q": "પ્રશ્ન 124: મૉડ્યૂલના અંતે આપેલા 'વિચાર પ્રેરક પ્રશ્નો' મુજબ, એક બગીચા પાસે પાર્ક કરેલાં ટુ વ્હીલર અને ફોર વ્હીલર સાધનોની કુલ સંખ્યા 40 છે અને બધાં વાહનોનાં કુલ પૈડાં 100 છે, તો ત્યાં કેટલાં ટુ વ્હીલર અને કેટલાં ફોર વ્હીલર હશે?",
+    "options": [
+      "20 ટુ વ્હીલર અને 20 ફોર વ્હીલર",
+      "30 ટુ વ્હીલર અને 10 ફોર વ્હીલર",
+      "25 ટુ વ્હીલર અને 15 ફોર વ્હીલર",
+      "10 ટુ વ્હીલર અને 30 ફોર વ્હીલર"
+    ],
+    "ans": 1,
+    "unit": "વિચાર પ્રેરક પ્રશ્નો (અંતિમ પાનું)",
+    "exp": "ધારો કે ટુ વ્હીલર x અને ફોર વ્હીલર y છે. તો x + y = 40 અને 2x + 4y = 100 (એટલે કે x + 2y = 50). બંને સમીકરણ ઉકેલતાં y = 10 (ફોર વ્હીલર) અને x = 30 (ટુ વ્હીલર) મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 125: 'વિચાર પ્રેરક પ્રશ્નો' માં આપેલી નીચેની પરિસ્થિતિઓના સાચા ગાણિતિક નિષ્કર્ષોની જોડ કઈ છે?\n1. સમાન પાયાની ત્રિજ્યા અને સમાન ઊંચાઈ ધરાવતાં કેટલાં શંકુ આકારનાં માપિયાં ભરતાં એક નળાકાર માપિયું ભરાય?\n2. 3 સેમી ત્રિજ્યાવાળા વર્તુળમાં 2, 3, 4, 5, 6 સેમી માપની જીવા દોરેલી છે; તેમાંથી કઈ જીવા વ્યાસ બનશે?\n3. શિક્ષક બાળકોને ચાર ત્રિકોણ દોરી, ખૂણા માપીને તેમનો સરવાળો કરવાનું કહે છે અને દરેકને 180° મળે છે — આ નિયમ કઈ પ્રક્રિયા દ્વારા તારવ્યો કહેવાય?",
+    "options": [
+      "(1) 2 શંકુ | (2) 3 સેમી | (3) વિશ્લેષણની પ્રક્રિયા",
+      "(1) 4 શંકુ | (2) 6 સેમી | (3) અનિષ્ટાપત્તિની પ્રક્રિયા",
+      "(1) 3 શંકુ | (2) 3 સેમી | (3) સામાન્યીકરણની પ્રક્રિયા",
+      "(1) 3 શંકુ | (2) 6 સેમી | (3) સામાન્યીકરણની પ્રક્રિયા"
+    ],
+    "ans": 3,
+    "unit": "વિચાર પ્રેરક પ્રશ્નો (અંતિમ પાનું)",
+    "exp": "નળાકારનું ઘનફળ (πr²h) શંકુના ઘનફળ ((1/3)πr²h) કરતાં ત્રણ ગણું હોવાથી 3 શંકુ માપિયાં ભરતાં 1 નળાકાર ભરાય; 3 સેમી ત્રિજ્યાવાળા વર્તુળનો વ્યાસ 2 × 3 = 6 સેમીની જીવા બને; તથા અનેક ઉદાહરણો પરથી 180° નો નિયમ તારવવો એ 'સામાન્યીકરણની પ્રક્રિયા' છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-125) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૨૫ માંથી ૧૨૫ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ-૪ (અ) પદ્ધતિશાસ્ત્ર અને વિષયવસ્તુ : ગણિત (ધોરણ ૬ થી ૮)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "sy4a.html",
+            testUploadDate: "2026-11-27"
+        })
+    });
+}
+</script>
+</body>
+</html>
