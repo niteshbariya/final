@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ધોરણ 11 મનોવિજ્ઞાન — ભાગ-2 (પ્રશ્ન 101 થી 200) | ઉચ્ચ સ્તરીય MCQ પ્રશ્નસંગ્રહ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ધોરણ 11 મનોવિજ્ઞાન — ભાગ-2 (પ્રકરણ 8 અને 9)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ધોરણ 11 મનોવિજ્ઞાન — ઉચ્ચ સ્તરીય MCQ પ્રશ્નસંગ્રહ<br>પ્રકરણ 8 (વ્યક્તિત્વ) અને પ્રકરણ 9 (પ્રેરણા અને આવેગ)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">ભાગ-2: પ્રશ્ન 101 થી 200 (જવાબ અને સચોટ સમજૂતી સહિત) | GPSC | TET | TAT | HTAT | શિક્ષણ સેવા વર્ગ 1-2</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ધોરણ 11 મનોવિજ્ઞાન — ભાગ-2 (પ્રકરણ 8: વ્યક્તિત્વ, પ્રકરણ 9: પ્રેરણા અને આવેગ) | ૧૦૦ પ્રશ્નો (પ્રશ્ન 101 થી 200)</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ પ્રશ્નોનો ડેટાસેટ (ધોરણ 11 મનોવિજ્ઞાન — ભાગ-2: પ્રશ્ન 101 થી 200 | પ્રકરણ 8 અને 9)
+const questions = [
+  {
+    "q": "પ્રશ્ન 101: 'વ્યક્તિત્વ' (Personality) ના અર્થ અને સ્વરૂપ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: અંગ્રેજી શબ્દ 'Personality' લેટિન ભાષાના 'Persona' શબ્દ પરથી ઊતરી આવ્યો છે, જેનો અર્થ રંગમંચ પર પાઠ ભજવતા પાત્રએ ચહેરા પર પહેરેલ મહોરું (Mask) થાય છે.\nવિધાન 2: મનોવૈજ્ઞાનિકોની દૃષ્ટિએ વ્યક્તિત્વ એટલે માત્ર વ્યક્તિનો બાહ્ય દેખાવ કે અન્ય વ્યક્તિઓ પર પડતી તેની સામાજિક અપીલ જ ગણાય છે.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 86",
+    "exp": "'Personality' શબ્દ લેટિન 'Persona' (મહોરું) પરથી આવ્યો છે; પરંતુ રોજબરોજના વ્યવહારથી વિપરીત મનોવૈજ્ઞાનિકોની દૃષ્ટિએ વ્યક્તિત્વ એટલે વ્યક્તિનાં બધાં શારીરિક-માનસિક લક્ષણો કે જે તેના વિચાર, લાગણી અને વર્તન પર અસર કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 102: ગોર્ડન ઓલપોર્ટે વ્યક્તિત્વની વ્યાખ્યા 1937 અને 1961માં આપી હતી. ઈ.સ. 1961ની સુધારેલી વ્યાખ્યા મુજબ “વ્યક્તિત્વ એટલે વ્યક્તિની લાક્ષણિક વિચાર અને વર્તન તરેહને ઘડનારી તેની મનોશારીરિક વ્યવસ્થાઓનું _________.”",
+    "options": [
+      "સ્થિર અને અપરિવર્તનશીલ સંગઠન",
+      "માત્ર બાહ્ય સામાજિક પ્રતિભાવ તંત્ર",
+      "ગતિશીલ સંયોજન",
+      "અચેતન પ્રેરણાઓનું માળખું"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 86",
+    "exp": "ઓલપોર્ટે 1937માં વ્યક્તિત્વને મનોશારીરિક તંત્રનું ગત્યાત્મક સંગઠન કહ્યું હતું, જ્યારે 1961માં તેને “વ્યક્તિની લાક્ષણિક વિચાર અને વર્તન તરેહને ઘડનારી તેની મનોશારીરિક વ્યવસ્થાઓનું ગતિશીલ સંયોજન” તરીકે વ્યાખ્યાયિત કર્યું."
+  },
+  {
+    "q": "પ્રશ્ન 103: પ્રાચીન યુગથી વ્યક્તિત્વના પ્રકારો પાડવા માટે થયેલા વર્ગીકરણ અને તેના આધારનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (સ્રોત / પ્રણેતા)  |  વિભાગ - બ (વર્ગીકરણના પ્રકારો)\n1. ભારતીય દર્શનશાસ્ત્ર — (i) વાત પ્રકૃતિ, પિત્ત પ્રકૃતિ અને કફ પ્રકૃતિ\n2. ચરકસંહિતા (ભારતીય ચિકિત્સા) — (ii) રક્તપ્રભાવી, કફપ્રભાવી, કાળું પિત્ત અને પીળું પિત્ત\n3. ગ્રીક વૈદ્ય હિપોક્રિટ્સ — (iii) સાત્વિક, રાજસી અને તામસી",
+    "options": [
+      "1-(iii), 2-(i), 3-(ii)",
+      "1-(i), 2-(iii), 3-(ii)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 86",
+    "exp": "ભારતીય દર્શનશાસ્ત્રમાં સાત્વિક, રાજસી અને તામસી; ચરકસંહિતામાં શારીરિક દોષ આધારે વાત, પિત્ત અને કફ પ્રકૃતિ; તથા ગ્રીક વૈદ્ય હિપોક્રિટ્સે શરીરના રસસ્ત્રાવોના આધારે ચાર પ્રકારો દર્શાવ્યા છે."
+  },
+  {
+    "q": "પ્રશ્ન 104: ગ્રીક વૈદ્ય હિપોક્રિટ્સે શરીરમાં રહેલા રસસ્ત્રાવોના પ્રભાવના આધારે દર્શાવેલા વ્યક્તિત્વના ચાર પ્રકારો અને તેના સ્વભાવની કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "રક્તપ્રભાવી વ્યક્તિ — સક્રિય અને આનંદી",
+      "કફપ્રભાવી વ્યક્તિ — સુસ્ત",
+      "કાળા પિત્તના પ્રભાવવાળી વ્યક્તિ — ઉદાસ",
+      "પીળા પિત્તના પ્રભાવવાળી વ્યક્તિ — શાંત અને વિનમ્ર"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 86",
+    "exp": "હિપોક્રિટ્સના વર્ગીકરણ મુજબ પીળા પિત્તના પ્રભાવવાળી વ્યક્તિઓ શાંત અને વિનમ્ર નહીં, પરંતુ ઉત્તેજનશીલ અને ક્રોધી હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 105: ક્રેશમર અને શેલ્ડને શરીરના બાંધાના આધારે આપેલા વ્યક્તિત્વના પ્રકારો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આંતરસ્તર પ્રધાન બાંધાવાળા લોકો જાડા અને ઠીંગણા હોય છે તથા તેમનું વ્યક્તિત્વ આનંદી, મિલનસાર અને રમૂજી હોય છે.",
+      "બાહ્યસ્તર પ્રધાન બાંધાવાળા લોકો સ્નાયુબદ્ધ, હિંમતવાન, નેતૃત્વ સંભાળે તેવા અને જોખમવાળાં કાર્યો કરનારા હોય છે.",
+      "મધ્યસ્તર પ્રધાન બાંધાવાળા લોકો ખૂબ જ સક્રિય અને જોખમવાળાં કાર્યો કરવાની વૃત્તિ ધરાવતા હોય છે.",
+      "બાહ્યસ્તર પ્રધાન બાંધાવાળા લોકો ઊંચા અને પાતળા, કલાપ્રેમી, અંતર્મુખ, મગજનાં કાર્યો કરનારા અને વધુ શરમાળ હોય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 87",
+    "exp": "સ્નાયુબદ્ધ, હિંમતવાન અને નેતૃત્વ સંભાળે તેવા લોકો 'મધ્યસ્તર પ્રધાન' બાંધાવાળા હોય છે, જ્યારે 'બાહ્યસ્તર પ્રધાન' બાંધાવાળા લોકો ઊંચા-પાતળા, કલાપ્રેમી અને અંતર્મુખ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 106: કાર્લ યુંગે પ્રવૃત્તિની દિશાને આધારે આપેલા વ્યક્તિત્વના પ્રકારો અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: અંતર્મુખ લોકો પોતાના વિચારોમાં મગ્ન રહે છે, એકલા રહેવાનું પસંદ કરે છે અને સંઘર્ષો ઊભા થાય ત્યારે પોતાના કોચલામાં ભરાઈ જાય છે.\nવિધાન 2: બહિર્મુખ લોકો બહારના પદાર્થો અને અન્ય વ્યક્તિઓ તરફ જાય છે, આંતરક્રિયાઓ કરે છે અને લોકો સાથેના સંપર્કવાળાં કાર્યોને પસંદ કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 87",
+    "exp": "કાર્લ યુંગે પ્રવૃત્તિની દિશાને આધારે અંતર્મુખ અને બહિર્મુખ એમ બે પ્રકારો આપ્યા છે અને બંને પ્રકારનાં વર્ણવેલાં લક્ષણો પાઠ્યપુસ્તક મુજબ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 107: ગોર્ડન ઓલપોર્ટે પાડેલા 'સામાન્ય ગુણ લક્ષણો' અને 'વિશિષ્ટ ગુણ લક્ષણો' વચ્ચેના ભેદ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "સામાન્ય ગુણ લક્ષણો બધા માણસોમાં હોય છે તેથી તેનું માપન કરીને સરખામણી કરી શકાય છે, જ્યારે વિશિષ્ટ ગુણ લક્ષણો જે-તે વ્યક્તિમાં અજોડ હોવાથી વ્યક્તિ-વ્યક્તિ વચ્ચે સરખામણી કરી શકાતી નથી.",
+      "વિશિષ્ટ ગુણ લક્ષણો બધા માણસોમાં સમાન પ્રમાણમાં જોવા મળે છે, જ્યારે સામાન્ય ગુણ લક્ષણો માત્ર અપવાદરૂપ વ્યક્તિઓમાં જ હોય છે.",
+      "વ્યક્તિઓના ગુણોનું માપન કરતી વખતે આપણે ફક્ત તેમના વિશિષ્ટ ગુણો જ માપી શકીએ છીએ.",
+      "ઓલપોર્ટના મતે વ્યક્તિત્વ ગુણો કરતાં માણસની ટેવો વધારે વ્યાપક અને ગતિશીલ હોય છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 87",
+    "exp": "ઓલપોર્ટના મતે માણસની ટેવો કરતાં તેના વ્યક્તિત્વ ગુણો વધારે વ્યાપક હોય છે; સામાન્ય ગુણ લક્ષણો બધામાં હોવાથી તેની સરખામણી થઈ શકે છે, પરંતુ વિશિષ્ટ ગુણ લક્ષણો અજોડ હોવાથી તેની સરખામણી થઈ શકતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 108: ગોર્ડન ઓલપોર્ટ દ્વારા વ્યક્તિના અંગત ગુણોને તેમની અગત્યતા અનુસાર અપાયેલા પદક્રમનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પદક્રમ)  |  વિભાગ - બ (લાક્ષણિકતા)\n1. અધિપતિ ગુણ લક્ષણ — (i) મોટા ભાગની વ્યક્તિઓના વ્યક્તિત્વ અને વર્તનમાં પ્રાધાન્ય ભોગવતા હોય તેવા 3 થી 10 ગુણો\n2. કેન્દ્ર ગુણ લક્ષણ — (ii) વ્યક્તિની વિવિધ પ્રકારની અંગત અભિરુચિઓ, મનોવલણો કે વર્તન વિશેષતાઓને પ્રગટ કરે છે\n3. ગૌણ ગુણ લક્ષણ — (iii) વ્યક્તિના તમામ પ્રકારના વર્તન ઉપર એવી વિશિષ્ટ રીતે છવાઈ ગયેલું હોય કે હંમેશાં અલગ જ ઉપસી આવે",
+    "options": [
+      "1-(i), 2-(iii), 3-(ii)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(iii), 2-(i), 3-(ii)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 87",
+    "exp": "ઓલપોર્ટના પદક્રમ મુજબ અધિપતિ ગુણ લક્ષણ સમગ્ર વર્તન પર છવાયેલું હોય છે, કેન્દ્ર ગુણ લક્ષણો 3 થી 10 જેટલા મુખ્ય ગુણો હોય છે અને ગૌણ ગુણ લક્ષણો અંગત અભિરુચિઓ કે મનોવલણો દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 109: સિગ્મંડ ફ્રોઈડના મતે વ્યક્તિત્વ રચનાનાં ત્રણ અંગો — ઈડ, ઈગો અને સુપર ઈગો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ઈડ એ જૈવિક વૃત્તિઓ, જાતીયતા અને આક્રમકતાનો બનેલો છે તથા સુખ સિદ્ધાંતને અનુસરીને વિવેકહીન રીતે વર્તે છે.",
+      "ઈગો એ સુખ સિદ્ધાંતને અનુસરીને ઈડની પાશવી વૃત્તિઓને વધુ ઉત્તેજન આપવાનું અને વાસ્તવિકતાની અવગણના કરવાનું કામ કરે છે.",
+      "ઈગો ઈડની પાશવી વૃત્તિઓ પર લગામ રાખવાનું અને વાસ્તવિકતાને અનુસરી તેને જવાબદારીપૂર્વક વર્તન માટે દોરવાનું કામ કરે છે.",
+      "સુપર ઈગો (અધિઅહમ) અંતરાત્મા અથવા નૈતિક આત્મા જેવો છે, જે વર્તનનાં મૂલ્યો, આદર્શો અને નીતિ તરફ અભિમુખ કરવાનું કામ કરે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 87",
+    "exp": "ઈગો સુખ સિદ્ધાંતને નહીં પરંતુ વાસ્તવિકતાના સિદ્ધાંતને અનુસરીને ઈડની પાશવી વૃત્તિઓ પર લગામ રાખે છે અને વ્યક્તિને જવાબદારીપૂર્વક વર્તવા દોરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 110: ફ્રોઈડના મતે વ્યક્તિત્વ વિકાસના મુખ્ય બે તબક્કા (પૂર્વ લિંગ તબક્કો અને પૂર્ણ લિંગ તબક્કો) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: પૂર્વ લિંગ તબક્કામાં ત્રણ અવસ્થાઓ આવે છે: મુખઅવસ્થા (જન્મથી 2 વર્ષ), ગુદાઅવસ્થા (2 થી 3 વર્ષ) અને લિંગઅવસ્થા (3 થી 6 વર્ષ).\nવિધાન 2: પૂર્ણ લિંગ તબક્કો (Latency Period) 6 થી 12 વર્ષનો ગાળો છે, જેની બે અવસ્થાઓ સજાતીય અવસ્થા અને વિજાતીય અવસ્થા છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 88",
+    "exp": "ફ્રોઈડના વ્યક્તિત્વ વિકાસના વર્ગીકરણ મુજબ પૂર્વ લિંગ તબક્કાની ત્રણ અવસ્થાઓ અને પૂર્ણ લિંગ તબક્કા (6 થી 12 વર્ષ) ની બે અવસ્થાઓ અંગેનાં બંને વિધાનો સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 111: ફ્રોઈડના મનોગત્યાત્મક અભિગમમાં વર્ણવાયેલી 'ઈડીપસ ગ્રંથિ', 'ઈલેક્ટ્રા ગ્રંથિ' અને 'સ્થિરીકરણ' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પૂર્વ લિંગ અવસ્થા દરમિયાન છોકરો પિતા માટે મમત્વ અને માતા માટે ઈર્ષ્યાભાવ ધરાવે છે, જેને ઈડીપસ ગ્રંથિ કહે છે.",
+      "પૂર્વ લિંગ અવસ્થા દરમિયાન છોકરી પિતા પ્રત્યે વિશેષ લગાવ અને માતા પ્રત્યે ઈર્ષ્યાભાવ અનુભવે છે, જેને ઈલેક્ટ્રા ગ્રંથિ કહે છે.",
+      "કોઈ અવસ્થામાં બાળક અસાધારણતા, હતાશા, અસલામતી કે ચિંતાનો ભોગ બને તો તે અવસ્થામાં કામશક્તિના સંતોષની રીતનું સ્થિરીકરણ (Fixation) થઈ જાય છે.",
+      "છોકરા તથા છોકરીઓની આ ગ્રંથિઓનું લિંગ અવસ્થાના અંતમાં નિરાકરણ થાય છે અને જેમને માટે ઈર્ષ્યા હતી તેમની પ્રત્યે પણ તાદાત્મ્ય જન્મે છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 88",
+    "exp": "ઈડીપસ ગ્રંથિમાં છોકરો માતા માટે મમત્વ અને પિતા માટે ઈર્ષ્યાભાવ ધરાવે છે, તેનાથી ઊલટું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 112: ફ્રોઈડના મતે કયા વયગાળા દરમિયાન બાળકનો 'અધિ અહમ' વ્યવસ્થિત વિકસે છે અને તેનામાં સામાજિક-નૈતિક ધોરણો, આદર્શો તથા નિયમોના સ્વીકારનું વલણ વિકસે છે?",
+    "options": [
+      "જન્મથી 2 વર્ષ",
+      "2 થી 3 વર્ષ",
+      "3 થી 6 વર્ષ",
+      "6 થી 12 વર્ષ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 88",
+    "exp": "6 થી 12 વર્ષના ગાળામાં બાળકનો અધિ અહમ વ્યવસ્થિત વિકસે છે અને તેનામાં સામાજિક-નૈતિક ધોરણો, આદર્શો અને નિયમોના સ્વીકારનું વલણ વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 113: કાર્લ રોજર્સના 'સ્વસિદ્ધાંત' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: રોજર્સના મત મુજબ દરેક વ્યક્તિનું ધ્યેય 'સંપૂર્ણ રીતે કાર્યરત' (Functioning) બનવું અને રહેવું એ છે.\nવિધાન 2: જ્યારે વ્યક્તિના સ્વખ્યાલ અને તેના જીવનના અનુભવો વચ્ચે સમાનતા થોડી જ હોય કે બિલકુલ ન હોય (અસંગત હોય), ત્યારે વ્યક્તિ ચિંતા અનુભવે છે અને તેનું સમાયોજન નબળું બને છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 88-89",
+    "exp": "રોજર્સ મુજબ સ્વખ્યાલ અને જીવન-અનુભવો જેટલે અંશે સુસંગત હોય તેટલું માનસિક સ્વાસ્થ્ય અને સમાયોજન સારું હોય છે, અને અસંગતતાથી કુસમાયોજન સર્જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 114: અબ્રાહમ મેસ્લોના 'સ્વ-સાર્થકતાના સિદ્ધાંત' (Self Actualisation) અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "જે માણસ નીચલી કક્ષાની (શારીરિક અને સલામતીની) જરૂરતોને જ સંતોષવામાં રચ્યોપચ્યો રહે, તેના વ્યક્તિત્વમાં 'ઊણપની અભિમુખતા' સર્જાય છે.",
+      "મેસ્લો ન્યાય, સારપ, સૌંદર્ય, વ્યવસ્થા કે એકતા માટેની ઉચ્ચ કક્ષાની જરૂરતોને 'અધિ (Meta) જરૂરતો' કહે છે.",
+      "ઉચ્ચ કક્ષાની જરૂરતોને સંતોષવામાં નિષ્ફળ જવાથી માણસ અત્યંત આશાવાદી અને ઉત્સાહી બની જાય છે.",
+      "સ્વસાર્થકતાના (ટોચના) અનુભવ વખતે વ્યક્તિને પોતાનું અસ્તિત્વ સમૃદ્ધ અને પરમાનંદથી ભરેલું લાગે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 89",
+    "exp": "ઉચ્ચ કક્ષાની (અધિ) જરૂરતોને સંતોષવામાં નિષ્ફળ જવાથી માણસનું મન ઊઠી જાય છે અને તે ઉદાસીન તથા શંકિત (વક્રદર્શી કે નિઃસારવાદી) બની જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 115: મેસ્લોના સ્વ-સાર્થકતાના અભ્યાસ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: સ્વસાર્થક બનેલા માણસો પોતાના અનુભવો પ્રત્યે ખુલ્લું મન રાખે છે, સ્વયંસ્ફૂર્ત, સ્વાયત્ત, સ્વતંત્ર અને ધ્યેયનિષ્ઠ હોય છે.\nવિધાન 2: પશ્ચિમી સમાજમાં લોકોનું સામાજિકીકરણ એ રીતે થાય છે કે ત્યાં ઉચ્ચ કક્ષાની જરૂરતો કરતાં નિમ્ન કક્ષાની (ભૌતિક) જરૂરતોને વધારે અગત્યની ગણવામાં આવે છે.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 89",
+    "exp": "સ્વસાર્થક વ્યક્તિઓનાં લક્ષણો અને પશ્ચિમી સમાજમાં ભૌતિક તૃપ્તિ પર અપાતા વધુ મહત્ત્વ અંગેનાં બંને વિધાનો પાઠ્યપુસ્તક મુજબ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 116: વ્યક્તિત્વના વાર્તનિક અભિગમના કેટલાક ટીકાકારોના મતે લોકો કઈ ફિલ્મના કયા યંત્ર માનવ (રોબોટ) જેવા યંત્રવત્ હોય છે?",
+    "options": [
+      "'મેટ્રિક્સ' ફિલ્મના 'નિયો' જેવા",
+      "'ટર્મિનેટર' ફિલ્મના 'ટી-800' જેવા",
+      "'રોબોકોપ' ફિલ્મના 'મર્ફી' જેવા",
+      "'સ્ટારવોર્સ' ફિલ્મના 'આર ટુ ડી ટુ' (R2-D2) જેવા"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 90",
+    "exp": "કેટલાક ટીકાકારોના મતે વાર્તનિક અભિગમમાં લોકો \"સ્ટારવોર્સ\" નામની ફિલ્મના \"આર ટુ ડી ટુ\" જેવા યંત્ર માનવો જેવા હોય છે અને તેમની વર્તણૂક યંત્રવત્ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 117: વાર્તનિક અભિગમ મુજબ વ્યક્તિત્વનું માળખું વ્યક્તિની ટેવને લીધે ઘડાય છે. આ 'ટેવ' કયા ચાર તત્ત્વો પર આધારિત છે?",
+    "options": [
+      "ઈડ, ઈગો, સુપર ઈગો અને લિબિડો",
+      "ઉદીપક, પ્રતિક્રિયા, ઈરણ અને કારણ",
+      "વિચાર, સ્મૃતિ, તર્ક અને નિર્ણય",
+      "વારસો, પરિપક્વતા, શિક્ષણ અને સંસ્કૃતિ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 90",
+    "exp": "વાર્તનિક અભિગમ મુજબ વ્યક્તિત્વનું માળખું વ્યક્તિની ટેવને લીધે ઘડાય છે અને ટેવ ચાર તત્ત્વો પર આધારિત છે: ઉદીપક, પ્રતિક્રિયા, ઈરણ અને કારણ."
+  },
+  {
+    "q": "પ્રશ્ન 118: ડોલાર્ડ અને મિલરના મતે ટેવોના ઘડતરનાં ચાર ઘટકો કયાં છે, અને વ્યક્તિત્વના વર્તનવાદી સિદ્ધાંતની મુખ્ય ખામી કઈ છે?",
+    "options": [
+      "ઘટકો: ઉદીપક, ઈરણ, પુરસ્કાર, શિક્ષા; ખામી: તે વાતાવરણની અસરને સંપૂર્ણપણે નકારે છે.",
+      "ઘટકો: પ્રેરણા, સંકેત, પ્રતિક્રિયા, દંડ; ખામી: તે નિરીક્ષણ દ્વારા શિક્ષણને સ્વીકારતો નથી.",
+      "ઘટકો: પ્રેરણા, સંકેત, પ્રતિક્રિયા અને પુરસ્કાર; ખામી: તે વ્યક્તિના વિચારો, પ્રત્યક્ષીકરણ, અપેક્ષાઓ, આવેગો અને માન્યતાઓની ઉપેક્ષા કરે છે.",
+      "ઘટકો: પ્રબલન, વિલોપન, સામાન્યીકરણ, ભેદબોધન; ખામી: તે માત્ર અચેતન મનનો જ અભ્યાસ કરે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 91",
+    "exp": "ડોલાર્ડ અને મિલર મુજબ પ્રેરણા, સંકેત, પ્રતિક્રિયા અને પુરસ્કાર દ્વારા ટેવોનું ઘડતર થાય છે; જ્યારે વર્તનવાદી સિદ્ધાંતની ખામી એ છે કે તે વ્યક્તિના વિચારો, પ્રત્યક્ષીકરણ, અપેક્ષાઓ, આવેગો અને માન્યતાઓની ઉપેક્ષા કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 119: ગોટેસમન અને શિલ્ટ્ઝ (1972) દ્વારા 34 એકદળ અને 34 દ્વિદળ જોડિયાં બાળકોના વ્યક્તિત્વ પર કરાયેલા અભ્યાસનાં તારણો અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: 16 સામાન્ય વ્યક્તિત્વ ઘટકોનું માપન કરતાં માત્ર બે જ ઘટકો પરનાં પ્રાપ્તાંકોમાં દ્વિદળ કરતાં એકદળ જોડિયાં વ્યક્તિઓ વચ્ચેના સહસંબંધાંકો ઊંચા જોવા મળેલા.\nવિધાન 2: માનસિક સ્વાસ્થ્ય સંબંધિત 10માંથી 5 ઘટકોમાં એકદળ જોડિયાં વ્યક્તિઓ વચ્ચે ઊંચા સહસંબંધાંકો જોવા મળ્યા, જે દર્શાવે છે કે માનસિક રોગો પ્રત્યેની અભિમુખતામાં જૈવીય ઘટકોનો વારસો નિર્ણાયક પરિબળ તરીકે વધારે ભાગ ભજવે છે.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 91",
+    "exp": "ગોટેસમન અને શિલ્ટ્ઝ (1972) ના અભ્યાસના બંને આંકડાકીય તારણો (16માંથી 2 સામાન્ય ઘટકો અને 10માંથી 5 માનસિક સ્વાસ્થ્ય ઘટકો) પાઠ્યપુસ્તક મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 120: વ્યક્તિત્વ વિકાસ પર અસર કરતાં 'શારીરિક પરિબળો' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શરીરમાં પાણી, ક્ષાર, વિટામિન વગેરેના અપૂરતા પ્રમાણને કારણે કાર્યક્ષમતાની અપર્યાપ્તતા ઉત્પન્ન થાય છે.",
+      "અંતઃસ્ત્રાવોનું સમતુલન તૂટવાથી વ્યક્તિત્વ વિકાસ કુંઠિત બની જાય છે અને અમુક સંજોગોમાં વિકૃત વ્યક્તિત્વ તરફ દોરી જાય છે.",
+      "ચેતાતંત્રની ખામીને કારણે ધ્યાન, સ્મૃતિ, પ્રત્યક્ષીકરણ, શીખવાની ક્રિયા, વિચાર અને કૌશલ્ય જેવા ઉચ્ચ મનોવ્યાપારો પર વિપરીત અસર થાય છે.",
+      "શરીર-બંધારણ અને વ્યક્તિત્વ લક્ષણો વચ્ચે હંમેશાં સંપૂર્ણ અને સીધું સાહચર્ય જોવા મળે છે, જેમાં કોઈ અપવાદ હોતો નથી."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 91-92",
+    "exp": "પાઠ્યપુસ્તકમાં સ્પષ્ટ જણાવાયું છે કે શરીર-બંધારણ અને વ્યક્તિત્વ લક્ષણો વચ્ચે સ્પષ્ટ સાહચર્ય જોવા મળતું નથી, છતાં શેલ્ડન અને ક્રેશમરે આ ક્ષેત્રમાં અભ્યાસ કરી અગત્યનાં તારણો રજૂ કર્યાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 121: વ્યક્તિત્વ વિકાસ પર અસર કરતાં 'સામાજિક-સાંસ્કૃતિક પરિબળો' અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "સામાજિક પરિબળોમાં શાળા અને સમાજ કરતાં કુટુંબનો ફાળો સૌથી નગણ્ય હોય છે.",
+      "ઓછું શિક્ષણ મેળવેલાં માતા-પિતા વધુ ઉશ્કેરાટ અનુભવે છે, આવેગિક નિયંત્રણ ઓછું ધરાવે છે અને તેમની આવેગિક અસ્થિરતા બાળકોની આવેગિક અસ્થિરતાનું કારણ બને છે.",
+      "મૃત્યુ કે છૂટાછેડાને કારણે ખંડિત થયેલા કુટુંબમાં ઉછરેલાં બાળકોમાં આવેગિક સ્થિરતા સૌથી વધુ હોય છે.",
+      "સમાજનું વાતાવરણ જેટલું જડ અને બંધિયાર હોય તેટલો વ્યક્તિત્વનો વિકાસ વધુ ઉત્તમ રીતે થાય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 92",
+    "exp": "કુટુંબ વ્યક્તિત્વ વિકાસમાં વિશેષ પ્રદાન કરે છે; ઓછું શિક્ષણ મેળવેલાં માતા-પિતા ઓછું આવેગિક નિયંત્રણ ધરાવતા હોવાથી તેમની આવેગિક અસ્થિરતા બાળકોની આવેગિક અસ્થિરતાનું કારણ બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 122: 'વ્યક્તિત્વ માપન'ના અર્થ, ધ્યેય અને રીતો અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: જે-તે વ્યક્તિના વર્તનની ગુરુત્તમ ચોકસાઈથી અને લઘુતમ ભૂલોવાળી આગાહી કરવી એ વ્યક્તિત્વ માપનનું ધ્યેય છે.\nવિધાન 2: વ્યક્તિત્વ માપનની મુખ્ય ત્રણ રીતો વપરાય છે: (1) નિરીક્ષકનો અહેવાલ, (2) આત્મવૃત્તાંત અને (3) પ્રક્ષેપણ પદ્ધતિ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 92",
+    "exp": "વ્યક્તિના વર્તનની ગુરુત્તમ ચોકસાઈ અને લઘુતમ ભૂલોવાળી આગાહી કરવી એ વ્યક્તિત્વ માપનનું ધ્યેય છે અને તેની મુખ્ય ત્રણ રીતો નિરીક્ષકનો અહેવાલ, આત્મવૃત્તાંત અને પ્રક્ષેપણ પદ્ધતિ છે."
+  },
+  {
+    "q": "પ્રશ્ન 123: નિરીક્ષકના અહેવાલ અંતર્ગત લેવાતી 'મુલાકાત' અને 'નિરીક્ષણ' પ્રવિધિ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "મોટા ભાગની મુલાકાતો 'રચિત' હોય છે, જેમાં પહેલેથી તૈયાર કરાયેલા પ્રશ્નો જ પૂછવામાં આવે છે.",
+      "રચિત મુલાકાતમાં ચોક્કસ કાર્યવાહી અને વિશિષ્ટ પ્રશ્નો પહેલેથી તૈયાર કરાય છે, જેથી મુલાકાત લેવાયેલી વ્યક્તિઓની વસ્તુલક્ષી તુલના કરી શકાય.",
+      "અરચિત મુલાકાતમાં મુલાકાત લેનાર વાતચીત અને નિરીક્ષણ કરીને વ્યક્તિ વિશેની છાપ મેળવે છે અને અટકળો બાંધે છે.",
+      "મુલાકાત અને નિરીક્ષણની સૌથી ગંભીર સમસ્યા એ છે કે નિરીક્ષકની હાજરી માત્રથી અભ્યાસ નીચેની વ્યક્તિના વર્તન પર નિષેધક અસર પડી શકે છે અને વર્તન સહજ-કુદરતી રહેતું નથી."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "પાઠ્યપુસ્તક મુજબ મોટા ભાગની મુલાકાતો 'અરચિત' હોય છે, 'રચિત' નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 124: 'આત્મ વૃત્તાંત માપો' (Self-Report Measures) ની કાર્યપદ્ધતિ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "તેમાં વ્યક્તિએ અસ્પષ્ટ શાહીના ડાઘા જોઈને પોતાની કલ્પના મુજબ વાર્તા કહેવાની હોય છે.",
+      "વ્યક્તિએ આપેલા પોતાના વિશેના જવાબોને પ્રક્ષેપણ ગણીને કોઈ નિષ્ણાતે તેનું ઊંડાણપૂર્વક અર્થઘટન કરવું ફરજિયાત હોય છે.",
+      "તેમાં વ્યક્તિનાં વર્તનનું ગુપ્ત કેમેરા દ્વારા નિરીક્ષણ કરીને ગુણાંકન કરવામાં આવે છે.",
+      "તેમાં વ્યક્તિએ મૂલ્યાંકન તુલા પર શાબ્દિક પ્રતિભાવો (\"હા\", \"ના\", \"સંમત\", \"અસંમત\") આપવાના હોય છે, જેને જેમ છે તેમ સ્વીકારીને 0, 1 કે 2 મૂલ્ય અપાય છે અને માનાંકો પ્રમાણે અર્થઘટન થાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "આત્મ વૃત્તાંત માપોમાં વ્યક્તિના જવાબોને જેમ છે તેમ સ્વીકારી લેવામાં આવે છે (નિષ્ણાત દ્વારા પ્રક્ષેપણનું અર્થઘટન કરવાનું હોતું નથી) અને દરેક જવાબને 0, 1 કે 2 મૂલ્ય આપી માનાંકો મુજબ અર્થઘટન કરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 125: 'મિનેસોટા વિવિધલક્ષી વ્યક્તિત્વ સંશોધનિકા' (MMPI) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: મનોરોગોના નિદાનમાં મદદ કરવા માટે હેથવે અને મેકીનલેએ આ કસોટી ઈ.સ. 1940માં રચી હતી, અને તેની સુધારેલી આવૃત્તિ MMPI-2 ઈ.સ. 1989માં પ્રકાશિત થઈ જેમાં 567 કથનો છે.\nવિધાન 2: પ્રાધ્યાપક જગદીશ જોટવાણીએ MMPI ની ચાર તુલાઓનું ગુજરાતી રૂપાંતર કર્યું છે, જ્યારે મલેક અને જોષીએ આના જેવી જ 'જોધપુર વિવિધલક્ષી વ્યક્તિત્વ સંશોધનિકા' રચી છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "MMPI (1940 - હેથવે અને મેકીનલે), MMPI-2 (1989 - 567 કથનો), પ્રા. જગદીશ જોટવાણીનું ગુજરાતી રૂપાંતર તથા મલેક અને જોષીની જોધપુર વિવિધલક્ષી વ્યક્તિત્વ સંશોધનિકા અંગેનાં બંને વિધાનો સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 126: 'મિનેસોટા વિવિધલક્ષી વ્યક્તિત્વ સંશોધનિકા' (MMPI) દ્વારા નીચેનામાંથી કઈ વિકૃતિ કે લક્ષણનું માપન કરવામાં આવતું નથી?",
+    "options": [
+      "કાલ્પનિક રોગવિકૃતિ અને વિકૃત થાક",
+      "વ્યામોહ અને છિન્ન વ્યક્તિત્વ",
+      "ઉન્માદ અને ઉન્મત્તતા",
+      "બૌદ્ધિક સર્જનાત્મકતા અને શૈક્ષણિક અભિયોગ્યતા"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "MMPI દ્વારા કાલ્પનિક રોગવિકૃતિ, ખિન્નતા, ઉન્માદ, સમાજવિરોધી વ્યક્તિત્વ, પુરુષત્વ, સ્ત્રૈણતા, વ્યામોહ, વિકૃત થાક, છિન્ન વ્યક્તિત્વ, ઉન્મત્તતા અને સામાજિક હસ્તક્ષેપ જેવી વિકૃતિઓ-લક્ષણોનું માપ મળે છે; બૌદ્ધિક સર્જનાત્મકતા કે શૈક્ષણિક અભિયોગ્યતાનું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 127: 'આઈઝેન્કની વ્યક્તિત્વ પ્રશ્નાવલિ' (Eysenck Personality Questionnaire : EPQ) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: આઈઝેન્કે આ પ્રશ્નાવલિ વડે (1) અંતર્મુખ અને બહિર્મુખ, (2) સ્થિર આવેગિક અને અસ્થિર આવેગિક તથા (3) મનોવિકૃતિ એમ પાયાનાં ત્રણ પરિમાણોનું માપન કર્યું છે.\nવિધાન 2: આ ત્રણેય પાયાનાં પરિમાણો કુલ 16 વ્યક્તિત્વ ગુણોને આવરી લે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "EPQ માં પાયાનાં ત્રણ પરિમાણોનું માપન થાય છે, પરંતુ આ પરિમાણો 16 નહીં પણ કુલ 32 વ્યક્તિત્વ ગુણોને આવરી લે છે."
+  },
+  {
+    "q": "પ્રશ્ન 128: આઈઝેન્કની વ્યક્તિત્વ પ્રશ્નાવલિ (EPQ) માં જે વ્યક્તિ 'મનોવિકૃતિ'ના પરિમાણ ઉપર ઊંચાં પ્રાપ્તાંકો મેળવે છે, તે વ્યક્તિ કેવું વલણ ધરાવે છે?",
+    "options": [
+      "અત્યંત મિલનસાર, સહકારી અને પરંપરાવાદી",
+      "દુશ્મનાવટભર્યા, આત્મકેન્દ્રી અને સમાજવિરોધી",
+      "શાંત, અંતર્મુખ અને અત્યંત લાગણીશીલ",
+      "આવેગિક રીતે સ્થિર અને નેતૃત્વના ગુણો ધરાવનાર"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93",
+    "exp": "EPQ માં મનોવિકૃતિના પરિમાણ પર ઊંચાં પ્રાપ્તાંકો મેળવતી વ્યક્તિ દુશ્મનાવટભર્યા, આત્મકેન્દ્રી અને સમાજવિરોધી હોવાનું વલણ ધરાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 129: '16 વ્યક્તિત્વ ઘટકોની સંશોધનિકા' (16 PF) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "આ સંશોધનિકા આઈઝેન્કે રચી હતી અને તેમાં 567 કથનોનો સમાવેશ થાય છે.",
+      "કેટલે અનેક વ્યક્તિત્વ વિશેષણોના અભ્યાસ પછી 'ઘટક વિશ્લેષણ'ની આંકડાશાસ્ત્રીય પદ્ધતિ વડે વ્યક્તિત્વની રચનામાં રહેલા પાયાના 16 ઘટકો શોધ્યા છે.",
+      "આ કસોટીમાં ઉત્તરદાતાએ અસ્પષ્ટ ચિત્રો જોઈને કલ્પના આધારિત વાર્તાઓ રચવાની હોય છે.",
+      "આ સંશોધનિકા ફક્ત મનોરોગોનું નિદાન કરવા માટે જ રચવામાં આવી હતી."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 94",
+    "exp": "કેટલે (Cattell) ઘટક વિશ્લેષણની આંકડાશાસ્ત્રીય પદ્ધતિ દ્વારા વિવિધ વ્યક્તિત્વ ગુણો વચ્ચેના સહસંબંધોના આધારે સમાન ગુણોનાં જૂથ શોધીને પાયાના 16 ઘટકોની સંશોધનિકા (16 PF) રચી છે."
+  },
+  {
+    "q": "પ્રશ્ન 130: 'આત્મ વૃત્તાંત માપો' અને 'પ્રક્ષેપણ પદ્ધતિઓ' વચ્ચેના તફાવત અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: આત્મ વૃત્તાંત માપોમાં વ્યક્તિએ મૂલ્યાંકન તુલા પર આપેલા શાબ્દિક પ્રતિભાવોને જેમ છે તેમ સ્વીકારી લેવામાં આવે છે અને નિષ્ણાતે તેને પ્રક્ષેપણ ગણી અર્થઘટન કરવાનું હોતું નથી.\nવિધાન 2: પ્રક્ષેપણ પદ્ધતિઓમાં વ્યક્તિ સામે અનિશ્ચિત, અસ્પષ્ટ અને અવ્યવસ્થિત માળખામાં ઉદીપકો રજૂ કરીને તેના અજાગ્રત મનની વાતો કઢાવવાનો પ્રયત્ન કરવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93-94",
+    "exp": "આત્મ વૃત્તાંત માપોમાં વસ્તુલક્ષી (\"હા\"/\"ના\", \"સંમત\"/\"અસંમત\") જવાબોને સીધું મૂલ્ય અપાય છે, જ્યારે પ્રક્ષેપણ પદ્ધતિમાં અસ્પષ્ટ ઉદીપકો દ્વારા વ્યક્તિના અજાગ્રત મનમાં સંગ્રહાયેલી વાતો બહાર લવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 131: 'પ્રક્ષેપણ પ્રયુક્તિઓ'ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "તેમાં અચોક્કસ ચિત્ર, અચોક્કસ તસવીર, અચોક્કસ આકાર, શાહીના ડાઘા કે અધૂરાં વાક્યો જેવા ઉદીપકો વપરાય છે.",
+      "વ્યક્તિ જ્યારે અસ્પષ્ટ ઉદીપકોનું પોતાની રીતે અર્થસભર વર્ણન કરે છે, ત્યારે પોતાની ઈચ્છાઓ, આશાઓ, ડર અને ગમા-અણગમાનું અજાણતાં જ પ્રક્ષેપણ કરે છે.",
+      "તેમાં વ્યક્તિ સભાનપણે માત્ર પોતાના જાગ્રત મનના તાર્કિક વિચારોને \"હા\" કે \"ના\" સ્વરૂપે અંકિત કરે છે.",
+      "વ્યક્તિ પોતાના લખાણો, કાર્યો કે પરિસ્થિતિઓનું અર્થઘટન કરતાં સહજ રીતે જ પોતાના આંતરિક મનોભાવો, ચિંતાઓ અને એષણાઓને પ્રગટ કરી દે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93-94",
+    "exp": "\"હા\" કે \"ના\" સ્વરૂપે વસ્તુલક્ષી જવાબો આપવાની પદ્ધતિ 'આત્મ વૃત્તાંત માપો' છે; પ્રક્ષેપણ પ્રયુક્તિઓમાં વ્યક્તિ અજાણતાં જ પોતાના અજાગ્રત મનના આંતરિક મનોભાવોનું પ્રક્ષેપણ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 132: પાઠ્યપુસ્તક મુજબ નીચેનામાંથી કઈ કસોટીનો સમાવેશ 'પ્રક્ષેપણ પ્રયુક્તિઓ'માં થતો નથી?",
+    "options": [
+      "ચિલ્ડ્રન એપરસેપ્શન કસોટી (CAT)",
+      "શબ્દ સાહચર્ય કસોટી",
+      "રોઝનવીગની ચિત્રકસોટી",
+      "16 વ્યક્તિત્વ ઘટકોની સંશોધનિકા (16 PF)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93-94",
+    "exp": "રોર્શાકની શાહીના ડાઘાની કસોટી, TAT, રોઝનવીગની ચિત્રકસોટી, વાક્યપૂર્તિ કસોટી, શબ્દ સાહચર્ય કસોટી અને CAT એ પ્રક્ષેપણ પ્રયુક્તિઓ છે; જ્યારે 16 PF એ 'આત્મ વૃત્તાંત માપ' છે."
+  },
+  {
+    "q": "પ્રશ્ન 133: 'રોર્શાકની શાહીના ડાઘાની કસોટી' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: આ કસોટી સ્વિટ્ઝર્લેન્ડના મનોવૈજ્ઞાનિક હરમન રોર્શાકે ઈ.સ. 1921માં વિકસાવી હતી.\nવિધાન 2: આ કસોટીમાં 10 ઇંચથી 7 ઇંચના માપના સફેદ કાર્ડ ઉપર શાહી ઢોળી, કાગળને વચ્ચેથી વાળીને બંને બાજુ સુરૂપ આકૃતિઓ ઉપસાવી તેમાંથી કુલ 10 આકૃતિઓ પસંદ કરવામાં આવી હતી.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 94",
+    "exp": "હરમન રોર્શાક (સ્વિટ્ઝર્લેન્ડ) દ્વારા 1921માં 10 ઇંચ × 7 ઇંચના સફેદ કાર્ડ પર શાહીના ડાઘા પ્રસરાવીને તૈયાર કરાયેલી કુલ 10 આકૃતિઓ અંગેનાં બંને વિધાનો સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 134: હરમન રોર્શાકની શાહીના ડાઘાની કસોટીનાં કુલ 10 કાર્ડમાં રંગોના ડાઘાનું સાચું વિભાજન કયું છે?",
+    "options": [
+      "4 કાળા અને ઝાંખા કાળા, 3 કાળા ઉપરાંત લાલ, 3 જુદા જુદા રંગના",
+      "5 કાળા અને ઝાંખા કાળા, 3 કાળા ઉપરાંત લાલ, 2 જુદા જુદા રંગના",
+      "5 કાળા અને ઝાંખા કાળા, 2 કાળા ઉપરાંત થોડા લાલ, 3 જુદા જુદા રંગના",
+      "6 કાળા અને ઝાંખા કાળા, 2 કાળા ઉપરાંત લાલ, 2 જુદા જુદા રંગના"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 94",
+    "exp": "રોર્શાકની 10 આકૃતિઓ પૈકી 5 ડાઘા કાળા અને ઝાંખા કાળા, 2 માં કાળા ડાઘા ઉપરાંત થોડા લાલ ડાઘા અને બાકીના 3 માં જુદા જુદા રંગના ડાઘા હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 135: રોર્શાકની શાહીના ડાઘાની કસોટીની સંચાલન પ્રક્રિયા અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પ્રયોગપાત્રને દસ કાર્ડ એક પછી એક બતાવીને પૂછવામાં આવે છે કે, “તેમાં તમને શું-શું દેખાય છે?”",
+      "પ્રયોગપાત્ર કાર્ડને ડાબું-જમણું કે ઊલટું ફેરવી શકતો નથી; તેણે સીધી જ સ્થિતિમાં કાર્ડ જોવાનું હોય છે.",
+      "કાર્ડ ઉપર પ્રયોગપાત્રને પ્રતિક્રિયા આપતાં લાગતો સમય (Reaction Time) તેમજ અકળામણ, ચિંતા, ઉદાસી જેવા ભાવો નોંધવામાં આવે છે.",
+      "બીજી વાર કાર્ડ બતાવતી વખતે પ્રયોગપાત્ર કોઈ નવી વધારાની પ્રતિક્રિયા આપે, તો તેની નોંધ લઈ ઉત્તરપત્ર પર તેના સ્થાન અંકિત કરી દેવામાં આવે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 94",
+    "exp": "રોર્શાક કસોટી દરમિયાન પ્રયોગપાત્ર કાર્ડને ડાબું-જમણું કે ઊલટું ફેરવી શકે છે અને તે જે બાજુ પર રાખીને કાર્ડને જુએ તેની નોંધ કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 136: રોર્શાકની શાહીના ડાઘાની કસોટીમાં પ્રયોગપાત્રની પ્રતિક્રિયાઓનું મૂલ્યાંકન કઈ ત્રણ બાબતોને ધ્યાનમાં લઈને કરવામાં આવે છે?",
+    "options": [
+      "સમય (Time), રંગ (Colour) અને લાગણી (Emotion)",
+      "સ્થાન (Location), વસ્તુ (Content) અને નિર્ધારકો (Determinants)",
+      "પ્રેરણા (Motivation), આકાર (Shape) અને સંસ્કૃતિ (Culture)",
+      "સ્થાન (Location), પ્રતિક્રિયા સમય (Reaction Time) અને વિષય (Theme)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 95",
+    "exp": "રોર્શાક કસોટીમાં પ્રયોગપાત્રની પ્રતિક્રિયાઓનું મૂલ્યાંકન (1) સ્થાન (Location), (2) વસ્તુ (Content) અને (3) નિર્ધારકો (Determinants) એ ત્રણ બાબતોને ધ્યાનમાં લઈને કરાય છે; અને અર્થઘટનમાં વ્યક્તિની સાંસ્કૃતિક ભૂમિકા અગત્યનો ભાગ ભજવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 137: 'વિષય અધિપ્રત્યક્ષ કસોટી' (Thematic Apperception Test : TAT) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: આ કસોટી મોર્ગન અને મરેએ વિકસાવી છે, જેમાં 29 કાર્ડ ચિત્રોવાળા અને 1 કોરું કાર્ડ એમ કુલ 30 કાર્ડ હોય છે.\nવિધાન 2: આ કસોટીનાં કાર્ડમાંથી 20 કાર્ડ એવાં હોય છે જે બધા પ્રકારની વ્યક્તિઓ માટે વાપરી શકાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 95",
+    "exp": "મોર્ગન અને મરેએ વિકસાવેલી TAT કસોટીમાં 29 ચિત્રોવાળા કાર્ડ + 1 કોરું કાર્ડ હોય છે અને તેમાંથી 20 કાર્ડ બધા પ્રકારની વ્યક્તિઓ માટે વાપરી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 138: વિષય અધિપ્રત્યક્ષ કસોટી (TAT) ની કાર્યપદ્ધતિ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "વ્યક્તિત્વ માપન માટે દરેક સંજોગોમાં તમામ 30 કાર્ડ વાપરવાં ફરજિયાત હોય છે; તેનાથી ઓછાં કાર્ડથી માપન શક્ય નથી.",
+      "પ્રયોગપાત્રને ચિત્રની ઘટના સુધી દોરી જનારા સંજોગો, અત્યારે શું થઈ રહ્યું છે, પાત્રોના વિચારો-લાગણીઓ અને તેનું પરિણામ શું આવશે તે કહેવાની સૂચના અપાય છે.",
+      "ચિત્રો જોઈને વ્યક્તિએ રચેલી વાર્તાઓમાં જે વિષય (Theme) વારંવાર આવતો હોય, તે તેના વ્યક્તિત્વને ઓળખવામાં અર્થપૂર્ણ બને છે.",
+      "કેટલાક સંજોગોમાં માત્ર પાંચ ચિત્રો વડે પણ વ્યક્તિત્વ માપન કરી શકાય છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 95",
+    "exp": "TAT માં લાગુ પડતાં બધાં જ કાર્ડ વાપરવાં અનિવાર્ય નથી; કેટલાક સંજોગોમાં માત્ર પાંચ ચિત્રો વડે પણ વ્યક્તિત્વ માપન કરી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 139: 'રોઝનવીગની ચિત્ર વૈફલ્ય કસોટી' અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "તેમાં અપૂર્ણ વાક્યોની શ્રેણી હોય છે, જે વ્યક્તિની બુદ્ધિ અને સ્મૃતિનું માપન કરે છે.",
+      "તેમાં શાહીના ડાઘાના રંગીન કાર્ડ હોય છે, જે વ્યક્તિની ચિંતા અને ઉદાસીનું માપન કરે છે.",
+      "તેમાં વ્યંગચિત્રો (કાર્ટૂન)ની શ્રેણી હોય છે, જે વ્યક્તિની હતાશા અને આક્રમકતાનું (આક્રમણનો પ્રકાર અને દિશાનું) માપન કરે છે.",
+      "તેમાં માત્ર નાનાં બાળકો માટેનાં પ્રાણીઓનાં ચિત્રોની શ્રેણી હોય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 95",
+    "exp": "રોઝનવીગની ચિત્ર વૈફલ્ય કસોટી હતાશા અને આક્રમકતાના માપન પર ધ્યાન કેન્દ્રિત કરે છે; તેમાં વ્યંગચિત્રો (કાર્ટૂન)ની શ્રેણી હોય છે, જેના પર વ્યક્તિએ આપેલા શાબ્દિક પ્રતિભાવો પરથી આક્રમણનો પ્રકાર અને દિશા જાણી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 140: 'વાક્યપૂર્તિ (Sentence Completion) કસોટી'નો સૌપ્રથમ ઉપયોગ કોણે અને ક્યારે કર્યો હતો?",
+    "options": [
+      "મોર્ગન અને મરેએ, ઈ.સ. 1935માં",
+      "પાઈન (Pyne) અને ટેન્ડલર (Tondler) દ્વારા, ઈ.સ. 1930માં",
+      "હેથવે અને મેકીનલેએ, ઈ.સ. 1940માં",
+      "મલેક અને જોષીએ, ઈ.સ. 1930માં"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 95-96",
+    "exp": "વાક્યપૂર્તિ કસોટીનો સૌપ્રથમ ઉપયોગ પાઈન (Pyne) અને ટેન્ડલર (Tondler) દ્વારા ઈ.સ. 1930માં થયો હતો, જેમાં પ્રયોગપાત્રે મનમાં આવતા પહેલા વિચારથી અપૂર્ણ વાક્ય પૂર્ણ કરવાનું હોય છે (તથા આ જ રીતે અધૂરી વાર્તા પણ પૂરી કરાવી શકાય છે)."
+  },
+  {
+    "q": "પ્રશ્ન 141: વ્યક્તિત્વ માપનની કસોટીઓ અને તેના પ્રણેતાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (કસોટી)  |  વિભાગ - બ (પ્રણેતા)\n1. MMPI — (i) મોર્ગન અને મરે\n2. 16 PF — (ii) પાઈન અને ટેન્ડલર\n3. TAT — (iii) હેથવે અને મેકીનલે\n4. વાક્યપૂર્તિ કસોટી — (iv) કેટલ",
+    "options": [
+      "1-(iii), 2-(iv), 3-(ii), 4-(i)",
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)",
+      "1-(iii), 2-(iv), 3-(i), 4-(ii)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93-95",
+    "exp": "MMPI — હેથવે અને મેકીનલે, 16 PF — કેટલ, TAT — મોર્ગન અને મરે તથા વાક્યપૂર્તિ કસોટી — પાઈન અને ટેન્ડલર સાથે સંકળાયેલી છે."
+  },
+  {
+    "q": "પ્રશ્ન 142: વ્યક્તિત્વ માપનની વિવિધ કસોટીઓની રચના કે પ્રકાશનના વર્ષનો સાચો કાળક્રમ (જૂનાથી નવા ક્રમમાં) કયો છે?",
+    "options": [
+      "રોર્શાકની શાહીના ડાઘાની કસોટી → વાક્યપૂર્તિ કસોટી → MMPI → MMPI-2",
+      "વાક્યપૂર્તિ કસોટી → રોર્શાકની શાહીના ડાઘાની કસોટી → MMPI → MMPI-2",
+      "રોર્શાકની શાહીના ડાઘાની કસોટી → MMPI → વાક્યપૂર્તિ કસોટી → MMPI-2",
+      "MMPI → રોર્શાકની શાહીના ડાઘાની કસોટી → વાક્યપૂર્તિ કસોટી → MMPI-2"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 93-95",
+    "exp": "રોર્શાકની શાહીના ડાઘાની કસોટી (1921), વાક્યપૂર્તિ કસોટી (1930), MMPI (1940) અને સુધારેલી આવૃત્તિ MMPI-2 (1989) એ સાચો કાળક્રમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 143: 'વ્યક્તિત્વના હાર્દ' સમાન 'સ્વ' (Self) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: “Know thy self” (પોતાને ઓળખ) એ કથન પ્લેટોનું છે, જે “સ્વ”ની ઓળખ કેળવવા પર ભાર મૂકે છે.\nવિધાન 2: ભારતીય દર્શનોમાં “સ્વ”નાં બે પાસાં દર્શાવાયાં છે — સાતત્ય અને પરિવર્તનશીલતા.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 96",
+    "exp": "“Know thy self” એ કથન પ્લેટોનું નહીં પરંતુ સોક્રેટિસનું છે; જ્યારે ભારતીય દર્શનોમાં “સ્વ”નાં સાતત્ય અને પરિવર્તનશીલતા એમ બે પાસાં દર્શાવાયાં છે તે વિધાન સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 144: “હું _________ છું” — આ પ્રકારનાં વિધાનોમાં વ્યક્તિ પોતાના જે ગુણ-લક્ષણો દર્શાવે છે, તે સમાજ અને સંસ્કૃતિના સંદર્ભમાં શેનું સૂચન કરે છે?",
+    "options": [
+      "માત્ર તેના અજાગ્રત મનની ગ્રંથિનું",
+      "તેના શારીરિક બાંધાનું",
+      "પોતાના વિશેની વ્યક્તિની છાપનું (Self Image)",
+      "તેના પ્રચ્છન્ન જૈવિક વારસાનું"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 96",
+    "exp": "“સ્વ”ને સમજવાની પ્રવૃત્તિમાં ખાલી જગ્યામાં દર્શાવાતા ગુણ એ સમાજ અને સંસ્કૃતિના સંદર્ભમાં પોતાના વિશેની વ્યક્તિની છાપ (Self Image) નું સૂચન કરે છે; અને માતા-પિતા, કુટુંબ, મિત્રમંડળ, શિક્ષકગણ તથા આદર્શરૂપ લોકો તેના વિકાસમાં ભાગ ભજવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 145: “સ્વ”ની વ્યાખ્યાઓ અને તેના પ્રણેતાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પ્રણેતા)  |  વિભાગ - બ (વ્યાખ્યા)\n1. ક્રચ, ક્રચફિલ્ડ અને બેલાચી — (i) “સ્વ એટલે વ્યક્તિ પોતાના અને પોતાની આજુબાજુના જગત સાથેના પોતાના સંબંધના જે અર્થો કરે છે તે.”\n2. બી. કુપ્પુસ્વામી — (ii) “સ્વ એ સાદું એકમ નથી, એ એકાત્મક બંધારણ ધરાવતો નથી, સ્વ એ જટિલ એકમ છે, એ બહુ ઘટનાત્મક બંધારણવાળો છે.”\n3. એ. ટી. જર્સિલ્ડ — (iii) “વ્યક્તિનો સ્વ એટલે વ્યક્તિ પોતાને જે રીતે જુએ છે તે.”",
+    "options": [
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(i), 2-(iii), 3-(ii)",
+      "1-(iii), 2-(i), 3-(ii)",
+      "1-(ii), 2-(i), 3-(iii)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 96",
+    "exp": "ક્રચ-ક્રચફિલ્ડ-બેલાચીએ પોતાને જે રીતે જુએ છે તે, બી. કુપ્પુસ્વામીએ જગત સાથેના સંબંધના અર્થો અને એ. ટી. જર્સિલ્ડે જટિલ તથા બહુ ઘટનાત્મક બંધારણવાળા એકમ તરીકે “સ્વ”ને વ્યાખ્યાયિત કર્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 146: એ. ટી. જર્સિલ્ડની વ્યાખ્યાના આધારે “સ્વ”ના બંધારણ અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "“સ્વ” એ અત્યંત સાદું અને એકાત્મક બંધારણ ધરાવતો એકમ છે.",
+      "“સ્વ” એ જટિલ એકમ છે અને તે બહુ ઘટનાત્મક બંધારણવાળો છે.",
+      "“સ્વ”નો વિકાસ માત્ર જન્મથી બે વર્ષ સુધી જ થાય છે.",
+      "“સ્વ” એ વ્યક્તિના બાહ્ય દેખાવ પૂરતું જ સીમિત એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 96",
+    "exp": "એ. ટી. જર્સિલ્ડ મુજબ “સ્વ” એ સાદું કે એકાત્મક બંધારણ ધરાવતું એકમ નથી, પરંતુ તે જટિલ અને બહુ ઘટનાત્મક બંધારણવાળો એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 147: “સ્વ”ની સમજણ અને સ્વરૂપ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: દરેક વ્યક્તિ “હું છું” (પોતાના હોવાનો અનુભવ) અને “હું શું કરી શકું?” નો અનુભવ “સ્વ”ને લીધે જ કરી શકે છે, અને પોતાના “સ્વ”ના ખ્યાલના સંદર્ભમાં જ પ્રત્યેક અનુભવોનું અર્થઘટન કરે છે.\nવિધાન 2: “સ્વ”નું સ્વરૂપ બે ભાગમાં સ્પષ્ટ કરી શકાય છે: (1) “સ્વ”નું આત્મલક્ષી સ્વરૂપ અને (2) “સ્વ”નું વસ્તુલક્ષી સ્વરૂપ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 97",
+    "exp": "“સ્વ”ને લીધે જ વ્યક્તિ પોતાના અસ્તિત્વ અને ક્ષમતાનો અનુભવ કરી અનુભવોનું અર્થઘટન કરે છે, તથા “સ્વ”નાં આત્મલક્ષી અને વસ્તુલક્ષી એમ બે સ્વરૂપો છે."
+  },
+  {
+    "q": "પ્રશ્ન 148: જ્યારે કોઈ વ્યક્તિ પોતાના નામથી ઓળખાણ આપે (“હું પ્રિયા છું”), પોતાનો ગુણ દર્શાવે (“હું પ્રામાણિક વ્યક્તિ છું”), પોતાની ગર્ભિત શક્તિ દર્શાવે (“હું કવિ છું”) કે પોતાની માન્યતા જણાવે (“હું નસીબમાં માનું છું”), ત્યારે તે “સ્વ”ના કયા સ્વરૂપને સ્પષ્ટ કરે છે?",
+    "options": [
+      "“સ્વ”નું આત્મલક્ષી સ્વરૂપ",
+      "“સ્વ”નું વસ્તુલક્ષી સ્વરૂપ",
+      "“સ્વ”નું વિષયવસ્તુ સ્વરૂપ",
+      "“સ્વ”નું પ્રક્ષેપિત સ્વરૂપ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 97",
+    "exp": "વ્યક્તિને અન્ય કરતાં જુદાં પાડતાં નામ, ગુણ, ગર્ભિત શક્તિ કે માન્યતાનું સૂચન “સ્વ”ના આત્મલક્ષી સ્વરૂપને સ્પષ્ટ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 149: એક વ્યક્તિ ખૂબ જ સારાં ચિત્રો દોરતો હોય અને તે પોતાને ચિત્રકાર તરીકે ઓળખાવે, અર્થાત્ “સ્વ” જેવો છે તેવો તે જ મૂળ સ્વરૂપે તેનો સ્વીકાર અને વર્ણન કરે — આને “સ્વ”નું કયું સ્વરૂપ ગણવામાં આવે છે?",
+    "options": [
+      "“સ્વ”નું આત્મલક્ષી સ્વરૂપ",
+      "“સ્વ”નું કાલ્પનિક સ્વરૂપ",
+      "“સ્વ”નું વસ્તુલક્ષી સ્વરૂપ",
+      "“સ્વ”નું અજાગ્રત સ્વરૂપ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 97",
+    "exp": "“સ્વ”ના જે મૂળભૂત ગુણો છે તે ગુણો જ્યારે તેના મૂળ સ્વરૂપે જ સ્વીકારીને દર્શાવવામાં આવે (જેમ કે સારાં ચિત્રો દોરનાર પોતાને ચિત્રકાર કહે), ત્યારે તે “સ્વ”નું વસ્તુલક્ષી સ્વરૂપ ગણાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 150: “સ્વ”ના 'કર્તા' અને 'વિષયવસ્તુ' તરીકેના પાસાં અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: “સ્વ”નું આત્મલક્ષી સ્વરૂપ એ “સ્વ”ને 'કર્તા' (પ્રવૃત્તિ કરનાર) તરીકે રજૂ કરે છે, જેમ કે “હું ગાયક છું.”\nવિધાન 2: “સ્વ”નું વસ્તુલક્ષી સ્વરૂપ એ “સ્વ”ને 'વિષયવસ્તુ' તરીકે રજૂ કરે છે, જેમ કે “હું જલદીથી રડી પડું તેવી વ્યક્તિ છું.”",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 97",
+    "exp": "“સ્વ”નું આત્મલક્ષી સ્વરૂપ “સ્વ”ને 'કર્તા' તરીકે (“હું ગાયક છું”) અને વસ્તુલક્ષી સ્વરૂપ “સ્વ”ને 'વિષયવસ્તુ' તરીકે (“હું જલદીથી રડી પડું તેવી વ્યક્તિ છું”) રજૂ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 151: 'આદર્શ સ્વ', 'વાસ્તવિક સ્વ' અને 'સ્વ-નિયમન' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: વ્યક્તિના આદર્શ સ્વ અને વાસ્તવિક સ્વ વચ્ચે જેમ અંતર વધતું જાય તેમ વ્યક્તિ વધુ ને વધુ તંગદિલીનો ભોગ બને છે અને સમાયોજન સાધવામાં મુશ્કેલી અનુભવે છે.\nવિધાન 2: ભારતીય શાસ્ત્રો મુજબ વ્રત-ઉપવાસ, અઠ્ઠાઈ, રોજા, હઠયોગ અને અપરિગ્રહની ભાવના તેમજ જૈવ પ્રતિપુષ્ટિ (Bio-feedback) અને સ્વ-સૂચનો (Auto-Suggestion) 'સ્વ-નિયમન'નાં સહાયકારી સાધનો છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 98",
+    "exp": "આદર્શ સ્વ અને વાસ્તવિક સ્વ વચ્ચેનું વધતું અંતર વ્યક્તિત્વ માટે નુકસાનકારક બની શકે છે; જ્યારે યૌગિક ક્રિયાઓ, જૈવ પ્રતિપુષ્ટિ, સ્વ-સૂચનો અને ભારતીય શાસ્ત્રોમાં દર્શાવેલાં વ્રત-ઉપવાસ, અઠ્ઠાઈ, રોજા, હઠયોગ તથા અપરિગ્રહ સ્વ-નિયમનમાં મદદરૂપ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 152: સ્વ-નિયમનની મનોવૈજ્ઞાનિક પ્રવિધિઓ અને તેની કાર્યપદ્ધતિનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પ્રવિધિ)  |  વિભાગ - બ (કાર્યપદ્ધતિ)\n1. સ્વ-નિરીક્ષણ — (i) ઉત્તેજના જન્માવે તેવું સાહિત્ય, દૃશ્યો કે ચલચિત્રોથી દૂર રહેવું અને મહાપુરુષોનાં જીવનચરિત્રો વાંચવાં\n2. ઉદીપક નિયંત્રણ — (ii) પુરસ્કાર અથવા શિક્ષાના માધ્યમથી સ્વ-નિયમન કેળવવું\n3. સ્વ-પ્રબલન — (iii) સમયાંતરે વિવિધ સંજોગોમાં પોતાની જાતનું તટસ્થપૂર્વક અવલોકન કરી શક્તિ-મર્યાદાઓ જાણવી\n4. સ્વ-ઉપદેશ (સૂચન) — (iv) પોતાની જાત સાથે વાતચીત દ્વારા પોતાના “સ્વ” વિશેનો ખ્યાલ કે વર્તન નિયંત્રિત કરવું",
+    "options": [
+      "1-(iii), 2-(ii), 3-(i), 4-(iv)",
+      "1-(iii), 2-(i), 3-(ii), 4-(iv)",
+      "1-(i), 2-(iii), 3-(ii), 4-(iv)",
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 98",
+    "exp": "સ્વ-નિરીક્ષણ એટલે જાતનું તટસ્થ અવલોકન, ઉદીપક નિયંત્રણ એટલે ઉત્તેજના જન્માવનારા ઉદીપકો પર કાબૂ, સ્વ-પ્રબલન એટલે પુરસ્કાર-શિક્ષા દ્વારા નિયમન અને સ્વ-ઉપદેશ એટલે પોતાની જાત સાથે વાતચીત દ્વારા વર્તનનું ઘડતર."
+  },
+  {
+    "q": "પ્રશ્ન 153: પાઠ્યપુસ્તક મુજબ નીચેનામાંથી કઈ પ્રવિધિને “મનોવિજ્ઞાનની હાલતી-ચાલતી પ્રયોગશાળા” ગણી શકાય?",
+    "options": [
+      "સ્વ-નિરીક્ષણ (Self Observation)",
+      "ઉદીપક નિયંત્રણ (Stimulus Control)",
+      "સ્વ-પ્રબલન (Self Reinforcement)",
+      "જૈવ પ્રતિપુષ્ટિ (Bio-feedback)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 98",
+    "exp": "“સ્વ-નિરીક્ષણ” ને મનોવિજ્ઞાનની હાલતી-ચાલતી પ્રયોગશાળા ગણી શકાય, કારણ કે તેના દ્વારા વ્યક્તિ પોતાની શક્તિઓ અને મર્યાદાઓથી સભાન બની મર્યાદાઓ દૂર કરવા પ્રયાસ કરી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 154: \"Day by day in every way I am getting better and better.\" એટલે કે “દિવસેને દિવસે બધી રીતે હું વધુ ને વધુ સ્વસ્થ થતો જાઉં છું.” — આ સ્વ-સૂચન કોના દ્વારા અપાયેલું છે અને તે સ્વ-નિયમનની કઈ પ્રવિધિનું ઉદાહરણ છે?",
+    "options": [
+      "કાર્લ રોજર્સ — સ્વ-નિરીક્ષણ",
+      "અબ્રાહમ મેસ્લો — ઉદીપક નિયંત્રણ",
+      "ગોર્ડન ઓલપોર્ટ — સ્વ-પ્રબલન",
+      "એમિલી કુઆ — સ્વ-ઉપદેશ (સૂચન)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 8. વ્યક્તિત્વ | પાના નં.: 98",
+    "exp": "વર્ષો પહેલાં 'એમિલી કુઆ' દ્વારા અપાયેલા આ સ્વ-સૂચનના નિયમિત રટણથી રોગીઓનો કે આપણો સ્વ-ખ્યાલ હકારાત્મક બને છે, જે 'સ્વ-ઉપદેશ (સૂચન)' પ્રવિધિનું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 155: “પ્રેરણા નહિ તો વર્તન નહિ” આ વિધાન કયા મનોવૈજ્ઞાનિક દ્વારા કહેવાયેલું છે, અને પ્રેરણા માટેનો અંગ્રેજી શબ્દ 'Motivation' કઈ ભાષાના કયા શબ્દ પરથી ઊતરી આવ્યો છે?",
+    "options": [
+      "સી. ટી. મોર્ગન — ગ્રીક શબ્દ 'movere' પરથી",
+      "ગેરેટ — લેટિન શબ્દ 'movere' પરથી",
+      "જે. પી. ગીલ્ફર્ડ — લેટિન શબ્દ 'emovere' પરથી",
+      "વૂડવર્થ — ગ્રીક શબ્દ 'motum' પરથી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 101",
+    "exp": "મનોવૈજ્ઞાનિક ગેરેટે “પ્રેરણા નહિ તો વર્તન નહિ” વિધાન આપ્યું છે, અને 'Motivation' શબ્દ લેટિન શબ્દ 'movere' પરથી ઊતરી આવ્યો છે જે પ્રવૃત્તિ માટેની ગતિનું સૂચન કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 156: દિવ્યા ડૉક્ટર બનવા દરરોજ આઠથી દસ કલાક સખત અભ્યાસ કરે છે, જ્યારે દર્શન સ્કોલરશિપના પૈસામાંથી નાની બહેનને ગમતું દફતર લઈ આપે છે. જો સખત મહેનત છતાં દિવ્યા ડૉક્ટર ન બની શકે અને દર્શનના પૈસા ચોરાઈ જાય, તો પાઠ્યપુસ્તક મુજબ તેમનામાં ક્રમશઃ કેવી પ્રતિક્રિયા જોવા મળશે?",
+    "options": [
+      "દિવ્યા દુઃખી થઈ જશે અને દર્શન ક્રોધના આવેશથી ભરાઈ જશે.",
+      "દિવ્યા ક્રોધિત થઈ જશે અને દર્શન ઈર્ષ્યા અનુભવશે.",
+      "દિવ્યા અને દર્શન બંનેમાં પ્રેરણાચક્ર સંપૂર્ણપણે વિરામ પામશે.",
+      "દિવ્યા આશ્ચર્ય પામશે અને દર્શન ભય અનુભવશે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 101",
+    "exp": "વ્યક્તિની દરેક પ્રવૃત્તિ પાછળ પ્રેરણા રહેલી છે અને તેમાં અવરોધ આવતાં આવેગો ઉદ્ભવે છે; ઉપરોક્ત ઉદાહરણમાં દિવ્યા દુઃખી થઈ જશે અને દર્શન ક્રોધના આવેશથી ભરાઈ જશે."
+  },
+  {
+    "q": "પ્રશ્ન 157: પ્રેરણાની વ્યાખ્યાઓ અને તેના પ્રણેતાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પ્રણેતા)  |  વિભાગ - બ (વ્યાખ્યા)\n1. જે. પી. ગીલ્ફર્ડ — (i) “પ્રેરણા એ વ્યક્તિની આંતરિક બાબત છે કે જે તેને અમુક વર્તન કરવા પ્રેરે છે.”\n2. સી. ટી. મોર્ગન — (ii) “પ્રેરણા એ પ્રવૃત્તિને ઉદીપ્ત કરનાર અને તેને પોષનાર વિશિષ્ટ આંતરિક તત્ત્વ કે પરિસ્થિતિ છે.”\n3. સોરેન્સન અને મામ — (iii) “પ્રેરણા એટલે આંતરિક જરૂરિયાતમાંથી ઉદ્ભવેલું અને તે જરૂરિયાત સંતુષ્ટ થાય તેવાં લક્ષ્યો પ્રત્યે અભિમુખ બનેલું વર્તન.”",
+    "options": [
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(i), 2-(iii), 3-(ii)",
+      "1-(ii), 2-(iii), 3-(i)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 101",
+    "exp": "ગીલ્ફર્ડે પ્રવૃત્તિને ઉદીપ્ત કરનાર અને પોષનાર આંતરિક તત્ત્વ, સી. ટી. મોર્ગને આંતરિક જરૂરિયાત સંતુષ્ટ કરતા લક્ષ્યો પ્રત્યે અભિમુખ વર્તન અને સોરેન્સન-મામે અમુક વર્તન કરવા પ્રેરતી આંતરિક બાબત તરીકે પ્રેરણાને વ્યાખ્યાયિત કરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 158: પ્રેરણાના સ્વરૂપને સમજાવવા વપરાયેલા પારિભાષિક શબ્દો અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: પ્રારંભમાં મેકડૂગલે પ્રેરણાને 'મૂળવૃત્તિ' (Instinct) તરીકે ઓળખાવી હતી અને શરૂઆતમાં અઢાર જેટલી મૂળવૃત્તિઓ દર્શાવી હતી.\nવિધાન 2: વૂડવર્થે પ્રેરણા માટે 'ઈરણ' (Drive) શબ્દનો ઉપયોગ કર્યો હતો, જે આંતરિક આવેગ, ઉત્તેજિત બળ કે દબાણનું સૂચન કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 101",
+    "exp": "મેકડૂગલે પ્રારંભમાં 18 મૂળવૃત્તિઓ દર્શાવી હતી, ત્યારબાદ મનોવૈજ્ઞાનિકોએ 'જરૂરિયાત' (Need) અને વૂડવર્થે 'ઈરણ' (Drive) શબ્દનો ઉપયોગ કર્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 159: મનોવૈજ્ઞાનિક સી. ટી. મોર્ગન પ્રેરણાને ચક્રીય ગણે છે. પાઠ્યપુસ્તકની આકૃતિ 9.1 મુજબ 'પ્રેરણાચક્ર'ના છ તબક્કાઓનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "જરૂરિયાત → ઈરણ → ઉત્તેજના → લક્ષ્ય → લક્ષ્યપ્રાપ્તિ → ઉત્તેજનામાં ઘટાડો",
+      "ઈરણ → જરૂરિયાત → ઉત્તેજના → લક્ષ્ય → લક્ષ્યપ્રાપ્તિ → ઉત્તેજનામાં ઘટાડો",
+      "જરૂરિયાત → ઉત્તેજના → ઈરણ → લક્ષ્ય → ઉત્તેજનામાં ઘટાડો → લક્ષ્યપ્રાપ્તિ",
+      "જરૂરિયાત → ઈરણ → લક્ષ્ય → ઉત્તેજના → લક્ષ્યપ્રાપ્તિ → ઉત્તેજનામાં ઘટાડો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 101",
+    "exp": "આકૃતિ 9.1 મુજબ પ્રેરણાચક્રનો સાચો ક્રમ: જરૂરિયાત → ઈરણ → ઉત્તેજના → લક્ષ્ય → લક્ષ્યપ્રાપ્તિ → ઉત્તેજનામાં ઘટાડો છે, અને નવી જરૂરિયાત જન્મતાં ચક્ર ફરી શરૂ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 160: પ્રેરણાના મુખ્ય બે પ્રકારો — 'શારીરિક પ્રેરણા' અને 'મનોસામાજિક પ્રેરણા' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શારીરિક પ્રેરણાને 'જૈવિય પ્રેરણા' અને 'પ્રાથમિક પ્રેરણા' તરીકે પણ ઓળખવામાં આવે છે.",
+      "મનોસામાજિક પ્રેરણા વ્યક્તિની વાતાવરણીય ઘટકો સાથેની આંતરક્રિયાથી આકાર પામે છે.",
+      "શારીરિક પ્રેરણા અને મનોસામાજિક પ્રેરણા એકબીજાથી સંપૂર્ણપણે સ્વતંત્ર છે અને પરસ્પર આધારિત નથી.",
+      "પ્રાણીના અસ્તિત્વને ટકાવી રાખવા માટે શારીરિક પ્રેરણાનો સંતોષ લગભગ અનિવાર્ય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 102",
+    "exp": "પાઠ્યપુસ્તક મુજબ શારીરિક પ્રેરણા અને મનોસામાજિક પ્રેરણા આ બંને પ્રકારો અલગ જણાતા હોવા છતાં એકબીજા પર 'પરસ્પર આધારિત' છે."
+  },
+  {
+    "q": "પ્રશ્ન 161: 'ભૂખની પ્રેરણા' (Hunger) અંગેનાં સંશોધનો અને સંદર્ભો બાબતે નીચેના વિધાનો ચકાસો:\nવિધાન 1: ગુજરાતી નવલકથા “માનવીની ભવાઈ”માં છપ્પનિયા દુષ્કાળ દરમિયાન ભૂખની પ્રેરણાની તીવ્રતાનું વર્ણન જોવા મળે છે.\nવિધાન 2: ડબલ્યુ. બી. કેનન મુજબ જઠરમાં આકુંચન થાય ત્યારે ભૂખ લાગે છે, જ્યારે આધુનિક સંશોધનો મુજબ મગજના હાઈપોથેલેમસમાં આવેલું “એકસ્ટ્રીમ લેટરલ” નામનું કેન્દ્ર ભૂખના ઉદ્ભવ માટે જવાબદાર છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 102",
+    "exp": "“માનવીની ભવાઈ”માં છપ્પનિયા દુષ્કાળનો ઉલ્લેખ, કેનનનો જઠરના આકુંચનનો અભ્યાસ, લોહીના રાસાયણિક ફેરફારો અને હાઈપોથેલેમસનું “એકસ્ટ્રીમ લેટરલ” કેન્દ્ર — આ તમામ વિગતો પાઠ્યપુસ્તક મુજબ સાચી છે."
+  },
+  {
+    "q": "પ્રશ્ન 162: 'તરસની પ્રેરણા' (Thirst) અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "તરસ એ જન્મજાત પ્રેરણા છે અને તે ભૂખથી પણ વધારે તીવ્ર પ્રેરણા છે.",
+      "આપણા શરીરમાં 78% પાણીનું પ્રમાણ રહેલું છે અને પાતળા ઝાડા થવાથી ડિહાઈડ્રેશન થાય ત્યારે દર્દીને O.R.S. નું દ્રાવણ પીવડાવવામાં આવે છે.",
+      "મગજના હાઈપોથેલેમસમાં આવેલાં કેટલાંક કેન્દ્રો પાણીના અભાવ પ્રત્યે સંવેદનશીલ હોવાથી તરસનો અનુભવ થાય છે.",
+      "તરસ લાગે ત્યારે માત્ર ખાલી ગળાને ભીનું કરી દેવાથી શરીરની પાણીની જરૂરિયાત સંપૂર્ણપણે સંતોષાઈ જાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 102",
+    "exp": "તરસ લાગે ત્યારે ગળામાં શોષ અનુભવાય છે, પરંતુ ખાલી ગળાને ભીનું કરવાથી પાણીની જરૂરિયાત સંતોષાતી નથી; શરીરમાં પાણીનું પ્રમાણ જાળવવા બહારથી પાણી પીવું જરૂરી બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 163: શારીરિક પ્રેરણાઓની તીવ્રતા અંગે પાઠ્યપુસ્તકમાં દર્શાવેલી તુલના મુજબ નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "ભૂખ કરતાં તરસ વધારે તીવ્ર પ્રેરણા છે, અને ભૂખ તથા તરસ કરતાં પણ ઊંઘની પ્રેરણા વધુ તીવ્ર હોય છે.",
+      "તરસ અને ઊંઘ કરતાં ભૂખની પ્રેરણા સૌથી વધુ તીવ્ર હોય છે.",
+      "ઊંઘ કરતાં ભૂખ અને તરસની પ્રેરણા વધારે તીવ્ર હોય છે.",
+      "ભૂખ, તરસ અને ઊંઘ ત્રણેયની તીવ્રતા હંમેશાં એકસરખી હોય છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 102",
+    "exp": "પાઠ્યપુસ્તક મુજબ તરસ ભૂખથી વધારે તીવ્ર છે, અને ભૂખ તથા તરસની પ્રેરણા કરતાં પણ ઊંઘની પ્રેરણા વધુ તીવ્ર હોય છે (ઊંઘ આવતી હોય ત્યારે ભૂખ્યો વ્યક્તિ જમ્યા વિના પણ ઊંઘી જાય છે)."
+  },
+  {
+    "q": "પ્રશ્ન 164: 'ઊંઘની પ્રેરણા' (Sleep) સંબંધિત પ્રાયોગિક સંશોધનો અને સર્વેક્ષણના આંકડા અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: આઠથી દસ દિવસ સુધી સતત જાગેલી વ્યક્તિ ભ્રમ અને વિભ્રમોનો ભોગ બની શકે છે; 1964માં રેન્ડી ગાર્ડનર “ગિનીસ બુક ઓફ વર્લ્ડ રેકોર્ડ્સ”માં સ્થાન મેળવવા સતત 264 કલાક જાગતા રહેલા.\nવિધાન 2: અકસ્માતો અંગે અમેરિકામાં હાથ ધરાયેલા રાષ્ટ્રીય સર્વેક્ષણ મુજબ દિવસ કરતાં રાત્રિના અકસ્માતોનું પ્રમાણ દસ ગણું વધુ હોય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103",
+    "exp": "8 થી 10 દિવસના ઉજાગરાથી ભ્રમ-વિભ્રમ, 1964માં રેન્ડી ગાર્ડનરના 264 કલાક જાગવાનો પ્રયોગ અને અમેરિકામાં દિવસ કરતાં રાત્રિના અકસ્માતો 10 ગણા વધુ હોવાનું તારણ — બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 165: 'જાતીયતાની પ્રેરણા' (Sex) ના સાંસ્કૃતિક અને મનોવૈજ્ઞાનિક સંદર્ભ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ભારતીય સંસ્કૃતિમાં ધર્મ, અર્થ, કામ અને મોક્ષને મહત્ત્વના ચાર પુરુષાર્થ તરીકે ગણવામાં આવ્યા છે.",
+      "ઋષિ વાત્સ્યાયન દ્વારા રચિત “વાત્સ્યાયન કામસૂત્ર” ગ્રંથ વિશ્વ પ્રસિદ્ધ છે અને ખજૂરાહોના મંદિરમાં જાતીયતા સંબંધિત મૂર્તિઓ પ્રદર્શિત કરવામાં આવી છે.",
+      "વ્યક્તિ પોતાની આ પ્રેરણાને ઉર્ધ્વ માર્ગે વાળીને તેના સંતોષ વિના પણ જીવન પસાર કરી શકે છે.",
+      "ભૂખ અને તરસની જેમ જાતીય પ્રેરણાનો પણ જીવન ટકાવી રાખવા માટે તાત્કાલિક સંતોષ અનિવાર્ય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103",
+    "exp": "જાતીય પ્રેરણા ખૂબ જ તીવ્ર હોવા છતાં ભૂખ અને તરસની જેમ તેનો તાત્કાલિક રીતે સંતોષ જરૂરી નથી; તેને ઉર્ધ્વ માર્ગે વાળી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 166: જાતીય પ્રેરણાના શરીરરચનાકીય આધારો અંગે નીચેનામાંથી કઈ વિગત સંપૂર્ણ સાચી છે?",
+    "options": [
+      "પુરુષના વૃષણમાંથી એસ્ટ્રોજીન્સ અને સ્ત્રીના અંડાશયમાંથી ટેસ્ટોસ્ટેરોન ઝરે છે.",
+      "પુરુષના વૃષણમાંથી એન્ડ્રોજીન્સ તથા ટેસ્ટોસ્ટેરોન અને સ્ત્રીના અંડાશયમાંથી એસ્ટ્રોજીન્સ ઝરે છે; તેમજ હાઈપોથેલેમસ અને મસ્તિષ્ક છાલનાં કેન્દ્રો તેમાં ભાગ ભજવે છે.",
+      "પુરુષ અને સ્ત્રી બંનેમાં માત્ર એસ્ટ્રોજીન્સ સ્ત્રાવ જ ઝરે છે અને તેમાં મગજના કોઈ કેન્દ્રનો ફાળો હોતો નથી.",
+      "જાતીય પ્રેરણાનું નિયંત્રણ માત્ર જઠરના આકુંચન અને થેલેમસ દ્વારા જ થાય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103",
+    "exp": "પુરુષના વૃષણમાંથી એન્ડ્રોજીન્સ તથા ટેસ્ટોસ્ટેરોન અને સ્ત્રીના અંડાશયમાંથી એસ્ટ્રોજીન્સ નામનો સ્ત્રાવ ઝરે છે; આ ઉપરાંત હાઈપોથેલેમસ અને મસ્તિષ્ક છાલનાં કેન્દ્રો જાતીય પ્રેરણા સાથે સંબંધ ધરાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 167: “જોખમ ખેડનારા, આર્થિક ક્ષેત્રને ઘડનારા સંચાલકો વગેરે સિદ્ધિની પ્રેરણાને કારણે જ કાર્ય કરતા હોય છે. આવા લોકો ધન કે નફાના સ્થાને સિદ્ધિ અને સફળતાની ઈચ્છાથી કાર્ય કરે છે.” — સિદ્ધિ પ્રેરણા અંગેનો આ મત કોનો છે?",
+    "options": [
+      "મેકલેલેન્ડ",
+      "મેકડુગલ",
+      "હેનરી મરે",
+      "અબ્રાહમ મેસ્લો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103",
+    "exp": "સિદ્ધિ પ્રેરણા (Achievement Motive) અંગેનું આ અવતરણ મેકલેલેન્ડનું છે, જેનાં ઉદાહરણોમાં ધીરુભાઈ અંબાણી અને ડૉ. એ. પી. જે. અબ્દુલ કલામનો ઉલ્લેખ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 168: પાઠ્યપુસ્તક મુજબ ઉચ્ચ 'સિદ્ધિ પ્રેરણા' ધરાવતી વ્યક્તિઓમાં નીચેનામાંથી કયા લક્ષણનો સમાવેશ થતો નથી?",
+    "options": [
+      "સરળ નહીં પણ મુશ્કેલ કાર્યોની પસંદગી",
+      "બદલાની (Reward) અપેક્ષા વિના કાર્યની પરિપૂર્ણતા પ્રત્યે ધ્યાન",
+      "કાર્યની જવાબદારી અન્ય વ્યક્તિઓ પર નાખીને જોખમ ટાળવું",
+      "વ્યક્તિગત જવાબદારીઓનો સ્વીકાર કરી લક્ષ્ય તરફ પ્રગતિ કરવી"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103",
+    "exp": "સિદ્ધિ પ્રેરણા ધરાવતી વ્યક્તિઓ મુશ્કેલ કાર્યો પસંદ કરે છે, બદલાની અપેક્ષા વિના કાર્યની પરિપૂર્ણતા પર ધ્યાન આપે છે અને વ્યક્તિગત જવાબદારીઓનો સ્વીકાર કરે છે; તેઓ જોખમ કે જવાબદારી ટાળતા નથી."
+  },
+  {
+    "q": "પ્રશ્ન 169: “પ્રત્યક્ષ અધિજ્ઞાન કસોટી” (Thematic Apperception Test - TAT) નો ઉપયોગ નીચેનામાંથી કઈ બે મનોસામાજિક પ્રેરણાઓના માપન માટે થાય છે?",
+    "options": [
+      "ભૂખની પ્રેરણા અને તરસની પ્રેરણા",
+      "સિદ્ધિ પ્રેરણા અને સંલગ્નતાની પ્રેરણા",
+      "ઊંઘની પ્રેરણા અને સત્તાની પ્રેરણા",
+      "જાતીય પ્રેરણા અને આત્મગૌરવની પ્રેરણા"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103-104",
+    "exp": "પાઠ્યપુસ્તક મુજબ ચિત્રો જોઈને વાર્તા બનાવવાની “પ્રત્યક્ષ અધિજ્ઞાન કસોટી” (TAT) દ્વારા સિદ્ધિ પ્રેરણા (જે તાલીમ દ્વારા પણ વિકસાવી શકાય છે) અને સંલગ્નતાની પ્રેરણા બંનેનું માપન થઈ શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 170: 'સંલગ્નતાની પ્રેરણા' (Affiliation Motive) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: મેકડુગલના મતે સમૂહમાં કે અન્યના સહવાસમાં રહેવાની વૃત્તિ પ્રાણીમાં સાહજિક હોય છે, તે કોઈ શીખવતું નથી.\nવિધાન 2: ગુનેગારોને જેલમાં અપાતી એકાંતવાસની સજા તેમજ આજના યુગમાં ફેસબુક, ટ્વિટર કે વોટ્સએપનો વધતો વપરાશ સંલગ્નતાની પ્રેરણાનું સૂચન કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 104",
+    "exp": "સંલગ્નતાની પ્રેરણા દ્વારા કુટુંબ અને સમાજની રચના થઈ છે; મેકડુગલનો મત, એકાંતવાસની સજા અને સોશિયલ મીડિયા (ફેસબુક, ટ્વિટર, વોટ્સએપ) નો વધતો વપરાશ બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 171: 'સત્તાની પ્રેરણા' (Power Motive) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "મરેના મત મુજબ સત્તાની પ્રેરણામાં પોતાની આસપાસના સામાજિક વાતાવરણને કાબૂમાં રાખવાની ઈચ્છા અગત્યનો ભાગ ભજવે છે.",
+      "સત્તાની તીવ્ર પ્રેરણાથી વ્યક્તિ સરમુખત્યાર શાસક બની શકે છે, જેમ કે હિરણ્યકશ્યપ, રાવણ, હિટલર, મુસોલીની કે સદામ હુસેન.",
+      "સત્તાની પ્રેરણાનો ઉપયોગ હંમેશાં નકારાત્મક અને વિનાશક કાર્યો માટે જ થાય છે; તેનાથી કોઈ સામાજિક વિકાસ થઈ શકતો નથી.",
+      "સત્તાની પ્રેરણા મોભા તથા પ્રતિષ્ઠા સાથે જોડાયેલી છે અને તે કુટુંબ, સમાજ, રાષ્ટ્ર કે આંતરરાષ્ટ્રીય કક્ષા સુધી વિસ્તાર પામે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 104",
+    "exp": "કેટલાક સમાજ-સુધારકો અને રાષ્ટ્રીય નેતાઓએ સત્તાની પ્રેરણાથી દોરાવા છતાં ધર્મ અને સદાચારના ઉપદેશ દ્વારા સમજાવટના માર્ગે સામાજિક વિકાસ અને સામાજિક પરિવર્તનનાં વિધાયક કાર્યો કર્યાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 172: 'સંપર્ક કે સહચારની પ્રેરણા' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: બીજા સાથે હુંફાળા અને ગાઢ સંબંધો બાંધવાની સહજ પ્રવૃત્તિને સંપર્ક કે સહચારની પ્રેરણા કહે છે, જેનું શ્રેષ્ઠ ઉદાહરણ કૃષ્ણ અને સુદામાની મૈત્રી છે.\nવિધાન 2: જે વ્યક્તિને બાળપણમાં કુટુંબ કે માતા-પિતા તરફથી પૂરતો સ્નેહ ન મળે, તે મોટી થઈને લાગણીવિહીન, અસ્વીકારની ભાવનાવાળી તેમજ આક્રમક સ્વભાવવાળી બની શકે છે.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 104",
+    "exp": "હુંફાળા-ગાઢ સંબંધો (માતા-બાળક, ભાઈ-બહેન, કૃષ્ણ-સુદામાની મૈત્રી) સંપર્ક કે સહચારની પ્રેરણા દર્શાવે છે, અને બાળપણમાં તેના અભાવથી વ્યક્તિ લાગણીવિહીન તથા આક્રમક બની શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 173: મનોસામાજિક પ્રેરણાઓ અને તેની સાથે સંકળાયેલા મુખ્ય મનોવૈજ્ઞાનિકોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (મનોસામાજિક પ્રેરણા)  |  વિભાગ - બ (મનોવૈજ્ઞાનિક)\n1. સિદ્ધિ પ્રેરણા — (i) મરે\n2. સંલગ્નતાની પ્રેરણા — (ii) મેકલેલેન્ડ\n3. સત્તાની પ્રેરણા — (iii) મેકડુગલ",
+    "options": [
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 103-104",
+    "exp": "સિદ્ધિ પ્રેરણા અંગે મેકલેલેન્ડે, સંલગ્નતાની પ્રેરણા અંગે મેકડુગલે અને સત્તાની પ્રેરણા અંગે મરેએ મહત્ત્વના વિચારો રજૂ કર્યા છે."
+  },
+  {
+    "q": "પ્રશ્ન 174: અબ્રાહમ એચ. મેસ્લોના પ્રેરણાઓના શ્રેણીક્રમ (આકૃતિ 9.2) માં નિમ્ન કક્ષાથી ઉચ્ચ કક્ષા (નીચેથી ઉપર) તરફ જરૂરિયાતોનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "શારીરિક જરૂરિયાતો → આત્મીયતાની જરૂરિયાતો → સલામતીની જરૂરિયાતો → આત્મ ગૌરવની જરૂરિયાતો → સ્વ-આવિષ્કરણની જરૂરિયાતો",
+      "સલામતીની જરૂરિયાતો → શારીરિક જરૂરિયાતો → આત્મીયતાની જરૂરિયાતો → આત્મ ગૌરવની જરૂરિયાતો → સ્વ-આવિષ્કરણની જરૂરિયાતો",
+      "શારીરિક જરૂરિયાતો → સલામતીની જરૂરિયાતો → આત્મ ગૌરવની જરૂરિયાતો → આત્મીયતાની જરૂરિયાતો → સ્વ-આવિષ્કરણની જરૂરિયાતો",
+      "શારીરિક જરૂરિયાતો → સલામતીની જરૂરિયાતો → આત્મીયતાની જરૂરિયાતો → આત્મ ગૌરવની જરૂરિયાતો → સ્વ-આવિષ્કરણની જરૂરિયાતો"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ — પૂરક માહિતી | પાના નં.: 105",
+    "exp": "આકૃતિ 9.2 મુજબ મેસ્લોના શ્રેણીક્રમનો નીચેથી ઉપરનો ક્રમ: (1) શારીરિક જરૂરિયાતો, (2) સલામતીની જરૂરિયાતો, (3) આત્મીયતાની જરૂરિયાતો, (4) આત્મ ગૌરવની જરૂરિયાતો અને (5) સ્વ-આવિષ્કરણની જરૂરિયાતો છે."
+  },
+  {
+    "q": "પ્રશ્ન 175: અબ્રાહમ મેસ્લોના જરૂરિયાતોના શ્રેણીક્રમના વિવિધ સ્તરો અને તેની વિગતો અંગે નીચેનામાંથી કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "શારીરિક જરૂરિયાતો — ભૂખ, તરસ, ઊંઘ-આરામ અને જાતીયતાની જરૂરિયાતો",
+      "સલામતીની જરૂરિયાતો — આત્મરક્ષણ કેળવવાનો અથવા ભયથી મુક્ત થવાનો વિચાર",
+      "સ્વ-આવિષ્કરણની જરૂરિયાતો — માત્ર ભૌતિક ધનસંપત્તિ અને સામાજિક સત્તા એકત્રિત કરવાનો પ્રયાસ",
+      "આત્મ ગૌરવની જરૂરિયાતો — સિદ્ધિ કે પ્રતિષ્ઠાનો સંતોષ કેળવવાનો પ્રયાસ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ — પૂરક માહિતી | પાના નં.: 105",
+    "exp": "મેસ્લો મુજબ આત્મગૌરવની જરૂરિયાતના સંતોષ બાદ વ્યક્તિ 'પરિપૂર્ણતા' પ્રાપ્ત કરવા પ્રયાસ કરે છે, જેને તેઓ 'સ્વ-આવિષ્કરણની જરૂરિયાત' તરીકે ઓળખાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 176: આવેગ માટેના અંગ્રેજી શબ્દ 'Emotion' ની વ્યુત્પત્તિ અને તેના અર્થ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: 'Emotion' શબ્દ ગ્રીક ભાષાના 'Emovere' શબ્દ પરથી ઊતરી આવ્યો છે, જેનો અર્થ 'સ્થિરતા' કે 'શાંતિ' થાય છે.\nવિધાન 2: શાંત પાણીમાં પથ્થર ફેંકતાં જેમ વમળો ઉત્પન્ન થઈ કિનારા સુધી પ્રસરે છે, તેમ કોઈ સુખદ કે દુઃખદ ઘટના આપણા સમગ્ર ચેતાતંત્રને ખળભળાવી દે ત્યારે આપણે આવેગનો અનુભવ કરીએ છીએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 105",
+    "exp": "'Emotion' શબ્દ ગ્રીક નહીં પરંતુ લેટિન ભાષાના 'Emovere' શબ્દ પરથી ઊતરી આવ્યો છે, જેનો અર્થ “ખળભળાટ” કે “ક્ષુબ્ધતા” થાય છે; તેથી માત્ર વિધાન 2 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 177: આવેગના સંદર્ભમાં સામાન્ય રીતે સમાનાર્થી ગણાતા 'લાગણી' (Feeling) અને 'મનોદશા' (Mood) વચ્ચેના સૂક્ષ્મ તફાવત અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "'લાગણી' એ આવેગના સુખદ કે દુઃખદ પાસાનું સૂચન કરે છે, જ્યારે 'મનોદશા' એ આવેગ કરતાં થોડી ઓછી તીવ્ર ભાવદશા દર્શાવે છે.",
+      "'મનોદશા' એ આવેગ કરતાં અત્યંત વધુ તીવ્ર ભાવદશા દર્શાવે છે, જ્યારે 'લાગણી' માત્ર દુઃખદ પાસાનું જ સૂચન કરે છે.",
+      "'લાગણી' અને 'મનોદશા' બંને આવેગથી સંપૂર્ણપણે વિપરીત શારીરિક અવસ્થાઓ છે.",
+      "'લાગણી' માત્ર બૌદ્ધિક નિર્ણય દર્શાવે છે, જ્યારે 'મનોદશા' માત્ર ચહેરાના હાવભાવ દર્શાવે છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 105",
+    "exp": "આવેગને મોટા ભાગે લાગણી અને મનોદશાના સમાનાર્થી ગણવામાં આવે છે, પરંતુ “લાગણી” આવેગના સુખદ કે દુઃખદ પાસાનું સૂચન કરે છે અને “મનોદશા” આવેગ કરતાં થોડી ઓછી તીવ્ર ભાવદશા દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 178: ધોરણ 10ની બોર્ડની પરીક્ષાના પરિણામના દિવસે જોવા મળતી વિવિધ આવેગિક પ્રતિક્રિયાઓ અંગે પાઠ્યપુસ્તકનાં ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (વિદ્યાર્થી)  |  વિભાગ - બ (આવેગિક સ્થિતિ અને કારણ)\n1. પ્રેયાંશ — (i) ધાર્યા ગુણ પ્રાપ્ત ન થવાથી ગુસ્સે છે\n2. વિજય — (ii) ધાર્યા કરતાં ખૂબ નબળું પરિણામ આવવાથી દુઃખી છે\n3. માયા — (iii) બોર્ડની પરીક્ષામાં 95% પ્રાપ્ત થવાથી ખૂબ ખુશ છે\n4. ધૈર્ય — (iv) સખી મમતાએ વધુ ગુણ મેળવ્યા હોવાથી ઈર્ષ્યા કરે છે",
+    "options": [
+      "1-(iii), 2-(ii), 3-(iv), 4-(i)",
+      "1-(iii), 2-(i), 3-(ii), 4-(iv)",
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)",
+      "1-(i), 2-(iii), 3-(iv), 4-(ii)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 105",
+    "exp": "પાઠ્યપુસ્તકના ઉદાહરણ મુજબ પ્રેયાંશ (95% - ખુશ), વિજય (ધાર્યા ગુણ ન મળતાં ગુસ્સે), માયા (મમતાએ વધુ ગુણ મેળવતાં ઈર્ષ્યા) અને ધૈર્ય (નબળું પરિણામ આવતાં દુઃખી) વિવિધ આવેગો દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 179: આવેગની વ્યાખ્યાઓ અને તેના પ્રણેતાઓનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (પ્રણેતા)  |  વિભાગ - બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. સી. ટી. મોર્ગન — (i) “આવેગ એ સમગ્ર ચેતાતંત્રની ક્ષુબ્ધાવસ્થા છે.”\n2. જે. સી. કોલમેન — (ii) “આવેગ એવી તીવ્ર લાગણી છે કે જે સભાન અનુભવો, આંતર-બાહ્ય પ્રતિક્રિયાઓ અને વિવિધ ક્રિયાઓ કરવા માટે પ્રાણી કે માનવીને બળ પૂરું પાડે છે.”\n3. વુડવર્થ અને માર્કવીસ — (iii) “આવેગ એ એક તીવ્ર સુખદ કે દુઃખદ લાગણી દર્શાવે છે કે જે કેટલેક અંશે શરીરની ક્ષુબ્ધાવસ્થામાંથી જન્મે છે અને ચહેરાના હાવભાવો કે ચેષ્ટાઓ દ્વારા પ્રગટ થાય છે.”",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(i), 3-(ii)",
+      "1-(i), 2-(ii), 3-(iii)",
+      "1-(iii), 2-(ii), 3-(i)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "સી. ટી. મોર્ગને ચહેરાના હાવભાવો કે ચેષ્ટાઓ દ્વારા પ્રગટ થતા મનોવ્યાપાર તરીકે, જે. સી. કોલમેને વિવિધ ક્રિયાઓ માટે બળ પૂરું પાડતી તીવ્ર લાગણી તરીકે અને વુડવર્થ-માર્કવીસે સમગ્ર ચેતાતંત્રની ક્ષુબ્ધાવસ્થા તરીકે આવેગને વ્યાખ્યાયિત કર્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 180: અભ્યાસોના આધારે દર્શાવાયેલાં 'આવેગનાં ત્રણ પાસાંઓ'માં નીચેનામાંથી કયા આધારનો સમાવેશ થતો નથી?",
+    "options": [
+      "અભિવ્યક્તિના આધારો",
+      "શારીરિક આધારો",
+      "આનુવંશિક આધારો",
+      "બોધાત્મક આધારો"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "પાઠ્યપુસ્તક મુજબ આવેગનાં ત્રણ મુખ્ય પાસાંઓ છે: (1) અભિવ્યક્તિના આધારો, (2) શારીરિક આધારો અને (3) બોધાત્મક આધારો; આનુવંશિક આધારોનો તેમાં સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 181: આવેગના 'અભિવ્યક્તિના આધારો' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: વ્યક્તિ જ્યારે ક્રોધનો અનુભવ કરે ત્યારે તેના ચહેરા પર અને આંખોમાં લાલાશ તેમજ કરડાઈના ભાવો જોવા મળે છે, જેવી શાબ્દિક અને બિનશાબ્દિક અભિવ્યક્તિથી અન્યને સમજવું સરળ બને છે.\nવિધાન 2: વિશ્વના તમામ સમાજો અને સંસ્કૃતિઓમાં આવેગની અભિવ્યક્તિ હંમેશાં એકસરખી જ જોવા મળે છે, તેમાં કોઈ સાંસ્કૃતિક તફાવત હોતો નથી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "આવેગ સમયે થતા બાહ્ય શારીરિક ફેરફારો (જેમ કે ક્રોધમાં આંખોમાં લાલાશ) થી મનોદશાનો ખ્યાલ આવે છે, પરંતુ આવેગની અભિવ્યક્તિ સમાજ અને સંસ્કૃતિ મુજબ જુદી જુદી જોવા મળે છે; તેથી વિધાન 2 ખોટું છે."
+  },
+  {
+    "q": "પ્રશ્ન 182: આવેગના અનુભવ વખતે થતા 'શારીરિક આધારો'માં નીચેનામાંથી કયાં તંત્રો અને મગજના ભાગો મહત્ત્વની ભૂમિકા ભજવે છે?\n1. અનુકંપી ચેતાતંત્ર\n2. પરાનુકંપી ચેતાતંત્ર\n3. થેલેમસ અને હાઈપોથેલેમસ\n4. મસ્તિષ્ક છાલ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 3 અને 4",
+      "1, 2, 3 અને 4 બધાં જ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "આવેગના અનુભવમાં અનુકંપી તથા પરાનુકંપી ચેતાતંત્ર, થેલેમસ તથા હાઈપોથેલેમસ અને મસ્તિષ્ક છાલ મહત્ત્વની ભૂમિકા ભજવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 183: 'જેમ્સ-લેંગના આવેગના સિદ્ધાંત' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ સિદ્ધાંત પ્રારંભમાં અમેરિકાના વિલિયમ જેમ્સ (1884) દ્વારા અપાયો હતો, જેને ડેન્માર્કના શરીરશાસ્ત્રી લેંગ દ્વારા ટેકો મળ્યો હતો.",
+      "આ સિદ્ધાંત મુજબ વાતાવરણના ઉદીપકોના પ્રત્યક્ષીકરણને લીધે શરીરમાં આંતર-બાહ્ય પ્રતિક્રિયાઓ થતાં વ્યક્તિ આવેગનો અનુભવ કરે છે.",
+      "આ સિદ્ધાંત મુજબ રોડ અકસ્માત જોતાં હૃદયના ધબકારા વધવા જેવા શારીરિક ફેરફારો થતાં વ્યક્તિ ભયનો આવેગ અનુભવે છે.",
+      "વર્તમાન સમયમાં મનોવિજ્ઞાનમાં આ સિદ્ધાંતનો સૌથી વધુ વ્યાપક ઉપયોગ કરવામાં આવે છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "પાઠ્યપુસ્તકમાં સ્પષ્ટ જણાવાયું છે કે જેમ્સ-લેંગનો સિદ્ધાંત વર્તમાન સમયમાં ઉપયોગમાં લેવાતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 184: 'કેનન-બાર્ડના સિદ્ધાંત' (કેનન-1927 અને બાર્ડ-1934) મુજબ ઉદીપકને જોયા પછી આવેગના ઉદ્ભવની સાચી પ્રક્રિયા કઈ છે?",
+    "options": [
+      "ઉદીપક જોતાં પહેલાં શારીરિક ફેરફાર થાય છે અને ત્યારબાદ ઘણા સમય પછી આવેગની અનુભૂતિ થાય છે.",
+      "ઉદીપક જોતાં સંદેશો મગજના થેલેમસ સુધી પહોંચે છે, મસ્તિષ્ક છાલની ક્રિયાથી અનુકંપી ચેતાતંત્રમાં ફેરફારો શરૂ થાય છે અને આંતરિક અવયવોમાં ફેરફાર તથા આવેગની અનુભૂતિ સાથે-સાથે જ થાય છે.",
+      "ઉદીપક જોયા બાદ પહેલાં આવેગનો માનસિક અનુભવ થાય છે અને તે પૂર્ણ થયા બાદ જ થેલેમસ સક્રિય થાય છે.",
+      "ઉદીપકનો સંદેશો માત્ર પરાનુકંપી ચેતાતંત્ર સુધી જ સીમિત રહે છે, મસ્તિષ્ક છાલ સુધી પહોંચતો નથી."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106",
+    "exp": "કેનન-બાર્ડના સિદ્ધાંત મુજબ સંદેશો થેલેમસ સુધી પહોંચી મસ્તિષ્ક છાલની ક્રિયા દ્વારા અનુકંપી ચેતાતંત્રમાં ફેરફારો કરે છે, જેના લીધે આંતરિક અવયવોમાં ફેરફાર અને આવેગની અનુભૂતિ સાથે-સાથે જ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 185: આવેગના વિવિધ સિદ્ધાંતો અને તેમાં દર્શાવાયેલા 'શારીરિક ફેરફાર તથા આવેગિક અનુભવના ક્રમ'નાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (સિદ્ધાંત)  |  વિભાગ - બ (અનુભવનો ક્રમ)\n1. જેમ્સ-લેંગનો સિદ્ધાંત — (i) ઉદીપક → આવેગનો માનસિક અનુભવ → આંતર-બાહ્ય શારીરિક ફેરફારો\n2. કેનન-બાર્ડનો સિદ્ધાંત — (ii) ઉદીપક → શારીરિક આંતર-બાહ્ય પ્રતિક્રિયાઓ → આવેગનો અનુભવ\n3. સામાન્ય સમજનો સિદ્ધાંત — (iii) ઉદીપક → આંતરિક અવયવોમાં ફેરફારો અને આવેગની અનુભૂતિ સાથે-સાથે",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106-107",
+    "exp": "જેમ્સ-લેંગ મુજબ પહેલાં શારીરિક ફેરફારો પછી આવેગ; કેનન-બાર્ડ મુજબ બંને સાથે-સાથે; અને સામાન્ય સમજના સિદ્ધાંત મુજબ પહેલાં આવેગનો માનસિક અનુભવ અને પછી આંતર-બાહ્ય શારીરિક ફેરફારો થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 186: નાના બાળકને સાપની ભયાનકતાનો ખ્યાલ ન હોવાથી તેનામાં સાપથી ભય જન્મતો નથી, પરંતુ મોટી ઉંમરની વ્યક્તિ સાપના ઝેરની ભયાનકતાથી પરિચિત હોવાથી ભય અનુભવે છે. આ ઉદાહરણ આવેગના કયા આધાર અને કયા સિદ્ધાંતને સ્પષ્ટ કરે છે?",
+    "options": [
+      "શારીરિક આધાર — જેમ્સ-લેંગનો સિદ્ધાંત",
+      "અભિવ્યક્તિનો આધાર — કેનન-બાર્ડનો સિદ્ધાંત",
+      "બોધાત્મક આધાર — શાખટર અને સિંગરનો દ્વિઘટક સિદ્ધાંત",
+      "જૈવિય આધાર — પ્લુટચિકનો મૂળભૂત આવેગનો સિદ્ધાંત"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "પ્રત્યક્ષીકરણ, સ્મૃતિ અને અર્થઘટન એ આવેગના બોધાત્મક આધારનાં ઘટકો છે; આ સંદર્ભમાં શાખટર અને સિંગરે 'આવેગનો દ્વિઘટક સિદ્ધાંત' આપ્યો છે, જેમાં સાપના ભયનું ઉદાહરણ અપાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન 187: ઈઝાર્ડ (1977) દ્વારા ગણાવવામાં આવેલા 'દસ આવેગો'ની યાદીમાં નીચેનામાંથી કયા આવેગનો સમાવેશ થતો નથી?",
+    "options": [
+      "આનંદ, આશ્ચર્ય અને ક્રોધ",
+      "ઘૃણા, નફરત અને ભય",
+      "અપરાધની લાગણી, શરમ, રસ અને ઉત્તેજના",
+      "અપેક્ષા અને સ્વીકાર"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "ઈઝાર્ડ (1977) દ્વારા આનંદ, આશ્ચર્ય, ક્રોધ, ઘૃણા, નફરત, ભય, અપરાધની લાગણી, શરમ, રસ અને ઉત્તેજના એમ 10 આવેગો ગણાવાયા છે; જ્યારે 'અપેક્ષા' અને 'સ્વીકાર' એ પ્લુટચિક (1984) ના મૂળભૂત આવેગોમાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 188: પ્લુટચિક (1984) ના મતે કુલ આઠ મૂળભૂત આવેગો બબ્બેની જોડીમાં જોવા મળે છે. નીચેનામાંથી કઈ જોડ પ્લુટચિકના વર્ગીકરણ મુજબ અયોગ્ય છે?",
+    "options": [
+      "આનંદ અને વિષાદ",
+      "ભય અને ક્રોધ",
+      "આશ્ચર્ય અને અપેક્ષા",
+      "સ્વીકાર અને શરમ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "પ્લુટચિક (1984) ના મતે ચાર જોડીમાં આઠ મૂળભૂત આવેગો છે: (1) આનંદ અને વિષાદ, (2) ભય અને ક્રોધ, (3) આશ્ચર્ય અને અપેક્ષા તથા (4) સ્વીકાર અને ઘૃણા ('શરમ' નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 189: આવેગના મુખ્ય બે પ્રકારો — 'વિધાયક આવેગો' અને 'નિષેધક આવેગો' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: હકારાત્મક લાગણી અને સ્વસ્થ મનોશારીરિક સ્થિતિ સાથે જોડાયેલા સુખ અને આનંદ જેવા આવેગોને 'વિધાયક આવેગો' કહે છે.\nવિધાન 2: નકારાત્મક લાગણી અને નબળી મનોશારીરિક સ્થિતિ સાથે જોડાયેલા ક્રોધ, ભય, નફરત અને ઈર્ષ્યા જેવા આવેગોને 'નિષેધક આવેગો' કહે છે, અને આવેગનો અનુભવ એ એક સાપેક્ષ ખ્યાલ છે.",
+    "options": [
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "વિધાયક આવેગો સ્વસ્થ મનોશારીરિક સ્થિતિ સાથે અને નિષેધક આવેગો નબળી મનોશારીરિક સ્થિતિ સાથે જોડાયેલા છે, તેમજ આવેગનો અનુભવ સાપેક્ષ ખ્યાલ છે; બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 190: 'આવેગ નિયંત્રણની જરૂરિયાત' અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "શ્રીમદ્ ભગવદ્ ગીતામાં “સમતા એ જ યોગ” કહીને જીવનમાં આવેગોની સમતુલાનું મહત્ત્વ દર્શાવાયું છે.",
+      "માત્ર નિષેધક આવેગો જ હાનિકારક છે; વિધાયક આવેગોની ગમે તેટલી તીવ્રતા ક્યારેય વ્યક્તિમાં ઉન્માદ કે નુકસાન સર્જતી નથી.",
+      "આવેગ-નિયંત્રણ દ્વારા યોગ્ય સમયે, યોગ્ય માત્રામાં અને યોગ્ય રીતે આવેગને અભિવ્યક્ત કરવાનો પ્રયાસ કરવામાં આવે છે.",
+      "આવેગોની વારંવારતા અને તીવ્રતા વ્યક્તિના મનોશારીરિક સ્વાસ્થ્ય માટે હાનિકારક છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "પાઠ્યપુસ્તક મુજબ વિધાયક આવેગોની અતિશય તીવ્રતા પણ વ્યક્તિમાં 'ઉન્માદ' સર્જી શકે છે, તેથી તમામ આવેગોની સમતુલા જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 191: આવેગની તીવ્ર સ્થિતિ અને નિષેધક આવેગોને કારણે વ્યક્તિના શારીરિક સ્વાસ્થ્ય પર થતી વિપરીત અસરો અંગે પાઠ્યપુસ્તકમાં કયા રોગો/સ્થિતિઓનો ઉલ્લેખ કરવામાં આવ્યો છે?",
+    "options": [
+      "હૃદયરોગનો હુમલો, મગજની નસો ફાટી જવી, એસિડિટી, અલ્સર કે કેન્સર",
+      "માત્ર શરદી, ઉધરસ અને સામાન્ય તાવ",
+      "માત્ર હાડકાંની નબળાઈ અને વિટામિનની ઊણપ",
+      "માત્ર ચામડીના રોગો અને દાંતનો દુખાવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "આવેગની તીવ્ર સ્થિતિમાં હૃદયરોગનો હુમલો કે મગજની નસો ફાટી જવાની શક્યતા રહે છે, તેમજ એસિડિટીથી અલ્સર કે કેન્સર જેવા રોગોનું સર્જન નિષેધક આવેગોનું પરિણામ હોઈ શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 192: 'આવેગ-નિયમન'ના સંદર્ભમાં ભારતીય શિક્ષણ દર્શન અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: શ્રી અરવિંદ અને શ્રીમાતાજીના શિક્ષણ દર્શનમાં 'સર્વાંગી શિક્ષણ'ના ખ્યાલ મુજબ બાળકના શરીર, પ્રાણ, મન અને અંતરાત્માની કેળવણી જરૂરી છે.\nવિધાન 2: ગાંધીજીએ પણ હૃદયની કેળવણી પર ભાર મૂક્યો છે, જેનો સીધો સંબંધ આવેગ-નિયમન સાથે રહેલો છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 107",
+    "exp": "શ્રી અરવિંદ અને શ્રીમાતાજીનું સર્વાંગી શિક્ષણ તથા ગાંધીજીએ ભાર મૂકેલી હૃદય કે અંતરાત્માની કેળવણીનો સીધો સંબંધ આવેગ-નિયમન સાથે છે."
+  },
+  {
+    "q": "પ્રશ્ન 193: “આવેગિક આંક” (Emotional Quotient - EQ) ની સમજૂતી કોણે આપી છે, અને તેમણે આવેગ-નિયંત્રણ માટે કેટલા માર્ગો દર્શાવ્યા છે?",
+    "options": [
+      "પ્લુટચિકે — આઠ માર્ગો",
+      "ડેનિયલ ગોલમેને — ચાર માર્ગો",
+      "શાખટર અને સિંગરે — બે માર્ગો",
+      "સી. ટી. મોર્ગને — છ માર્ગો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "સમગ્ર વિશ્વમાં લોકપ્રિય બનેલા “આવેગિક આંક” (EQ) ની સમજૂતી ડેનિયલ ગોલમેન દ્વારા આપવામાં આવી છે અને તેમણે આવેગ-નિયંત્રણ માટે ચાર માર્ગો દર્શાવ્યા છે."
+  },
+  {
+    "q": "પ્રશ્ન 194: આવેગ-નિયમનના કયા માર્ગમાં વ્યક્તિ “શા માટે” અને “કઈ રીતે” પ્રશ્ન પૂછીને પોતાના અનુભવો, વિચાર, લાગણી, વર્તન, શક્તિઓ અને મર્યાદાને જાણવાનો પ્રયાસ કરે છે?",
+    "options": [
+      "પરાનુભૂતિ કેળવવી",
+      "સ્વ-જાગૃતિમાં વધારો",
+      "સર્જનાત્મક બનો",
+      "સામાજિક સેવામાં સહભાગીદારી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "'સ્વ-જાગૃતિમાં વધારો' એ આવેગ-નિયમન અને સ્વ-વિકાસ બંને માટે જરૂરી છે, જેમાં “શા માટે” અને “કઈ રીતે” પ્રશ્ન પૂછવાથી વ્યક્તિ પોતાના અનુભવો, શક્તિઓ અને મર્યાદાઓને સમજવાનું શરૂ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 195: વિહાર કરતી વખતે જનક રાજાને કોઈએ મહેલ સળગવાના સમાચાર આપ્યા ત્યારે તેમણે જરા પણ વિચલિત થયા વિના કહ્યું કે, “મારી ચિંતાથી પરિસ્થિતિ બદલાવાની નથી, જે થવાનું હતું તે તો થઈ ગયું” અને શાંતિથી ચાલવાનું ચાલુ રાખ્યું. આ ઉદાહરણ આવેગ-નિયમનનો કયો માર્ગ સ્પષ્ટ કરે છે?",
+    "options": [
+      "સમય દર્શન - સમ્યક વ્યવહાર",
+      "સ્વયંનો આદર્શ બની રહેવું",
+      "આત્મ-નિરીક્ષણ કેળવવું",
+      "સુખદ સામાજિક સંબંધો કેળવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "પરિસ્થિતિનું સમતાપૂર્વક દર્શન કરી શાંત ચિત્તે વિચાર કરીને વ્યવહાર કરવો એ 'સમય દર્શન - સમ્યક વ્યવહાર' માર્ગ છે, જેને જનક રાજાના ઉદાહરણ દ્વારા સમજાવાયો છે."
+  },
+  {
+    "q": "પ્રશ્ન 196: ભગવાન બુદ્ધે કહેલું કથન “અપ્પોદીપો ભવ” / “આત્મ દીપો ભવ” (પોતાનો દીપક સ્વયમ્ પોતે જ બનવું) આવેગ-નિયમનના કયા માર્ગ સાથે સંબંધિત છે?",
+    "options": [
+      "આત્મ-નિરીક્ષણ કેળવવું",
+      "ઘટનાનું બૌદ્ધિક અને વિધાયક મૂલ્યાંકન",
+      "સ્વયંનો આદર્શ બની રહેવું",
+      "પરાનુભૂતિ કેળવવી"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "'સ્વયંનો આદર્શ બની રહેવું' માર્ગમાં ભગવાન બુદ્ધના કથન 'અપ્પોદીપો ભવ' નો ઉલ્લેખ છે, જે મુજબ વ્યક્તિએ પોતાના અનુભવોમાંથી શીખી પોતાના માટે આદર્શરૂપ બની આત્મનિયમન કેળવવાનું છે."
+  },
+  {
+    "q": "પ્રશ્ન 197: “વૃક્ષો પોતાને પથ્થર મારનાર વ્યક્તિને પણ મધુર ફળ આપી તૃપ્ત કરે છે અને વાદળ વરસે છે ત્યારે કોઈની પાસે આભારની અપેક્ષા રાખતું નથી.” — આ ઉદાહરણો દ્વારા આવેગ-નિયમનનો કયો માર્ગ સમજાવવામાં આવ્યો છે?",
+    "options": [
+      "સર્જનાત્મક બનો",
+      "પરાનુભૂતિ કેળવવી",
+      "સામાજિક સેવામાં સહભાગીદારી",
+      "સમય દર્શન - સમ્યક વ્યવહાર"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "'પરાનુભૂતિ કેળવવી' માર્ગમાં વૃક્ષો અને વાદળનાં ઉદાહરણો આપીને સ્વાર્થી ન બનતાં પરોપકાર કેળવવાથી માનસિક શાંતિ અને સરળ આવેગ-નિયમન પ્રાપ્ત થાય છે તેમ દર્શાવાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન 198: આવેગ-નિયમનના વિવિધ માર્ગો અને તેની વિશિષ્ટતાનાં યોગ્ય જોડકાં જોડો:\nવિભાગ - અ (માર્ગ)  |  વિભાગ - બ (વિશિષ્ટતા)\n1. આત્મ-નિરીક્ષણ કેળવવું — (i) પોતાને રસ પડે તેવી પ્રવૃત્તિ દ્વારા સમય પસાર કરી માનસિક શાંતિ મેળવવી\n2. ઘટનાનું બૌદ્ધિક અને વિધાયક મૂલ્યાંકન — (ii) ફુરસદનો સમય કાઢી નિસ્વાર્થ ભાવે સેવાકાર્ય કરી સુખ-સંતોષની લાગણી મેળવવી\n3. સર્જનાત્મક બનો — (iii) જીવનમાં બનતી ઘટનાઓનું તટસ્થપણે નિરીક્ષણ કરી પોતાના વર્તનની સમીક્ષા કરવી\n4. સામાજિક સેવામાં સહભાગીદારી — (iv) નિષ્ફળતાઓથી વિચલિત થયા વિના વિધાયક દૃષ્ટિ રાખી તેને સફળતાની ચાવી બનાવવી",
+    "options": [
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)",
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iii), 2-(iv), 3-(ii), 4-(i)",
+      "1-(iii), 2-(iv), 3-(i), 4-(ii)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 108",
+    "exp": "આત્મ-નિરીક્ષણમાં ઘટનાઓનું તટસ્થ નિરીક્ષણ, બૌદ્ધિક-વિધાયક મૂલ્યાંકનમાં નિષ્ફળતાને સફળતાની ચાવી બનાવવી, સર્જનાત્મકતામાં રસપ્રદ પ્રવૃત્તિ અને સામાજિક સેવામાં નિસ્વાર્થ ભાવે સેવાકાર્યનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 199: આવેગ સંબંધિત સિદ્ધાંતો અને સંશોધનોનો કાળક્રમ (જૂનાથી નવા વર્ષના ક્રમમાં) કયો સાચો છે?",
+    "options": [
+      "વિલિયમ જેમ્સ (1884) → કેનન (1927) → બાર્ડ (1934) → ઈઝાર્ડ (1977) → પ્લુટચિક (1984)",
+      "કેનન (1927) → વિલિયમ જેમ્સ (1884) → બાર્ડ (1934) → પ્લુટચિક (1984) → ઈઝાર્ડ (1977)",
+      "વિલિયમ જેમ્સ (1884) → બાર્ડ (1934) → કેનન (1927) → ઈઝાર્ડ (1977) → પ્લુટચિક (1984)",
+      "વિલિયમ જેમ્સ (1884) → કેનન (1927) → બાર્ડ (1934) → પ્લુટચિક (1984) → ઈઝાર્ડ (1977)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106-107",
+    "exp": "પાઠ્યપુસ્તકમાં આપેલાં વર્ષો મુજબ વિલિયમ જેમ્સ (1884), કેનન (1927), બાર્ડ (1934), ઈઝાર્ડ (1977) અને પ્લુટચિક (1984) એ સાચો કાળક્રમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 200: 'આવેગ અને તેના નિયમન'ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "વર્તમાન સમયમાં બુદ્ધિઆંક કરતાં આવેગનો ઉચ્ચ આંક (EQ) મેળવવો એ વ્યક્તિ માટે ખૂબ જરૂરી ગણાય છે.",
+      "સાચા અને સારા મિત્રો તથા અન્ય સામાજિક વર્તુળ સાથે સુખદ સામાજિક સંબંધો કેળવવાથી આવેગ-નિયમનમાં સહાય મળે છે.",
+      "રંગમંચના કલાકારો તેમજ વિવિધ નૃત્યશૈલીના નૃત્યકારો ચહેરાના હાવભાવ, અંગચેષ્ટા અને શાબ્દિક-અશાબ્દિક સંજ્ઞાઓ દ્વારા ભાવોની અભિવ્યક્તિ કરે છે.",
+      "આવેગ-નિયંત્રણનો અર્થ વ્યક્તિના જીવનમાંથી તમામ પ્રકારના આવેગોને સંપૂર્ણપણે નાબૂદ કરી દેવા એવો થાય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ: 9. પ્રેરણા અને આવેગ | પાના નં.: 106-108",
+    "exp": "આવેગ વિનાના એક પણ દિવસની કલ્પના કરી શકાતી નથી; આવેગ-નિયંત્રણનો અર્થ આવેગોને નાબૂદ કરવા નહીં, પરંતુ આવેગોને સમતોલ કરી યોગ્ય સમયે, યોગ્ય માત્રામાં અને યોગ્ય રીતે અભિવ્યક્ત કરવા એવો થાય છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ધોરણ 11 મનોવિજ્ઞાન — ભાગ-2 (પ્રકરણ 8 અને 9: પ્રશ્ન 101 થી 200)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "11manovignanpart2.html",
+            testUploadDate: "2026-11-27"
+        })
+    });
+}
+</script>
+</body>
+</html>
