@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર (ભાગ-1 : ૧૦૦ પ્રશ્નો)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર (ભાગ-1)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર<br>ભાગ-1 (એકમ-1 અને એકમ-2)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">પ્રશ્ન ૧ થી ૧૦૦ | બહુવિકલ્પીય પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર (ભાગ-1 : એકમ-1 અને એકમ-2) | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર — ભાગ-1)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: મૉડ્યૂલ મુજબ શિક્ષણની પ્રક્રિયા ક્યારે પૂર્ણ બને છે?",
+    "options": [
+      "જ્યારે શિક્ષક વર્ગખંડમાં પાઠ્યપુસ્તકનું વાચન અને સ્વાધ્યાય કાર્ય પૂર્ણ કરે",
+      "જ્યારે તેના માટે આયોજન, અધ્યયન-અધ્યાપન પ્રક્રિયા અને મૂલ્યાંકન થાય",
+      "જ્યારે વિદ્યાર્થીઓ નિયત અભ્યાસક્રમ કંઠસ્થ કરી પરીક્ષામાં ઉત્તીર્ણ થાય",
+      "જ્યારે શિક્ષક અને વાલીઓ વચ્ચે વિદ્યાર્થીની પ્રગતિ અંગે પારસ્પરિક ચર્ચા થાય"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.1 પ્રસ્તાવના (પાના નં.: 2)",
+    "exp": "શિક્ષણની પ્રક્રિયા ત્યારે પૂર્ણ બને છે જ્યારે તે માટે આયોજન, અધ્યયન-અધ્યાપન પ્રક્રિયા અને મૂલ્યાંકન થાય. શિક્ષણવ્યવહાર દરમિયાન શિક્ષક અગાઉથી કરેલ આયોજનનો અમલ કરે છે અને અંતે નિયત સિદ્ધિના સ્તરના સંદર્ભમાં તેને મૂલવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: નીચેનામાંથી કયો વિકલ્પ 'શિક્ષણવ્યવહાર-વર્ગવ્યવહારના ઉદ્દેશો' માં સમાવિષ્ટ નથી?",
+    "options": [
+      "પ્રશિક્ષણાર્થીઓ અને શિક્ષક પારસ્પરિક આરોગ્યપ્રદ આંતરક્રિયા કરે",
+      "જે-તે વિષયવસ્તુ સંદર્ભે રહેલી કચાશનું નિદાન કરી ઉપચારાત્મક શિક્ષણ કરે",
+      "પ્રશિક્ષણાર્થીઓમાં સ્પર્ધાત્મક વૃત્તિ વિકસાવી શિક્ષણને શિક્ષકકેન્દ્રી બનાવે",
+      "પ્રશિક્ષણાર્થીઓ માર્ગદર્શન, પ્રેરણા તેમજ પ્રોત્સાહન દ્વારા સિદ્ધિ માટે સક્ષમ બને"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.2 શિક્ષણવ્યવહાર-વર્ગવ્યવહારના ઉદ્દેશો (પાના નં.: 2)",
+    "exp": "શિક્ષણવ્યવહાર-વર્ગવ્યવહારનો ઉદ્દેશ શિક્ષણને 'વિદ્યાર્થીકેન્દ્રી' બનાવવાનો છે, 'શિક્ષકકેન્દ્રી' બનાવવાનો નથી. અન્ય ત્રણેય વિકલ્પો ઉદ્દેશોમાં સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: શિક્ષણવ્યવહાર અને વર્ગવ્યવહારના સંદર્ભમાં નીચેના વિધાનો તપાસો:\nવિધાન 1: શિક્ષણવ્યવહાર એ વર્ગખંડમાં થતા વ્યવહાર પૂરતો જ મર્યાદિત છે.\nવિધાન 2: વર્ગવ્યવહાર એ શિક્ષણવ્યવહારનો એક નાનકડો ભાગ છે અને શિક્ષણવ્યવહાર વિશાળ અર્થ ધરાવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.3 શિક્ષણવ્યવહાર (પાના નં.: 2)",
+    "exp": "વિદ્યાર્થીને સિદ્ધિની પારંગતતાના સ્તર સુધી લઈ જવા વર્ગખંડમાં, શાળામાં, શાળાની બહાર, મા-બાપ, વાલીઓ તેમજ સમાજ સાથે થતો સમગ્ર વ્યવહાર 'શિક્ષણવ્યવહાર' કહેવાય છે. તેથી તે વર્ગખંડ પૂરતો મર્યાદિત નથી, પરંતુ વર્ગવ્યવહાર તેનો એક નાનકડો ભાગ છે."
+  },
+  {
+    "q": "પ્રશ્ન 4: શિક્ષણવ્યવહાર દરમિયાન શિક્ષકે નીચેનામાંથી કયાં પાસાંઓને જાણવાં જરૂરી છે?\n1. શૈક્ષણિક મનોવિજ્ઞાન\n2. શૈક્ષણિક વ્યવસ્થાપન\n3. સામાજિક પાસાંઓ\n4. વિદ્યાર્થીના વૃદ્ધિ-વિકાસની પ્રક્રિયા",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.3 શિક્ષણવ્યવહાર (પાના નં.: 2)",
+    "exp": "શિક્ષણવ્યવહાર દરમિયાન શિક્ષકે શૈક્ષણિક મનોવિજ્ઞાન, શૈક્ષણિક વ્યવસ્થાપન અને સામાજિક પાસાંઓને જાણવાં જરૂરી છે. ઉપરાંત વિદ્યાર્થીના વૃદ્ધિ-વિકાસની પ્રક્રિયા સમજીને આયોજન અને અમલ કરવાથી સરળતા અને સફળતા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 5: 'શિક્ષણવ્યવહારની લાક્ષણિકતાઓ' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શિક્ષણવ્યવહારમાં અધ્યયન પર વધારે ઝોક હોય છે અને અધ્યાપન તેને પૂરક હોય છે.",
+      "તે વિદ્યાર્થીની વયકક્ષા, અભિરુચિ અને વલણને અનુરૂપ હોય છે.",
+      "તેમાં શિક્ષકની ભૂમિકા નિયંત્રક, આદેશક અને મૂલ્યાંકનકર્તાની હોય છે.",
+      "તેમાં નિદાન, ઉપચારાત્મક શિક્ષણ તેમજ સમૃદ્ધિકરણ સાથે-સાથે થતું હોય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.3 શિક્ષણવ્યવહાર - લાક્ષણિકતા (પાના નં.: 3)",
+    "exp": "શિક્ષણવ્યવહારની લાક્ષણિકતા મુજબ શિક્ષક 'માર્ગદર્શક, પ્રેરક અને પ્રયોજક' હોય છે, નહીં કે નિયંત્રક કે આદેશક. બાકીનાં ત્રણેય વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: વર્ગવ્યવહારની પ્રસ્તાવના મુજબ નીચેનામાંથી કયું વિધાન સચોટ છે?",
+    "options": [
+      "વર્ગવ્યવહાર એ એકધ્રુવી પ્રક્રિયા છે, જેમાં 30 થી 35 મિનિટના તાસમાં માત્ર શાબ્દિક વ્યવહારો થાય છે.",
+      "વર્ગવ્યવહાર એ દ્વિધ્રુવી પ્રક્રિયા છે, જેમાં શિક્ષક અને વિદ્યાર્થી એમ બે સજીવ ધ્રુવો વચ્ચે 35 થી 40 મિનિટના તાસ દરમિયાન શાબ્દિક તેમજ અશાબ્દિક વ્યવહારો થાય છે.",
+      "વર્ગવ્યવહાર એ દ્વિધ્રુવી પ્રક્રિયા છે, જેમાં 45 થી 50 મિનિટના તાસ દરમિયાન માત્ર વ્યાખ્યાન દ્વારા સામાજિક માહોલનું નિર્માણ થાય છે.",
+      "વર્ગવ્યવહારમાં માત્ર વિદ્યાર્થી જ સજીવ ધ્રુવ હોવાથી લાગણીઓ માત્ર વિદ્યાર્થી પક્ષે જ અનુભવાય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર (પાના નં.: 3)",
+    "exp": "વર્ગવ્યવહાર એ દ્વિધ્રુવી પ્રક્રિયા છે જેમાં શિક્ષક અને વિદ્યાર્થી બંને સજીવ ધ્રુવો છે, જેથી લાગણીઓ બંને પક્ષે અનુભવાય છે. 35 થી 40 મિનિટના તાસ દરમિયાન બંને વચ્ચે અનેક પ્રકારના શાબ્દિક તેમજ અશાબ્દિક વ્યવહારો થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: વર્ગખંડનું શિક્ષણ કાર્ય વધારે અસરકારક અને જીવંત બને તે માટે વર્ગખંડમાં થતી ત્રણ પ્રકારની આંતરક્રિયાઓમાં કોનો સમાવેશ થતો નથી?",
+    "options": [
+      "શિક્ષક અને વિદ્યાર્થી વચ્ચે થતી આંતરક્રિયા",
+      "વિદ્યાર્થી અને વિદ્યાર્થી વચ્ચે થતી આંતરક્રિયા",
+      "વિદ્યાર્થી અને સામગ્રી (ઉદ્દીપકો) વચ્ચે થતી આંતરક્રિયા",
+      "શિક્ષક અને વાલી વચ્ચે થતી આંતરક્રિયા"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર (પાના નં.: 3)",
+    "exp": "વર્ગખંડમાં ત્રણ પ્રકારની આંતરક્રિયા થાય છે: (1) શિક્ષક-વિદ્યાર્થી, (2) વિદ્યાર્થી-વિદ્યાર્થી, અને (3) વિદ્યાર્થી-સામગ્રી (ઉદ્દીપકો). શિક્ષક-વાલી વચ્ચેનો વ્યવહાર સમગ્ર 'શિક્ષણવ્યવહાર' માં આવે છે, વર્ગખંડની આંતરક્રિયાના ત્રણ પ્રકારમાં નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 8: \"It is a ventilation to fatigue\" (\"પ્રસન્નતા એ થાક દૂર કરવા માટેની હવાબારી છે.\") — આ વિધાન મૉડ્યૂલમાં કયા સંદર્ભે ટાંકવામાં આવ્યું છે?",
+    "options": [
+      "વર્ગખંડમાં શિક્ષક અને વિદ્યાર્થીની સક્રિયતા અને પ્રસન્નતા એ જ શિક્ષણનો માપદંડ છે તે દર્શાવવા",
+      "વિદ્યાર્થીઓને શૈક્ષણિક પ્રવાસ-પર્યટન પર લઈ જવાનું મહત્વ દર્શાવવા",
+      "વર્ગખંડમાં રમતગમત અને કવાયત દ્વારા શારીરિક થાક દૂર કરવાના સંદર્ભે",
+      "35 થી 40 મિનિટના તાસ પછી રિસેસની આવશ્યકતા સમજાવવા"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર - શિક્ષક-વિદ્યાર્થી વ્યવહાર (પાના નં.: 4)",
+    "exp": "શિક્ષક-વિદ્યાર્થી વ્યવહાર અંતર્ગત જણાવાયું છે કે શિક્ષક અને વિદ્યાર્થીની વર્ગખંડમાંની સક્રિયતા અને પ્રસન્નતા એ જ શિક્ષણનો માપદંડ છે, તેથી જ પ્રસન્નતા માટે \"It is a ventilation to fatigue\" કહેવાયું છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: વર્ગખંડમાં 'શિક્ષક નિર્દેશિત અધ્યાપનનો સમયગાળો ખૂબ ઓછો રહે' તેની કાળજી શા માટે રાખવી જોઈએ?",
+    "options": [
+      "કારણ કે શિક્ષકનો અવાજ લાંબો સમય ટકી શકતો નથી",
+      "કારણ કે નાનાં બાળકોનો ધ્યાન વિસ્તાર ટૂંકો હોવાથી શિક્ષણ કાર્ય શિક્ષકકેન્દ્રી બની જાય તો તેમનું ધ્યાન પાઠમાં બહુ રહેતું નથી",
+      "કારણ કે અભ્યાસક્રમ ઝડપથી પૂર્ણ કરવા માટે સ્વ-અધ્યયન જ એકમાત્ર વિકલ્પ છે",
+      "કારણ કે શાળાના સમયપત્રકમાં શિક્ષકના કથન માટે નિશ્ચિત મર્યાદા નક્કી થયેલી હોય છે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર - શિક્ષક-વિદ્યાર્થી વ્યવહાર (પાના નં.: 4)",
+    "exp": "વર્ગખંડનું શિક્ષણ કાર્ય શિક્ષકકેન્દ્રી બની જાય તો નાનાં બાળકોનો ધ્યાન વિસ્તાર ટૂંકો હોવાથી બાળકોનું ધ્યાન તે પાઠમાં બહુ રહેતું નથી અને શિક્ષણવ્યવહાર ખોરવાય છે. આથી શિક્ષક નિર્દેશિત અધ્યાપનનો સમયગાળો ખૂબ ઓછો રાખવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 10: 'વિદ્યાર્થી-વિદ્યાર્થી વચ્ચેના વ્યવહાર' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "સરખી ઉંમર અને શારીરિક-માનસિક વિકાસમાં સામ્ય ધરાવતા વિદ્યાર્થીઓ 'સમોવડિયા' કહેવાય છે.",
+      "સમોવડિયા સાથે પરસ્પર મૂંઝવણોની રજૂઆત કરવાથી વિદ્યાર્થીઓમાં રહેલી લઘુતાગ્રંથિ દૂર થાય છે.",
+      "જૂથચર્ચા દરમિયાન વિદ્યાર્થી અધ્યેતા અને અધ્યાપક તરીકેની બેવડી ભૂમિકા ભજવે છે.",
+      "જૂથરચના કરતી વખતે શિક્ષકે એકમને બરાબર સમજેલા તમામ હોશિયાર વિદ્યાર્થીઓને એક જ અલગ જૂથમાં મૂકવા જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર - વિદ્યાર્થી-વિદ્યાર્થી વચ્ચે વ્યવહાર (પાના નં.: 4-5)",
+    "exp": "જૂથરચના કરતી વખતે શિક્ષકે કાળજી રાખવી જોઈએ કે જે-તે એકમને બરાબર સમજ્યા હોય તેવા એકાદ-બે વિદ્યાર્થી તો 'દરેક જૂથમાં' હોવા જ જોઈએ, જેથી જૂથના તમામ સભ્યો પરસ્પર શીખે અને શીખવાડે."
+  },
+  {
+    "q": "પ્રશ્ન 11: નીચેનામાંથી કઈ બાબત 'વિદ્યાર્થી-સામગ્રી વ્યવહાર' ની વિશિષ્ટતા દર્શાવે છે?",
+    "options": [
+      "અપરિચિત નવો એકમ સૌપ્રથમ વખત શીખવવા માટે આ વ્યવહાર અનિવાર્ય છે.",
+      "આ વ્યવહારમાં 'આટલું કહો, આટલું કરો, આટલું ચકાસો, મહાવરો, સ્વાધ્યાય' જેવી પ્રવૃત્તિઓ દ્વારા સ્વયંશિક્ષણની વધુ તક મળે છે અને અર્થગ્રહણ ચિરસ્મરણીય બને છે.",
+      "આ વ્યવહાર માત્ર વર્ગખંડની અંદર અને માત્ર વ્યક્તિગત રીતે જ થઈ શકે છે, જૂથમાં થઈ શકતો નથી.",
+      "આ વ્યવહારમાં શિક્ષકની કોઈ જ ભૂમિકા હોતી નથી કારણ કે વિદ્યાર્થી જાતે જ સામગ્રી પસંદ કરે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર - વિદ્યાર્થી-સામગ્રી વ્યવહાર (પાના નં.: 5)",
+    "exp": "વિદ્યાર્થી-સામગ્રી વ્યવહારમાં સ્વ-અધ્યયન અને સ્વયંશિક્ષણની વધુ તક મળે છે, જેનાથી અર્થગ્રહણ ચિરસ્મરણીય બને છે અને અધ્યયનમાં પૂર્ણ પારંગતતાની શક્યતા વધે છે. આ કાર્ય વર્ગખંડમાં કે વર્ગબહાર, વ્યક્તિગત કે ક્યારેક જૂથમાં પણ હોઈ શકે છે અને તે કાર્ય આપવાની તથા ચકાસવાની ભૂમિકા શિક્ષકની હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: વર્ગવ્યવહારના પ્રકારો અને તેમની મુખ્ય ઉપયોગીતા અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (વ્યવહારનો પ્રકાર): 1. શિક્ષક-વિદ્યાર્થી વ્યવહાર | 2. વિદ્યાર્થી-વિદ્યાર્થી વ્યવહાર | 3. વિદ્યાર્થી-સામગ્રી વ્યવહાર\nવિભાગ-બ (મુખ્ય ઉપયોગીતા): (i) અર્થગ્રહણ ચિરસ્મરણીય બનાવવા અને અધ્યયનની કચાશ જાતે ઓળખવા | (ii) અપરિચિત નવી વિષયવસ્તુ શીખવવા અને વિષય પ્રતિ અભિમુખ કરવા | (iii) શીખવેલ મુદ્દાનું વ્યવસ્થિત અર્થગ્રહણ કરવા અને મૌલિક અભિવ્યક્તિ ખીલવવા",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર (પાના નં.: 3-5)",
+    "exp": "અપરિચિત વિષયવસ્તુ શીખવવા 'શિક્ષક-વિદ્યાર્થી વ્યવહાર', ત્યારબાદ વ્યવસ્થિત અર્થગ્રહણ અને મૌલિક અભિવ્યક્તિ માટે 'વિદ્યાર્થી-વિદ્યાર્થી વ્યવહાર', અને સ્વ-અધ્યયન દ્વારા અર્થગ્રહણ ચિરસ્મરણીય બનાવવા 'વિદ્યાર્થી-સામગ્રી વ્યવહાર' ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: શિક્ષક-વિદ્યાર્થીના વર્ગવ્યવહારના 10 ઘટકો દર્શાવનાર પ્રો. નેડ ફ્લેન્ડર્સ કઈ યુનિવર્સિટી સાથે સંકળાયેલા હતા?",
+    "options": [
+      "સ્ટેનફર્ડ યુનિવર્સિટી, કેલિફોર્નિયા",
+      "મિશિગન સ્ટેટ યુનિવર્સિટી",
+      "હાર્વર્ડ યુનિવર્સિટી",
+      "શિકાગો યુનિવર્સિટી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 6)",
+    "exp": "મિશિગન સ્ટેટ યુનિવર્સિટીના પ્રો. નેડ ફ્લેન્ડર્સે શિક્ષક-વિદ્યાર્થીના વર્ગવ્યવહારના 10 ઘટકો દર્શાવ્યા છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: પ્રો. નેડ ફ્લેન્ડર્સના વર્ગવ્યવહારના વર્ગીકરણના માળખા મુજબ વર્ગવ્યવહારને મુખ્ય કયા બે વિભાગોમાં વહેંચવામાં આવે છે?",
+    "options": [
+      "શિક્ષકની વાતચીત અને વિદ્યાર્થીની વાતચીત",
+      "શિક્ષકની પરોક્ષ અસર અને શિક્ષકની પ્રત્યક્ષ અસર",
+      "વાતચીત અને શાંતિ (મૂંઝવણ)",
+      "શાબ્દિક વ્યવહાર અને અશાબ્દિક વ્યવહાર"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 6)",
+    "exp": "ફ્લેન્ડર્સના વર્ગીકરણમાં વર્ગવ્યવહારને મુખ્ય બે વિભાગોમાં વહેંચવામાં આવે છે: (1) વાતચીત અને (2) શાંતિ (મૂંઝવણ). ત્યારબાદ 'વાતચીત' ને શિક્ષકની વાતચીત અને વિદ્યાર્થીની વાતચીત એમ બે પેટા વિભાગોમાં વહેંચવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: વર્ગખંડમાં એક વિદ્યાર્થી પ્રશ્નનો ખોટો જવાબ આપે છે. શિક્ષક તેને દંડ કરવાને બદલે નમ્રતાથી કહે છે કે, \"ચાલો, ફરીથી સમજાવું\" અને બોર્ડમાં આકૃતિ દોરીને વધુ ઉદાહરણો આપે છે. ફ્લેન્ડર્સના વર્ગીકરણ મુજબ આ વર્તન કયા ઘટક હેઠળ આવશે?",
+    "options": [
+      "ઘટક-2 : વખાણ-પ્રોત્સાહન",
+      "ઘટક-3 : વિચારનો સ્વીકાર",
+      "ઘટક-1 : લાગણીનો સ્વીકાર",
+      "ઘટક-5 : વ્યાખ્યાન-કથન"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 6)",
+    "exp": "'લાગણીનો સ્વીકાર' (ઘટક-1) માં શિક્ષક વિદ્યાર્થી ખોટો હોય છતાં દંડ ન કરતાં તેના વ્યવહારને સમજે છે અને યોગ્ય લાગણીદર્શક શબ્દોથી (\"ચાલો, ફરીથી સમજાવું\", બોર્ડમાં આકૃતિ દોરીને કે વધુ ઉદાહરણો આપીને) સમજણ આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: નેડ ફ્લેન્ડર્સના વર્ગવ્યવહારના ઘટકો અને તેમના નિશ્ચિત ક્રમ અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (ઘટક નંબર): 1. ઘટક નં. 3 | 2. ઘટક નં. 4 | 3. ઘટક નં. 6 | 4. ઘટક નં. 9\nવિભાગ-બ (ઘટકનું નામ): (i) સૂચના આપવી | (ii) વિચારનો સ્વીકાર | (iii) પહેલ કરે | (iv) પ્રશ્નો પૂછવા",
+    "options": [
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)",
+      "1-(iv), 2-(ii), 3-(i), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)",
+      "1-(i), 2-(iv), 3-(ii), 4-(iii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 6)",
+    "exp": "ફ્લેન્ડર્સના 10 ઘટકોના ક્રમ મુજબ: ઘટક-3 = વિચારનો સ્વીકાર, ઘટક-4 = પ્રશ્નો પૂછવા, ઘટક-6 = સૂચના આપવી, અને ઘટક-9 = (વિદ્યાર્થી) પહેલ કરે."
+  },
+  {
+    "q": "પ્રશ્ન 17: નેડ ફ્લેન્ડર્સના વર્ગીકરણમાં 'શિક્ષકની પરોક્ષ અસર' અને 'શિક્ષકની પ્રત્યક્ષ અસર' માં અનુક્રમે કયા ઘટક નંબરોનો સમાવેશ થાય છે?",
+    "options": [
+      "પરોક્ષ અસર: 1 થી 3 | પ્રત્યક્ષ અસર: 4 થી 7",
+      "પરોક્ષ અસર: 1 થી 4 | પ્રત્યક્ષ અસર: 5 થી 7",
+      "પરોક્ષ અસર: 5 થી 7 | પ્રત્યક્ષ અસર: 1 થી 4",
+      "પરોક્ષ અસર: 1 થી 5 | પ્રત્યક્ષ અસર: 6 થી 8"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 6-7)",
+    "exp": "શિક્ષકની પરોક્ષ અસરમાં ઘટક 1 થી 4 (લાગણીનો સ્વીકાર, વખાણ-પ્રોત્સાહન, વિચારનો સ્વીકાર, પ્રશ્નો પૂછવા) અને શિક્ષકની પ્રત્યક્ષ અસરમાં ઘટક 5 થી 7 (વ્યાખ્યાન-કથન, સૂચના આપવી, ટીકા કરવી-સત્તા સ્થાપિત કરવી) નો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: વર્ગખંડમાં શિક્ષક વિદ્યાર્થીઓને કહે છે: (1) \"આકૃતિ દોરો, અવાજ ન કરો\" અને (2) \"તારા કરતાં મને વધારે ખબર છે! બેસી જા છાનું માનું.\" ફ્લેન્ડર્સના વર્ગીકરણ મુજબ આ બંને વિધાનો અનુક્રમે કયા ઘટકો સૂચવે છે?",
+    "options": [
+      "ઘટક-5 અને ઘટક-7",
+      "ઘટક-6 અને ઘટક-7",
+      "ઘટક-7 અને ઘટક-6",
+      "ઘટક-4 અને ઘટક-7"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 7)",
+    "exp": "\"આકૃતિ દોરો, અવાજ ન કરો\" એ ઘટક-6 (સૂચના આપવી) નું ઉદાહરણ છે, જ્યારે \"તારા કરતાં મને વધારે ખબર છે! બેસી જા છાનું માનું\" એ ઘટક-7 (ટીકા કરવી-સત્તા સ્થાપિત કરવી) નું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: ફ્લેન્ડર્સના વર્ગીકરણમાં 'વિદ્યાર્થીની વાતચીત' અંગે નીચેના વિધાનો ધ્યાનમાં લો:\nવિધાન 1: ઘટક-8 (જવાબ આપે) માં શિક્ષક જે વિદ્યાર્થીને પૂછે તેણે જ અને જેટલું પૂછે તેટલું જ ઉત્તરમાં જણાવવાનું હોય છે.\nવિધાન 2: ઘટક-9 (પહેલ કરે) માં વિદ્યાર્થી પોતાની અસ્પષ્ટતા કે સંદિગ્ધ બાબતો સ્પષ્ટ કરવાના હેતુથી શિક્ષકને પ્રશ્નો પૂછે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 8)",
+    "exp": "વિદ્યાર્થીની વાતચીતના બંને ઘટકો અંગેનાં આપેલાં બંને વિધાનો મૉડ્યૂલ મુજબ સંપૂર્ણપણે સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: ફ્લેન્ડર્સના ઘટક-10 'શાંતિ (મૂંઝવણ)' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ ઘટકમાં શિક્ષક અને વિદ્યાર્થીઓ થોડા સમય માટે એકદમ શાંત થઈ જાય છે.",
+      "શિક્ષક કોઈ મૂંઝવણમાં મૂકાઈ જાય કે પ્રશ્નો પૂછવા અંગે વિચારે તેનો સમાવેશ આ ઘટકમાં થાય છે.",
+      "એકધાર્યા વ્યાખ્યાનથી વિદ્યાર્થીઓ કંટાળી ન જાય અને સક્રિયતા આવે તે માટે પણ થોડી શાંતિની સ્થિતિ લાવવામાં આવે છે.",
+      "આ ઘટક માત્ર વિદ્યાર્થીઓના અશિસ્ત કે ગેરવર્તન સમયે જ નોંધવામાં આવે છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના ઘટકો (પાના નં.: 8)",
+    "exp": "ઘટક-10 માં શિક્ષક કે વિદ્યાર્થી વિચારવા લાગે, મૂંઝવણમાં મૂકાય, વિદ્યાર્થીઓને વિચારવાનું કહે અથવા એકધાર્યા વ્યાખ્યાન વચ્ચે સક્રિયતા લાવવા શાંતિ રાખે તેનો સમાવેશ થાય છે; તે માત્ર અશિસ્ત પૂરતું મર્યાદિત નથી."
+  },
+  {
+    "q": "પ્રશ્ન 21: પ્રો. ફ્લેન્ડર્સની વર્ગવ્યવહાર નોંધવાની પદ્ધતિમાં દર ત્રણ સેકન્ડે ઘટક નંબર નોંધવામાં આવે છે. જો શિક્ષક વર્ગખંડમાં સતત 1 મિનિટ સુધી કથન (વ્યાખ્યાન) કરે, તો અવલોકનકાર ઘટક નંબર 5 કેટલી વખત નોંધશે?",
+    "options": [
+      "15 વખત",
+      "20 વખત",
+      "30 વખત",
+      "60 વખત"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર નોંધવાના સોપાનો (પાના નં.: 8)",
+    "exp": "1 મિનિટ = 60 સેકન્ડ. દર 3 સેકન્ડે એક ઘટક નોંધવામાં આવે છે, તેથી 60 ÷ 3 = 20 વખત ઘટક નંબર 5 નોંધવો પડે. આ ઉદાહરણ મૉડ્યૂલમાં સ્પષ્ટપણે આપેલું છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: વર્ગવ્યવહાર નોંધવાના સોપાનોનો સાચો ક્રમ પસંદ કરો:\n1. અવલોકન પત્રકમાં નોંધ\n2. ઘટકો કંઠસ્થ કરવા\n3. ઘટકોનું પૃથક્કરણ અને અર્થઘટન\n4. સમય (ત્રણ સેકન્ડ) નો ખ્યાલ રાખવો\n5. વર્ગવ્યવહારના ઘટકોની સાંકળ બનાવવી",
+    "options": [
+      "2 → 4 → 5 → 1 → 3",
+      "4 → 2 → 5 → 1 → 3",
+      "2 → 5 → 4 → 1 → 3",
+      "2 → 4 → 1 → 5 → 3"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર નોંધવાના સોપાનો (પાના નં.: 8-9)",
+    "exp": "વર્ગવ્યવહાર નોંધવાના પાંચ સોપાનોનો સાચો ક્રમ છે: (1) ઘટકો કંઠસ્થ કરવા → (2) સમય (ત્રણ સેકન્ડ) નો ખ્યાલ રાખવો → (3) વર્ગવ્યવહારના ઘટકોની સાંકળ બનાવવી → (4) અવલોકન પત્રકમાં નોંધ → (5) ઘટકોનું પૃથક્કરણ અને અર્થઘટન."
+  },
+  {
+    "q": "પ્રશ્ન 23: ફ્લેન્ડર્સની પદ્ધતિમાં ઘટકોની સાંકળ અને અવલોકન પત્રકમાં નોંધ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: ઘટકોની સાંકળ તૈયાર કરતી વખતે સાંકળની આગળ અને પાછળ ઘટક નંબર 10 નોંધવામાં આવે છે.\nવિધાન 2: અવલોકન પત્રકમાં દરેક ઘટકની કુલ સંખ્યા મેળવતી વખતે ઘટક નંબર 10 ની કુલ સંખ્યામાંથી એક માત્રા ઘટાડવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર નોંધવાના સોપાનો (પાના નં.: 9)",
+    "exp": "જોડ (Pair) બનાવવા માટે સાંકળની આગળ અને પાછળ ઘટક નંબર 10 અગાઉથી નોંધવામાં આવે છે, અને તેથી જ અવલોકન પત્રકમાં ઘટક નંબર 10 ની કુલ સંખ્યામાંથી એક માત્રા ઘટાડવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: નીચેનામાંથી કયો વિકલ્પ 'વર્ગવ્યવહારના શૈક્ષણિક ફલિતાર્થો' માં સમાવિષ્ટ નથી?",
+    "options": [
+      "વર્ગવ્યવહારના અર્થઘટન પરથી શિક્ષકને પોતાના વર્તન-વ્યવહારોનું મૂલ્યાંકન કરવાની તક રહે છે.",
+      "શિક્ષકની પ્રત્યક્ષ અને પરોક્ષ અસરના આધારે તેની માત્રામાં યોગ્ય વધઘટ કરી શકાય છે.",
+      "વર્ગવ્યવહારના વિશ્લેષણ દ્વારા શિક્ષકની સત્તા સ્થાપિત કરી વર્ગમાં કડક બાહ્ય શિસ્ત લાદી શકાય છે.",
+      "વર્ગવ્યવહારના વિશ્લેષણ દ્વારા વર્ગમાં સામાજિક વાતાવરણ ઊભું કરીને તંદુરસ્ત વલણો કેળવી શકાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહારના શૈક્ષણિક ફલિતાર્થો (પાના નં.: 10)",
+    "exp": "વર્ગવ્યવહારના વિશ્લેષણનો ફલિતાર્થ કડક બાહ્ય શિસ્ત કે સત્તા સ્થાપિત કરવાનો નથી, પરંતુ વિદ્યાર્થીઓને કેન્દ્રમાં રાખી તેમની ક્રિયાશીલતાને ન્યાય આપવાનો અને પારસ્પરિક સંબંધો વિકસાવવાનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: વર્ગવ્યવહારને અસરકારક બનાવવા માટે શિક્ષકે લક્ષમાં રાખવાની બાબતો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "વર્ગવ્યવહારના ઘટકોમાં 'પરોક્ષ અસરવાળા' ઘટકોનો ઉપયોગ વધારે કરવો.",
+      "શિક્ષકે વર્ગવ્યવહાર દરમિયાન ઓછામાં ઓછું બોલવું અને વિદ્યાર્થીઓને વધારેમાં વધારે બોલતા કરવા.",
+      "વર્ગવ્યવહારમાં શારીરિક શિક્ષાને સ્થાન ન આપવું, પરંતુ મુક્ત અને સ્વયંશિસ્ત ઊભી કરવી.",
+      "શિક્ષકે વર્ગમાં વિદ્યાર્થીઓની રુચિ જાળવવા માટે પોતાની સ્વપ્રશંસા અને આયોજન બહારની રમૂજી વાતો કરવી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર અસરકારક કેવી રીતે બને? (પાના નં.: 11)",
+    "exp": "મૉડ્યૂલ મુજબ શિક્ષકે વિદ્યાર્થીઓ સમક્ષ આયોજન મુજબ જ શિક્ષણ કાર્ય કરવું જોઈએ અને નિરર્થક વાતો કે સ્વપ્રશંસામાં સમય બગાડવો જોઈએ નહીં. બાકીનાં ત્રણેય વિધાનો અસરકારક વર્ગવ્યવહાર માટે યોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: વર્ગખંડની પ્રક્રિયાને 'ત્રિધ્રુવીય' શા માટે કહેવામાં આવે છે?",
+    "options": [
+      "કારણ કે તેમાં શિક્ષક, વિદ્યાર્થી અને વાલી એમ ત્રણ ધ્રુવો સક્રિય હોય છે",
+      "કારણ કે તેમાં શિક્ષક અને વિદ્યાર્થી ઉપરાંત શૈક્ષણિક સાધન-સામગ્રી પણ મહત્ત્વનો ભાગ ભજવે છે",
+      "કારણ કે તેમાં આયોજન, અમલીકરણ અને મૂલ્યાંકન એમ ત્રણ તબક્કા હોય છે",
+      "કારણ કે તેમાં શિક્ષક, આચાર્ય અને વિદ્યાર્થી વચ્ચે આંતરક્રિયા થાય છે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.4 વર્ગવ્યવહાર (પાના નં.: 12)",
+    "exp": "વર્ગખંડની પ્રક્રિયા માત્ર બે ધ્રુવ—શિક્ષક અને વિદ્યાર્થી—વચ્ચે મર્યાદિત નથી, પરંતુ વિદ્યાર્થીની આસપાસ શિક્ષક ઉપરાંત શૈક્ષણિક સાધન-સામગ્રી પણ રહેલી હોવાથી વર્ગખંડની પ્રક્રિયા ત્રિધ્રુવીય બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 27: માઈક્રોટીચિંગના ઉદ્ભવ અને વ્યાખ્યા અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: અધ્યાપન કૌશલ્યમાં પારંગતતા મેળવવા માટે માઈક્રોટીચિંગની સૌપ્રથમ વાત ડ્વાઈટ એલને ઈ.સ. 1963માં કરી હતી.\nવિધાન 2: ઈ.સ. 1968માં એલન અને ઈવે માઈક્રોટીચિંગની સૌપ્રથમ વ્યાખ્યા આપી હતી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.5 માઈક્રોટીચિંગ (પાના નં.: 12)",
+    "exp": "માઈક્રોટીચિંગની સૌપ્રથમ વાત ડ્વાઈટ એલને 1963માં કરી અને 1968માં એલન અને ઈવે તેની સૌપ્રથમ વ્યાખ્યા આપી હતી. તેથી બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: માઈક્રોટીચિંગની વ્યાખ્યાના મુખ્ય શબ્દો અને તેના પ્રણેતાઓ અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રણેતા અને વર્ષ): 1. એલન અને ઈવ (1968) | 2. બુશ (1968) | 3. ડૉ. કુલકર્ણી (1986)\nવિભાગ-બ (વ્યાખ્યાનો મુખ્ય અંશ): (i) \"એક સિમ્યુલેશન અથવા વાસ્તવિક પરિસ્થિતિ જેવી પરિસ્થિતિ છે...\" | (ii) \"એક નિયંત્રિત વ્યવહાર પદ્ધતિ છે કે જે વિશિષ્ટ શિક્ષણ વ્યવહાર પર ધ્યાન કેન્દ્રિત કરે છે...\" | (iii) \"પાંચ થી દસ મિનિટમાં કાળજીપૂર્વક આયોજન પામેલા પાઠોને... વીડિયો ટેપ પર જોવાની તક પૂરી પાડે છે.\"",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.5 માઈક્રોટીચિંગ (પાના નં.: 12)",
+    "exp": "એલન અને ઈવ (1968) મુજબ તે 'નિયંત્રિત વ્યવહાર પદ્ધતિ' છે, બુશ (1968) મુજબ તેમાં '5 થી 10 મિનિટ અને વીડિયો ટેપ' નો ઉલ્લેખ છે, અને ડૉ. કુલકર્ણી (1986) મુજબ તે 'સિમ્યુલેશન અથવા વાસ્તવિક પરિસ્થિતિ જેવી પરિસ્થિતિ' છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: માઈક્રોટીચિંગમાં 'સૂક્ષ્મ' (Micro) શું છે? તે સંદર્ભે નીચેનામાંથી કયો વિકલ્પ અયોગ્ય છે?",
+    "options": [
+      "પાઠની સમય મર્યાદા: 5 થી 7 મિનિટ",
+      "વિષયવસ્તુ: કોઈ એક નાનો ખ્યાલ (એકમ)",
+      "વિદ્યાર્થીઓની સંખ્યા: 5 થી 7 વિદ્યાર્થી જૂથ",
+      "અધ્યાપન કૌશલ્ય: એકસાથે 2 થી 3 અધ્યાપન કૌશલ્યો પર ધ્યાન કેન્દ્રિત"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.5 માઈક્રોટીચિંગ (પાના નં.: 12-13)",
+    "exp": "માઈક્રોટીચિંગમાં ફક્ત 'એક જ' અધ્યાપન કૌશલ્ય પર ધ્યાન કેન્દ્રિત કરવામાં આવે છે, 2 થી 3 કૌશલ્યો પર નહીં. બાકીના ત્રણેય વિકલ્પો સાચા છે."
+  },
+  {
+    "q": "પ્રશ્ન 30: મૉડ્યૂલમાં દર્શાવેલ માઈક્રોટીચિંગના 'સૂક્ષ્મચક્ર' ના સોપાનો અને તેમના સમયગાળા અંગે કયો વિકલ્પ યોગ્ય નથી?",
+    "options": [
+      "શિક્ષણ કાર્ય : 5 થી 7 મિનિટ",
+      "પ્રતિપુષ્ટિ : 6 મિનિટ",
+      "પુનઃ આયોજન : 12 મિનિટ",
+      "પુનઃ પ્રતિપુષ્ટિ : 6 મિનિટ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.5 માઈક્રોટીચિંગ (પાના નં.: 13)",
+    "exp": "મૉડ્યૂલની આકૃતિ (સૂક્ષ્મચક્ર) મુજબ સોપાનોનો સમયગાળો આ મુજબ છે: (1) સૂક્ષ્મ પાઠનું આયોજન → (2) શિક્ષણ કાર્ય (5 થી 7 મિનિટ) → (3) પ્રતિપુષ્ટિ (6 મિનિટ) → (4) પુનઃ આયોજન (10 મિનિટ) → (5) પુનઃ શિક્ષણ (5 થી 7 મિનિટ) → (6) પુનઃ પ્રતિપુષ્ટિ (6 મિનિટ)."
+  },
+  {
+    "q": "પ્રશ્ન 31: માઈક્રોટીચિંગના સોપાનો અંગે નીચેના વિધાનો ધ્યાનમાં લો:\nવિધાન 1: શિક્ષણ કાર્યમાં પ્રશિક્ષણાર્થી 5 થી 7 વિદ્યાર્થી (કોઈ વખત સહાધ્યાયી) સમક્ષ વિષયવસ્તુની રજૂઆત કરે છે.\nવિધાન 2: જો પાઠનું વિડિઓ રેકોર્ડિંગ થયું હોય, તો પ્રશિક્ષણાર્થી વિડિઓ રેકોર્ડિંગ જોઈને 'સ્વ પ્રતિપોષણ' પણ પ્રાપ્ત કરી શકે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.5.2 અને 1.5.3 (પાના નં.: 13)",
+    "exp": "માઈક્રોટીચિંગના 'શિક્ષણ કાર્ય' અને 'પ્રતિપુષ્ટિ' સોપાન અંગેનાં બંને વિધાનો મૉડ્યૂલ મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: અધ્યાપન કાર્ય દરમિયાન શિક્ષક દ્વારા થતાં વર્તનોમાં નીચેનામાંથી કયું જૂથ માત્ર 'અશાબ્દિક વર્તનો' દર્શાવે છે?",
+    "options": [
+      "સ્મિત કરવું, હકારમાં માથું હલાવવું, વર્ગખંડમાં હલનચલન કરવું",
+      "સ્મિત કરવું, વાણીમાં આરોહ-અવરોહ લાવવો, નકારમાં માથું હલાવવું",
+      "પ્રશ્નો પૂછવા, કથન કરવું, વિદ્યાર્થીને પ્રોત્સાહન આપવું",
+      "હકારમાં માથું હલાવવું, કથન કરવું, વર્ગખંડમાં હલનચલન કરવું"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.6 અધ્યાપન કૌશલ્યો (પાના નં.: 14)",
+    "exp": "સ્મિત કરવું, હકારમાં કે નકારમાં માથું હલાવવું, વર્ગખંડમાં હલનચલન કરવું વગેરે 'અશાબ્દિક વર્તનો' છે. જ્યારે પ્રશ્નો પૂછવા, કથન કરવું, વાણીમાં આરોહ-અવરોહ લાવવો અને પ્રોત્સાહન આપવું એ 'શાબ્દિક વર્તનો' છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: 'અધ્યાપન કૌશલ્ય' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "અધ્યાપન કાર્યને અસરકારક બનાવવા માટે શિક્ષક દ્વારા થતાં વર્તનોના વિશિષ્ટ સમૂહને અધ્યાપન કૌશલ્ય કહેવાય છે.",
+      "શિક્ષકનાં વર્તનો વિદ્યાર્થીના વર્તનમાં અપેક્ષિત પરિવર્તન લાવવાના હેતુથી થાય છે.",
+      "અધ્યાપન કૌશલ્ય એ જન્મજાત ગુણ છે, તેને મહાવરાનાં પરિણામે હસ્તગત કરી શકાતું નથી.",
+      "અધ્યાપન કૌશલ્યોનું અવલોકન અને મૂલ્યાંકન કરી શકાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.6 અધ્યાપન કૌશલ્યો (પાના નં.: 14)",
+    "exp": "મૉડ્યૂલ મુજબ 'મહાવરાનાં પરિણામે અધ્યાપન કૌશલ્યને હસ્તગત કરી શકાય છે' તેમજ તેનું અવલોકન અને મૂલ્યાંકન પણ કરી શકાય છે. તેથી વિધાન (C) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: ભારતમાં વર્ગશિક્ષણની પ્રક્રિયાને જુદા જુદા અધ્યાપન કૌશલ્યોમાં પૃથક્કરણ કરવાનું કાર્ય કઈ સંસ્થા દ્વારા કરવામાં આવ્યું છે?",
+    "options": [
+      "રાષ્ટ્રીય શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ (NCERT), નવી દિલ્હી",
+      "મહારાજા સયાજીરાવ યુનિવર્સિટીના ઈન્સ્ટિટ્યૂટ ઓફ એડવાન્સ સ્ટડીઝ ઈન એજ્યુકેશન (IASE)",
+      "ગુજરાત શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ (GCERT), ગાંધીનગર",
+      "સરદાર પટેલ યુનિવર્સિટીનો અનુસ્નાતક શિક્ષણ વિભાગ, વલ્લભ વિદ્યાનગર"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7 અધ્યાપન કૌશલ્યોના પ્રકારો (પાના નં.: 15)",
+    "exp": "વિદેશમાં સ્ટેનફર્ડ યુનિવર્સિટી કેલિફોર્નિયા, ફ્લેન્ડર્સ તેમજ ઈન્સ્ટિટ્યૂટ ફોર ટીચર એજ્યુકેશન દ્વારા અને ભારતમાં 'મહારાજા સયાજીરાવ યુનિવર્સિટીના ઈન્સ્ટિટ્યૂટ ઓફ એડવાન્સ સ્ટડીઝ ઈન એજ્યુકેશન (IASE)' દ્વારા અધ્યાપન કૌશલ્યોના પૃથક્કરણનું કાર્ય થયેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 35: મૉડ્યૂલમાં દર્શાવેલ કુલ 22 અધ્યાપન કૌશલ્યોની યાદીમાં નીચેનામાંથી કયા કૌશલ્યનો સમાવેશ થતો નથી?",
+    "options": [
+      "સંલગ્નતા કૌશલ્ય",
+      "પાઠગતિ કૌશલ્ય",
+      "આયોજિત પુનરાવર્તન કૌશલ્ય",
+      "મૂલ્યાંકન કસોટી નિર્માણ કૌશલ્ય"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7 અધ્યાપન કૌશલ્યોના પ્રકારો (પાના નં.: 15)",
+    "exp": "પાના નં. 15 પર આપેલ 22 અધ્યાપન કૌશલ્યોની યાદીમાં સંલગ્નતા કૌશલ્ય (8), પાઠગતિ કૌશલ્ય (17) અને આયોજિત પુનરાવર્તન કૌશલ્ય (21) નો સમાવેશ થાય છે, પરંતુ 'મૂલ્યાંકન કસોટી નિર્માણ કૌશલ્ય' નો સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 36: 'વિષયાભિમુખ કૌશલ્ય' ના ઉદ્દેશોમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. પ્રશિક્ષણાર્થીઓ નવીન જ્ઞાન મેળવવા તત્પર બને.\n2. પ્રશિક્ષણાર્થીઓનું અપેક્ષિત પૂર્વજ્ઞાન ચકાસી નવીન જ્ઞાન સાથે અનુસંધાન સાધવું.\n3. પ્રશિક્ષણાર્થીઓના પૂર્વજ્ઞાન અને નવીન જ્ઞાન વચ્ચેના અંતરને ઘટાડવું.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 તમામ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 16)",
+    "exp": "વિષયાભિમુખ કૌશલ્યના આપેલા ત્રણેય ઉદ્દેશો મૉડ્યૂલમાં સ્પષ્ટપણે દર્શાવેલા છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: વિષયાભિમુખ કૌશલ્યમાં 'વિદ્યાર્થીઓના પૂર્વજ્ઞાનનો ઉપયોગ' અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: બાળક એ કોરી સ્લેટ નથી, તેની પાસે ઘર, મિત્રો, સમાજ અને વાતાવરણમાંથી મેળવેલા અનુભવોનું ભાથું રહેલું હોય છે.\nવિધાન 2: જૂના જ્ઞાનમાં નવા જ્ઞાનનો ઉમેરો થાય છે અને પછી ઉમેરાવાળું જ્ઞાન હવે પછીના નવા જ્ઞાન માટે પૂર્વજ્ઞાન બને છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 17)",
+    "exp": "બાળક કોરી સ્લેટ નથી પરંતુ પૂર્વાનુભવોનું ભાથું ધરાવે છે અને નવા જ્ઞાનના ઉમેરા બાદ તે જ્ઞાન આગળના નવા જ્ઞાન માટે પૂર્વજ્ઞાન બને છે—આ બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: વિષયાભિમુખ કૌશલ્યમાં 'વાર્તા દ્વારા' પ્રયુક્તિ માટે મૉડ્યૂલમાં આપેલા ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (શીખવવાનો મુદ્દો): 1. શરીરની સ્વચ્છતા | 2. સંખ્યા જ્ઞાન : 1 થી 5 | 3. સ્વાતંત્ર્ય દિન\nવિભાગ-બ (વાર્તાનું નામ): (i) શહીદ ભગતસિંહની વાર્તા | (ii) ગંદી ઉંદરડીની વાર્તા | (iii) ટચુકભાઈની વાર્તા",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 18)",
+    "exp": "મૉડ્યૂલ મુજબ 'શરીરની સ્વચ્છતા' માટે 'ગંદી ઉંદરડી'ની વાર્તા, 'સંખ્યા જ્ઞાન: 1 થી 5' માટે 'ટચુકભાઈની વાર્તા' અને 'સ્વાતંત્ર્ય દિન' માટે 'શહીદ ભગતસિંહ'ની વાર્તા કહી શકાય."
+  },
+  {
+    "q": "પ્રશ્ન 39: વિષયાભિમુખ કૌશલ્યની પ્રયુક્તિઓના સંદર્ભમાં નીચેનામાંથી કઈ જોડ યોગ્ય નથી?",
+    "options": [
+      "ગણન પ્રક્રિયા શીખવવા — 'કેટલા રે કેટલા' રમત",
+      "શરીરનાં અંગોની જાણકારી આપવા — 'ગાંધીજી કહે' રમત",
+      "શરીરનાં અંગોનાં કાર્યો શીખવવા — 'નાની મારી આંખ' ગીત",
+      "રાજા અશોકની મહાનતા શીખવવા — 'રોલ પ્લે કે નાટ્યીકરણ' પ્રયુક્તિ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 18-19)",
+    "exp": "મૉડ્યૂલમાં 'રાજા અશોકની મહાનતા' શીખવવા માટે 'કથન, વ્યાખ્યાન કે વર્ણન દ્વારા' પ્રયુક્તિનું ઉદાહરણ આપવામાં આવ્યું છે, જ્યારે રોલ પ્લે કે નાટ્યીકરણ માટે 'ગ્રામપંચાયતના સરપંચ, પોસ્ટમેન' નું ઉદાહરણ આપેલું છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: વિષયાભિમુખ કૌશલ્યમાં શિક્ષકે કયાં બે 'અનિચ્છનીય વર્તનો' ટાળવાં જોઈએ?",
+    "options": [
+      "પૂર્વજ્ઞાનનો ઉપયોગ અને યોગ્ય પ્રયુક્તિનો ઉપયોગ",
+      "સાતત્યભંગનું વર્તન અને કૃત્રિમ રીતે મથાળું કઢાવવું",
+      "પ્રશ્નોનું પુનરાવર્તન અને ઉત્તરોનું પુનરાવર્તન",
+      "નકારાત્મક શાબ્દિક સુદૃઢકો અને અશાબ્દિક સુદૃઢકો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 20)",
+    "exp": "વિષયાભિમુખ કૌશલ્યમાં (1) સાતત્યભંગનું વર્તન અને (2) કૃત્રિમ રીતે મથાળું કઢાવવું—આ બે અનિચ્છનીય વર્તનો ટાળવાં જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 41: એક શિક્ષક વર્ગખંડમાં પાણીનું ટીપું પાડીને વિદ્યાર્થીઓને પૂછે છે, \"આને શું કહેવાય?\" વિદ્યાર્થી 'ટીપું' જવાબ આપે એટલે શિક્ષક કહે છે, \"તો આજે આપણે 'ટીપુ સુલતાન' વિશે શીખીશું.\" — આ પ્રસંગ વિષયાભિમુખ કૌશલ્યનું કયું અનિચ્છનીય વર્તન દર્શાવે છે?",
+    "options": [
+      "સાતત્યભંગનું વર્તન",
+      "કૃત્રિમ રીતે મથાળું કઢાવવું",
+      "અટકળ પોષક પ્રશ્ન",
+      "પડઘા પ્રશ્ન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.1 વિષયાભિમુખ કૌશલ્ય (પાના નં.: 20-21)",
+    "exp": "એકમનું હાર્દ સમજ્યા વિના માત્ર શબ્દો જોડીને કે હાસ્યાસ્પદ રીતે એકમનું નામ કઢાવવું ('ટીપું' પરથી 'ટીપુ સુલતાન') એ 'કૃત્રિમ રીતે મથાળું કઢાવવું' નામનું અનિચ્છનીય વર્તન છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: \"પ્રશ્ન સૌથી ઉત્તમ ઉત્તેજક છે અને શિક્ષકને તરત જ ઉપલબ્ધ છે.\" — આ વિધાન કયા વિદ્વાનનું છે?",
+    "options": [
+      "સૉક્રેટિસ",
+      "કૅલ્વિન",
+      "ડ્વાઈટ એલન",
+      "નેડ ફ્લેન્ડર્સ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 21)",
+    "exp": "પ્રશ્ન પ્રવાહિતા કૌશલ્યમાં જણાવાયું છે કે સૉક્રેટિસના જમાનાથી પ્રશ્નોત્તર પ્રયુક્તિનો ઉપયોગ થતો રહ્યો છે અને 'કૅલ્વિનના મતે, પ્રશ્ન સૌથી ઉત્તમ ઉત્તેજક છે અને શિક્ષકને તરત જ ઉપલબ્ધ છે.'"
+  },
+  {
+    "q": "પ્રશ્ન 43: 'પ્રશ્ન પ્રવાહિતા કૌશલ્ય' માં નીચેનામાંથી કઈ ત્રણ બાબતો મહત્ત્વની ગણવામાં આવી છે?",
+    "options": [
+      "પ્રશ્નોનો સમયગાળો મર્યાદિત હોય, પ્રશ્નો અર્થપૂર્ણ હોય, પ્રશ્નો બને તેટલા વધારે ક્રમિક અને તાર્કિક હોય",
+      "પ્રશ્નો લાંબા હોય, પ્રશ્નો માત્ર પાઠ્યપુસ્તક આધારિત હોય, પ્રશ્નોનું વારંવાર પુનરાવર્તન થાય",
+      "પ્રશ્નો કઠિન હોય, પ્રશ્નો વ્યક્તિગત વિદ્યાર્થીને પૂછાય, પ્રશ્નોના ઉત્તર 'હા' કે 'ના' માં હોય",
+      "પ્રશ્નો અસંબંધિત હોય, પ્રશ્નોની ઝડપ ખૂબ વધારે હોય, પ્રશ્નોમાં જવાબ સૂચવેલો હોય"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 22)",
+    "exp": "પ્રશ્ન પ્રવાહિતા કૌશલ્યમાં ત્રણ બાબતો મહત્ત્વની છે: (1) પ્રશ્નો પૂછવાનો સમયગાળો મર્યાદિત છે, (2) પ્રશ્નો અર્થપૂર્ણ હોય તે જરૂરી છે, અને (3) પ્રશ્નો બને તેટલા વધારે ક્રમિક અને તાર્કિક હોય તે જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: પ્રશ્ન બંધારણની દૃષ્ટિએ નીચેનામાંથી કયું લક્ષણ 'અર્થપૂર્ણ પ્રશ્ન' માટે જરૂરી નથી?",
+    "options": [
+      "વ્યાકરણ અને વાક્યરચનાની દૃષ્ટિએ શુદ્ધતા",
+      "સંક્ષિપ્તતા (બિનજરૂરી શબ્દો વિનાનો)",
+      "ઉત્તરની દૃષ્ટિએ સ્પષ્ટતા કે અસંદિગ્ધતા",
+      "વિષયવસ્તુ સાથે અસંગતતા અને વ્યાપકતા"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 22)",
+    "exp": "પ્રશ્ન બંધારણનાં 4 લક્ષણો છે: (1) વ્યાકરણ અને વાક્યરચનાની શુદ્ધતા, (2) સંક્ષિપ્તતા, (3) સ્પષ્ટતા કે અસંદિગ્ધતા, અને (4) વિષયવસ્તુની દૃષ્ટિએ 'સુસંગતતા' (અસંગતતા નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 45: પ્રશ્નો પૂછવાની પ્રક્રિયા વખતે શિક્ષકે ધ્યાનમાં રાખવાની બાબતો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "પ્રશ્નની સમગ્ર રજૂઆત વ્યક્તિગત ન કરતાં સમગ્ર વર્ગ સમક્ષ થવી જોઈએ.",
+      "પ્રશ્ન પૂછ્યા બાદ એકાદ ક્ષણ શાંતિ જાળવવી, જેથી વિદ્યાર્થીને વિચારવાનો સમય મળે.",
+      "વિદ્યાર્થીઓ બરાબર સાંભળી શકે તે માટે શિક્ષકે દરેક પ્રશ્નનું અને વિદ્યાર્થીના ઉત્તરનું અચૂક પુનરાવર્તન કરવું જોઈએ.",
+      "પ્રશ્નની અગત્યની બાબત કે શબ્દ ઉપર યોગ્ય ભાર મૂકી હાવભાવ સાથે રજૂઆત કરવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 23-24)",
+    "exp": "પ્રશ્ન પૂછવાની પ્રક્રિયામાં શિક્ષકે 'પ્રશ્નનું પુનરાવર્તન ન કરવું' (કારણ કે તેનાથી વિદ્યાર્થીઓ બેદરકાર બને છે અને સમય-શક્તિનો વ્યય થાય છે) તેમજ 'વિદ્યાર્થીઓએ આપેલા ઉત્તરોનું પણ પુનરાવર્તન કરવું નહિ'. તેથી વિધાન (C) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: જો વર્ગશિક્ષણ દરમિયાન ક્યારેક 'હા' કે 'ના' ઉત્તરવાળો પ્રશ્ન પૂછવો અનિવાર્ય બને, તો શિક્ષકે શું કરવું જોઈએ?",
+    "options": [
+      "તે પ્રશ્ન પૂછીને તરત જ આગળના મુદ્દા પર વધી જવું જોઈએ",
+      "તે પ્રશ્ન પૂછીને તેને લગતા પૂરક પ્રશ્નો (જેમ કે, 'શા માટે?') પૂછવા જોઈએ",
+      "તે પ્રશ્ન માત્ર હોશિયાર વિદ્યાર્થીને જ પૂછવો જોઈએ",
+      "તે પ્રશ્નનો જવાબ કાળા પાટિયા પર લખી દેવો જોઈએ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 24)",
+    "exp": "ક્યારેક 'હા' કે 'ના' ઉત્તરવાળો પ્રશ્ન પૂછવો અનિવાર્ય હોય તો તે પૂછીને તેને લગતા પૂરક પ્રશ્નો પૂછવા જોઈએ. દા.ત., \"આસામમાં ચા સૌથી વધુ થાય છે?\" ત્યારબાદ \"શા માટે ત્યાં સૌથી વધુ ચા થાય છે?\""
+  },
+  {
+    "q": "પ્રશ્ન 47: શિક્ષક કા.પા. પર રેખાખંડની આકૃતિ દોરીને પૂછે છે, \"આ આકૃતિ રેખાની છે કે રેખાખંડની છે?\" — આ પ્રશ્ન કયા પ્રકારનો ગણાશે?",
+    "options": [
+      "પડઘા પ્રશ્ન",
+      "સમર્થન પ્રશ્ન",
+      "સૂચનશીલ પ્રશ્ન",
+      "અટકળ પોષક પ્રશ્ન"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 24)",
+    "exp": "જે પ્રશ્નમાં જ જવાબ સૂચવેલો હોય તેને 'સૂચનશીલ પ્રશ્ન' કહે છે. આવા પ્રશ્નો વિચાર કરવામાં ઉપયોગી બનતા નથી, તેથી શિક્ષકે તેનો ઉપયોગ ટાળવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 48: કેવા પ્રશ્નો ન પૂછાય તે સંદર્ભે નીચેના વિધાનો તપાસો:\nવિધાન 1: પ્રશ્નના ઉત્તર અંગેની માહિતી વિદ્યાર્થીઓ અગાઉ શીખી ન ગયા હોય અને છતાં તેનો જવાબ શિક્ષક ઈચ્છે ત્યારે પૂછાતા પ્રશ્નોને 'અટકળ પોષક પ્રશ્નો' કહે છે.\nવિધાન 2: શિક્ષક કોઈ એક વિધાન કરે અને તે વિધાન માટે \"ખરુંને?\", \"બરાબરને?\", \"સાચું છેને?\" જેવા પ્રશ્નો પૂછે તેને 'સમર્થન પ્રશ્નો' કહે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 25)",
+    "exp": "અટકળ પોષક પ્રશ્નો (જેનાથી વિદ્યાર્થીઓ ગપ્પાં મારતા થઈ જાય છે) અને સમર્થન પ્રશ્નો (\"ખરુંને?\", \"બરાબરને?\") અંગેનાં બંને વિધાનો મૉડ્યૂલ મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: શિક્ષક વર્ગમાં કહે છે: \"ગુજરાત આપણું રાજ્ય છે. આપણું રાજ્ય કયું છે?\" અને \"ગાંધીનગર તેનું પાટનગર છે. ગાંધીનગર શું છે?\" — આ પ્રકારના પ્રશ્નોને શું કહેવાય?",
+    "options": [
+      "સમર્થન પ્રશ્નો",
+      "પડઘા પ્રશ્નો",
+      "સૂચનશીલ પ્રશ્નો",
+      "વિવેચનાત્મક પ્રશ્નો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 25)",
+    "exp": "શરૂઆતમાં શિક્ષક માહિતીની રજૂઆત કરે અને પછીથી તરત જ તે માહિતી પર આધારિત પ્રશ્નો પૂછે, જેના ઉત્તરમાં અગાઉ રજૂ કરેલી માહિતીનો પડઘો પડે, તેને 'પડઘા પ્રશ્નો' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: શિક્ષકે ટાળવા જેવા પ્રશ્નોના પ્રકારો અને તેમના ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રશ્નનો પ્રકાર): 1. 'હા' કે 'ના' પ્રકારનો પ્રશ્ન | 2. અટકળ પોષક પ્રશ્ન | 3. સમર્થન પ્રશ્ન\nવિભાગ-બ (ઉદાહરણ): (i) પાણીને જંતુમુક્ત કરવા તેમાં ક્લોરિન વાયુ પસાર કરવામાં આવે છે. ખરુંને? | (ii) શું દાંડીકૂચ ભવ્ય હતી? | (iii) 21મી સદીના પ્રારંભમાં ભારતની વસ્તી કેટલી થઈ? (અગાઉ ન શીખવેલ હોય ત્યારે)",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 24-25)",
+    "exp": "\"શું દાંડીકૂચ ભવ્ય હતી?\" એ 'હા' કે 'ના' પ્રકારનો પ્રશ્ન છે, \"21મી સદીના પ્રારંભમાં ભારતની વસ્તી કેટલી થઈ?\" એ 'અટકળ પોષક પ્રશ્ન' નું ઉદાહરણ છે, અને ક્લોરિન વાયુવાળું વિધાન 'સમર્થન પ્રશ્ન' નું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: બંધારણ અને પ્રશ્ન પૂછવાની પ્રક્રિયાની દૃષ્ટિએ યોગ્ય હોય તેવા પ્રશ્નોના ઉત્તરો પણ વિદ્યાર્થીઓ ઘણીવાર આપતા નથી. આ પરિસ્થિતિ માટે નીચેનામાંથી કયાં કારણો જવાબદાર હોઈ શકે?\n1. પ્રશ્ન વિદ્યાર્થીઓની કક્ષાથી ઊંચી બુદ્ધિકક્ષાવાળો હોય.\n2. વિદ્યાર્થીઓ પૂર્વજ્ઞાનથી અપરિચિત હોય.\n3. વિદ્યાર્થીઓની શારીરિક સ્થિતિ સારી ન હોય.\n4. શિક્ષક અને વિદ્યાર્થીઓ વચ્ચે કોઈ પણ જાતનો સંબંધ ન હોય.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.2 પ્રશ્ન પ્રવાહિતા કૌશલ્ય (પાના નં.: 26)",
+    "exp": "મૉડ્યૂલ મુજબ પ્રશ્ન અઘરો હોય, ઊંચી બુદ્ધિકક્ષાવાળો હોય, વિદ્યાર્થીને રસ ન પડતો હોય, પૂર્વજ્ઞાનથી અપરિચિત હોય, શારીરિક સ્થિતિ સારી ન હોય, બેધ્યાન હોય કે શિક્ષક-વિદ્યાર્થી વચ્ચે કોઈ સંબંધ ન હોય — આ તમામ કારણોસર વિદ્યાર્થીઓ ઉત્તર આપતા નથી."
+  },
+  {
+    "q": "પ્રશ્ન 52: 'સુદૃઢિકરણ કૌશલ્ય' ના સંદર્ભમાં નીચેના વિધાનો તપાસો:\nવિધાન 1: વિદ્યાર્થીઓ વર્ગની પ્રવૃત્તિઓમાં વધુને વધુ ભાગ લે તે માટે પ્રોત્સાહિત કરવાની પ્રક્રિયા વધુ અને હતોત્સાહ કરવાની પ્રક્રિયા ઓછામાં ઓછી કરવાનું કૌશલ્ય એટલે સુદૃઢિકરણ કૌશલ્ય.\nવિધાન 2: સુદૃઢિકરણ કૌશલ્યથી વિદ્યાર્થીઓને અશિસ્ત આચરતાં રોકી શકાય છે અને શિક્ષક-વિદ્યાર્થી વચ્ચે સાન્નિધ્ય સાધી શકાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.3 સુદૃઢિકરણ કૌશલ્ય (પાના નં.: 27-28)",
+    "exp": "સુદૃઢિકરણ કૌશલ્યની વ્યાખ્યા અને તેના મહત્વ અંગેનાં બંને વિધાનો મૉડ્યૂલ મુજબ સંપૂર્ણપણે સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: નીચેનામાંથી કયું વર્તન 'હકારાત્મક અશાબ્દિક સુદૃઢક' નું ઉદાહરણ છે?",
+    "options": [
+      "વિદ્યાર્થીને \"તમારો ઉત્તર પ્રશંસાપાત્ર છે\" કહેવું",
+      "વિદ્યાર્થીના જવાબને અક્ષરશઃ કાળા પાટિયા (કા.પા.) પર લખવો",
+      "વિદ્યાર્થીને \"હા, હા, બોલો\" કહીને પ્રોત્સાહિત કરવું",
+      "વિદ્યાર્થી સામે ભવાં ચઢાવીને જોવું"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.3 સુદૃઢિકરણ કૌશલ્ય (પાના નં.: 28-29)",
+    "exp": "વિદ્યાર્થીના જવાબને અક્ષરશઃ કા.પા. પર લખવો, સ્મિત કરવું, માથું હલાવવું, નજીક જવું, ખભે હાથ મૂકવો કે થાબડવો એ 'હકારાત્મક અશાબ્દિક સુદૃઢકો' છે. વિકલ્પ (A) અને (C) હકારાત્મક શાબ્દિક, જ્યારે (D) નકારાત્મક અશાબ્દિક સુદૃઢક છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: સુદૃઢકોના પ્રકાર અને તેમના ઉદાહરણો અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (સુદૃઢકનો પ્રકાર): 1. હકારાત્મક શાબ્દિક સુદૃઢક | 2. હકારાત્મક અશાબ્દિક સુદૃઢક | 3. નકારાત્મક શાબ્દિક સુદૃઢક | 4. નકારાત્મક અશાબ્દિક સુદૃઢક\nવિભાગ-બ (ઉદાહરણ): (i) હાથ પછાડી કે ડસ્ટર પછાડી બેસવા ઈશારો કરવો | (ii) \"આ જવાબ આપવાની રીત છે? બોલતાં તો આવડતું નથી\" કહેવું | (iii) વિદ્યાર્થી લાંબો સમય જવાબ આપતો હોય ત્યારે વચ્ચે માથું હલાવવું | (iv) \"તદ્દન સાચું, સારો પ્રયાસ\" કહેવું",
+    "options": [
+      "1-(iv), 2-(iii), 3-(ii), 4-(i)",
+      "1-(iii), 2-(iv), 3-(ii), 4-(i)",
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iv), 2-(ii), 3-(iii), 4-(i)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.3 સુદૃઢિકરણ કૌશલ્ય (પાના નં.: 28-30)",
+    "exp": "ભાષા દ્વારા પ્રોત્સાહન = હકારાત્મક શાબ્દિક (iv); ભાષા વિના પ્રોત્સાહન = હકારાત્મક અશાબ્દિક (iii); ભાષા દ્વારા ટીકા/કટાક્ષ = નકારાત્મક શાબ્દિક (ii); ભાષા વિના ગુસ્સાના હાવભાવ = નકારાત્મક અશાબ્દિક (i)."
+  },
+  {
+    "q": "પ્રશ્ન 55: 'સુદૃઢકોનો યોગ્ય ઉપયોગ' કરવા માટે શિક્ષકે ધ્યાનમાં રાખવાની બાબતો અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "વારંવાર એક જ સુદૃઢકના ઉપયોગથી આવતી કૃત્રિમતા ટાળવી જોઈએ.",
+      "જ્યાં જરૂર ન હોય ત્યાં પણ વિદ્યાર્થીઓનો ઉત્સાહ વધારવા સતત હકારાત્મક સુદૃઢકોનો ઉપયોગ કરવો જોઈએ.",
+      "શરમાળ કે નબળા વિદ્યાર્થીઓને પ્રક્રિયામાં સાંકળવા યોગ્ય સુદૃઢકોનો ઉપયોગ કરવો જોઈએ.",
+      "સુદૃઢકોનો ઉપયોગ સ્વાભાવિકપણે અને તેની અસરને ધ્યાનમાં રાખીને કરવો જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.3 સુદૃઢિકરણ કૌશલ્ય (પાના નં.: 30)",
+    "exp": "હકારાત્મક સુદૃઢકોના ઉપયોગમાં અતિ ઉત્સાહ દાખવી હાંસીને પાત્ર ન બની જવાય તે માટે 'જરૂર ન હોય ત્યાં સુદૃઢકોનો ઉપયોગ ન જ કરાય' તેની કાળજી રાખવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 56: કાળા પાટિયાને મૉડ્યૂલમાં અન્ય કયાં નામોથી ઓળખાવવામાં આવ્યું છે?",
+    "options": [
+      "શ્યામફલક અને કૃષ્ણફલક",
+      "શ્યામપટ્ટ અને દૃશ્યફલક",
+      "કૃષ્ણપટ્ટ અને લેખનફલક",
+      "જ્ઞાનફલક અને શ્યામફલક"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.4 કા.પા.કાર્ય કૌશલ્ય (પાના નં.: 30)",
+    "exp": "વર્ગશિક્ષણમાં સૌથી સરળતાથી ઉપયોગમાં લઈ શકાતા સાધન કાળા પાટિયાને 'શ્યામફલક' કે 'કૃષ્ણફલક' તરીકે પણ ઓળખવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: અસરકારક કા.પા.કાર્યનાં લક્ષણોમાં 'યથાર્થતા' અંતર્ગત નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "મુદ્દાઓ તાર્કિક ક્રમ મુજબ અને સાતત્ય જાળવીને લખવા જોઈએ.",
+      "રંગીન ચૉકનો યોગ્ય ઉપયોગ થવો જોઈએ અને મહત્વના મુદ્દાઓ અધોરેખિત કરવાં જોઈએ.",
+      "અપ્રસ્તુત બાબતો ન લખવી જોઈએ.",
+      "બે અક્ષરો અને બે શબ્દો વચ્ચે યોગ્ય અંતર જાળવવું જોઈએ."
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.4 કા.પા.કાર્ય કૌશલ્ય (પાના નં.: 31)",
+    "exp": "બે અક્ષરો અને બે શબ્દો વચ્ચે યોગ્ય અંતર જાળવવું એ 'હસ્તાક્ષરની સુવાચ્યતા' નું લક્ષણ છે, જ્યારે બાકીની ત્રણેય બાબતો 'યથાર્થતા' અંતર્ગત આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: કા.પા.કાર્ય કૌશલ્યનાં લક્ષણો અને તેમની વિગતોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (લક્ષણ): 1. હસ્તાક્ષરની સુવાચ્યતા | 2. સ્વચ્છતા | 3. યથાર્થતા | 4. પ્રકીર્ણ બાબતો\nવિભાગ-બ (વિગત): (i) અક્ષર ઉપર અક્ષર લખાઈ ન જાય તેનો ખ્યાલ રાખવો | (ii) પ્રત્યેક અક્ષર સ્પષ્ટ-ભેદક હોવો જોઈએ | (iii) લખતી વખતે ચૉકનો અવાજ ન થવો જોઈએ | (iv) મહત્વના મુદ્દાઓ અધોરેખિત કરવાં જોઈએ",
+    "options": [
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(i), 2-(ii), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.4 કા.પા.કાર્ય કૌશલ્ય (પાના નં.: 31)",
+    "exp": "પ્રત્યેક અક્ષર સ્પષ્ટ-ભેદક = સુવાચ્યતા; અક્ષર ઉપર અક્ષર ન લખાય = સ્વચ્છતા; મહત્વના મુદ્દા અધોરેખિત = યથાર્થતા; ચૉકનો અવાજ ન થાય = પ્રકીર્ણ બાબતો."
+  },
+  {
+    "q": "પ્રશ્ન 59: કા.પા.કાર્યની 'પ્રકીર્ણ બાબતો' અને 'મહત્વ' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પાઠના વિકાસની સાથે જ કા.પા. નોંધ વિકસાવવી જોઈએ.",
+      "લેખન માટે કા.પા.નો ઉપયોગ કર્યા પછી તેને સ્વચ્છ કરવું અને સાફ કરતી વખતે રજકણો ઊડવા ન જોઈએ.",
+      "કાળું પાટિયું એ શ્રાવ્ય સાધન છે, જેનો ઉપયોગ માત્ર ભાષા શિક્ષણમાં જ થાય છે.",
+      "સતત કથન કે પ્રશ્નોત્તર પ્રક્રિયા કંટાળો ઉપજાવે ત્યારે તેમાં વૈવિધ્ય લાવવા કા.પા. કાર્ય અસરકારક બને છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.4 કા.પા.કાર્ય કૌશલ્ય (પાના નં.: 31-32)",
+    "exp": "કાળું પાટિયું એ 'દૃશ્ય સાધન' છે (શ્રાવ્ય નહીં), જેની મદદથી દૃશ્ય અને શ્રાવ્ય અનુભવોનું સંયોજન કરી શકાય છે અને આકૃતિઓ, આલેખો, નકશા, સૂત્રો વગેરે દ્વારા તમામ વિષયોમાં સમજ સ્પષ્ટ કરી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 60: 'ઉદાહરણ કૌશલ્ય' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન તેની સચોટ વ્યાખ્યા દર્શાવે છે?",
+    "options": [
+      "શીખવવાના મુદ્દાઓમાં સમાયેલા અમૂર્ત વિષયવસ્તુને ઉદાહરણો કે દૃષ્ટાંત દ્વારા સમજાવવાનું કૌશલ્ય",
+      "માત્ર પાઠ્યપુસ્તકના સ્વાધ્યાયમાં આપેલાં દૃષ્ટાંતોને કાળા પાટિયા પર લખવાનું કૌશલ્ય",
+      "વિદ્યાર્થીઓ પાસેથી જૂના પાઠના પ્રશ્નોના ઉત્તરો મેળવવાનું કૌશલ્ય",
+      "વર્ગખંડમાં શિક્ષક દ્વારા એકધારું વ્યાખ્યાન આપવાનું કૌશલ્ય"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.5 ઉદાહરણ કૌશલ્ય (પાના નં.: 33)",
+    "exp": "જેમાં શીખવવાનો સિદ્ધાંત, વિચાર કે ખ્યાલ લાગુ પડતો હોય તેવી પરિસ્થિતિ, પદાર્થ કે વસ્તુ એટલે ઉદાહરણ; અને અમૂર્ત વિષયવસ્તુને ઉદાહરણો કે દૃષ્ટાંત દ્વારા સમજાવવાનું કૌશલ્ય એટલે ઉદાહરણ કૌશલ્ય."
+  },
+  {
+    "q": "પ્રશ્ન 61: ઉદાહરણ કૌશલ્યનાં ત્રણ મુખ્ય લક્ષણો કયાં છે?",
+    "options": [
+      "લાંબું, અલંકારિક અને કઠિન",
+      "સરળ, સુસંગત અને રસપ્રદ",
+      "મૂર્ત, સંકુલ અને વૈજ્ઞાનિક",
+      "શાબ્દિક, લેખિત અને તાર્કિક"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.5 ઉદાહરણ કૌશલ્ય (પાના નં.: 33)",
+    "exp": "ઉદાહરણ કૌશલ્યનાં ત્રણ લક્ષણો છે: (1) ઉદાહરણ સરળ હોવું જોઈએ, (2) ઉદાહરણ નિયમ, સિદ્ધાંત કે ખ્યાલ સાથે સુસંગત હોવું જોઈએ, અને (3) ઉદાહરણ રસપ્રદ હોવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 62: જ્ઞાનેન્દ્રિયો દ્વારા ગ્રહણ કરવાના આધારે ઉદાહરણોને કયા ત્રણ વર્ગોમાં વહેંચવામાં આવે છે?",
+    "options": [
+      "મૌખિક, લેખિત અને પ્રાયોગિક",
+      "દૃશ્ય, શ્રાવ્ય અને સ્પર્શ (અથવા અશાબ્દિક)",
+      "સરળ, મધ્યમ અને કઠિન",
+      "આગમન, નિગમન અને વિશ્લેષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.5 ઉદાહરણ કૌશલ્ય (પાના નં.: 33)",
+    "exp": "વિદ્યાર્થી પોતાની જ્ઞાનેન્દ્રિયો દ્વારા ગ્રહણ કરે છે, આથી ઉદાહરણોને દૃશ્ય, શ્રાવ્ય અને સ્પર્શ (અથવા અશાબ્દિક) એમ ત્રણ વર્ગોમાં વહેંચી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: ઉદાહરણ કૌશલ્યના વર્ગખંડમાં ઉપયોગ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: 'સાચો મિત્ર કોને કહેવાય' તે સ્પષ્ટ કરવા પ્રસંગ કે વાર્તા રજૂ કરીએ ત્યારે તે શાબ્દિક અને શ્રાવ્ય માધ્યમ બને છે.\nવિધાન 2: ફૂલના ભાગો સમજાવવા ફૂલનો ઉપયોગ અને ભારતનું દુનિયામાં સ્થાન સમજાવવા પૃથ્વીના ગોળાનો ઉપયોગ એ અશાબ્દિક, દૃશ્ય કે સ્પર્શ માધ્યમમાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.5 ઉદાહરણ કૌશલ્ય (પાના નં.: 33-34)",
+    "exp": "પ્રસંગ કે વાર્તા એ શાબ્દિક-શ્રાવ્ય માધ્યમ છે, જ્યારે વસ્તુઓ, નમૂનાઓ (ફૂલ, પૃથ્વીનો ગોળો), ચિત્રો, નકશા વગેરે અશાબ્દિક, દૃશ્ય કે સ્પર્શ માધ્યમમાં સમાવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: શિક્ષક પ્રથમ ઉદાહરણો રજૂ કરી તેના પરથી નિયમ કે સિદ્ધાંત સમજાવે અને ત્યારબાદ વિદ્યાર્થી પાસેથી આ નિયમ કે સિદ્ધાંતને આધારે ઉદાહરણો કઢાવે, તો તે કયા સિદ્ધાંતનો ઉપયોગ થયો કહેવાય?",
+    "options": [
+      "માત્ર આગમન પદ્ધતિ",
+      "માત્ર નિગમન પદ્ધતિ",
+      "આગમન-નિગમન સિદ્ધાંત",
+      "પૃથક્કરણ સિદ્ધાંત"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.5 ઉદાહરણ કૌશલ્ય (પાના નં.: 34)",
+    "exp": "પ્રથમ ઉદાહરણો પરથી નિયમ સમજાવવો એ 'આગમન પદ્ધતિ' છે અને નિયમની ફેરચકાસણી માટે વિદ્યાર્થી પાસેથી ઉદાહરણો કઢાવવા એ 'નિગમન પદ્ધતિ' છે; આમ બંનેના સંયુક્ત ઉપયોગને 'આગમન-નિગમન સિદ્ધાંત' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: \"ધ્યાન જ જ્ઞાનની જનની છે.\" — આ વિધાન મૉડ્યૂલમાં કયા અધ્યાપન કૌશલ્યના સંદર્ભે આપવામાં આવ્યું છે?",
+    "options": [
+      "વિષયાભિમુખ કૌશલ્ય",
+      "સુદૃઢિકરણ કૌશલ્ય",
+      "ઉત્તેજના પરિવર્તન કૌશલ્ય",
+      "કા.પા.કાર્ય કૌશલ્ય"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 35)",
+    "exp": "ઉત્તેજના પરિવર્તન કૌશલ્યની પ્રસ્તાવનામાં વિદ્યાર્થીના ધ્યાનનું કેન્દ્રીકરણ અને ટકાવી રાખવાનું મહત્વ સમજાવતાં જણાવાયું છે કે \"ધ્યાન જ જ્ઞાનની જનની છે.\""
+  },
+  {
+    "q": "પ્રશ્ન 66: વિદ્યાર્થીનું ધ્યાન કેન્દ્રિત કરી ટકાવી રાખવા માટે શિક્ષકની વર્તન-તરેહમાં સમજપૂર્વક ફેરફાર કરવાનું કૌશલ્ય કયા નામે ઓળખાય છે?",
+    "options": [
+      "ઉદાહરણ કૌશલ્ય",
+      "ઉત્તેજના પરિવર્તન કૌશલ્ય",
+      "પ્રશ્ન ઊંડાણ કૌશલ્ય",
+      "સુદૃઢિકરણ કૌશલ્ય"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 35)",
+    "exp": "વિદ્યાર્થીનું ધ્યાન કેન્દ્રિત કરી ટકાવી રાખવા માટે શિક્ષકની વર્તન-તરેહમાં સમજપૂર્વક ફેરફાર કરવાનું કૌશલ્ય એટલે 'ઉત્તેજના પરિવર્તન કૌશલ્ય'."
+  },
+  {
+    "q": "પ્રશ્ન 67: ઉત્તેજના પરિવર્તન કૌશલ્યના ઘટકો (ઉત્તેજકો) માં નીચેનામાંથી કોનો સમાવેશ થતો નથી?",
+    "options": [
+      "હલનચલન અને હાવભાવ",
+      "વાણીમાં આરોહ-અવરોહ અને કેન્દ્રીકરણ",
+      "વિરામ અને વર્ગવ્યવહારમાં પરિવર્તન",
+      "ગૃહકાર્ય અને એકમ કસોટીનું આયોજન"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 35-36)",
+    "exp": "ઉત્તેજના પરિવર્તન કૌશલ્યના 6 ઘટકો છે: (1) હલનચલન, (2) હાવભાવ, (3) વાણીમાં આરોહ-અવરોહ, (4) કેન્દ્રીકરણ, (5) વિરામ, અને (6) વર્ગવ્યવહારમાં પરિવર્તન."
+  },
+  {
+    "q": "પ્રશ્ન 68: પાઠનું વાચન કરતી વખતે ક્રોધ વ્યક્ત કરતાં વાક્યોના વાચન સમયે વાણીમાં ____ અને દુઃખના ભાવ વ્યક્ત કરતાં વાક્યોના વાચન સમયે વાણીમાં ____ લાવવાથી વાચન અસરકારક બને છે.",
+    "options": [
+      "અવરોહ; આરોહ",
+      "આરોહ; અવરોહ",
+      "વિરામ; અવરોહ",
+      "આરોહ; વિરામ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 35-36)",
+    "exp": "મૉડ્યૂલ મુજબ ક્રોધ વ્યક્ત કરતાં વાક્યોના વાચન સમયે વાણીમાં 'આરોહ' અને દુઃખના ભાવ વ્યક્ત કરતાં વાક્યોના વાચન સમયે વાણીમાં 'અવરોહ' લાવવાથી વાચન અસરકારક બને છે અને એકધારાપણાથી ઊભા થતા કંટાળાને દૂર કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: ઉત્તેજના પરિવર્તન કૌશલ્યમાં 'વર્ગવ્યવહારમાં પરિવર્તન' અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (શિક્ષકની ક્રિયા): 1. કથન-પ્રશ્નોત્તર, સૂચના, વાચન પછી શૈક્ષણિક સાધન દર્શાવવું | 2. કા.પા. નોંધ કર્યા પછી પ્રશ્નો પૂછવા | 3. કથન કરતાં કરતાં, લખતાં લખતાં થોડીક ક્ષણો સહેતુક થંભી જવું\nવિભાગ-બ (પરિવર્તનનો પ્રકાર): (i) અશાબ્દિક-શાબ્દિક પરિવર્તન | (ii) શાબ્દિક-અશાબ્દિક પરિવર્તન | (iii) વિરામ",
+    "options": [
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(ii), 3-(iii)",
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(i), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 36)",
+    "exp": "કથન/વાચન પછી શૈક્ષણિક સાધન દર્શાવવું = શાબ્દિક-અશાબ્દિક પરિવર્તન; કા.પા. નોંધ પછી પ્રશ્નો પૂછવા = અશાબ્દિક-શાબ્દિક પરિવર્તન; અને સહેતુક થોડીક ક્ષણો થંભી જવું = વિરામ."
+  },
+  {
+    "q": "પ્રશ્ન 70: ઉત્તેજના પરિવર્તન કૌશલ્યમાં 'કેન્દ્રીકરણ' ઘટકના સંદર્ભમાં નીચેનામાંથી કયું ઉદાહરણ 'શાબ્દિક-અશાબ્દિક સંયુક્ત' કેન્દ્રીકરણનું છે?",
+    "options": [
+      "માત્ર \"આ બાજુ ધ્યાન આપો\" કહેવું",
+      "માત્ર નકશા કે ચાર્ટમાં પૉઈન્ટર વડે માહિતી દર્શાવવી",
+      "કા.પા. પર આકૃતિ દોરવી અને કહેવું કે \"આ આકૃતિ તરફ ધ્યાન આપો\"",
+      "માત્ર મહત્વના શબ્દો નીચે લીટી દોરવી"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 / 1.7.6 ઉત્તેજના પરિવર્તન કૌશલ્ય (પાના નં.: 36)",
+    "exp": "કા.પા. પર આકૃતિ દોરવી (અશાબ્દિક) અને સાથે કહેવું કે \"આ આકૃતિ તરફ ધ્યાન આપો\" (શાબ્દિક) — આ બંનેનો સંયુક્ત ઉપયોગ છે. વિકલ્પ (A) માત્ર શાબ્દિક અને (B), (D) માત્ર અશાબ્દિક છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: \"પ્રશ્નો અને માત્ર પ્રશ્નો દ્વારા જ વિદ્યાર્થીઓને એકમના ઊંડાણમાં લઈ જવા\" — આ વ્યાખ્યા કયા અધ્યાપન કૌશલ્યની છે?",
+    "options": [
+      "પ્રશ્ન પ્રવાહિતા કૌશલ્ય",
+      "પ્રશ્ન ઊંડાણ કૌશલ્ય",
+      "ઉચ્ચકક્ષા પ્રશ્ન કૌશલ્ય",
+      "બહુવિધ પ્રશ્ન કૌશલ્ય"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.7 પ્રશ્ન ઊંડાણ કૌશલ્ય (પાના નં.: 37)",
+    "exp": "પ્રશ્નો અને માત્ર પ્રશ્નો દ્વારા જ વિદ્યાર્થીઓને એકમના ઊંડાણમાં લઈ જવા અથવા વિવિધ પ્રકારના પ્રશ્નો પૂછવાનું શિક્ષકનું કૌશલ્ય એટલે 'પ્રશ્ન ઊંડાણ કૌશલ્ય'."
+  },
+  {
+    "q": "પ્રશ્ન 72: પ્રશ્ન ઊંડાણ કૌશલ્યના ઘટકોમાં નીચેનામાંથી કયા પ્રશ્નોનો સમાવેશ થતો નથી?",
+    "options": [
+      "પ્રોત્સાહન પૂરું પાડતા પ્રશ્નો અને વધુ માહિતી માગતા પ્રશ્નો",
+      "ધ્યાન કેન્દ્રિત કરતા પ્રશ્નો અને દિશાસૂચન પ્રશ્નો",
+      "વિવેચનાત્મક જાણકારી વધારનાર પ્રશ્નો",
+      "પડઘા પ્રશ્નો અને સમર્થન પ્રશ્નો"
+    ],
+    "ans": 3,
+    "unit": "એકમ-1 / 1.7.7 પ્રશ્ન ઊંડાણ કૌશલ્ય (પાના નં.: 37-38)",
+    "exp": "પ્રશ્ન ઊંડાણ કૌશલ્યના 5 ઘટકો છે: (1) પ્રોત્સાહન પૂરું પાડતા પ્રશ્નો, (2) વધુ માહિતી માગતા પ્રશ્નો, (3) ધ્યાન કેન્દ્રિત કરતા પ્રશ્નો, (4) દિશાસૂચન પ્રશ્નો, અને (5) વિવેચનાત્મક જાણકારી વધારનાર પ્રશ્નો. પડઘા અને સમર્થન પ્રશ્નો ટાળવા જેવા પ્રશ્નો છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: પ્રશ્ન ઊંડાણ કૌશલ્યમાં જ્યારે વિદ્યાર્થી ઉત્તર ન આપે, ખોટો ઉત્તર આપે કે અંશતઃ ખોટો ઉત્તર આપે ત્યારે શિક્ષક અપેક્ષિત ઉત્તર સાથે સંકળાયેલ પૂરક માહિતી દર્શાવતો પ્રશ્ન કરે તેને કયો પ્રશ્ન કહેવાય?",
+    "options": [
+      "પ્રોત્સાહન પૂરું પાડતા પ્રશ્નો",
+      "વધુ માહિતી માગતા પ્રશ્નો",
+      "ધ્યાન કેન્દ્રિત કરતા પ્રશ્નો",
+      "વિવેચનાત્મક જાણકારી વધારનાર પ્રશ્નો"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.7 પ્રશ્ન ઊંડાણ કૌશલ્ય (પાના નં.: 37)",
+    "exp": "અપેક્ષિત ઉત્તર સાથે સંકળાયેલ પૂરક માહિતી દર્શાવીને વિદ્યાર્થીને ઉત્તર આપવા માટે પ્રેરતા પ્રશ્નોને 'પ્રોત્સાહન પૂરું પાડતા પ્રશ્નો' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: 'દિશાસૂચન પ્રશ્નો' ના ઉપયોગ વખતે શિક્ષકે કઈ ખાસ બાબત ધ્યાનમાં રાખવાની હોય છે?",
+    "options": [
+      "વિદ્યાર્થીને ઉત્તર ન મળે ત્યારે શિક્ષકે પોતે જ તરત ઉત્તર આપી દેવો જોઈએ.",
+      "વિદ્યાર્થીને ઉત્તર ન મળે ત્યારે તેના તે જ વિદ્યાર્થી પાસેથી જવાબ મેળવવાને બદલે બીજા વિદ્યાર્થી પાસેથી જવાબ મેળવવામાં આવે છે.",
+      "દિશાસૂચન પ્રશ્નોમાં પ્રોત્સાહન અને વધુ માહિતી માગતા પ્રશ્નોનો સમાવેશ કરી શકાતો નથી.",
+      "આ પ્રશ્નો માત્ર 'કેમ?' અને 'શા માટે?' શબ્દોથી જ પૂછવામાં આવે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 / 1.7.7 પ્રશ્ન ઊંડાણ કૌશલ્ય (પાના નં.: 38)",
+    "exp": "મૉડ્યૂલ મુજબ દિશાસૂચન પ્રશ્નોનો ઉપયોગ કરતાં ધ્યાન રાખવું કે વિદ્યાર્થીને ઉત્તર ન મળે ત્યારે તેના તે જ વિદ્યાર્થી પાસેથી જવાબ મેળવવાને બદલે 'બીજા વિદ્યાર્થી પાસેથી' જવાબ મેળવવામાં આવે છે. ઉપરાંત તેમાં પ્રોત્સાહન અને વધુ માહિતી માગતા પ્રશ્નોનો સમાવેશ કરી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: પ્રશ્ન ઊંડાણ કૌશલ્યના ઘટકો અને તેમના ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રશ્નનો પ્રકાર): 1. વધુ માહિતી માગતા પ્રશ્નો | 2. ધ્યાન કેન્દ્રિત કરતા પ્રશ્નો | 3. વિવેચનાત્મક જાણકારી વધારનાર પ્રશ્નો\nવિભાગ-બ (ઉદાહરણ): (i) \"પ્રાચીન સંસ્કૃતિનો વિકાસ નદીઓના કિનારે જ કેમ થયો?\" | (ii) \"તમારા ઉત્તરને સ્પષ્ટ કરવા ઉદાહરણ આપશો?\" | (iii) \"આ પ્રસંગ પેલા પ્રસંગથી કઈ રીતે જુદો પડે છે?\"",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 / 1.7.7 પ્રશ્ન ઊંડાણ કૌશલ્ય (પાના નં.: 38)",
+    "exp": "\"ઉદાહરણ આપશો?\" એ 'વધુ માહિતી માગતા પ્રશ્નો' છે; \"આ પ્રસંગ પેલા પ્રસંગથી કઈ રીતે જુદો પડે છે?\" એ 'ધ્યાન કેન્દ્રિત કરતા પ્રશ્નો' છે; અને 'કેમ થયો?', 'શા માટે કર્યો?' જેવા પ્રશ્નો 'વિવેચનાત્મક જાણકારી વધારનાર પ્રશ્નો' છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: શિક્ષણના પરિપ્રેક્ષ્યમાં ગુજરાતી પારિભાષિક શબ્દો અને તેમના અંગ્રેજી પર્યાયોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (ગુજરાતી પારિભાષિક શબ્દ): 1. અધ્યાપન પદ્ધતિઓ | 2. અધ્યાપન પ્રવિધિઓ | 3. અધ્યાપન પ્રયુક્તિઓ | 4. અધ્યાપન સૂત્રો\nવિભાગ-બ (અંગ્રેજી પર્યાય): (i) Strategies | (ii) Maxims of Teaching | (iii) Methods | (iv) Techniques",
+    "options": [
+      "1-(iii), 2-(iv), 3-(i), 4-(ii)",
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)",
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iii), 2-(iv), 3-(ii), 4-(i)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 / 2.1 પ્રસ્તાવના (પાના નં.: 42)",
+    "exp": "મૉડ્યૂલ મુજબ અધ્યાપન પદ્ધતિઓ = Methods, અધ્યાપન પ્રવિધિઓ = Techniques, અધ્યાપન પ્રયુક્તિઓ = Strategies અને અધ્યાપન સૂત્રો = Maxims of Teaching કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: 'અધ્યાપનનાં સૂત્રો' ના ઉદ્ભવ અને વિકાસ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: અધ્યાપનનાં સૂત્રોની વાત સૌપ્રથમ હર્બર્ટ સ્પેન્સરે તેમના 'એજ્યુકેશન' નામના પુસ્તકમાં કરી હતી.\nવિધાન 2: હર્બર્ટ સ્પેન્સર બાદ ડૉ. વેલ્ટને આ સૂત્રોને સ્પષ્ટ કરી વ્યાપક બનાવ્યા હતા.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.4 અધ્યાપન સૂત્રો (પાના નં.: 43)",
+    "exp": "અધ્યાપનના સૂત્રોની વાત સૌપ્રથમ હર્બર્ટ સ્પેન્સરે તેમના 'એજ્યુકેશન' નામનાં પુસ્તકમાં કરી હતી અને ત્યારબાદ ડૉ. વેલ્ટને આ સૂત્રોને સ્પષ્ટ કરી વ્યાપક બનાવ્યા."
+  },
+  {
+    "q": "પ્રશ્ન 78: અધ્યાપનનાં સૂત્રોના સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન સચોટ છે?",
+    "options": [
+      "અધ્યાપનનાં સૂત્રો એ પ્રયોગશાળામાં વૈજ્ઞાનિક ઢબે પ્રયોગો દ્વારા શોધાયેલા ચોક્કસ નિયમો છે.",
+      "અધ્યાપનનાં સૂત્રો એ વૈજ્ઞાનિક ઢબે પ્રયોગો દ્વારા શોધાયેલા નિયમો કે સિદ્ધાંત નથી, પરંતુ અનુભવ, વિચાર અને નિરીક્ષણની નીપજ છે.",
+      "અધ્યાપનનાં સૂત્રો એ માત્ર ભાષા શિક્ષણમાં જ વપરાતી રૂઢિપ્રયોગોની યાદી છે.",
+      "અધ્યાપનનાં સૂત્રોનો પાયો માત્ર સામાજિક અને ઐતિહાસિક તથ્યો પર આધારિત છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.4 અધ્યાપન સૂત્રો (પાના નં.: 43)",
+    "exp": "અધ્યાપનનાં સૂત્રો એ વૈજ્ઞાનિક ઢબે પ્રયોગો દ્વારા શોધાયેલા નિયમો કે સિદ્ધાંત નથી, પરંતુ અનુભવ, વિચાર અને નિરીક્ષણની નીપજ (સામાન્યીકરણો) છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: \"શિક્ષણનાં સૂત્રો અધ્યાપન પદ્ધતિના ગૌણ સિદ્ધાંતો છે... સફળ અધ્યાપન માટે તે માર્ગદર્શક સ્તંભો છે. તે એવાં તથ્યોની સંહિતા છે, જે પૂરતા સન્માનને યોગ્ય છે.\" — આ વ્યાખ્યા કોણે આપી છે?",
+    "options": [
+      "હર્બર્ટ સ્પેન્સર",
+      "ડૉ. જે. વેલ્ટન",
+      "ગેસ્ટાલ્ટ",
+      "ડ્વાઈટ એલન"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.4 અધ્યાપન સૂત્રો (પાના નં.: 43)",
+    "exp": "આપેલ વ્યાખ્યા કેળવણીકાર ડૉ. જે. વેલ્ટને અધ્યાપન સૂત્રોના સંદર્ભમાં આપી છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: અધ્યાપનનાં સૂત્રોના મહત્વ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "તે વિષયવસ્તુની પસંદગી, ગોઠવણી અને રજૂઆતની ક્રમબદ્ધતા નક્કી કરવામાં મદદરૂપ બને છે.",
+      "તે વિભિન્ન અધ્યયન શૈલી ધરાવતા વિદ્યાર્થીઓની જરૂરિયાતને સંતોષે છે.",
+      "તે અધ્યાપનની પશ્ચાદભૂમિમાં રહેલ મનોવૈજ્ઞાનિક પ્રક્રિયાની સમજ માટે ઉપકારક બને છે.",
+      "તેનું પાલન કરવાથી શિક્ષણ સંપૂર્ણપણે શિક્ષકકેન્દ્રી અને પાઠ્યપુસ્તકકેન્દ્રી બને છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ-2 / 2.4 અધ્યાપન સૂત્રો (પાના નં.: 43-44)",
+    "exp": "અધ્યાપન સૂત્રોનું અસરકારક પાલન શિક્ષકનો આત્મવિશ્વાસ વધારે છે અને 'અધ્યેતાકેન્દ્રી' (વિદ્યાર્થીકેન્દ્રી) શિક્ષણ આપવામાં નિર્ણાયક બને છે, શિક્ષકકેન્દ્રી નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 81: 'સરળ પરથી કઠિન અથવા જટિલ તરફ' અધ્યાપન સૂત્રના સંદર્ભમાં નીચેના વિધાનો તપાસો:\nવિધાન 1: અભ્યાસક્રમની જે બાબતોને ગ્રહણ કરવામાં માનસિક પ્રક્રિયા ઓછી કરવી પડતી હોય તે 'સરળ' અને જેમાં ઉચ્ચસ્તરીય માનસિક પ્રક્રિયા કરવી પડતી હોય તે 'કઠિન' મુદ્દો ગણાય છે.\nવિધાન 2: ગુજરાતીમાં 'રમ → રામ → રામજી → રામજીભાઈ' શબ્દલેખન અને પર્યાવરણમાં 'શાહીની ટોટી પરથી ટપક સિંચાઈ પદ્ધતિ' ની સમજ આ સૂત્રનાં ઉદાહરણો છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 45)",
+    "exp": "'સરળ પરથી કઠિન તરફ' સૂત્રમાં સરળ અને કઠિનની વ્યાખ્યા તેમજ ગુજરાતી અને પર્યાવરણનાં બંને ઉદાહરણો મૉડ્યૂલ મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: \"પૂર્વજ્ઞાન પાયો છે, જ્યારે નવું જ્ઞાન ઈમારત છે. માટે જ જ્ઞાતના પાયા ઉપર અજ્ઞાતની નવી ઈમારત ચણવી જોઈએ.\" — આ વિધાન કયા અધ્યાપન સૂત્રનું હાર્દ સ્પષ્ટ કરે છે?",
+    "options": [
+      "સરળ પરથી કઠિન તરફ",
+      "જ્ઞાત પરથી અજ્ઞાત તરફ",
+      "મૂર્ત પરથી અમૂર્ત તરફ",
+      "પૂર્ણથી ખંડ તરફ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 46)",
+    "exp": "'જ્ઞાત પરથી અજ્ઞાત તરફ' સૂત્રમાં વિદ્યાર્થીના પૂર્વજ્ઞાનને પાયા તરીકે અને નવા જ્ઞાનને ઈમારત તરીકે વર્ણવીને બંને વચ્ચે સાંકળ બાંધવાની વાત કરવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: 'મૂર્ત પરથી અમૂર્ત તરફ' અધ્યાપન સૂત્ર અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "જે વસ્તુ જોઈ, જાણી કે સ્પર્શી શકાય તે 'મૂર્ત' (પ્રત્યક્ષ) અને જે માત્ર માનસિક સ્તરે અનુભવી શકાય તે 'અમૂર્ત' (પરોક્ષ) કહેવાય છે.",
+      "પાણીનું ઉકળવું એ મૂર્ત છે, જ્યારે પાણીનું વરાળમાં રૂપાંતર એ અમૂર્ત છે.",
+      "હર્બર્ટ સ્પેન્સર કહે છે કે પાઠનો આરંભ અમૂર્તથી કરવો અને સમાપ્તિ મૂર્તમાં થવી જોઈએ.",
+      "અહિંસા જેવા અમૂર્ત વિચારને સમજાવવા ગાંધીજી, અશોક, બુદ્ધ, મહાવીર વગેરેના જીવનપ્રસંગો રજૂ કરવા જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 46-47)",
+    "exp": "હર્બર્ટ સ્પેન્સર કહે છે કે \"પાઠનો આરંભ મૂર્તથી કરવો અને સમાપ્તિ અમૂર્તમાં થવી.\" તેથી વિધાન (C) ઊલટું હોવાથી અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: 'પૃથક્કરણ પરથી સંયોગીકરણ તરફ' સૂત્રને અન્ય કયા નામે ઓળખવામાં આવે છે અને તેના ઉપયોગથી વિદ્યાર્થીને કયો મુખ્ય લાભ થાય છે?",
+    "options": [
+      "વિશ્લેષણ પરથી સંશ્લેષણ તરફ; ગોખણપટ્ટી અટકે છે અને સ્વતંત્ર સમસ્યા ઉકેલ તથા સ્વ-અધ્યયન વિકસે છે",
+      "સંશ્લેષણ પરથી વિશ્લેષણ તરફ; વિદ્યાર્થી ઝડપથી વ્યાખ્યાઓ કંઠસ્થ કરી શકે છે",
+      "સમષ્ટિથી ખંડ તરફ; વિદ્યાર્થી વિષયવસ્તુને બહોળા પરિપ્રેક્ષ્યમાં મૂલવતાં શીખે છે",
+      "નિગમનથી આગમન તરફ; વિદ્યાર્થી નિયમો પરથી ઉદાહરણો તારવતાં શીખે છે"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 47)",
+    "exp": "આ સૂત્રને \"વિશ્લેષણ પરથી સંશ્લેષણ તરફ જવું\" તરીકે પણ ઓળખાય છે. તેનાથી ગોખણપટ્ટી અટકે છે, સ્વતંત્ર સમસ્યા ઉકેલની ક્ષમતા વિકસે છે અને સ્વ-અધ્યયન માટે તે ખૂબ ઉપયોગી બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: 'આગમન પરથી નિગમન તરફ' સૂત્રના સંદર્ભમાં નીચેના વિધાનો તપાસો:\nવિધાન 1: અધ્યાપન કાર્યની શરૂઆતમાં વિવિધ ઉદાહરણો કે દૃષ્ટાંતો રજૂ કરી તેના આધારે નિયમ તારવવો કે સામાન્યીકરણ કરવું તેને 'આગમન પદ્ધતિ' કહેવાય છે.\nવિધાન 2: નિગમન પદ્ધતિમાં નિયમ કે વ્યાખ્યાની રજૂઆત પહેલાં કરવામાં આવે છે અને પછી ઉદાહરણોની રજૂઆત કરવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 48)",
+    "exp": "આગમન પદ્ધતિ (ઉદાહરણથી નિયમ તરફ) અને નિગમન પદ્ધતિ (નિયમથી ઉદાહરણ તરફ) અંગેનાં બંને વિધાનો મૉડ્યૂલ મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: 'પૂર્ણથી ખંડ તરફ' અધ્યાપન સૂત્ર મનોવિજ્ઞાનના કયા સિદ્ધાંત પર આધારિત છે?",
+    "options": [
+      "થોર્નડાઈકનો પ્રયત્ન અને ભૂલનો સિદ્ધાંત",
+      "ગેસ્ટાલ્ટનો સમષ્ટિવાદનો સિદ્ધાંત",
+      "સ્કિનરનો કારક અભિસંધાનનો સિદ્ધાંત",
+      "પાવલોવનો શાસ્ત્રીય અભિસંધાનનો સિદ્ધાંત"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 48)",
+    "exp": "'પૂર્ણથી ખંડ તરફ' સૂત્ર ગેસ્ટાલ્ટના સમષ્ટિવાદના સિદ્ધાંત પર આધારિત છે, જેના મુજબ વ્યક્તિ કોઈ પણ વસ્તુને પ્રથમ તેના સમગ્ર સ્વરૂપમાં જુએ છે અને પછી તેના જુદા જુદા ભાગો પર દૃષ્ટિ જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: અધ્યાપન સૂત્રો અને મૉડ્યૂલમાં આપેલાં તેમનાં વિશિષ્ટ ઉદાહરણોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (અધ્યાપન સૂત્ર): 1. જ્ઞાત પરથી અજ્ઞાત તરફ | 2. મૂર્ત પરથી અમૂર્ત તરફ | 3. પૂર્ણથી ખંડ તરફ | 4. પૃથક્કરણ પરથી સંયોગીકરણ તરફ\nવિભાગ-બ (ઉદાહરણ): (i) રાષ્ટ્રધ્વજ બતાવ્યા પછી તેના રંગો અને ચક્રની સમજ આપવી | (ii) ભમરડાની ગતિ પરથી પૃથ્વીની ગતિ વિશે શીખવવું | (iii) ત્રિકોણના દરેક ખૂણાનાં માપ મેળવી સરવાળો 180° સાબિત કરવો | (iv) 3 લખોટીમાં 2 લખોટી ઉમેરીને 3+2=5 ની સંકલ્પના આપવી",
+    "options": [
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)",
+      "1-(iv), 2-(ii), 3-(i), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)",
+      "1-(i), 2-(iv), 3-(ii), 4-(iii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો (પાના નં.: 46-49)",
+    "exp": "ભમરડાની ગતિ પરથી પૃથ્વીની ગતિ = જ્ઞાતથી અજ્ઞાત; લખોટી દ્વારા 3+2=5 = મૂર્તથી અમૂર્ત; રાષ્ટ્રધ્વજ પછી રંગો-ચક્ર = પૂર્ણથી ખંડ; અને ત્રિકોણના ખૂણાઓ માપી સરવાળો કરવો = પૃથક્કરણથી સંયોગીકરણ."
+  },
+  {
+    "q": "પ્રશ્ન 88: વિજ્ઞાનના એક શિક્ષક દડો, લખોટી, હાથરૂમાલ વગેરે વસ્તુઓને એક પછી એક હવામાં ઉછાળી વિદ્યાર્થીઓનાં અવલોકનની ચર્ચા કરીને પૃથ્વીના ગુરુત્વાકર્ષણ બળની સમજ આપે છે. અહીં શિક્ષકે કયા અધ્યાપન સૂત્રનો ઉપયોગ કર્યો છે?",
+    "options": [
+      "જ્ઞાત પરથી અજ્ઞાત તરફ",
+      "સરળ પરથી કઠિન તરફ",
+      "આગમન પરથી નિગમન તરફ",
+      "પૂર્ણથી ખંડ તરફ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.4 વિવિધ અધ્યાપન સૂત્રો - પ્રસંગ 3 (પાના નં.: 51)",
+    "exp": "અહીં શિક્ષક પહેલાં અનેક ઉદાહરણો (દડો, લખોટી, હાથરૂમાલ ઉછાળવા) રજૂ કરે છે અને તેના અવલોકન પરથી 'ગુરુત્વાકર્ષણ બળ' નો નિયમ કે સિદ્ધાંત તારવે છે, જે 'આગમન પરથી નિગમન તરફ' નું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: કેળવણીની સમગ્ર પ્રક્રિયામાં પાયાના ત્રણ પ્રશ્નો કયા છે?",
+    "options": [
+      "ક્યારે શીખવવું? કોને શીખવવું? ક્યાં શીખવવું?",
+      "શા માટે શીખવવું? શું શીખવવું? કેવી રીતે શીખવવું?",
+      "કેટલું શીખવવું? કોણે શીખવવું? શા માટે શીખવવું?",
+      "શું શીખવવું? ક્યાં શીખવવું? કેવી રીતે મૂલવવું?"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.5 અધ્યાપન પદ્ધતિઓ અને પ્રવિધિઓ (પાના નં.: 52)",
+    "exp": "કેળવણીની સમગ્ર પ્રક્રિયામાં પાયાના ત્રણ પ્રશ્નો છે: (1) શા માટે શીખવવું? (2) શું શીખવવું? અને (3) કેવી રીતે શીખવવું? આ પૈકી 'કેવી રીતે શીખવવું' એ ખૂબ મહત્વનું છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: 'અધ્યાપન પદ્ધતિ' (Method) અને 'અધ્યાપન પ્રવિધિ' (Technique) વચ્ચેના ભેદ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: પદ્ધતિ એ પ્રક્રિયાને લગતી (Procedural) બાબત છે, જ્યારે પ્રવિધિ એ અમલીકરણ (Implementational) ને લગતી બાબત છે.\nવિધાન 2: પદ્ધતિ વર્ગખંડ શિક્ષણ પૂર્વે વિચારવામાં આવતી બાબત છે, જ્યારે પ્રવિધિઓનો ઉપયોગ વર્ગખંડ શિક્ષણ દરમિયાન થતો હોય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.5.1 અધ્યાપન પદ્ધતિઓ (પાના નં.: 53)",
+    "exp": "અધ્યાપન પદ્ધતિ એ કાર્ય યોજના (Procedural) છે જે શિક્ષણ પૂર્વે વિચારાય છે, જ્યારે પ્રવિધિ એ અમલીકરણ (Implementational) ને લગતી બાબત છે જે વર્ગખંડ શિક્ષણ દરમિયાન વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: 'અધ્યાપન પ્રયુક્તિ' (Strategy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સચોટ છે?",
+    "options": [
+      "તે અધ્યાપન પદ્ધતિ અને પ્રવિધિઓનું સંમિશ્રણ છે, જેનો ઉપયોગ વર્ગખંડ શિક્ષણ દરમિયાન ઊભી થતી અધ્યયન મુશ્કેલીના નિવારણ માટે થાય છે.",
+      "તે હંમેશાં પાઠ આયોજનમાં પૂર્વ વિચારણામાં રાખવી ફરજિયાત છે.",
+      "તે માત્ર વિજ્ઞાનના પ્રયોગો માટે જ વપરાતી લેખિત માર્ગદર્શિકા છે.",
+      "તેનો ઉપયોગ માત્ર સત્રાંત પરીક્ષાના મૂલ્યાંકન સમયે જ થાય છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 / 2.5.2 અધ્યાપન પ્રયુક્તિઓ (પાના નં.: 53)",
+    "exp": "અધ્યાપન પ્રયુક્તિ (Strategy) એ પદ્ધતિ અને પ્રવિધિઓનું સંમિશ્રણ છે, જે વર્ગખંડ શિક્ષણ દરમિયાન ઊભી થતી અધ્યયન મુશ્કેલીના નિવારણ માટે જરૂરિયાત મુજબ વપરાય છે અને તે હંમેશાં પૂર્વ વિચારણામાં હોય તે જરૂરી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 92: 'નાટ્યીકરણ-પાત્રાભિનય' પ્રવિધિના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "સમગ્ર વિષયવસ્તુને નાટક સ્વરૂપે રજૂ કરાય તેમ ન હોય પણ કોઈ પાત્રનો પરિચય કરાવવાનો હોય ત્યારે 'પાત્રાભિનય' પ્રવિધિનો ઉપયોગ થાય છે.",
+      "આ પ્રવિધિના ઉપયોગથી અમૂર્ત ખ્યાલો સ્પષ્ટ બને છે અને જ્ઞાન ચિરંજીવી બને છે.",
+      "આ પ્રવિધિનો ઉપયોગ તમામ એકમોમાં સરળતાથી કરી શકાય છે અને વર્ગના બધા જ વિદ્યાર્થીઓને અભિનયની તક મળી રહે છે.",
+      "પૂર્વતૈયારી માટે સમય ફાળવણી અને આયોજન હોય તો જ આ પ્રવિધિ ફળદાયી બને છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 54)",
+    "exp": "મૉડ્યૂલ મુજબ 'બધા જ એકમોમાં નાટ્યીકરણ પ્રવિધિનો ઉપયોગ શક્ય નથી' અને 'અભિનય માટે વર્ગના બધા જ વિદ્યાર્થીઓને તક મળતી નથી'. તેથી વિધાન (C) અયોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: 'વાર્તાકથન' પ્રવિધિનો ઉપયોગ કરતી વખતે શિક્ષકે કઈ ખાસ કાળજી રાખવી જોઈએ?",
+    "options": [
+      "વાર્તા હંમેશાં પાઠ્યપુસ્તકમાંથી જ વાંચીને સંભળાવવી જોઈએ.",
+      "વિષયવસ્તુ ગૌણ બની જાય અને વાર્તા મહત્વની બની જાય તેવું ન થાય તેની ખાસ કાળજી રાખવી.",
+      "વાર્તાકથન દરમિયાન હાવભાવ અને આરોહ-અવરોહનો ઉપયોગ ટાળવો જોઈએ.",
+      "વાર્તાકથનનો ઉપયોગ માત્ર ગુજરાતી વિષય પૂરતો જ મર્યાદિત રાખવો જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 54)",
+    "exp": "વાર્તાકથન પ્રવિધિ વાપરતી વખતે એટલું યાદ રાખવું કે 'વિષયવસ્તુ ગૌણ બની જાય અને વાર્તા મહત્વની બની જાય તેવું ન થાય'. આ પ્રવિધિ ગુજરાતી, પર્યાવરણ, ઈતિહાસ વગેરે વિષયોમાં ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: 'કથન-ચર્ચા' પ્રવિધિ અંગે નીચેના વિધાનો તપાસો:\nવિધાન 1: આ પ્રવિધિ નાનાં બાળકો માટે ખૂબ જ ઉપયોગી અને અસરકારક છે.\nવિધાન 2: આ પ્રવિધિના ઉપયોગથી લાંબો અભ્યાસક્રમ પણ સમયમર્યાદામાં પૂર્ણ કરી શકાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 55)",
+    "exp": "મૉડ્યૂલમાં સ્પષ્ટ જણાવાયું છે કે 'આ પ્રવિધિ નાનાં બાળકો માટે ખાસ ઉપયોગી નથી', પરંતુ વિદ્યાર્થીઓની વયકક્ષા જોઈ તેનો ઉપયોગ કરવાથી લાંબો અભ્યાસક્રમ પણ સમયમર્યાદામાં પૂર્ણ કરી શકાય છે. તેથી માત્ર વિધાન 2 સાચું છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: 'ગાન' અને 'નિદર્શન' પ્રવિધિઓના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ગાન પ્રવિધિ પ્રાથમિક કક્ષાએ, સમૂહશિક્ષણમાં અને કાવ્યશિક્ષણમાં અતિ ઉપયોગી છે.",
+      "ગાન પ્રવિધિ દ્વારા સ્મૃતિશક્તિ વિકસે છે અને જ્ઞાન ચિરંજીવ બને છે.",
+      "નિદર્શન પ્રવિધિમાં વિદ્યાર્થીઓ અવલોકન કરે છે અને તારણો નોંધે છે.",
+      "નિદર્શન પ્રવિધિમાં કોઈ પણ પ્રકારની સાધન-સામગ્રીની જરૂર પડતી નથી."
+    ],
+    "ans": 3,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 55)",
+    "exp": "નિદર્શન (દર્શાવવું-બતાવવું) માટે પ્રયોગો, નકશા, ચાર્ટ વગેરે સાધન-સામગ્રીની જરૂર રહે છે; પૂરતાં સાધનો વગર નિદર્શન શક્ય લાગતું નથી. તેથી વિધાન (D) અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 96: 'કઠપૂતળી કળા' (પપેટ્રી) પ્રવિધિ અંગે નીચેના વિધાનો ધ્યાનમાં લો:\nવિધાન 1: કઠપૂતળીનો અર્થ 'કાષ્ટમાંથી બનાવેલી પૂતળી' થાય છે અને તે દૃશ્ય-શ્રાવ્ય અનુભવો પૂરી પાડતી પ્રવિધિ છે.\nવિધાન 2: આ પ્રવિધિમાં ક્યારેક શિક્ષણ કરતાં મનોરંજન તરફ ઢળી જવાય તેવી મર્યાદા રહેલી છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે",
+      "માત્ર વિધાન 2 સાચું છે",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 56)",
+    "exp": "કઠપૂતળી એ કાષ્ટમાંથી બનાવેલી પૂતળી છે, જે દૃશ્ય-શ્રાવ્ય અનુભવો આપે છે અને તેમાં શિક્ષણ કરતાં મનોરંજન તરફ ન ઢળી જવાય તેની કાળજી રાખવી જરૂરી છે. બંને વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: 'રમત' પ્રવિધિ દ્વારા વિષયશિક્ષણ ઉપરાંત વિદ્યાર્થીમાં કયાં કૌશલ્યો અને ગુણો વિકસે છે?",
+    "options": [
+      "બુદ્ધિ, તર્ક, કલ્પના, વિચારની ચતુરાઈ તેમજ સ્વસ્થતા, આનંદ, શ્રદ્ધા અને આત્મસંતોષ",
+      "માત્ર શારીરિક મજબૂતાઈ અને સ્પર્ધાત્મક વૃત્તિ",
+      "માત્ર લેખન ઝડપ અને વ્યાકરણની શુદ્ધતા",
+      "માત્ર કંઠસ્થ કરવાની શક્તિ અને મૌન પાળવાની ટેવ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 / 2.5.3 અધ્યાપન પ્રવિધિઓ (પાના નં.: 56)",
+    "exp": "રમત પ્રવિધિથી વિષયશિક્ષણ ઉપરાંત બુદ્ધિ, તર્ક, કલ્પના, વિચારની ચતુરાઈ જેવાં કૌશલ્યો વિકસે છે તેમજ સ્વસ્થતા, આનંદ, શ્રદ્ધા, આત્મસંતોષ અને જીવનલક્ષી મૂલ્યોનું ઘડતર થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: મૉડ્યૂલ મુજબ 'અધ્યાપન પ્રવૃત્તિ' ની સચોટ વ્યાખ્યા કઈ છે?",
+    "options": [
+      "માત્ર શારીરિક શ્રમ કરાવતી કોઈ પણ રમત એટલે અધ્યાપન પ્રવૃત્તિ.",
+      "વ્યક્તિના શરીર અને મન બંને સક્રિય હોય અને તે દ્વારા કોઈ શૈક્ષણિક નીપજ થતી હોય તો તેને અધ્યાપન પ્રવૃત્તિ કહે છે.",
+      "માત્ર શિક્ષક દ્વારા વર્ગખંડમાં કરવામાં આવતું નિદર્શન એટલે અધ્યાપન પ્રવૃત્તિ.",
+      "શાળા સમય બાદ વિદ્યાર્થીને ઘરેથી લખી લાવવા અપાતું કાર્ય એટલે અધ્યાપન પ્રવૃત્તિ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 / 2.5.4 અધ્યાપન પ્રવૃત્તિઓ (પાના નં.: 57)",
+    "exp": "પ્રવૃત્તિ એટલે સર્જનાત્મક અભિગમ અને જાત-અનુભવ. વ્યક્તિના શરીર અને મન બંને સક્રિય હોય અને તે દ્વારા કોઈ પરિણામ (શૈક્ષણિક નીપજ) પ્રાપ્ત થતું હોય તો તેને અધ્યાપન પ્રવૃત્તિ કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: અધ્યયન પ્રવિધિ તરીકે 'ગૃહકાર્ય' આપતી વખતે શિક્ષકે રાખવાની કાળજી અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "ગૃહકાર્ય પ્રમાણસર, કક્ષાનુસાર અને વિવિધતાપૂર્ણ હોવું જોઈએ.",
+      "ગૃહકાર્યનો સંબંધ શૈક્ષણિક હેતુઓની પૂર્તિ સાથે હોવો જોઈએ.",
+      "વર્ગમાં અશિસ્ત આચરનાર વિદ્યાર્થીને સુધારવા માટે શિક્ષા સ્વરૂપે વધુ ગૃહકાર્ય આપવું જોઈએ.",
+      "ગૃહકાર્ય નિયમિત તપાસવું અને તપાસ્યા પછી જરૂરી માર્ગદર્શન અને પ્રોત્સાહન આપવાં જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 / 2.5.5 અધ્યયન પ્રવિધિઓ (પાના નં.: 58-59)",
+    "exp": "ગૃહકાર્ય આપતી વખતે શિક્ષકે ખાસ કાળજી રાખવી કે 'શિક્ષા સ્વરૂપે ગૃહકાર્ય ન આપવું'. બાકીનાં ત્રણેય વિધાનો યોગ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: 'પૂરક વાચન' પ્રવિધિ માટે વિદ્યાર્થીઓને પ્રેરણા પૂરી પાડવા શિક્ષક દ્વારા કરી શકાતા પ્રયત્નોમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. પ્રાર્થનાસભામાં પુસ્તક પરિચય કરાવવો.\n2. 'આ તો વાંચવું જ રહ્યું' એવું બુલેટિન બોર્ડ ઉપર મૂકીને વાંચવા જેવાં પુસ્તકોની યાદી આપવી.\n3. પુસ્તકોની સમીક્ષા કરાવડાવી તેનું વર્ગસમક્ષ વાચન કરાવવું.\n4. પ્રસંગોચિત પુસ્તક પ્રદર્શન ભરવું અને સારા વાચકને બિરદાવવા.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 3",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "એકમ-2 / 2.5.5 અધ્યયન પ્રવિધિઓ (પાના નં.: 59)",
+    "exp": "પૂરક વાચન માટે પ્રેરણા આપવા પુસ્તકાલયનો ઉપયોગ, પ્રાર્થનાસભામાં પુસ્તક પરિચય, પુસ્તક સમીક્ષાનું વર્ગસમક્ષ વાચન, 'આ તો વાંચવું જ રહ્યું' બુલેટિન બોર્ડ, પુસ્તક પ્રદર્શન અને સારા વાચકને બિરદાવવા—આ તમામ બાબતો મૉડ્યૂલમાં જણાવેલી છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. પ્રથમ વર્ષ — કોર્સ-3 : અભ્યાસક્રમ અને વર્ગવ્યવહાર (ભાગ-1 : એકમ-1 અને એકમ-2)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "fy3part1.html",
+            testUploadDate: "2026-11-27"
+        })
+    });
+}
+</script>
+</body>
+</html>
