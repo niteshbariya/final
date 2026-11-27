@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ): શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન | ૧૦૮ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 108 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ): શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ)<br>શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">એકમ ૧ થી ૫: પ્રશ્ન ૧ થી ૧૦૮ | બહુવિકલ્પીય પ્રશ્નબેંક (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૮</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૮ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 108 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ) શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન | ૧૦૮ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 108</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૮ પ્રશ્નોનો ડેટાસેટ (ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ) શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: સંચાલન (Administration) અને વ્યવસ્થાપન (Management) ના ખ્યાલ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: સંચાલનનો પરંપરાગત ખ્યાલ ઉપલબ્ધ સંસાધનોના યાંત્રિક ઉપયોજન પર કેન્દ્રિત છે.\nવિધાન 2: વ્યવસ્થાપનનો આધુનિક ખ્યાલ માત્ર ભૌતિક સંસાધનોના પ્રબંધ પર જ ભાર મૂકે છે અને તેનો વિકાસ કૃષિ ક્રાંતિના કારણે થયો છે.",
+    "options": [
+      "માત્ર વિધાન 1 ખોટું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - શૈક્ષણિક વ્યવસ્થાપન (પાના નં.: 5)",
+    "exp": "સંચાલનનો પરંપરાગત ખ્યાલ સંસાધનોના યાંત્રિક ઉપયોજન પર કેન્દ્રિત છે, જ્યારે વ્યવસ્થાપનનો આધુનિક ખ્યાલ ઔદ્યોગિક ક્રાંતિના કારણે વિકાસ પામ્યો છે અને તે ભૌતિક સંસાધનોની સાથે માનવ સંસાધનના યોગ્ય પ્રબંધ પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: વ્યવસ્થાપનની વ્યાખ્યા અને તેના પ્રણેતાના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રણેતા) — વિભાગ-બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. જ્યોર્જ ટેરી — (i) એક સહકારી જૂથ સામાન્ય ધ્યેયોની પ્રાપ્તિની દિશામાં કાર્ય કરે તે પ્રક્રિયા\n2. હેનરી ફેઓલ — (ii) પૂર્વાનુમાન કરી આયોજન, સંગઠિત, નિદર્શિત, સંયોજિત અને નિયંત્રણ કરવું\n3. જે.એલ. મેસી — (iii) માનવ તેમજ અન્ય સંસાધનોના ઉપયોગ દ્વારા આયોજન, સંગઠન, પ્રેરણ અને નિયમનને કામે લગાડવાની પ્રક્રિયા",
+    "options": [
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(iii), 2-(i), 3-(ii)",
+      "1-(i), 2-(ii), 3-(iii)"
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - વ્યવસ્થાપનની સંકલ્પના (પાના નં.: 5-6)",
+    "exp": "જ્યોર્જ ટેરીએ આયોજન, સંગઠન, પ્રેરણ અને નિયમનને કામે લગાડવાની પ્રક્રિયા તરીકે; હેનરી ફેઓલે પૂર્વાનુમાન સહિત પાંચ ક્રિયાઓ તરીકે; અને જે.એલ. મેસીએ સહકારી જૂથ દ્વારા સામાન્ય ધ્યેયોની પ્રાપ્તિની પ્રક્રિયા તરીકે વ્યવસ્થાપનને વ્યાખ્યાયિત કર્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: શૈક્ષણિક વ્યવસ્થાપનના સ્વરૂપ અને અર્થના સંદર્ભમાં નીચેનામાંથી કઈ જોડ સંપૂર્ણપણે સુસંગત છે?",
+    "options": [
+      "ચાલકબળ : શિક્ષણના ધ્યેયો | ધ્યેય : ગુણવત્તાયુક્ત શિક્ષણ | ફલશ્રુતિ : પરિણામલક્ષી કાર્ય",
+      "ચાલકબળ : ગુણવત્તાયુક્ત શિક્ષણ | ધ્યેય : ભૌતિક સુવિધાઓ | ફલશ્રુતિ : આયોજન",
+      "ચાલકબળ : માનવ સંસાધન | ધ્યેય : શિક્ષણના ધ્યેયો | ફલશ્રુતિ : નિયંત્રણ",
+      "ચાલકબળ : પરિણામલક્ષી કાર્ય | ધ્યેય : નવીનીકરણ | ફલશ્રુતિ : ગુણવત્તાયુક્ત શિક્ષણ"
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - શૈક્ષણિક વ્યવસ્થાપનનો અર્થ અને સ્વરૂપ (પાના નં.: 6)",
+    "exp": "મૉડ્યૂલ મુજબ શિક્ષણના ધ્યેયો એ શૈક્ષણિક વ્યવસ્થાપનનું ચાલકબળ છે, ગુણવત્તાયુક્ત શિક્ષણ એ તેનું ધ્યેય છે અને ઘટકોના યોગ્ય પ્રયોજન દ્વારા પરિણામલક્ષી કાર્ય કરવું એ તેની ફલશ્રુતિ છે."
+  },
+  {
+    "q": "પ્રશ્ન 4: શૈક્ષણિક વ્યવસ્થાપનના મૂળભૂત ઘટકો (અંગો) માં નીચેનામાંથી કોનો સમાવેશ થતો નથી?",
+    "options": [
+      "સરકાર અને સમાજ",
+      "શિક્ષણ સંસ્થાઓ",
+      "વિદ્યાર્થીઓ અને વાલીઓ",
+      "ઔદ્યોગિક અને વ્યાપારી મંડળો"
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - શૈક્ષણિક વ્યવસ્થાપનનો અર્થ અને સ્વરૂપ (પાના નં.: 6)",
+    "exp": "સરકાર, સમાજ, શિક્ષણ સંસ્થાઓ, વિદ્યાર્થીઓ અને વાલીઓ એ શિક્ષણ ક્ષેત્ર અને શૈક્ષણિક વ્યવસ્થાપનના મૂળભૂત અંગો છે; તેમાં ઔદ્યોગિક કે વ્યાપારી મંડળોનો સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 5: 'અભ્યાસક્રમ રચના, પાઠ્યપુસ્તક નિર્માણ, શિક્ષણ નિરીક્ષણ અને પરીક્ષાઓનું સંચાલન' — આ કાર્યોનો સમાવેશ શૈક્ષણિક વ્યવસ્થાપનના કયા કાર્યક્ષેત્ર હેઠળ થાય છે?",
+    "options": [
+      "શાળા વ્યવસ્થાપન",
+      "પ્રશાસકીય વ્યવસ્થાપન",
+      "વર્ગખંડ વ્યવસ્થાપન",
+      "સ્થાનિક વ્યવસ્થાપન"
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - શૈક્ષણિક વ્યવસ્થાપનનું કાર્યક્ષેત્ર (પાના નં.: 7)",
+    "exp": "નીતિઓનું નિર્ધારણ, કાયદા-નિયમોનું ઘડતર, અભ્યાસક્રમ રચના, પાઠ્યપુસ્તક નિર્માણ, શિક્ષક પ્રશિક્ષણ, શિક્ષણ નિરીક્ષણ અને પરીક્ષાઓના સંચાલનનો સમાવેશ પ્રશાસકીય વ્યવસ્થાપનમાં થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: વર્ગખંડ વ્યવસ્થાપન અંગે નીચેના વિધાનો ધ્યાને લો:\nવિધાન 1: વર્ગ એ શૈક્ષણિક વ્યવસ્થાપનનો નાનામાં નાનો ઘટક છે અને અધ્યયન-અધ્યાપન પ્રક્રિયાની કર્મભૂમિ છે.\nવિધાન 2: \"ભારતનું ભાવિ તેના વર્ગખંડોમાં ઘડાઈ રહ્યું છે\" — આ વિધાન મુદલિયાર કમિશનનું છે.\nવિધાન 3: વર્ગખંડ વ્યવસ્થાપનમાં શિક્ષકે વિદ્યાર્થીઓ માટે સુગમકર્તાની ભૂમિકા ભજવવાની છે.\nઉપરનામાંથી કયાં વિધાનો સાચાં છે?",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - વર્ગખંડ વ્યવસ્થાપન (પાના નં.: 7)",
+    "exp": "વિધાન 1 અને 3 સાચાં છે. વિધાન 2 ખોટું છે, કારણ કે \"ભારતનું ભાવિ તેના વર્ગખંડોમાં ઘડાઈ રહ્યું છે\" એ વાક્ય કોઠારી કમિશનનું છે, મુદલિયાર કમિશનનું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 7: ભારત સરકારના માનવ સંસાધન વિકાસ મંત્રાલય (MHRD) ના બે મુખ્ય વિભાગો કયા છે?",
+    "options": [
+      "શાલેય શિક્ષણ અને સાક્ષરતા વિભાગ તથા ઉચ્ચશિક્ષણ વિભાગ",
+      "પ્રાથમિક શિક્ષણ વિભાગ તથા માધ્યમિક અને ટેકનિકલ શિક્ષણ વિભાગ",
+      "પ્રશાસકીય શિક્ષણ વિભાગ તથા સંશોધન અને તાલીમ વિભાગ",
+      "સાર્વત્રિક શિક્ષણ વિભાગ તથા વ્યાવસાયિક શિક્ષણ વિભાગ"
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - રાષ્ટ્રીય કક્ષાએ શૈક્ષણિક વ્યવસ્થાપન તંત્ર (પાના નં.: 8)",
+    "exp": "રાષ્ટ્રીય કક્ષાએ માનવ સંસાધન વિકાસ મંત્રાલય મુખ્ય બે વિભાગોમાં કાર્યરત છે: (1) શાલેય શિક્ષણ અને સાક્ષરતા વિભાગ અને (2) ઉચ્ચશિક્ષણ વિભાગ."
+  },
+  {
+    "q": "પ્રશ્ન 8: ગુજરાત રાજ્યમાં શિક્ષણ વિભાગની રચના સંદર્ભે નીચેનામાંથી કયું વિધાન સત્ય છે?",
+    "options": [
+      "તા. 1 મે, 1960 થી જ સ્વતંત્ર શિક્ષણ વિભાગ અસ્તિત્વમાં આવ્યો હતો.",
+      "તા. 1 મે, 1960 ના રોજ 'શિક્ષણ અને આરોગ્ય વિભાગ' નામે સંયુક્ત વિભાગ બન્યો હતો અને ઓગષ્ટ 1978 થી અલગ થયો.",
+      "ઓગષ્ટ 1974 થી 'શિક્ષણ અને મજૂર વિભાગ' અલગ કરીને સ્વતંત્ર શિક્ષણ વિભાગ બનાવવામાં આવ્યો.",
+      "તા. 1 મે, 1960 ના રોજ 'શિક્ષણ અને મજૂર વિભાગ' એ નામે સંયુક્ત વિભાગ અમલમાં આવ્યો અને ઓગષ્ટ 1976 થી અલગ શિક્ષણ વિભાગ અસ્તિત્વમાં આવ્યો."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - રાજ્ય કક્ષાએ શૈક્ષણિક વ્યવસ્થાપન તંત્ર (પાના નં.: 9)",
+    "exp": "ગુજરાત રાજ્યની રચના (1 મે, 1960) સમયે 'શિક્ષણ અને મજૂર વિભાગ' નામનો સંયુક્ત વિભાગ હતો, જેમાંથી ઓગષ્ટ 1976 થી અલગ શિક્ષણ વિભાગ અસ્તિત્વમાં આવ્યો."
+  },
+  {
+    "q": "પ્રશ્ન 9: સ્થાનિક કક્ષાએ શૈક્ષણિક વ્યવસ્થાપન અને જવાબદાર અધિકારી/સંસ્થાના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (કાર્યક્ષેત્ર) — વિભાગ-બ (જવાબદાર અધિકારી/સંસ્થા)\n1. મહાનગરપાલિકા/નગરપાલિકાની પ્રાથમિક શાળાઓ — (i) જિલ્લા શિક્ષણાધિકારી\n2. જિલ્લાના માધ્યમિક અને ઉચ્ચતર માધ્યમિક શિક્ષણ — (ii) શાસનાધિકારી\n3. ગ્રામ્ય કક્ષાએ પ્રાથમિક શાળાનું વ્યવસ્થાપન — (iii) જિલ્લા શિક્ષણ અને તાલીમ ભવન\n4. જિલ્લા કક્ષાએ પૂર્વસેવા પ્રશિક્ષણ, તાલીમ અને સંશોધન — (iv) શાળાના મુખ્ય શિક્ષક (SMC ના નેતૃત્વ હેઠળ)",
+    "options": [
+      "1-(i), 2-(ii), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)",
+      "1-(iv), 2-(i), 3-(ii), 4-(iii)"
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - સ્થાનિક કક્ષાએ શૈક્ષણિક વ્યવસ્થાપન તંત્ર (પાના નં.: 9)",
+    "exp": "મહાનગરપાલિકા/નગરપાલિકાની પ્રાથમિક શાળાઓનું વ્યવસ્થાપન શાસનાધિકારી, માધ્યમિક/ઉચ્ચતર માધ્યમિક શિક્ષણ જિલ્લા શિક્ષણાધિકારી, ગ્રામ્ય પ્રાથમિક શાળાઓ મુખ્ય શિક્ષક (SMC હેઠળ) અને ગુણવત્તા સુધારણા/તાલીમનું કાર્ય જિલ્લા શિક્ષણ અને તાલીમ ભવન સંભાળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: 'યુનિસેફ' (UNICEF) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: યુનિસેફનું પૂરું નામ 'United Nations International Children's Educational Fund' છે.\nવિધાન 2: યુનિસેફ એ યુનો (UNO) ની પેટા સંસ્થા છે અને ભારતમાં ઈ.સ. 1949 થી કાર્યરત છે.\nવિધાન 3: ગુણવત્તાયુક્ત શિક્ષણ માટે યુનિસેફ શિક્ષક પ્રશિક્ષણ, સમાવેશી શિક્ષણ, જાતીય શિક્ષણ, તારુણ્ય શિક્ષણ અને પૂર્વ પ્રાથમિક શિક્ષણ ક્ષેત્રે કાર્ય કરે છે.",
+    "options": [
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે.",
+      "માત્ર 2 સાચું છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - બિનસરકારી સંગઠનો (પાના નં.: 10)",
+    "exp": "યુનિસેફનું પૂરું નામ 'United Nations International Children's Emergency Fund' છે (Educational નહીં). તેથી વિધાન 1 ખોટું છે, જ્યારે વિધાન 2 અને 3 સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: સ્થાનિક સ્વરાજ્યની સંસ્થાઓ હેઠળની શિક્ષણ સમિતિઓ અંગે કયું વિધાન સાચું છે?",
+    "options": [
+      "જિલ્લા પંચાયત શિક્ષણ સમિતિના વડા ચેરમેન હોય છે, જ્યારે તેના વહીવટી વડા જિલ્લા પ્રાથમિક શિક્ષણાધિકારી હોય છે.",
+      "મહાનગરપાલિકા શિક્ષણ સમિતિના વડા શાસનાધિકારી હોય છે અને વહીવટી વડા ચેરમેન હોય છે.",
+      "જિલ્લા પંચાયત શિક્ષણ સમિતિના ચેરમેનની નિમણૂક રાજ્ય સરકાર દ્વારા બહારના શિક્ષણવિદોમાંથી કરવામાં આવે છે.",
+      "નગરપાલિકા શિક્ષણ સમિતિમાં ચૂંટાયેલા સભ્યોનો સમાવેશ થતો નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - સ્થાનિક સ્વરાજ્યની સંસ્થાઓ (પાના નં.: 10-11)",
+    "exp": "ગ્રામ્ય અને શહેરી બંને શિક્ષણ સમિતિઓની રચના ચૂંટાયેલા સભ્યો પૈકી થાય છે અને તેના વડા 'ચેરમેન' (સભ્યો પૈકી જ) હોય છે. વહીવટી વડા તરીકે જિલ્લામાં જિલ્લા પ્રાથમિક શિક્ષણાધિકારી અને શહેરમાં શાસનાધિકારી હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: બાળકોને મફત અને ફરજિયાત શિક્ષણનો અધિકાર કાયદો (2009) અંતર્ગત રચાતી 'શાળા વ્યવસ્થાપન સમિતિ' (SMC) વિશે નીચેનામાંથી કઈ બાબત અયોગ્ય છે?",
+    "options": [
+      "દરેક શાળામાં SMC ની રચના કરવી ફરજિયાત છે.",
+      "આ સમિતિમાં વિદ્યાર્થીઓના વાલીઓનું પ્રમાણ 3/4 સભ્યોનું હોય છે.",
+      "શાળા વિકાસ યોજના તૈયાર કરી તેની ભલામણ કરવી એ તેનું મુખ્ય કાર્ય છે.",
+      "શાળાના શિક્ષકોની કાયમી નિમણૂક અને બદલી કરવાની સત્તા SMC પાસે હોય છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - સ્થાનિક સ્વરાજ્યની સંસ્થાઓ (પાના નં.: 11)",
+    "exp": "SMC ના મુખ્ય કાર્યોમાં શાળાની કામગીરી અને ગ્રાન્ટના ઉપયોગ પર દેખરેખ-નિયંત્રણ તથા શાળા વિકાસ યોજના તૈયાર કરી ભલામણ કરવાનો સમાવેશ થાય છે; શિક્ષકોની નિમણૂકનું કાર્ય જિલ્લા શિક્ષણ સમિતિનું છે, SMC નું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 13: શિક્ષણ સહાયક સંગઠનો પૈકી 'શાળા વ્યવસ્થાપક મંડળો' અને 'શિક્ષક સંઘો' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "બિનસરકારી અનુદાનિત અને ખાનગી શાળાઓના સંચાલનની જવાબદારી શાળા વ્યવસ્થાપક મંડળો સંભાળે છે.",
+      "શિક્ષક સંઘોનું સંચાલન સરકારના શિક્ષણ વિભાગના પ્રતિનિધિઓ દ્વારા કરવામાં આવે છે.",
+      "નીતિ વિષયક બાબતોમાં શિક્ષકોનો પક્ષ રજૂ કરવો એ શિક્ષક સંઘોનું મુખ્ય કાર્ય છે.",
+      "શાળાના રોજબરોજના કાર્યમાં દિશાસૂચન અને ભૌતિક સુવિધાઓનું નિર્માણ શાળા વ્યવસ્થાપક મંડળ કરે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - શાળા વ્યવસ્થાપક મંડળો અને શિક્ષક સંઘો (પાના નં.: 11-12)",
+    "exp": "શિક્ષક સંઘો એ સરકારના પ્રતિનિધિઓ દ્વારા નહીં, પરંતુ શિક્ષકો દ્વારા ચલાવવામાં આવતાં સંગઠનો છે, જે શિક્ષકો અને સરકાર વચ્ચે સંકલનની ભૂમિકા ભજવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: આઝાદી બાદ ભારતમાં રચાયેલા નીચેના શિક્ષણ પંચો અને સમિતિઓને તેમના વર્ષ મુજબ સાચા ચડતા કાળક્રમમાં ગોઠવો:\n1. મુદલિયાર પંચ\n2. આદિસેશિઆહ સમિતિ\n3. રાધાકૃષ્ણન પંચ\n4. આચાર્ય રામમૂર્તિ સમિતિ\n5. કોઠારી પંચ",
+    "options": [
+      "3 - 1 - 5 - 4 - 2",
+      "1 - 3 - 5 - 2 - 4",
+      "3 - 1 - 5 - 2 - 4",
+      "3 - 5 - 1 - 2 - 4"
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - શિક્ષણ નીતિઓ (પાના નં.: 12)",
+    "exp": "સાચો કાળક્રમ આ મુજબ છે: રાધાકૃષ્ણન પંચ (1948), મુદલિયાર પંચ (1952), કોઠારી પંચ (1964), આદિસેશિઆહ સમિતિ (1977) અને આચાર્ય રામમૂર્તિ સમિતિ (1990)."
+  },
+  {
+    "q": "પ્રશ્ન 15: શિક્ષણ પંચ/સમિતિ અને તેના સંબંધિત વર્ષના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ — વિભાગ-બ\n1. ઈશ્વરભાઈ સમિતિ — (i) 1968\n2. પ્રથમ રાષ્ટ્રીય શિક્ષણ નીતિ — (ii) 1977\n3. આચાર્ય રામમૂર્તિ સમીક્ષા સમિતિ — (iii) 1979\n4. રાષ્ટ્રીય શિક્ષણ નીતિ (ડ્રાફ્ટ/નીતિ) — (iv) 1990",
+    "options": [
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(iii), 3-(iv), 4-(i)",
+      "1-(iii), 2-(i), 3-(iv), 4-(ii)",
+      "1-(iv), 2-(i), 3-(ii), 4-(iii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - શિક્ષણ નીતિઓ (પાના નં.: 12)",
+    "exp": "ઈશ્વરભાઈ સમિતિની રચના 1977 માં, રાષ્ટ્રીય શિક્ષણ નીતિઓ 1968, 1979 અને 1986 માં તથા આચાર્ય રામમૂર્તિ સમીક્ષા સમિતિની રચના 1990 માં થઈ હતી."
+  },
+  {
+    "q": "પ્રશ્ન 16: ડૉ. દોલતસિંહ કોઠારીના અધ્યક્ષપદે રચાયેલા રાષ્ટ્રીય શિક્ષણ પંચ (1964-66) ની મુખ્ય ભલામણોમાં નીચેનામાંથી કઈ બાબતનો ઉલ્લેખ નથી?",
+    "options": [
+      "વિદ્યાર્થીઓ માટે સામાજિક તથા રાષ્ટ્રીય સેવા ફરજિયાત બનાવવી.",
+      "માધ્યમિક કક્ષાએ વ્યાવસાયિક અને ટેકનિકલ શિક્ષણ પર વિશેષ ભાર આપવો.",
+      "અભ્યાસક્રમોનું ઊર્ધ્વીકરણ કરી શિક્ષણના પ્રત્યેક તબક્કે સમૃદ્ધ અભ્યાસક્રમ મૂકવો.",
+      "પૂર્વ પ્રાથમિક શિક્ષણમાં પ્રવેશ માટે લેવાતી કસોટી કે ઇન્ટરવ્યુની પ્રથા રદ કરવી."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - રાષ્ટ્રીય શિક્ષણ પંચ (પાના નં.: 13-14)",
+    "exp": "પૂર્વ પ્રાથમિક કક્ષાએ પ્રવેશ માટે કસોટી કે ઇન્ટરવ્યુની પ્રથા રદ કરવાની ભલામણ પ્રો. યશપાલ સમિતિ (1993) એ કરી હતી, કોઠારી પંચે નહીં. કોઠારી પંચે પૂર્વ પ્રાથમિક શિક્ષણનો વ્યાપ અને વિસ્તાર વધારવાની ભલામણ કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 17: રાષ્ટ્રીય શિક્ષણ નીતિ (1986) ની ચાવીરૂપ બાબતો સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: સમગ્ર દેશમાં 10+2+3 ના શિક્ષણ માળખાનો અમલ કરવો અને દરેક સ્તરે લઘુત્તમ અધ્યયન કક્ષા નક્કી કરવી.\nવિધાન 2: મૂલ્યાંકન પ્રક્રિયામાં બદલાવ લાવી સતત અને સર્વગ્રાહી મૂલ્યાંકન અમલી બનાવવું તથા જિલ્લા શિક્ષણ અને તાલીમ ભવનોની સ્થાપના કરવી.\nવિધાન 3: આજીવન શિક્ષણના ખ્યાલને ચરિતાર્થ કરવા દૂરવર્તી શિક્ષણ અને ખુલ્લી વિદ્યાપીઠોને પ્રોત્સાહન આપવું.",
+    "options": [
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે.",
+      "માત્ર 1 અને 3 સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - રાષ્ટ્રીય શિક્ષણ નીતિ (1986) (પાના નં.: 13)",
+    "exp": "રાષ્ટ્રીય શિક્ષણ નીતિ (1986) માં 10+2+3 નું માળખું, લઘુત્તમ અધ્યયન કક્ષા, સતત અને સર્વગ્રાહી મૂલ્યાંકન, જિલ્લા શિક્ષણ અને તાલીમ ભવનોની સ્થાપના તથા દૂરવર્તી શિક્ષણ અને ખુલ્લી વિદ્યાપીઠોને પ્રોત્સાહન આપવાની તમામ બાબતો સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: 'ભાર વગરનું ભણતર' (Learning without Burden) અહેવાલ સંદર્ભે નીચેનામાંથી કઈ વિગત સચોટ છે?",
+    "options": [
+      "આ સમિતિની રચના 1990 માં થઈ હતી અને તેણે 1992 માં અહેવાલ સુપરત કર્યો.",
+      "આ સમિતિની રચના 1993 માં NCERT દ્વારા કરવામાં આવી હતી અને અહેવાલ 1994 માં અપાયો.",
+      "આ સમિતિની રચના 1992 માં માનવ સંસાધન વિકાસ મંત્રાલય દ્વારા પ્રો. યશપાલની અધ્યક્ષતામાં કરાઈ હતી અને અહેવાલ 1993 માં સુપરત થયો.",
+      "આ સમિતિની રચના 1991 માં પ્રો. યશપાલની અધ્યક્ષતામાં કરાઈ હતી અને અહેવાલ 1993 માં સુપરત થયો."
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - પ્રો. યશપાલ સમિતિ (1993) (પાના નં.: 14)",
+    "exp": "ભારત સરકારના માનવ સંસાધન વિકાસ મંત્રાલય દ્વારા 1992 માં પ્રો. યશપાલની અધ્યક્ષતામાં સમિતિની રચના થઈ હતી અને સમિતિએ 1993 માં 'ભાર વગરનું ભણતર' શીર્ષક હેઠળ અહેવાલ સરકારને સુપરત કર્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 19: એક પ્રાથમિક શાળામાં વિદ્યાર્થીઓના દફતરનો ભાર ઓછો કરવા માટે આચાર્યશ્રીએ પ્રો. યશપાલ સમિતિ (1993) ની ભલામણ મુજબ કયું પગલું ભરવું સૌથી વધુ યોગ્ય રહેશે?",
+    "options": [
+      "દરરોજના ઉપયોગના પુસ્તકો શાળામાં જ રાખવા તથા ગૃહકાર્ય, પાઠ્યપુસ્તકો અને નોટબુકોના ઉપયોગનું સમયપત્રક અગાઉથી આપી દેવું.",
+      "વિદ્યાર્થીઓને તમામ વિષયોની નોટબુકોને બદલે માત્ર એક જ સામાન્ય નોટબુક વાપરવાની ફરજ પાડવી.",
+      "પ્રાથમિક કક્ષાએ ગૃહકાર્ય અને પાઠ્યપુસ્તકોનો ઉપયોગ સંપૂર્ણપણે બંધ કરી દેવો.",
+      "માત્ર વિજ્ઞાન અને ગણિતના પુસ્તકો જ ઘરે લઈ જવાની છૂટ આપવી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - પ્રો. યશપાલ સમિતિ (1993) (પાના નં.: 14)",
+    "exp": "પ્રો. યશપાલ સમિતિએ સ્પષ્ટ ભલામણ કરી છે કે બાળકોના દરરોજના ઉપયોગના પુસ્તકો શાળામાં જ રાખવા તેમજ ભાર હળવો કરવા ગૃહકાર્ય, પાઠ્યપુસ્તકો અને નોટબુકોના ઉપયોગ સંબંધિત સમયપત્રક અગાઉથી આપી દેવું."
+  },
+  {
+    "q": "પ્રશ્ન 20: પ્રો. યશપાલ સમિતિ (1993) દ્વારા વિવિધ વિષયોના શિક્ષણ અને પાઠ્યપુસ્તકો અંગે કરાયેલી ભલામણોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (વિષય) — વિભાગ-બ (ભલામણ)\n1. ગણિત — (i) પાંડિત્યપૂર્ણ ઉપદેશોને સ્થાને બોલચાલની ભાષા, વાર્તાઓ અને જીવનના અનુભવો\n2. ભાષા — (ii) વાસ્તવિક અનુભવો અને પરિસ્થિતિ સંબંધિત વિશ્લેષણાત્મક ચિંતન\n3. વિજ્ઞાન — (iii) યાંત્રિક નિયમોને સ્થાને સમજ, કૌશલ્ય વિકાસ અને સમસ્યા ઉકેલ\n4. નાગરિકશાસ્ત્ર અને ભૂગોળ — (iv) સમકાલીન અધ્યયન અને વર્તમાન વાસ્તવિકતા સાથે જોડાણ",
+    "options": [
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)",
+      "1-(iii), 2-(ii), 3-(i), 4-(iv)",
+      "1-(iv), 2-(i), 3-(ii), 4-(iii)",
+      "1-(iii), 2-(i), 3-(ii), 4-(iv)"
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - પ્રો. યશપાલ સમિતિ (1993) (પાના નં.: 14)",
+    "exp": "યશપાલ સમિતિએ ગણિતમાં સમજ-સમસ્યા ઉકેલ, ભાષામાં બોલચાલની ભાષા-વાર્તાઓ, વિજ્ઞાનમાં વાસ્તવિક અનુભવો-વિશ્લેષણાત્મક ચિંતન અને નાગરિકશાસ્ત્ર-ભૂગોળમાં સમકાલીન અધ્યયન તથા વર્તમાન વાસ્તવિકતા સાથે જોડાણની ભલામણ કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 21: પ્રો. યશપાલ સમિતિ (1993) ની ભલામણો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "પ્રાથમિક કક્ષાનું શિક્ષણ માતૃભાષામાં જ આપવું.",
+      "વિદ્યાર્થીઓમાં સ્પર્ધાત્મકતા વધે તે માટે વ્યક્તિગત સફળતાને પુરસ્કૃત કરનારી હરીફાઈઓને પ્રોત્સાહન આપવું.",
+      "અભ્યાસક્રમ નિર્માણ અને પાઠ્યપુસ્તક લેખનની પ્રક્રિયાને વિકેન્દ્રિત કરી શિક્ષકોની ભાગીદારી વધારવી.",
+      "વિદ્યાર્થીઓને ગોખણપટ્ટીમાંથી મુક્તિ મળે તે માટે પરીક્ષાઓમાં સંકલ્પના આધારિત પ્રશ્નો પૂછવા."
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - પ્રો. યશપાલ સમિતિ (1993) (પાના નં.: 14)",
+    "exp": "પ્રો. યશપાલ સમિતિએ વ્યક્તિગત સફળતાને પુરસ્કૃત કરનારી હરીફાઈના સ્થાને વિદ્યાર્થીઓની 'સામૂહિક સફળતાઓને' પુરસ્કૃત કરવાની ભલામણ કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 22: બાળકોને મફત અને ફરજિયાત શિક્ષણનો કાયદો (2009) મુજબ શાળાના અંતર અને પ્રારંભિક શિક્ષણની વયમર્યાદા બાબતે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "પ્રાથમિક શાળા 2 કિ.મી., ઉચ્ચ પ્રાથમિક શાળા 5 કિ.મી., પ્રારંભિક શિક્ષણ 3 થી 5 વર્ષ",
+      "પ્રાથમિક શાળા 1 કિ.મી., ઉચ્ચ પ્રાથમિક શાળા 5 કિ.મી., પ્રારંભિક શિક્ષણ 4 થી 6 વર્ષ",
+      "પ્રાથમિક શાળા 1 કિ.મી., ઉચ્ચ પ્રાથમિક શાળા 3 કિ.મી., પ્રારંભિક શિક્ષણ 3 થી 6 વર્ષ",
+      "પ્રાથમિક શાળા 1.5 કિ.મી., ઉચ્ચ પ્રાથમિક શાળા 3 કિ.મી., પ્રારંભિક શિક્ષણ 3 થી 6 વર્ષ"
+    ],
+    "ans": 2,
+    "unit": "એકમ 1 - મફત અને ફરજિયાત શિક્ષણનો કાયદો (2009) (પાના નં.: 15)",
+    "exp": "RTE-2009 મુજબ પ્રત્યેક બાળક માટે પ્રાથમિક શિક્ષણ માટે 1 કિ.મી. અને ઉચ્ચ પ્રાથમિક શિક્ષણ માટે 3 કિ.મી. ના અંતરમાં શાળા હોવી જોઈએ તથા 3 થી 6 વર્ષના બાળકોને પ્રાથમિક શિક્ષણ માટે તૈયાર કરવા પ્રારંભિક શિક્ષણની વ્યવસ્થા કરવી."
+  },
+  {
+    "q": "પ્રશ્ન 23: મફત અને ફરજિયાત શિક્ષણનો કાયદો (2009) ની જોગવાઈઓ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: અનુદાનિત અને બિનઅનુદાનિત શાળાઓએ વંચિત જૂથના 25 ટકા બાળકોને નિઃશુલ્ક પ્રવેશ આપવાનો રહેશે.\nવિધાન 2: કોઈપણ બાળકને પ્રાથમિક શિક્ષણ પૂર્ણ થયા સુધી નાપાસ કરી શકાશે નહીં, પરંતુ ગેરશિસ્ત બદલ હળવી શારીરિક સજા કરી શકાશે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1 - મફત અને ફરજિયાત શિક્ષણનો કાયદો (2009) (પાના નં.: 15)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે, કારણ કે આ કાયદા મુજબ બાળકોને શારીરિક, માનસિક ઇત્યાદિ કોઈ પણ પ્રકારની સજા કરી શકાશે નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 24: જો કોઈ 11 વર્ષનું બાળક અગાઉ ક્યારેય શાળામાં દાખલ થયું ન હોય, તો RTE-2009 ની જોગવાઈ મુજબ શાળાના આચાર્યશ્રીએ શું કરવું જોઈએ?",
+    "options": [
+      "બાળકને ધોરણ 1 માં પ્રવેશ આપી પ્રાથમિક પાયો પાકો કરાવવો.",
+      "પ્રવેશ કસોટી લઈને તેના પરિણામ મુજબના ધોરણમાં પ્રવેશ આપવો.",
+      "બાળકને વૈકલ્પિક તાલીમ પૂર્ણ કર્યા બાદ જ નિયમિત શાળામાં પ્રવેશ આપવો.",
+      "બાળકને તેની વયકક્ષા મુજબના ધોરણમાં પ્રવેશ આપી, કક્ષા અનુસારના સ્તર પર લાવવા માટે વિશેષ શિક્ષણ આપવું."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1 - મફત અને ફરજિયાત શિક્ષણનો કાયદો (2009) (પાના નં.: 15)",
+    "exp": "RTE-2009 ની જોગવાઈ મુજબ બાળકને વયકક્ષા મુજબના ધોરણમાં પ્રવેશ આપવો અને તેને કક્ષા અનુસારના સ્તર પર લાવવા માટે વિશેષ શિક્ષણ આપવું જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: રાષ્ટ્રીય કક્ષાએ માનવ સંસાધન વિકાસ મંત્રાલય (MHRD) અને રાજ્ય કક્ષાના શિક્ષણ વિભાગના હેતુઓ/કાર્યો અંગે નીચેનામાંથી કયું વિધાન અસંગત છે?",
+    "options": [
+      "યુનેસ્કો તેમજ વિદેશોની સરકાર અને યુનિવર્સિટીઓ સાથે સંકલન કરી આંતરરાષ્ટ્રીય શૈક્ષણિક સહયોગ પ્રાપ્ત કરવો એ MHRD નો હેતુ છે.",
+      "સર્વ શિક્ષા અભિયાન, રાષ્ટ્રીય માધ્યમિક શિક્ષા અભિયાન અને સાક્ષર ભારત જેવી યોજનાઓ રાજ્ય શિક્ષણ વિભાગના ઉચ્ચશિક્ષણ વિભાગ દ્વારા ચલાવવામાં આવે છે.",
+      "6 થી 14 વર્ષની વયના બાળકો માટે પ્રાથમિક શિક્ષણનું સાર્વત્રિકરણ અને નિરંતર શિક્ષણના કાર્યક્રમોનું અમલીકરણ રાજ્ય શિક્ષણ વિભાગના નીતિ વિષયક માળખામાં આવે છે.",
+      "મહિલાઓ, ગરીબો અને લઘુમતીઓના વિકાસ પર ખાસ ધ્યાન આપવું તથા વંચિત વર્ગને શિષ્યવૃત્તિ, લોન અને સબસીડી આપવી એ MHRD નો હેતુ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 1 - શૈક્ષણિક વ્યવસ્થાપન તંત્ર (પાના નં.: 8-9)",
+    "exp": "સર્વ શિક્ષા અભિયાન, રાષ્ટ્રીય માધ્યમિક શિક્ષા અભિયાન, મધ્યાહ્ન ભોજન અને સાક્ષર ભારત જેવી યોજનાઓ ભારત સરકારના માનવ સંસાધન વિકાસ મંત્રાલય (શાલેય શિક્ષણ અને સાક્ષરતા વિભાગ) દ્વારા ચલાવવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: ભારતીય બંધારણ અને ગુજરાતના પ્રાથમિક શિક્ષણના વહીવટી કાયદાઓ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: ભારતીય બંધારણના 42મા સુધારા અન્વયે શિક્ષણ એ કેન્દ્ર અને રાજ્ય સરકારની સંયુક્ત જવાબદારી છે.\nવિધાન 2: ગુજરાત પંચાયત ધારો 1963, ધી મુંબઈ પ્રાથમિક શિક્ષણ ધારો 1947 અને ધી મુંબઈ પ્રાથમિક શિક્ષણ નિયમો 1949 અન્વયે રાજ્યનું વહીવટી સત્તામંડળ શિક્ષણના વિકાસ માટેની પ્રવૃત્તિઓ અમલમાં મૂકે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - શિક્ષણનું માળખું (પાના નં.: 19)",
+    "exp": "બંધારણના 42મા સુધારા મુજબ શિક્ષણ કેન્દ્ર અને રાજ્યની સંયુક્ત જવાબદારી છે, તેમજ ગુજરાત પંચાયત ધારો-1963, ધી મુંબઈ પ્રાથમિક શિક્ષણ ધારો-1947 અને નિયમો-1949 અન્વયે રાજ્યનું વહીવટી સત્તામંડળ કાર્ય કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 27: રાષ્ટ્રીય શિક્ષણનીતિની મહત્ત્વની બે બાબતો પૈકી 'શિક્ષણની ગુણવત્તા સુધારણા'માં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "વિષયવસ્તુ અને શિક્ષણની પ્રવૃત્તિમાં સુધારો",
+      "6 થી 14 વર્ષ સુધીના તમામ બાળકોનો શાળાપ્રવેશ અને સ્થાયીકરણ",
+      "દરેક તબક્કે લઘુત્તમ શૈક્ષણિક સ્તરની જોગવાઈ",
+      "શિક્ષકોની પૂરતી સંખ્યા અને શિક્ષણ-પ્રશિક્ષણના વ્યવહારુ કાર્યક્રમોનું આયોજન"
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - શિક્ષણના માળખા (પાના નં.: 19)",
+    "exp": "6 થી 14 વર્ષ સુધીના તમામ બાળકોનો શાળાપ્રવેશ અને શાળા સ્થાયીકરણ એ 'શિક્ષણનું સાર્વત્રિકરણ' અંતર્ગત આવે છે, જ્યારે બાકીની ત્રણેય બાબતો 'શિક્ષણની ગુણવત્તા સુધારણા'માં સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: ભારતમાં 10+2+3 ની શૈક્ષણિક તરેહ અને ગુજરાતના વર્તમાન શૈક્ષણિક માળખા અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ભારતીય શિક્ષણપંચ (1964-66) ની ભલામણ અનુસાર 10+2+3 ની તરેહનો સ્વીકાર થયો અને રાષ્ટ્રીય શિક્ષણ નીતિ 1968 દ્વારા તેને પ્રબળ સમર્થન મળ્યું.",
+      "1972 માં પસાર થયેલા ઠરાવ મુજબ પાંચમી પંચવર્ષીય યોજનાને અંતે સમગ્ર રાષ્ટ્રમાં એકસૂત્રતાવાળી શિક્ષણ તરેહનો સ્વીકાર કરવાનું નક્કી થયું.",
+      "ગુજરાતમાં RTE એક્ટના અમલીકરણ બાદ ધોરણ 8 નો સમાવેશ માધ્યમિક શિક્ષણમાં કરવામાં આવ્યો છે.",
+      "ગુજરાતમાં ધોરણ 1 થી 5 નિમ્ન પ્રાથમિક શિક્ષણ અને ધોરણ 6 થી 8 ઉચ્ચ પ્રાથમિક શિક્ષણમાં વિભાજિત છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - શૈક્ષણિક માળખું (પાના નં.: 20)",
+    "exp": "ગુજરાતમાં રાઈટ ટુ એજ્યુકેશન એક્ટના અમલીકરણ બાદ ધોરણ 8 નો સમાવેશ 'પ્રાથમિક શિક્ષણ' (ઉચ્ચ પ્રાથમિક: ધોરણ 6 થી 8) માં કરવામાં આવ્યો છે, માધ્યમિક શિક્ષણમાં નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 29: શિક્ષણના 'તાલીમી માળખા' (Training Structure) અંતર્ગત વિવિધ સ્તરે કાર્યરત સંસ્થાઓના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (સ્તર) — વિભાગ-બ (સંસ્થાઓ)\n1. રાષ્ટ્રકક્ષાએ — (i) DIET, CTE\n2. રાજ્યકક્ષાએ — (ii) BRC / BITE\n3. જિલ્લાકક્ષાએ — (iii) GCERT, IASE\n4. તાલુકાકક્ષાએ — (iv) NCERT, NUEPA, Ed.Cil",
+    "options": [
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iv), 2-(i), 3-(iii), 4-(ii)",
+      "1-(iii), 2-(iv), 3-(i), 4-(ii)",
+      "1-(iv), 2-(iii), 3-(ii), 4-(i)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - તાલીમી માળખું (પાના નં.: 20)",
+    "exp": "તાલીમી માળખા મુજબ રાષ્ટ્રકક્ષાએ MHRD, NCERT, NUEPA, SSA, Ed.Cil; રાજ્યકક્ષાએ GCERT, IASE; જિલ્લાકક્ષાએ DIET, CTE; તાલુકાકક્ષાએ BRC/BITE અને જૂથકક્ષાએ CRC કાર્યરત છે."
+  },
+  {
+    "q": "પ્રશ્ન 30: કેન્દ્ર સરકારના શૈક્ષણિક વહીવટી માળખા (MHRD) નો ઉપરથી નીચે તરફનો સાચો ઉતરતો ક્રમ કયો છે?",
+    "options": [
+      "કેબિનેટ મંત્રી → રાજ્યમંત્રી → સંયુક્ત શિક્ષણ સચિવ → શિક્ષણ સચિવ → નાયબ શિક્ષણ સચિવ → ઉપશિક્ષણ સચિવ",
+      "કેબિનેટ મંત્રી → રાજ્યમંત્રી → શિક્ષણ સચિવ → નાયબ શિક્ષણ સચિવ → સંયુક્ત શિક્ષણ સચિવ → ઉપશિક્ષણ સચિવ",
+      "કેબિનેટ મંત્રી → શિક્ષણ સચિવ → રાજ્યમંત્રી → સંયુક્ત શિક્ષણ સચિવ → નાયબ શિક્ષણ સચિવ → ઉપશિક્ષણ સચિવ",
+      "કેબિનેટ મંત્રી → રાજ્યમંત્રી → શિક્ષણ સચિવ → સંયુક્ત શિક્ષણ સચિવ → નાયબ શિક્ષણ સચિવ → ઉપશિક્ષણ સચિવ → વિભાગીય અધિકારીઓ"
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - કેન્દ્ર સરકારનું માળખું (પાના નં.: 21)",
+    "exp": "કેન્દ્ર સરકારના માળખાનો સાચો ક્રમ: કેબિનેટ મંત્રી → રાજ્યમંત્રી → શિક્ષણ સચિવ → સંયુક્ત શિક્ષણ સચિવ → નાયબ શિક્ષણ સચિવ → ઉપશિક્ષણ સચિવ → વિભાગીય અધિકારીઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: રાજ્ય સરકારના શિક્ષણ ખાતાના વહીવટી માળખામાં 'તાલુકા પ્રાથમિક શિક્ષણાધિકારી' અને 'પ્રાથમિક શાળાના આચાર્યો' વચ્ચે કયા અધિકારીઓનો ક્રમ આવે છે?",
+    "options": [
+      "નાયબ જિલ્લા પ્રા. શિક્ષણાધિકારી → BRC કો.ઓર્ડિનેટર → CRC કો.ઓર્ડિનેટર",
+      "કેળવણી નિરીક્ષક → BRC કો.ઓર્ડિનેટર → CRC કો.ઓર્ડિનેટર",
+      "BRC કો.ઓર્ડિનેટર → કેળવણી નિરીક્ષક → CRC કો.ઓર્ડિનેટર",
+      "CRC કો.ઓર્ડિનેટર → BRC કો.ઓર્ડિનેટર → કેળવણી નિરીક્ષક"
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - રાજ્ય સરકારનું માળખું (પાના નં.: 22)",
+    "exp": "રાજ્ય સરકારના માળખા મુજબ તાલુકા પ્રાથમિક શિક્ષણાધિકારીની નીચે ક્રમશઃ કેળવણી નિરીક્ષક → BRC કો.ઓર્ડિનેટર → CRC કો.ઓર્ડિનેટર અને ત્યારબાદ પ્રાથમિક શાળાના આચાર્યો આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: પંચાયતી રાજ (પ્રાથમિક શિક્ષણ) ના ત્રિસ્તરીય વહીવટ સંદર્ભે નીચેનામાંથી કઈ જોડ અયોગ્ય રીતે ગોઠવાયેલી છે?",
+    "options": [
+      "જિલ્લા સ્તરે : જિલ્લા વિકાસ અધિકારી (વિકાસ) | જિલ્લા શિક્ષણ સમિતિ (પેટા સમિતિ) | જિલ્લા પ્રાથમિક શિક્ષણાધિકારી (વહીવટ)",
+      "તાલુકા સ્તરે : તાલુકા વિકાસ અધિકારી (વિકાસ) | તાલુકા શિક્ષણ સમિતિ (પેટા સમિતિ) | તાલુકા પ્રાથમિક શિક્ષણ અધિકારી (વહીવટ)",
+      "ગ્રામ સ્તરે : મંત્રી/તલાટી (વિકાસ) | SMC (પેટા સમિતિ) | ગામની શાળાના આચાર્ય (વહીવટ)",
+      "ગ્રામ સ્તરે : સરપંચ (વિકાસ) | ગ્રામ સભા (પેટા સમિતિ) | તાલુકા પ્રાથમિક શિક્ષણ અધિકારી (વહીવટ)"
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - જિલ્લા કક્ષાએ પ્રાથમિક શિક્ષણનું માળખું (પાના નં.: 23)",
+    "exp": "મૉડ્યૂલમાં આપેલા કોષ્ટક મુજબ ગ્રામ સ્તરે ગ્રામ પંચાયતમાં પ્રાથમિક વિકાસ માટે જવાબદાર વ્યક્તિ 'મંત્રી/તલાટી', પેટા સમિતિ 'SMC' અને વહીવટ માટે જવાબદાર વ્યક્તિ 'કેળવણી નિરીક્ષકો / ગામની શાળાના આચાર્ય' છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: શહેરી વિસ્તારો (નગર અને મહાનગર સ્તરે) પ્રાથમિક શિક્ષણના વહીવટી માળખા બાબતે નીચેના વિધાનો ચકાસો:\nવિધાન 1: નગર સ્તરે નગરપાલિકામાં ચીફ ઓફિસર, નગરપાલિકા શિક્ષણ સમિતિ અને નગર પ્રાથમિક શાસનાધિકારી હોય છે.\nવિધાન 2: મહાનગર સ્તરે મહાનગરપાલિકામાં કમિશનર, મહાનગરપાલિકા શિક્ષણ સમિતિ અને મહાનગર પ્રાથમિક શાસનાધિકારી હોય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - જિલ્લા કક્ષાએ પ્રાથમિક શિક્ષણનું માળખું (પાના નં.: 23)",
+    "exp": "નગર સ્તરે ચીફ ઓફિસર તથા નગર પ્રાથમિક શાસનાધિકારી અને મહાનગર સ્તરે કમિશનર તથા મહાનગર પ્રાથમિક શાસનાધિકારી પ્રાથમિક શિક્ષણના માળખામાં સમાવિષ્ટ છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: કેન્દ્રીય શિક્ષણ સલાહકાર મંડળ (CABE) ના ઇતિહાસ અને રચના અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "CABE ની સ્થાપના 1920 માં થઈ હતી અને 1923 માં તેને નાબૂદ કરવામાં આવ્યું હતું.",
+      "1935 માં હાર્ટોગ (કાર્ટિંગ) સમિતિની ભલામણને આધારે તેની પુનઃરચના કરવામાં આવી.",
+      "શિક્ષણના પ્રશ્નો અંગે આ બોર્ડ દર વર્ષે એક વખત મળે છે અને તેના સૂચનોનો અમલ કરવો રાજ્ય સરકાર માટે ફરજિયાત છે.",
+      "કેન્દ્ર સરકારના માનવ સંસાધન વિકાસમંત્રી બોર્ડના અધ્યક્ષ અને શિક્ષણ સેક્રેટરી બોર્ડના મંત્રીપદે હોય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - કેન્દ્રીય શિક્ષણ સલાહકાર મંડળ (પાના નં.: 24)",
+    "exp": "CABE દર બે વર્ષે મળે છે (દર વર્ષે નહીં), અને તેના દ્વારા સૂચવવામાં આવેલા ફેરફારોનો અમલ કરવો કે નહીં તે બાબત રાજ્ય સરકાર નક્કી કરે છે (ફરજિયાત નથી)."
+  },
+  {
+    "q": "પ્રશ્ન 35: કેન્દ્રીય શિક્ષણ સલાહકાર મંડળ (CABE) ના કાર્યોમાં નીચેનામાંથી કયા કાર્યનો સમાવેશ થાય છે?\n1. ભારતમાં શિક્ષણના વિકાસ માટે વાર્ષિક અને પંચવર્ષીય રીવ્યુ પ્રકાશિત કરવા.\n2. કેન્દ્ર અને રાજ્ય સરકાર દ્વારા રજૂ થયેલ શિક્ષણની સમસ્યાઓ હલ કરવી.\n3. ગત વર્ષની શૈક્ષણિક સિદ્ધિઓનું મૂલ્યાંકન અને આગામી શૈક્ષણિક કાર્યક્રમોની ભૂમિકા તૈયાર કરવી.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - કેન્દ્રીય શિક્ષણ સલાહકાર મંડળ (પાના નં.: 24)",
+    "exp": "ઉપરોક્ત ત્રણેય કાર્યો ઉપરાંત કેન્દ્ર-રાજ્યને માર્ગદર્શન આપવું, શૈક્ષણિક માહિતીનું એકત્રીકરણ અને વિકાસ યોજનાઓ માટે સંયોજન કરવું એ CABE ના મુખ્ય કાર્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ (NCTE) સંદર્ભે નીચેનામાંથી કયો વિકલ્પ તેની સ્થાપના, ધારા અને પ્રાદેશિક કેન્દ્રોની સચોટ માહિતી દર્શાવે છે?",
+    "options": [
+      "સ્થાપના : 1993 | ધારો : 73 | પ્રાદેશિક કેન્દ્રો : બેંગ્લોર, ભોપાલ, ભુવનેશ્વર, જયપુર",
+      "સ્થાપના : 1995 | ધારો : 73 | પ્રાદેશિક કેન્દ્રો : અજમેર, ભોપાલ, ભુવનેશ્વર, મૈસુર",
+      "સ્થાપના : 1993 | ધારો : 86 | પ્રાદેશિક કેન્દ્રો : પુણે, હૈદરાબાદ, ભોપાલ, જયપુર",
+      "સ્થાપના : 1992 | ધારો : 73 | પ્રાદેશિક કેન્દ્રો : બેંગ્લોર, ભોપાલ, ઉદયપુર, ગુવાહાટી"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ (પાના નં.: 24)",
+    "exp": "કેન્દ્ર સરકારના ધારા 73 હેઠળ 1993 માં NCTE ની સ્થાપના કરવામાં આવી. તેનું વડું મથક દિલ્હીમાં છે તથા બેંગ્લોર, ભોપાલ, ભુવનેશ્વર અને જયપુરમાં તેનાં ચાર પ્રાદેશિક કેન્દ્રો છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: જો કોઈ શિક્ષક પ્રશિક્ષણ સંસ્થા (બી.એડ્. કે ડી.એલ.એડ્. કોલેજ) નિર્ધારિત નીતિ-નિયમો (Norms) નું પાલન ન કરતી હોય, તો તેનું સમયાંતરે તજજ્ઞ દ્વારા નિરીક્ષણ કરી તેને બંધ કરાવવાની સત્તા કઈ સંસ્થા ધરાવે છે?",
+    "options": [
+      "NCERT",
+      "NCTE",
+      "UGC",
+      "NUEPA"
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - રાષ્ટ્રીય શિક્ષક પ્રશિક્ષણ પરિષદ (પાના નં.: 25)",
+    "exp": "NCTE શિક્ષક પ્રશિક્ષણ સંસ્થાઓને માન્યતા આપે છે, નીતિ-નિયમો (Norms) ઘડે છે, સમયાંતરે તજજ્ઞ દ્વારા નિરીક્ષણ કરે છે અને જો સંસ્થા નીતિ-નિયમો ન અનુસરે તો તેને બંધ કરાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: રાષ્ટ્રીય શૈક્ષણિક સંશોધન અને તાલીમ પરિષદ (NCERT) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: NCERT ની સ્થાપના 1961 માં સ્વાયત્ત સંસ્થા તરીકે થઈ હતી અને તેમાં 18 જેટલા વિભાગો કાર્યરત છે.\nવિધાન 2: NCERT હેઠળ અજમેર, ભોપાલ, ભુવનેશ્વર અને મૈસુરમાં ચાર પ્રાદેશિક શિક્ષણ-પ્રશિક્ષણની સંસ્થાઓ (RIE) કાર્યરત છે.\nવિધાન 3: વ્યાવસાયિક શિક્ષણની કેન્દ્રીય સંસ્થા નવી દિલ્હીમાં આવેલી છે.",
+    "options": [
+      "માત્ર 1 અને 3 સાચાં છે.",
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - NCERT (પાના નં.: 25)",
+    "exp": "વિધાન 1 અને 2 સાચાં છે. વિધાન 3 ખોટું છે, કારણ કે NCERT હેઠળની વ્યાવસાયિક શિક્ષણની કેન્દ્રીય સંસ્થા 'ભોપાલ'માં આવેલી છે, નવી દિલ્હીમાં નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 39: NCERT ના કાર્યોના ત્રણ મુખ્ય ક્ષેત્રો અને તેનાં પ્રકાશનો સંદર્ભે નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "ત્રણ ક્ષેત્રો : આયોજન, વહીવટ, નિરીક્ષણ | વાર્ષિક પ્રકાશન : ઇન્ડિયન જર્નલ ઓફ ટીચર એજ્યુકેશન",
+      "ત્રણ ક્ષેત્રો : સંશોધન, મૂલ્યાંકન, પ્રકાશન | વાર્ષિક પ્રકાશન : નેશનલ એજ્યુકેશન રીવ્યુ",
+      "ત્રણ ક્ષેત્રો : સંશોધન, પ્રશિક્ષણ, વિસ્તરણ | વાર્ષિક પ્રકાશન : ઇન્ડિયન યર બુક ઓફ એજ્યુકેશન",
+      "ત્રણ ક્ષેત્રો : તાલીમ, અનુદાન, વિસ્તરણ | વાર્ષિક પ્રકાશન : ઇન્ડિયન યર બુક ઓફ એજ્યુકેશન"
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - NCERT (પાના નં.: 26)",
+    "exp": "NCERT ના કાર્યો ત્રણ ક્ષેત્રોમાં વહેંચાયેલા છે: (1) સંશોધન, (2) પ્રશિક્ષણ અને (3) વિસ્તરણ. ઉપરાંત તે દર વર્ષે 'ઇન્ડિયન યર બુક ઓફ એજ્યુકેશન' નું પ્રકાશન કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: રાષ્ટ્રીય શૈક્ષણિક આયોજન અને વ્યવસ્થાપન યુનિવર્સિટી (NUEPA) ના વિકાસક્રમ અંગે નીચેનામાંથી કઈ વિગત સાચી છે?",
+    "options": [
+      "1962 માં યુનેસ્કોના પ્રાદેશિક કેન્દ્ર તરીકે સ્થાપના → 1979 માં પુનઃનામાંકન → 2006 માં યુનિવર્સિટીનો દરજ્જો",
+      "1961 માં સ્વાયત્ત સંસ્થા તરીકે સ્થાપના → 1976 માં પુનઃનામાંકન → 2004 માં યુનિવર્સિટીનો દરજ્જો",
+      "1965 માં ભારત સરકાર દ્વારા સ્થાપના → 1986 માં પુનઃનામાંકન → 2006 માં યુનિવર્સિટીનો દરજ્જો",
+      "1962 માં યુનિસેફના પ્રાદેશિક કેન્દ્ર તરીકે સ્થાપના → 1979 માં પુનઃનામાંકન → 2009 માં યુનિવર્સિટીનો દરજ્જો"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - NUEPA (પાના નં.: 27)",
+    "exp": "NUEPA ની સ્થાપના 1962 માં UNESCO ના પ્રાદેશિક કેન્દ્ર તરીકે થઈ, 1979 માં તેનું પુનઃનામાંકન થયું અને ઈ.સ. 2006 માં તેને યુનિવર્સિટીનો દરજ્જો મળ્યો. તેનું વડું મથક દિલ્હીમાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: સાંસ્કૃતિક તાલીમ સ્ત્રોત સંસ્થા (CCRT) ના સંદર્ભમાં નીચેના વિધાનો ચકાસો:\nવિધાન 1: CCRT ની સ્થાપના 1979 માં થઈ હતી અને તેનું વડું મથક નવી દિલ્હીમાં છે.\nવિધાન 2: તેના ત્રણ ક્ષેત્રીય કેન્દ્રો ઉદયપુર, હૈદરાબાદ અને ગુવાહાટીમાં આવેલાં છે.\nવિધાન 3: આ કેન્દ્રનો મુખ્ય સૈદ્ધાંતિક ઉદ્દેશ્ય બાળકોને સાત્વિક શિક્ષા પ્રદાન કરી તેમનો ભાવાત્મક અને આધ્યાત્મિક વિકાસ કરવાનો છે.",
+    "options": [
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે.",
+      "માત્ર 1 અને 3 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - CCRT (પાના નં.: 27)",
+    "exp": "CCRT ની સ્થાપના 1979 માં થઈ, વડું મથક નવી દિલ્હી છે, ત્રણ ક્ષેત્રીય કેન્દ્રો ઉદયપુર, હૈદરાબાદ અને ગુવાહાટીમાં છે અને તેનો મુખ્ય સૈદ્ધાંતિક ઉદ્દેશ્ય બાળકોને સાત્વિક શિક્ષા દ્વારા ભાવાત્મક અને આધ્યાત્મિક વિકાસ કરવાનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: સાંસ્કૃતિક તાલીમ સ્ત્રોત સંસ્થા (CCRT) દ્વારા ચલાવવામાં આવતી 'પ્રતિભા ખોજ યોજના' અંતર્ગત કઈ વયજૂથના કલા વિષયક પ્રતિભા ધરાવતા બાળકોને તેમના વિકાસમાં સહાય કરવામાં આવે છે?",
+    "options": [
+      "6 થી 14 વર્ષ",
+      "10 થી 14 વર્ષ",
+      "12 થી 16 વર્ષ",
+      "8 થી 14 વર્ષ"
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - CCRT (પાના નં.: 28)",
+    "exp": "CCRT ની પ્રતિભા ખોજ યોજના અંતર્ગત 10 થી 14 વર્ષના કલા વિષયક પ્રતિભા ધરાવતા બાળકોને તેમના વિકાસમાં સહાય કરવામાં આવે છે તથા યુવા કલાકારોને સંશોધન માટે શિષ્યવૃત્તિ અપાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: યુનિવર્સિટી ગ્રાન્ટ કમિશન (UGC) સંદર્ભે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ભારતમાં UGC સ્થાપવાનો વિચાર યુનાઈટેડ કિંગ્ડમ યુનિવર્સિટી ગ્રાન્ટ સમિતિ પાસેથી મળ્યો હતો.",
+      "1956 માં સંસદે UGC એક્ટ મંજૂર કરતાં તેને બંધારણીય સ્વરૂપ પ્રાપ્ત થયું.",
+      "UGC ના છ ક્ષેત્રીય કેન્દ્રો પુણે, હૈદરાબાદ, કોલકત્તા, ગુવાહાટી, ભોપાલ અને બેંગલોર ખાતે આવેલાં છે.",
+      "UGC એ માત્ર કેન્દ્રીય યુનિવર્સિટીઓને જ અનુદાન આપે છે, રાજ્યની કોલેજોનું મોનિટરીંગ કરતી નથી."
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - UGC (પાના નં.: 28)",
+    "exp": "UGC સમગ્ર દેશમાં યુનિવર્સિટી કક્ષાએ અનુદાન આપતી એકમાત્ર એજન્સી છે અને તે કોલેજો તથા યુનિવર્સિટી કક્ષાએ થયેલા વિકાસનું મોનિટરીંગ કરે છે અને અનુદાન આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: ગુજરાતમાં 'પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી' ના અસ્તિત્વમાં આવવાના તબક્કાઓ સંદર્ભે કઈ તારીખો સાચી છે?",
+    "options": [
+      "તા. 9-10-1976 થી 'પ્રાથમિક અને પ્રૌઢ'ની કચેરી અને તા. 1-12-1986 થી સ્વતંત્ર 'પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી'",
+      "તા. 1-5-1960 થી 'પ્રાથમિક અને પ્રૌઢ'ની કચેરી અને તા. 9-10-1976 થી સ્વતંત્ર 'પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી'",
+      "તા. 1-12-1976 થી 'પ્રાથમિક અને પ્રૌઢ'ની કચેરી અને તા. 9-10-1986 થી સ્વતંત્ર 'પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી'",
+      "તા. 9-10-1974 થી 'પ્રાથમિક અને પ્રૌઢ'ની કચેરી અને તા. 1-12-1984 થી સ્વતંત્ર 'પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી'"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી (પાના નં.: 29)",
+    "exp": "ભૂતપૂર્વ શિક્ષણ નિયામકશ્રીની કચેરીના વિભાજનથી તા. 9-10-1976 થી શિક્ષણ નિયામકશ્રી પ્રાથમિક અને પ્રૌઢની કચેરી અસ્તિત્વમાં આવી અને ત્યારબાદ તા. 1-12-1986 થી તેનું વિભાજન થતાં પ્રાથમિક શિક્ષણ નિયામકશ્રીની કચેરી અસ્તિત્વમાં આવી."
+  },
+  {
+    "q": "પ્રશ્ન 45: ગુજરાત રાજ્ય શાળા પાઠ્યપુસ્તક મંડળ (GSSTB) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: તેની સ્થાપના 21 ઓક્ટોબર, 1969 ના રોજ થઈ હતી અને તે ધોરણ 1 થી 12 ના પાઠ્યપુસ્તકો પ્રકાશિત કરે છે.\nવિધાન 2: ગુજરાતી ઉપરાંત હિન્દી, અંગ્રેજી, મરાઠી, સિન્ધી, ઉર્દૂ, સંસ્કૃત અને તમિલ ભાષામાં પણ પાઠ્યપુસ્તકો પ્રકાશિત થાય છે.\nવિધાન 3: ઈ.સ. 1999 થી મંડળે ધોરણ 11-12 ના બુનિયાદી વિષયોનાં 26 પાઠ્યપુસ્તકોનું પ્રકાશન શરૂ કર્યું.",
+    "options": [
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે.",
+      "માત્ર 1 અને 3 સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 2 - ગુજરાત રાજ્ય શાળા પાઠ્યપુસ્તક મંડળ (પાના નં.: 30)",
+    "exp": "ગુજરાત રાજ્ય શાળા પાઠ્યપુસ્તક મંડળની સ્થાપના 21 ઓક્ટોબર 1969 ના રોજ થઈ, તે કુલ 8 ભાષાઓમાં પાઠ્યપુસ્તકો પ્રકાશિત કરે છે અને 1999 થી ધોરણ 11-12 ના બુનિયાદી વિષયોના 26 પાઠ્યપુસ્તકો પ્રકાશિત કર્યાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: 'રાજ્ય પરીક્ષા બોર્ડ' (SEB) ની સ્થાપના અને સ્વાયત્તતા અંગે નીચેનામાંથી કયો વિકલ્પ સચોટ છે?",
+    "options": [
+      "સ્થાપના : નવેમ્બર 1966 | સ્વાયત્ત જાહેર : 1999 ના ઠરાવ દ્વારા | સરકાર નિયુક્ત સભ્યો : 13",
+      "સ્થાપના : ઓક્ટોબર 1969 | સ્વાયત્ત જાહેર : 1996 ના ઠરાવ દ્વારા | સરકાર નિયુક્ત સભ્યો : 15",
+      "સ્થાપના : નવેમ્બર 1966 | સ્વાયત્ત જાહેર : 1986 ના ઠરાવ દ્વારા | સરકાર નિયુક્ત સભ્યો : 11",
+      "સ્થાપના : ઓગષ્ટ 1976 | સ્વાયત્ત જાહેર : 1999 ના ઠરાવ દ્વારા | સરકાર નિયુક્ત સભ્યો : 13"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - રાજ્ય પરીક્ષા બોર્ડ (પાના નં.: 30)",
+    "exp": "રાજ્ય પરીક્ષા બોર્ડની સ્થાપના નવેમ્બર 1966 માં થઈ, શિક્ષણ વિભાગના 1999 ના ઠરાવ દ્વારા તેને સ્વાયત્ત જાહેર કરાયું અને આ બોર્ડના 13 સભ્યો ગુજરાત સરકાર દ્વારા નિયુક્ત થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: રાજ્ય પરીક્ષા બોર્ડ (SEB) દ્વારા લેવામાં આવતી પરીક્ષાઓ અને પરીક્ષા સુધારણાના આધુનિક પ્રયોગોમાં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "પ્રથમા, મધ્યમા, શાસ્ત્રી અને આચાર્ય જેવી સંસ્કૃત પાઠશાળા પરીક્ષાઓ",
+      "સંરક્ષણ અભ્યાસક્રમ અને NTS માં પ્રવેશ માટે RIMC જેવી રાષ્ટ્રીય કક્ષાની પરીક્ષાઓ",
+      "મૂલ્યાંકનકાર માટે ઉમેદવારોની ઓળખ ખાનગી રાખવા ઉત્તરવહીઓનું બારકોડિંગ અને કેન્દ્રીય આકારણી",
+      "યુનિવર્સિટી કક્ષાના સ્નાતક અને અનુસ્નાતક અભ્યાસક્રમોની વાર્ષિક પરીક્ષાઓ"
+    ],
+    "ans": 3,
+    "unit": "એકમ 2 - રાજ્ય પરીક્ષા બોર્ડ (પાના નં.: 30-31)",
+    "exp": "રાજ્ય પરીક્ષા બોર્ડ પ્રાથમિક, માધ્યમિક, ઉચ્ચતર માધ્યમિક, ડી.એલ.એડ્., સી.પી.એડ્., ડી.પી.એડ્., ડ્રોઇંગ ગ્રેડ, RIMC, NTS અને સંસ્કૃત પાઠશાળાની પરીક્ષાઓ લે છે; યુનિવર્સિટીની સ્નાતક-અનુસ્નાતક પરીક્ષાઓ તે લેતું નથી."
+  },
+  {
+    "q": "પ્રશ્ન 48: ગુજરાત શૈક્ષણિક ટેક્નોલોજી ભવન (GIET) સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: GIET ની સ્થાપના 1984 માં શૈક્ષણિક કાર્યક્રમો માટેના INSAT પ્રોજેક્ટ હેઠળ કરવામાં આવી હતી.\nવિધાન 2: તે 'વિદ્યાદર્શન' તરીકે ઓળખાય છે અને અગાઉ તે SIET તરીકે ઓળખાતી સ્વાયત્ત સંસ્થા હતી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - GIET (પાના નં.: 31)",
+    "exp": "GIET ની સ્થાપના 1984 માં INSAT પ્રોજેક્ટ હેઠળ થઈ હતી, જે 'વિદ્યાદર્શન' તરીકે ઓળખાય છે અને અગાઉ તે SIET તરીકે ઓળખાતી સ્વાયત્ત સંસ્થા હતી."
+  },
+  {
+    "q": "પ્રશ્ન 49: GIET ના કાર્યક્રમોની વિશિષ્ટતાઓ અને પ્રસારણ અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "તે CIET નિર્મિત હિન્દી કાર્યક્રમોનું પ્રાદેશિક ભાષામાં ડબિંગ કરવાનું કાર્ય કરે છે.",
+      "સ્ક્રિપ્ટ રાઈટીંગ માટે 40 થી 45 શિક્ષકોની કાર્યશાળાઓ યોજવામાં આવે છે.",
+      "આ સંસ્થા માત્ર ધોરણ 9 થી 12 ના વિદ્યાર્થીઓ માટે જ શૈક્ષણિક કાર્યક્રમોનું નિર્માણ અને પ્રસારણ કરે છે.",
+      "તે બાળકો માટે એનિમેશન ફિલ્મ બનાવવાનું તથા વનખાતું અને મહિલા સામખ્ય જેવા સંગઠનો માટે કાર્યક્રમોનું નિર્માણ કરે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2 - GIET (પાના નં.: 32)",
+    "exp": "GIET શિક્ષકો માટે તેમજ 6 થી 14 વર્ષની વયજૂથના બાળકો માટે શૈક્ષણિક સમૃદ્ધિ અને મનોરંજન કાર્યક્રમોનું નિર્માણ અને પ્રસારણ કરે છે (સાથે બોર્ડની પરીક્ષા અને ઉચ્ચતર શિક્ષણના કાર્યક્રમો પણ બનાવે છે)."
+  },
+  {
+    "q": "પ્રશ્ન 50: ભારત અને ગુજરાતની શૈક્ષણિક સંસ્થાઓ અને તેના સ્થાપના વર્ષના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (સંસ્થા) — વિભાગ-બ (સ્થાપના વર્ષ)\n1. NCERT — (i) 1956 (એક્ટ મંજૂર)\n2. UGC — (ii) 1961\n3. ગુજરાત રાજ્ય શાળા પાઠ્યપુસ્તક મંડળ — (iii) 1984\n4. GIET — (iv) 1969",
+    "options": [
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(i), 2-(ii), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)",
+      "1-(iv), 2-(i), 3-(ii), 4-(iii)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2 - શિક્ષણની સંસ્થાઓ (પાના નં.: 25-31)",
+    "exp": "NCERT ની સ્થાપના 1961 માં, UGC એક્ટ 1956 માં, ગુજરાત રાજ્ય શાળા પાઠ્યપુસ્તક મંડળની સ્થાપના 1969 માં અને GIET ની સ્થાપના 1984 માં થઈ હતી."
+  },
+  {
+    "q": "પ્રશ્ન 51: 'શાળા' (School) શબ્દની ઉત્પત્તિ અને તેના ઐતિહાસિક વિકાસક્રમ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: શાળા શબ્દ ગ્રીક શબ્દ 'scholē' પરથી બનેલો છે, જેનો શાબ્દિક અર્થ 'નવરાશ' (leisure) થાય છે.\nવિધાન 2: પ્રાચીન ગ્રીસમાં અધ્યયન માટેના સ્થળને 'એકેડમી' અને ભારતમાં 'ગુરુકુળ' કહેવામાં આવતું.\nવિધાન 3: એક માન્યતા મુજબ 425 AD થી પ્રાથમિક શિક્ષણ તંત્રની શરૂઆત થઈ અને 9મી સદીમાં સ્વતંત્ર શાળા તરીકે 'મદ્રેસા'ની સંકલ્પના અસ્તિત્વમાં આવી.",
+    "options": [
+      "માત્ર 1 અને 2 સાચાં છે.",
+      "માત્ર 2 અને 3 સાચાં છે.",
+      "1, 2 અને 3 ત્રણેય સાચાં છે.",
+      "માત્ર 1 અને 3 સાચાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - શાળા સંકલ્પના (પાના નં.: 36)",
+    "exp": "ઉપરોક્ત ત્રણેય વિધાનો સત્ય છે; આ ઉપરાંત બ્રિટીશ અહેવાલ મુજબ 18મી સદીમાં સમગ્ર દેશમાં બધા માટે દેશી શિક્ષણ શરૂ થયું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 52: \"A place where children go to be educated.\" — શાળાની આ વ્યાખ્યા નીચેનામાંથી કયા સ્રોતમાં આપવામાં આવી છે?",
+    "options": [
+      "કોઠારી કમિશન અહેવાલ",
+      "ઓક્સફર્ડ ડિક્શનરી (Oxford Dictionary)",
+      "યુનિસેફ (UNICEF)",
+      "રાષ્ટ્રીય શિક્ષણ નીતિ-1986"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - શાળા સંકલ્પના (પાના નં.: 36)",
+    "exp": "ઓક્સફર્ડ ડિક્શનરીમાં શાળા/સ્કૂલને \"A place where children go to be educated.\" તરીકે વ્યાખ્યાયિત કરવામાં આવેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: શૈક્ષણિક વયજૂથના આધારે શાળાના પ્રકારો અને તેની વિશેષતાઓ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "'શાળા તત્પરતા અભિગમ' પૂર્વ પ્રાથમિક શિક્ષણ સાથે જોડાયેલો છે.",
+      "માધ્યમિક શાળાઓ ત્રણ પ્રકારની છે: સામાન્ય શિક્ષણ, વ્યાવસાયિક/રોજગારલક્ષી અને ઉત્તર બુનિયાદી શાળાઓ.",
+      "ઉચ્ચતર માધ્યમિક શાળાઓના 'ઉત્તર બુનિયાદી પ્રવાહ'માં મનોવિજ્ઞાન, તર્કશાસ્ત્ર અને સમાજશાસ્ત્ર જેવા વિષયોનો સમાવેશ થાય છે.",
+      "પ્રાથમિક શિક્ષણ (ધોરણ 1 થી 5) માં વાચન, લેખન અને ગણન જેવા પાયારૂપ કૌશલ્યો તથા જીવન કૌશલ્યો શીખવવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - શૈક્ષણિક વયજૂથના આધારે શાળા પ્રકાર (પાના નં.: 37-38)",
+    "exp": "મનોવિજ્ઞાન, તર્કશાસ્ત્ર અને સમાજશાસ્ત્ર એ 'સામાન્ય પ્રવાહ'ના વિષયો છે, જ્યારે 'ઉત્તર બુનિયાદી પ્રવાહ'માં પશુપાલન, કૃષિ, કાંતણ અને વણાટ જેવા વિષયોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: શાળા વ્યવસ્થાપનના આધારે શાળાના પ્રકારો સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: અનુદાનિત શાળાઓ (Grant-In-Aid) માં શિક્ષકોના પગારની સંપૂર્ણ ગ્રાન્ટ સરકાર દ્વારા ચૂકવવામાં આવે છે અને ફી નહીં નફા કે નહીં નુકસાનના ધોરણે લેવાય છે.\nવિધાન 2: સ્વ-નિર્ભર શાળાઓ સરકારના નિયંત્રણથી સંપૂર્ણપણે મુક્ત હોય છે અને તેને સરકાર તરફથી માત્ર નિભાવ ગ્રાન્ટ આપવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - શાળા વ્યવસ્થાપનના આધારે શાળા પ્રકાર (પાના નં.: 39)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે, કારણ કે સ્વ-નિર્ભર શાળાઓ 'સરકારના નિયંત્રણ હેઠળ' ચાલતી હોય છે અને તેમને સરકાર તરફથી કોઈપણ પ્રકારની નાણાકીય સહાય (નિભાવ ગ્રાન્ટ કે પગાર ગ્રાન્ટ) આપવામાં આવતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 55: ગુજરાતમાં આવેલી વિશિષ્ટ અને પ્રાયોગિક શાળાઓ (Practice/Experimental Schools) તથા તેના સંચાલકોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (શાળા) — વિભાગ-બ (સંચાલક / સંલગ્ન સંસ્થા)\n1. આદર્શ નિવાસી શાળાઓ — (i) કેન્દ્રિય શાળા બોર્ડ\n2. સૈનિક સ્કૂલ (જામનગર) — (ii) સમાજ કલ્યાણ વિભાગ, ગુજરાત સરકાર\n3. પ્રાયોગિક શાળા (વલ્લભ વિદ્યાનગર) — (iii) જિલ્લા શિક્ષણ અને તાલીમ ભવન (DIET)\n4. પ્રાયોગિક શાળા (રાજપીપળા, પાટણ) — (iv) સરદાર પટેલ યુનિવર્સિટી (એમ.બી. પટેલ કોલેજ ઓફ એજ્યુકેશન)",
+    "options": [
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)",
+      "1-(i), 2-(ii), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(iv), 2-(i), 3-(ii), 4-(iii)"
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - પ્રાયોગિક શાળાઓ (પાના નં.: 39)",
+    "exp": "આદર્શ નિવાસી શાળાઓ સમાજ કલ્યાણ વિભાગ દ્વારા, સૈનિક સ્કૂલ (જામનગર) કેન્દ્રિય બોર્ડ દ્વારા, અને પ્રાયોગિક શાળાઓ SPU (એમ.બી. પટેલ કોલેજ) તથા DIET (રાજપીપળા, પાટણ) દ્વારા ચલાવવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: કસ્તૂરબા ગાંધી બાલિકા વિદ્યાલય (KGBV) ના ત્રણ મોડેલ અંગે નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "મોડેલ-I : હોસ્ટેલ સાથેની શાળા (100 છોકરીઓ) | મોડેલ-II : હોસ્ટેલ સાથેની શાળા (50 છોકરીઓ) | મોડેલ-III : માત્ર હોસ્ટેલ (50 છોકરીઓ)",
+      "મોડેલ-I : હોસ્ટેલ સાથેની શાળા (150 છોકરીઓ) | મોડેલ-II : હોસ્ટેલ સાથેની શાળા (100 છોકરીઓ) | મોડેલ-III : માત્ર હોસ્ટેલ (50 છોકરીઓ)",
+      "મોડેલ-I : માત્ર હોસ્ટેલ (100 છોકરીઓ) | મોડેલ-II : હોસ્ટેલ સાથેની શાળા (50 છોકરીઓ) | મોડેલ-III : માત્ર શાળા (50 છોકરીઓ)",
+      "મોડેલ-I : હોસ્ટેલ સાથેની શાળા (100 છોકરીઓ) | મોડેલ-II : માત્ર હોસ્ટેલ (100 છોકરીઓ) | મોડેલ-III : માત્ર હોસ્ટેલ (50 છોકરીઓ)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - કેટલીક વિશિષ્ટ શાળાઓ (પાના નં.: 40)",
+    "exp": "NPEGEL યોજના અંતર્ગત શરૂ કરાયેલ KGBV ના ત્રણ મોડેલ છે: મોડેલ-I (હોસ્ટેલ સાથેની શાળા, ક્ષમતા 100), મોડેલ-II (હોસ્ટેલ સાથેની શાળા, ક્ષમતા 50) અને મોડેલ-III (માત્ર હોસ્ટેલ, ક્ષમતા 50)."
+  },
+  {
+    "q": "પ્રશ્ન 57: વિવિધ પ્રકારની 'મોડેલ શાળાઓ' અને તેના ધોરણ/સંચાલનના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (વિશિષ્ટ શાળા) — વિભાગ-બ (ધોરણ / વિશિષ્ટતા)\n1. RMSA અંતર્ગત મોડેલ સ્કૂલ — (i) ધોરણ 6 થી 12 (ગુજરાત કાઉન્સિલ ઓફ સેકન્ડરી એજ્યુકેશન સોસાયટી)\n2. કેન્દ્ર સરકાર પુરસ્કૃત મોડેલ શાળા — (ii) ધોરણ 9 અને 10 (5 કિ.મી.માં સરકારી/ગ્રાન્ટેડ શાળા ન હોય ત્યાં)\n3. ગુજરાત મોડેલ ડે બોર્ડીંગ સ્કૂલ — (iii) આદિવાસી વિસ્તાર માટે PPP યોજનાથી (Gujarat State Tribal Education Society)\n4. એકલવ્ય મોડેલ રેસીડેન્શીયલ શાળા (EMRS) — (iv) ધોરણ 6 થી 10 (શરૂઆત MHRD દ્વારા, હાલ સંપૂર્ણ સંચાલન રાજ્ય સરકાર)",
+    "options": [
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)",
+      "1-(iv), 2-(ii), 3-(i), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)"
+    ],
+    "ans": 3,
+    "unit": "એકમ 3 - કેટલીક વિશિષ્ટ શાળાઓ (પાના નં.: 40)",
+    "exp": "RMSA મોડેલ સ્કૂલ ધો. 9-10 (5 કિ.મી. અંતર), કેન્દ્ર પુરસ્કૃત મોડેલ શાળા ધો. 6-10, ગુજરાત મોડેલ ડે બોર્ડીંગ સ્કૂલ ધો. 6-12 (50 તાલુકાઓમાંથી 20 શરૂ) અને EMRS (PPP મોડેલ) આદિવાસી વિસ્તારો માટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: યુનિસેફ (UNICEF) દ્વારા 'અસરકારક શાળા' ને કુલ કેટલાં પાસાંઓના આધારે વ્યાખ્યાયિત કરવામાં આવી છે અને તેમાં નીચેનામાંથી કયા પાસાનો સમાવેશ થતો નથી?",
+    "options": [
+      "5 પાસાંઓ; 'આર્થિક અનુદાન' નો સમાવેશ થતો નથી.",
+      "4 પાસાંઓ; 'વિષયવસ્તુ' નો સમાવેશ થતો નથી.",
+      "5 પાસાંઓ; 'વાતાવરણ' નો સમાવેશ થતો નથી.",
+      "6 પાસાંઓ; 'નિષ્પત્તિ' નો સમાવેશ થતો નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - શાળા અસરકારકતાની સંકલ્પના (પાના નં.: 41)",
+    "exp": "યુનિસેફ અસરકારક શાળાને 5 પાસાંઓના આધારે વ્યાખ્યાયિત કરે છે: (1) અધ્યેતા, (2) વાતાવરણ, (3) વિષયવસ્તુ, (4) પ્રક્રિયા અને (5) નિષ્પત્તિ."
+  },
+  {
+    "q": "પ્રશ્ન 59: \"School effectiveness is defined as some combinations of inputs, processes, outcomes.\" — શાળા અસરકારકતાની આ વ્યાખ્યા કોણે આપી છે?",
+    "options": [
+      "Purkey & Smith",
+      "Adams",
+      "Levine & Lezotte",
+      "Fullan & Hargreaves"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - શાળા અસરકારકતાની સંકલ્પના (પાના નં.: 41)",
+    "exp": "શાળા અસરકારકતા અને શૈક્ષણિક ગુણવત્તા (Educational Quality) ની ઉપરોક્ત વ્યાખ્યા Adams દ્વારા આપવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 60: બાળકોને મફત અને ફરજિયાત શિક્ષણનો અધિકાર અધિનિયમ-2009 ની કઈ કલમોમાં શાળાના ધોરણો નક્કી કરવામાં આવેલા છે?",
+    "options": [
+      "કલમ 12 અને 21",
+      "કલમ 19 અને 25",
+      "કલમ 15 અને 24",
+      "કલમ 18 અને 29"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - શાળા અસરકારકતાના ધોરણો (પાના નં.: 42)",
+    "exp": "RTE અધિનિયમ-2009 ની કલમ 19 અને 25 માં શાળા અસરકારકતાના ધોરણો નક્કી કરવામાં આવેલા છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: RTE-2009 મુજબ ધોરણ 1 થી 5 (પ્રાથમિક શાળા) માં દાખલ કરેલ બાળકોની સંખ્યા અને શિક્ષકોની સંખ્યાના ગુણોત્તર અંગે નીચેનામાંથી કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "60 સુધી બાળકો : 02 શિક્ષકો",
+      "61 થી 90 સુધી બાળકો : 03 શિક્ષકો",
+      "91 થી 120 સુધી બાળકો : 04 શિક્ષકો",
+      "150 બાળકોથી વધારે : 04 શિક્ષકો + એક મુખ્ય શિક્ષક"
+    ],
+    "ans": 3,
+    "unit": "એકમ 3 - શિક્ષક-વિદ્યાર્થી ગુણોત્તર (પાના નં.: 42)",
+    "exp": "RTE-2009 ના કોષ્ટક મુજબ ધોરણ 1 થી 5 માં 150 બાળકોથી વધારે સંખ્યા હોય ત્યારે '05 શિક્ષકો + એક મુખ્ય શિક્ષક' હોવા જોઈએ, અને 200 થી વધારે બાળકોએ વિદ્યાર્થી-શિક્ષક ગુણોત્તર (મુખ્ય શિક્ષક સિવાય) 40 થી વધશે નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 62: RTE-2009 મુજબ ઉચ્ચ પ્રાથમિક શાળા (ધોરણ 6 થી 8) માં જો બાળકોનો પ્રવેશ 100 થી વધુ હોય, તો ત્યાં 1 પૂર્ણકાલીન મુખ્ય શિક્ષક ઉપરાંત કયા વિષયો માટે અંશકાલીન શિક્ષકોની જોગવાઈ કરવામાં આવી છે?",
+    "options": [
+      "કમ્પ્યૂટર શિક્ષણ, સંગીત શિક્ષણ અને યોગ શિક્ષણ",
+      "કલા શિક્ષણ, આરોગ્ય અને શારીરિક શિક્ષણ તથા કાર્ય શિક્ષણ",
+      "ભાષા શિક્ષણ, વિજ્ઞાન પ્રયોગશાળા અને રમતગમત શિક્ષણ",
+      "કલા શિક્ષણ, કમ્પ્યૂટર શિક્ષણ અને કાર્ય શિક્ષણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - શિક્ષક-વિદ્યાર્થી ગુણોત્તર (પાના નં.: 43)",
+    "exp": "ધોરણ 6 થી 8 માં પ્રત્યેક 35 બાળકો દીઠ 1 શિક્ષક ઉપરાંત, બાળકોનો પ્રવેશ 100 થી વધુ હોય ત્યાં 1 પૂર્ણકાલીન મુખ્ય શિક્ષક અને (1) કલા શિક્ષણ, (2) આરોગ્ય અને શારીરિક શિક્ષણ તથા (3) કાર્ય શિક્ષણ માટે અંશકાલીન શિક્ષકની જોગવાઈ છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: RTE-2009 મુજબ શૈક્ષણિક વર્ષમાં કામકાજના ઓછામાં ઓછા દિવસ, શિક્ષણના કલાક અને અઠવાડિયાના કલાક અંગે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "ધો. 1-5 : 200 દિવસ (800 કલાક) | ધો. 6-8 : 220 દિવસ (1000 કલાક) | અઠવાડિયા દીઠ : તૈયારી સહિત 45 કલાક",
+      "ધો. 1-5 : 220 દિવસ (800 કલાક) | ધો. 6-8 : 240 દિવસ (1000 કલાક) | અઠવાડિયા દીઠ : તૈયારી સહિત 45 કલાક",
+      "ધો. 1-5 : 200 દિવસ (900 કલાક) | ધો. 6-8 : 220 દિવસ (1100 કલાક) | અઠવાડિયા દીઠ : તૈયારી સહિત 40 કલાક",
+      "ધો. 1-5 : 180 દિવસ (800 કલાક) | ધો. 6-8 : 200 દિવસ (1000 કલાક) | અઠવાડિયા દીઠ : તૈયારી સિવાય 45 કલાક"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - કામકાજના દિવસ/શિક્ષણના કલાક (પાના નં.: 43)",
+    "exp": "RTE-2009 મુજબ ધોરણ 1 થી 5 માટે વર્ષદીઠ 200 દિવસ અને 800 કલાક, ધોરણ 6 થી 8 માટે 220 દિવસ અને 1000 કલાક તથા શિક્ષક માટે અઠવાડિયા દીઠ તૈયારીના કલાક સહિત શીખવવાના ઓછામાં ઓછા 45 કલાક નિર્ધારિત છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: ભારત સરકાર દ્વારા શૈક્ષણિક સંસ્થાઓમાં વિકલાંગ (દિવ્યાંગ) વિદ્યાર્થીઓ માટે રેમ્પ અને બ્રેઇલ લિપિમાં સાઇન બોર્ડ (Sign Board) ની વ્યવસ્થા કઈ યોજના અન્વયે જરૂરી બનાવવામાં આવી છે?",
+    "options": [
+      "સર્વ શિક્ષા યોજના",
+      "સુગમ્ય યોજના",
+      "સમાવેશી શિક્ષણ યોજના",
+      "આદર્શ શાળા યોજના"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - શાળા મકાન (પાના નં.: 43)",
+    "exp": "શાળા મકાનના 7 મૂળભૂત ધોરણો ઉપરાંત ભારત સરકાર દ્વારા 'સુગમ્ય યોજના' અન્વયે વિકલાંગો માટે જરૂરી રેમ્પ અને બ્રેઇલ લિપિમાં Sign Board લખવા જેવી વ્યવસ્થા જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: ગુજરાત રાજ્યના આરટીઇ નિયમો, 2012 (નિયમ 13) અનુસાર વર્ગખંડના ક્ષેત્રફળ (કાર્પેટ એરીયા) અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: વર્ગખંડ તરીકે વપરાતો દરેક ખંડ, વર્ગના દરેક વિદ્યાર્થી માટે 8 ચોરસ ફૂટ ઉપરાંત અધ્યાપન માટે 60 ચોરસ ફૂટનું વધારાનું ક્ષેત્રફળ ધરાવતો હોવો જોઈએ.\nવિધાન 2: વર્ગખંડનું ભોંયતળ ક્ષેત્રફળ 300 ચોરસ ફૂટથી ઓછું હોવું જોઈએ નહીં.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - ગુજરાત RTE નિયમો, 2012 (પાના નં.: 44)",
+    "exp": "ગુજરાત RTE નિયમો-2012 ના નિયમ 13 મુજબ પ્રત્યેક વિદ્યાર્થી દીઠ 8 ચો.ફૂટ + અધ્યાપન માટે 60 ચો.ફૂટ વધારાનું ક્ષેત્રફળ હોવું જોઈએ અને વર્ગખંડનું ક્ષેત્રફળ 300 ચો.ફૂટથી ઓછું ન હોવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 66: ગુજરાત RTE નિયમો, 2012 (નિયમ 13) મુજબ જો કોઈ શાળાના એક કરતાં વધુ વર્ગખંડોનું ક્ષેત્રફળ 300 ચો.ફૂટ કરતાં ઓછું હોય અને સૌથી નાના વર્ગખંડનું ક્ષેત્રફળ 220 ચો.ફૂટ હોય, તો સૂત્ર મુજબ તે શાળાનું વિદ્યાર્થી-શિક્ષક પ્રમાણ કેટલાથી વધવું જોઈએ નહીં?",
+    "options": [
+      "20",
+      "25",
+      "27.5",
+      "30"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - ગુજરાત RTE નિયમો, 2012 (પાના નં.: 44)",
+    "exp": "સૂત્ર મુજબ વિદ્યાર્થી-શિક્ષક પ્રમાણ = (સૌથી નાના વર્ગખંડનું ક્ષેત્રફળ - 60) / 8 = (220 - 60) / 8 = 160 / 8 = 20."
+  },
+  {
+    "q": "પ્રશ્ન 67: ગુજરાત RTE નિયમો, 2012 (નિયમ 13) મુજબ શાળા ચલાવતી કંપની કયા અધિનિયમની કઈ કલમ હેઠળ રજિસ્ટર થયેલી હોવી જોઈએ?",
+    "options": [
+      "મંડળી રજિસ્ટ્રેશન અધિનિયમ, 1860 ની કલમ 25",
+      "કંપની અધિનિયમ, 1956 ની કલમ 25",
+      "કંપની અધિનિયમ, 1956 ની કલમ 13",
+      "સાર્વજનિક ટ્રસ્ટ અધિનિયમ, 1950 ની કલમ 25"
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - ગુજરાત RTE નિયમો, 2012 (પાના નં.: 44)",
+    "exp": "નિયમ 13 મુજબ શાળા મંડળી રજિસ્ટ્રેશન અધિનિયમ-1860 હેઠળ રજિસ્ટર મંડળી, સાર્વજનિક ટ્રસ્ટ અથવા કંપની અધિનિયમ-1956 ની કલમ 25 હેઠળ રજિસ્ટર થયેલી કોઈપણ કંપની દ્વારા ચલાવાતી હોવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 68: RTE-2009 અંતર્ગત 'અધ્યયન નિષ્પત્તિ' ના ચાર પાસાંઓમાં શાળાની પૂર્વ કામગીરી સાથે સરખાવતા થયેલા સુધારાનું પાસું શા માટે રાખવામાં આવ્યું છે?",
+    "options": [
+      "શાળાઓને વધારાની ગ્રાન્ટ ફાળવી શકાય તે માટે.",
+      "શાળાઓ નબળા બાળકોને પ્રવેશ ન આપીને પોતાની કામગીરીની તદ્દન સારી છાપ ઊભી ન કરી દે તે માટે.",
+      "શિક્ષકોની બઢતી અને પગારવધારો નક્કી કરવા માટે.",
+      "માત્ર ખાનગી શાળાઓની ફી નિર્ધારિત કરવા માટે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - અધ્યયન નિષ્પત્તિ (પાના નં.: 44)",
+    "exp": "શાળાઓ નબળા બાળકોને પ્રવેશ ન આપીને શાળા કામગીરીની તદ્દન સારી છાપ ઊભરી આવે તેવું ન થાય તે માટે 'વિદ્યાર્થીની અધ્યયન નિષ્પત્તિ (શાળાની પૂર્વ કામગીરી સાથે સરખાવતા થયેલો સુધારો)' નું પાસું રાખવામાં આવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: ભારતના વિવિધ રાજ્યોમાં શાળા અસરકારકતાના વાર્ષિક મૂલ્યાંકન માટે ચાલતા કાર્યક્રમોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (રાજ્ય) — વિભાગ-બ (મૂલ્યાંકન કાર્યક્રમ)\n1. ગુજરાત — (i) પ્રતિભાપર્વ\n2. ઓરીસ્સા — (ii) ગુણોત્સવ\n3. મધ્યપ્રદેશ — (iii) સમીક્ષા",
+    "options": [
+      "1-(ii), 2-(i), 3-(iii)",
+      "1-(iii), 2-(ii), 3-(i)",
+      "1-(ii), 2-(iii), 3-(i)",
+      "1-(i), 2-(iii), 3-(ii)"
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - શાળા અસરકારકતાના માપદંડો (પાના નં.: 45)",
+    "exp": "શાળા અસરકારકતાના વાર્ષિક મૂલ્યાંકન માટે ગુજરાતમાં 'ગુણોત્સવ', ઓરીસ્સામાં 'સમીક્ષા' અને મધ્યપ્રદેશમાં 'પ્રતિભાપર્વ' કાર્યક્રમો યોજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: ગુજરાત રાજ્યમાં 'ગુણોત્સવ' મોડેલની શરૂઆત કયા વર્ષથી થઈ અને તેમાં વિવિધ ક્ષેત્રોનું ગુણભાર (ટકાવારી) માળખું કેવું છે?",
+    "options": [
+      "વર્ષ 2009 | શૈક્ષણિક (60%), સહ-શૈક્ષણિક (20%), લોકભાગીદારી તથા સંસાધનોનો ઉપયોગ (20%)",
+      "વર્ષ 2010 | શૈક્ષણિક (50%), સહ-શૈક્ષણિક (25%), લોકભાગીદારી તથા સંસાધનોનો ઉપયોગ (25%)",
+      "વર્ષ 2009 | શૈક્ષણિક (70%), સહ-શૈક્ષણિક (15%), લોકભાગીદારી તથા સંસાધનોનો ઉપયોગ (15%)",
+      "વર્ષ 2008 | શૈક્ષણિક (60%), સહ-શૈક્ષણિક (25%), લોકભાગીદારી તથા સંસાધનોનો ઉપયોગ (15%)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 46)",
+    "exp": "ગુજરાતમાં 2009 થી ગુણોત્સવ મોડેલ વિકસાવવામાં આવ્યું છે, જેમાં શૈક્ષણિક (60%), સહ-શૈક્ષણિક પ્રવૃત્તિઓ (20%) તથા લોકભાગીદારી અને સંસાધનોનો યોગ્ય ઉપયોગ (20%) નો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: ગુણોત્સવ અંતર્ગત 'સહ-અભ્યાસિક પ્રવૃત્તિઓના મૂલ્યાંકનના સૂચકો (20%)' માં નીચેનામાંથી કયા ક્ષેત્રનો સમાવેશ થતો નથી?",
+    "options": [
+      "પ્રાર્થના",
+      "યોગ, વ્યાયામ અને રમતગમત",
+      "શાળા પુસ્તકાલય",
+      "મધ્યાહ્ન ભોજન યોજના"
+    ],
+    "ans": 3,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 46-47)",
+    "exp": "'મધ્યાહ્ન ભોજન યોજના' એ 'સંસાધનોનો ઉપયોગ અને લોકભાગીદારી (20%)' ના સૂચકોમાં આવે છે, જ્યારે પ્રાર્થના, યોગ-વ્યાયામ, ઇકો ક્લબ, શાળા પુસ્તકાલય અને સાંસ્કૃતિક પ્રવૃત્તિઓ-બાલસભા સહ-અભ્યાસિક પ્રવૃત્તિઓમાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: ગુણોત્સવના 'સંસાધનોનો ઉપયોગ અને લોકભાગીદારી (20%)' અંતર્ગત નીચેનામાંથી કયું વિધાન માત્ર ધોરણ 6 થી 8 માટે જ લાગુ પડે છે (અન્યથા ખાનું ખાલી રાખવાનું હોય છે)?",
+    "options": [
+      "શાળામાં કમ્પ્યૂટર કાર્યરત છે.",
+      "દૂરવર્તી શિક્ષણ કાર્યક્રમ બાળકોને નિયમિત રીતે બતાવવામાં આવે છે.",
+      "ડાયસ ફોર્મ અંતર્ગત તૈયાર થતી શાળાની માહિતીનું જનવાચન કરવામાં આવે છે.",
+      "વેસ્ટ પાણીનો ઉપયોગ શાળાની બાગબાની માટે થાય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 48)",
+    "exp": "સૂચક 4.5 મુજબ \"દૂરવર્તી શિક્ષણ કાર્યક્રમ બાળકોને નિયમિત રીતે બતાવવામાં આવે છે\" તે માત્ર ધોરણ 6 થી 8 માટે જ જોવાનું હોય છે, અન્યથા ખાનું ખાલી રાખવાનું હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: ગુણોત્સવના શૈક્ષણિક મૂલ્યાંકન (60%) અંતર્ગત કયા ધોરણના બાળકોનું માત્ર વાચન, લેખન અને ગણન ચકાસવામાં આવે છે?",
+    "options": [
+      "ધોરણ 1 થી 5",
+      "ધોરણ 2 થી 5",
+      "ધોરણ 3 થી 5",
+      "ધોરણ 1 થી 4"
+    ],
+    "ans": 2,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 49)",
+    "exp": "ગુણોત્સવમાં શૈક્ષણિક મૂલ્યાંકન માટે ધોરણ 3 થી 5 ના બાળકોનું વાચન, લેખન અને ગણન ચકાસવામાં આવે છે, જ્યારે ધોરણ 6 થી 8 માં વાચન, લેખન અને ગણનની સાથે વિવિધ શૈક્ષણિક વિષયોની પરીક્ષા લેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: ગુણોત્સવ અંતર્ગત શાળાઓને આપવામાં આવતા ગ્રેડ અને તેના ગુણના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (ગ્રેડ) — વિભાગ-બ (ગુણ)\n1. A+ ગ્રેડ — (i) 6.2 – 7.4 ગુણ\n2. A ગ્રેડ — (ii) 8.8 થી 10 ગુણ\n3. B ગ્રેડ — (iii) 4.9 – 6.1 ગુણ\n4. C ગ્રેડ — (iv) 7.5 – 8.7 ગુણ",
+    "options": [
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(iv), 2-(ii), 3-(i), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 49)",
+    "exp": "ગુણોત્સવના ગ્રેડિંગ માળખા મુજબ A+ (8.8 થી 10), A (7.5 – 8.7), B (6.2 – 7.4), C (4.9 – 6.1) અને D ગ્રેડ (0 – 4.8 ગુણ) આપવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: ગુણોત્સવ અંતર્ગત 'ઉપચારાત્મક કાર્યક્રમ' ના આયોજન અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "તમામ ગ્રેડ મેળવનાર શાળાઓમાં ઉપચારાત્મક કાર્યક્રમ ફરજિયાત હોય છે.",
+      "નિમ્ન ગ્રેડ મેળવનાર શાળાઓમાં ઉપચારાત્મક કાર્યક્રમનું સઘન આયોજન થાય છે, જ્યારે સારો ગ્રેડ મેળવનાર શાળાઓ માટે તે સ્વૈચ્છિક હોય છે.",
+      "માત્ર D ગ્રેડ મેળવનાર શાળાઓમાં જ ઉપચારાત્મક કાર્યક્રમ યોજાય છે.",
+      "સારો ગ્રેડ મેળવનાર શાળાઓમાં ઉપચારાત્મક કાર્યક્રમ પર પ્રતિબંધ હોય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 3 - ગુણોત્સવ (પાના નં.: 49)",
+    "exp": "ગુણોત્સવ અંતર્ગત નિમ્ન ગ્રેડ મેળવનાર શાળાઓમાં ઉપચારાત્મક કાર્યક્રમનું સઘન આયોજન થાય છે, જ્યારે સારો ગ્રેડ મેળવનાર શાળાઓ માટે ઉપચારાત્મક કાર્યક્રમ સ્વૈચ્છિક હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: શાળા નેતૃત્વની સંકલ્પના સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: શાળા એ સમાજની લઘુ આવૃત્તિ છે અને મહાત્મા ગાંધીએ શિક્ષણમાં વૈયક્તિક વિકાસ અને સામાજિક વિકાસના સમન્વય પર ભાર મૂક્યો છે.\nવિધાન 2: 'નેતૃત્વ' એ જાતિવાચક સંજ્ઞા છે અને સંસ્કૃતમાં કહેવાયેલ 'યથા રાજા તથા પ્રજા' નો અર્થ 'જેવા આચાર્ય તેવી શાળા' થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ 4 - શાળા નેતૃત્વ અને વ્યવસ્થાપન (પાના નં.: 53)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે, કારણ કે નેતૃત્વ એ જાતિવાચક નહીં પરંતુ 'ભાવવાચક સંજ્ઞા' છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: નેતૃત્વની વ્યાખ્યાઓ અને તેના પ્રણેતાઓના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રણેતા) — વિભાગ-બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. લિવિંગ્સ્ટન — (i) અનુયાયીઓના સમૂહ પાસે ઇચ્છિત કાર્ય સ્વેચ્છાપૂર્વક કે કોઈ દબાણ વગર કરાવવાનો ગુણ\n2. ચેસ્ટર આઈ. બર્નાર્ડ — (ii) અન્ય લોકોમાં કોઈ સમાન ઉદ્દેશોને અનુસરવાની ઇચ્છા જાગૃત કરવાની યોગ્યતા-કુશળતા\n3. કીથ ડેવિસ — (iii) સામૂહિક પ્રયાસોમાં જોડાયેલા લોકોનું અથવા એમની પ્રવૃત્તિઓનું માર્ગદર્શન કરવાનો ગુણ\n4. આલ્ફર્ડ — (iv) પૂર્વ નિર્ધારિત ઉદ્દેશોને ઉત્સાહપૂર્વક પ્રાપ્ત કરવા પ્રેરિત કરતું માનવીય તત્ત્વ",
+    "options": [
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)",
+      "1-(iii), 2-(ii), 3-(iv), 4-(i)",
+      "1-(ii), 2-(iii), 3-(iv), 4-(i)",
+      "1-(ii), 2-(iii), 3-(i), 4-(iv)"
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - નેતૃત્વની વ્યાખ્યાઓ (પાના નં.: 53-54)",
+    "exp": "લિવિંગ્સ્ટને સમાન ઉદ્દેશો અનુસરવાની ઇચ્છા જાગૃત કરવાની કુશળતા, ચેસ્ટર આઈ. બર્નાર્ડે સામૂહિક પ્રયાસોના માર્ગદર્શનનો ગુણ, કીથ ડેવિસે સમૂહને એકસૂત્રમાં બાંધી અભિપ્રેરિત કરતું માનવીય તત્ત્વ અને આલ્ફર્ડે દબાણ વગર સ્વેચ્છાપૂર્વક કાર્ય કરાવવાના ગુણ તરીકે નેતૃત્વને વ્યાખ્યાયિત કર્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: નેતૃત્વના ગુણ લક્ષણો અને તેના અર્થની નીચેનામાંથી કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "સાંવેગિક બુદ્ધિમત્તા (Emotional Intelligence) : સંબંધોનું મહત્ત્વ સમજી સહકર્મીઓ અને વિદ્યાર્થીઓ પ્રત્યે સમાનુભૂતિ બતાવવી",
+      "સવ્યતા / સ્થિતિસ્થાપકતા (Resilience) : કટોકટી ભરેલી પરિસ્થિતિમાં શાંત અને દરેક સમયે હકારાત્મક તથા જુસ્સાસભર રહેવું",
+      "મુત્સદ્દીપણું (Persuasion) : શાળા બહાર જે કંઈ સારું જોવા મળે તેને શાળા વિકાસનો ભાગ બનાવવો",
+      "હિંમત (Courage) : દૃઢ મનોબળ સાથે જોખમ ઉઠાવવા તૈયાર રહેવું અને પડકારો સામે અડગ રહેવું"
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - નેતૃત્વના ગુણ લક્ષણો (પાના નં.: 54-55)",
+    "exp": "શાળા બહાર જે કંઈ સારું જોવા મળે તેને શાળા વિકાસનો ભાગ બનાવવો એ 'જિજ્ઞાસાવૃત્તિ (Curiosity)' નો ગુણ છે, જ્યારે 'મુત્સદ્દીપણું (Persuasion)' એટલે આત્મવિશ્વાસપૂર્વક પ્રત્યાયન કરી પોતાની શાળાની વાત શ્રોતાઓને ગળે ઉતરે તે રીતે રજૂ કરવી."
+  },
+  {
+    "q": "પ્રશ્ન 79: નેતૃત્વના 'પાંચ પરિમાણો' માં નીચેનામાંથી કઈ બાબતનો સમાવેશ થતો નથી?",
+    "options": [
+      "સમગ્ર પ્રક્રિયાને પડકાર",
+      "સંયુક્ત દૃષ્ટિકોણને પ્રોત્સાહન",
+      "કડક વહીવટી નિયંત્રણ અને દંડ",
+      "ઉદાહરણરૂપ વર્તન પૂરું પાડવું"
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - નેતૃત્વના ગુણ લક્ષણો (પાના નં.: 55)",
+    "exp": "નેતૃત્વના પાંચ પરિમાણોમાં સમગ્ર પ્રક્રિયાને પડકાર, સંયુક્ત દૃષ્ટિકોણને પ્રોત્સાહન, બીજાઓને શક્તિમાન બનાવવા, ઉદાહરણરૂપ વર્તન પૂરું પાડવું અને બીજાઓની લાગણીઓને પ્રોત્સાહિત કરવીનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: નેતૃત્વ શૈલીના વર્ગીકરણ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: કર્ટ લેવિન (Kurt Lewin, 1930) એ નેતૃત્વની મુખ્ય ત્રણ શૈલીઓ દર્શાવી છે: આપખુદશાહી, લોકશાહી અને મુક્ત નેતૃત્વ.\nવિધાન 2: ગોલમેન (Goleman) એ પોતાના પુસ્તક 'લીડરશીપ ધેટ ગેટ્સ રીઝલ્ટસ (2000)' માં નેતૃત્વની છ શૈલીઓ દર્શાવી છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - નેતૃત્વ શૈલી (પાના નં.: 56)",
+    "exp": "કર્ટ લેવિને 1930 માં 3 મુખ્ય નેતૃત્વ શૈલીઓ અને ગોલમેને 2000 માં 'લીડરશીપ ધેટ ગેટ્સ રીઝલ્ટસ' માં 6 પ્રકારની નેતૃત્વ શૈલીઓ દર્શાવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: ગોલમેન દ્વારા દર્શાવેલ નેતૃત્વ શૈલીઓ અને તેના 'મુખ્ય મંત્ર' ના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (નેતૃત્વ શૈલી) — વિભાગ-બ (મુખ્ય મંત્ર)\n1. પ્રભાવી નેતૃત્વ (Commanding) — (i) \"આવો સાથે મળીને કરીએ\"\n2. દૂરંદેશી નેતૃત્વ (Visionary) — (ii) \"આજ્ઞાનુસાર કરો\"\n3. પ્રગતિશીલ નેતૃત્વ (Pacesetting) — (iii) \"પ્રયત્ન કરી જૂઓ / અજમાવી જૂઓ\"\n4. માર્ગદર્શક નેતૃત્વ (Coaching) — (iv) \"હું કરું છું (તેમ કરવા પ્રેરે)\"",
+    "options": [
+      "1-(ii), 2-(i), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(iv), 3-(i), 4-(iii)",
+      "1-(i), 2-(ii), 3-(iv), 4-(iii)",
+      "1-(ii), 2-(i), 3-(iii), 4-(iv)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 4 - નેતૃત્વ શૈલી (પાના નં.: 56-57)",
+    "exp": "પ્રભાવી નેતૃત્વનો મંત્ર \"આજ્ઞાનુસાર કરો\", દૂરંદેશીનો \"આવો સાથે મળીને કરીએ\", પ્રગતિશીલનો \"હું કરું છું\" અને માર્ગદર્શક નેતૃત્વનો મુખ્ય મંત્ર \"પ્રયત્ન કરી જૂઓ\" કે \"અજમાવી જૂઓ\" છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: એક શાળામાં શિક્ષકો વચ્ચે આંતરિક મતભેદના કારણે તનાવયુક્ત સ્થિતિ ઊભી થઈ છે. આચાર્યશ્રી જૂથમાં સુસંવાદિતા ઊભી કરી, જૂથના સભ્યોને આગળ રાખી પોતે પાછળ રહી ટીમ બિલ્ડીંગ દ્વારા સકારાત્મક ભાવાવરણનું નિર્માણ કરે છે. આચાર્યશ્રીએ અહીં ગોલમેનની કઈ નેતૃત્વ શૈલી અપનાવી છે?",
+    "options": [
+      "પ્રગતિશીલ નેતૃત્વ (Pacesetting Leadership)",
+      "જોડાણવાદી નેતૃત્વ (Affinitive Leadership)",
+      "પ્રભાવી નેતૃત્વ (Commanding Leadership)",
+      "માર્ગદર્શક નેતૃત્વ (Coaching Leadership)"
+    ],
+    "ans": 1,
+    "unit": "એકમ 4 - નેતૃત્વ શૈલી (પાના નં.: 56-57)",
+    "exp": "જોડાણવાદી નેતૃત્વ (Affinitive Leadership) માં જૂથના સભ્યો આગળ અને નેતા પાછળ હોય છે; તનાવયુક્ત સ્થિતિમાં કામ કરતી વખતે કે જૂથને પુનર્ગઠિત કરતી વખતે આ શૈલી સકારાત્મક પરિણામ આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: પરિવર્તનશીલ / રૂપાંતરણાત્મક નેતૃત્વ શૈલી (Transformational Leadership) અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ શૈલીમાં દરેક સભ્યને પોતાના લેવલે નિર્ણય લેવાની સત્તા હોય છે અને નેતૃત્વ કરવાની તક મળે છે.",
+      "આ પ્રકારનું નેતૃત્વ ધરાવનાર પરંપરાગત વિચારોથી બહાર (Out of box thinking) જઈ વ્યૂહરચના ઘડે છે.",
+      "આ પ્રકારનો નેતા સંસ્થા અને કર્મચારીઓની સલામતી માટે કોઈપણ પ્રકારનું જોખમ ઉઠાવવાનું સંપૂર્ણપણે ટાળે છે.",
+      "તે નવાચારને સ્વીકારે છે અને જૂથના સભ્યોમાં પૂર્ણ શ્રદ્ધા અને વિશ્વાસ ધરાવે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - પરિવર્તન માટેનું નેતૃત્વ (પાના નં.: 57-58)",
+    "exp": "પરિવર્તનશીલ નેતા જોખમ ટાળતો નથી, પરંતુ સંસ્થા અને કર્મચારીઓની સલામતી માટે 'હેતુપૂર્ણ જોખમો ઉઠાવે છે' અને રૂઢિગત માળખાથી જુદી રીતે ધીમી પણ ચોક્કસ ગતિએ પરિવર્તન લાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: શાળા કક્ષાએ પરિવર્તન પ્રક્રિયા માટેના કુલ 8 સોપાનો પૈકી પ્રથમ પાંચ સોપાનોનો સાચો ક્રમ કયો છે?\n1. શાળા વિકાસ માટેની પ્રવૃત્તિઓને ઓળખે.\n2. શાળા અને સમાજની પરિસ્થિતિનો તાગ મેળવે.\n3. જવાબદારીની વહેંચણી અને ટીમની રચના કરે.\n4. શાળા વિકાસ માટે અગ્રતાક્રમ (Priority) નક્કી કરવા ચર્ચા કરે અને Resource શક્યતાઓ તપાસે.\n5. ઓળખ થયેલી પ્રવૃત્તિઓના હેતુઓ, નીપજ અને સમયગાળો નક્કી કરે.",
+    "options": [
+      "2 - 4 - 1 - 5 - 3",
+      "2 - 1 - 4 - 5 - 3",
+      "4 - 2 - 1 - 3 - 5",
+      "2 - 4 - 5 - 1 - 3"
+    ],
+    "ans": 0,
+    "unit": "એકમ 4 - પરિવર્તન પ્રક્રિયા માટેના સોપાનો (પાના નં.: 58)",
+    "exp": "પરિવર્તન પ્રક્રિયાના પ્રથમ પાંચ સોપાનોનો સાચો ક્રમ: (1) પરિસ્થિતિનો તાગ મેળવે → (2) અગ્રતાક્રમ અને Resource તપાસે → (3) પ્રવૃત્તિઓને ઓળખે → (4) હેતુઓ, નીપજ અને સમયગાળો નક્કી કરે → (5) જવાબદારીની વહેંચણી અને ટીમની રચના કરે."
+  },
+  {
+    "q": "પ્રશ્ન 85: શાળા ભાવાવરણ (School Climate) અંગે કોનો અભ્યાસ દર્શાવે છે કે પારિવારિક અને સકારાત્મક ભાવાવરણ શાળા સંકુલના સભ્યોને સલામતી અને મુક્ત રીતે કાર્ય કરવા પ્રેરે છે?",
+    "options": [
+      "પ્રા. આર. એસ. ત્રિવેદી",
+      "ડૉ. હરિભાઈ એસ. પટેલ",
+      "ડૉ. અંજની મહેતા",
+      "ડૉ. ધનવંત દેસાઈ"
+    ],
+    "ans": 2,
+    "unit": "એકમ 4 - શાળા ભાવાવરણ (પાના નં.: 59)",
+    "exp": "ડૉ. અંજની મહેતાનો અભ્યાસ દર્શાવે છે કે પારિવારિક અને સકારાત્મક ભાવાવરણ શાળા સંકુલના સભ્યોને સલામતી અને મુક્ત રીતે કાર્ય કરવા પ્રેરે છે, જ્યારે નિયંત્રિત અને નકારાત્મક ભાવાવરણ વિપરીત અસર જન્માવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: શાળા કક્ષાએ જોવા મળતા ભાવાવરણના મુખ્ય 6 પ્રકારોમાં નીચેનામાંથી કયા પ્રકારનો સમાવેશ થતો નથી?",
+    "options": [
+      "પરિચિત ભાવાવરણ",
+      "પૈતૃક ભાવાવરણ",
+      "બંધિયાર ભાવાવરણ",
+      "સ્પર્ધાત્મક ભાવાવરણ"
+    ],
+    "ans": 3,
+    "unit": "એકમ 4 - શાળા ભાવાવરણ (પાના નં.: 59)",
+    "exp": "શાળા કક્ષાએ મુખ્યત્વે છ પ્રકારના ભાવાવરણ જોવા મળે છે: (1) મુક્ત, (2) સ્વતંત્ર, (3) નિયંત્રિત, (4) પરિચિત, (5) પૈતૃક અને (6) બંધિયાર ભાવાવરણ."
+  },
+  {
+    "q": "પ્રશ્ન 87: 'યોજના' અને 'કાર્યક્રમ' ની સંકલ્પના સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: શૈક્ષણિક નીતિઓમાં પૂર્વનિર્ધારિત હેતુઓની સિદ્ધિ અર્થે અમલીકરણમાં મૂકવાના સુઆયોજિત પ્રયત્નોને 'યોજના' કહે છે.\nવિધાન 2: સૌના માટે ગુણવત્તાસભર પ્રાથમિક શિક્ષણના લક્ષ્યાંકને પ્રાપ્ત કરવા \"સર્વ શિક્ષા અભિયાન\" નામની યોજના રાષ્ટ્રીય સ્તરે વર્ષ 2001 થી અમલમાં છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - શૈક્ષણિક યોજનાઓ અને કાર્યક્રમ (પાના નં.: 62)",
+    "exp": "યોજના એટલે પૂર્વનિર્ધારિત હેતુઓની સિદ્ધિ માટેના સુઆયોજિત પ્રયત્નો અને તેના સુચારુ અમલીકરણની ચોક્કસ ક્રમબદ્ધ તરકીબને 'કાર્યક્રમ' કહે છે. સર્વ શિક્ષા અભિયાન વર્ષ 2001 થી અમલમાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: 'શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી રથ' કાર્યક્રમ અંગે નીચેનામાંથી કયો વિકલ્પ સાચી માહિતી દર્શાવે છે?",
+    "options": [
+      "શરૂઆત : 1998-99 | અધિકારીઓ-પદાધિકારીઓ સક્રિય રીતે જોડાયા : 2002-03 | ઉજવણીનો માસ : જૂન",
+      "શરૂઆત : 2001-02 | અધિકારીઓ-પદાધિકારીઓ સક્રિય રીતે જોડાયા : 2003-04 | ઉજવણીનો માસ : જુલાઈ",
+      "શરૂઆત : 1998-99 | અધિકારીઓ-પદાધિકારીઓ સક્રિય રીતે જોડાયા : 2001-02 | ઉજવણીનો માસ : જૂન",
+      "શરૂઆત : 2002-03 | અધિકારીઓ-પદાધિકારીઓ સક્રિય રીતે જોડાયા : 2005-06 | ઉજવણીનો માસ : જૂન"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી રથ (પાના નં.: 62-63)",
+    "exp": "શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી રથની શરૂઆત વર્ષ 1998-99 થી થઈ, વર્ષ 2002-03 થી તમામ સ્તરેથી અધિકારીઓ અને પદાધિકારીઓ સક્રિય રીતે જોડાયા અને આ કાર્યક્રમ દર વર્ષે જૂન માસમાં ઉજવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: 'શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી રથ' કાર્યક્રમ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ કાર્યક્રમનો મુખ્ય ઉદ્દેશ 100% નામાંકન, 100% સ્થાયીકરણ અને ગુણવત્તાસભર શિક્ષણના સર્વવ્યાપીકરણનો છે.",
+      "આ કાર્યક્રમમાં શાળા છોડી ગયેલા બાળકોને પુનઃપ્રવેશ આપવાની કામગીરી પણ કરવામાં આવે છે.",
+      "આ કાર્યક્રમ દરમિયાન ગામના પડતર પ્રશ્નો અને વિકાસના પ્રશ્નોની ચર્ચા કરવાની સખત મનાઈ હોય છે.",
+      "પ્રવેશપાત્ર વિદ્યાર્થીઓની યાદી તૈયાર કરવા આચાર્ય અને શિક્ષકો ડોર ટુ ડોર સર્વે કરે છે તથા આંગણવાડી કાર્યકરોની મદદ લે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - શાળા પ્રવેશોત્સવ (પાના નં.: 62-63)",
+    "exp": "આ કાર્યક્રમમાં અધિકારીઓ અને પદાધિકારીઓ ગ્રામજનો સાથે ગામના પડતર પ્રશ્નો અને વિકાસના પ્રશ્નોની ચર્ચા કરી તેના ત્વરિત ઉકેલ માટે માર્ગદર્શન આપે છે; તેથી તે પ્રવેશોત્સવની સાથે ગ્રામવિકાસનો કાર્યક્રમ પણ બની ગયો છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: વર્ષ 2002 માં પ્રસિદ્ધ થયેલ સાક્ષરતા દરના સર્વેક્ષણમાં ગુજરાત રાજ્ય ભારતમાં પુરુષ સાક્ષરતા અને સ્ત્રી સાક્ષરતાની દૃષ્ટિએ અનુક્રમે કયા ક્રમે હતું, જેના પરિણામે 'વિદ્યાલક્ષ્મી બોન્ડ' યોજના ઉદ્ભવી?",
+    "options": [
+      "પુરુષ સાક્ષરતા : 12મા ક્રમે | સ્ત્રી સાક્ષરતા : 18મા ક્રમે",
+      "પુરુષ સાક્ષરતા : 15મા ક્રમે | સ્ત્રી સાક્ષરતા : 21મા ક્રમે",
+      "પુરુષ સાક્ષરતા : 18મા ક્રમે | સ્ત્રી સાક્ષરતા : 24મા ક્રમે",
+      "પુરુષ સાક્ષરતા : 14મા ક્રમે | સ્ત્રી સાક્ષરતા : 21મા ક્રમે"
+    ],
+    "ans": 1,
+    "unit": "એકમ 5 - વિદ્યાલક્ષ્મી બોન્ડ (પાના નં.: 64)",
+    "exp": "વર્ષ 2002 ના સાક્ષરતા દરના સર્વેક્ષણમાં ગુજરાત ભારતમાં પુરુષ સાક્ષરતામાં 15મા ક્રમે અને સ્ત્રી સાક્ષરતામાં 21મા ક્રમે હતું; આ સ્થિતિ સુધારવા વર્ષ 2002 થી વિદ્યાલક્ષ્મી બોન્ડ યોજના અમલમાં મૂકાઈ."
+  },
+  {
+    "q": "પ્રશ્ન 91: 'વિદ્યાલક્ષ્મી બોન્ડ' યોજનાની પાત્રતા અને લાભ અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "35% કરતાં ઓછી સ્ત્રી-સાક્ષરતાવાળા ગામોમાં ધોરણ-1 માં પ્રથમ વખત પ્રવેશ મેળવનાર કન્યાઓને આ બોન્ડ અપાય છે.",
+      "આ યોજના હેઠળ રૂ. 2000/- ની રકમ બોન્ડ રૂપે આપવામાં આવે છે.",
+      "કન્યા ધોરણ-10 પાસ કરે ત્યારે બોન્ડની રકમ વ્યાજ સહિત તેને આપવામાં આવે છે.",
+      "શહેરી વિસ્તારમાં ગરીબી રેખા (BPL) હેઠળના કુટુંબોની કન્યાઓને પણ આ યોજના હેઠળ આવરી લેવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - વિદ્યાલક્ષ્મી બોન્ડ (પાના નં.: 64)",
+    "exp": "વિદ્યાલક્ષ્મી બોન્ડની રકમ વ્યાજ સહિત કન્યાને 'ધોરણ-8 પાસ કરે ત્યારે' આપવામાં આવે છે (ધોરણ-10 પાસ કરે ત્યારે નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 92: મધ્યાહ્ન ભોજન યોજના (MDM) ની શરૂઆત અને સંચાલન અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: રાષ્ટ્રીય કક્ષાએ 1982 થી માનવ સંસાધન વિકાસ મંત્રાલય દ્વારા મધ્યાહ્ન ભોજન યોજના શરૂ કરવામાં આવી.\nવિધાન 2: ગુજરાતમાં 1984 થી કમિશનર, શાળાઓની કચેરીના નેતૃત્વ હેઠળ આ યોજના અમલીકૃત બની.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - મધ્યાહ્ન ભોજન યોજના (પાના નં.: 65)",
+    "exp": "મધ્યાહ્ન ભોજન યોજના રાષ્ટ્રીય કક્ષાએ 1982 થી (MHRD દ્વારા) અને ગુજરાતમાં 1984 થી (કમિશનર, શાળાઓની કચેરીના નેતૃત્વ હેઠળ) અમલીકૃત બની છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: નામદાર સુપ્રીમ કોર્ટના આદેશ અને ગુજરાતની મધ્યાહ્ન ભોજન યોજના મુજબ વિદ્યાર્થીઓને મળતા પોષણ અને ખાદ્ય સામગ્રીના પ્રમાણ અંગે કયો વિકલ્પ સચોટ છે?",
+    "options": [
+      "ધો. 1-5 : 450 કેલેરી, 15 ગ્રામ પ્રોટીન, 180 ગ્રામ ખાદ્ય સામગ્રી | ધો. 6-8 : 700 કેલેરી, 20 ગ્રામ પ્રોટીન, 265 ગ્રામ ખાદ્ય સામગ્રી",
+      "ધો. 1-5 : 400 કેલેરી, 12 ગ્રામ પ્રોટીન, 150 ગ્રામ ખાદ્ય સામગ્રી | ધો. 6-8 : 650 કેલેરી, 20 ગ્રામ પ્રોટીન, 250 ગ્રામ ખાદ્ય સામગ્રી",
+      "ધો. 1-5 : 450 કેલેરી, 12 ગ્રામ પ્રોટીન, 180 ગ્રામ ખાદ્ય સામગ્રી | ધો. 6-8 : 700 કેલેરી, 25 ગ્રામ પ્રોટીન, 265 ગ્રામ ખાદ્ય સામગ્રી",
+      "ધો. 1-5 : 500 કેલેરી, 15 ગ્રામ પ્રોટીન, 200 ગ્રામ ખાદ્ય સામગ્રી | ધો. 6-8 : 750 કેલેરી, 20 ગ્રામ પ્રોટીન, 300 ગ્રામ ખાદ્ય સામગ્રી"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - મધ્યાહ્ન ભોજન યોજના (પાના નં.: 65)",
+    "exp": "સુપ્રીમ કોર્ટના આદેશ મુજબ વાર્ષિક 200 દિવસ સુધી ધોરણ 1-5 ના વિદ્યાર્થીને 450 કેલેરી અને 15 ગ્રામ પ્રોટીન (180 ગ્રામ ખાદ્ય સામગ્રી) તથા ધોરણ 6-8 ના વિદ્યાર્થીને 700 કેલેરી અને 20 ગ્રામ પ્રોટીન (265 ગ્રામ ખાદ્ય સામગ્રી) આપવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: ગુજરાત સરકારની 'વિદ્યાદીપ યોજના' સંદર્ભે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "26 જાન્યુઆરી, 2001 ના મહાવિનાશકારી ભૂકંપનો ભોગ બનેલા બાળકોની સ્મૃતિમાં આ યોજના અમલમાં મૂકાઈ છે.",
+      "આ યોજના અંતર્ગત વિદ્યાર્થીઓને માત્ર શાળાના સમય દરમિયાનનું જ વીમાકવચ આપવામાં આવે છે.",
+      "અકસ્માતે મૃત્યુ પામતાં પ્રાથમિક શાળાના વિદ્યાર્થીના વાલીને રૂ. 25,000 અને માધ્યમિક-ઉચ્ચતર માધ્યમિકના વિદ્યાર્થીના વાલીને રૂ. 50,000 ચૂકવાય છે.",
+      "વિદ્યાદીપ વીમા યોજનાના પ્રીમિયમની 100% રકમ રાજ્ય સરકાર દ્વારા ભરવામાં આવે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 5 - વિદ્યાદીપ યોજના (પાના નં.: 66)",
+    "exp": "વિદ્યાદીપ યોજના અંતર્ગત વિદ્યાર્થીઓને માત્ર શાળાના સમય પૂરતું નહીં, પરંતુ '24 કલાકનું વીમાકવચ' આપવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: ગુજરાતના 'શાળા-આરોગ્ય તપાસણી કાર્યક્રમ' અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: આ કાર્યક્રમમાં નવજાત શિશુથી 14 વર્ષ સુધીની ઉંમરના તમામ બાળકો (શાળાએ જતાં, આંગણવાડીનાં અને શાળાએ ન જતાં) ના આરોગ્યની જવાબદારી આરોગ્ય વિભાગ નિભાવે છે.\nવિધાન 2: આ અંતર્ગત પ્રતિ વર્ષ અંદાજે એક કરોડ બાળકોની આરોગ્ય તપાસણી થાય છે અને હૃદય, કિડની તથા કેન્સર જેવી ગંભીર બીમારીઓની સારવાર વિનામૂલ્યે અપાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - શાળા-આરોગ્ય તપાસણી કાર્યક્રમ (પાના નં.: 66)",
+    "exp": "શાળા-આરોગ્ય તપાસણી કાર્યક્રમમાં નવજાત શિશુથી 14 વર્ષ સુધીના તમામ બાળકો આવરી લેવાય છે, વર્ષે અંદાજે 1 કરોડ બાળકોની તપાસણી થાય છે, ગંભીર બીમારીઓની વિનામૂલ્યે સારવાર અને દ્રષ્ટિની ખામીવાળા બાળકોને વિનામૂલ્યે ચશ્માં અપાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 96: દેશમાં પ્રથમવાર ગુજરાતમાં શરૂ કરવામાં આવેલ \"આરોગ્યવર્ધક શાળા કાર્યક્રમ\" નો પાયલોટ પ્રોજેક્ટ નીચેનામાંથી કઈ આંતરરાષ્ટ્રીય સંસ્થાઓના સહકારથી શરૂ કરાયો છે?",
+    "options": [
+      "વિશ્વ આરોગ્ય સંસ્થા (WHO), યુનિસેફ, યુનેસ્કો અને વિશ્વ બેંક",
+      "વિશ્વ આરોગ્ય સંસ્થા (WHO), યુનિસેફ અને એશિયન ડેવલપમેન્ટ બેંક",
+      "યુનિસેફ, યુનેસ્કો અને આંતરરાષ્ટ્રીય નાણા ભંડોળ (IMF)",
+      "માત્ર વિશ્વ આરોગ્ય સંસ્થા (WHO) અને યુનિસેફ"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - શાળા-આરોગ્ય તપાસણી કાર્યક્રમ (પાના નં.: 67)",
+    "exp": "વિશ્વ આરોગ્ય સંસ્થા, યુનિસેફ, યુનેસ્કો અને વિશ્વ બેંકના સહકારથી \"આરોગ્યવર્ધક શાળા કાર્યક્રમ\" નો પાયલોટ પ્રોજેક્ટ દેશમાં પ્રથમવાર ગુજરાતમાં શરૂ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: ગુજરાત રાજ્યમાં 'સર્વ શિક્ષા અભિયાન' (SSA) નો અમલ કયા વર્ષથી અને કઈ સંસ્થા દ્વારા કરવામાં આવ્યો છે?",
+    "options": [
+      "વર્ષ 2001 થી, GCERT દ્વારા",
+      "વર્ષ 2002 થી, ગુજરાત પ્રારંભિક શિક્ષણ પરિષદ દ્વારા",
+      "વર્ષ 2000 થી, પ્રાથમિક શિક્ષણ નિયામકની કચેરી દ્વારા",
+      "વર્ષ 2003 થી, ગુજરાત પ્રારંભિક શિક્ષણ પરિષદ દ્વારા"
+    ],
+    "ans": 1,
+    "unit": "એકમ 5 - સર્વ શિક્ષા અભિયાન (પાના નં.: 67)",
+    "exp": "ગુજરાત રાજ્યમાં સર્વ શિક્ષા અભિયાન (SSA) નો અમલ વર્ષ 2002 થી 'ગુજરાત પ્રારંભિક શિક્ષણ પરિષદ' દ્વારા કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: NPEGEL (National Programme For Education Of Girls At Elementary Level) ની અમલીકરણ વ્યૂહરચના અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "આ કાર્યક્રમ ધોરણ 1 થી 8 ની તક અને સુવિધાઓથી વંચિત જૂથોની કન્યાઓના શિક્ષણ માટે અમલમાં છે.",
+      "રાજ્ય સ્તરે એક 'જેન્ડર કો-ઓર્ડિનેટર' નિયુક્ત કરવામાં આવે છે અને જિલ્લા સ્તરે 'ડિસ્ટ્રીક્ટ જેન્ડર યુનિટ' વહીવટ સંભાળે છે.",
+      "જિલ્લા સ્તરે બનેલી 'ડિસ્ટ્રીક્ટ જેન્ડર કો-ઓર્ડિનેટર કમિટી' વર્ષમાં ઓછામાં ઓછા છ વખત મળે છે.",
+      "તાલુકા સ્તરે કોર ગ્રુપની પસંદગીમાં શિક્ષકોમાંથી 1 કો-ઓર્ડિનેટર અને 1 સંસાધન વ્યક્તિની પસંદગી થાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - NPEGEL (પાના નં.: 68-69)",
+    "exp": "જિલ્લા સ્તરે બનાવવામાં આવેલ 'ડિસ્ટ્રીક્ટ જેન્ડર કો-ઓર્ડિનેટર કમિટી' વર્ષમાં ઓછામાં ઓછા 'બે વખત' મળે છે (છ વખત નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 99: 'એડેપ્ટ્સ' (ADEPTS) કાર્યક્રમના પૂરા નામ અને ગુજરાતમાં તેના અમલીકરણના તબક્કાઓ અંગે નીચેનામાંથી કયો વિકલ્પ સચોટ છે?",
+    "options": [
+      "Advancement Of Educational Performance Through Teachers Support | પ્રથમ તબક્કો : 5 સપ્ટેમ્બર 2007 (458 શાળાઓ) | બીજો તબક્કો : 15 ઓગસ્ટ 2008 (7000 શાળાઓ) | ત્રીજો તબક્કો : 2010 (22000 શાળાઓ)",
+      "Advancement Of Educational Programme Through Teachers Support | પ્રથમ તબક્કો : 15 ઓગસ્ટ 2007 (458 શાળાઓ) | બીજો તબક્કો : 5 સપ્ટેમ્બર 2008 (7000 શાળાઓ) | ત્રીજો તબક્કો : 2010 (22000 શાળાઓ)",
+      "Advancement Of Educational Performance Through Training Support | પ્રથમ તબક્કો : 5 સપ્ટેમ્બર 2007 (700 શાળાઓ) | બીજો તબક્કો : 15 ઓગસ્ટ 2008 (7000 શાળાઓ) | ત્રીજો તબક્કો : 2009 (22000 શાળાઓ)",
+      "Advancement Of Educational Performance Through Teachers Support | પ્રથમ તબક્કો : 5 સપ્ટેમ્બર 2006 (458 શાળાઓ) | બીજો તબક્કો : 15 ઓગસ્ટ 2007 (7000 શાળાઓ) | ત્રીજો તબક્કો : 2009 (22000 શાળાઓ)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - એડેપ્ટ્સ (ADEPTS) (પાના નં.: 69)",
+    "exp": "ADEPTS નું પૂરું નામ 'Advancement Of Educational Performance Through Teachers Support' છે. તેનો પ્રથમ તબક્કો 5 સપ્ટેમ્બર 2007 (458 શાળાઓ), બીજો તબક્કો 15 ઓગસ્ટ 2008 (7000 શાળાઓ) અને ત્રીજો તબક્કો 2010 (22000 શાળાઓ) માં અમલમાં મૂકાયો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 100: ADEPTS કાર્યક્રમ અંતર્ગત શિક્ષકોની કામગીરીના મૂલ્યાંકન માટેના ચાર પરિમાણો (કુલ 80 વિધાનો) અને તેના ક્ષેત્રો/વિધાનોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પરિમાણ) — વિભાગ-બ (ક્ષેત્રો અને વિધાનોની સંખ્યા)\n1. જ્ઞાનાત્મક પરિમાણ — (i) 01 ક્ષેત્રના 06 વિધાનો\n2. સામાજિક પરિમાણ — (ii) 05 ક્ષેત્રોના 19 વિધાનો\n3. ભૌતિક પરિમાણ — (iii) 10 ક્ષેત્રોના 39 વિધાનો\n4. સંસ્થાકીય પરિમાણ — (iv) 03 ક્ષેત્રોના 16 વિધાનો",
+    "options": [
+      "1-(iii), 2-(ii), 3-(i), 4-(iv)",
+      "1-(iii), 2-(iv), 3-(ii), 4-(i)",
+      "1-(iv), 2-(iii), 3-(i), 4-(ii)",
+      "1-(iii), 2-(iv), 3-(i), 4-(ii)"
+    ],
+    "ans": 3,
+    "unit": "એકમ 5 - એડેપ્ટ્સ (ADEPTS) (પાના નં.: 69-70)",
+    "exp": "ADEPTS માં કુલ 80 વિધાનો છે: જ્ઞાનાત્મક પરિમાણ (10 ક્ષેત્રો, 39 વિધાનો), સામાજિક પરિમાણ (3 ક્ષેત્રો, 16 વિધાનો), ભૌતિક પરિમાણ (1 ક્ષેત્ર, 6 વિધાનો) અને સંસ્થાકીય પરિમાણ (5 ક્ષેત્રો, 19 વિધાનો)."
+  },
+  {
+    "q": "પ્રશ્ન 101: સર્વ શિક્ષા અભિયાન (SSA) દ્વારા અમલીકૃત 'BALA' પ્રોજેક્ટ સંદર્ભે નીચેના વિધાનો ચકાસો:\nવિધાન 1: BALA નું પૂરું નામ 'Building As Learning Aid' અર્થાત્ 'અધ્યયન પ્રક્રિયામાં શાળા મકાનનો વિનિયોગ' છે.\nવિધાન 2: આ પ્રોજેક્ટમાં માત્ર શાળાના વર્ગખંડોની આંતરિક દીવાલોનો જ ઉપયોગ કરવામાં આવે છે, બાહ્ય જગ્યાઓનો નહીં.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - BALA (પાના નં.: 70)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે, કારણ કે BALA અંતર્ગત શાળાના ભવનની આંતરિક જગ્યાઓની સાથે-સાથે બાહ્ય જગ્યાઓ પણ વિકસિત કરી શૈક્ષણિક પ્રક્રિયામાં તેનો અસરકારક ઉપયોગ કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 102: ગુજરાત રાજ્યમાં 'દૂરવર્તી શિક્ષણ' (Distance Education) કાર્યક્રમ સંદર્ભે નીચેનામાંથી કયો વિકલ્પ સચોટ માહિતી દર્શાવે છે?",
+    "options": [
+      "માધ્યમ : BISAG | શરૂઆતનું વર્ષ : 2007 | ધોરણ : 1 થી 8",
+      "માધ્યમ : GIET | શરૂઆતનું વર્ષ : 2009 | ધોરણ : 6 થી 8",
+      "માધ્યમ : BISAG | શરૂઆતનું વર્ષ : 2009 | ધોરણ : 6 થી 8",
+      "માધ્યમ : BISAG | શરૂઆતનું વર્ષ : 2010 | ધોરણ : 5 થી 8"
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - દૂરવર્તી શિક્ષણ (પાના નં.: 71)",
+    "exp": "ગુજરાત રાજ્યમાં BISAG (Bhaskarcharya Institute for Space Applications and Geo Informatic) ના માધ્યમથી ધોરણ 6 થી 8 ના ગણિત, વિજ્ઞાન અને ટેક્નોલોજી, ભાષાઓ તથા સામાજિક વિજ્ઞાન જેવા વિષયો માટે વર્ષ 2009 થી દૂરવર્તી શૈક્ષણિક કાર્યક્રમ શરૂ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 103: ગુજરાતમાં પ્રસારિત થતા 'દૂરવર્તી શિક્ષણ કાર્યક્રમ' ના લક્ષ્ય જૂથમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. રાજ્યની તમામ સરકારી પ્રાથમિક શાળાઓના ધોરણ 6 થી 8 ના વિદ્યાર્થીઓ અને શિક્ષકો\n2. રાજ્યની D.El.Ed. કૉલેજના તાલીમાર્થીઓ\n3. રાજ્યની તમામ ખાનગી માધ્યમિક શાળાઓના ધોરણ 9 અને 10 ના વિદ્યાર્થીઓ",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3 ત્રણેય"
+    ],
+    "ans": 1,
+    "unit": "એકમ 5 - દૂરવર્તી શિક્ષણ (પાના નં.: 71)",
+    "exp": "દૂરવર્તી શિક્ષણ કાર્યક્રમના લક્ષ્ય જૂથમાં રાજ્યની તમામ સરકારી પ્રાથમિક શાળાઓના ધોરણ 6 થી 8 ના વિદ્યાર્થીઓ અને શિક્ષકો તેમજ રાજ્યની D.El.Ed. કૉલેજના તાલીમાર્થીઓનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 104: દૂરવર્તી શિક્ષણ કાર્યક્રમના પ્રસારણ અને મોનીટરીંગ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "તાલીમ પામેલા શિક્ષક દ્વારા ધોરણ 6, 7, 8 માં 40 મિનિટના તાસમાં શિક્ષણકાર્ય કરાવવામાં આવે છે.",
+      "એજ્યુસેટ (EDUSAT) ની એક ચેનલનો ઉપયોગ પ્રાથમિક શિક્ષણ માટે થાય છે.",
+      "પ્રસારણ સમય દરમિયાન કેળવણી નિરીક્ષક, બી.આર.સી.સી. તથા ડાયેટના તાલુકા લાયઝન વ્યાખ્યાતા દ્વારા મોનીટરીંગ કરવામાં આવે છે.",
+      "હાલ 'વંદેગુજરાત' ચેનલમાં GIET દ્વારા શૈક્ષણિક કાર્યક્રમોનું 12 કલાક પ્રસારણ કરવામાં આવે છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ 5 - દૂરવર્તી શિક્ષણ (પાના નં.: 71)",
+    "exp": "હાલ 'વંદેગુજરાત' ચેનલમાં જીસીઈઆરટી (GCERT), ગાંધીનગર દ્વારા શૈક્ષણિક કાર્યક્રમોનું 24 કલાક પ્રસારણ કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 105: ભારત સરકારના વિજ્ઞાન અને ટેક્નોલોજી મંત્રાલય (Department of Science and Technology, New Delhi) દ્વારા અમલીકૃત 'ઈન્સ્પાયર એવોર્ડ યોજના' માં INSPIRE અને SEATS ના પૂરા નામ સંદર્ભે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "INSPIRE : Innovation In Science Pursuit For Inspired Research | SEATS : Scheme For Early Attraction Talent For Science",
+      "INSPIRE : Indian National Science Programme For Inspired Research | SEATS : Scheme For Early Attraction Talent For Science",
+      "INSPIRE : Innovation In Science Pursuit For Inspired Research | SEATS : Science Education And Talent Scheme",
+      "INSPIRE : Innovation In School Pursuit For Inspired Research | SEATS : Scheme For Early Attraction Training For Science"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - ઈન્સ્પાયર એવોર્ડ યોજના (પાના નં.: 71)",
+    "exp": "Department of Science and Technology, New Delhi દ્વારા 'Innovation In Science Pursuit For Inspired Research (INSPIRE)' પ્રોગ્રામ અંતર્ગત 'Scheme For Early Attraction Talent For Science (SEATS)' નામની યોજના અમલમાં મૂકવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 106: 'ઈન્સ્પાયર એવોર્ડ યોજના' ની શરૂઆત, એવોર્ડની રકમ અને તેના નવા સ્વરૂપ અંગે નીચેના વિધાનો ચકાસો:\nવિધાન 1: ધોરણ 6 થી 10 ના વિદ્યાર્થીઓ માટે રૂ. 5000 નો એવોર્ડ આપવાની આ યોજના વર્ષ 2009-10 થી ભારત સરકાર દ્વારા અમલમાં મૂકવામાં આવી છે.\nવિધાન 2: વર્ષ 2017 થી 'INSPIRE AWARD - MANAK' યોજના અમલમાં છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ 5 - ઈન્સ્પાયર એવોર્ડ યોજના (પાના નં.: 71)",
+    "exp": "ગણિત-વિજ્ઞાન પ્રત્યે અભિરુચિ અને સર્જનાત્મકતા વધારવા ધોરણ 6 થી 10 ના વિદ્યાર્થીઓ માટે રૂ. 5000 ના એવોર્ડની યોજના 2009-10 થી અને વર્ષ 2017 થી 'INSPIRE AWARD - MANAK' યોજના અમલમાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 107: 'ઈન્સ્પાયર એવોર્ડ યોજના' અંતર્ગત ઓનલાઈન નોમીનેશનથી લઈને એવોર્ડની ફાળવણી સુધીની પ્રક્રિયાનો સાચો ક્રમ કયો છે?",
+    "options": [
+      "શાળા કક્ષાએથી ઓનલાઈન નોમીનેશન → GCERT ના વિજ્ઞાન એકમ દ્વારા એપ્રુવ → DIET દ્વારા જિલ્લા કક્ષાએ એપ્રુવ → DST, નવી દિલ્હી દ્વારા પસંદગી અને ફાળવણી",
+      "શાળા કક્ષાએથી ઓનલાઈન નોમીનેશન → જિલ્લા કક્ષાએ DIET દ્વારા એપ્રુવ → GCERT ના વિજ્ઞાન એકમ દ્વારા રાજ્ય કક્ષાએ એપ્રુવ → DST, નવી દિલ્હી દ્વારા પસંદગી અને એવોર્ડની ફાળવણી",
+      "DIET દ્વારા ઓનલાઈન નોમીનેશન → શાળા કક્ષાએ એપ્રુવ → GCERT દ્વારા રાજ્ય કક્ષાએ એપ્રુવ → DST, નવી દિલ્હી દ્વારા ફાળવણી",
+      "શાળા કક્ષાએથી ઓનલાઈન નોમીનેશન → BRC દ્વારા એપ્રુવ → DIET દ્વારા એપ્રુવ → GCERT દ્વારા એવોર્ડની ફાળવણી"
+    ],
+    "ans": 1,
+    "unit": "એકમ 5 - ઈન્સ્પાયર એવોર્ડ યોજના (પાના નં.: 72)",
+    "exp": "દર વર્ષે શાળા કક્ષાએથી ઓનલાઈન નોમીનેશન કરાય છે, જેને જિલ્લા કક્ષાએ DIET દ્વારા એપ્રુવ કરી GCERT ના વિજ્ઞાન એકમમાં મોકલાય છે; GCERT રાજ્ય કક્ષાએથી એપ્રુવ કરે છે અને અંતે Department of Science and Technology, New Delhi દ્વારા નામોની પસંદગી કરી એવોર્ડની ફાળવણી કરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 108: એકમ-5 માં આવતા મહત્ત્વના શૈક્ષણિક કાર્યક્રમો/સંસ્થાઓ અને તેના મુખ્ય ઉદ્દેશ/કાર્યના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ — વિભાગ-બ\n1. BALA — (i) ગણિત-વિજ્ઞાન પ્રત્યે અભિરુચિ અને સર્જનાત્મકતા માટે આર્થિક પ્રોત્સાહન\n2. BISAG — (ii) શાળાના મકાન દ્વારા મૈત્રીપૂર્ણ વાતાવરણમાં અધ્યયન\n3. ADEPTS — (iii) ઉપગ્રહ દ્વારા દૂરવર્તી શિક્ષણ કાર્યક્રમોનું પ્રસારણ\n4. INSPIRE - MANAK — (iv) શિક્ષક સમર્થન દ્વારા ઉત્કૃષ્ટ શૈક્ષણિક અભિવ્યક્તિ અને સ્વવિકાસ",
+    "options": [
+      "1-(ii), 2-(iii), 3-(iv), 4-(i)",
+      "1-(ii), 2-(iv), 3-(iii), 4-(i)",
+      "1-(iii), 2-(ii), 3-(iv), 4-(i)",
+      "1-(ii), 2-(iii), 3-(i), 4-(iv)"
+    ],
+    "ans": 0,
+    "unit": "એકમ 5 - શિક્ષણમાં ફેરફાર લાવનાર તંત્રો (પાના નં.: 69-71)",
+    "exp": "BALA શાળા મકાનના અધ્યયન વિનિયોગ સાથે, BISAG દૂરવર્તી શિક્ષણ પ્રસારણ સાથે, ADEPTS શિક્ષક સમર્થન દ્વારા ઉત્કૃષ્ટ શૈક્ષણિક અભિવ્યક્તિ સાથે અને INSPIRE - MANAK ગણિત-વિજ્ઞાનમાં સર્જનાત્મકતાના પ્રોત્સાહન સાથે સંકળાયેલ છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-108) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૮ માંથી ૧૦૮ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ડી.એલ.એડ્. દ્વિતીય વર્ષ — કોર્સ 2 (અ) શાળા સંસ્કૃતિ, નેતૃત્વ અને પરિવર્તન",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "sy2a.html",
+            testUploadDate: "2026-11-27"
+        })
+    });
+}
+</script>
+</body>
+</html>
