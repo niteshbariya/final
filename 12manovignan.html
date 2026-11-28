@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ધોરણ 12 : મનોવિજ્ઞાન (ગુજરાતી માધ્યમ) | ઉચ્ચ સ્તરીય MCQ પ્રશ્નબેંક (૧૧૫ પ્રશ્નો)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 115 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> ધોરણ 12 : મનોવિજ્ઞાન (ગુજરાતી માધ્યમ)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">ધોરણ 12 : મનોવિજ્ઞાન (ગુજરાતી માધ્યમ)<br>ઉચ્ચ સ્તરીય MCQ પ્રશ્નબેંક</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">પ્રકરણ 2, 3, 4 અને 6 | પ્રશ્ન ૧ થી ૧૧૫ (જવાબ અને સમજૂતી સહિત)</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૧૫</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૧૫ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 115 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> ધોરણ 12 : મનોવિજ્ઞાન (પ્રકરણ 2, 3, 4 અને 6) | ૧૧૫ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 115</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૧૫ પ્રશ્નોનો ડેટાસેટ (ધોરણ 12 : મનોવિજ્ઞાન — પ્રકરણ 2, 3, 4 અને 6)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: સાહજિક વર્તન અને શિક્ષિત વર્તનના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "સાહજિક વર્તન માટે પ્રાણીને કોઈ પણ જાતનું ઔપચારિક શિક્ષણ મેળવવાની જરૂર રહેતી નથી.",
+      "કીડીનું ખોરાકના કણને ખેંચી જવું અને માનવબાળનું જન્મ્યા પછી તરત જ રડવું એ સાહજિક વર્તનનાં ઉદાહરણો છે.",
+      "સાહજિક વર્તનને મનોવિજ્ઞાનમાં શિક્ષણના પ્રાથમિક સ્વરૂપ તરીકે સ્વીકારવામાં આવે છે.",
+      "શિક્ષિત વર્તનમાં વ્યક્તિ કે પ્રાણી સ્વેચ્છાએ ચોક્કસ પરિવર્તનનો સ્વીકાર કરીને વર્તનમાં બદલાવ લાવે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 15)",
+    "exp": "શિક્ષિત વર્તનમાં વ્યક્તિ કે પ્રાણી પોતાની મરજીથી શિક્ષણ મેળવતું હોય છે, જ્યારે સાહજિક વર્તન જન્મજાત હોવાથી સામાન્ય રીતે આપણે તેને શિક્ષણ તરીકે સ્વીકારતા નથી."
+  },
+  {
+    "q": "પ્રશ્ન 2: વ્યક્તિના જીવનના વિવિધ તબક્કાઓ અને તેમાં મુખ્યત્વે જોવા મળતી શિક્ષણની તરાહો અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (જીવનનો તબક્કો)  |  વિભાગ-બ (શિક્ષણની તરાહ)\n1. બાલ્યકાળ — (p) આંતરસૂઝ દ્વારા સમસ્યાનો ઉકેલ\n2. તારુણ્યકાળ — (q) અનુકરણ તેમજ પ્રયત્ન અને ભૂલ દ્વારા શિક્ષણ\n3. યુવાકાળ — (r) અભિસંધાન અને કારક શિક્ષણમાં પારંગતતા",
+    "options": [
+      "1-(r), 2-(q), 3-(p)",
+      "1-(q), 2-(r), 3-(p)",
+      "1-(q), 2-(p), 3-(r)",
+      "1-(p), 2-(r), 3-(q)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 15)",
+    "exp": "વ્યક્તિ બાલ્યકાળમાં મોટેભાગે અનુકરણ તેમજ પ્રયત્ન અને ભૂલ દ્વારા, તારુણ્યકાળમાં અભિસંધાનની આંગળી પકડીને કારક શિક્ષણમાં પારંગત બને છે અને યુવાકાળમાં જટિલ સમસ્યાઓના ઉકેલ માટે આંતરસૂઝને કામે લગાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: અમેરિકન મનોવૈજ્ઞાનિક સી.ટી. મોર્ગને આપેલી શિક્ષણની વ્યાખ્યા અનુસાર, વર્તનમાં થતા પરિવર્તનને ક્યારે 'શિક્ષણ' કહી શકાય નહીં?\n1. પરિપક્વતાને કારણે થતું પરિવર્તન\n2. થાકને કારણે થતું પરિવર્તન\n3. રોગ કે ઈજાને કારણે થતું પરિવર્તન\n4. કેફી દ્રવ્યને કારણે થતું પરિવર્તન",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2, 3 અને 4",
+      "માત્ર 1, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 15-16)",
+    "exp": "સી.ટી. મોર્ગનના મતે “શિક્ષણ એટલે અનુભવ અને પ્રયત્ન કે મહાવરાથી વર્તનમાં થતો સાપેક્ષ, કાયમી ફેરફાર.” પરિપક્વતા, થાક, રોગ, ઈજા કે કેફી દ્રવ્યને કારણે વર્તનમાં થતા અલ્પજીવી કે શારીરિક પરિવર્તનને મનોવિજ્ઞાનની પરિભાષામાં શિક્ષણ કહી શકાતું નથી."
+  },
+  {
+    "q": "પ્રશ્ન 4: ત્રણ-ચાર મહિનાનું બાળક જાતે પથારીમાં ઊંધું પડતાં અને પગ ભરાવીને ખસતાં શીખે છે. મનોવિજ્ઞાનની દૃષ્ટિએ આ વર્તન પરિવર્તન શાનું પરિણામ ગણાય છે?",
+    "options": [
+      "શારીરિક પરિપક્વતાનું",
+      "સંપાદિત શિક્ષણનું",
+      "અનુકરણાત્મક શિક્ષણનું",
+      "સાપેક્ષ કાયમી મહાવરાનું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 15-16)",
+    "exp": "રોજિંદી ભાષામાં આપણે બાળક ઊંધું પડતાં કે ખસતાં શીખી ગયું તેમ કહીએ છીએ, પરંતુ આ પરિવર્તન તેની શારીરિક પરિપક્વતાને કારણે જોવા મળતું હોવાથી મનોવિજ્ઞાન તેને શિક્ષણ તરીકે સ્વીકારતું નથી."
+  },
+  {
+    "q": "પ્રશ્ન 5: શિક્ષણની વ્યાખ્યાના ઘટકો અંગે નીચેનાં બે વિધાનો ધ્યાને લો:\nવિધાન 1: થાક ઊતરી જવાથી કે પગનું હાડકું સંધાવાથી વ્યક્તિ સામાન્ય રીતે ચાલી શકે છે, તેથી લથડિયાં ખાવાં કે લંગડાવું એ શિક્ષણ નથી.\nવિધાન 2: મનોવૈજ્ઞાનિકો વ્યક્તિના વર્તનમાં થતા દીર્ઘકાલીન અને સાપેક્ષ કાયમી પરિવર્તનોને જ શિક્ષણ તરીકે સ્વીકારે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 16)",
+    "exp": "વર્તનમાંનાં તત્કાલીન, હંગામી અને અસ્થાયી પરિવર્તનો (થાક, ઈજા વગેરે) શિક્ષણ નથી; માત્ર દીર્ઘકાલીન અને સાપેક્ષ કાયમી પરિવર્તનોને જ શિક્ષણ તરીકે સ્વીકારવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: અનુકરણ દ્વારા શિક્ષણના સંદર્ભમાં નીચેનામાંથી કઈ જોડ યોગ્ય રીતે બંધબેસતી નથી?",
+    "options": [
+      "અનુકરણનો મુખ્ય આધાર – અવલોકન",
+      "વ્યક્તિ સમાજમાંથી મેળવતી હોવાથી – સામાજિક શિક્ષણ",
+      "ટી.વી. પર અભિનેત્રીઓને જોઈને બાળકીઓ દ્વારા પ્રસાધનો અને ફેશનેબલ કપડાંનો ઉપયોગ – મોડેલિંગ શિક્ષણ",
+      "એકથી સવા વર્ષનું બાળક કાને મોબાઈલ ફોન રાખે – સાહજિક વર્તન"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 16)",
+    "exp": "એકથી સવા વર્ષનું બાળક કાને મોબાઈલ ફોન રાખતું જોવા મળે છે તે સાહજિક વર્તન નહીં, પરંતુ અનુકરણાત્મક શિક્ષણનું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: અમેરિકન મનોવૈજ્ઞાનિક થોર્નડાઈકના બિલાડી પરના 'પ્રયત્ન અને ભૂલ'ના પ્રયોગના આંકડાકીય પરિણામો અંગે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "કુલ 24 પ્રયત્નો; પ્રથમ દિવસે 120 સેકન્ડ અને 24મે પ્રયત્ને 10 સેકન્ડ",
+      "કુલ 24 પ્રયત્નો; પ્રથમ દિવસે 160 સેકન્ડ અને 24મે પ્રયત્ને 10 સેકન્ડ",
+      "કુલ 18 પ્રયત્નો; પ્રથમ દિવસે 160 સેકન્ડ અને 18મે પ્રયત્ને 15 સેકન્ડ",
+      "કુલ 24 પ્રયત્નો; પ્રથમ દિવસે 180 સેકન્ડ અને 24મે પ્રયત્ને 20 સેકન્ડ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 17)",
+    "exp": "થોર્નડાઈકે સતત 24 દિવસ સુધી કુલ 24 પ્રયત્નો સુધી બિલાડી પર પ્રયોગો કર્યા હતા. પ્રથમ દિવસે બિલાડીને દરવાજો ખોલવામાં લગભગ 160 સેકન્ડ લાગ્યા હતા, જ્યારે 24મે પ્રયત્ને ફક્ત 10 સેકન્ડમાં જ દરવાજો ખોલીને ખોરાક મેળવવાનું શિક્ષણ પ્રાપ્ત કર્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 8: થોર્નડાઈકના સમસ્યાપેટીના પ્રયોગ અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: પ્રથમ પ્રયત્નમાં બિલાડી દ્વારા સમસ્યાપેટીનો દરવાજો ખૂલવો એ એક આકસ્મિક ઘટના હતી.\nવિધાન 2: પ્રથમ વાર દરવાજો ખૂલ્યા બાદ ફરીથી સમસ્યાપેટીમાં મૂકતાં જ બિલાડીએ કળ અને દરવાજા વચ્ચેનો સંબંધ સમજીને તરત કળ દબાવી દીધી હતી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 17)",
+    "exp": "પ્રથમ વાર કળ દબાવી તે આકસ્મિક ઘટના હતી અને બિલાડીને કળ તથા દરવાજા વચ્ચેના સંબંધની સમજ પ્રાપ્ત થઈ નહોતી, તેથી ફરી સમસ્યાપેટીમાં મૂકતાં જ તેણે પહેલાંના જેવા જ વ્યર્થ પ્રયત્નો ચાલુ કર્યા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 9: અભિસંધાન દ્વારા શિક્ષણના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "અભિસંધાન એ શિક્ષણની એવી તરાહ છે જે સાહચર્યવાદ ઉપર આધારિત છે.",
+      "આ શિક્ષણમાં અનુભવોની સાંવેદનિક પ્રતિમાઓનું મગજમાં જોડાણ થાય છે.",
+      "શાસ્ત્રીય અભિસંધાનને રૂઢ અભિસંધાન, પ્રશિષ્ટ અભિસંધાન કે ક્રિયાત્મક અભિસંધાન તરીકે પણ ઓળખવામાં આવે છે.",
+      "મૂળ કે તટસ્થ ઉદીપક સિવાયના અન્ય ઉદીપક પ્રત્યે સમાન પ્રતિક્રિયા આપવાનું શિક્ષણ પ્રાપ્ત થાય ત્યારે અભિસંધાન થયું કહેવાય."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 17, 19)",
+    "exp": "પાવલોવનું અભિસંધાન પરંપરાગત હોવાથી 'શાસ્ત્રીય', 'રૂઢ' અથવા 'પ્રશિષ્ટ' અભિસંધાન તરીકે ઓળખાય છે; જ્યારે 'ક્રિયાત્મક અભિસંધાન' એ સ્કિનરના કારક અભિસંધાનનું બીજું નામ છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: રશિયન શરીરશાસ્ત્રી ઈવાન પેટ્રોવીચ પાવલોવ અંગે નીચેનામાંથી કઈ વિગતો સાચી છે?\n1. તેમનો જીવનકાળ 1849 થી 1936 સુધીનો હતો.\n2. તેમને પાચન ક્રિયાના અભ્યાસમાં રસ હતો.\n3. તેમને ઈ.સ. 1904માં તબીબી વિદ્યાક્ષેત્રમાં નોબલ પારિતોષિક એનાયત થયું હતું.",
+    "options": [
+      "માત્ર 1 અને 2",
+      "1, 2 અને 3 તમામ",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 17-18)",
+    "exp": "રશિયન શરીરશાસ્ત્રી ઈવાન પેટ્રોવીચ પાવલોવ (1849-1936) ને પાચન ક્રિયાના અભ્યાસમાં રસ હતો અને તેમને 1904માં તબીબી વિદ્યાક્ષેત્રમાં નોબલ પારિતોષિક એનાયત થયું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 11: પાવલોવના પ્રશિષ્ટ અભિસંધાનના પ્રયોગમાં અભિસંધાનની સ્થાપનાનો સાચો ક્રમ કયો છે?\n1. ઘંટડીનો અવાજ (CS) + ખોરાક (UCS) → લાળસ્ત્રાવ (UCR)\n2. ઘંટડી (CS) → લાળસ્ત્રાવ (CR)\n3. ખોરાક (UCS) → લાળસ્ત્રાવ (UCR)",
+    "options": [
+      "1 → 3 → 2",
+      "3 → 2 → 1",
+      "2 → 1 → 3",
+      "3 → 1 → 2"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 19)",
+    "exp": "અભિસંધાન પહેલાં ખોરાક (UCS) થી લાળસ્ત્રાવ (UCR) થાય છે; અભિસંધાન દરમ્યાન ઘંટડીનો અવાજ (CS) + ખોરાક (UCS) ની વારંવાર રજૂઆતથી લાળસ્ત્રાવ (UCR) થાય છે; અને અભિસંધાન પછી ફક્ત ઘંટડી (CS) થી લાળસ્ત્રાવ (CR) થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: પાવલોવના પ્રયોગના સંદર્ભમાં મૂળભૂત ખ્યાલો અને તેના ઉદાહરણોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (ખ્યાલ)  |  વિભાગ-બ (પ્રયોગનું ઉદાહરણ)\n1. અનઅભિસંધિત ઉદીપક (UCS) — (p) ઘંટડીના અવાજથી કૂતરાના મોંમાં લાળ ઝરવી\n2. અનઅભિસંધિત પ્રતિક્રિયા (UCR) — (q) કૂતરાની સમક્ષ રજૂ કરાતો ખોરાક\n3. અભિસંધિત ઉદીપક (CS) — (r) ખોરાક જોતાં જ કૂતરાના મોંમાં લાળ ઝરવી\n4. અભિસંધિત પ્રતિક્રિયા (CR) — (s) ખોરાક પહેલાં વારંવાર રજૂ કરાતો ઘંટડીનો અવાજ",
+    "options": [
+      "1-(q), 2-(r), 3-(s), 4-(p)",
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(s), 2-(r), 3-(q), 4-(p)",
+      "1-(r), 2-(q), 3-(p), 4-(s)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 18-19)",
+    "exp": "પાવલોવના પ્રયોગમાં ખોરાક એ UCS છે, ખોરાકથી થતો લાળસ્ત્રાવ એ UCR છે, ઘંટડીનો અવાજ એ CS છે અને ફક્ત ઘંટડીના અવાજથી થતો લાળસ્ત્રાવ એ CR છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: પ્રશિષ્ટ અભિસંધાનના પારિભાષિક શબ્દો અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: કોઈપણ પ્રકારના જોડાણ કે શિક્ષણ વગર સ્વાભાવિક ઉદીપકથી ઉત્પન્ન થતી પ્રતિક્ષિપ્ત પ્રતિક્રિયાને 'અનઅભિસંધિત પ્રતિક્રિયા (UCR)' કહેવામાં આવે છે.\nવિધાન 2: પાવલોવના પ્રયોગમાં 'ઘંટડીનો અવાજ' એ પ્રબલન તરીકેની ભૂમિકા ભજવે છે.",
+    "options": [
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "માત્ર વિધાન 1 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 18-19)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે પ્રાણીની પ્રતિક્રિયાને બળવત્તર બનાવતું ઘટક એટલે પ્રબલન, અને પાવલોવના પ્રયોગમાં 'ખોરાક' એ પ્રબલન છે (ઘંટડીનો અવાજ નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 14: પ્રશિષ્ટ અભિસંધાનમાં 'વિલોપન' (Extinction) ની પ્રક્રિયા ક્યારે જોવા મળે છે?",
+    "options": [
+      "જ્યારે અભિસંધિત ઉદીપકની સાથે સમાન લાગતો અન્ય ઉદીપક રજૂ કરવામાં આવે ત્યારે",
+      "જ્યારે એકવાર અભિસંધાન સ્થપાઈ ગયા પછી સતત અભિસંધિત ઉદીપક (ઘંટડી) સાથે અનઅભિસંધિત ઉદીપક (ખોરાક) આપવામાં ન આવે ત્યારે",
+      "જ્યારે ખોરાકની સાથે સતત ઘંટડીનો અવાજ રજૂ કરવામાં આવે ત્યારે",
+      "જ્યારે પ્રાણી બે જુદા જુદા ઉદીપકો વચ્ચેનો તફાવત પારખી લે ત્યારે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 19)",
+    "exp": "પ્રાણીમાં એકવાર અભિસંધાન સ્થપાઈ જાય પછી પ્રબલકની ગેરહાજરીમાં એટલે કે અભિસંધિત ઉદીપક (ઘંટડી) સાથે અનઅભિસંધિત ઉદીપક (ખોરાક) ન આપવામાં આવે તો ક્રમશઃ અભિસંધાન લુપ્ત થતું જોવા મળે છે, જેને 'વિલોપન' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: પાવલોવના પ્રયોગમાં કૂતરાને ઘંટડીના અવાજ સાથે ખોરાક આપવામાં આવે છે અને ઈલેક્ટ્રિક બઝરના અવાજ પછી ખોરાક આપવામાં આવતો નથી. વારંવાર આવું કરવાથી કૂતરામાં બઝરના અવાજ સાથે થતો લાળસ્ત્રાવ ક્રમશઃ ઓછો થઈને બંધ થઈ જાય છે. આ ઘટના શાનું ઉદાહરણ છે?",
+    "options": [
+      "ઉદીપક સામાન્યીકરણ",
+      "વિલોપન",
+      "નિષેધક પ્રબલન",
+      "ઉદીપક ભેદબોધન"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 19)",
+    "exp": "બે ઉદીપક વચ્ચેના તફાવતને પારખવો તેને 'ઉદીપક ભેદબોધન' કહે છે. ઘંટડી સાથે ખોરાક મળવાથી અને બઝર સાથે ખોરાક ન મળવાથી કૂતરો બંને અવાજ વચ્ચેનો ભેદ પારખતાં શીખી જાય છે અને બઝરના અવાજ સાથે લાળસ્ત્રાવ બંધ થઈ જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: શાસ્ત્રીય અભિસંધાન અને કારક અભિસંધાનના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "શાસ્ત્રીય અભિસંધાનમાં પ્રાણી કોઈ પ્રતિક્રિયા ન કરે તે છતાં સમયાંતરે પ્રબલન મળે છે, જ્યારે કારક અભિસંધાનમાં પ્રાણી જાતે ચોક્કસ પ્રતિક્રિયા કરે તો અને માત્ર તો જ પ્રબલનનું હક્કદાર બને છે.",
+      "કારક અભિસંધાનનો ખ્યાલ રશિયન મનોવૈજ્ઞાનિક બી.એફ. સ્કિનરે (1904-1990) આપ્યો હતો.",
+      "કારક અભિસંધાનમાં પ્રાણીના સાહજિક વર્તન ઉપર ભાર મૂકાતો હોવાથી તેને કારક અભિસંધાન કહેવાય છે.",
+      "શાસ્ત્રીય અભિસંધાનમાં પ્રયોગકર્તા દ્વારા નક્કી કરેલ ચોક્કસ પ્રતિક્રિયા કરવી ફરજિયાત છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 19)",
+    "exp": "શાસ્ત્રીય અભિસંધાનમાં પ્રતિક્રિયા વિના પણ સમયાંતરે પ્રબલન મળે છે, જ્યારે કારક અભિસંધાનમાં ચોક્કસ પ્રતિક્રિયા કરવાથી જ પ્રબલન મળે છે. નોંધનીય છે કે બી.એફ. સ્કિનર 'અમેરિકન' મનોવૈજ્ઞાનિક હતા (રશિયન નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 17: સ્કિનરના ઉંદર પરના કારક અભિસંધાનના પ્રયોગમાં ઉંદરને પાંજરામાં મૂક્યા બાદ પ્રથમ, બીજી, ત્રીજી અને ચોથી અન્નગુટિકા અનુક્રમે કેટલામી મિનિટે પ્રાપ્ત થઈ હતી?",
+    "options": [
+      "10, 25, 45 અને 60 મિનિટે",
+      "15, 30, 45 અને 70 મિનિટે",
+      "15, 35, 47 અને 71 મિનિટે",
+      "15, 20, 47 અને 71 મિનિટે"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 20)",
+    "exp": "ઉંદરને પેટીમાં મૂક્યાની 15 મિનિટ પછી પ્રથમ, 35 મિનિટે (પ્રથમના 20 મિનિટ પછી) બીજી, 47 મિનિટે ત્રીજી અને 71મી મિનિટે ચોથી અન્નગુટિકા પ્રાપ્ત થઈ હતી. આ ચાર પ્રતિક્રિયાઓને અંતે ઉંદરને હાથો દબાવવાની અને અન્નગુટિકા પ્રાપ્તિની સમજ આવી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 18: સ્કિનર પેટીની રચના અને તેના પ્રયોગ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "સ્કિનર પેટીમાં અન્નગુટિકા સંચયપેટી અને નીચેની તરફ આવેલા હાથાને એક તાર કે સળિયાથી સાંકળવામાં આવે છે.",
+      "પ્રથમ વાર હાથો દબાઈ જતાં ઉંદર આ યાંત્રિક રચનાથી અપરિચિત હોવાથી તેને અન્નગુટિકાપાત્રમાં અન્નગુટિકા છે તેવો કોઈ ખ્યાલ નહોતો.",
+      "ક્રિયાત્મક અભિસંધાનમાં ઉંદરની હાથો દબાવવાની પ્રતિક્રિયાથી પ્રાપ્ત થતી અન્નગુટિકા એ પ્રબલન તરીકેની ભૂમિકા ભજવે છે.",
+      "સ્કિનરના મત પ્રમાણે પ્રબલન દ્વારા માત્ર પ્રાણીના જ વર્તનને ઈચ્છિત આકાર આપી શકાય છે, માનવીના વર્તનને નહીં."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 20)",
+    "exp": "સ્કિનરના મત પ્રમાણે પ્રબલન આપવાથી 'પ્રાણી કે માનવી' બંનેના વર્તનને ઈચ્છિત આકાર આપી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: સ્કિનરના મતે 'નિષેધક પ્રબલન' (Negative Reinforcement) ના સંદર્ભમાં નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન 1: સ્કિનરના મતે નિષેધક પ્રબલન એ શિક્ષા (Punishment) જ છે.\nવિધાન 2: નિષેધક પ્રબલન એટલે પ્રતિક્રિયાની સંભાવના વધારનારું અને પ્રતિક્રિયા બાદ દૂર કરાતું ઉદીપક.\nવિધાન 3: સ્કિનર પેટીમાં હાથો દબાવવાથી ઉંદર ઈલેક્ટ્રિક શોકથી રાહત મેળવે તે નિષેધક પ્રબલનનું ઉદાહરણ છે.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 21)",
+    "exp": "સ્કિનરના મતે નિષેધક પ્રબલન એ 'શિક્ષા નથી'. પ્રબલન વિધાયક હોય કે નિષેધક, તેનાથી પ્રતિક્રિયા ઉપજવાની સંભાવના પહેલાં કરતાં વધે છે. ઈલેક્ટ્રિક શોક જેવી કષ્ટદાયક પરિસ્થિતિમાંથી મુક્તિ મેળવવા ઉંદર વારંવાર હાથો દબાવે છે તે નિષેધક પ્રબલન છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: કારક અભિસંધાનમાં 'ઉદીપક સામાન્યીકરણ' અને 'ઉદીપક ભેદબોધન' અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "સ્કિનરના પ્રયોગમાં ઉદીપકનું સામાન્યીકરણ થઈ શકતું નથી, કારણ કે સમગ્ર સ્કિનરપેટી એ જ ઉદીપકીય પરિસ્થિતિ છે.",
+      "કારક અભિસંધાનમાં રોજબરોજના જીવનમાં પણ ઉદીપક સામાન્યીકરણનાં કોઈ ઉદાહરણો જોવા મળતાં નથી.",
+      "કારક અભિસંધાનના ભેદબોધનના પ્રયોગમાં ઉંદરને ઘંટડી અને બઝરના અવાજ વચ્ચે ભેદ પાડતાં શીખવવામાં આવે છે.",
+      "બાળકનું સંતાડેલું રમકડું નવી જગ્યાએથી પણ શોધી કાઢવું એ ઉદીપક ભેદબોધનનું ઉદાહરણ છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 21)",
+    "exp": "સ્કિનરના પ્રયોગમાં સમગ્ર સ્કિનરપેટી જ ઉદીપકીય પરિસ્થિતિ હોવાથી સામાન્યીકરણ થઈ શકતું નથી, જોકે રોજબરોજના જીવનમાં (રમકડું નવી જગ્યાએથી શોધી કાઢવું) સામાન્યીકરણ જોવા મળે છે. જ્યારે ભેદબોધનના પ્રયોગમાં ઉંદરને 'પ્રકાશની હાજરી અને ગેરહાજરી' વચ્ચે ભેદ પાડતાં શીખવવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: 'આંતરસૂઝ દ્વારા શિક્ષણ' અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "આંતરસૂઝ શિક્ષણ એ એક બોધાત્મક ક્રિયા સાથે સંકળાયેલ શિક્ષણપ્રક્રિયા છે.",
+      "આંતરસૂઝ પર સૌપ્રથમ અને સૌથી વધુ ખેડાણ સમષ્ટિવાદી જર્મન મનોવૈજ્ઞાનિક કોહલરે કર્યું હતું.",
+      "કોહલરે દ્વિતીય વિશ્વયુદ્ધ દરમ્યાન કેનેરી ટાપુ પર ચિમ્પાન્ઝી ઉપર પ્રાયોગિક અભ્યાસો કર્યા હતા.",
+      "કોહલરના મતે શિક્ષણ એ જે-તે પરિસ્થિતિની સઘન સમજ અને અભ્યાસથી જ શક્ય બને છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 22)",
+    "exp": "જર્મન મનોવૈજ્ઞાનિક કોહલરે 'પ્રથમ વિશ્વયુદ્ધ' દરમ્યાન (દ્વિતીય વિશ્વયુદ્ધ નહીં) કેનેરી ટાપુ પર ચિમ્પાન્ઝી ઉપર વિવિધ પ્રાયોગિક અભ્યાસો કર્યા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 22: ઉત્ક્રાંતિવાદના સિદ્ધાંત અનુસાર કોહલરે આંતરસૂઝના પ્રયોગ માટે ચિમ્પાન્ઝીની પસંદગી કેમ કરી હતી અને વિવિધ પ્રાણીઓમાં શિક્ષણ કેવી રીતે થાય છે?",
+    "options": [
+      "નિમ્ન કક્ષાના પ્રાણીઓમાં અભિસંધાન દ્વારા શિક્ષણ થાય છે અને માનવ જેવું વિકસિત મગજ માત્ર ચિમ્પાન્ઝી પાસે જ છે.",
+      "ઉચ્ચ કક્ષાના પ્રાણીઓમાં માત્ર અનુકરણ દ્વારા શિક્ષણ થાય છે અને માનવ જેવું વિકસિત મગજ ગોરીલા તથા ચિમ્પાન્ઝી પાસે છે.",
+      "નિમ્ન કક્ષાના પ્રાણીઓમાં આંતરસૂઝ દ્વારા શિક્ષણ થાય છે અને ચિમ્પાન્ઝી સરળતાથી ઉપલબ્ધ હતા.",
+      "નિમ્ન કક્ષાના પ્રાણીઓમાં અનુકરણ દ્વારા, ઉચ્ચ કક્ષાના પ્રાણીઓમાં અભિસંધાન અને આંતરસૂઝ દ્વારા શિક્ષણ થાય છે; અને માનવ જેવું વિકસિત મગજ ફક્ત ચિમ્પાન્ઝી અને ઉરાંગ ઉટાંગ પાસે જ હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 22)",
+    "exp": "ઉત્ક્રાંતિવાદના સિદ્ધાંત પ્રમાણે નિમ્ન કક્ષાના પ્રાણીઓમાં અનુકરણ દ્વારા અને ઉચ્ચ કક્ષાના પ્રાણીઓમાં અભિસંધાન તથા આંતરસૂઝ દ્વારા શિક્ષણ પ્રાપ્ત થાય છે. માનવ જેવું વિકસિત મગજ ફક્ત ચિમ્પાન્ઝી અને ઉરાંગ ઉટાંગ પાસે જ હોવાથી કોહલરે ચિમ્પાન્ઝી પર પસંદગી ઉતારી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 23: કોહલરના ચિમ્પાન્ઝી પરના 'બે લાકડીવાળા પ્રયોગ' અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: આ પ્રયોગમાં નાની લાકડી પાંજરાની અંદર અને તેનાથી લાંબી બીજી લાકડી પાંજરાની બહાર મૂકવામાં આવી હતી.\nવિધાન 2: ચિમ્પાન્ઝીએ અંદર પડેલી નાની લાકડીથી બહારની મોટી લાકડી પાંજરામાં ખેંચી લીધી, પરંતુ કેળાં તે મોટી લાકડીથી પણ વધારે દૂર હતાં.\nવિધાન 3: નિરાશ થઈને લાકડીઓ વડે રમત કરતાં અચાનક બંને લાકડીઓ એકબીજા સાથે જોડાઈ જતાં ચિમ્પાન્ઝીને આંતરસૂઝ થઈ અને કેળાં ખેંચી લીધાં.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 22-23)",
+    "exp": "બે લાકડીવાળા પ્રયોગમાં નાની લાકડી અંદર અને લાંબી લાકડી બહાર મૂકી હતી. નાની લાકડીથી લાંબી લાકડી ખેંચ્યા બાદ પણ કેળાં દૂર હોવાથી રમત રમતમાં બંને લાકડીઓ જોડાઈ ગઈ અને આંતરસૂઝ દ્વારા ચિમ્પાન્ઝીએ સમસ્યા ઉકેલી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 24: કોહલરના 'ખોખાના પ્રયોગ'માં ઊંચી છતવાળા ઓરડામાં વચ્ચોવચ લટકાવેલાં કેળાં પ્રાપ્ત કરવા માટે ઓરડામાં કુલ કેટલાં ખોખાં મૂકવામાં આવ્યાં હતાં?",
+    "options": [
+      "ત્રણ",
+      "બે",
+      "ચાર",
+      "પાંચ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 23)",
+    "exp": "કોહલરે ઊંચી છતવાળા ઓરડામાં ત્રણ ખોખાં મૂક્યાં હતાં. ચિમ્પાન્ઝીએ અંતે ત્રણેય ખોખાંઓ પડે નહીં તેમ એકની ઉપર એક ગોઠવીને તેના પર ચડી કેળાંની લૂમ પ્રાપ્ત કરી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 25: “પૂર્વ અનુભવ વગર આંતરસૂઝનો વિકાસ થતો નથી.” – આ વિધાન કયા મનોવૈજ્ઞાનિકનું છે?",
+    "options": [
+      "કોહલર",
+      "થોર્નડાઈક",
+      "હાર્લો",
+      "સી.ટી. મોર્ગન"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 2 - શીખવાની ક્રિયા (પાના નં.: 23)",
+    "exp": "હાર્લો નામના મનોવૈજ્ઞાનિકના મતે પૂર્વ અનુભવ વગર આંતરસૂઝનો વિકાસ થતો નથી. ઉપરાંત, સમગ્ર સમસ્યાનો તાગ મેળવી તેના વેરવિખેર ભાગોને જોડીને સંબંધ સમજવાના પ્રયત્નને કોહલર 'આંતરસૂઝ' કે 'આહા! અનુભવ' તરીકે ઓળખાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: બુદ્ધિની વ્યાખ્યા અને તેના ઉદ્ભવ અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "1879માં જર્મન મનોવૈજ્ઞાનિક એબિંગહોસે વ્યક્તિ-વ્યક્તિ વચ્ચે રહેલી ભિન્નતાના આધારે બુદ્ધિની વ્યાખ્યા આપવાનો સૌપ્રથમ પ્રયાસ કર્યો હતો.",
+      "અંગ્રેજી શબ્દ 'Intelligence' લેટિન ભાષાના 'Intelligere' ક્રિયાપદ પરથી બનેલો છે, જેનો અર્થ 'સમજવું' થાય છે.",
+      "\"બુદ્ધિ એટલે સારી રીતે સમજવાની, યોગ્ય રીતે નિર્ણય લેવાની અને તર્ક કરવાની શક્તિ\" – આ વ્યાખ્યા ટર્મને 1904માં આપી હતી.",
+      "\"બુદ્ધિ એટલે વસ્તુને જાણવાની ચિત્તની આકલન કે સમજ શક્તિ\" – આ વ્યાખ્યા સાર્થ ગુજરાતી જોડણી કોશ (2008) માં આપેલી છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 27)",
+    "exp": "\"બુદ્ધિ એટલે સારી રીતે સમજવાની, યોગ્ય રીતે નિર્ણય લેવાની અને તર્ક કરવાની શક્તિ\" આ વ્યાખ્યા ટર્મને નહીં, પરંતુ બિને અને સાયમને (1904) આપી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 27: બુદ્ધિની વ્યાખ્યાઓ અને તેના પ્રણેતાઓ (વર્ષ સહિત) ના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રણેતા અને વર્ષ)  |  વિભાગ-બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. ટર્મન (1916) — (p) ધ્યેયપૂર્વક કાર્ય, તાર્કિક વિચારણા અને પર્યાવરણ સાથે અસરકારક વ્યવહાર\n2. વેક્સલર (1939) — (q) અમૂર્ત રીતે વિચારવાની શક્તિનું પ્રમાણ\n3. ગાર્ડનર (1986) — (r) આયોજન, માહિતીનું સંકેતોમાં અંકન, ધ્યાન જેવી બોધન પ્રક્રિયાઓનો સરવાળો\n4. જે.પી. દાસ (2004) — (s) સાંસ્કૃતિક પરિવેશોમાં સમસ્યા ઉકેલવાની કે મૂલ્યવાન વસ્તુઓના નિર્માણની કુશળતા",
+    "options": [
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(p), 2-(q), 3-(s), 4-(r)",
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(r), 2-(p), 3-(s), 4-(q)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 28)",
+    "exp": "ટર્મને (1916) અમૂર્ત વિચારણા પર, વેક્સલરે (1939) ધ્યેયપૂર્વક કાર્ય અને પર્યાવરણ સાથે અસરકારક વ્યવહાર પર, ગાર્ડનરે (1986) સાંસ્કૃતિક પરિવેશોમાં સમસ્યા ઉકેલ પર અને જે.પી. દાસે (2004) તમામ બૌદ્ધિક/બોધન પ્રક્રિયાઓના સરવાળા પર ભાર મૂક્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: બુદ્ધિના સામાન્ય સંભવિતતાના આલેખ (Normal Probability Curve) અને બુદ્ધિલબ્ધિના સૂત્ર અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: બુદ્ધિક્ષમતાનું માપન કરવા માટેનું IQ સૂત્ર સૌપ્રથમવાર વિલિયમ સ્ટર્ને ઈ.સ. 1912માં દર્શાવ્યું હતું.\nવિધાન 2: બુદ્ધિલબ્ધિને આધારે બુદ્ધિની વિવિધ કક્ષાઓનું વર્ગીકરણ સૌપ્રથમવાર ટર્મને દર્શાવ્યું હતું.\nવિધાન 3: જનસમુદાયમાં બુદ્ધિલબ્ધિનો આલેખ 'ઘંટાકાર' સ્વરૂપનો હોય છે, જેમાં સામાન્ય બુદ્ધિક્ષમતા ધરાવતા લોકોનું પ્રમાણ 50% છે.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 29)",
+    "exp": "વિલિયમ સ્ટર્ને 1912માં IQ નું સૂત્ર આપ્યું, ટર્મને બુદ્ધિલબ્ધિનું વર્ગીકરણ દર્શાવ્યું અને સામાન્ય સંભવિતતાનો આલેખ ઘંટાકાર હોય છે, જેમાં 50% લોકો સામાન્ય બુદ્ધિક્ષમતા ધરાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: બ્રિટનના મનોવૈજ્ઞાનિક ચાર્લ્સ સ્પિયરમેનના 'દ્વિઘટક સિદ્ધાંત' (1904) માં દર્શાવેલ 'G-Factor' અને 'S-Factor' ની લાક્ષણિકતાઓ અંગે કયું વિધાન અસત્ય છે?",
+    "options": [
+      "G-Factor એ જન્મદત્ત ક્ષમતા અને સામાન્ય માનસિક ઊર્જા છે, જે સાતત્યપૂર્ણ હોય છે.",
+      "S-Factor એ જન્મદત્ત નથી પરંતુ વાતાવરણમાંથી પ્રાપ્ત થયેલ સંપાદિત અને શિક્ષિત ક્ષમતા છે.",
+      "એક જ વ્યક્તિમાં S-Factor નાં વિવિધ પાસાંઓ (જેમ કે ભાષાકીય, ગાણિતિક) એક સરખા પ્રમાણમાં હોય છે.",
+      "શિક્ષણ અને તાલીમ દ્વારા S-Factor માં કેટલેક અંશે પરિવર્તન લાવી શકાય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 30)",
+    "exp": "સ્પિયરમેનના મતે એક જ વ્યક્તિમાં S-Factor નાં વિવિધ પાસાંઓમાં માત્રાત્મક તફાવત રહેલો હોય છે; એટલે કે ભાષાકીય, ગાણિતિક વગેરે વિશિષ્ટ ક્ષમતાઓ એક સરખા પ્રમાણમાં હોતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 30: રોબર્ટ સ્ટર્નબર્ગના 'ત્રિપુટીના સિદ્ધાંત' (1985) અંગે નીચેનામાંથી કઈ જોડ ખોટી છે?",
+    "options": [
+      "1990 બાદ સિદ્ધાંતનું નવું નામ – સફળ બુદ્ધિનો સિદ્ધાંત (Theory of Successful Intelligence)",
+      "ઘટકીય બુદ્ધિ (Componential Intelligence) – વિશ્લેષણાત્મક બુદ્ધિ",
+      "અનુભવજન્ય બુદ્ધિ (Experiential Intelligence) – વ્યવહારિક બુદ્ધિ",
+      "સંદર્ભગત બુદ્ધિ (Contextual Intelligence) – વાતાવરણ સાથે અનુકૂલન સાધવાની ક્ષમતા"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 31)",
+    "exp": "અનુભવજન્ય બુદ્ધિને 'સર્જનાત્મક બુદ્ધિ' (Creative Intelligence) કહેવામાં આવે છે, જ્યારે 'વ્યવહારિક બુદ્ધિ' (Practical Intelligence) એ સંદર્ભગત બુદ્ધિનું બીજું નામ છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: જે.પી. ગિલ્ફર્ડના 'ત્રિ-પરિમાણાત્મક સિદ્ધાંત' અનુસાર બુદ્ધિનાં ત્રણ પરિમાણો અને તેમાં રહેલા ઘટકોની સંખ્યા અંગે સાચો વિકલ્પ પસંદ કરો:",
+    "options": [
+      "ક્રિયા (5) × વસ્તુ (5) × નીપજ (6) = કુલ 150 ઘટકો",
+      "ક્રિયા (6) × વસ્તુ (5) × નીપજ (5) = કુલ 150 ઘટકો",
+      "ક્રિયા (5) × વસ્તુ (6) × નીપજ (5) = કુલ 150 ઘટકો",
+      "ક્રિયા (4) × વસ્તુ (5) × નીપજ (6) = કુલ 120 ઘટકો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 32)",
+    "exp": "ગિલ્ફર્ડના મતે બુદ્ધિમાં ક્રિયા (Operation) ના 5 ઘટકો, વસ્તુ (Content) ના 5 ઘટકો અને નીપજ (Product) ના 6 ઘટકો એમ કુલ 5 × 5 × 6 = 150 ઘટકો હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: ગિલ્ફર્ડના ત્રિ-પરિમાણાત્મક સિદ્ધાંતમાં 'વસ્તુ (Content)' પરિમાણમાં નીચેનામાંથી કયા એક ઘટકનો સમાવેશ થતો નથી?",
+    "options": [
+      "દૃશ્ય (Visual) અને શ્રાવ્ય (Auditory)",
+      "પ્રતીકાત્મક (Symbolic) અને શબ્દાર્થ (Semantic)",
+      "વાર્તનિક (Behavioural)",
+      "રૂપાંતરો (Transformations)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 32)",
+    "exp": "'રૂપાંતરો (Transformations)' એ વસ્તુ પરિમાણનો નહીં, પરંતુ 'નીપજ (Product)' પરિમાણનો ઘટક છે. વસ્તુ પરિમાણમાં દૃશ્ય, શ્રાવ્ય, પ્રતીકાત્મક, શબ્દાર્થ અને વાર્તનિક એમ પાંચ બાબતોનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: હાવર્ડ ગાર્ડનરે 1983માં રજૂ કરેલા 'બહુવિધ બુદ્ધિના સિદ્ધાંત'માં દર્શાવેલ બુદ્ધિના પ્રકારો અને તે ધરાવતા વ્યવસાયિકોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (બુદ્ધિનો પ્રકાર)  |  વિભાગ-બ (વ્યવસાયિકો/વ્યક્તિઓ)\n1. અવકાશીય બુદ્ધિ — (p) રાજનેતાઓ, ધર્મગુરુઓ, શિક્ષકો, સામાજિક કાર્યકરો\n2. આંતરવૈયક્તિક બુદ્ધિ — (q) વાહન ચાલકો, ઓપરેશન કરનાર ડૉક્ટરો, ઈજનેરો\n3. દૈહિક-શરીરગતિલક્ષી બુદ્ધિ — (r) વકીલો, ગુનાશોધકો, વૈજ્ઞાનિકો, આંકડાશાસ્ત્રીઓ\n4. તાર્કિક-ગાણિતિક બુદ્ધિ — (s) રમતવીરો, હસ્તકળાના કારીગરો, નૃત્યકારો, અભિનેતાઓ",
+    "options": [
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(r), 2-(p), 3-(s), 4-(q)",
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(s), 2-(p), 3-(q), 4-(r)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 33)",
+    "exp": "ગાર્ડનરના મતે અવકાશીય બુદ્ધિ વાહન ચાલકો-ડૉક્ટરો-ઈજનેરોમાં, આંતરવૈયક્તિક બુદ્ધિ રાજનેતાઓ-શિક્ષકો-ધર્મગુરુઓમાં, દૈહિક-શરીરગતિલક્ષી બુદ્ધિ રમતવીરો-નૃત્યકારો-અભિનેતાઓમાં અને તાર્કિક-ગાણિતિક બુદ્ધિ વકીલો-ગુનાશોધકો-વૈજ્ઞાનિકોમાં વિશેષ જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: ગાર્ડનરના બહુવિધ બુદ્ધિના સિદ્ધાંત મુજબ, વ્યક્તિ પોતાની જ લાગણીઓ, આવેગો, મનોવલણો, પૂર્વગ્રહો અને સ્વ-આવિષ્કારની સમજ કઈ બુદ્ધિ દ્વારા કેળવી શકે છે?",
+    "options": [
+      "આંતરવૈયક્તિક બુદ્ધિ (Interpersonal Intelligence)",
+      "વ્યક્તિઅંતર્ગત બુદ્ધિ (Intrapersonal Intelligence)",
+      "નૈસર્ગિક બુદ્ધિ (Naturalistic Intelligence)",
+      "ભાષાકીય બુદ્ધિ (Linguistic Intelligence)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 33)",
+    "exp": "અન્ય વ્યક્તિનાં ગમા-અણગમા અને લાગણીઓ સમજવા માટે 'આંતરવૈયક્તિક બુદ્ધિ' હોય છે, જ્યારે પોતાની જ લાગણીઓ, મનોવલણો, આંતરસૂઝ અને સ્વ-આવિષ્કારની સમજ માટે 'વ્યક્તિઅંતર્ગત બુદ્ધિ' (Intrapersonal Intelligence) ઉપયોગી થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 35: જગન્નાથ પ્રસાદ દાસ (J. P. Das) ના 'PASS' સિદ્ધાંત અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: જે.પી. દાસ અને તેમના સાથીદારોએ સ્પિયરમેનના G-ઘટક સિદ્ધાંતનો વિરોધ કરી ચેતા મનોવૈજ્ઞાનિક (Neuropsychological) દૃષ્ટિકોણનો સ્વીકાર કર્યો છે.\nવિધાન 2: PASS નું પૂરું નામ Planning, Attention Arousal, Simultaneous processing અને Successive processing થાય છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 34)",
+    "exp": "જે.પી. દાસે G-ઘટક સિદ્ધાંતનો વિરોધ કરીને ચેતા મનોવૈજ્ઞાનિક દૃષ્ટિકોણથી 'PASS' (આયોજન, ધ્યાન ઉત્તેજના, સમકાલીન પ્રક્રિયા, ક્રમબદ્ધ પ્રક્રિયા) સિદ્ધાંત આપ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: જે.પી. દાસના 'PASS' સિદ્ધાંતમાં દર્શાવેલ ચાર બોધાત્મક પ્રક્રિયાઓ અને તેના માટે જવાબદાર મસ્તિષ્કના ભાગોનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (બોધાત્મક પ્રક્રિયા)  |  વિભાગ-બ (જવાબદાર મસ્તિષ્કનો ભાગ)\n1. P - આયોજન (Planning) — (p) મગજ સ્કંધ (Brain stem) અને થેલેમસ\n2. A - ધ્યાન ઉત્તેજના (Attention Arousal) — (q) મોટા મગજનો અગ્રખંડ (Frontal Lobe)\n3. S - સમકાલીન પ્રક્રિયા (Simultaneous) — (r) મોટા મગજનો અગ્રખંડ અને નિમ્ન ખંડ (Temporal Lobe)\n4. S - ક્રમબદ્ધ પ્રક્રિયા (Successive) — (s) મોટા મગજનો પશ્ચ ખંડ (Occipital) અને મધ્ય ખંડ (Parietal)",
+    "options": [
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(r), 2-(p), 3-(s), 4-(q)",
+      "1-(p), 2-(q), 3-(r), 4-(s)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 34)",
+    "exp": "PASS સિદ્ધાંત મુજબ આયોજન માટે અગ્રખંડ, ધ્યાન ઉત્તેજના માટે મગજ સ્કંધ અને થેલેમસ, સમકાલીન પ્રક્રિયા માટે પશ્ચ ખંડ અને મધ્ય ખંડ, તથા ક્રમબદ્ધ પ્રક્રિયા માટે અગ્રખંડ અને નિમ્ન ખંડ જવાબદાર છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: “મારી માતાના પિતાના એકના એક દીકરા મારા કોણ થાય?” – આ પ્રકારની ભાષાકીય સમજ મેળવવા માટે 'PASS' સિદ્ધાંતની કઈ બોધાત્મક પ્રક્રિયાની વધુ આવશ્યકતા રહેલી છે?",
+    "options": [
+      "આયોજન (Planning)",
+      "સમકાલીન પ્રક્રિયા (Simultaneous Processing)",
+      "ક્રમબદ્ધ પ્રક્રિયા (Successive Processing)",
+      "ધ્યાન ઉત્તેજના (Attention Arousal)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 34)",
+    "exp": "સમકાલીન પ્રક્રિયામાં જુદા જુદા ઉદીપકોને એકસાથે સાંકળી તેને એક સમગ્ર ઘટના તરીકે આલેખવાની ક્ષમતા રહેલી છે, જે ભાષાકીય સમજ (જેમ કે મામાના સંબંધનો ઉકેલ) માટે જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: સ્ટેનફર્ડ-બીને કસોટી મુજબ 'માનસિક વય (Mental Age)' ની ગણતરી અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "બાળકની હાલની શારીરિક ઉંમર કરતાં બે-ત્રણ વર્ષ ઓછી ઉંમરની કસોટીથી શરૂઆત કરવામાં આવે છે.",
+      "દરેક વર્ષની કસોટીમાં છ-છ પ્રશ્નો હોય છે અને દરેક સાચા ઉત્તર દીઠ બે માસની માનસિક વય ગણવામાં આવે છે.",
+      "બાળક દ્વારા મોટામાં મોટી ઉંમરની કસોટી કે જેના સર્વ પ્રશ્નોના સાચા જવાબ તે આપી શકે તેને તેની 'પાયાની ઉંમર' ગણાય છે.",
+      "નબળી બૌદ્ધિકક્ષમતા ધરાવતા બાળકની માનસિક વય તેની શારીરિક વય કરતાં વધારે હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 35)",
+    "exp": "તેજસ્વી બાળકની માનસિક વય તેની શારીરિક વય કરતાં વધારે હોય છે, જ્યારે નબળી બૌદ્ધિકક્ષમતા ધરાવતા બાળકની માનસિક વય તેની શારીરિક વય કરતાં 'ઓછી' હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: જો કોઈ બાળકની વાસ્તવિક શારીરિક ઉંમર 7 વર્ષ અને 6 માસ હોય તથા કસોટી મુજબ તેની કુલ માનસિક વય 108 માસ આવતી હોય, તો સ્ટર્નના સૂત્ર મુજબ તે બાળકનો બુદ્ધિઆંક (IQ) કેટલો થશે?",
+    "options": [
+      "110",
+      "120",
+      "125",
+      "130"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 36)",
+    "exp": "બાળકની શારીરિક વય (CA) = 7 વર્ષ 6 માસ = 90 માસ અને માનસિક વય (MA) = 108 માસ. તેથી IQ = (108 / 90) × 100 = 120 થાય."
+  },
+  {
+    "q": "પ્રશ્ન 40: સ્ટેનફર્ડ-બીને બુદ્ધિ તુલા (SBIS) ના ઈતિહાસ અને પુનઃપ્રમાણીકરણ અંગે નીચેનાં વિધાનો ધ્યાને લો:\nવિધાન 1: બીને અને સાયમને પહેલી વ્યક્તિગત બુદ્ધિ કસોટી ફ્રેંચ ભાષામાં ઈ.સ. 1905માં રચી હતી.\nવિધાન 2: અમેરિકાની સ્ટેનફોર્ડ યુનિવર્સિટીના પ્રાધ્યાપક એલ.એમ. ટર્મને ઈ.સ. 1916માં અંગ્રેજી ભાષામાં પ્રથમ બુદ્ધિ કસોટી તૈયાર કરી, જેનું છેલ્લું નવસંસ્કરણ 1986માં પ્રગટ થયું છે.\nવિધાન 3: આ કસોટી 25 વર્ષની વય સુધીની વ્યક્તિઓની બુદ્ધિનું માપન કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 36)",
+    "exp": "વિધાન 1 અને 2 સાચાં છે (1916ની કસોટીનું 1937, 1960, 1973 અને છેલ્લે 1986માં પુનઃપ્રમાણીકરણ થયું). વિધાન 3 ખોટું છે, કારણ કે આ કસોટી '18 વર્ષની વય સુધીની' વ્યક્તિઓની બુદ્ધિનું માપન કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: વેક્સલરની બુદ્ધિ તુલાઓ (Wechsler Intelligence Scales) અને તેના વયજૂથ અંગે યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (કસોટીનું નામ)  |  વિભાગ-બ (વયજૂથ / વિગત)\n1. WAIS (પુખ્તો માટેની કસોટી) — (p) 4 થી 6.5 વર્ષનાં બાળકો માટે\n2. WISC (બાળકો માટેની કસોટી) — (q) 16 થી 64 વર્ષના પુખ્તો માટે\n3. WPPSI (પૂર્વ પ્રાથમિક કક્ષા માટે) — (r) 6 થી 16 વર્ષની વ્યક્તિઓ માટે\n4. WAIS-R (સંશોધિત સ્વરૂપ) — (s) ઈ.સ. 1981માં બહાર પાડવામાં આવ્યું",
+    "options": [
+      "1-(q), 2-(p), 3-(r), 4-(s)",
+      "1-(r), 2-(q), 3-(p), 4-(s)",
+      "1-(q), 2-(r), 3-(p), 4-(s)",
+      "1-(q), 2-(r), 3-(s), 4-(p)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 36-37)",
+    "exp": "WAIS 16 થી 64 વર્ષ માટે, WISC 6 થી 16 વર્ષ માટે, WPPSI 4 થી 6.5 વર્ષ માટે છે અને WAIS નું સંશોધિત સ્વરૂપ (WAIS-R) ઈ.સ. 1981માં બહાર પડ્યું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 42: વેક્સલરની પુખ્તો માટેની બુદ્ધિ કસોટી (WAIS) માં કુલ કેટલી ઉપકસોટીઓ છે અને તેનું વિભાજન કેવી રીતે થયેલું છે?",
+    "options": [
+      "કુલ 10 ઉપકસોટીઓ – 5 શાબ્દિક અને 5 કાર્યાત્મક",
+      "કુલ 11 ઉપકસોટીઓ – 6 શાબ્દિક અને 5 કાર્યાત્મક",
+      "કુલ 11 ઉપકસોટીઓ – 5 શાબ્દિક અને 6 કાર્યાત્મક",
+      "કુલ 12 ઉપકસોટીઓ – 6 શાબ્દિક અને 6 કાર્યાત્મક"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 36-37)",
+    "exp": "વેક્સલરની બુદ્ધિ કસોટીમાં કુલ 11 ઉપકસોટીઓ છે, જેમાંથી 6 ઉપકસોટીઓ શાબ્દિક સ્વરૂપની અને 5 ઉપકસોટીઓ કાર્યાત્મક સ્વરૂપની છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: જે.સી. રેવન દ્વારા રચિત 'Raven's Progressive Matrices (RPM)' બુદ્ધિ કસોટી અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "આ કસોટી ઈ.સ. 1936માં રચવામાં આવી હતી અને તે ભાષા તથા સાંસ્કૃતિક અસરથી મુક્ત અશાબ્દિક કસોટી છે.",
+      "આ કસોટી 5 વર્ષની ઉંમરના બાળકોથી માંડી પુખ્ત ઉંમરના લોકોની બુદ્ધિના માપન માટે વપરાય છે.",
+      "આ કસોટીમાં 60 બહુવૈકલ્પિક પ્રશ્નો સરળથી અઘરા ક્રમમાં ગોઠવાયેલા હોય છે.",
+      "આ કસોટીમાં તરેહો માત્ર 3 × 3 ના સંકુલમાં જ પૂછવામાં આવેલી હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 37)",
+    "exp": "રેવનની બુદ્ધિ કસોટીમાં ઘણી તરેહો 6 × 6, 4 × 4 કે 2 × 2 ના સંકુલમાં પૂછવામાં આવેલી છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: અમેરિકાના મનોવિજ્ઞાનના પ્રોફેસર એલન એસ. કોફમેન દ્વારા તૈયાર કરાયેલી બુદ્ધિ કસોટીઓનાં પૂરાં નામોમાં નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "KABC – Kaufman Assessment Battery for Children",
+      "K-BIT – Kaufman Brief Intelligence Test",
+      "KAIT – Kaufman Adolescent and Adult Intelligence Test",
+      "ઉપરોક્ત A, B અને C ત્રણેય સાચા છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 38)",
+    "exp": "એલન એસ. કોફમેન દ્વારા KABC, K-BIT અને KAIT જેવી કસોટીઓ તૈયાર કરવામાં આવી છે, જેનું પુનઃસંસ્કરણ 2004-2005માં પ્રકાશિત થયું હતું."
+  },
+  {
+    "q": "પ્રશ્ન 45: બુદ્ધિઆંકનું વિતરણ દર્શાવતા કોષ્ટક (3.2) મુજબ સામાન્ય વસ્તીમાં બુદ્ધિઆંક, વર્ણન અને ટકાવારીની કઈ જોડ ખોટી છે?",
+    "options": [
+      "70 થી 79 – સીમાવર્તીય બુદ્ધિ – 6.70%",
+      "80 થી 89 – નિમ્ન સરેરાશ બુદ્ધિ – 16.10%",
+      "110 થી 119 – ઉચ્ચ બુદ્ધિ – 16.10%",
+      "130 થી વધુ – પ્રતિભાશાળી બુદ્ધિ – 2.20%"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 38)",
+    "exp": "કોષ્ટક 3.2 મુજબ 110 થી 119 બુદ્ધિઆંકને 'ઉચ્ચ સરેરાશ બુદ્ધિ' (16.10%) કહેવામાં આવે છે, જ્યારે 'ઉચ્ચ બુદ્ધિ' 120 થી 130 (6.70%) માટે વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: 'પ્રતિભાસંપન્નતા (Giftedness)' અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: ઈ.સ. 1925માં ટર્મને પ્રતિભાસંપન્ન વ્યક્તિઓનો અભ્યાસ શરૂ કર્યો હતો.\nવિધાન 2: જોસેફ રેનઝુલ સૂચવે છે કે પ્રતિભાસંપન્નતા એ ઉચ્ચ બુદ્ધિ, ઉચ્ચ સર્જકતા અને ઉચ્ચ પ્રેરણા એમ ત્રણ ઘટકોની આંતરક્રિયા પર અવલંબે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 38-39)",
+    "exp": "ટર્મને ઈ.સ. 1925માં પ્રતિભાસંપન્ન વ્યક્તિઓનો અભ્યાસ શરૂ કર્યો હતો અને જોસેફ રેનઝુલે પ્રતિભાસંપન્નતાના ત્રણ ઘટકો (ઉચ્ચ બુદ્ધિ, ઉચ્ચ સર્જકતા અને ઉચ્ચ પ્રેરણા) દર્શાવ્યા છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: પ્રતિભાસંપન્ન (Gifted) બાળકોનાં લક્ષણો અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "તેઓ ઊંચું સ્વ-ગૌરવ, ઊંચી સ્વ-ક્ષમતા અને સારી આંતરસૂઝ ધરાવે છે.",
+      "તેઓ આંતરિક કરતાં બાહ્ય પ્રેરણાથી દોરાઈને કાર્ય કરતાં હોય છે.",
+      "તેઓ સ્વ-વિવેચક હોય છે અને પોતાના કાર્યનું તાર્કિક મૂલ્યાંકન કરી શકે છે.",
+      "તેઓ મહદંશે અંતર્મુખ અને એકાંતપ્રિય પણ જોવા મળે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 39-40)",
+    "exp": "પ્રતિભાસંપન્ન બાળકો 'બાહ્ય કરતાં આંતરિક પ્રેરણાથી' દોરાઈને કાર્ય કરતાં હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 48: મનોદુર્બળતા (બુદ્ધિમંદતા) ની ચાર કક્ષાઓ અને તેના બુદ્ધિઆંક (IQ) નાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (મનોદુર્બળતાની કક્ષા)  |  વિભાગ-બ (બુદ્ધિઆંક - IQ)\n1. હળવી (Mild) — (p) 20 થી ઓછો\n2. મધ્યમ (Moderate) — (q) 50 થી 69\n3. તીવ્ર (Severe) — (r) 20 થી 34\n4. અતિતીવ્ર (Profound) — (s) 35 થી 49",
+    "options": [
+      "1-(q), 2-(s), 3-(r), 4-(p)",
+      "1-(q), 2-(r), 3-(s), 4-(p)",
+      "1-(s), 2-(q), 3-(r), 4-(p)",
+      "1-(q), 2-(s), 3-(p), 4-(r)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 40)",
+    "exp": "મનોદુર્બળતાની ચાર કક્ષાઓ: હળવી (50 થી 69), મધ્યમ (35 થી 49), તીવ્ર (20 થી 34) અને અતિતીવ્ર (20 થી ઓછો)."
+  },
+  {
+    "q": "પ્રશ્ન 49: મનોદુર્બળતાની કક્ષા અને તેનાં લક્ષણોના કોષ્ટક મુજબ 'વિદ્યાકીય કૌશલ્યો' અંગે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "હળવી કક્ષાની વ્યક્તિ 1 થી 2 ધોરણ સુધી અને મધ્યમ કક્ષાની વ્યક્તિ 3 થી 6 ધોરણ સુધી ભણી શકે છે.",
+      "હળવી કક્ષાની વ્યક્તિ ઉત્તમ શૈક્ષણિક પર્યાવરણ હોય તો 3 થી 6 ધોરણ સુધી અને મધ્યમ કક્ષાની વ્યક્તિ વધુમાં વધુ 1 કે 2 ધોરણ સુધી ભણી શકે છે.",
+      "તીવ્ર કક્ષાની વ્યક્તિ વધુમાં વધુ 1 કે 2 ધોરણ સુધી ભણી શકે છે.",
+      "હળવી કક્ષાની વ્યક્તિ ધોરણ 10 સુધીનો અભ્યાસ પૂર્ણ કરી શકે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 41)",
+    "exp": "કોષ્ટક મુજબ હળવી કક્ષા (50-69 IQ) ધરાવતી વ્યક્તિ ઉત્તમ શૈક્ષણિક પર્યાવરણમાં 3 થી 6 ધોરણ સુધી, મધ્યમ કક્ષા (35-49 IQ) વધુમાં વધુ 1 કે 2 ધોરણ સુધી ભણી શકે છે, જ્યારે તીવ્ર અને અતિતીવ્ર કક્ષામાં વિદ્યાકીય કૌશલ્યનો અભાવ હોવાથી ભણી શકતા નથી."
+  },
+  {
+    "q": "પ્રશ્ન 50: મનોદુર્બળતાની કક્ષાઓના સંદર્ભમાં નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "મધ્યમ કક્ષાની વ્યક્તિ વાણી અને પ્રત્યાયનમાં માત્ર 'અં, હું' જેવા હુંકાર કરે છે.",
+      "તીવ્ર કક્ષાની વ્યક્તિ મિત્રો બનાવી શકે છે અને નોકરી ટકાવી શકે છે.",
+      "મનોદુર્બળતાની કક્ષા નક્કી કરવાનો આખરી નિર્ણય બુદ્ધિઆંક કરતાં, જીવનનાં કાર્યો કરવાનાં કૌશલ્યો ઉપર વધારે આધાર રાખે છે.",
+      "અમેરિકન સાયકીઆટ્રીક એસોસિએશન (APA) એ 1986માં મનોદુર્બળતાની વ્યાખ્યા આપી હતી."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 3 - બુદ્ધિ (પાના નં.: 40-41)",
+    "exp": "મંદતા હળવી, મધ્યમ કે તીવ્ર છે એ નક્કી કરવામાં બુદ્ધિઆંક કરતાં વ્યક્તિ રોજબરોજના જીવનમાં કેવું કાર્ય કરી શકે છે (જીવનનાં કાર્યો કરવાનાં કૌશલ્યો) તેના પર આખરી નિર્ણય આધાર રાખે છે. નોંધ: APA એ મનોદુર્બળતાની વ્યાખ્યા '1968' માં આપી હતી અને 'અં, હું' જેવા હુંકાર 'અતિતીવ્ર' કક્ષામાં જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: મનોવલણની વ્યાખ્યાઓ અને તેના પ્રણેતાઓના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (પ્રણેતા)  |  વિભાગ-બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. બી. કુપ્પુસ્વામી — (p) ચોક્કસ વસ્તુ, વ્યક્તિ કે પરિસ્થિતિ પ્રત્યેની માનસિક અને ચેતાકીય તત્પરતા\n2. ઓલપોર્ટ — (q) વિચારના બધા રૂપોના એક ખૂબ જ મૂળભૂત પક્ષનું પ્રતિનિધિત્વ\n3. બેરન અને બાયરન (1996) — (r) વિશિષ્ટ પ્રતિક્રિયા કરવાની સુસંગત, સંપાદિત અને આવેગયુક્ત પૂર્વવૃત્તિ\n4. ઈટો અને કેસિયોપ્પો (1999) — (s) સામાજિક વિશ્વના કોઈપણ તત્ત્વ પ્રત્યેની વિધાયક કે નિષેધક પ્રતિક્રિયા",
+    "options": [
+      "1-(r), 2-(p), 3-(s), 4-(q)",
+      "1-(p), 2-(r), 3-(s), 4-(q)",
+      "1-(r), 2-(s), 3-(p), 4-(q)",
+      "1-(r), 2-(p), 3-(q), 4-(s)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 44)",
+    "exp": "ભારતીય મનોવૈજ્ઞાનિક બી. કુપ્પુસ્વામીએ મનોવલણને આવેગયુક્ત પૂર્વવૃત્તિ, ઓલપોર્ટે માનસિક અને ચેતાકીય તત્પરતા, બેરન અને બાયરને વિધાયક કે નિષેધક પ્રતિક્રિયા તથા ઈટો અને કેસિયોપ્પોએ વિચારના મૂળભૂત પક્ષ તરીકે વ્યાખ્યાયિત કર્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: કયા મનોવૈજ્ઞાનિકના પ્રયોગોથી સાબિત થયું છે કે “મનોવલણોમાં સહેલાઈથી પરિવર્તન લાવી શકાતું નથી”?",
+    "options": [
+      "ઓલપોર્ટ",
+      "નોર્મન સિલ્વર",
+      "ન્યુકોમ્બ",
+      "સ્ટેમ્બર"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 45)",
+    "exp": "મનોવલણો મોટેભાગે કાયમી હોય છે; નોર્મન સિલ્વરના પ્રયોગોથી સાબિત થયું છે કે મનોવલણોમાં સહેલાઈથી પરિવર્તન લાવી શકાતું નથી, જોકે તેમાં પરિવર્તન કઠિન છે પણ અશક્ય નથી."
+  },
+  {
+    "q": "પ્રશ્ન 53: મનોવલણના સ્વરૂપ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "મનોવલણો જન્મજાત કે આનુવંશિક નથી પરંતુ સંપાદિત (શીખેલાં) છે.",
+      "મનોવલણમાં સામાન્યીકરણનો સિદ્ધાંત જોવા મળે છે, જેથી તે વ્યક્તિ તરફથી જૂથ તરફ વિકસે છે.",
+      "મનોવલણોમાં સામાન્ય રીતે તટસ્થતા (Neutrality) વિશેષ પ્રમાણમાં જોવા મળે છે.",
+      "મનોવલણો વ્યક્તિ પૂરતા મર્યાદિત રહેવાને બદલે જૂથવ્યાપી બની જાય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 45-46)",
+    "exp": "મનોવલણો હેતુપૂર્ણ અને લાગણીસભર હોય છે, જે વ્યક્તિને તરફેણ કે વિરોધી વર્તન કરવા પ્રેરે છે; સામાન્ય રીતે મનોવલણમાં 'તટસ્થતા જોવા મળતી નથી'."
+  },
+  {
+    "q": "પ્રશ્ન 54: કોઈ ગ્રાહક એક-બે વેપારીથી છેતરાયો હોય અને તે એવું વલણ અભિવ્યક્ત કરે કે “બધા વેપારીઓ લુચ્ચા હોય છે.” – આ ઉદાહરણ મનોવલણના કયા સ્વરૂપને સ્પષ્ટ કરે છે?",
+    "options": [
+      "મનોવલણો મોટેભાગે કાયમી હોય છે.",
+      "મનોવલણ વ્યક્તિ તરફથી જૂથ તરફ વિકસે છે.",
+      "મનોવલણો સંપાદિત હોય છે.",
+      "મનોવલણો હેતુપૂર્ણ હોય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 45)",
+    "exp": "વ્યક્તિગત અનુભવોને આધારે બંધાયેલું મનોવલણ સામાન્યીકરણના સિદ્ધાંત મુજબ ધીમે ધીમે તે વ્યક્તિના સમગ્ર જૂથ કે સમુદાય સાથે જોડાઈ જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 55: મનોવલણ સંપાદનની રીતો અને તેના ઉદાહરણો અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: ભૂખ્યા બાળકને માતા સ્તનપાન કરાવે છે અને અનેક અનુભવો પછી સ્તનપાનની ગેરહાજરીમાં પણ માતાની હાજરી માત્રથી બાળક આનંદ અનુભવે તે 'શાસ્ત્રીય અભિસંધાન'નું ઉદાહરણ છે.\nવિધાન 2: “મારો દીકરો બહુ ડાહ્યો છે” કહીને વખાણ કરવાથી બાળકમાં કામ કરવાનું વિધાયક વલણ વિકસે તે 'કારક અભિસંધાન'નું ઉદાહરણ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 46)",
+    "exp": "સ્તનપાન અને માતાની હાજરીનું જોડાણ શાસ્ત્રીય અભિસંધાન દ્વારા વિધાયક વલણ વિકસાવે છે, જ્યારે વખાણ કે પુરસ્કાર (પ્રબલન) દ્વારા વર્તન દૃઢ થવું એ કારક અભિસંધાનનું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: વર્ગખંડમાં કોઈ એક વિદ્યાર્થીનો જવાબ ખોટો પડતાં શિક્ષક તેને અપમાનિત કરે છે. તે જોઈને વર્ગના અન્ય બાળકો પણ જવાબ આપવાની ઈચ્છા ગુમાવી દે છે અને “ન બોલ્યામાં નવગુણ” માની લે છે. આ નિષેધક મનોવલણ કઈ રીતથી ઉદ્ભવ્યું ગણાય?",
+    "options": [
+      "શાસ્ત્રીય અભિસંધાન",
+      "કારક અભિસંધાન",
+      "નિરીક્ષણાત્મક શિક્ષણ",
+      "ઉદાહરણરૂપ વર્તન"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 47)",
+    "exp": "અન્ય બાળકનું અપમાન થતું અને તેના ચહેરા પરનો સંકોચ-ક્ષોભ જોઈને અન્ય બાળકોમાં નિરીક્ષણ દ્વારા નિષેધક વલણ ઉદ્ભવે છે, જે નિરીક્ષણાત્મક શિક્ષણનું ઉદાહરણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: મનોવલણ ઘડતર પર અસર કરતાં ઘટકોમાં 'કુટુંબ' ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "કુટુંબ એ સમાજનું નાનામાં નાનું અને વ્યક્તિ એ કુટુંબનું નાનામાં નાનું એકમ છે.",
+      "કુટુંબ એ સામાજિક શિક્ષણની માતૃસંસ્થા છે.",
+      "બાળક ઉપર કુટુંબના અન્ય સભ્યોની તુલનામાં માતાના વર્તનનો પ્રભાવ સૌથી વધુ પડે છે.",
+      "માનવબાળ પ્રાણીની સરખામણીમાં ખૂબ ઓછો સમય પરાવલંબી હોય છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 47-48)",
+    "exp": "માનવબાળ પ્રાણીની સરખામણીમાં 'વધુ લાંબો સમય' પરાવલંબી હોય છે અને તેની મોટાભાગની જરૂરિયાતો માતા દ્વારા સંતોષાતી હોવાથી માતા પ્રત્યે સહજ વિધાયક વલણ વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: મનોવલણ ઘડતરમાં 'સામાજિકરણ' અને 'સમૂહ માધ્યમો' ની ભૂમિકા અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: સામાજિકરણ એ જન્મથી મૃત્યુ સુધી ચાલતી આજીવન શિક્ષણ પ્રક્રિયા છે, જેમાં ભૌગોલિક વિસ્તાર મુજબ ખાવા-પીવાની ટેવોનો પણ સમાવેશ થાય છે.\nવિધાન 2: 20મી સદી એ ટેક્નોલોજીનો યુગ હતો અને 21મી સદી એ વિજ્ઞાનનો યુગ છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 48)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે પાઠ્યપુસ્તક મુજબ '20મી સદી એ વિજ્ઞાનનો યુગ' હતો અને '21મી સદી એ ટેક્નોલોજીનો યુગ' છે."
+  },
+  {
+    "q": "પ્રશ્ન 59: ઈ.સ. 1943માં કયા મનોવૈજ્ઞાનિકે 'જૂથ ચર્ચા' દ્વારા રૂઢિચુસ્ત કુટુંબની કોલેજની યુવતીઓનાં મનોવલણોમાં પરિવર્તન લાવવાના પ્રયોગોમાં સફળતા મેળવી હતી?",
+    "options": [
+      "ઓમ્બર્ન",
+      "ન્યુકોમ્બ",
+      "નોર્મન સિલ્વર",
+      "હાર્ડિંગ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 49)",
+    "exp": "ઈ.સ. 1943માં ન્યુકોમ્બે જૂથ ચર્ચાની પદ્ધતિ દ્વારા રૂઢિચુસ્ત કુટુંબની કોલેજની યુવતીઓનાં વલણોમાં પરિવર્તન લાવવાના પ્રયોગોમાં સફળતા મેળવી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 60: મનોવલણ પરિવર્તનની રીતોના સંદર્ભમાં નીચેનામાંથી કઈ જોડ અયોગ્ય છે?",
+    "options": [
+      "પ્રચાર – “સંતતિ એ સંપત્તિ” ના સ્થાને “અમે બે અમારા બે” સૂત્રનો ઉપયોગ",
+      "કાયદા – 2016ના સુપ્રીમ કોર્ટના ચુકાદા દ્વારા ધાર્મિક સ્થળોમાં સ્ત્રીઓને પ્રવેશની મંજૂરી",
+      "શિક્ષણ – ખેડૂતો દ્વારા જમીનનું ટેસ્ટિંગ કરાવી નવા પાકો તરફ વિધાયક વલણ વિકસાવવું",
+      "જૂથ ચર્ચા – 100-200 વર્ષ પહેલાં ભારતમાં 90% લોકો ખેતી પર નભતા હતા તેનો અભ્યાસ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 49-50)",
+    "exp": "100-200 વર્ષ પહેલાં ભારતમાં 90% લોકો ખેતી પર નભતા હતા તે સંદર્ભ 'પ્રચાર' (વસ્તી નિયંત્રણનાં સૂત્રો) સાથે જોડાયેલો છે, જૂથ ચર્ચા સાથે નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 61: મનોવલણ પરિવર્તનમાં અવરોધક બનતાં પરિબળોમાં નીચેનામાંથી કયા એક પરિબળનો સમાવેશ થતો નથી?",
+    "options": [
+      "મનોવલણની પ્રબળતા અને જટિલતા",
+      "મનોવલણની અગત્યતા",
+      "મનોવલણમાં આંતરસંબંધ અને ઉપયોગિતા",
+      "મનોવલણની અસ્થાયિતા"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 50)",
+    "exp": "મનોવલણ પરિવર્તનમાં અવરોધક બનતાં પાંચ પરિબળો છે: (1) પ્રબળતા, (2) જટિલતા, (3) અગત્યતા, (4) આંતરસંબંધ અને (5) ઉપયોગિતા. અસ્થાયિતાનો તેમાં સમાવેશ થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 62: કોઈ યુવક કે યુવતી પોતાની જ જ્ઞાતિ, ધર્મ અને સમાન સંસ્કૃતિ ધરાવતી વ્યક્તિના પ્રેમમાં હોય, ત્યારે તેમને પ્રેમલગ્ન વિરુદ્ધ સમજાવવામાં સફળતા મળતી નથી; કારણ કે લગ્ન પ્રત્યેનાં વલણો જ્ઞાતિ, ધર્મ અને સંસ્કૃતિ પ્રત્યેનાં વલણો સાથે જોડાયેલાં હોય છે. આ મનોવલણ પરિવર્તનનો કયો અવરોધ દર્શાવે છે?",
+    "options": [
+      "મનોવલણની ઉપયોગિતા",
+      "મનોવલણમાં આંતરસંબંધ",
+      "મનોવલણની અગત્યતા",
+      "મનોવલણની પ્રબળતા"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 51)",
+    "exp": "જ્યારે કેટલાંક મનોવલણો સ્વતંત્ર હોવાને બદલે એકબીજા સાથે આંતરસંબંધિત હોય, ત્યારે તે એકબીજાને દૃઢ કરે છે અને પરિવર્તનમાં અવરોધ ઊભો કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: જ્યારે કોઈ ધર્મગુરુ કે રાજકીય પક્ષ વિશે ઘણી સત્ય માહિતી તેમના વિરુદ્ધમાં જાહેર થાય, છતાં તેમના પ્રત્યેનું વિધાયક વલણ પદ, પ્રતિષ્ઠા કે મોભો અપાવતું હોવાથી વ્યક્તિ તે વલણ બદલવા તૈયાર ન થાય, ત્યારે કયું અવરોધક પરિબળ કામ કરે છે?",
+    "options": [
+      "મનોવલણની ઉપયોગિતા",
+      "મનોવલણની જટિલતા",
+      "મનોવલણની પ્રબળતા",
+      "મનોવલણમાં આંતરસંબંધ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 51)",
+    "exp": "જ્યારે કોઈ વલણ વ્યક્તિ માટે ખૂબ ઉપયોગી અને કારગત હોય (પદ, પ્રતિષ્ઠા, મોભો અપાવતું હોય), ત્યારે 'મનોવલણની ઉપયોગિતા' પરિવર્તનમાં અવરોધક બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: 'પૂર્વગ્રહ (Prejudice)' શબ્દની વ્યુત્પત્તિ અને અર્થ અંગે નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "ગ્રીક ભાષાના 'Praejudicium' પરથી, જેનો અર્થ 'ખોટો નિર્ણય' થાય છે.",
+      "લેટિન ભાષાના 'Praejudicium' પરથી, જેમાં 'Prae' એટલે પહેલાં અને 'Judicium' એટલે નિર્ણય ('પહેલાંથી લીધેલો નિર્ણય').",
+      "ફ્રેંચ ભાષાના 'Prejudice' પરથી, જેનો અર્થ 'આવેગાત્મક વિરોધ' થાય છે.",
+      "લેટિન ભાષાના 'Prejudica' પરથી, જેનો અર્થ 'સામાજિક ભેદભાવ' થાય છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 51)",
+    "exp": "અંગ્રેજી શબ્દ 'Prejudice' લેટિન ભાષાના 'Praejudicium' પરથી બનેલો છે, જેમાં 'prae' નો અર્થ 'પહેલાં' અને 'Judicium' નો અર્થ 'નિર્ણય' થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: “પૂર્વગ્રહ એટલે ઉતાવળિયો અને પૂરતી તપાસ વગર સ્વીકારવામાં આવેલો અભિપ્રાય કે નિર્ણય.” – આ વ્યાખ્યા કોણે આપી છે?",
+    "options": [
+      "ન્યુકોમ્બ",
+      "બી. કુપ્પુસ્વામી",
+      "ઓમ્બર્ન",
+      "ઓલપોર્ટ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 51)",
+    "exp": "ઓમ્બર્ને પૂર્વગ્રહને ઉતાવળિયા અને પૂરતી તપાસ વગર સ્વીકારવામાં આવેલા અભિપ્રાય કે નિર્ણય તરીકે વ્યાખ્યાયિત કર્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: પૂર્વગ્રહના સ્વરૂપમાં 'યૌક્તિકીકરણ' (Rationalization) ની ભૂમિકા શું છે?",
+    "options": [
+      "વ્યક્તિ પોતાના પૂર્વગ્રહયુક્ત વર્તનને સ્વીકારીને તેની માફી માંગે છે.",
+      "વ્યક્તિ પોતાના પૂર્વગ્રહયુક્ત વર્તન માટે સાચાં કારણોને બદલે લોકોને ગળે ઊતરે તેવાં સારાં કારણો રજૂ કરે છે.",
+      "વ્યક્તિ પૂર્વગ્રહને બૌદ્ધિક તપાસ અને પુરાવાઓ દ્વારા દૂર કરે છે.",
+      "વ્યક્તિ પોતાના પૂર્વગ્રહોને સમગ્ર જૂથમાં ફેલાવે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 52)",
+    "exp": "યૌક્તિકીકરણ એ એવી બચાવપ્રયુક્તિ છે કે જેમાં વ્યક્તિ પોતાના વર્તન માટે સાચાંને બદલે સારાં કારણો રજૂ કરવા પ્રેરાય છે, કારણ કે પૂર્વગ્રહનાં સાચાં કારણો વ્યક્તિ પાસે હોતાં નથી."
+  },
+  {
+    "q": "પ્રશ્ન 67: “અવકાશમાં ઉપગ્રહો છોડનાર માનવી પોતાના મનમાં રહેલા પૂર્વગ્રહોને છોડી શક્તો નથી.” – આ વિધાન અને પૂર્વગ્રહના સ્વરૂપ અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: નિષેધક વલણો ખૂબ લાંબો સમય ટકે ત્યારે તે પૂર્વગ્રહોમાં પરિવર્તિત થાય છે.\nવિધાન 2: પૂર્વગ્રહોમાંથી સંપૂર્ણ મુક્તિ મેળવી શકાય છે, પરંતુ તેને ઓછા કરી શકાતા નથી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 51, 53)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે પાઠ્યપુસ્તક મુજબ 'પૂર્વગ્રહોમાંથી સંપૂર્ણ મુક્તિ મેળવી શકાય નહીં, પરંતુ તેને આગળ વધતાં રોકી શકાય કે ઓછા કરી શકાય છે.'"
+  },
+  {
+    "q": "પ્રશ્ન 68: પૂર્વગ્રહ ઘટાડવામાં શિક્ષણના મહત્ત્વ અંગે સંશોધનો અને તેના સંશોધકોની કઈ જોડ સાચી છે?\n1. સ્ટેમ્બર – અશિક્ષિતો પરંપરાગત માન્યતાને વળગી રહે છે, માટે પરિવર્તન લાવવા શિક્ષણ જરૂરી છે.\n2. હાર્ડિંગ અને તેના સાથીઓ – પરિવર્તન લાવવા માટે શિક્ષણ સાથે સંદેશો આપનાર વ્યક્તિ અને જૂથની વિશ્વાસપાત્રતા વધુ અસરકારક નીવડે છે.",
+    "options": [
+      "માત્ર 1 સાચી છે.",
+      "માત્ર 2 સાચી છે.",
+      "1 અને 2 બંને સાચી છે.",
+      "1 અને 2 બંને ખોટી છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 53)",
+    "exp": "સ્ટેમ્બરના સંશોધનો શિક્ષણની જરૂરિયાત પર ભાર મૂકે છે, જ્યારે હાર્ડિંગ અને તેના સાથીઓના અભ્યાસો શિક્ષણ સાથે સંદેશો આપનારની વિશ્વાસપાત્રતાની અસરકારકતા દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: પૂર્વગ્રહ ઘટાડવાની રીતોમાં 'બોધાત્મક હસ્તક્ષેપ' (Cognitive Intervention) અંગે નીચેનામાંથી કયું ઉદાહરણ પાઠ્યપુસ્તકમાં આપવામાં આવ્યું છે?",
+    "options": [
+      "આંતરજ્ઞાતીય લગ્નોનો સ્વીકાર વધવો",
+      "સમૂહલગ્નોના પ્રયાસથી ખર્ચાળ લગ્નોમાં ઘટાડો અને ગામડાનાં બાળકો શાળામાં વોટરબેગ લઈ જતાં થયાં",
+      "'બેટી બચાવો, બેટી પઢાવો' કાર્યક્રમનું પ્રસારણ",
+      "જાતિ પરીક્ષણને કાનૂની ગુનો જાહેર કરવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 54)",
+    "exp": "બોધાત્મક હસ્તક્ષેપ હેઠળ સમૂહલગ્નો દ્વારા ખર્ચાળ લગ્નોમાં ઘટાડો અને સ્વાસ્થ્ય સભાનતાની ચર્ચાઓ-જાહેરાતોથી ગામડાનાં બાળકોમાં શાળાએ વોટરબેગ લઈ જવાની આદતનાં ઉદાહરણો આપવામાં આવ્યાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: માનવવર્તનનાં મુખ્ય ત્રણ સ્વરૂપો કયાં છે, જેનો ઉલ્લેખ 'બોધાત્મક હસ્તક્ષેપ'ના સંદર્ભમાં કરવામાં આવ્યો છે?",
+    "options": [
+      "સાહજિક, શિક્ષિત અને અનુકરણાત્મક",
+      "ચેતન, અર્ધચેતન અને અચેતન",
+      "બોધાત્મક, ભાવાત્મક અને ક્રિયાત્મક",
+      "વિધાયક, નિષેધક અને તટસ્થ"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 54)",
+    "exp": "માનવવર્તનનાં મુખ્યત્વે ત્રણ સ્વરૂપો જોવા મળે છે – બોધાત્મક, ભાવાત્મક અને ક્રિયાત્મક."
+  },
+  {
+    "q": "પ્રશ્ન 71: પૂર્વગ્રહ ઘટાડવા માટે 'કાયદા દ્વારા' લેવાયેલાં પગલાંઓમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. સ્ત્રીભ્રૂણ હત્યા રોકવા જાતિ પરીક્ષણને કાનૂની ગુનો ગણવો\n2. સ્ત્રીને સક્ષમ અને પગભર બનાવવા માટે \"સમાન વારસાઈ ધારો\"\n3. કાર્યસ્થળે સલામતી માટે જાતીય સતામણી સામેનું કાનૂની રક્ષણ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 54)",
+    "exp": "જાતિ પરીક્ષણ પર પ્રતિબંધ, સમાન વારસાઈ ધારો અને જાતીય સતામણી સામેનું કાનૂની રક્ષણ – આ ત્રણેય કાયદાકીય પગલાં પૂર્વગ્રહ ઘટાડવાની રીત તરીકે દર્શાવવામાં આવ્યાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: પૂર્વગ્રહ ઘટાડવાની રીતો અને તેના મુખ્ય ઉદ્દેશ્યનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (રીત)  |  વિભાગ-બ (મુખ્ય બાબત/ઉદાહરણ)\n1. સામાજિકરણ — (p) શંકાના સ્થાને શ્રદ્ધા અને ભયને બદલે વિશ્વાસયુક્ત સંબંધો વધારવા\n2. આંતર-જૂથ સંપર્ક — (q) આંતરજ્ઞાતીય લગ્ન સ્વીકારવાનું વલણ વધવું\n3. પુનઃ વર્ગીકરણ — (r) “દીકરી બે ઘર તારે”, “દીકરી દેવો ભવ” જેવાં વિધાનો\n4. વિધાયક વલણો વિકસાવવા — (s) સ્વ-જૂથ અને પર-જૂથ ભાવનામાંથી જન્મતા વૈમનસ્યને દૂર કરવું",
+    "options": [
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(p), 2-(q), 3-(s), 4-(r)",
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(q), 2-(p), 3-(r), 4-(s)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 53-54)",
+    "exp": "સામાજિકરણથી આંતરજ્ઞાતીય લગ્નોનો સ્વીકાર, આંતર-જૂથ સંપર્કથી શ્રદ્ધા-વિશ્વાસ, પુનઃ વર્ગીકરણથી સ્વ-જૂથ અને પર-જૂથના ભેદભાવમાં ઘટાડો અને વિધાયક વલણો વિકસાવવાથી દીકરીઓ પ્રત્યેના પૂર્વગ્રહોમાં ઘટાડો થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: મનોવલણ ઘડતરમાં 'ઉદાહરણરૂપ (આદર્શ કે નમૂનારૂપ) વર્તન' ના ઉદાહરણ તરીકે પાઠ્યપુસ્તકમાં કઈ વ્યક્તિઓનો ઉલ્લેખ કરવામાં આવ્યો છે?",
+    "options": [
+      "ગાંધીજી, સ્વામી વિવેકાનંદ, ડૉ. અબ્દુલ કલામ, કલ્પના ચાવલા",
+      "જયપ્રકાશ નારાયણ, અમિતાભ બચ્ચન, ડૉ. આંબેડકર, ઈન્દિરા ગાંધી",
+      "માત્ર (A)",
+      "(A) અને (B) બંને"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 47)",
+    "exp": "પાઠ્યપુસ્તકમાં આદર્શ/નમૂનારૂપ વ્યક્તિઓ તરીકે ગાંધીજી, જયપ્રકાશ નારાયણ, સ્વામી વિવેકાનંદ, ડૉ. અબ્દુલ કલામ, અમિતાભ બચ્ચન, ડૉ. આંબેડકર, ઈન્દિરા ગાંધી અને કલ્પના ચાવલાનો ઉલ્લેખ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: 'પૂર્વગ્રહ વિષચક્ર જન્માવે છે' – આ વિધાનનો સાચો અર્થ શું થાય?",
+    "options": [
+      "પૂર્વગ્રહ ધરાવતી વ્યક્તિ હંમેશા બીમાર રહે છે.",
+      "પૂર્વગ્રહ આવેગાત્મક નિષેધક લાગણી અને આક્રમકતા સાથે સંકળાયેલા હોવાથી એક પક્ષનો અન્યાય સામા પક્ષમાં વધુ તીવ્ર આક્રમક પ્રતિક્રિયા જન્માવે છે.",
+      "પૂર્વગ્રહ એક પેઢીમાંથી બીજી પેઢીમાં વારસાગત રીતે જ આવે છે.",
+      "પૂર્વગ્રહ માત્ર બૌદ્ધિક સ્તરે જ અસર કરે છે, વર્તન પર નહીં."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 52)",
+    "exp": "પૂર્વગ્રહને કારણે એક પક્ષ તરફથી કરવામાં આવતો અન્યાય કે આક્રમણ સામા પક્ષને વધુ તીવ્ર આક્રમક પ્રતિક્રિયા જન્માવવા પ્રેરે છે, જેનાથી રમખાણો અને ભારેલા અગ્નિ જેવી સ્થિતિ (વિષચક્ર) સર્જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: સ્વાધ્યાય અને વિષયવસ્તુ મુજબ, માનવીનાં વિચાર, વાણી, વર્તન, રીતભાત અને જીવનશૈલી પર સૌથી વધુ અસર કરતું પરિબળ કયું છે?",
+    "options": [
+      "આનુવંશિકતા",
+      "સમૂહ માધ્યમો",
+      "સરકાર",
+      "કાયદો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 4 - મનોવલણ અને પૂર્વગ્રહ (પાના નં.: 55)",
+    "exp": "સ્વાધ્યાય (વિભાગ-A, પ્રશ્ન 1) મુજબ આધુનિક સમયમાં સમૂહ માધ્યમો માનવીનાં વિચાર, વાણી, વર્તન, રીતભાત અને જીવનશૈલી પર સૌથી વધુ અસર કરતું પરિબળ છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: 'સાધારણ (Normal)' અને 'અસાધારણ (Abnormal)' શબ્દોની વ્યુત્પત્તિ અને અર્થ અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "'Normal' શબ્દ લેટિન ભાષાના 'Norma' શબ્દ પરથી બનેલો છે, જેનો અર્થ 'સુથારની માપપટ્ટી' થાય છે.",
+      "'Abnormal' શબ્દમાં 'AB' નો અર્થ 'નાથી દૂર (away from)' અને 'Normal' નો અર્થ 'સાધારણ' થાય છે.",
+      "સાધારણતા અને અસાધારણતાનાં ધોરણો ઉંમર, જાતિ કે સંસ્કૃતિથી સંપૂર્ણપણે સ્વતંત્ર હોય છે.",
+      "સામાજિક ધોરણો અને અપેક્ષાઓથી વિપરીત તથા કુસમાયોજિત વર્તનને અસાધારણ વર્તન કહેવાય છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 75)",
+    "exp": "સાધારણતા અને અસાધારણતા સાથે ઉંમર, જાતિ, સંસ્કૃતિ વગેરે પરિબળો ગાઢ રીતે સંકળાયેલાં છે; તેથી જ નાના બાળકની પેન્સિલ ખોવાતાં રડવું એ સાધારણ છે, પણ પચ્ચીસ વર્ષની વ્યક્તિ આવું વર્તન કરે તો તે અસાધારણ ગણાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: અસાધારણ વર્તનની વ્યાખ્યાઓ અને તેના પ્રણેતાઓના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (મનોવૈજ્ઞાનિક)  |  વિભાગ-બ (વ્યાખ્યાનો મુખ્ય સાર)\n1. વોરેન — (p) નૈતિક મૂલ્યોનું ધોરણ નીચું હોય તેવું વર્તન અસાધારણ છે.\n2. જેમ્સ પેજ — (q) સામાન્ય, પર્યાપ્ત કે નમૂના સ્વરૂપથી એટલી હદે ભિન્ન કે જેને સામાન્ય વર્તનના પ્રતિનિધિ તરીકે ન દર્શાવી શકાય.\n3. જે.સી. કોલમેન — (r) ખામીભર્યું, અણધાર્યું, અતાર્કિક, વિધ્વંસક અને હાનિકારક વર્તન, જે વ્યક્તિ પોતે અને બીજાને મુશ્કેલીમાં મૂકે છે.",
+    "options": [
+      "1-(q), 2-(r), 3-(p)",
+      "1-(r), 2-(q), 3-(p)",
+      "1-(q), 2-(p), 3-(r)",
+      "1-(p), 2-(r), 3-(q)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 75)",
+    "exp": "વોરેને અસાધારણ વર્તનને નમૂના સ્વરૂપથી ભિન્ન, જેમ્સ પેજે ખામીભર્યું-વિધ્વંસક અને હાનિકારક, જ્યારે જે.સી. કોલમેને નીચા નૈતિક મૂલ્યો ધરાવતા વર્તન તરીકે વ્યાખ્યાયિત કર્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: આંતરરાષ્ટ્રીય ક્ષેત્રે માનસિક રોગોના વર્ગીકરણ સાથે સંકળાયેલી સંસ્થાઓ અને વર્ગીકરણો અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: WHO (વિશ્વ આરોગ્ય સંસ્થા) દ્વારા પ્રકાશિત વર્ગીકરણને ICD (International Classification of Disease) કહેવામાં આવે છે, જેમાં ઈ.સ. 1948માં પ્રકાશિત ICD-6 માં સૌપ્રથમવાર શારીરિક રોગોની સાથે માનસિક રોગોનું ઔપચારિક વર્ગીકરણ કરવામાં આવ્યું.\nવિધાન 2: APA (અમેરિકન સાયકીઆટ્રીક એસોસિએશન) દ્વારા પ્રકાશિત વર્ગીકરણને DSM (Diagnostic and Statistical Manual of Mental Disorders) કહેવામાં આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 76)",
+    "exp": "આંતરરાષ્ટ્રીય સ્તરે WHO દ્વારા ICD (1948માં ICD-6 થી માનસિક રોગોનો સમાવેશ) અને APA દ્વારા DSM પ્રકાશિત કરવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: APA દ્વારા પ્રકાશિત DSM નાં વિવિધ સંસ્કરણો અને તેના પ્રકાશન વર્ષ અંગે નીચેનામાંથી કઈ જોડ ખોટી છે?",
+    "options": [
+      "DSM-I : 1952",
+      "DSM-III : 1980",
+      "DSM-IV-TR : 2000",
+      "DSM-V : 2010"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 76)",
+    "exp": "DSM નાં પ્રકાશન વર્ષો મુજબ DSM-I (1952), DSM-II (1968), DSM-III (1980), DSM-III-R (1987), DSM-IV (1994), DSM-IV-TR (2000) અને DSM-V નું પ્રકાશન વર્ષ '2013' છે (2010 નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 80: DSM-V ના વર્ગીકરણમાં 'ચેતાતંતુનાં વિકાસ સાથે સંબંધિત વિકૃતિઓ (Neurodevelopment Disorders)' માં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. આત્મરતિ (ઓટિઝમ) ની વિકૃતિ\n2. ધ્યાન કેન્દ્રીકરણની અક્ષમતા, અતિ ક્રિયાશીલતાની વિકૃતિ (ADHD)\n3. બૌદ્ધિક અક્ષમતાઓ અને સંદેશાવ્યવહારની વિકૃતિ\n4. શીખવાની (શિક્ષણની) વિશિષ્ટ વિકૃતિ",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 1, 2 અને 4",
+      "માત્ર 2, 3 અને 4",
+      "1, 2, 3 અને 4 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 76)",
+    "exp": "DSM-V માં ચેતાતંતુના વિકાસ સાથે સંબંધિત વિકૃતિઓમાં બૌદ્ધિક અક્ષમતા, સંદેશાવ્યવહાર, આત્મરતિ (ઓટિઝમ), ADHD, શીખવાની વિશિષ્ટ વિકૃતિ અને કાર્યાત્મક વિકૃતિઓનો સમાવેશ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: અસાધારણ વર્તનના 'જૈવીય પ્રતિમાન (Biological Model)' અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "આ પ્રતિમાનને 'મેડિકલ પ્રતિમાન' અથવા 'રોગ પ્રતિમાન' તરીકે પણ ઓળખવામાં આવે છે.",
+      "આ પ્રતિમાન કેન્દ્રિય ચેતાતંત્ર (મગજ અને કરોડરજ્જુ), વારસો, મસ્તિષ્ક વિકાર અને જૈવ રાસાયણિક અસમતુલાને જવાબદાર માને છે.",
+      "જ્યારે ચેતાપ્રવાહ એક ચેતાકોષમાંથી બીજા ચેતાકોષમાં વહન થવાને બદલે તે જ ચેતાકોષમાં પાછો ફરે તેને 'Reuptake' પ્રક્રિયા કહે છે.",
+      "આ પ્રતિમાન અનુસાર 'Reuptake' પ્રક્રિયાથી વ્યક્તિનું વર્તન વધુ સાધારણ અને સંતુલિત બને છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 78, 84)",
+    "exp": "'Reuptake' પ્રક્રિયાને પરિણામે અસાધારણ વર્તન (ખાસ કરીને ખિન્નતા જેવી મનોવિકૃતિ) ઉત્પન્ન થતું જોવા મળે છે, સાધારણ વર્તન નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 82: અસાધારણ વર્તનમાં વારસાની ભૂમિકા અંગેના સંશોધનો અને સંશોધકોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (સંશોધક)  |  વિભાગ-બ (સંશોધનનું તારણ)\n1. નીલ અને ઓલ્ટામાન્નસ (1980) — (p) ખિન્નતા (ડિપ્રેશન) માં વારસાના ઘટકનું મહત્ત્વ સાબિત કર્યું.\n2. પેકેલ (1982) — (q) સ્કિઝોફ્રેનિયા (છિન્ન મનોવિકૃતિ) એ વારસાગત જોવા મળતી વર્તન વિકૃતિ છે.\n3. કોલમેન — (r) એકદળ જોડિયાં બાળકોમાં એકને ઉન્મત્ત ખિન્ન મનોવિકૃતિ હોય તો બીજાને થવાની સંભાવના 95.7% છે.",
+    "options": [
+      "1-(p), 2-(q), 3-(r)",
+      "1-(q), 2-(p), 3-(r)",
+      "1-(q), 2-(r), 3-(p)",
+      "1-(r), 2-(p), 3-(q)"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 78)",
+    "exp": "નીલ અને ઓલ્ટામાન્નસે (1980) સ્કિઝોફ્રેનિયા પર, પેકેલે (1982) ખિન્નતા પર અને કોલમેને લોહીની સગાઈ તથા એકદળ જોડિયાં બાળકોમાં ઉન્મત્ત ખિન્ન મનોવિકૃતિ (95.7% સંભાવના) પર અભ્યાસ કર્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 83: જૈવીય પ્રતિમાનમાં અંતઃસ્ત્રાવો અને ચયાપચયની ખામીને કારણે થતી મનોદુર્બળતાઓ અંગે કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "થાયરોક્સિનની ઊણપ – ક્રેટિનિઝમ; મગજની ચયાપચયની પ્રક્રિયામાં અવરોધ – ફેનિલપ્યુરિવિક ઓલિગ્રોફેનિયા",
+      "થાયરોક્સિનની ઊણપ – ફેનિલપ્યુરિવિક ઓલિગ્રોફેનિયા; એડ્રિનલ ગ્રંથિની ઊણપ – ક્રેટિનિઝમ",
+      "જનીન તત્ત્વની જોડ નં. 12, 16 અને 20 – અંતઃસ્ત્રાવ ગ્રંથિઓ પર અસર",
+      "અલઝાઈમરનો રોગ – માત્ર ઉત્સેચકોની ખામીને કારણે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 78)",
+    "exp": "કંઠગ્રંથિના થાયરોક્સિનની ઊણપથી 'ક્રેટિનિઝમ' અને મગજમાં ચાલતી ચયાપચયની પ્રક્રિયામાં અવરોધ આવતાં આંચકી તથા 'ફેનિલપ્યુરિવિક ઓલિગ્રોફેનિયા' નામની મનોદુર્બળતા જોવા મળે છે. (નોંધ: ખામીયુક્ત જનીનતત્ત્વની જોડ નં. 13, 17 અને 21 છે)."
+  },
+  {
+    "q": "પ્રશ્ન 84: શરીરમાં રહેલા જૈવ રસાયણો (Neurotransmitters) ની અનિયમિતતા અને તેનાથી ઉદ્ભવતી મનોવિકૃતિઓના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (જૈવ રસાયણ)  |  વિભાગ-બ (સંબંધિત મનોવિકૃતિ)\n1. ડોપામાઈન (Dopamine) — (p) ચિંતાની વિકૃતિ\n2. ગાબા (GABA) — (q) છિન્ન મનોવિકૃતિ (સ્કિઝોફ્રેનિયા)\n3. સીરોટોનીન (Serotonin) — (r) આઘાતજન્ય અને આવેગાત્મક વિકૃતિઓ",
+    "options": [
+      "1-(q), 2-(r), 3-(p)",
+      "1-(p), 2-(q), 3-(r)",
+      "1-(q), 2-(p), 3-(r)",
+      "1-(r), 2-(p), 3-(q)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 78, 84)",
+    "exp": "ડોપામાઈનની માત્રામાં ફેરફારથી છિન્ન મનોવિકૃતિ (સ્કિઝોફ્રેનિયા), GABA ના પ્રમાણમાં ફેરફારથી ચિંતાની વિકૃતિ અને સીરોટોનીનની અસમતુલાથી ખિન્નતા, આઘાતજન્ય તથા આવેગાત્મક વિકૃતિઓ ઉદ્ભવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: ડૉ. સિગ્મંડ ફ્રોઈડના 'મનોવિશ્લેષણાત્મક પ્રતિમાન' માં 'ચેતન અને અચેતન મન' અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: ફ્રોઈડે ચેતન અને અચેતન મનની સમજૂતી સમુદ્રમાં તરતી હિમશિલાના ઉદાહરણથી આપી છે, જેમાં પાણીની અંદર રહેલા મોટા ભાગને 'અચેતન મન' અને ઉપર તરતા થોડાક ભાગને 'ચેતન મન' તરીકે દર્શાવ્યું છે.\nવિધાન 2: અચેતન મનમાં રહેલી દમિત લાગણીઓ ક્યારેક લખવા-બોલવાની ભૂલ, સ્વપ્ન કે નખ કરડવા જેવા અસાધારણ વર્તન સ્વરૂપે બહાર આવે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 79)",
+    "exp": "ફ્રોઈડના હિમશિલાના ઉદાહરણમાં પાણીની બહારનો થોડો ભાગ ચેતન મન અને અંદરનો મોટો ભાગ અચેતન મન છે, જેની દમિત વિગતો ભૂલો, સ્વપ્નો કે અસાધારણ વર્તન રૂપે બહાર આવવાનો પ્રયાસ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: ફ્રોઈડે દર્શાવેલા વ્યક્તિત્વનાં ત્રણ ઉપતંત્રો (નિમ્ન અહમ્, અહમ્ અને ઉપરી અહમ્) અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "નિમ્ન અહમ્ (ID) સુખના સિદ્ધાંતને અનુસરે છે, જેમાં જીવનની મૂળવૃત્તિ (લીબીડો/ઈરોસ) અને મૃત્યુની મૂળવૃત્તિ રહેલી છે.",
+      "આક્રમકતાની આંતરિક દિશા (સ્વપીડન) નું આત્યંતિક સ્વરૂપ આત્મહત્યા છે.",
+      "અહમ્ (Ego) એ વાસ્તવિકતાના સિદ્ધાંત સાથે સંકળાયેલ નિયંત્રક ઉપતંત્ર છે.",
+      "ઉપરી અહમ્ (Super Ego) એ મૂળવૃત્તિ અને સુખના સિદ્ધાંત સાથે સંકળાયેલ છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 79-80)",
+    "exp": "ઉપરી અહમ્ (Super Ego) એ સુખના સિદ્ધાંત સાથે નહીં, પરંતુ 'આદર્શવાદ અને નૈતિકતા' તથા સમાજ-સંસ્કૃતિના નિયમો સાથે સંકળાયેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: ફ્રોઈડે દર્શાવેલી 'મનોજાતીય વિકાસની પાંચ અવસ્થાઓ' અને તેના સમયગાળા/લાક્ષણિકતાનાં યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (અવસ્થા)  |  વિભાગ-બ (સમયગાળો અને મુખ્ય લક્ષણ)\n1. મુખાવસ્થા — (p) 3 થી 6 વર્ષ; ઓડિપસ ગ્રંથિ અને ઈલેક્ટ્રા ગ્રંથિ\n2. ગુદાવસ્થા — (q) જન્મથી 2 વર્ષ; અવરોધથી પુખ્તાવસ્થામાં ધૂમ્રપાન/મદ્યપાનની વિકૃતિ\n3. લિંગ અવસ્થા — (r) 6 થી 12 વર્ષ; નવાં કૌશલ્યો અને આવડતોના વિકાસમાં રસ\n4. સુષુપ્તાવસ્થા — (s) 2 થી 3 વર્ષ; ટોયલેટ ટ્રેનિંગ અને નિયંત્રણનો પ્રથમ અનુભવ",
+    "options": [
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(s), 2-(q), 3-(p), 4-(r)",
+      "1-(q), 2-(s), 3-(r), 4-(p)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 80)",
+    "exp": "મુખાવસ્થા (0-2 વર્ષ), ગુદાવસ્થા (2-3 વર્ષ), લિંગ અવસ્થા (3-6 વર્ષ; પુરુષ બાળકમાં માતા પ્રત્યે ઓડિપસ અને સ્ત્રી બાળકમાં પિતા પ્રત્યે ઈલેક્ટ્રા ગ્રંથિ), સુષુપ્તાવસ્થા (6-12 વર્ષ) અને જનનેન્દ્રિયાવસ્થા (13 વર્ષથી આજીવન)."
+  },
+  {
+    "q": "પ્રશ્ન 88: ફ્રોઈડે દર્શાવેલા ચિંતાના ત્રણ પ્રકારોમાં 'ઉપરી અહમ્ ને ઠેસ પહોંચે તેવું કોઈપણ કાર્ય કરતી વખતે ઉદ્ભવતી ચિંતા' કયા નામે ઓળખાય છે?",
+    "options": [
+      "વાસ્તવિક / વસ્તુલક્ષી ચિંતા (Realistic Anxiety)",
+      "મનોવિક્ષિપ્ત ચિંતા (Neurotic Anxiety)",
+      "નૈતિક ચિંતા (Moral Anxiety)",
+      "સામાન્યીકૃત ચિંતા (Generalized Anxiety)"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 80-81)",
+    "exp": "ફ્રોઈડે ત્રણ ચિંતા દર્શાવી છે: બાહ્ય પડકારો સાથે વાસ્તવિક ચિંતા, માનસિક સંઘર્ષો અને અસલામતી સાથે મનોવિક્ષિપ્ત ચિંતા અને ઉપરી અહમ્ ને ઠેસ પહોંચે ત્યારે 'નૈતિક ચિંતા' ઉદ્ભવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: 'વાર્તનિક પ્રતિમાન (Behaviouristic Model)' અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: વર્તનવાદના પ્રણેતા જે.બી. વૉટ્સનના મતે વ્યક્તિના વર્તનની સાધારણતા અને અસાધારણતાનો આધાર વાતાવરણ પર રહેલો છે.\nવિધાન 2: ભય અને ચિંતાની વિકૃતિઓની સારવાર માટે શાસ્ત્રીય અભિસંધાનની 'વિલોપન' પદ્ધતિનો ઉપયોગ કરવામાં આવે છે.\nવિધાન 3: સ્કિનરે પ્રબલન અને ઉદીપક વિભેદનની સંકલ્પના દ્વારા સમાયોજિત અને કુસમાયોજિત વર્તનને સમજાવવાનો પ્રયત્ન કર્યો છે.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 81-82)",
+    "exp": "વાર્તનિક પ્રતિમાન જે.બી. વૉટ્સન દ્વારા દર્શાવવામાં આવ્યું છે, જેમાં પાવલોવની વિલોપન પદ્ધતિનો ઉપયોગ ભય-ચિંતાની સારવારમાં થાય છે અને સ્કિનરે પ્રબલન તથા ઉદીપક વિભેદનથી કુસમાયોજન સમજાવ્યું છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: 'બોધાત્મક પ્રતિમાન (Cognitive Model)' માં માહિતી પ્રક્રિયાકરણ (Information Processing) ના મુખ્ય ત્રણ ઘટકો કયા છે, અને ઈનગ્રામ (1999) નું તારણ શું છે?",
+    "options": [
+      "ધ્યાન, સ્મૃતિ અને સંગઠનાત્મક સંરચનાઓ; ઈનગ્રામના મતે ઘણી સૌમ્ય મનોવિકૃતિઓનાં મૂળમાં પસંદગીયુક્ત ધ્યાનનો વિક્ષેપ જવાબદાર છે.",
+      "સંવેદન, પ્રત્યક્ષીકરણ અને ધ્યાન; ઈનગ્રામના મતે સ્મૃતિનો લોપ સૌમ્ય મનોવિકૃતિનું કારણ છે.",
+      "ધ્યાન, પ્રબલન અને વિલોપન; ઈનગ્રામના મતે આંતરિક આરોપણ મુખ્ય કારણ છે.",
+      "વિચારણા, કલ્પના અને આયોજન; ઈનગ્રામના મતે અચેતન મન જવાબદાર છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 82)",
+    "exp": "બોધાત્મક પ્રતિમાનના માહિતી પ્રક્રિયાકરણમાં ધ્યાન, સ્મૃતિ અને સંગઠનાત્મક સંરચનાઓ એમ ત્રણ ઘટકો છે. ઈનગ્રામે (1999) દર્શાવ્યું કે ઘણી સૌમ્ય મનોવિકૃતિઓ (Neurotic Disorders) નાં મૂળમાં પસંદગીયુક્ત ધ્યાનનો વિક્ષેપ જવાબદાર હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: બોધાત્મક પ્રતિમાનમાં 'આલ્બર્ટ બાન્ડુરા' અને 'આરોપણના સિદ્ધાંત' અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "આલ્બર્ટ બાન્ડુરાએ 1974માં વ્યક્તિમાં રહેલ સ્વ-દિશાસૂચનની ક્ષમતાનો અભ્યાસ કરી 'સ્વ-ક્ષમતા (Self-Efficacy)' નો સિદ્ધાંત દર્શાવ્યો છે.",
+      "આત્મહત્યા કરનાર વ્યક્તિઓમાં નિષેધાત્મક 'સ્વ-સ્કીમા (Self Schema)' નું પ્રમાણ વધુ જોવા મળે છે.",
+      "આરોપણના સિદ્ધાંત મુજબ આક્રમકતા અને સમાજવિરોધી વર્તન માટે 'આંતરિક આરોપણ' જવાબદાર છે.",
+      "આરોપણના સિદ્ધાંત મુજબ ચિંતા, ખિન્નતા અને આત્મહત્યા જેવી વિકૃતિઓ માટે 'આંતરિક આરોપણ' જવાબદાર છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 83)",
+    "exp": "આરોપણના સિદ્ધાંત (Attribution Theory) મુજબ આક્રમકતા અને સમાજવિરોધી જેવા અસાધારણ વર્તન માટે 'બાહ્ય આરોપણ' જવાબદાર હોય છે, જ્યારે ચિંતા, ખિન્નતા અને આત્મહત્યા માટે 'આંતરિક આરોપણ' જવાબદાર હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: અસાધારણ વર્તનનાં 'જૈવીય કારણો' અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: એક ચેતાકોષ અને બીજા ચેતાકોષ વચ્ચે રહેલી જગ્યાને 'ચેતાપગમ' કહે છે, અને Reuptake પ્રક્રિયાને મંદ કરવા માટે ખિન્નતા વિરોધી દવાઓ જેવી કે 'Proz C' નો ઉપયોગ થાય છે.\nવિધાન 2: અચાનક આવી પડતી જોખમરૂપ આઘાતજનક પરિસ્થિતિમાં 'નોરએપીનેફ્રીન' અગત્યની ભૂમિકા ભજવે છે, જેની અસમતુલાથી આઘાતજન્ય મનોવિકૃતિ, હૃદયરોગ કે પક્ષાઘાતની સંભાવના વધે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 83-84)",
+    "exp": "બંને વિધાનો પાઠ્યપુસ્તક મુજબ સંપૂર્ણ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: શરીરમાં રંગસૂત્રો, ગ્રંથિઓ અને શારીરિક બાંધા (ક્રેત્શ્મર અને શેલ્ડન) ને કારણે થતી વિકૃતિઓ અંગે નીચેનામાંથી કઈ જોડ ખોટી છે?",
+    "options": [
+      "46 ને બદલે 47 રંગસૂત્રો – Down Syndrome નામની મનોદુર્બળતા",
+      "સ્વાદુપિંડ ગ્રંથિની અનિયમિતતા – મધુપ્રમેહ (ડાયાબિટીસ)",
+      "મેદપ્રધાન વ્યક્તિઓ – ઉન્મત્ત ખિન્ન પ્રકારની મનોવિકૃતિની વધુ સંભાવના",
+      "સ્નાયુપ્રધાન વ્યક્તિઓ – ચિંતાની વિકૃતિની વધુ સંભાવના"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 84)",
+    "exp": "ક્રેત્શ્મર અને શેલ્ડનના વર્ગીકરણ મુજબ મેદપ્રધાન વ્યક્તિઓમાં ઉન્મત્ત ખિન્ન પ્રકારની અને 'સ્નાયુપ્રધાન વ્યક્તિઓમાં છિન્ન મનોવિકૃતિ' થવાની સંભાવના વધુ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: 'સામાજિક-સાંસ્કૃતિક કારણો' ના સંદર્ભમાં માર્ગારેટ મીડ અને બેનરના અભ્યાસો અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+    "options": [
+      "માર્ગારેટ મીડે ન્યૂ ગિનિયાની એરાપેરા (ઉદાર, શાંત, સહકારયુક્ત) અને મુંડાગુમોરા (શંકાશીલ, ઝઘડાખોર, દ્વેષપૂર્ણ) આદિવાસી પ્રજાતિઓ પર અભ્યાસ કર્યો હતો.",
+      "બેનરના અભ્યાસો દર્શાવે છે કે લાંબા સમયની બેરોજગારીને પરિણામે ખિન્નતા, હતાશા, આક્રમકતા અને સમાજવિરોધી માનસિકતા જોવા મળે છે.",
+      "પૂર્વની સંસ્કૃતિની તુલનામાં પશ્ચિમી સંસ્કૃતિને અનુસરનારાઓમાં અસાધારણ વર્તનનું પ્રમાણ વધુ છે.",
+      "ઉપરોક્ત (A), (B) અને (C) ત્રણેય સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 85)",
+    "exp": "માર્ગારેટ મીડનો ન્યૂ ગિનિયાની બે પ્રજાતિઓનો અભ્યાસ, બેનરનો બેરોજગારી અંગેનો અભ્યાસ અને પશ્ચિમી સંસ્કૃતિમાં અસાધારણ વર્તનનું વધુ પ્રમાણ – ત્રણેય વિધાનો સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: 'સામાન્યીકૃત વિકૃત ચિંતા (General Anxiety Disorder - GAD)' અંગે નીચેનામાંથી કઈ વિગત અયોગ્ય છે?",
+    "options": [
+      "આને 'મુક્ત રીતે તરતી ચિંતા' તરીકે પણ ઓળખવામાં આવે છે.",
+      "યુ.એસ. ના જનસમુદાયમાં આનું પ્રમાણ 3.1% (આશરે 68 મિલિયન યુવાનો) છે અને સ્ત્રીઓ કરતાં પુરુષોમાં આ વિકૃતિનું પ્રમાણ વધુ જોવા મળે છે.",
+      "DSM-V મુજબ કોઈપણ વિષય, ઘટના કે પ્રવૃત્તિ વિશેની આત્યંતિક ચિંતાની સતત 6 મહિના સુધી હાજરી હોવી જોઈએ.",
+      "DSM-V મુજબ દર્શાવેલા શારીરિક અથવા બોધાત્મક લક્ષણોમાંથી કોઈપણ ત્રણની હાજરી હોવી જરૂરી છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 86)",
+    "exp": "સામાન્યીકૃત વિકૃત ચિંતા (GAD) નું પ્રમાણ 'પુરુષોની સરખામણીમાં સ્ત્રીઓમાં વધુ' જોવા મળે છે (સ્ત્રીઓ કરતાં પુરુષોમાં નહીં)."
+  },
+  {
+    "q": "પ્રશ્ન 96: DSM-V માં 'વિકૃત ભય (Phobia)' સાથે સંકળાયેલી મુખ્ય ત્રણ વિકૃતિઓમાં નીચેનામાંથી કોનો સમાવેશ થતો નથી?",
+    "options": [
+      "વિશિષ્ટ ભય (Specific Phobia)",
+      "સામાજિક ભય (Social Phobia)",
+      "ખુલ્લી જગ્યાનો ભય (Agoraphobia)",
+      "અનિવાર્ય વિચાર દબાણ (OCD)"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 86)",
+    "exp": "DSM-V માં વિકૃત ભયની ત્રણ મુખ્ય વિકૃતિઓ વિશિષ્ટ ભય, સામાજિક ભય (સામાજિક ચિંતાની વિકૃતિ) અને ખુલ્લી જગ્યાનો ભય (Agoraphobia) છે. અનિવાર્ય વિચાર દબાણ એ ચિંતા સંબંધી અલગ વિકૃતિ છે, વિકૃત ભયનો પેટાપ્રકાર નથી."
+  },
+  {
+    "q": "પ્રશ્ન 97: 'વિશિષ્ટ ભય (Specific Phobia)' અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: સામાન્ય રીતે આ વિકૃતિની શરૂઆત બાલ્યાવસ્થાથી થાય છે અને યુ.એસ. માં તેનું પ્રમાણ 8.7% (19 મિલિયન વ્યક્તિઓ) છે.\nવિધાન 2: DSM-V મુજબ વિશિષ્ટ ભયનાં લક્ષણોની હાજરી 6 મહિનાથી વધુ સમય માટે હોવી જોઈએ.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 87)",
+    "exp": "વિશિષ્ટ ભયની શરૂઆત બાલ્યાવસ્થામાં થાય છે, યુ.એસ. માં તેનું પ્રમાણ 8.7% છે અને DSM-V મુજબ તેનાં લક્ષણો 6 મહિનાથી વધુ સમય માટે હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: DSM-V માં દર્શાવેલ 'વિશિષ્ટ ભય' ના પાંચ પ્રકારો અને તેનાં ઉદાહરણોના યોગ્ય જોડકાં જોડો:\nવિભાગ-અ (વિશિષ્ટ ભયનો પ્રકાર)  |  વિભાગ-બ (ઉદાહરણ)\n1. પ્રાકૃતિક વાતાવરણ સંબંધી — (p) લિફ્ટમાં જવાનો, એસ્કેલેટર કે વિમાનમાં બેસવાનો ભય\n2. લોહી-ઈન્જેક્શન-ઈજા સંબંધી — (q) પાણી, ઊંચી જગ્યા, અંધારા કે વાવાઝોડાનો ભય\n3. પરિસ્થિતિ સંબંધી — (r) ગૂંગળામણ, ઊલટી થવાનો કે બાળકોમાં ફુગ્ગા ફોડવાનો ભય\n4. અન્ય પ્રકાર (Other Type) — (s) લોહીનું પરીક્ષણ, ઈન્જેક્શન કે ટી.વી. પર ઓપરેશન જોવાનો ભય",
+    "options": [
+      "1-(q), 2-(s), 3-(p), 4-(r)",
+      "1-(q), 2-(p), 3-(s), 4-(r)",
+      "1-(s), 2-(q), 3-(p), 4-(r)",
+      "1-(q), 2-(s), 3-(r), 4-(p)"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 87)",
+    "exp": "DSM-V ના વિશિષ્ટ ભયના પાંચ પ્રકારો (પ્રાણી, પ્રાકૃતિક વાતાવરણ, લોહી-ઈન્જેક્શન-ઈજા, પરિસ્થિતિ અને અન્ય) મુજબ વિકલ્પ (A) સાચી જોડ દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: 'સામાજિક ભય (Social Phobia / Social Anxiety Disorder)' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "ઈ.સ. 1960 પછી સામાજિક ભયને અન્ય ભયની વિકૃતિઓથી અલગ પાડીને સમજાવવામાં આવે છે.",
+      "આ વિકૃતિ મુખ્યત્વે તરુણાવસ્થા અને પુખ્તાવસ્થાના શરૂઆતના સમયગાળામાં વધુ જોવા મળે છે, અને પુરુષો કરતાં સ્ત્રીઓમાં તેનું પ્રમાણ વધુ છે.",
+      "આ વિકૃતિથી પીડાતી વ્યક્તિઓમાંથી 40% વ્યક્તિઓમાં ચિંતાસંબંધી વિકૃતિઓ અને વિકૃત ખિન્નતાનાં લક્ષણો જોવા મળે છે.",
+      "આ વિકૃતિમાં વ્યક્તિને માત્ર ખુલ્લી જગ્યા કે જાહેર પરિવહનનો જ ભય લાગે છે, અન્યના મૂલ્યાંકનનો નહીં."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 87-88)",
+    "exp": "સામાજિક ભયમાં મુખ્યત્વે સામાજિક આંતરક્રિયા સમયે અસ્વસ્થતા અને 'અન્ય વ્યક્તિઓ દ્વારા નિષેધક મૂલ્યાંકનનો ભય' (જેમ કે જાહેરમાં ભાષણ, ભોજન કે શૌચાલયનો ઉપયોગ) જોવા મળે છે. ખુલ્લી જગ્યા કે જાહેર પરિવહનનો ભય 'Agoraphobia' છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: 'ખુલ્લી જગ્યાનો ભય (Agoraphobia)' અંગે નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "'Agoraphobia' શબ્દ લેટિન ભાષાના 'Agora' પરથી ઊતરી આવ્યો છે, જેનો અર્થ 'ઊંચી જગ્યા' થાય છે.",
+      "'Agoraphobia' શબ્દ ગ્રીક ભાષાના 'Agora' પરથી ઊતરી આવ્યો છે, જેનો અર્થ 'જાહેર સ્થળ' થાય છે; અને DSM-V માં દર્શાવેલ પાંચમાંથી કોઈપણ બે પરિસ્થિતિનો ભય છ મહિનાથી વધુ સમય માટે હોય તો તેનું નિદાન થાય છે.",
+      "DSM-V મુજબ પાંચેય પરિસ્થિતિઓનો ભય સતત એક વર્ષ સુધી હોય તો જ Agoraphobia નું નિદાન થાય છે.",
+      "Agoraphobia ધરાવતી વ્યક્તિઓને માત્ર પ્રાણીઓ અને અંધારાનો જ ભય લાગે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 88)",
+    "exp": "'Agoraphobia' ગ્રીક ભાષાના 'Agora' (જાહેર સ્થળ) પરથી બનેલો છે. DSM-V માં દર્શાવેલ પાંચ પરિસ્થિતિઓમાંથી બે પરિસ્થિતિ પરત્વે છ મહિનાથી વધુ સમય માટે ભય કે ચિંતાનો અનુભવ થાય તો ખુલ્લી જગ્યાના ભયનું નિદાન થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 101: DSM-V માં 'ખુલ્લી જગ્યાના ભય (Agoraphobia)' માટે દર્શાવેલી મુખ્ય પાંચ પરિસ્થિતિઓમાં નીચેનામાંથી કઈ એક પરિસ્થિતિનો સમાવેશ થતો નથી?",
+    "options": [
+      "જાહેર પરિવહનનો ઉપયોગ (દા.ત. બસ, રેલવે, વિમાન)",
+      "ખુલ્લી જગ્યાએ પહોંચવું (દા.ત. પાર્કિંગ વિસ્તાર, બજાર કે બ્રિજ) અને બંધ જગ્યાએ પહોંચવું (દા.ત. દુકાનો, સિનેમાઘર)",
+      "લાઈનમાં ઊભા રહેવું અથવા ભીડમાં જવું અને ઘરની બહાર એકલા જવું",
+      "અંધારા ઓરડામાં એકલા સૂવું અથવા પ્રાણીઓની નજીક જવું"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 88)",
+    "exp": "DSM-V માં Agoraphobia માટે પાંચ પરિસ્થિતિઓ દર્શાવી છે: જાહેર પરિવહન, ખુલ્લી જગ્યા, બંધ જગ્યા, લાઈન/ભીડ અને ઘરની બહાર એકલા જવું. અંધારું કે પ્રાણીઓનો ભય 'વિશિષ્ટ ભય' માં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 102: 'અનિવાર્ય વિચારદબાણ – અનિવાર્ય ક્રિયાદબાણ (OCD)' અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: અનિવાર્ય વિચારદબાણમાં વ્યક્તિને અવાસ્તવિક, અસંગત વિચારો આવે છે, જે અયોગ્ય હોવાનું વ્યક્તિ પોતે જાણતો હોવા છતાં તેને અટકાવી શકતો નથી.\nવિધાન 2: અનિવાર્ય ક્રિયાદબાણમાં વ્યક્તિ હાથ વારંવાર ધોવા, તાળું-લાઈટ-નળ વારંવાર ચેક કરવા કે વારંવાર ગણતરી કરવા જેવી ક્રિયાઓ તાર્કિક કારણ વિના કરે છે.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 88-89)",
+    "exp": "OCD માં અનિવાર્ય વિચારદબાણ અને અનિવાર્ય ક્રિયાદબાણ બંનેમાં વ્યક્તિ પોતાની ક્રિયાઓ કે વિચારોની અતાર્કિકતાને જાણે છે, છતાં તેના પર નિયંત્રણ ધરાવી શકતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 103: OCD (Obsessive Compulsive Disorder) ના પ્રમાણ અને લાક્ષણિકતા અંગે નીચેનામાંથી કયું વિધાન અયોગ્ય છે?",
+    "options": [
+      "જીવનમાં ક્યારેક આ વિકૃતિનો ભોગ બનેલ વ્યક્તિનું પ્રમાણ 2.5 ટકા જેટલું છે.",
+      "આ વિકૃતિના પ્રમાણની બાબતમાં પુરુષો કરતાં સ્ત્રીઓમાં ખૂબ મોટો જાતિગત તફાવત જોવા મળે છે.",
+      "છૂટાછેડા લીધેલા અને પરિવારથી આવેગાત્મક રીતે દૂર થયેલા વ્યક્તિઓમાં આ વિકૃતિનું પ્રમાણ વધુ જોવા મળે છે.",
+      "બેરોજગાર તેમજ ગુનાની લાગણીને કારણે ચિંતા અનુભવતા વ્યક્તિઓમાં આ વિકૃતિનું પ્રમાણ વધુ જોવા મળે છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 89)",
+    "exp": "પાઠ્યપુસ્તક મુજબ OCD વિકૃતિના પ્રમાણની બાબતમાં 'જાતિગત તફાવત જોવા મળતો નથી'."
+  },
+  {
+    "q": "પ્રશ્ન 104: DSM-V માં 'મનોદશાની વિકૃતિ (Mood Disorders)' ને કયા શીર્ષક હેઠળ સમજાવવામાં આવી છે?",
+    "options": [
+      "એકધ્રુવીય અને ઉન્માદની વિકૃતિ",
+      "દ્વિધ્રુવીય અને ખિન્નતાની વિકૃતિ (Bipolar and Depressive Disorder)",
+      "આવેગાત્મક અને ચિંતાની વિકૃતિ",
+      "મનોદૈહિક અને વિષાદની વિકૃતિ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 89)",
+    "exp": "DSM-V માં મનોદશાની વિકૃતિને 'દ્વિધ્રુવીય અને ખિન્નતાની વિકૃતિ (Bipolar and Depressive Disorder)' ના શીર્ષક હેઠળ સમજાવવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 105: પાઠ્યપુસ્તકમાં વર્ણવેલ 'દ્વિધ્રુવીય I મનોવિકૃતિ (ખિન્નતાની વિકૃતિ)' ના નિદાન માટે નીચેનામાંથી કયાં આંકડાકીય લક્ષણો દર્શાવવામાં આવ્યાં છે?",
+    "options": [
+      "કોઈપણ દવા કે શ્રમ વિના 3 મહિનામાં 10 કિલોથી વધુ વજન ઊતરી જવું અને લક્ષણો 2 અઠવાડિયાંથી વધુ સમય જોવા મળવાં.",
+      "કોઈપણ દવા કે શ્રમ વિના 6 મહિનામાં 5 કિલોથી વધુ વજન ઊતરી જવું અને લક્ષણો 1 મહિનાથી વધુ સમય જોવા મળવાં.",
+      "1 મહિનામાં 10 કિલો વજન વધી જવું અને લક્ષણો 6 મહિના સુધી જોવા મળવાં.",
+      "3 મહિનામાં 5 કિલો વજન ઊતરી જવું અને લક્ષણો 1 અઠવાડિયા સુધી જોવા મળવાં."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 89)",
+    "exp": "ખિન્નતાની વિકૃતિમાં કોઈપણ દવા કે વધુ શારીરિક શ્રમ વિના ત્રણ મહિનાની અંદર 10 કિલોથી પણ વધુ વજન ઊતરી જવું, ઊંઘમાં વિક્ષેપ, હીનતાનો ભાવ, આત્મહત્યાના વિચારો જેવાં લક્ષણો બે અઠવાડિયાંથી વધુ સમય જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 106: 'દ્વિધ્રુવીય II મનોવિકૃતિ (Bipolar II Disorder)' અંગે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ મનોવિકૃતિમાં ખિન્નતા (વિષાદ) અને ઉન્માદ એમ બંને આવેગોની હાજરી સમયાંતરે જોવા મળે છે.",
+      "શરૂઆતની મંદ સ્વરૂપની ઉન્માદની ઘટનામાં દર્દીને હોસ્પિટલમાં દાખલ કરવાની આવશ્યકતા હોતી નથી.",
+      "ઉન્માદની માત્રા વધતાં વ્યક્તિમાં ઊંઘના પ્રમાણમાં નોંધપાત્ર વધારો થાય છે અને જાતીય વર્તનમાં ઘટાડો જોવા મળે છે.",
+      "વ્યક્તિમાં પોતે કોઈપણ કાર્ય કરવા સક્ષમ છે તેવો અતિ સ્વ-ક્ષમતાનો ભાવ અને વર્તનમાં ચંચળતા જોવા મળે છે."
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 89-90)",
+    "exp": "દ્વિધ્રુવીય II મનોવિકૃતિમાં ઉન્માદની માત્રા વધતાં 'ઊંઘના પ્રમાણમાં નોંધપાત્ર ઘટાડો' થાય છે અને 'જાતીય વર્તનમાં વધારો' જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 107: 'ડિસ્લેક્ષીયા (Dyslexia)' ના વર્ગીકરણ અને આંકડાકીય માહિતી અંગે નીચેનાં વિધાનો તપાસો:\nવિધાન 1: DSM-IV માં ડિસ્લેક્ષીયાનો સમાવેશ શીખવાની ક્રિયાસંબંધી મનોવિકૃતિમાં, જ્યારે DSM-V માં તેનો સમાવેશ 'શીખવાની ક્રિયાસંબંધી વિશિષ્ટ વિકૃતિ (Specific Learning Disorder)' માં કરવામાં આવ્યો છે.\nવિધાન 2: અમેરિકામાં શાળામાં અભ્યાસ કરતાં 17% બાળકોમાં અને ભારતમાં (2012ના સર્વેક્ષણ મુજબ) 9.87% બાળકોમાં ડિસ્લેક્ષીયાનું પ્રમાણ જોવા મળ્યું હતું.\nવિધાન 3: છોકરાઓ કરતાં છોકરીઓમાં ડિસ્લેક્ષીયાનું પ્રમાણ વધુ જોવા મળે છે.",
+    "options": [
+      "માત્ર વિધાન 1 અને 2 સાચાં છે.",
+      "માત્ર વિધાન 2 અને 3 સાચાં છે.",
+      "માત્ર વિધાન 1 અને 3 સાચાં છે.",
+      "વિધાન 1, 2 અને 3 તમામ સાચાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 90)",
+    "exp": "વિધાન 1 અને 2 સાચાં છે. વિધાન 3 ખોટું છે કારણ કે 'છોકરીઓ કરતાં છોકરાઓમાં' ડિસ્લેક્ષીયાનું પ્રમાણ વધુ જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 108: ડિસ્લેક્ષીયા (Dyslexia) ધરાવતા બાળકમાં જોવા મળતાં લક્ષણોમાં નીચેનામાંથી કોનો સમાવેશ થાય છે?\n1. ભાષાના લખાણમાં ભૂલો (જેમ કે ઠ ને બદલે ઢ લખવું; w, m, p, q, b, d વચ્ચે મૂંઝવણ)\n2. એક જ શબ્દને જુદી જુદી જોડણીઓ દ્વારા લખવો (દા.ત. સીડીને સિડી, સિડિ, સીડિ લખવું)\n3. ક્રિયાત્મક અવયવોના સંકલનમાં મુશ્કેલી (જેમ કે બોલ કેચ કરવો, સોયમાં દોરો પરોવવો, બૂટની દોરી બાંધવી)",
+    "options": [
+      "માત્ર 1 અને 2",
+      "માત્ર 2 અને 3",
+      "માત્ર 1 અને 3",
+      "1, 2 અને 3 તમામ"
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 90)",
+    "exp": "ડિસ્લેક્ષીયામાં મૂળાક્ષરોના લખાણમાં ભૂલો, જોડણીની ભૂલો અને ક્રિયાત્મક અવયવોના સંકલનમાં મુશ્કેલી – આ ત્રણેય લક્ષણો જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 109: ડિસ્લેક્ષીયાને 'વિકૃતિ' કહેવા કરતાં 'અક્ષમતા' કહેવું વધુ યોગ્ય ગણાય છે. આ સંદર્ભે નીચેનામાંથી કઈ પ્રખ્યાત વ્યક્તિઓ બાળપણમાં ડિસ્લેક્ષીયા ધરાવતી હોવાનો ઉલ્લેખ પાઠ્યપુસ્તકમાં છે?",
+    "options": [
+      "થોમસ આલ્વા એડિસન, જ્યોર્જ વોશિંગ્ટન, આલ્બર્ટ આઈનસ્ટાઈન, લીયોનાર્ડો-દ-વિન્ચી, બિલ ગેટ્સ",
+      "આઈઝેક ન્યૂટન, મહાત્મા ગાંધી, સ્ટીવ જોબ્સ, ચાર્લ્સ ડાર્વિન",
+      "થોમસ આલ્વા એડિસન, અબ્રાહમ લિંકન, સ્ટીફન હોકિંગ, માર્ક ઝુકરબર્ગ",
+      "આલ્બર્ટ આઈનસ્ટાઈન, એ.પી.જે. અબ્દુલ કલામ, પાબ્લો પિકાસો, એલન મસ્ક"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 90)",
+    "exp": "પાઠ્યપુસ્તકમાં 'તારે ઝમી પર' ફિલ્મ ઉપરાંત વાસ્તવિક જીવનનાં ઉદાહરણ તરીકે થોમસ આલ્વા એડિસન, જ્યોર્જ વોશિંગ્ટન, આલ્બર્ટ આઈનસ્ટાઈન, લીયોનાર્ડો-દ-વિન્ચી અને બિલ ગેટ્સનો ઉલ્લેખ કરવામાં આવ્યો છે."
+  },
+  {
+    "q": "પ્રશ્ન 110: 'આત્મરત વિકૃતિ (Autism)' ના નૈદાનિક નામ અને DSM-V ના વર્ગીકરણ અંગે નીચેનામાંથી કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "નૈદાનિક પરિભાષામાં તેને ADD કહેવાય છે અને DSM-V માં તેને ચિંતાની વિકૃતિ સાથે સાંકળી છે.",
+      "નૈદાનિક પરિભાષામાં તેને ASD (Autism Spectrum Disorder) કહેવાય છે અને DSM-V માં તેને 'સામાજિક સંદેશાવ્યવહાર વિકૃતિ (Social Communication Disorder)' સાથે સાંકળીને દર્શાવવામાં આવી છે.",
+      "નૈદાનિક પરિભાષામાં તેને SLD કહેવાય છે અને તે પુખ્તાવસ્થામાં ઉદ્ભવતી વિકૃતિ છે.",
+      "નૈદાનિક પરિભાષામાં તેને ASD કહેવાય છે અને DSM-V માં તેને મનોદશાની વિકૃતિમાં મૂકી છે."
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 90)",
+    "exp": "ઓટિઝમને નૈદાનિક પરિભાષામાં ASD (Autism Spectrum Disorder) તરીકે ઓળખવામાં આવે છે અને DSM-V માં તેને સામાજિક સંદેશાવ્યવહાર વિકૃતિ સાથે સાંકળીને દર્શાવવામાં આવી છે."
+  },
+  {
+    "q": "પ્રશ્ન 111: 27 માર્ચ 2014ના રોજ અમેરિકાની સંસ્થા 'CDC (Centers for Disease Control and Prevention)' દ્વારા ઓટિઝમના પ્રમાણ અંગે જાહેર કરાયેલા આંકડાઓમાં નીચેનામાંથી કઈ વિગત સાચી છે?",
+    "options": [
+      "દર 68 બાળકોમાંથી 1 બાળક; દર 42 છોકરામાંથી 1 છોકરો; દર 189 છોકરીઓમાંથી 1 છોકરી",
+      "દર 50 બાળકોમાંથી 1 બાળક; દર 42 છોકરામાંથી 1 છોકરો; દર 100 છોકરીઓમાંથી 1 છોકરી",
+      "દર 68 બાળકોમાંથી 1 બાળક; દર 189 છોકરામાંથી 1 છોકરો; દર 42 છોકરીઓમાંથી 1 છોકરી",
+      "દર 100 બાળકોમાંથી 1 બાળક; દર 68 છોકરામાંથી 1 છોકરો; દર 189 છોકરીઓમાંથી 1 છોકરી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 91)",
+    "exp": "CDC ના 27 માર્ચ 2014ના અભ્યાસ મુજબ દર 68 બાળકોમાંથી 1 બાળકમાં (42 છોકરામાંથી 1 અને 189 છોકરીઓમાંથી 1) ઓટિઝમ જોવા મળે છે. ભારતમાં 2013ના સર્વેક્ષણ મુજબ તેનું પ્રમાણ 1 થી 1.5 ટકા છે."
+  },
+  {
+    "q": "પ્રશ્ન 112: એક બાળક અન્ય વ્યક્તિઓ સાથે આંખ મેળવવાનું ટાળે છે, એકલા રમવાનું પસંદ કરે છે, કોઈ વસ્તુને વારંવાર ગોળ-ગોળ ફેરવ્યા કરે છે અને માતા તેને “તું અહીં આવ” કહે તો તે “તું અહીં આવ, તું અહીં આવ” એવું વારંવાર બોલ્યા કરે છે. આ બાળકમાં કઈ વિકૃતિનાં લક્ષણો જોવા મળે છે?",
+    "options": [
+      "ડિસ્લેક્ષીયા (Dyslexia)",
+      "ઓટિઝમ (Autism)",
+      "ADHD",
+      "OCD"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 91)",
+    "exp": "આંખથી આંખ ન મેળવવી, એકલા રમવું, કહેવામાં આવેલી વાતનું વારંવાર પુનરાવર્તન કરવું, વસ્તુને ગોળગોળ ફેરવવી, પીડા કે વાસ્તવિક ભયનો અનુભવ ન થવો વગેરે ઓટિઝમનાં મુખ્ય લક્ષણો છે, જે જન્મનાં પહેલાં ત્રણ વર્ષમાં જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 113: ઓટિઝમ (Autism) ધરાવતાં બાળકોની સારવાર અને લક્ષણો અંગે નીચેનાં બે વિધાનો તપાસો:\nવિધાન 1: ઓટિઝમના લક્ષણો જન્મનાં પહેલાં ત્રણ વર્ષમાં જોવા મળે છે અને આવાં બાળકોમાં ઊંઘના વિક્ષેપો, ખેંચ તેમજ પાચનસંબંધી તકલીફો જોવા મળે છે.\nવિધાન 2: ઓટિઝમ ધરાવતાં બાળકોને માત્ર ઔષધીય સારવાર જ અપાય છે, વાર્તનિક માનસોપચારથી કોઈ ફાયદો થતો નથી.",
+    "options": [
+      "માત્ર વિધાન 1 સાચું છે.",
+      "માત્ર વિધાન 2 સાચું છે.",
+      "વિધાન 1 અને વિધાન 2 બંને સાચાં છે.",
+      "વિધાન 1 અને વિધાન 2 બંને ખોટાં છે."
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 91)",
+    "exp": "વિધાન 1 સાચું છે. વિધાન 2 ખોટું છે કારણ કે ઓટિઝમ ધરાવતાં બાળકોને ઔષધીય સારવારની સાથોસાથ 'વાર્તનિક માનસોપચાર' પણ આપવાથી ફાયદો થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 114: ADHD (Attention Deficit - Hyperactive Disorder) ના પ્રમાણ અંગે નીચેનામાંથી કઈ આંકડાકીય વિગત અયોગ્ય છે?",
+    "options": [
+      "અમેરિકામાં 4 થી 17 વર્ષનાં બાળકોમાં વર્ષ 2003માં ADHD નું પ્રમાણ 7.8% હતું.",
+      "અમેરિકામાં વર્ષ 2007માં તેનું પ્રમાણ 9.5% અને વર્ષ 2011માં 11% થયું હતું.",
+      "ભારતમાં ADHD નું પ્રમાણ 5 થી 10 ટકા જેટલું જોવા મળે છે.",
+      "પુરુષ બાળકોની સરખામણીમાં સ્ત્રી બાળકોમાં ADHD નું પ્રમાણ વધુ જોવા મળે છે."
+    ],
+    "ans": 3,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 91)",
+    "exp": "પાઠ્યપુસ્તક મુજબ સ્ત્રી બાળકની સરખામણીમાં 'પુરુષ બાળકોમાં' ADHD નું પ્રમાણ વધુ જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 115: ADHD ની વિકૃતિ ધરાવનાર બાળકોમાં જોવા મળતાં મુખ્ય ત્રણ લક્ષણો કયાં છે?",
+    "options": [
+      "ધ્યાનન્યૂનતા, આવેગશીલતા અને અતિપ્રવૃત્તિશીલતા",
+      "વાંચનની મુશ્કેલી, જોડણીની ભૂલો અને અંતર્મુખતા",
+      "આંખ ન મેળવવી, એકલા રમવું અને શબ્દોનું પુનરાવર્તન",
+      "ખિન્નતા, ઉન્માદ અને આત્મહત્યાના વિચારો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ 6 - મનોવિકૃતિઓ (પાના નં.: 91)",
+    "exp": "ADHD ધરાવનાર બાળકોમાં મુખ્યત્વે ત્રણ લક્ષણો – ધ્યાનન્યૂનતા, આવેગશીલતા અને અતિપ્રવૃત્તિશીલતા જોવા મળે છે (જેમ કે સ્થિર ન બેસી શકવું, આત્યંતિક વાચાળતા, વારાની રાહ ન જોવી, પ્રશ્ન પૂરો થાય તે પહેલાં જવાબ આપી દેવો)."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-115) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૧૫ માંથી ૧૧૫ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "ધોરણ 12 : મનોવિજ્ઞાન (પ્રકરણ 2, 3, 4 અને 6)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "final",
+            testFileName: "12manovignan.html",
+            testUploadDate: "2026-11-28"
+        })
+    });
+}
+</script>
+</body>
+</html>
